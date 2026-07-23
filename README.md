@@ -10,6 +10,8 @@ customized to be an OpenStax "companion" in the fuller sense (section deep
 links, learning-objectives crosswalk, problem-set links); see the "Not yet
 built" section in `CLAUDE.md`.
 
+> **Paper**: Wen G. Gong, *ConceptBook: A Graph-First Framework for AI-Generated Curricula*, preprint, July 2026 — [PDF](https://github.com/digital-duck/dd-work/blob/main/docs/spl4ed-paper-arxiv.pdf). This app is a ConceptBook Path B application — the concept-graph is ingested directly from an existing OpenStax textbook rather than hand-authored.
+
 ---
 
 ## Quick start
@@ -52,4 +54,6 @@ source (OpenStax, CC BY 4.0, link to openstax.org).
 
 ```bash
 npm run deploy      # vite build && gh-pages -d dist --no-history --dotfiles
+
+# URL = https://digital-duck.github.io/cb-college-physics/
 ```
