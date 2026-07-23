@@ -1,6 +1,6 @@
 # cb-college-physics
 
-A concept-book companion app for OpenStax *College Physics 2e* (CC BY 4.0) —
+A concept-book companion app (https://digital-duck.github.io/cb-college-physics/) for OpenStax *College Physics 2e* (CC BY 4.0) —
 one domain per chapter (34 total), each with an interactive concept graph and
 generated concept books.
 
@@ -50,10 +50,11 @@ npm run dev
 existing OpenStax ingestion. Every chapter's `catalog.json` entry attributes the
 source (OpenStax, CC BY 4.0, link to openstax.org).
 
+**Source textbook**: Urone, P. P., & Hinrichs, R. (2019). *College Physics 2e*. OpenStax, Rice University. [openstax.org/details/books/college-physics-2e](https://openstax.org/details/books/college-physics-2e). Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — access for free at openstax.org. Each domain's concept-graph is extracted from this text; the generated concept-book prose is LLM-written from that graph, not copied from the original.
+
 ## Deployment (GitHub Pages)
 
 ```bash
 npm run deploy      # vite build && gh-pages -d dist --no-history --dotfiles
 
-# URL = https://digital-duck.github.io/cb-college-physics/
 ```
