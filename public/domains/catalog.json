@@ -1,6 +1,6 @@
 [
   {
-    "id": "college_physics_ch1",
+    "id": "college_physics_ch01",
     "name": "Physics Ch1: Introduction: The Nature of Science and Physics",
     "description": "OpenStax College Physics 2e, Chapter 1: Introduction: The Nature of Science and Physics.",
     "capstone": "approximation",
@@ -180,7 +180,7 @@
     ]
   },
   {
-    "id": "college_physics_ch2",
+    "id": "college_physics_ch02",
     "name": "Physics Ch2: Kinematics",
     "description": "OpenStax College Physics 2e, Chapter 2: Kinematics.",
     "capstone": "graphical_analysis_of_motion",
@@ -405,7 +405,7 @@
     }
   },
   {
-    "id": "college_physics_ch3",
+    "id": "college_physics_ch03",
     "name": "Physics Ch3: Two-Dimensional Kinematics",
     "description": "OpenStax College Physics 2e, Chapter 3: Two-Dimensional Kinematics.",
     "capstone": "river_crossing_relative_velocity",
@@ -504,7 +504,7 @@
     "default_level": "core"
   },
   {
-    "id": "college_physics_ch4",
+    "id": "college_physics_ch04",
     "name": "Physics Ch4: Dynamics: Force and Newton's Laws of Motion",
     "description": "OpenStax College Physics 2e, Chapter 4: Dynamics: Force and Newton's Laws of Motion.",
     "capstone": "four_basic_forces",
@@ -549,7 +549,7 @@
     "default_level": "core"
   },
   {
-    "id": "college_physics_ch5",
+    "id": "college_physics_ch05",
     "name": "Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity",
     "description": "OpenStax College Physics 2e, Chapter 5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity.",
     "capstone": "joint_lubrication",
@@ -562,9 +562,46 @@
       "science"
     ],
     "has_navigator": true,
-    "has_book": false,
-    "books": [],
-    "generated_concepts": [],
+    "has_book": true,
+    "books": [
+      {
+        "target": "joint_lubrication",
+        "file": "output/college.en/sonnet/html/book_joint_lubrication.html",
+        "model": "sonnet"
+      }
+    ],
+    "generated_concepts": [
+      {
+        "name": "coefficient_of_kinetic_friction",
+        "label": "Coefficient Of Kinetic Friction",
+        "file": "output/college.en/sonnet/html/concept_coefficient_of_kinetic_friction.html",
+        "model": "sonnet"
+      },
+      {
+        "name": "friction",
+        "label": "Friction",
+        "file": "output/college.en/sonnet/html/concept_friction.html",
+        "model": "sonnet"
+      },
+      {
+        "name": "joint_lubrication",
+        "label": "Joint Lubrication",
+        "file": "output/college.en/sonnet/html/concept_joint_lubrication.html",
+        "model": "sonnet"
+      },
+      {
+        "name": "kinetic_friction",
+        "label": "Kinetic Friction",
+        "file": "output/college.en/sonnet/html/concept_kinetic_friction.html",
+        "model": "sonnet"
+      },
+      {
+        "name": "normal_force",
+        "label": "Normal Force",
+        "file": "output/college.en/sonnet/html/concept_normal_force.html",
+        "model": "sonnet"
+      }
+    ],
     "source": {
       "title": "College Physics 2e",
       "authors": "OpenStax",
@@ -575,7 +612,7 @@
     "default_level": "core"
   },
   {
-    "id": "college_physics_ch6",
+    "id": "college_physics_ch06",
     "name": "Physics Ch6: Uniform Circular Motion and Gravitation",
     "description": "OpenStax College Physics 2e, Chapter 6: Uniform Circular Motion and Gravitation.",
     "capstone": "tides",
@@ -644,7 +681,7 @@
     "default_level": "core"
   },
   {
-    "id": "college_physics_ch7",
+    "id": "college_physics_ch07",
     "name": "Physics Ch7: Work, Energy, and Energy Resources",
     "description": "OpenStax College Physics 2e, Chapter 7: Work, Energy, and Energy Resources.",
     "capstone": "useful_work_in_humans",
@@ -701,7 +738,7 @@
     "default_level": "core"
   },
   {
-    "id": "college_physics_ch8",
+    "id": "college_physics_ch08",
     "name": "Physics Ch8: Linear Momentum and Collisions",
     "description": "OpenStax College Physics 2e, Chapter 8: Linear Momentum and Collisions.",
     "capstone": "recoil",
@@ -776,7 +813,7 @@
     "default_level": "core"
   },
   {
-    "id": "college_physics_ch9",
+    "id": "college_physics_ch09",
     "name": "Physics Ch9: Statics and Torque",
     "description": "OpenStax College Physics 2e, Chapter 9: Statics and Torque.",
     "capstone": "free_body_diagram",
