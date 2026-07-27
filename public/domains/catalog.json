@@ -164,7 +164,7 @@
         "model": "sonnet"
       }
     ],
-    "default_level": "core",
+    "default_level": "college",
     "source": {
       "title": "College Physics 2e",
       "authors": "OpenStax",
@@ -395,7 +395,7 @@
         "model": "sonnet"
       }
     ],
-    "default_level": "core",
+    "default_level": "college",
     "source": {
       "title": "College Physics 2e",
       "authors": "OpenStax",
@@ -501,7 +501,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch04",
@@ -546,7 +546,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch05",
@@ -609,7 +609,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch06",
@@ -678,7 +678,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch07",
@@ -735,7 +735,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch08",
@@ -810,7 +810,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch09",
@@ -885,7 +885,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch10",
@@ -960,7 +960,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch11",
@@ -1029,7 +1029,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch12",
@@ -1116,7 +1116,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch13",
@@ -1179,7 +1179,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch14",
@@ -1248,7 +1248,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch15",
@@ -1347,7 +1347,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch16",
@@ -1440,7 +1440,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch17",
@@ -1515,7 +1515,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch18",
@@ -1590,7 +1590,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch19",
@@ -1683,7 +1683,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch20",
@@ -1746,7 +1746,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch21",
@@ -1815,7 +1815,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch22",
@@ -1884,7 +1884,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch23",
@@ -1959,7 +1959,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch24",
@@ -2082,7 +2082,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch25",
@@ -2169,7 +2169,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch26",
@@ -2274,7 +2274,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch27",
@@ -2367,7 +2367,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch28",
@@ -2418,7 +2418,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch29",
@@ -2511,7 +2511,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch30",
@@ -2562,7 +2562,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch31",
@@ -2643,7 +2643,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch32",
@@ -2718,7 +2718,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch33",
@@ -2793,7 +2793,7 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   },
   {
     "id": "college_physics_ch34",
@@ -2868,6 +2868,6 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "core"
+    "default_level": "college"
   }
 ]
