@@ -4,7 +4,7 @@ export default defineConfig({
   base: '/cb-college-physics/',
   server: {
     proxy: {
-      '/api': 'http://localhost:8201',
+      '/api': 'http://localhost:8203',
     },
   },
 })
