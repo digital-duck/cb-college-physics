@@ -45,6 +45,18 @@
         "target": "approximation",
         "file": "output/college.en/sonnet/html/book_approximation.html",
         "model": "sonnet"
+      },
+      {
+        "target": "scientific_law",
+        "file": "output/college.zh/sonnet/html/book_scientific_law_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
+        "target": "scientific_theory",
+        "file": "output/college.zh/sonnet/html/book_scientific_theory_zh.html",
+        "model": "sonnet",
+        "language": "zh"
       }
     ],
     "generated_concepts": [
@@ -86,6 +98,20 @@
         "label": "Measurement",
         "file": "output/research.en/sonnet/html/concept_measurement.html",
         "model": "sonnet"
+      },
+      {
+        "name": "measurement",
+        "label": "Measurement",
+        "file": "output/college.zh/sonnet/html/concept_measurement_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
+        "name": "observation",
+        "label": "Observation",
+        "file": "output/college.zh/sonnet/html/concept_observation_zh.html",
+        "model": "sonnet",
+        "language": "zh"
       },
       {
         "name": "order_of_magnitude",
@@ -132,9 +158,37 @@
         "file": "output/core.en/html/concept_scientific_law.html"
       },
       {
+        "name": "scientific_law",
+        "label": "Scientific Law",
+        "file": "output/college.zh/sonnet/html/concept_scientific_law_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
         "name": "scientific_method",
         "label": "Scientific Method",
         "file": "output/core.en/html/concept_scientific_method.html"
+      },
+      {
+        "name": "scientific_method",
+        "label": "Scientific Method",
+        "file": "output/college.zh/sonnet/html/concept_scientific_method_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
+        "name": "scientific_model",
+        "label": "Scientific Model",
+        "file": "output/college.zh/sonnet/html/concept_scientific_model_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
+        "name": "scientific_theory",
+        "label": "Scientific Theory",
+        "file": "output/college.zh/sonnet/html/concept_scientific_theory_zh.html",
+        "model": "sonnet",
+        "language": "zh"
       },
       {
         "name": "significant_figures",

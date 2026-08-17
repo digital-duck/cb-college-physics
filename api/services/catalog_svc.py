@@ -31,16 +31,26 @@ def mark_book_generated(
     # written (e.g. "book_x.html" when spl actually wrote "book_x_zh.html"),
     # which the frontend then reports as "Content Not Available".
     suffix = f"_{language}" if language and language != "en" else ""
-    new_concepts = [
-        {
-            "name": p.stem[len("concept_"):],
-            "label": p.stem[len("concept_"):].replace("_", " ").title(),
+    new_concepts = []
+    for p in html_dir.glob("concept_*.html"):
+        stem = p.stem[len("concept_"):]
+        # Strip the same "_{language}" suffix write_concept_html appends to
+        # the filename — otherwise a Chinese "observation" concept gets
+        # named/labeled "observation_zh"/"Observation Zh", a different
+        # identity from the English "observation" entry rather than the
+        # same concept in a different language. That mismatch is what
+        # produced "Please generate the concept book for observation zh
+        # first" while Model/Level/Language showed the *current* selector
+        # state (college/sonnet/en) — the concept the user actually opened
+        # never truly existed under that mangled name in any language.
+        name = stem[:-len(suffix)] if suffix and stem.endswith(suffix) else stem
+        new_concepts.append({
+            "name": name,
+            "label": name.replace("_", " ").title(),
             "file": f"output/{variant}/{model}/html/{p.name}",
             "model": model,
             "language": language,
-        }
-        for p in html_dir.glob("concept_*.html")
-    ]
+        })
 
     def mutate(catalog: list[dict]) -> None:
         for d in catalog:

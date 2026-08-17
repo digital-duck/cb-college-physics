@@ -186,15 +186,21 @@ def _mark_generated(domain_id: str, target: str, level: str, language: str, mode
     # recording book_file below, otherwise it points at a file that was
     # never written for any non-English generation.
     suffix = f"_{language}" if language and language != "en" else ""
-    new_concepts = [
-        {
-            "name": p.stem[len("concept_"):],
-            "label": p.stem[len("concept_"):].replace("_", " ").title(),
+    new_concepts = []
+    for p in html_dir.glob("concept_*.html"):
+        stem = p.stem[len("concept_"):]
+        # Strip the same "_{language}" suffix write_concept_html appends to
+        # the filename — otherwise a Chinese "observation" concept gets
+        # named/labeled "observation_zh"/"Observation Zh", a different
+        # identity from the English "observation" entry rather than the
+        # same concept in a different language.
+        name = stem[:-len(suffix)] if suffix and stem.endswith(suffix) else stem
+        new_concepts.append({
+            "name": name,
+            "label": name.replace("_", " ").title(),
             "file": f"output/{variant}/{model}/html/{p.name}",
             "model": model,
-        }
-        for p in html_dir.glob("concept_*.html")
-    ]
+        })
 
     def mutate(catalog: list[dict]) -> None:
         for d in catalog:
