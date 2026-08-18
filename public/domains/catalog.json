@@ -478,6 +478,12 @@
         "target": "river_crossing_relative_velocity",
         "file": "output/college.en/sonnet/html/book_river_crossing_relative_velocity.html",
         "model": "sonnet"
+      },
+      {
+        "target": "river_crossing_relative_velocity",
+        "file": "output/college.zh/sonnet/html/book_river_crossing_relative_velocity_zh.html",
+        "model": "sonnet",
+        "language": "zh"
       }
     ],
     "generated_concepts": [
@@ -488,10 +494,24 @@
         "model": "sonnet"
       },
       {
+        "name": "analytical_vector_addition",
+        "label": "Analytical Vector Addition",
+        "file": "output/college.zh/sonnet/html/concept_analytical_vector_addition_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
         "name": "reference_frame",
         "label": "Reference Frame",
         "file": "output/college.en/sonnet/html/concept_reference_frame.html",
         "model": "sonnet"
+      },
+      {
+        "name": "reference_frame",
+        "label": "Reference Frame",
+        "file": "output/college.zh/sonnet/html/concept_reference_frame_zh.html",
+        "model": "sonnet",
+        "language": "zh"
       },
       {
         "name": "relative_velocity",
@@ -500,10 +520,24 @@
         "model": "sonnet"
       },
       {
+        "name": "relative_velocity",
+        "label": "Relative Velocity",
+        "file": "output/college.zh/sonnet/html/concept_relative_velocity_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
         "name": "resolving_vectors_into_components",
         "label": "Resolving Vectors Into Components",
         "file": "output/college.en/sonnet/html/concept_resolving_vectors_into_components.html",
         "model": "sonnet"
+      },
+      {
+        "name": "resolving_vectors_into_components",
+        "label": "Resolving Vectors Into Components",
+        "file": "output/college.zh/sonnet/html/concept_resolving_vectors_into_components_zh.html",
+        "model": "sonnet",
+        "language": "zh"
       },
       {
         "name": "resultant_vector",
@@ -512,10 +546,24 @@
         "model": "sonnet"
       },
       {
+        "name": "resultant_vector",
+        "label": "Resultant Vector",
+        "file": "output/college.zh/sonnet/html/concept_resultant_vector_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
         "name": "river_crossing_relative_velocity",
         "label": "River Crossing Relative Velocity",
         "file": "output/college.en/sonnet/html/concept_river_crossing_relative_velocity.html",
         "model": "sonnet"
+      },
+      {
+        "name": "river_crossing_relative_velocity",
+        "label": "River Crossing Relative Velocity",
+        "file": "output/college.zh/sonnet/html/concept_river_crossing_relative_velocity_zh.html",
+        "model": "sonnet",
+        "language": "zh"
       },
       {
         "name": "trigonometric_functions",
@@ -524,10 +572,24 @@
         "model": "sonnet"
       },
       {
+        "name": "trigonometric_functions",
+        "label": "Trigonometric Functions",
+        "file": "output/college.zh/sonnet/html/concept_trigonometric_functions_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
         "name": "vector",
         "label": "Vector",
         "file": "output/college.en/sonnet/html/concept_vector.html",
         "model": "sonnet"
+      },
+      {
+        "name": "vector",
+        "label": "Vector",
+        "file": "output/college.zh/sonnet/html/concept_vector_zh.html",
+        "model": "sonnet",
+        "language": "zh"
       },
       {
         "name": "vector_components",
@@ -536,16 +598,37 @@
         "model": "sonnet"
       },
       {
+        "name": "vector_components",
+        "label": "Vector Components",
+        "file": "output/college.zh/sonnet/html/concept_vector_components_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
         "name": "velocity",
         "label": "Velocity",
         "file": "output/college.en/sonnet/html/concept_velocity.html",
         "model": "sonnet"
       },
       {
+        "name": "velocity",
+        "label": "Velocity",
+        "file": "output/college.zh/sonnet/html/concept_velocity_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
         "name": "velocity_addition",
         "label": "Velocity Addition",
         "file": "output/college.en/sonnet/html/concept_velocity_addition.html",
         "model": "sonnet"
+      },
+      {
+        "name": "velocity_addition",
+        "label": "Velocity Addition",
+        "file": "output/college.zh/sonnet/html/concept_velocity_addition_zh.html",
+        "model": "sonnet",
+        "language": "zh"
       }
     ],
     "source": {
