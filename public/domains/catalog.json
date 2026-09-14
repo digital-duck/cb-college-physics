@@ -57,6 +57,36 @@
         "file": "output/college.zh/sonnet/html/book_scientific_theory_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "approximation",
+        "file": "output/intro.en/html/book_approximation.html",
+        "model": "",
+        "language": "en"
+      },
+      {
+        "target": "approximation",
+        "file": "output/research.en/sonnet/html/book_approximation.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "units",
+        "file": "output/college.zh/sonnet/html/book_units_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
+        "target": "approximation",
+        "file": "output/college.zh/sonnet/html/book_approximation_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
+        "target": "accuracy",
+        "file": "output/college.zh/html/book_accuracy_zh.html",
+        "model": "",
+        "language": "zh"
       }
     ],
     "generated_concepts": [
@@ -64,6 +94,20 @@
         "name": "accuracy",
         "label": "Accuracy",
         "file": "output/core.en/html/concept_accuracy.html"
+      },
+      {
+        "name": "accuracy",
+        "label": "Accuracy",
+        "file": "output/core.en/sonnet/html/concept_accuracy.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "accuracy",
+        "label": "Accuracy",
+        "file": "output/college.zh/html/concept_accuracy_zh.html",
+        "model": "",
+        "language": "zh"
       },
       {
         "name": "approximation",
@@ -81,6 +125,27 @@
         "label": "Approximation",
         "file": "output/research.en/sonnet/html/concept_approximation.html",
         "model": "sonnet"
+      },
+      {
+        "name": "approximation",
+        "label": "Approximation",
+        "file": "output/college.en/sonnet/html/concept_approximation.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "approximation",
+        "label": "Approximation",
+        "file": "output/intro.en/html/concept_approximation.html",
+        "model": "",
+        "language": "en"
+      },
+      {
+        "name": "approximation",
+        "label": "Approximation",
+        "file": "output/college.zh/sonnet/html/concept_approximation_zh.html",
+        "model": "sonnet",
+        "language": "zh"
       },
       {
         "name": "fundamental_units",
@@ -102,8 +167,29 @@
       {
         "name": "measurement",
         "label": "Measurement",
+        "file": "output/college.en/sonnet/html/concept_measurement.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "measurement",
+        "label": "Measurement",
+        "file": "output/core.en/sonnet/html/concept_measurement.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "measurement",
+        "label": "Measurement",
         "file": "output/college.zh/sonnet/html/concept_measurement_zh.html",
         "model": "sonnet",
+        "language": "zh"
+      },
+      {
+        "name": "measurement",
+        "label": "Measurement",
+        "file": "output/college.zh/html/concept_measurement_zh.html",
+        "model": "",
         "language": "zh"
       },
       {
@@ -131,6 +217,27 @@
         "model": "sonnet"
       },
       {
+        "name": "order_of_magnitude",
+        "label": "Order Of Magnitude",
+        "file": "output/college.en/sonnet/html/concept_order_of_magnitude.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "order_of_magnitude",
+        "label": "Order Of Magnitude",
+        "file": "output/intro.en/html/concept_order_of_magnitude.html",
+        "model": "",
+        "language": "en"
+      },
+      {
+        "name": "order_of_magnitude",
+        "label": "Order Of Magnitude",
+        "file": "output/college.zh/sonnet/html/concept_order_of_magnitude_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
         "name": "physical_quantity",
         "label": "Physical Quantity",
         "file": "output/core.en/html/concept_physical_quantity.html"
@@ -148,9 +255,44 @@
         "model": "sonnet"
       },
       {
+        "name": "physical_quantity",
+        "label": "Physical Quantity",
+        "file": "output/college.en/sonnet/html/concept_physical_quantity.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "physical_quantity",
+        "label": "Physical Quantity",
+        "file": "output/intro.en/html/concept_physical_quantity.html",
+        "model": "",
+        "language": "en"
+      },
+      {
+        "name": "physical_quantity",
+        "label": "Physical Quantity",
+        "file": "output/college.zh/sonnet/html/concept_physical_quantity_zh.html",
+        "model": "sonnet",
+        "language": "zh"
+      },
+      {
         "name": "precision",
         "label": "Precision",
         "file": "output/core.en/html/concept_precision.html"
+      },
+      {
+        "name": "precision",
+        "label": "Precision",
+        "file": "output/core.en/sonnet/html/concept_precision.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "precision",
+        "label": "Precision",
+        "file": "output/intro.en/html/concept_precision.html",
+        "model": "",
+        "language": "en"
       },
       {
         "name": "scientific_law",
@@ -196,9 +338,30 @@
         "file": "output/core.en/html/concept_significant_figures.html"
       },
       {
+        "name": "significant_figures",
+        "label": "Significant Figures",
+        "file": "output/intro.en/html/concept_significant_figures.html",
+        "model": "",
+        "language": "en"
+      },
+      {
         "name": "uncertainty",
         "label": "Uncertainty",
         "file": "output/core.en/html/concept_uncertainty.html"
+      },
+      {
+        "name": "uncertainty",
+        "label": "Uncertainty",
+        "file": "output/core.en/sonnet/html/concept_uncertainty.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "uncertainty",
+        "label": "Uncertainty",
+        "file": "output/intro.en/html/concept_uncertainty.html",
+        "model": "",
+        "language": "en"
       },
       {
         "name": "units",
@@ -216,6 +379,20 @@
         "label": "Units",
         "file": "output/research.en/sonnet/html/concept_units.html",
         "model": "sonnet"
+      },
+      {
+        "name": "units",
+        "label": "Units",
+        "file": "output/college.en/sonnet/html/concept_units.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "units",
+        "label": "Units",
+        "file": "output/college.zh/sonnet/html/concept_units_zh.html",
+        "model": "sonnet",
+        "language": "zh"
       }
     ],
     "default_level": "college",
@@ -230,6 +407,20 @@
       {
         "target": "approximation",
         "file": "output/core.en/pdf/book_approximation.pdf"
+      },
+      {
+        "target": "units",
+        "level": "college",
+        "language": "en",
+        "model": "sonnet",
+        "file": "output/college.en/sonnet/pdf/concept_units.pdf"
+      },
+      {
+        "target": "units",
+        "level": "college",
+        "language": "zh",
+        "model": "sonnet",
+        "file": "output/college.zh/sonnet/pdf/concept_units_zh.pdf"
       }
     ]
   },
@@ -267,6 +458,12 @@
         "target": "graphical_analysis_of_motion",
         "file": "output/college.en/sonnet/html/book_graphical_analysis_of_motion.html",
         "model": "sonnet"
+      },
+      {
+        "target": "problem_solving_kinematics",
+        "file": "output/college.en/sonnet/html/book_problem_solving_kinematics.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -285,7 +482,8 @@
         "name": "average_acceleration",
         "label": "Average Acceleration",
         "file": "output/college.en/sonnet/html/concept_average_acceleration.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "average_velocity",
@@ -302,7 +500,8 @@
         "name": "average_velocity",
         "label": "Average Velocity",
         "file": "output/college.en/sonnet/html/concept_average_velocity.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "constant_acceleration",
@@ -334,7 +533,8 @@
         "name": "displacement",
         "label": "Displacement",
         "file": "output/college.en/sonnet/html/concept_displacement.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "elapsed_time",
@@ -351,7 +551,8 @@
         "name": "elapsed_time",
         "label": "Elapsed Time",
         "file": "output/college.en/sonnet/html/concept_elapsed_time.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "graphical_analysis_of_motion",
@@ -363,7 +564,8 @@
         "name": "graphical_analysis_of_motion",
         "label": "Graphical Analysis Of Motion",
         "file": "output/college.en/sonnet/html/concept_graphical_analysis_of_motion.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "instantaneous_acceleration",
@@ -387,6 +589,13 @@
         "model": "gemma4"
       },
       {
+        "name": "kinematic_equations_constant_acceleration",
+        "label": "Kinematic Equations Constant Acceleration",
+        "file": "output/college.en/sonnet/html/concept_kinematic_equations_constant_acceleration.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "position",
         "label": "Position",
         "file": "output/core.en/html/concept_position.html"
@@ -401,13 +610,21 @@
         "name": "position",
         "label": "Position",
         "file": "output/college.en/sonnet/html/concept_position.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "problem_solving_kinematics",
         "label": "Problem Solving Kinematics",
         "file": "output/core.en/gemma4/html/concept_problem_solving_kinematics.html",
         "model": "gemma4"
+      },
+      {
+        "name": "problem_solving_kinematics",
+        "label": "Problem Solving Kinematics",
+        "file": "output/college.en/sonnet/html/concept_problem_solving_kinematics.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "stopping_distance",
@@ -429,7 +646,8 @@
         "name": "time",
         "label": "Time",
         "file": "output/college.en/sonnet/html/concept_time.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "vector",
@@ -446,7 +664,8 @@
         "name": "vector",
         "label": "Vector",
         "file": "output/college.en/sonnet/html/concept_vector.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "default_level": "college",
@@ -456,7 +675,16 @@
       "license": "CC BY 4.0",
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
-    }
+    },
+    "pdfs": [
+      {
+        "target": "problem_solving_kinematics",
+        "level": "college",
+        "language": "en",
+        "model": "sonnet",
+        "file": "output/college.en/sonnet/pdf/concept_problem_solving_kinematics.pdf"
+      }
+    ]
   },
   {
     "id": "college_physics_ch03",
@@ -1484,7 +1712,16 @@
       "url": "https://openstax.org/details/books/college-physics-2e",
       "attribution": "Access for free at openstax.org."
     },
-    "default_level": "college"
+    "default_level": "college",
+    "pdfs": [
+      {
+        "target": "first_law_of_thermodynamics",
+        "level": "college",
+        "language": "en",
+        "model": "sonnet",
+        "file": "output/college.en/sonnet/pdf/concept_first_law_of_thermodynamics.pdf"
+      }
+    ]
   },
   {
     "id": "college_physics_ch16",

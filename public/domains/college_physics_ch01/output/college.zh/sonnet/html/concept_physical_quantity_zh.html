@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physical Quantity | College Physics Ch01</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="physical-quantity-物理量">Physical Quantity（物理量）</h2>
+<p><strong>定义</strong></p>
+<p>物理量是物体或系统的某种特征、属性，可以通过直接测量获得数值，也可以通过其他测量值经过计算导出。每一个物理量都包含两个不可分割的部分：数值（大小）与单位。例如"5"本身没有物理意义，但"5 米"就明确表示一段长度。物理量通常分为两类：<strong>基本量</strong>（如长度 $L$、质量 $M$、时间 $T$、电流 $I$，在国际单位制中直接定义）与<strong>导出量</strong>（由基本量通过数学关系组合得到，如速度、密度、力）。理解这一区分,有助于判断某个量是"直接测"还是"算出来"的。</p>
+<p><strong>举例说明</strong></p>
+<p>假设你想知道一辆自行车在平路上骑行的平均速度。速度不能用仪器直接"读出",但可以通过两个基本量导出：</p>
+$$v = \frac{\Delta x}{\Delta t}$$
+<p>若测得位移 $\Delta x = 1500\ \text{m}$，用时 $\Delta t = 300\ \text{s}$，则</p>
+$$v = \frac{1500\ \text{m}}{300\ \text{s}} = 5\ \text{m/s}$$
+<p>这里，长度和时间是直接测量的基本量，速度则是二者的导出量，其单位（m/s）自动由长度单位除以时间单位得出——这正是导出量的关键特征：单位随定义式自动生成，无需另行规定。</p>
+<p><strong>解决问题的应用</strong></p>
+<p>在实际问题中，判断一个物理量是"基本"还是"导出"，以及它由哪些量组合而成，是解决综合测量问题的第一步，也是<strong>量纲分析</strong>（dimensional analysis）的基础。量纲分析的核心思路是：任何物理公式两边的量纲必须一致，这可以用来快速检验一个公式是否可能出错，或反推某个未知量的单位形式。</p>
+<p>例如，已知动能公式 $E_k = \tfrac{1}{2}mv^2$，其中 $m$ 的量纲是 $M$，$v$ 的量纲是 $LT^{-1}$，代入可得能量的量纲为 $ML^2T^{-2}$——这与焦耳（$\text{kg}\cdot\text{m}^2/\text{s}^2$）完全吻合，验证了公式的自洽性。</p>
+<p>因此,在处理任何新的物理关系式时，第一步不是急于代入数字，而是先确认：题目给出的是哪些物理量、它们各自的单位是什么、目标量应通过怎样的组合方式导出。这种"量的分类与追踪"习惯，是贯穿整个物理学习过程中最实用的问题解决技能之一。</p>
+  </main>
+  <footer class="spl-credit">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></footer>
+</div>
+</body>
+</html>

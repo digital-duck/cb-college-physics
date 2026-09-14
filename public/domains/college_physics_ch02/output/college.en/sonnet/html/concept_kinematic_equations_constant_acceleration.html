@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinematic Equations Constant Acceleration | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="kinematic-equations-constant-acceleration">Kinematic Equations Constant Acceleration</h2>
+<p>When acceleration is constant, the motion of an object — its position, velocity, and time — is fully described by four algebraic relationships. Each equation connects a different subset of five variables: initial position $x_0$, final position $x$, initial velocity $v_0$, final velocity $v$, acceleration $a$, and time $t$:</p>
+$$v = v_0 + at$$
+$$x = x_0 + \bar{v}t, \quad \text{where } \bar{v} = \frac{v_0+v}{2}$$
+$$x = x_0 + v_0t + \tfrac{1}{2}at^2$$
+$$v^2 = v_0^2 + 2a\Delta x$$
+<p>These are not four independent laws of physics — they are algebraic consequences of two definitions (average velocity and constant acceleration) combined and rearranged. The reason there are four is practical: each equation omits one variable, so you can pick the one equation that doesn't require a quantity you don't know.</p>
+<p><strong>Worked example.</strong> A car accelerates from rest ($v_0 = 0$) at $a = 3\ \text{m/s}^2$ for $t = 4\ \text{s}$. Find its displacement.</p>
+<p>Here the unknown we don't care about is final velocity $v$, so use the equation without $v$:</p>
+$$x - x_0 = v_0t + \tfrac{1}{2}at^2 = 0 + \tfrac{1}{2}(3)(4)^2 = 24\ \text{m}$$
+<p>Check with a second equation: $v = v_0 + at = 0 + 12 = 12\ \text{m/s}$, and $\bar{v}t = \frac{0+12}{2}(4) = 24\ \text{m}$. Consistent.</p>
+<p><strong>Problem-solving strategy.</strong> The four equations form a small toolkit, and the skill being tested is <em>selection</em>, not memorization. List the five variables, mark which three are given and which one is asked for, and pick the equation that excludes the fifth (unknown-and-unwanted) variable. This avoids solving a quadratic or a two-step chain when a single direct equation exists.</p>
+<p>For example, a braking-distance problem ("car slows from 20 m/s to 0 over $\Delta x = 40\ \text{m}$; find $a$") gives $v_0, v, \Delta x$ and asks for $a$ — no $t$ appears, so $v^2 = v_0^2 + 2a\Delta x$ is the direct route: $a = \frac{0 - 400}{80} = -5\ \text{m/s}^2$. Recognizing which variable is absent from the question is the actual problem-solving skill these equations train.</p>
+  </main>
+  <footer class="spl-credit">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></footer>
+</div>
+</body>
+</html>

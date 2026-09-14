@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Units | College Physics Ch01</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="units">Units</h2>
+<p>单位（Unit）是用来表示物理量数值大小的标准化参照值，使不同时间、不同地点、不同人测得的测量结果可以被准确记录、比较和换算。任何一个物理量的完整表达都必须包含两部分：数值（number）和单位（unit）。例如，说"这根绳子长 5"是没有意义的——5 米？5 英尺？5 光年？只有写成 $5\ \text{m}$，测量才具有可交流的意义。</p>
+<p>国际单位制（International System of Units, SI）定义了七个基本单位：米（$\text{m}$，长度）、千克（$\text{kg}$，质量）、秒（$\text{s}$，时间）、安培（$\text{A}$，电流）、开尔文（$\text{K}$，温度）、摩尔（$\text{mol}$，物质的量）、坎德拉（$\text{cd}$，发光强度）。所有其他单位——如速度的 $\text{m/s}$、力的牛顿 $\text{N} = \text{kg·m/s}^2$、能量的焦耳 $\text{J} = \text{kg·m}^2/\text{s}^2$——都是由这七个基本单位组合导出的。</p>
+<p><strong>实例分析</strong>：假设你要计算一辆汽车的动能，已知质量 $m = 1200\ \text{lb}$（磅），速度 $v = 60\ \text{mph}$（英里/小时）。若直接代入动能公式 $E_k = \frac{1}{2}mv^2$，得到的数值单位将是"磅·英里²/小时²"——这不是标准的能量单位，无法与其他物理量比较，也无法验证结果是否合理。正确做法是先将单位统一换算为 SI 制：</p>
+$$m = 1200\ \text{lb} \times 0.4536\ \frac{\text{kg}}{\text{lb}} \approx 544.3\ \text{kg}$$
+$$v = 60\ \text{mph} \times 0.4470\ \frac{\text{m/s}}{\text{mph}} \approx 26.8\ \text{m/s}$$
+<p>代入后得：</p>
+$$E_k = \frac{1}{2}(544.3\ \text{kg})(26.8\ \text{m/s})^2 \approx 1.95 \times 10^5\ \text{J}$$
+<p><strong>问题解决中的应用</strong>：在实际工程与科学计算中，单位换算不仅是"格式转换"，更是发现错误的工具——这种方法称为<strong>量纲分析</strong>（dimensional analysis）。若最终结果的单位与预期物理量的标准单位不符（例如计算力却得到了 $\text{kg/s}$），几乎可以肯定运算过程中存在错误。因此，养成"随时携带单位进行代数运算、让单位自身相互约去"的习惯，是排查计算错误、验证公式正确性的第一道防线，也是任何定量学科（物理、化学、工程、经济）中不可或缺的基本功。</p>
+  </main>
+  <footer class="spl-credit">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></footer>
+</div>
+</body>
+</html>
