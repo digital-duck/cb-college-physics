@@ -3189,6 +3189,12 @@
         "target": "quasar",
         "file": "output/college.en/sonnet/html/book_quasar.html",
         "model": "sonnet"
+      },
+      {
+        "target": "quantum_mechanics",
+        "file": "output/college.en/sonnet/html/book_quantum_mechanics.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -3196,43 +3202,57 @@
         "name": "black_hole",
         "label": "Black Hole",
         "file": "output/college.en/sonnet/html/concept_black_hole.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "equivalence_principle",
         "label": "Equivalence Principle",
         "file": "output/college.en/sonnet/html/concept_equivalence_principle.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "escape_velocity",
         "label": "Escape Velocity",
         "file": "output/college.en/sonnet/html/concept_escape_velocity.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "galaxy",
         "label": "Galaxy",
         "file": "output/college.en/sonnet/html/concept_galaxy.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "general_relativity",
         "label": "General Relativity",
         "file": "output/college.en/sonnet/html/concept_general_relativity.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "quantum_mechanics",
+        "label": "Quantum Mechanics",
+        "file": "output/college.en/sonnet/html/concept_quantum_mechanics.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "quasar",
         "label": "Quasar",
         "file": "output/college.en/sonnet/html/concept_quasar.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "special_relativity",
         "label": "Special Relativity",
         "file": "output/college.en/sonnet/html/concept_special_relativity.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "source": {

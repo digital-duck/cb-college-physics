@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Average Velocity | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="average-velocity">Average Velocity</h2>
+<p><strong>定义</strong></p>
+<p>平均速度描述物体在一段时间内位置变化的快慢与方向,定义为位移除以经过的时间:</p>
+$$\bar{v} = \frac{\Delta x}{\Delta t} = \frac{x_2 - x_1}{t_2 - t_1}$$
+<p>这里必须强调:平均速度是<strong>矢量</strong>,其方向与位移方向一致,而非路径方向。国际单位制(SI)下单位为 $\text{m/s}$。平均速度不同于平均速率(average speed,标量,等于总路径长度除以总时间)——若物体往返运动回到出发点,位移为零,平均速度也为零,但平均速率一定大于零。这一区别是理解运动学的关键起点。</p>
+<p><strong>例题</strong></p>
+<p>一辆车沿直线道路行驶,先向东行驶 $60\ \text{km}$ 用时 $1.0\ \text{h}$,随后掉头向西行驶 $20\ \text{km}$ 用时 $0.5\ \text{h}$。求整个过程的平均速度和平均速率。</p>
+<p>取向东为正方向。总位移:</p>
+$$\Delta x = (+60\ \text{km}) + (-20\ \text{km}) = +40\ \text{km}$$
+<p>总时间:$\Delta t = 1.0\ \text{h} + 0.5\ \text{h} = 1.5\ \text{h}$</p>
+$$\bar{v} = \frac{40\ \text{km}}{1.5\ \text{h}} \approx 26.7\ \text{km/h(向东)}$$
+<p>而平均速率则用总路程 $60 + 20 = 80\ \text{km}$ 计算:</p>
+$$\bar{\text{speed}} = \frac{80\ \text{km}}{1.5\ \text{h}} \approx 53.3\ \text{km/h}$$
+<p>两者数值和物理意义均不同,说明位移与路程不可混淆。</p>
+<p><strong>解题应用</strong></p>
+<p>在处理多段运动的问题时,标准做法是:(1) 为每一段运动设定统一的正方向坐标轴;(2) 分别计算各段的带符号位移;(3) 将所有位移求代数和得到总位移;(4) 除以总时间。常见错误是直接对各段的平均速度取算术平均——这只有在各段耗时相等时才恰好成立,一般情况下并不成立,因为平均速度的定义本质上是对时间的加权。</p>
+<p>在 $x$–$t$(位置对时间)图像中,平均速度对应连接两个时刻对应点的<strong>割线斜率</strong>;当时间间隔趋于零时,该斜率的极限即为瞬时速度 $v = dx/dt$,这也是从平均速度过渡到微分描述运动的自然桥梁。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

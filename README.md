@@ -58,3 +58,11 @@ source (OpenStax, CC BY 4.0, link to openstax.org).
 npm run deploy      # vite build && gh-pages -d dist --no-history --dotfiles
 
 ```
+
+## Generate content
+
+```bash
+conda activate spl123
+
+python3 scripts/batch_generate.py generate --domain college_physics_ch01-college_physics_ch34 --language zh
+```

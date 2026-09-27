@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elapsed Time | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="elapsed-time">Elapsed Time</h2>
+<p><strong>定义</strong></p>
+<p>在运动学中，<strong>经过时间</strong>（elapsed time）是指一段运动过程中终止时刻与起始时刻之差,记作</p>
+$$
+\Delta t = t_f - t_0
+$$
+<p>其中 $t_0$ 是计时起点（初始时刻），$t_f$ 是计时终点（末尾时刻），$\Delta t$ 的国际单位是秒（s）。需要强调的是,$\Delta t$ 度量的是时间间隔的长度,而不是某个具体的时刻;它是一个标量,恒为正值（约定 $t_f > t_0$）。在许多教材和考试题目中,若运动从计时开始（即 $t_0 = 0$）,则 $\Delta t = t_f$,但严谨的做法是始终明确写出 $t_0$ 与 $t_f$ 两个端点,再相减,以免在多阶段运动问题中出现符号或计时基准错误。</p>
+<p><strong>例题</strong></p>
+<p>一辆汽车在高速公路上于时钟显示 $t_0 = 2.5\ \text{s}$ 时开始加速,到时钟显示 $t_f = 9.8\ \text{s}$ 时停止加速。求该加速过程的经过时间。</p>
+$$
+\Delta t = t_f - t_0 = 9.8\ \text{s} - 2.5\ \text{s} = 7.3\ \text{s}
+$$
+<p><strong>解题应用</strong></p>
+<p>经过时间常与速度、加速度等物理量联合出现在复合公式中,例如平均速度 $\bar v = \dfrac{\Delta x}{\Delta t}$ 或加速度 $a = \dfrac{\Delta v}{\Delta t}$。解题时应遵循以下步骤：</p>
+<li>从题目中分别识别 $t_0$ 与 $t_f$（注意区分"经过了多长时间"与"在第几秒时"这两类问法）;</li>
+<li>计算 $\Delta t = t_f - t_0$,并核对单位是否统一（例如分钟需换算为秒）;</li>
+<li>若运动分为多个阶段,应对每一阶段分别计算各自的 $\Delta t_i$,再根据题目要求求和或分别代入公式,避免用总时刻直接相减而漏掉中间过程。</li>
+<p>常见错误是将 $t_f$ 与 $\Delta t$ 混淆——例如题目给出"物体运动了 5 秒后又运动了 3 秒",此时不能直接令 $\Delta t = 3\ \text{s}$ 去计算全过程的平均速度,而应先求出总经过时间 $\Delta t_{\text{总}} = 5\ \text{s} + 3\ \text{s} = 8\ \text{s}$,再结合总位移计算。掌握 $\Delta t$ 的正确提取,是后续学习速度、加速度乃至微积分中"极限"概念（$\Delta t \to 0$）的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="time-时间">Time（时间）</h2>
+<p><strong>定义</strong></p>
+<p>时间是物理变化得以发生和排序的基本量，国际单位制（SI）中以秒（s）为单位。现代秒的定义并非基于地球自转或公转（这些并不完全均匀），而是基于原子物理中一个极为稳定的周期性过程：铯-133 原子基态两个超精细能级之间跃迁所对应的辐射，其振荡频率为</p>
+$$
+\Delta \nu_{Cs} = 9{,}192{,}631{,}770 \ \text{Hz}
+$$
+<p>即 1 秒被定义为该辐射振荡 $9{,}192{,}631{,}770$ 次所经历的时间。这一定义使"秒"成为可在世界任何实验室独立复现、彼此校准的标准，而不依赖某个特定的天体或人工制品。</p>
+<p>在物理学中，时间通常用符号 $t$ 表示，是描述运动、变化速率的自变量。例如平均速度定义为位移对时间的比值：</p>
+$$
+\bar{v} = \frac{\Delta x}{\Delta t}
+$$
+<p>而瞬时速度则是位移对时间的导数：</p>
+$$
+v(t) = \frac{dx}{dt}
+$$
+<p>这说明时间不仅是一个刻度，更是构建"变化率"（导数）这一数学工具的基础变量。</p>
+<p><strong>范例</strong></p>
+<p>原子钟的稳定性极高：目前最好的光晶格钟（optical lattice clock）误差约为 $10^{-18}$ 量级，相当于宇宙年龄（约 138 亿年）内误差不超过 0.1 秒。相比之下，地球自转本身并不均匀——由于潮汐摩擦、地核流动等因素，一天的实际长度每年会有微小漂移，因此"闰秒"（leap second）需要不定期加入协调世界时（UTC）中，以保持原子时间与天文观测的天体时间同步。</p>
+<p><strong>应用与解题练习</strong></p>
+<p>设某原子钟每秒振荡 $9{,}192{,}631{,}770$ 次，若观测到某段时间内振荡了 $4{,}596{,}315{,}885{,}000$ 次，求经过的时间（秒）。</p>
+<p>解：</p>
+$$
+t = \frac{4{,}596{,}315{,}885{,}000}{9{,}192{,}631{,}770} \approx 500 \ \text{s}
+$$
+<p>此类换算是 GPS 卫星定位、精密计时同步、以及相对论效应验证（如卫星钟因引力和速度产生的时间膨胀修正）中的基本计算步骤：只有将"周期计数"精确转换为"秒"，才能进一步比较不同参考系下时间流逝的差异，这正是狭义与广义相对论中时间膨胀公式得以被实验验证的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>
