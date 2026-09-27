@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conservation Of Angular Momentum | College Physics Ch10</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="conservation-of-angular-momentum">Conservation Of Angular Momentum</h2>
+<p>You've already met angular velocity $\omega$, moment of inertia $I$, and torque $\tau$ in earlier sections on rotational kinematics and dynamics. This section introduces one new quantity built from them: <strong>angular momentum</strong> $L$, which measures how much rotational motion a spinning object or system possesses. For a rigid body rotating about a fixed axis,</p>
+$$L = I\omega$$
+<p>Just as torque is the rotational counterpart of force, angular momentum is the rotational counterpart of linear momentum $p = mv$. Newton's second law in rotational form states $\tau_{\text{net}} = dL/dt$, so whenever the net external torque on a system is zero, $L$ stays constant over time:</p>
+$$L_{\text{initial}} = L_{\text{final}} \quad \Rightarrow \quad I_1\omega_1 = I_2\omega_2$$
+<p>This is not a loose analogy — it follows directly from Newton's second law, and it holds exactly whenever torques from friction, air resistance, or other external forces are negligible.</p>
+<p><strong>Worked example.</strong> A figure skater spins with arms extended, giving a moment of inertia $I_1 = 4.0\ \text{kg·m}^2$ at angular velocity $\omega_1 = 2.0\ \text{rad/s}$. She pulls her arms in, reducing her moment of inertia to $I_2 = 1.0\ \text{kg·m}^2$. Since no external torque acts on her (ice friction is negligible), $L$ is conserved:</p>
+$$I_1\omega_1 = I_2\omega_2 \implies (4.0)(2.0) = (1.0)\omega_2 \implies \omega_2 = 8.0\ \text{rad/s}$$
+<p>Her angular velocity quadruples as her moment of inertia drops to one-quarter of its original value — an inverse trade-off between $I$ and $\omega$ that requires no extra muscular torque beyond pulling her arms inward.</p>
+<p><strong>Problem-solving application.</strong> The general strategy: (1) identify the system and confirm no net external torque acts during the event, (2) determine $I_1$, $\omega_1$, and the new configuration's $I_2$, (3) solve $I_1\omega_1 = I_2\omega_2$ for the unknown. This reasoning explains a diver tucking into a somersault to spin faster, a neutron star spinning up dramatically as a collapsing star's radius shrinks (since $I \propto mr^2$), and a person on a rotating stool spinning faster when pulling in weights held at arm's length. In each case, redistributing mass closer to the rotation axis decreases $I$, and conservation of $L$ forces $\omega$ to increase proportionally.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch10: Rotational Motion and Angular Momentum (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

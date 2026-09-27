@@ -2360,6 +2360,18 @@
         "file": "output/college.en/sonnet/html/book_basal_metabolic_rate.html",
         "model": "sonnet",
         "language": "en"
+      },
+      {
+        "target": "renewable_energy_sources",
+        "file": "output/college.en/sonnet/html/book_renewable_energy_sources.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "nonrenewable_energy_sources",
+        "file": "output/college.en/sonnet/html/book_nonrenewable_energy_sources.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -2462,6 +2474,13 @@
         "language": "zh"
       },
       {
+        "name": "law_of_conservation_of_energy",
+        "label": "Law Of Conservation Of Energy",
+        "file": "output/college.en/sonnet/html/concept_law_of_conservation_of_energy.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "law_of_conservation_of_energy_zh",
         "label": "Law Of Conservation Of Energy Zh",
         "file": "output/college.zh/sonnet/html/concept_law_of_conservation_of_energy_zh.html",
@@ -2525,6 +2544,13 @@
         "language": "zh"
       },
       {
+        "name": "nonrenewable_energy_sources",
+        "label": "Nonrenewable Energy Sources",
+        "file": "output/college.en/sonnet/html/concept_nonrenewable_energy_sources.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "nonrenewable_energy_sources_zh",
         "label": "Nonrenewable Energy Sources Zh",
         "file": "output/college.zh/sonnet/html/concept_nonrenewable_energy_sources_zh.html",
@@ -2558,6 +2584,13 @@
         "file": "output/college.zh/sonnet/html/concept_power_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "renewable_energy_sources",
+        "label": "Renewable Energy Sources",
+        "file": "output/college.en/sonnet/html/concept_renewable_energy_sources.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "renewable_energy_sources_zh",
@@ -2664,6 +2697,12 @@
         "file": "output/college.zh/sonnet/html/book_rocket_propulsion.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "rocket_propulsion",
+        "file": "output/college.en/sonnet/html/book_rocket_propulsion.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -2671,7 +2710,8 @@
         "name": "conservation_of_momentum",
         "label": "Conservation Of Momentum",
         "file": "output/college.en/sonnet/html/concept_conservation_of_momentum.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "conservation_of_momentum_zh",
@@ -2684,7 +2724,8 @@
         "name": "isolated_system",
         "label": "Isolated System",
         "file": "output/college.en/sonnet/html/concept_isolated_system.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "isolated_system_zh",
@@ -2697,7 +2738,8 @@
         "name": "linear_momentum",
         "label": "Linear Momentum",
         "file": "output/college.en/sonnet/html/concept_linear_momentum.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "linear_momentum_zh",
@@ -2710,7 +2752,8 @@
         "name": "mass",
         "label": "Mass",
         "file": "output/college.en/sonnet/html/concept_mass.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "mass_zh",
@@ -2723,7 +2766,8 @@
         "name": "net_external_force",
         "label": "Net External Force",
         "file": "output/college.en/sonnet/html/concept_net_external_force.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "net_external_force_zh",
@@ -2731,6 +2775,13 @@
         "file": "output/college.zh/sonnet/html/concept_net_external_force_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "newtons_third_law",
+        "label": "Newtons Third Law",
+        "file": "output/college.en/sonnet/html/concept_newtons_third_law.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "newtons_third_law_zh",
@@ -2743,7 +2794,8 @@
         "name": "recoil",
         "label": "Recoil",
         "file": "output/college.en/sonnet/html/concept_recoil.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "recoil_zh",
@@ -2753,6 +2805,13 @@
         "language": "zh"
       },
       {
+        "name": "rocket_acceleration",
+        "label": "Rocket Acceleration",
+        "file": "output/college.en/sonnet/html/concept_rocket_acceleration.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "rocket_acceleration_zh",
         "label": "Rocket Acceleration Zh",
         "file": "output/college.zh/sonnet/html/concept_rocket_acceleration_zh.html",
@@ -2760,11 +2819,25 @@
         "language": "zh"
       },
       {
+        "name": "rocket_propulsion",
+        "label": "Rocket Propulsion",
+        "file": "output/college.en/sonnet/html/concept_rocket_propulsion.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "rocket_propulsion_zh",
         "label": "Rocket Propulsion Zh",
         "file": "output/college.zh/sonnet/html/concept_rocket_propulsion_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "rocket_thrust",
+        "label": "Rocket Thrust",
+        "file": "output/college.en/sonnet/html/concept_rocket_thrust.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "rocket_thrust_zh",
@@ -2777,7 +2850,8 @@
         "name": "velocity",
         "label": "Velocity",
         "file": "output/college.en/sonnet/html/concept_velocity.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "velocity_zh",
@@ -2840,9 +2914,34 @@
         "file": "output/college.zh/sonnet/html/book_muscles_joints_statics.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "statics",
+        "file": "output/college.en/sonnet/html/book_statics.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "posture_back_strain",
+        "file": "output/college.en/sonnet/html/book_posture_back_strain.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "target": "muscles_joints_statics",
+        "file": "output/college.en/sonnet/html/book_muscles_joints_statics.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
+      {
+        "name": "center_of_gravity",
+        "label": "Center Of Gravity",
+        "file": "output/college.en/sonnet/html/concept_center_of_gravity.html",
+        "model": "sonnet",
+        "language": "en"
+      },
       {
         "name": "center_of_gravity_zh",
         "label": "Center Of Gravity Zh",
@@ -2854,7 +2953,8 @@
         "name": "equilibrium",
         "label": "Equilibrium",
         "file": "output/college.en/sonnet/html/concept_equilibrium.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "equilibrium_zh",
@@ -2862,6 +2962,13 @@
         "file": "output/college.zh/sonnet/html/concept_equilibrium_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "first_condition_equilibrium",
+        "label": "First Condition Equilibrium",
+        "file": "output/college.en/sonnet/html/concept_first_condition_equilibrium.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "first_condition_equilibrium_zh",
@@ -2874,7 +2981,8 @@
         "name": "force",
         "label": "Force",
         "file": "output/college.en/sonnet/html/concept_force.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "force_zh",
@@ -2887,7 +2995,8 @@
         "name": "free_body_diagram",
         "label": "Free Body Diagram",
         "file": "output/college.en/sonnet/html/concept_free_body_diagram.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "free_body_diagram_zh",
@@ -2897,11 +3006,25 @@
         "language": "zh"
       },
       {
+        "name": "fulcrum",
+        "label": "Fulcrum",
+        "file": "output/college.en/sonnet/html/concept_fulcrum.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "fulcrum_zh",
         "label": "Fulcrum Zh",
         "file": "output/college.zh/sonnet/html/concept_fulcrum_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "lever",
+        "label": "Lever",
+        "file": "output/college.en/sonnet/html/concept_lever.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "lever_zh",
@@ -2911,6 +3034,13 @@
         "language": "zh"
       },
       {
+        "name": "mass",
+        "label": "Mass",
+        "file": "output/college.en/sonnet/html/concept_mass.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "mass_zh",
         "label": "Mass Zh",
         "file": "output/college.zh/sonnet/html/concept_mass_zh.html",
@@ -2918,11 +3048,25 @@
         "language": "zh"
       },
       {
+        "name": "mechanical_advantage",
+        "label": "Mechanical Advantage",
+        "file": "output/college.en/sonnet/html/concept_mechanical_advantage.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "mechanical_advantage_zh",
         "label": "Mechanical Advantage Zh",
         "file": "output/college.zh/sonnet/html/concept_mechanical_advantage_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "muscles_joints_statics",
+        "label": "Muscles Joints Statics",
+        "file": "output/college.en/sonnet/html/concept_muscles_joints_statics.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "muscles_joints_statics_zh",
@@ -2935,7 +3079,8 @@
         "name": "net_external_force",
         "label": "Net External Force",
         "file": "output/college.en/sonnet/html/concept_net_external_force.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "net_external_force_zh",
@@ -2948,7 +3093,8 @@
         "name": "perpendicular_lever_arm",
         "label": "Perpendicular Lever Arm",
         "file": "output/college.en/sonnet/html/concept_perpendicular_lever_arm.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "perpendicular_lever_arm_zh",
@@ -2961,7 +3107,8 @@
         "name": "pivot_point",
         "label": "Pivot Point",
         "file": "output/college.en/sonnet/html/concept_pivot_point.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "pivot_point_zh",
@@ -2971,11 +3118,25 @@
         "language": "zh"
       },
       {
+        "name": "posture_back_strain",
+        "label": "Posture Back Strain",
+        "file": "output/college.en/sonnet/html/concept_posture_back_strain.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "posture_back_strain_zh",
         "label": "Posture Back Strain Zh",
         "file": "output/college.zh/sonnet/html/concept_posture_back_strain_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "second_condition_equilibrium",
+        "label": "Second Condition Equilibrium",
+        "file": "output/college.en/sonnet/html/concept_second_condition_equilibrium.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "second_condition_equilibrium_zh",
@@ -2985,6 +3146,13 @@
         "language": "zh"
       },
       {
+        "name": "simple_machine",
+        "label": "Simple Machine",
+        "file": "output/college.en/sonnet/html/concept_simple_machine.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "simple_machine_zh",
         "label": "Simple Machine Zh",
         "file": "output/college.zh/sonnet/html/concept_simple_machine_zh.html",
@@ -2992,11 +3160,25 @@
         "language": "zh"
       },
       {
+        "name": "static_equilibrium",
+        "label": "Static Equilibrium",
+        "file": "output/college.en/sonnet/html/concept_static_equilibrium.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "static_equilibrium_zh",
         "label": "Static Equilibrium Zh",
         "file": "output/college.zh/sonnet/html/concept_static_equilibrium_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "statics",
+        "label": "Statics",
+        "file": "output/college.en/sonnet/html/concept_statics.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "statics_zh",
@@ -3009,7 +3191,8 @@
         "name": "torque",
         "label": "Torque",
         "file": "output/college.en/sonnet/html/concept_torque.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "torque_zh",
@@ -3017,6 +3200,13 @@
         "file": "output/college.zh/sonnet/html/concept_torque_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "weight",
+        "label": "Weight",
+        "file": "output/college.en/sonnet/html/concept_weight.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "weight_zh",
@@ -3073,9 +3263,22 @@
         "file": "output/college.zh/sonnet/html/book_gyroscopic_precession.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "collisions_of_extended_bodies",
+        "file": "output/college.en/sonnet/html/book_collisions_of_extended_bodies.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
+      {
+        "name": "angular_momentum",
+        "label": "Angular Momentum",
+        "file": "output/college.en/sonnet/html/concept_angular_momentum.html",
+        "model": "sonnet",
+        "language": "en"
+      },
       {
         "name": "angular_momentum_zh",
         "label": "Angular Momentum Zh",
@@ -3087,7 +3290,8 @@
         "name": "angular_velocity",
         "label": "Angular Velocity",
         "file": "output/college.en/sonnet/html/concept_angular_velocity.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "angular_velocity_zh",
@@ -3097,6 +3301,13 @@
         "language": "zh"
       },
       {
+        "name": "collisions_of_extended_bodies",
+        "label": "Collisions Of Extended Bodies",
+        "file": "output/college.en/sonnet/html/concept_collisions_of_extended_bodies.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "collisions_of_extended_bodies_zh",
         "label": "Collisions Of Extended Bodies Zh",
         "file": "output/college.zh/sonnet/html/concept_collisions_of_extended_bodies_zh.html",
@@ -3104,11 +3315,25 @@
         "language": "zh"
       },
       {
+        "name": "conservation_of_angular_momentum",
+        "label": "Conservation Of Angular Momentum",
+        "file": "output/college.en/sonnet/html/concept_conservation_of_angular_momentum.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "conservation_of_angular_momentum_zh",
         "label": "Conservation Of Angular Momentum Zh",
         "file": "output/college.zh/sonnet/html/concept_conservation_of_angular_momentum_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "force",
+        "label": "Force",
+        "file": "output/college.en/sonnet/html/concept_force.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "force_zh",
@@ -3128,7 +3353,8 @@
         "name": "linear_velocity",
         "label": "Linear Velocity",
         "file": "output/college.en/sonnet/html/concept_linear_velocity.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "linear_velocity_zh",
@@ -3141,7 +3367,8 @@
         "name": "mass",
         "label": "Mass",
         "file": "output/college.en/sonnet/html/concept_mass.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "mass_zh",
@@ -3154,7 +3381,8 @@
         "name": "moment_of_inertia",
         "label": "Moment Of Inertia",
         "file": "output/college.en/sonnet/html/concept_moment_of_inertia.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "moment_of_inertia_zh",
@@ -3174,7 +3402,8 @@
         "name": "rolling_without_slipping",
         "label": "Rolling Without Slipping",
         "file": "output/college.en/sonnet/html/concept_rolling_without_slipping.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "rolling_without_slipping_zh",
@@ -3187,7 +3416,8 @@
         "name": "rotational_kinetic_energy",
         "label": "Rotational Kinetic Energy",
         "file": "output/college.en/sonnet/html/concept_rotational_kinetic_energy.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "rotational_kinetic_energy_zh",
@@ -3195,6 +3425,20 @@
         "file": "output/college.zh/sonnet/html/concept_rotational_kinetic_energy_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "torque",
+        "label": "Torque",
+        "file": "output/college.en/sonnet/html/concept_torque.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "torque_angular_momentum_relation",
+        "label": "Torque Angular Momentum Relation",
+        "file": "output/college.en/sonnet/html/concept_torque_angular_momentum_relation.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "torque_angular_momentum_relation_zh",
@@ -3214,7 +3458,8 @@
         "name": "translational_kinetic_energy",
         "label": "Translational Kinetic Energy",
         "file": "output/college.en/sonnet/html/concept_translational_kinetic_energy.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "translational_kinetic_energy_zh",

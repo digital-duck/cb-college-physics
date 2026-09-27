@@ -43,21 +43,15 @@ section:first-of-type{border-top:none;padding-top:0}
 <div class="page">
   <main>
     <h2 id="average-acceleration">Average Acceleration</h2>
-<p>Average acceleration measures how quickly velocity changes over a time interval. It is defined as</p>
-$$
-\bar{a} = \frac{\Delta v}{\Delta t} = \frac{v_f - v_i}{t_f - t_i}
-$$
-<p>where $v_f$ and $v_i$ are the final and initial velocities and $t_f - t_i$ is the elapsed time. Because velocity is a vector, so is acceleration: it points in the direction of the <em>change</em> in velocity, not necessarily in the direction of motion. Its SI unit is meters per second squared ($\text{m/s}^2$), reflecting that it is a rate of a rate — a change in (m/s) per second.</p>
-<p><strong>Worked example.</strong> A car traveling east at $v_i = 12\ \text{m/s}$ speeds up to $v_f = 28\ \text{m/s}$ over $\Delta t = 8\ \text{s}$. Taking east as positive,</p>
-$$
-\bar{a} = \frac{28 - 12}{8} = \frac{16}{8} = 2\ \text{m/s}^2 \text{ (east)}
-$$
-<p>The car gains 2 m/s of eastward speed every second, on average. If instead the car slowed from 28 m/s to 12 m/s over the same interval, $\bar{a} = -2\ \text{m/s}^2$: the negative sign indicates deceleration, i.e., acceleration directed opposite to the velocity.</p>
-<p><strong>Problem-solving application.</strong> The real power of $\bar{a} = \Delta v/\Delta t$ is using it to solve for an unknown among $v_i$, $v_f$, $\Delta t$, or $\bar{a}$ by algebraic rearrangement, e.g. $v_f = v_i + \bar{a}\,\Delta t$. Suppose a cyclist decelerates from $18\ \text{m/s}$ at a constant average rate of $-3\ \text{m/s}^2$ and you need the time to reach $6\ \text{m/s}$:</p>
-$$
-\Delta t = \frac{v_f - v_i}{\bar{a}} = \frac{6 - 18}{-3} = 4\ \text{s}
-$$
-<p>A key distinction for problem-solving: <em>average</em> acceleration uses the net change over the whole interval, while <em>instantaneous</em> acceleration (the derivative $dv/dt$) describes the rate at a single moment. When motion is non-uniform — as on a velocity-time graph with curvature — the average acceleration equals the slope of the straight line connecting the initial and final points, not the slope of the curve itself. Recognizing which quantity a problem asks for, and whether acceleration is constant, determines whether $\bar{a} = \Delta v/\Delta t$ alone suffices or whether calculus-based kinematics equations are needed.</p>
+<p><strong>Definition.</strong> Average acceleration measures how quickly velocity changes over an interval of time. If an object's velocity changes from $v_1$ to $v_2$ over a time interval $\Delta t = t_2 - t_1$, the average acceleration is</p>
+$$\bar{a} = \frac{\Delta v}{\Delta t} = \frac{v_2 - v_1}{t_2 - t_1}$$
+<p>Because velocity is a vector, $\bar{a}$ is also a vector — it points in the direction of the <em>change</em> in velocity, not necessarily in the direction of motion. Its SI unit is meters per second squared ($\text{m/s}^2$), reflecting that it is "velocity per time," or equivalently "(distance per time) per time."</p>
+<p><strong>Worked example.</strong> A car traveling east at $12\ \text{m/s}$ speeds up to $28\ \text{m/s}$ east over $8$ seconds while merging onto a highway. Its average acceleration is</p>
+$$\bar{a} = \frac{28\ \text{m/s} - 12\ \text{m/s}}{8\ \text{s}} = \frac{16\ \text{m/s}}{8\ \text{s}} = 2\ \text{m/s}^2 \text{ (east)}$$
+<p>This says that, on average, the car's eastward speed increases by $2\ \text{m/s}$ every second. Note this is the <em>average</em> rate — the car might accelerate unevenly (faster at first, then leveling off), but $\bar{a}$ smooths that variation into a single representative value over the interval.</p>
+<p><strong>Problem-solving application.</strong> A common trap is treating acceleration as purely a "speeding up" quantity. Consider a ball thrown straight up, which leaves your hand at $v_1 = +15\ \text{m/s}$ (upward) and, $1.5\ \text{s}$ later, is moving at $v_2 = -7.5\ \text{m/s}$ (now downward). Taking up as positive:</p>
+$$\bar{a} = \frac{-7.5\ \text{m/s} - 15\ \text{m/s}}{1.5\ \text{s}} = \frac{-22.5\ \text{m/s}}{1.5\ \text{s}} = -15\ \text{m/s}^2$$
+<p>The negative sign doesn't mean "slowing down" — it means the acceleration vector points downward throughout, consistent with gravity acting continuously, even while the ball is still rising. This distinction — sign indicates <em>direction</em>, not just speeding up versus slowing down — is essential when average acceleration is used to reconstruct motion (e.g., solving for final velocity via $v_2 = v_1 + \bar{a}\,\Delta t$) or to identify the net force via $F = m\bar{a}$ in problems spanning a finite time interval rather than an instant.</p>
   </main>
   <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
 </div>

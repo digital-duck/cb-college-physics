@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rocket Propulsion | College Physics Ch08</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="rocket-propulsion">Rocket Propulsion</h2>
+<p>A rocket accelerates without pushing against the ground, air, or water — a fact that puzzled early critics of spaceflight. The explanation lies in Newton's third law combined with conservation of momentum: the rocket expels mass (hot exhaust gas) backward at high velocity, and the exhaust pushes the rocket forward with equal and opposite force. No external medium is needed because the rocket and its expelled propellant form a closed system whose total momentum stays constant.</p>
+<p>Because a rocket continuously loses mass as it burns fuel, its motion cannot be analyzed with the fixed-mass form of Newton's second law. Instead, consider the system at time $t$ with mass $m$ moving at velocity $v$, and at time $t + dt$ after ejecting mass $dm$ at exhaust velocity $u$ (relative to the rocket, opposite its motion). Conservation of momentum for the rocket-plus-exhaust system gives:</p>
+$$m\,dv = u\,dm$$
+<p>Integrating from initial mass $m_0$ to final mass $m_f$ yields the <strong>Tsiolkovsky rocket equation</strong>:</p>
+$$\Delta v = u \ln\!\left(\frac{m_0}{m_f}\right)$$
+<p>This is the fundamental theorem of rocketry: it relates the achievable velocity change $\Delta v$ to the exhaust speed $u$ and the ratio of initial to final mass. It requires this logarithmic form — not a linear approximation — because the mass being accelerated shrinks continuously as fuel burns, unlike a fixed-mass projectile.</p>
+<p><strong>Worked example.</strong> A rocket has initial mass $m_0 = 5{,}000\text{ kg}$ (including $4{,}000\text{ kg}$ of fuel) and exhaust velocity $u = 3{,}000\text{ m/s}$. After burning all fuel, $m_f = 1{,}000\text{ kg}$.</p>
+$$\Delta v = 3000 \times \ln\!\left(\frac{5000}{1000}\right) = 3000 \times \ln(5) \approx 3000 \times 1.609 \approx 4{,}830\ \text{m/s}$$
+<p><strong>Problem-solving application.</strong> Suppose a mission requires $\Delta v = 9{,}000\text{ m/s}$ (roughly what is needed to reach low Earth orbit) using an engine with $u = 4{,}500\text{ m/s}$. Solve for the required mass ratio:</p>
+$$\frac{m_0}{m_f} = e^{\Delta v / u} = e^{9000/4500} = e^{2} \approx 7.39$$
+<p>This means over 86% of the rocket's initial mass must be propellant — a direct, quantitative reason why multi-stage rockets are used: discarding empty fuel tanks between stages avoids carrying dead mass through the entire burn, effectively raising the usable mass ratio for each stage.</p>
+<pre class="mermaid">sequenceDiagram
+    participant Rocket
+    participant Exhaust
+    Rocket->>Exhaust: Ejects mass dm at velocity u
+    Exhaust-->>Rocket: Reaction force (Newton's 3rd law)
+    Note over Rocket: Mass decreases, velocity increases
+    Rocket->>Rocket: Δv = u ln(m0/mf)</pre>
+<p><em>Sequence of momentum exchange between rocket and expelled exhaust, leading to the Tsiolkovsky rocket equation.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch8: Linear Momentum and Collisions (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

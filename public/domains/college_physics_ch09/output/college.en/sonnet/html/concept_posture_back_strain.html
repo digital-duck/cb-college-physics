@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Posture Back Strain | College Physics Ch09</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="posture-back-strain">Posture Back Strain</h2>
+<p>When you stand upright, your body's center of gravity sits almost directly above your hip and lower-spine pivot, so the torque your back muscles must supply to hold you up is small. Lean forward — to tie a shoe, lift a box, or slump over a desk — and that alignment breaks. The upper body's weight now acts at a horizontal distance from the pivot, creating a torque that must be balanced by the erector spinae muscles running along the spine. Because these muscles attach very close to the vertebral pivot, they must generate a force far larger than the weight they are balancing — this is the physical root of chronic back strain from poor posture.</p>
+<p>Static equilibrium requires zero net torque about the pivot: $\tau_{net} = 0$, so $F_{muscle} \cdot d_{muscle} = W \cdot d_{weight}$, giving $F_{muscle} = W \cdot \dfrac{d_{weight}}{d_{muscle}}$.</p>
+<p><strong>Worked example.</strong> Suppose your upper body and head weigh $W = 400\ \text{N}$, and when you bend forward $30°$ their center of mass sits $d_{weight} = 0.30\ \text{m}$ horizontally from the L5–S1 disc (the common pivot point in the lower back). The erector spinae attaches only $d_{muscle} = 0.05\ \text{m}$ from that same pivot. Then:</p>
+$$F_{muscle} = 400\ \text{N} \times \frac{0.30\ \text{m}}{0.05\ \text{m}} = 2400\ \text{N}$$
+<p>The muscles must exert six times the weight they're supporting. That same large muscle force also presses back down through the disc — the disc ends up carrying a load well beyond the original 400 N of body weight. This is why repeated forward bending, not the weight itself, is what damages intervertebral discs over time.</p>
+<p><strong>Problem-solving application.</strong> This model explains standard ergonomic advice quantitatively: bending at the knees instead of the waist keeps $d_{weight}$ small by keeping the trunk upright, and holding a load close to the body (small $d_{weight}$ for the object too) directly reduces $F_{muscle}$. The lever-arm ratio $d_{weight}/d_{muscle}$, not the absolute weight lifted, is the dominant factor determining back-muscle load — a fact you can verify by comparing lifting technique scenarios and computing $F_{muscle}$ for each.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch9: Statics and Torque (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

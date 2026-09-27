@@ -1120,7 +1120,6 @@ concepts:
       of velocity continuously changes.
     composed_of:
     - linear_velocity
-    - radius_of_curvature
     tier: 1
     source_domain: college_physics_ch06
   gravitational_constant:
@@ -1142,7 +1141,6 @@ concepts:
       in radians, representing the amount of rotation.
     composed_of:
     - radian
-    - radius_of_curvature
     tier: 2
     source_domain: college_physics_ch06
     also_in:
@@ -1162,7 +1160,6 @@ concepts:
     composed_of:
     - gravitational_constant
     - mass
-    - radius_of_curvature
     tier: 2
     source_domain: college_physics_ch06
   arc_length:
@@ -1170,7 +1167,6 @@ concepts:
       of the radius and the rotation angle (Δs = rΔθ).
     composed_of:
     - rotation_angle
-    - radius_of_curvature
     tier: 3
     source_domain: college_physics_ch06
   angular_velocity:
@@ -1210,7 +1206,6 @@ concepts:
       velocity by v = rω, and directed tangent to the circular path.
     composed_of:
     - angular_velocity
-    - radius_of_curvature
     tier: 4
     source_domain: college_physics_ch06
   coriolis_force:

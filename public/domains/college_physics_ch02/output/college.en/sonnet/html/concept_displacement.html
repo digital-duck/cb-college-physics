@@ -43,19 +43,13 @@ section:first-of-type{border-top:none;padding-top:0}
 <div class="page">
   <main>
     <h2 id="displacement">Displacement</h2>
-<p>Displacement measures how far an object's position has changed, and in which direction — it is not the same as distance traveled. If a runner completes one full lap of a 400-meter track, the distance traveled is 400 m, but the displacement is zero, because the runner ends up back where she started. Formally, displacement is defined as</p>
-$$\Delta x = x_f - x_i$$
-<p>where $x_i$ is the initial position and $x_f$ is the final position, both measured along a coordinate axis with a defined positive direction. Because $\Delta x$ carries a sign, it is a vector quantity, while distance — the total length of the path — is a scalar.</p>
-<p><strong>Worked example.</strong> A cyclist starts at position $x_i = 2\text{ m}$ on a straight bike path, rides forward to $x = 15\text{ m}$, then backtracks to $x_f = 9\text{ m}$. The total distance traveled is $13\text{ m} + 6\text{ m} = 19\text{ m}$. The displacement, however, depends only on start and end points:</p>
-$$\Delta x = x_f - x_i = 9\text{ m} - 2\text{ m} = 7\text{ m}$$
-<p>The positive sign indicates the net motion is in the positive direction, even though the cyclist reversed course partway through.</p>
-<p><strong>Problem-solving application.</strong> The same formula applies no matter how many segments a trip is broken into, because $\Delta x$ depends only on endpoints. Suppose a delivery drone starts at $x_i = 0\text{ m}$, flies to $x = 40\text{ m}$, returns to $x = 10\text{ m}$, then advances to $x_f = 25\text{ m}$. The distance traveled sums every leg: $40 + 30 + 15 = 85\text{ m}$. The displacement ignores the back-and-forth entirely:</p>
-$$\Delta x = x_f - x_i = 25\text{ m} - 0\text{ m} = 25\text{ m}$$
-<p>This property — that displacement collapses any number of intermediate moves into a single start-to-end difference — is what makes it useful for tracking net motion. A common error is to add up signed segment lengths as if computing distance; the correct method is always to subtract the final position from the initial one directly, regardless of the path's twists and turns.</p>
-<pre><code>graph LR
-    A["Initial position x_i"] --&gt;|"path traveled (distance)"| B["Final position x_f"]
-    A -.-&gt;|"displacement Δx = x_f − x_i"| B</code></pre>
-<p><em>The dashed arrow shows displacement as the direct, straight-line change between start and end positions, independent of the actual path (solid arrow) taken.</em></p>
+<p>Displacement is the vector quantity describing the change in an object's position, defined as $\Delta x = x_f - x_i$, where $x_i$ is the initial position and $x_f$ is the final position. Because displacement is a vector, it carries both magnitude (how far) and direction (which way), and it depends only on the starting and ending points — not on the path taken to get there. This distinguishes displacement from distance, the total length of the path traveled, regardless of direction. In one dimension, a positive or negative sign encodes direction (e.g., $+x$ for rightward, $-x$ for leftward); in two or three dimensions, displacement is expressed as an ordered pair of components, $\Delta x$ and $\Delta y$ along perpendicular axes.</p>
+<p><strong>Worked example.</strong> A runner starts at $x_i = 2\text{ m}$, jogs to $x = 10\text{ m}$, then turns back to $x_f = 6\text{ m}$. The distance traveled is $8\text{ m} + 4\text{ m} = 12\text{ m}$, but the displacement is $\Delta x = 6 - 2 = 4\text{ m}$ in the positive direction — much smaller than the distance because the return trip partially cancels the outward trip.</p>
+<p><strong>Problem-solving application.</strong> Displacement problems typically require tracking direction carefully through multiple stages of motion, then combining components rather than magnitudes. For a 2D case, suppose a hiker walks $3\text{ km}$ east then $4\text{ km}$ north. Using the Pythagorean theorem, the net displacement magnitude is $|\vec{\Delta x}| = \sqrt{3^2 + 4^2} = 5\text{ km}$, directed at $\theta = \tan^{-1}(4/3) \approx 53.1^\circ$ north of east — even though the hiker walked $7\text{ km}$ total. Resolving motion into perpendicular components, combining each axis separately, then recombining the result is the standard method for any multi-leg displacement problem, and the same approach will apply directly to velocity and acceleration vectors later in kinematics.</p>
+<pre class="mermaid">flowchart LR
+    A["Position A (start)"] -.->|"curved path: distance traveled"| B["Position B (end)"]
+    A -->|"straight arrow: displacement (magnitude + direction)"| B</pre>
+<p><em>Displacement is the straight-line vector from start to end, while distance follows the actual curved path traveled.</em></p>
   </main>
   <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
 </div>

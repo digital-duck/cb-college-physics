@@ -28,6 +28,9 @@ concepts:
     - vector
     tier: 1
   displacement:
+    diagram:
+      type: flowchart LR
+      hint: "starting position A to ending position B; straight arrow (displacement vector) vs curved path (distance traveled); label magnitude and direction"
     defines: The change in position of an object, Δx = x_f − x_i, which is a vector quantity carrying
       both magnitude and direction.
     composed_of:
@@ -54,6 +57,9 @@ concepts:
     - scalar
     tier: 2
   average_velocity:
+    diagram:
+      type: graph TD
+      hint: "position-time graph with two points marked; chord connecting them; slope of chord = Δx/Δt = average velocity; compare to steeper instantaneous slope at a point"
     defines: Displacement divided by elapsed time, v̄ = Δx/Δt; a vector quantity whose SI unit is m/s.
     composed_of:
     - displacement
