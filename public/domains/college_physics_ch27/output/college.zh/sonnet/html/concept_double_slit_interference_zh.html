@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Double Slit Interference | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="double-slit-interference">Double Slit Interference</h2>
+<p><strong>定义</strong></p>
+<p>当相干光通过两条相距为 $d$ 的狭缝后，光波在每条缝处发生衍射并向远处传播，两束波在空间中相遇并叠加，形成明暗相间的干涉条纹，这就是双缝干涉。设屏幕足够远（满足夫琅禾费近似），从两条缝射向屏上某点的光程差为 $d\sin\theta$，其中 $\theta$ 是该点相对于入射方向的角度。两束光是否相长或相消，完全取决于这个光程差与波长 $\lambda$ 的关系：</p>
+$$
+d\sin\theta = m\lambda \quad (m = 0, \pm1, \pm2, \dots) \quad \text{— 相长干涉（亮纹）}
+$$
+$$
+d\sin\theta = \left(m+\tfrac{1}{2}\right)\lambda \quad \text{— 相消干涉（暗纹）}
+$$
+<p>当光程差为波长的整数倍时，两列波到达屏幕时相位相同，振幅相加，出现亮纹；当光程差为半波长的奇数倍时，两列波相位相反，振幅相消，出现暗纹。中央亮纹（$m=0$）位于正对两缝中点的方向上，两侧的亮纹依次对称分布。</p>
+<p><strong>例题</strong></p>
+<p>设两缝间距 $d = 0.30\text{ mm}$，入射光波长 $\lambda = 600\text{ nm}$，求第二级亮纹（$m=2$）出现的角度 $\theta$。</p>
+<p>由公式 $d\sin\theta = m\lambda$，代入数值：</p>
+$$
+\sin\theta = \frac{m\lambda}{d} = \frac{2 \times 600\times10^{-9}}{0.30\times10^{-3}} = 4.0\times10^{-3}
+$$
+<p>由于该值很小，$\theta \approx \sin\theta \approx 4.0\times10^{-3}\text{ rad} \approx 0.23^\circ$。</p>
+<p><strong>解题应用</strong></p>
+<p>在实际问题中，若屏幕到双缝的距离为 $L$，且 $\theta$ 很小，可用小角近似 $\sin\theta \approx \tan\theta \approx y/L$，其中 $y$ 是亮纹到中央亮纹的距离。于是条纹间距公式为：</p>
+$$
+\Delta y = \frac{\lambda L}{d}
+$$
+<p>这个公式在实验中非常实用：只需测出条纹间距 $\Delta y$、缝间距 $d$ 和屏距 $L$，即可反推未知波长 $\lambda$，这正是历史上托马斯·杨用来测定可见光波长的方法。解题时应注意：条纹间距与波长成正比、与缝距成反比——若换用蓝光（波长更短）重复实验，条纹将变得更密集。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

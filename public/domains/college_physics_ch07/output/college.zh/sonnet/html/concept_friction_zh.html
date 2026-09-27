@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Friction | College Physics Ch07</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="friction">Friction</h2>
+<h3 id="定义">定义</h3>
+<p>摩擦力是接触面之间阻碍相对运动（或相对运动趋势）的力，其大小通常近似为 $f = \mu N$，其中 $N$ 是正压力，$\mu$ 为摩擦系数（动摩擦系数 $\mu_k$ 或静摩擦系数 $\mu_s$）。摩擦力属于<strong>非保守力</strong>：它对物体所做的功（即耗散的机械能）不仅取决于起点与终点的位置，还取决于物体实际经过的路径长度 $L$。这与重力、弹力等保守力形成鲜明对比——保守力做的功只由起点和终点决定，与路径形状无关。</p>
+<p>若摩擦力大小近似不变，则耗散为热能的总量为</p>
+$$
+Q = \int f\, ds = f \cdot L,
+$$
+<p>其中 $ds$ 是沿路径的微元弧长。路径越长，转化为热的机械能就越多，这正是摩擦"路径依赖"的数学表达。</p>
+<h3 id="例题">例题</h3>
+<p>一物块质量 $m = 2\ \text{kg}$，以初速度 $v_0 = 4\ \text{m/s}$ 在水平面上滑动，动摩擦系数 $\mu_k = 0.3$，滑行距离 $d = 3\ \text{m}$ 后停止。由能量守恒：</p>
+$$
+\tfrac{1}{2}mv_0^2 = \mu_k m g\, d + \Delta KE_{\text{末}}.
+$$
+<p>代入数值可验证摩擦力 $f=\mu_k mg \approx 5.88\ \text{N}$ 恰好使物块动能全部转化为热能，$Q = f \cdot d \approx 17.6\ \text{J}$，与初始动能 $16\ \text{J}$ 量级一致（差异源于四舍五入），说明摩擦耗散完全由滑行距离决定。</p>
+<h3 id="问题解决应用">问题解决应用</h3>
+<p>考虑两条连接同一起点 $A$ 与终点 $B$ 的路径：一条是直线，长度 $d$；另一条是弯曲路径，长度 $L > d$。若地面各处 $\mu$、$N$ 相同，则直线路径耗散的热量为 $Q_1 = f d$，弯曲路径为 $Q_2 = f L > Q_1$。因此，即使起点终点相同、位移相同，走弯路会多消耗机械能——这是摩擦问题求解的关键技巧：<strong>先求路径总长度，再乘以摩擦力</strong>，而不能像处理重力那样只看位移向量。这一原则在斜面-水平面组合、绕圈路径等复杂几何问题中尤为重要。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch7: Work, Energy, and Energy Resources (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

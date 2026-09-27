@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metastable State | College Physics Ch30</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="亚稳态">亚稳态</h2>
+<p><strong>定义</strong>　亚稳态（metastable state）是指原子、分子或原子核中一个寿命异常长的激发态。之所以"异常长"，并不是因为它比基态能量更低（它仍是激发态，能量高于基态），而是因为量子数选择定则禁止（或强烈抑制）它以电偶极辐射的方式直接跃迁到较低能级。普通激发态的自发辐射寿命通常在 $10^{-9}\sim10^{-6}\ \text{s}$ 量级，而亚稳态可以长达毫秒、秒，甚至数小时。</p>
+<p>跃迁速率由电偶极选择定则决定：角量子数必须满足 $\Delta l=\pm1$，总角动量满足 $\Delta J=0,\pm1$（且 $J=0\to J=0$ 禁止），并且态的宇性必须改变。当初态与末态之间的跃迁违反这些规则时，电偶极跃迁矩阵元</p>
+$$
+\langle f|\hat{\mathbf{d}}|i\rangle=0
+$$
+<p>严格为零，跃迁被称为"禁戒跃迁"。此时原子仍可以通过更弱的机制退激发——磁偶极辐射、电四极辐射，或碰撞诱导的非辐射过程——但这些速率比电偶极跃迁小几个数量级，导致寿命 $\tau=1/\Gamma$ 大幅延长（$\Gamma$ 为跃迁速率）。</p>
+<p><strong>典型例子</strong>　氦原子的 $2s\,^3S_1$ 态就是经典的亚稳态：它不能通过电偶极跃迁回到基态 $1s^2\,^1S_0$，因为二者角动量差和自旋多重度都不满足选择定则，其寿命可达数千秒。汞原子的 $6s6p\,^3P_0$ 亚稳态则是光学原子钟中被广泛利用的"钟态"，因为极长的寿命意味着极窄的自然线宽 $\Delta\nu\sim\Gamma/2\pi$，从而带来极高的频率测量精度——这正是海森堡不确定关系 $\Delta E\,\Delta t\gtrsim\hbar/2$ 的直接体现：寿命越长，能级宽度越窄。</p>
+<p><strong>应用于问题求解</strong>　利用亚稳态的关键在于：给定一对能级的量子数 $(n,l,J,\text{parity})$，先判断电偶极选择定则是否被满足；若不满足，则该能级是亚稳态候选，其寿命由允许的最低阶多极跃迁（磁偶极 $M1$ 或电四极 $E2$）决定。这一分析方法广泛用于设计激光介质中的粒子数反转（亚稳态作为激光上能级储存能量）、原子钟的钟跃迁选择，以及星际气体中禁线光谱的解释。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch30: Atomic Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newtons Law Of Gravitation | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="newtons-law-of-gravitation">Newtons Law Of Gravitation</h2>
+<p><strong>定义</strong></p>
+<p>牛顿万有引力定律指出：宇宙中任意两个质点之间都存在相互吸引力，其大小与两质点质量的乘积成正比，与它们之间距离的平方成反比。数学表达式为：</p>
+$$F = \frac{Gm_1 m_2}{r^2}$$
+<p>其中 $F$ 为两质点间的引力大小，$m_1$、$m_2$ 分别为两质点的质量，$r$ 为两质点中心之间的距离，$G$ 为万有引力常量，其值约为 $6.674 \times 10^{-11}\ \text{N·m}^2/\text{kg}^2$。这个力沿两质点连线方向，且始终为吸引力，遵循牛顿第三定律——两质点受到的引力大小相等、方向相反。需要注意的是，该定律最初针对质点（点质量）成立；对于均匀球体，可以证明其引力效果等价于将全部质量集中于球心的质点，这一结果本身就是牛顿运用微积分证明的重要定理。</p>
+<p><strong>例题</strong></p>
+<p>计算地球（质量 $M_E = 5.97 \times 10^{24}\ \text{kg}$）对一个质量 $m = 70\ \text{kg}$ 的人的引力，此人站在地球表面，地球半径 $R_E = 6.37 \times 10^6\ \text{m}$。</p>
+<p>代入公式：</p>
+$$F = \frac{Gm_1 m_2}{r^2} = \frac{(6.674\times10^{-11})(5.97\times10^{24})(70)}{(6.37\times10^6)^2}$$
+<p>分子：$6.674\times10^{-11} \times 5.97\times10^{24} \times 70 \approx 2.788\times10^{16}$</p>
+<p>分母：$(6.37\times10^6)^2 \approx 4.057\times10^{13}$</p>
+$$F \approx \frac{2.788\times10^{16}}{4.057\times10^{13}} \approx 687\ \text{N}$$
+<p>这一结果恰好接近该人的重量 $mg = 70 \times 9.8 = 686\ \text{N}$，验证了 $g = GM_E/R_E^2$ 这一关系——重力加速度本质上正是万有引力定律在地球表面的具体体现。</p>
+<p><strong>解题应用</strong></p>
+<p>万有引力定律的核心解题技巧在于<strong>平方反比关系的比例推理</strong>：若距离变为原来的 $n$ 倍，引力将变为原来的 $1/n^2$。例如，卫星轨道半径增大一倍，所受引力减小为原来的四分之一。此外，在多体问题中，需将各引力视为矢量分别叠加（矢量和，而非标量和），这是解决三体或多天体相互作用问题的关键起点，也是后续学习开普勒定律与轨道力学的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

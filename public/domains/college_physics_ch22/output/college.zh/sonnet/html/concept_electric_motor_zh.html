@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electric Motor | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="electric-motor">Electric Motor</h2>
+<p><strong>定义</strong></p>
+<p>电动机是一种将电能转化为机械功的装置，其工作原理基于载流导线在磁场中受到的安培力（洛伦兹力的宏观表现）。当一个矩形线圈置于磁场 $\vec{B}$ 中并通以电流 $I$ 时，线圈两条与磁场垂直的边各受到大小为 $F = BIL$ 的力，方向相反，从而形成一对力偶，产生转动力矩。若线圈平面法线与磁场夹角为 $\theta$，则该力矩为：</p>
+$$\tau = NBIA\sin\theta$$
+<p>其中 $N$ 为线圈匝数，$A$ 为线圈面积。当线圈转过半圈后，若电流方向不变，力矩将反向，转动会被抵消。为解决这一问题，直流电动机使用<strong>换向器（commutator）</strong>配合<strong>电刷（brush）</strong>，在线圈每转过半圈时自动反转线圈中的电流方向，从而保证力矩方向始终推动线圈朝同一方向旋转，实现持续转动。</p>
+<p><strong>实例分析</strong></p>
+<p>考虑一个单匝矩形线圈，面积 $A = 0.02\ \text{m}^2$，置于 $B = 0.5\ \text{T}$ 的匀强磁场中，通以电流 $I = 3\ \text{A}$。当线圈平面与磁场平行时（即 $\theta = 90°$），力矩最大：</p>
+$$\tau_{\max} = BIA = 0.5 \times 3 \times 0.02 = 0.03\ \text{N·m}$$
+<p>当线圈平面转到与磁场垂直（$\theta = 0°$）时，$\tau = 0$，此时力矩恰好为零，但由于惯性线圈仍会继续转动，换向器随即翻转电流方向，使线圈越过零点后重新获得驱动力矩，从而维持连续旋转，而非往复摆动。</p>
+<p><strong>问题解决应用</strong></p>
+<p>工程设计中的核心问题是：如何在整个转动周期中获得尽可能平稳、非零的输出力矩？单线圈电动机的力矩随 $\sin\theta$ 周期性变化，在 $\theta = 0°$ 附近力矩趋近于零，导致转动不平稳，这就是实际直流电动机采用多组线圈（多相绕组）并配合多段换向器的原因——当一组线圈力矩趋于零时，另一组线圈恰好处于最大力矩区间，从而使总力矩曲线趋于平滑。</p>
+<p>在计算类问题中，常需要求解给定电流、磁场和线圈参数下的瞬时力矩，或反过来根据所需力矩设计线圈匝数与电流大小。例如，若要求某电动机在 $\theta = 30°$ 时仍能提供不小于 $0.01\ \text{N·m}$ 的力矩，可代入 $\tau = NBIA\sin\theta$ 反解出所需电流 $I$，这类正反问题的结合正是理解电动机设计权衡（功率、发热、转速）的关键切入点。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

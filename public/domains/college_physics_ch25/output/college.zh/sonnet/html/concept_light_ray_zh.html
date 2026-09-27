@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Light Ray | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="光线">光线</h2>
+<p><strong>定义</strong></p>
+<p>光线（light ray）是几何光学中用于描述光传播路径的理想化模型：把光看作沿直线传播的细线，用带箭头的直线表示光的传播方向。这一模型忽略了光的波动性（如衍射、干涉），只在物体尺寸远大于光的波长时才成立——这正是"几何光学"与"物理光学"的分界线。光线在均匀介质中保持直线传播，只有在遇到不同介质的分界面（如空气与玻璃的交界处）或遇到障碍物时才会改变方向，具体表现为反射（reflection）或折射（refraction）。理解光线模型是分析透镜、镜面成像、光纤传输等一切几何光学问题的起点。</p>
+<p><strong>光线的传播规则</strong></p>
+<p>光线模型建立在三条基本假设之上：</p>
+<li>光在均匀介质中沿直线传播；</li>
+<li>在两种介质的分界面上，光线遵循反射定律 $\theta_i = \theta_r$（入射角等于反射角）；</li>
+<li>光线从一种介质进入另一种介质时，遵循折射定律（斯涅尔定律）：</li>
+$$n_1 \sin\theta_1 = n_2 \sin\theta_2$$
+<p>其中 $n_1, n_2$ 为两种介质的折射率，$\theta_1, \theta_2$ 分别是入射角与折射角（均相对于分界面的法线测量）。</p>
+<p><strong>例题：光线在水面的折射</strong></p>
+<p>一束光线从空气（$n_1 = 1.00$）以 $40°$ 的入射角射入水面（$n_2 = 1.33$），求折射角 $\theta_2$。</p>
+<p>由斯涅尔定律：</p>
+$$\sin\theta_2 = \frac{n_1 \sin\theta_1}{n_2} = \frac{1.00 \times \sin 40°}{1.33} \approx \frac{0.643}{1.33} \approx 0.483$$
+$$\theta_2 = \arcsin(0.483) \approx 28.9°$$
+<p>可见光线进入光密介质（折射率更大）后会向法线偏折，这也是水中物体看起来"变浅"的根本原因。</p>
+<p><strong>问题解决应用</strong></p>
+<p>光线追迹（ray tracing）是分析光学系统的核心方法：无论是设计相机镜头、光纤通信线路，还是解释海市蜃楼现象，都可以把复杂系统拆解为多条光线，逐段应用直线传播与折射/反射定律来预测光的最终路径。当分界面上入射角超过临界角 $\theta_c = \arcsin(n_2/n_1)$（从光密介质射向光疏介质时）时，还会发生全反射，这是光纤传输能保持信号不泄漏的物理基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

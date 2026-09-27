@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flow Resistance | College Physics Ch12</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="flow-resistance">Flow Resistance</h2>
+<p><strong>定义</strong></p>
+<p>流阻（flow resistance）描述流体在管道或血管中流动时所受到的阻碍程度，它将驱动流动的压强差与体积流量联系起来：</p>
+$$Q = \frac{P_2 - P_1}{R}$$
+<p>其中 $Q$ 为体积流量（单位时间内通过某截面的流体体积），$P_2 - P_1$ 为管道两端的压强差（驱动力），$R$ 为流阻。这一关系在形式上与欧姆定律 $I = V/R$ 完全类似：压强差扮演电压的角色，流量扮演电流的角色，流阻扮演电阻的角色。这并非巧合——两者都源于"驱动力正比于响应的耗散过程"这一共同结构。</p>
+<p>对于层流（laminar flow）通过一段半径为 $r$、长度为 $L$ 的圆柱形管道，泊肃叶定律（Poiseuille's Law）给出流阻的显式表达式：</p>
+$$R = \frac{8 \eta L}{\pi r^4}$$
+<p>其中 $\eta$ 为流体的粘度。这个公式的关键在于 $r^4$ 这一强烈的非线性依赖：管道半径缩小一半，流阻增大到原来的 16 倍。</p>
+<p><strong>范例</strong></p>
+<p>考虑血液流经一根小动脉，粘度 $\eta = 0.0035\ \text{Pa·s}$，长度 $L = 0.02\ \text{m}$，半径 $r = 1\ \text{mm} = 0.001\ \text{m}$。代入公式：</p>
+$$R = \frac{8 \times 0.0035 \times 0.02}{\pi \times (0.001)^4} \approx 1.78 \times 10^8\ \text{Pa·s/m}^3$$
+<p>若两端压强差为 $1000\ \text{Pa}$，则流量 $Q = 1000 / (1.78 \times 10^8) \approx 5.6 \times 10^{-6}\ \text{m}^3/\text{s}$。</p>
+<p><strong>问题求解应用</strong></p>
+<p>$r^4$ 依赖关系解释了许多生理与工程现象：动脉粥样硬化使血管半径略微减小，就会使流阻急剧上升，心脏必须显著提高压强才能维持相同血流量；反之，血管扩张药物只需让半径增加很小的比例，就能大幅降低流阻、改善血流。在管道网络设计中，串联管道的总流阻可直接相加（$R_{\text{total}} = R_1 + R_2 + \cdots$），并联管道则遵循 $1/R_{\text{total}} = \sum 1/R_i$，这与电路分析中电阻的组合规则完全一致，使工程师能够用同一套代数工具分析液压、通风或血液循环系统。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch12: Fluid Dynamics and Its Biological and Medical Applications (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

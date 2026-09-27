@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moment Of Inertia | College Physics Ch10</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="moment-of-inertia">Moment Of Inertia</h2>
+<p><strong>定义</strong></p>
+<p>转动惯量（moment of inertia）是质量在转动系统中的类比量，用符号 $I$ 表示。对于由若干点质量组成的刚体，绕某一固定转轴转动时，转动惯量定义为</p>
+$$I = \sum_i m_i r_i^2$$
+<p>其中 $m_i$ 是第 $i$ 个质点的质量，$r_i$ 是该质点到转轴的垂直距离。对于连续分布的质量，求和变为积分：</p>
+$$I = \int r^2 \, dm$$
+<p>关键之处在于：$I$ 不仅取决于物体的总质量，还取决于质量相对转轴的<strong>分布方式</strong>。同样质量的物体，若质量集中在离轴较远处，转动惯量就更大，转动起来就更"迟钝"（即更难改变其角速度）。这正是转动惯量在旋转系统中扮演"惯性质量"角色的原因——它出现在转动动能公式 $KE_{rot} = \frac{1}{2}I\omega^2$ 和角动量公式 $L = I\omega$ 中，地位完全类比于平动中的质量 $m$。</p>
+<p><strong>范例分析</strong></p>
+<p>考虑一根质量为 $M$、长度为 $L$ 的均匀细杆，绕通过其中心且垂直于杆的轴转动。利用积分定义，设杆的线密度为 $\lambda = M/L$，则</p>
+$$I = \int_{-L/2}^{L/2} r^2 \lambda \, dr = \lambda \left[\frac{r^3}{3}\right]_{-L/2}^{L/2} = \frac{1}{12}ML^2$$
+<p>若改为绕杆的一端转动（转轴仍垂直于杆），积分区间变为 $0$ 到 $L$：</p>
+$$I = \int_0^L r^2 \lambda \, dr = \frac{1}{3}ML^2$$
+<p>两者质量相同，但转轴位置不同，转动惯量相差 4 倍——这直观地说明了"分布"如何决定惯性大小。</p>
+<p><strong>解题应用</strong></p>
+<p>在实际问题中，常利用<strong>平行轴定理</strong>将已知的"质心轴"转动惯量迁移到任意平行轴：</p>
+$$I_{parallel} = I_{cm} + Md^2$$
+<p>其中 $d$ 是新轴到质心轴的距离。例如,已知细杆绕质心的 $I_{cm}=\frac{1}{12}ML^2$，要求绕一端的转动惯量，代入 $d = L/2$：</p>
+$$I = \frac{1}{12}ML^2 + M\left(\frac{L}{2}\right)^2 = \frac{1}{12}ML^2 + \frac{1}{4}ML^2 = \frac{1}{3}ML^2$$
+<p>结果与直接积分一致。这一定理是求解复合刚体（如带滑轮的物块系统、复杂几何转子）转动惯量的标准工具，避免了每次都重新积分。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch10: Rotational Motion and Angular Momentum (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

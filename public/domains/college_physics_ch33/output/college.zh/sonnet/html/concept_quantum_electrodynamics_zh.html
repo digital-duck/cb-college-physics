@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quantum Electrodynamics | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="quantum-electrodynamics">Quantum Electrodynamics</h2>
+<p><strong>定义</strong></p>
+<p>量子电动力学（QED）是描述电磁相互作用的量子场论，它将麦克斯韦电磁场与量子力学、狭义相对论统一起来。其核心思想是：带电粒子（如电子）之间的电磁力并非通过连续的"场"直接传递，而是通过交换<strong>虚光子</strong>（virtual photon）实现的。所谓"虚"，是指这些光子不满足自由粒子的能量-动量关系 $E^2 = (pc)^2 + (mc^2)^2$，它们只在海森堡不确定性原理允许的极短时间内存在，无法被直接探测，只能作为相互作用的"中介"。</p>
+<p>QED 的动力学由拉格朗日量给出：</p>
+$$
+\mathcal{L} = \bar\psi(i\gamma^\mu D_\mu - m)\psi - \frac{1}{4}F_{\mu\nu}F^{\mu\nu}, \qquad D_\mu = \partial_\mu + ieA_\mu
+$$
+<p>其中 $\psi$ 描述电子场，$A_\mu$ 描述光子场，耦合常数是精细结构常数 $\alpha = e^2/(4\pi\epsilon_0\hbar c) \approx 1/137$。$\alpha$ 越小，意味着电磁相互作用越"弱"，这使得 QED 的计算可以用 $\alpha$ 的幂级数展开——即<strong>微扰论</strong>。</p>
+<p><strong>图解方法：费曼图</strong></p>
+<p>每一项微扰展开都对应一张费曼图。例如，两个电子的库仑排斥，最低阶（$\alpha^1$）的过程是：电子 A 发射一个虚光子，电子 B 吸收它。每个顶点贡献一个因子 $\propto \sqrt{\alpha}$，因此整个振幅 $\propto \alpha$，与经典库仑力 $\propto e^2$ 一致。这正是"经典电磁学是 QED 的低能极限"这一论断的具体体现。</p>
+<p><strong>问题求解应用：反常磁矩</strong></p>
+<p>QED 最著名的定量成功是预测电子的"反常磁矩" $g$-因子。狄拉克方程给出 $g=2$，但 QED 计算（包含单圈、双圈虚光子修正）给出：</p>
+$$
+\frac{g-2}{2} = \frac{\alpha}{2\pi} + O(\alpha^2) \approx 0.00116
+$$
+<p>实验测得的值与理论预测在小数点后第 10 位以上吻合，是物理学中精度最高的理论-实验对照之一。这说明 QED 不仅是概念框架，更是可用于逐阶计算、精确检验的定量工具：每增加一个圈图（更高阶虚光子交换），就多一个 $\alpha$ 的因子，修正幅度按此可预测地收敛。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

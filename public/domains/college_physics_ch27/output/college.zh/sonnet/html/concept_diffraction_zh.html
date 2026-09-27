@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diffraction | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="diffraction">Diffraction</h2>
+<p><strong>定义</strong></p>
+<p>衍射是指波在遇到障碍物边缘或通过孔隙时发生弯曲、偏离直线传播路径的现象。这种效应在孔隙(或障碍物)的尺寸与波长可比拟时最为显著——若孔径远大于波长，波近似沿直线传播；若孔径接近或小于波长，波会明显向几何阴影区扩散。衍射是所有波动现象(声波、水波、光波、电磁波)共有的性质，也是区分"波动"与"粒子"行为的关键判据之一。</p>
+<p>对于宽度为 $a$ 的单缝，波长为 $\lambda$ 的平面波通过后，在远场(夫琅禾费衍射)会形成明暗相间的条纹。暗纹(强度为零)出现的角度 $\theta$ 满足：</p>
+$$a \sin\theta = m\lambda, \quad m = \pm1, \pm2, \pm3, \dots$$
+<p>中央亮纹最宽，其角宽度大致由 $m=1$ 的暗纹位置决定，即 $\sin\theta_1 = \lambda/a$。当 $a \gg \lambda$ 时，$\theta_1$ 趋近于零，衍射效应不明显；当 $a \sim \lambda$ 时，$\theta_1$ 可达数十度，扩散非常显著。</p>
+<p><strong>例题</strong></p>
+<p>某单缝宽度 $a = 0.20\ \text{mm}$，用波长 $\lambda = 589\ \text{nm}$(钠光)照射，求第一暗纹相对于中心的偏转角。</p>
+<p>代入公式：</p>
+$$\sin\theta_1 = \frac{\lambda}{a} = \frac{589\times10^{-9}}{0.20\times10^{-3}} = 2.945\times10^{-3}$$
+<p>因角度很小，$\theta_1 \approx 2.945\times10^{-3}\ \text{rad} \approx 0.169^\circ$。若屏幕置于缝后 $L = 2.0\ \text{m}$ 处，第一暗纹到中心的距离约为 $y_1 = L\tan\theta_1 \approx L\theta_1 \approx 5.9\ \text{mm}$。</p>
+<p><strong>解题应用</strong></p>
+<p>处理衍射问题时，先判断孔径与波长的量级关系，确定是否需要用衍射公式而非几何光学近似。对单缝问题，暗纹条件 $a\sin\theta = m\lambda$ 是核心工具；若求亮纹或强度分布，需要用到 $\mathrm{sinc}$ 函数描述的强度包络 $I(\theta) \propto \left(\dfrac{\sin\beta}{\beta}\right)^2$，其中 $\beta = \dfrac{\pi a \sin\theta}{\lambda}$。分辨率问题(如望远镜或显微镜的极限分辨角)也建立在衍射极限之上，瑞利判据 $\theta_{\min} \approx 1.22\lambda/D$ 是这类工程设计的标准出发点。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

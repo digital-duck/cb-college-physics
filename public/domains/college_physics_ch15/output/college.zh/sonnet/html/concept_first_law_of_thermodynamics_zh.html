@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>First Law Of Thermodynamics | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="first-law-of-thermodynamics">First Law Of Thermodynamics</h2>
+<p><strong>定义</strong></p>
+<p>热力学第一定律是能量守恒定律在热力学系统中的具体表述：系统内能的变化量 $\Delta E_{int}$ 等于系统吸收的净热量 $Q$ 减去系统对外做的净功 $W$：</p>
+$$\Delta E_{int} = Q - W$$
+<p>这里的符号约定至关重要：$Q > 0$ 表示热量流入系统，$Q < 0$ 表示流出；$W > 0$ 表示系统对外界做功（例如气体膨胀推动活塞），$W < 0$ 表示外界对系统做功（气体被压缩）。内能 $E_{int}$ 是一个<strong>状态函数</strong>——它只取决于系统当前的状态（如温度、压强、体积），与系统如何达到该状态的路径无关。相比之下，$Q$ 和 $W$ 都是<strong>路径函数</strong>：同样的初态到终态，走不同的过程，热量和功的具体数值可以不同，但它们的差 $Q - W$ 永远等于同一个 $\Delta E_{int}$。这正是第一定律的深刻之处：它把两个路径依赖的量组合成一个只依赖始末状态的量。</p>
+<p><strong>范例分析</strong></p>
+<p>考虑一个封闭在活塞中的理想气体，缓慢吸收 $500\ \text{J}$ 的热量，同时膨胀对外做功 $200\ \text{J}$。代入公式：</p>
+$$\Delta E_{int} = 500\ \text{J} - 200\ \text{J} = 300\ \text{J}$$
+<p>内能增加了 $300\ \text{J}$，这意味着气体分子的平均动能上升，宏观表现为温度升高（对于理想气体，$\Delta E_{int}$ 只依赖于温度变化）。</p>
+<p><strong>问题解决应用</strong></p>
+<p>第一定律在分析特殊过程时最为有力：</p>
+<li><strong>等容过程</strong>（$V$ 不变）：气体不做功，$W = 0$，因此 $\Delta E_{int} = Q$，所有吸收的热量都转化为内能。</li>
+<li><strong>绝热过程</strong>（无热交换，$Q = 0$）：$\Delta E_{int} = -W$，气体对外做功必然以内能（温度）下降为代价，这解释了为什么快速压缩的打气筒会发热、绝热膨胀的气体会降温。</li>
+<li><strong>循环过程</strong>（系统回到初态，$\Delta E_{int} = 0$）：此时 $Q = W$，系统吸收的净热量恰好等于对外输出的净功——这是热机效率分析的理论基础。</li>
+<p>掌握第一定律的关键在于:先明确系统边界,再根据符号约定正确判断 $Q$ 与 $W$ 的正负,才能准确求解 $\Delta E_{int}$。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

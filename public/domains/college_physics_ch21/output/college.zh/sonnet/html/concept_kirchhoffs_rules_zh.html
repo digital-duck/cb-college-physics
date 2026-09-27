@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kirchhoffs Rules | College Physics Ch21</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="kirchhoffs-rules">Kirchhoffs Rules</h2>
+<p><strong>定义</strong></p>
+<p>基尔霍夫定律由两条独立的规则构成，二者结合足以求解任意复杂度的直流电路，无论电路中含有多少个电源和电阻，也无论支路如何相互连接。</p>
+<p><strong>基尔霍夫电流定律（KCL，节点法则）</strong>源于电荷守恒：在电路的任意节点（多条支路交汇处），流入的电流之和必须等于流出的电流之和。若规定流入为正、流出为负，则</p>
+$$\sum_{k} I_k = 0$$
+<p><strong>基尔霍夫电压定律（KVL，回路法则）</strong>源于能量守恒：沿电路中任意闭合回路绕行一周，电势的代数和必须为零——因为电荷回到起点时净电势变化必为零：</p>
+$$\sum_{k} V_k = 0$$
+<p>应用回路法则时需要约定符号：沿绕行方向通过电阻时，若电流方向与绕行方向一致，则电位降为 $-IR$；通过电源时，若从负极走向正极，则电位升为 $+\varepsilon$。</p>
+<p><strong>例题</strong></p>
+<p>考虑一个含两个电源和三个电阻的双回路电路（常见的惠斯通桥简化版）。设节点 $a$ 处有三条支路电流 $I_1, I_2, I_3$ 汇合，由 KCL：</p>
+$$I_1 = I_2 + I_3$$
+<p>再选取左回路，沿顺时针方向绕行，应用 KVL：</p>
+$$\varepsilon_1 - I_1 R_1 - I_2 R_2 = 0$$
+<p>对右回路同理可得第三个方程。三个方程、三个未知数（$I_1, I_2, I_3$），联立求解即可得到每条支路的电流，包括其正负号——负号表示实际电流方向与假设方向相反，这本身就是解的一部分，无需重新假设重解。</p>
+<p><strong>解题应用</strong></p>
+<p>处理复杂电路的标准流程是：（1）任意标记每条支路电流的方向；（2）对每个独立节点写出一个 KCL 方程（若电路有 $n$ 个节点，只需 $n-1$ 个独立方程）；（3）选取足够数量的独立回路，写出 KVL 方程，直到方程总数等于未知电流数；（4）联立求解线性方程组，通常用代入法或矩阵法（如高斯消元）。判断"足够多回路"的准则是：方程数必须等于支路数。这套方法之所以强大，是因为它不依赖电路是否可以用简单的串并联规则化简——网桥电路、多电源网络等无法用串并联分析的电路，都可以用基尔霍夫定律系统性地求解。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch21: Circuits and DC Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

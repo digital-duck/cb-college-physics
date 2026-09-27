@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Irreversible Process | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="不可逆过程">不可逆过程</h2>
+<p><strong>定义</strong></p>
+<p>不可逆过程（irreversible process）是指系统经历某一变化后，不能仅通过原路径反向进行而使系统与外界都恢复到初始状态的过程。几乎所有自然发生的真实过程都是不可逆的，其根源在于摩擦、粘性、湍流、电阻、非均匀混合、有限速率的热传导等<strong>耗散因素</strong>（dissipative factors）。这些因素会将有序的机械能或化学能不可挽回地转化为无序的热能，从热力学第二定律的角度看，其本质标志是过程中系统与环境的总熵增加：</p>
+$$\Delta S_{\text{总}} = \Delta S_{\text{系统}} + \Delta S_{\text{环境}} > 0$$
+<p>而理想化的<strong>可逆过程</strong>（reversible process）要求系统始终无限接近平衡态，且不存在耗散，此时 $\Delta S_{\text{总}} = 0$，这是一个数学上的极限情形，实际中无法严格实现。</p>
+<p><strong>范例解析</strong></p>
+<p>考虑一个绝热容器中的自由膨胀实验：气体最初被限制在容器一半的空间中，隔板抽去后气体自发膨胀充满整个容器。这个过程没有对外做功（$W=0$），也没有热交换（$Q=0$），但气体分子的分布从"集中"变为"均匀"，是典型的不可逆过程——没有人见过气体自发地重新聚回容器的一半。用统计力学的语言，末态对应的微观状态数远大于初态，熵必然增加：</p>
+$$\Delta S = nR\ln\frac{V_f}{V_i} > 0 \quad (V_f > V_i)$$
+<p><strong>解题应用</strong></p>
+<p>判断一个过程是否可逆，关键在于检验其能否严格沿原路径逆向进行而不留下任何净变化。做题时可用以下判据：</p>
+<li><strong>摩擦/粘性存在</strong> → 必不可逆（如滑块沿粗糙斜面下滑，动能耗散为热）。</li>
+<li><strong>有限温差下的热传导</strong> → 不可逆（热量只能自发从高温流向低温）。</li>
+<li><strong>自由膨胀或混合</strong> → 不可逆（无法自发解混合）。</li>
+<li><strong>准静态、无摩擦、无温差的理想过程</strong>（如缓慢等温压缩理想气体）→ 可逆。</li>
+<p>在计算题中，若题目给出"缓慢"、"无摩擦"、"准静态"等关键词，通常提示可用可逆过程的公式（如 $\Delta S=0$ 或功等于 $\int p\,dV$ 的严格积分）；若涉及"自由膨胀"、"突然接触两温体"、"存在摩擦力"，则应改用熵增公式或能量耗散分析，而不能直接套用可逆过程的等式。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

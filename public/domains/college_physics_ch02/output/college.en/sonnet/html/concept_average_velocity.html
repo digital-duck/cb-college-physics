@@ -11,6 +11,8 @@ MathJax = {
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
@@ -26,6 +28,12 @@ p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
 footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
       font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
 footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
 .page{max-width:780px;margin:0 auto;padding:40px 32px}
 section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
 section:first-of-type{border-top:none;padding-top:0}
@@ -35,19 +43,15 @@ section:first-of-type{border-top:none;padding-top:0}
 <div class="page">
   <main>
     <h2 id="average-velocity">Average Velocity</h2>
-<p>Average velocity describes how an object's position changes, on average, over a stretch of time. It is defined as the displacement — the change in position — divided by the elapsed time:</p>
-$$\bar{v} = \frac{\Delta x}{\Delta t} = \frac{x_2 - x_1}{t_2 - t_1}$$
-<p>Because displacement is a vector (it has direction, not just size), average velocity is also a vector, with SI unit meters per second (m/s). Note that displacement is not the same as the total distance traveled along the path. A runner who completes one full lap of a 400 m track ends up back at the starting line: the distance covered is 400 m, but the displacement — the straight-line change in position — is 0 m, so the average velocity for that lap is 0 m/s.</p>
-<p><strong>Worked example.</strong> A cyclist starts at position $x_1 = 20\text{ m}$ at time $t_1 = 2\text{ s}$ and is later found at $x_2 = -30\text{ m}$ at $t_2 = 12\text{ s}$ (negative meaning "west of the origin," say). The displacement is:</p>
-$$\Delta x = x_2 - x_1 = -30 - 20 = -50\text{ m}$$
-<p>The elapsed time is $\Delta t = 12 - 2 = 10\text{ s}$. So:</p>
-$$\bar{v} = \frac{-50\text{ m}}{10\text{ s}} = -5\text{ m/s}$$
-<p>The negative sign is not an error — it tells you the cyclist's net motion was in the negative direction, at a magnitude of 5 m/s.</p>
-<p><strong>Problem-solving application.</strong> Average velocity is most useful when you only have "before and after" data, not a full description of the motion in between. Suppose a drone takes off from a rooftop at 15 m height, flies a complicated path, and lands on the ground (0 m) 8 seconds later. Even without knowing the flight path, you can immediately compute:</p>
-$$\bar{v} = \frac{0 - 15\text{ m}}{8\text{ s}} = -1.875\text{ m/s}$$
-<p>This tells you the <em>net</em> rate of descent, useful for estimating total energy loss or comparing trips, but it says nothing about the drone's rate of motion at any instant — it might have hovered, dived, and climbed along the way. Recognizing this gap between average and instantaneous behavior is the conceptual bridge toward the derivative-based definition of instantaneous velocity introduced next.</p>
+<p>Average velocity is the ratio of an object's displacement to the time interval over which that displacement occurs:</p>
+$$\bar{v} = \frac{\Delta x}{\Delta t} = \frac{x_f - x_i}{t_f - t_i}$$
+<p>Because displacement $\Delta x$ is a vector, $\bar{v}$ is a vector too — it carries both magnitude and direction. This distinguishes it sharply from average <em>speed</em>, which is total distance traveled divided by total time and is always non-negative. A round trip that ends where it started has zero displacement, and therefore zero average velocity, even if the average speed was large. The SI unit is meters per second (m/s).</p>
+<p><strong>Worked example.</strong> A cyclist starts at position $x_i = 2\text{ m}$ at $t_i = 0\text{ s}$ and, moving along a straight bike path, reaches $x_f = 62\text{ m}$ at $t_f = 10\text{ s}$. The displacement is $\Delta x = 62 - 2 = 60\text{ m}$, and the elapsed time is $\Delta t = 10\text{ s}$, so</p>
+$$\bar{v} = \frac{60\text{ m}}{10\text{ s}} = 6\text{ m/s}, \quad \text{directed along the path of travel.}$$
+<p>If the cyclist instead rode 60 m forward and then 60 m back to the start over the same 10 s, $\Delta x = 0$, giving $\bar{v} = 0\text{ m/s}$ — even though the wheels covered 120 m of distance at an average speed of 12 m/s.</p>
+<p><strong>Problem-solving application.</strong> Average velocity is most useful when you're given endpoint data (positions and times) rather than a continuous record of motion, since it requires only two data points. A common strategy: when a problem states "traveled from A to B in time $T$," immediately identify whether it's asking for average velocity (needs net displacement, direction matters) or average speed (needs total path length) — these are easy to conflate but rarely interchangeable. For multi-leg trips, apply $\bar{v} = \Delta x/\Delta t$ to the <em>entire</em> trip using net displacement and total time, rather than averaging the individual leg velocities directly; for example, a trip with legs of $+40\text{ m}$ in $5\text{ s}$ followed by $-10\text{ m}$ in $5\text{ s}$ has net displacement $30\text{ m}$ over $10\text{ s}$, giving $\bar{v} = 3\text{ m/s}$ — not the simple average of the two leg velocities. This habit of working from total displacement and total elapsed time, rather than combining rates informally, is the algebraic discipline that later problem types will build on.</p>
   </main>
-  <footer class="spl-credit">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></footer>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
 </div>
 </body>
 </html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skydiver Terminal Velocity | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="skydiver-terminal-velocity">Skydiver Terminal Velocity</h2>
+<p>A falling skydiver experiences two forces: gravity pulling down with constant magnitude $mg$, and air drag pushing up, growing with speed. Drag force is modeled as</p>
+$$F_D = \frac{1}{2} \rho v^2 C_d A$$
+<p>where $\rho$ is air density, $v$ is speed, $C_d$ is the drag coefficient (depends on body shape/orientation), and $A$ is the cross-sectional area facing the airflow. Applying Newton's second law along the vertical axis:</p>
+$$ma = mg - \frac{1}{2}\rho v^2 C_d A$$
+<p>As $v$ increases, drag grows until it equals gravity, giving $a = 0$. At that point velocity stops changing — this is <strong>terminal velocity</strong>, $v_t$. Setting $a=0$ and solving:</p>
+$$v_t = \sqrt{\frac{2mg}{\rho C_d A}}$$
+<p><strong>Worked example:</strong> A skydiver of mass $m = 80\text{ kg}$ falls in a belly-down "spread eagle" position with $C_d = 1.0$ and $A = 0.7\text{ m}^2$. Using $\rho = 1.2\text{ kg/m}^3$ and $g = 9.8\text{ m/s}^2$:</p>
+$$v_t = \sqrt{\frac{2(80)(9.8)}{(1.2)(1.0)(0.7)}} = \sqrt{1866.7} \approx 43.2\text{ m/s} \approx 155\text{ km/h}$$
+<p>This matches the commonly cited ~200 km/h range for belly-down freefall (actual $C_d$ and $A$ vary with body position, producing the familiar 195–220 km/h figures).</p>
+<p><strong>Problem-solving application:</strong> Suppose the same skydiver pulls into a head-down dive, reducing $A$ to $0.18\text{ m}^2$ and $C_d$ to $0.7$ (a more streamlined shape). Recompute:</p>
+$$v_t = \sqrt{\frac{2(80)(9.8)}{(1.2)(0.7)(0.18)}} = \sqrt{10370} \approx 101.8\text{ m/s} \approx 366\text{ km/h}$$
+<p>This explains why head-down "tracking" skydivers reach speeds far above belly-down flyers — smaller $A$ and $C_d$ both raise $v_t$ under the square root's inverse relationship. It also shows why heavier skydivers fall faster than lighter ones in the same position: $v_t \propto \sqrt{m}$, so mass increases terminal speed, while a wingsuit's large $A$ dramatically lowers it. This single equation lets you predict how any change in gear, posture, or altitude (via $\rho$) shifts the skydiver's maximum falling speed.</p>
+<pre class="mermaid">flowchart LR
+    A["Weight force: mg (constant, down)"] --> C["Net force"]
+    B["Drag force: 0.5·ρ·v²·Cd·A (grows with v, up)"] --> C
+    C --> D{"Net force = 0?"}
+    D -- "No, still accelerating" --> B
+    D -- "Yes" --> E["Terminal velocity v_t reached"]</pre>
+<p><em>How increasing drag force balances constant gravity until acceleration reaches zero at terminal velocity.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

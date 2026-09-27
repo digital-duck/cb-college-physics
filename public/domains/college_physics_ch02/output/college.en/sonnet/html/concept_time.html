@@ -11,6 +11,8 @@ MathJax = {
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
@@ -26,6 +28,12 @@ p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
 footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
       font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
 footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
 .page{max-width:780px;margin:0 auto;padding:40px 32px}
 section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
 section:first-of-type{border-top:none;padding-top:0}
@@ -35,16 +43,12 @@ section:first-of-type{border-top:none;padding-top:0}
 <div class="page">
   <main>
     <h2 id="time">Time</h2>
-<p>Time is the interval over which change occurs. It is one of the seven SI base quantities, measured in seconds (s), and unlike length or mass, it cannot be directly compared side by side — you cannot lay two durations next to each other the way you lay two rulers next to each other. Instead, time is measured indirectly, by counting repetitions of a process assumed to repeat identically: a pendulum swing, a heartbeat, a vibration. Since 1967, the SI second has been defined by counting exactly 9,192,631,770 oscillations of radiation emitted by a cesium-133 atom transitioning between two hyperfine energy states. This atomic standard replaced earlier definitions based on Earth's rotation, which turned out to vary slightly and unpredictably.</p>
-<p><strong>Worked example.</strong> Suppose a cesium clock reports that a signal has completed $4{,}596{,}315{,}885$ oscillations. How many seconds have elapsed? Since one second corresponds to $9{,}192{,}631{,}770$ oscillations,</p>
-$$
-t = \frac{4{,}596{,}315{,}885}{9{,}192{,}631{,}770} \text{ s} \approx 0.5000\text{ s}.
-$$
-<p>This illustrates the core idea: a time measurement is always a ratio — the number of elapsed cycles divided by the defined cycle rate of the reference standard.</p>
-<p><strong>Problem-solving application.</strong> Timekeeping systems must be calibrated against this standard, and calibration errors compound. GPS satellites, for instance, carry onboard atomic clocks, and receivers on Earth compute position by timing how long radio signals take to arrive from multiple satellites: distance equals the signal's travel time multiplied by the speed of light. Because the speed of light is so large, a clock error of just one microsecond ($10^{-6}$ s) translates into a position error of about 300 meters. This is why GPS satellite clocks are corrected not only for such drift but also for relativistic time dilation caused by their speed and altitude — without correction, GPS positioning would degrade by several kilometers per day.</p>
-<p>When solving problems involving time, always check the units and the reference frame first: is the duration given in seconds, and is it measured against the same standard as any rate or speed used alongside it? Mismatched time bases — for example, mixing a locally measured clock with an uncorrected satellite clock — are a common source of error in real-world systems that depend on precise timing, from financial trading networks to power-grid synchronization.</p>
+<p>Time is the physical quantity that orders events and measures the interval over which change occurs. In the International System of Units (SI), the second (s) is the base unit, and since 1967 it has been defined not by astronomical motion but by an atomic standard: one second equals 9,192,631,770 periods of the radiation emitted during a specific hyperfine transition of a cesium-133 atom. This definition replaced earlier ones tied to Earth's rotation because atomic transitions are far more stable and reproducible — Earth's spin varies slightly due to tidal friction and geological effects, while a cesium atom's transition frequency is fixed by quantum mechanics.</p>
+<p>Formally, if a process begins at $t_1$ and ends at $t_2$, the elapsed time is $\Delta t = t_2 - t_1$, measured in seconds. This simple subtraction underlies every rate-based quantity in physics: velocity $v = \Delta x / \Delta t$, acceleration $a = \Delta v / \Delta t$, and power $P = \Delta E / \Delta t$ all require a well-calibrated $\Delta t$ to be meaningful.</p>
+<p><strong>Worked example.</strong> A sprinter runs 100 m in 9.58 s. To find average speed, apply $v = \Delta x / \Delta t = 100\text{ m} / 9.58\text{ s} \approx 10.44\text{ m/s}$. The precision of the answer is bounded by the precision of the time measurement: if the stopwatch is accurate only to $\pm 0.01$ s, the speed calculation inherits that uncertainty, roughly $\pm 0.01\text{ m/s}$ here. This is why timing standards matter beyond the laboratory — Olympic records, GPS satellite positioning (which requires nanosecond-level synchronization), and financial trading systems all depend on a shared, precise time reference.</p>
+<p><strong>Problem-solving application.</strong> Suppose two events are measured by clocks that have not been synchronized: Clock A reads $t_1 = 3.200$ s and Clock B, offset by a known calibration error of $+0.015$ s, reads $t_2' = 12.515$ s for the true time $t_2$. To find the true elapsed interval, first correct Clock B's reading: $t_2 = t_2' - 0.015 = 12.500$ s. Then $\Delta t = 12.500 - 3.200 = 9.300$ s. This two-step process — calibrate, then subtract — is the general method for any timing problem involving imperfect instruments: identify each clock's offset relative to the standard, correct the raw readings, and only then compute the interval.</p>
   </main>
-  <footer class="spl-credit">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></footer>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
 </div>
 </body>
 </html>

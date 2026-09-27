@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rayleigh Criterion | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="rayleigh-criterion">Rayleigh Criterion</h2>
+<p><strong>定义</strong></p>
+<p>当光波通过一个圆形孔径(如望远镜镜头或人眼瞳孔)成像时,由于衍射效应,一个理想的点光源不会在像平面上呈现为一个几何点,而是形成一个中央亮斑(艾里斑)加同心衍射环的图案。当两个相邻的点光源(例如双星系统)被同一孔径成像时,它们各自的衍射图案会发生重叠。瑞利判据(Rayleigh Criterion)给出了两个像"恰好可分辨"的临界条件:当一个点源衍射图案的中央极大恰好落在另一个点源衍射图案的第一极小处时,两者被认为是刚好可分辨的。</p>
+<p>由此导出的最小可分辨角分离为:</p>
+$$
+\theta_{\min} = 1.22\,\frac{\lambda}{D}
+$$
+<p>其中 $\lambda$ 为入射光波长,$D$ 为孔径直径,$\theta_{\min}$ 以弧度为单位。系数 $1.22$ 来源于圆形孔径夫琅禾费衍射中贝塞尔函数零点的位置,是圆孔衍射特有的结果(矩形孔径对应的系数会有所不同)。</p>
+<p><strong>例题</strong></p>
+<p>一台望远镜的物镜直径 $D = 2.0\text{ m}$,用于观测波长 $\lambda = 550\text{ nm}$(可见光中段)的星光。求该望远镜的最小角分辨率。</p>
+<p>代入公式:</p>
+$$
+\theta_{\min} = 1.22 \times \frac{550\times10^{-9}\text{ m}}{2.0\text{ m}} \approx 3.36\times10^{-7}\text{ rad}
+$$
+<p>换算为角秒(1 rad $\approx 206265''$):</p>
+$$
+\theta_{\min} \approx 3.36\times10^{-7} \times 206265'' \approx 0.069''
+$$
+<p>即该望远镜理论上能分辨相隔约 0.07 角秒的两颗星。</p>
+<p><strong>解题应用</strong></p>
+<p>瑞利判据常用于反推所需孔径或判断某系统能否分辨给定天体。例如,若已知两颗双星的角分离为 $\theta = 0.10''$,波长仍取 $550\text{ nm}$,求分辨它们所需的最小孔径:</p>
+<p>先将 $\theta$ 换算为弧度:$\theta \approx 4.85\times10^{-7}\text{ rad}$,再由</p>
+$$
+D = \frac{1.22\lambda}{\theta} = \frac{1.22 \times 550\times10^{-9}}{4.85\times10^{-7}} \approx 1.38\text{ m}
+$$
+<p>因此至少需要直径约 1.38 m 的物镜才能分辨这对双星。这类计算在设计天文望远镜、显微镜物镜乃至评估人眼(瞳孔直径约 2–8 mm)极限视力时都直接适用——孔径越大,衍射极限角越小,分辨能力越强。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

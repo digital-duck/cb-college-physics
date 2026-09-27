@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electrical Safety Devices | College Physics Ch23</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="电气安全装置">电气安全装置</h2>
+<p><strong>定义</strong></p>
+<p>电气安全装置利用电磁感应原理检测异常泄漏电流，防止人体触电或设备起火。三种核心系统各司其职：三线接地系统（three-wire grounding）为设备外壳提供低电阻回路，使故障电流优先经接地线而非人体流向大地；接地故障断路器（Ground Fault Interrupter, GFI，也称 GFCI）实时比较火线与零线电流，一旦发现差值即判定为"泄漏"并瞬间切断电路；隔离变压器（isolation transformer）则通过磁耦合而非导线直接连接的方式传递电能，切断了设备与大地之间的直接导电路径，从根本上消除了单点触电的回路条件。</p>
+<p><strong>GFI 的工作原理（应用电磁感应定律）</strong></p>
+<p>GFI 的核心是一个环形铁芯（差分电流互感器），火线与零线同时穿过铁芯。正常工作时，流入火线的电流 $I_{hot}$ 应等于流出零线的电流 $I_{neutral}$，两者产生的磁通方向相反、大小相等，合成磁通为零：</p>
+$$\Phi_{net} = \Phi_{hot} + \Phi_{neutral} = 0$$
+<p>若人体不慎接触带电部位，部分电流 $I_{leak}$ 会经人体流入大地，不再经零线返回，此时：</p>
+$$I_{hot} - I_{neutral} = I_{leak} \neq 0$$
+<p>净磁通不再为零，根据法拉第电磁感应定律，铁芯上绕制的检测线圈将产生感应电动势：</p>
+$$\varepsilon = -N\frac{d\Phi_{net}}{dt}$$
+<p>该感应信号触发跳闸机构，在美国标准中要求泄漏电流达到约 5 mA 时、于 25 毫秒内切断电路——远快于心室颤动所需的电流持续时间，也远低于致命阈值（约 100 mA）。</p>
+<p><strong>问题求解应用</strong></p>
+<p>设某台家用电器正常运行时火线电流为 $I_{hot} = 8.000\text{ A}$。若操作者触电导致 6 mA 电流经人体泄漏入地，求此时零线电流及 GFI 检测线圈感应磁通的变化率是否足以触发跳闸（设检测线圈匝数 $N = 1000$，铁芯磁导系数使得每安培不平衡电流对应磁通 $\Phi = 2\times10^{-8}$ Wb，故障发生时间 $\Delta t = 1\text{ ms}$）。</p>
+<p>解：零线电流为 $I_{neutral} = 8.000 - 0.006 = 7.994\text{ A}$，不平衡电流 $\Delta I = 6\text{ mA}$，对应磁通变化 $\Delta\Phi = 2\times10^{-8}\times 6\times10^{-3} = 1.2\times10^{-10}\text{ Wb}$。感应电动势约为 $\varepsilon = N\frac{\Delta\Phi}{\Delta t} = 1000 \times \frac{1.2\times10^{-10}}{10^{-3}} = 1.2\times10^{-4}\text{ V}$，虽微小但足以被灵敏放大电路识别，触发跳闸，验证了 GFI 在毫安级泄漏下仍能可靠动作的设计裕度。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch23: Electromagnetic Induction, AC Circuits, and Electrical Technologies (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capacitance | College Physics Ch21</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="capacitance">Capacitance</h2>
+<p><strong>定义</strong></p>
+<p>电容（capacitance）描述的是一个导体系统储存电荷的能力。当在两个导体之间施加电压 $V$ 时，导体上会积累等量异号的电荷 $Q$。实验发现，对于给定的导体几何结构（形状、尺寸、间距、以及两导体间介质），$Q$ 与 $V$ 成正比，比例系数就是电容：</p>
+$$
+C = \frac{Q}{V}
+$$
+<p>电容的单位是法拉（farad，符号 F），$1\ \text{F} = 1\ \text{C/V}$。由于法拉是一个很大的单位，实际器件的电容常以微法（$\mu\text{F} = 10^{-6}\,\text{F}$）、纳法（$\text{nF} = 10^{-9}\,\text{F}$）或皮法（$\text{pF} = 10^{-12}\,\text{F}$）表示。需要强调的是，$C$ 是由几何形状和介质决定的常数，并不随 $Q$ 或 $V$ 的变化而变化——加倍电压只会使储存的电荷加倍，比值保持不变。</p>
+<p><strong>推导：平行板电容器</strong></p>
+<p>以最常见的平行板电容器为例，两块面积为 $A$ 的平行导体板，间距为 $d$，中间为真空（介电常数 $\varepsilon_0$）。设两板分别带电荷 $+Q$ 和 $-Q$，由高斯定律可得板间电场：</p>
+$$
+E = \frac{Q}{\varepsilon_0 A}
+$$
+<p>电场沿间距积分得到电压：</p>
+$$
+V = Ed = \frac{Qd}{\varepsilon_0 A}
+$$
+<p>代入 $C = Q/V$，得到平行板电容器的电容公式：</p>
+$$
+C = \frac{\varepsilon_0 A}{d}
+$$
+<p>这个结果表明：电容与极板面积成正比，与间距成反比——这正是电容器设计的核心权衡：想要更大电容，就要增大面积或缩小间距（同时需要更薄、耐压更高的绝缘介质）。</p>
+<p><strong>问题求解应用</strong></p>
+<p>例题：一平行板电容器，极板面积 $A = 2.0 \times 10^{-2}\ \text{m}^2$，间距 $d = 1.0\ \text{mm}$，真空介质。求电容，并计算施加 $12\ \text{V}$ 电压时储存的电荷。</p>
+$$
+C = \frac{(8.85\times 10^{-12})(2.0\times 10^{-2})}{1.0\times 10^{-3}} \approx 1.77\times 10^{-10}\ \text{F} = 177\ \text{pF}
+$$
+$$
+Q = CV = (1.77\times 10^{-10})(12) \approx 2.1\times 10^{-9}\ \text{C}
+$$
+<p>若在极板间插入相对介电常数 $\kappa$ 的绝缘介质，电容将增大为 $C' = \kappa C$，这是实际电容器普遍采用陶瓷、聚酯等介质材料以提升储能密度的原因。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch21: Circuits and DC Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

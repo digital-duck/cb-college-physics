@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Momentum | College Physics Ch29</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="momentum">Momentum</h2>
+<p><strong>定义</strong></p>
+<p>动量（momentum）是描述物体运动量的物理量，定义为质量与速度的乘积：</p>
+$$\vec{p} = m\vec{v}$$
+<p>其中 $m$ 为物体的质量（标量），$\vec{v}$ 为速度（矢量），因此动量 $\vec{p}$ 是矢量，方向与速度方向相同。在没有外力作用（或系统所受合外力为零）的孤立系统中，总动量守恒——这是牛顿第二定律 $\vec{F} = \dfrac{d\vec{p}}{dt}$ 的直接推论：若 $\vec{F}_{\text{net}} = 0$，则 $\vec{p}$ 不随时间变化。动量守恒定律是物理学中最基本的守恒律之一，其根源在于空间平移对称性（诺特定理），适用范围远超牛顿力学，延伸至相对论和量子力学。</p>
+<p><strong>例题</strong></p>
+<p>一个质量 $m_1 = 2\ \text{kg}$ 的物体以 $v_1 = 3\ \text{m/s}$ 向右运动，与静止的 $m_2 = 1\ \text{kg}$ 物体发生完全非弹性碰撞（碰后粘合为一体）。求碰后共同速度。</p>
+<p>由动量守恒：</p>
+$$m_1 v_1 + m_2 v_2 = (m_1+m_2)v'$$
+$$2(3) + 1(0) = (2+1)v' \implies v' = 2\ \text{m/s}$$
+<p>碰撞过程中动能不守恒（部分转化为热能、形变能），但动量始守恒——这正是动量守恒律优于能量分析之处：它不要求知道碰撞的内部机制，只需系统外部无净外力。</p>
+<p><strong>解题应用</strong></p>
+<p>动量守恒是分析碰撞、爆炸、火箭推进等问题的核心工具，尤其当作用力复杂或未知、但作用时间极短时（此时用冲量-动量定理 $\vec{J} = \Delta \vec{p} = \int \vec{F}\,dt$ 更为便捷，无需求解运动方程）。解题策略：先明确系统边界（哪些物体计入"系统"），确认边界内合外力为零或可忽略，再对系统总动量在碰撞前后分别求和并令其相等。常见易错点是混淆动量（矢量，可正可负，需设定方向）与动能（标量，恒非负）——弹性碰撞要求两者同时守恒，非弹性碰撞仅动量守恒。多体系统问题（如火箭喷气、多物体碰撞链）也应从动量守恒方程组入手，再结合几何约束求解未知量。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch29: Quantum Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

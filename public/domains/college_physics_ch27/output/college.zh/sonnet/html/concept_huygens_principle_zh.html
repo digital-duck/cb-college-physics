@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huygens Principle | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="huygens-principle">Huygens Principle</h2>
+<p><strong>原理陈述</strong>：波前（wavefront）上的每一点都可以视为发出球面子波（wavelet）的次级点源，这些子波以波速 $v$ 向前方传播；经过时间 $\Delta t$ 后，所有子波包络的公切面（对二维情形是公切线）就构成了新的波前。这一原理由惠更斯于 1678 年提出，其价值在于把"波如何传播"这一整体问题，转化为"每个点如何独立发射球面波"的局部问题——它是解释反射、折射、衍射的几何基础。</p>
+<p><strong>数学表述</strong>：设初始波前为曲面 $S_0$，其上任一点 $P$ 在时间 $\Delta t$ 内发出的子波是半径为 $r=v\Delta t$ 的球面：</p>
+$$
+|\mathbf{x}-\mathbf{P}| = v\Delta t
+$$
+<p>新波前 $S_1$ 即为所有这些球面 $\{|\mathbf{x}-\mathbf{P}|=v\Delta t : P\in S_0\}$ 的包络。对各向同性均匀介质，若 $S_0$ 是平面，则 $S_1$ 仍是平行平面，且沿法线方向前进了 $v\Delta t$——这正是几何光学中"光沿直线传播"的波动解释。</p>
+<p><strong>例题</strong>：一列平面波以速度 $v=340\text{ m/s}$（声速）通过一条宽度为 $a=0.5\text{ m}$ 的窄缝。用惠更斯原理解释缝后为何会出现衍射（波绕开缝边缘向阴影区弯曲传播），而不是保持原方向的一束平行波。</p>
+<p><em>分析</em>：缝上每一点都成为新的子波源。若缝宽 $a$ 远大于波长 $\lambda$，缝内各点子波在缝正前方几乎同相叠加，波峰包络仍近似为平面，衍射不明显；但在缝边缘处，子波源的分布是"半无限"的，其包络会向侧方弯曲，产生衍射角。当 $a \sim \lambda$ 时，整条缝上的子波源数目效应减弱，衍射角显著增大，符合单缝衍射的判据 $\sin\theta \approx \lambda/a$。</p>
+<p><strong>解题应用</strong>：惠更斯原理的核心用途是<strong>定性预测</strong>波遇到障碍物、孔缝或介质分界面时的传播方向。解题步骤通常是：①画出入射波前；②在波前（或孔径边缘）上标出若干子波源；③以波速为半径画出各子波的圆弧（子波前）；④作这些圆弧的包络线，即为新波前。此方法可直接推导斯涅尔折射定律：设波在界面两侧速度分别为 $v_1,v_2$，比较同一时间内两侧子波传播的弧长，即可得到 $\dfrac{\sin\theta_1}{\sin\theta_2}=\dfrac{v_1}{v_2}$，为下一节"折射定律的波动推导"打下基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

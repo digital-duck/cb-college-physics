@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fulcrum | College Physics Ch09</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="fulcrum-支点">Fulcrum(支点)</h2>
+<p><strong>定义</strong></p>
+<p>支点是杠杆绕其转动的固定枢轴点。杠杆是一根可绕支点自由转动的刚性杆，其两侧分别作用着施力（力矩输入）和阻力（需克服的负载）。支点的位置决定了杠杆的力学优势——即输入力经过放大或缩小后传递给负载的比例。杠杆问题的核心是<strong>力矩平衡</strong>：绕支点的顺时针力矩之和必须等于逆时针力矩之和，系统才处于静态平衡。力矩定义为力与其到支点垂直距离（力臂）的乘积：</p>
+$$\tau = F \times d$$
+<p>平衡条件为：</p>
+$$F_1 d_1 = F_2 d_2$$
+<p>其中 $F_1, F_2$ 为两侧作用力，$d_1, d_2$ 为各自到支点的力臂长度。</p>
+<p><strong>范例</strong></p>
+<p>一根跷跷板长 4 米，支点位于正中央。若一名 30 kg 的孩子坐在左端（距支点 2 米），另一名孩子想要让跷跷板保持水平，应坐在距支点多远处，其体重需为多少？</p>
+<p>设右侧孩子体重为 $F_2$，坐在距支点 $d_2 = 2\text{ m}$ 处，代入平衡条件：</p>
+$$30 \times 9.8 \times 2 = F_2 \times 2$$
+<p>解得 $F_2 = 30\text{ kg}$（体重相同则力臂必须相等）。若改为体重 20 kg 的孩子，要求平衡则需满足：</p>
+$$30 \times 2 = 20 \times d_2 \implies d_2 = 3\text{ m}$$
+<p>即较轻的孩子需坐得更靠外侧，力臂更长以补偿体重不足。这正体现了支点作为"力矩换算枢纽"的作用：改变支点到两端的相对距离，就能用较小的力平衡较大的负载。</p>
+<p><strong>应用于问题求解</strong></p>
+<p>杠杆类问题的解题步骤可归纳为三步：(1) 明确支点位置，标出力臂 $d_1, d_2$；(2) 列出各力及其方向（顺时针/逆时针）；(3) 令合力矩为零，解未知量。</p>
+<p>例如撬棍问题：一根长 1.5 米的撬棍，支点设在距负载端 0.2 米处，若负载为 600 N，求施加在撬棍另一端所需的最小力：</p>
+$$F \times (1.5 - 0.2) = 600 \times 0.2 \implies F = \frac{120}{1.3} \approx 92.3\text{ N}$$
+<p>支点越靠近负载端，力臂比 $d_2/d_1$ 越大，所需施力越小——这就是"以小博大"的杠杆原理，也是理解剪刀、扳手、人体关节等复合机械系统的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch9: Statics and Torque (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

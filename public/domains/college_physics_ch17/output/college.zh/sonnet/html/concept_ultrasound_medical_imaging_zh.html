@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultrasound Medical Imaging | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="超声医学成像">超声医学成像</h2>
+<p><strong>定义</strong></p>
+<p>超声成像利用高频声波（通常为 2–15 MHz，远超人耳可闻范围）探测人体内部结构。探头（换能器）中的压电晶体将电脉冲转换为声波脉冲，声波沿组织传播，遇到不同组织交界面时发生反射。反射强弱取决于两种介质的<strong>声阻抗</strong>（acoustic impedance）差异，定义为</p>
+$$Z = \rho c$$
+<p>其中 $\rho$ 为介质密度，$c$ 为声速。当声波从声阻抗 $Z_1$ 的介质进入声阻抗 $Z_2$ 的介质时，垂直入射的反射系数为</p>
+$$R = \left(\frac{Z_2 - Z_1}{Z_2 + Z_1}\right)^2$$
+<p>$R$ 越大，回声越强，界面在图像中越亮。探头同时记录回声返回所需时间 $t$，结合组织中的平均声速 $c$（软组织约 1540 m/s），可计算反射面深度：</p>
+$$d = \frac{c \cdot t}{2}$$
+<p>除以 2 是因为声波经历了"发射—反射—接收"的往返路程。</p>
+<p><strong>举例说明</strong></p>
+<p>设脂肪组织的 $Z_1 = 1.34 \times 10^6\ \text{kg/(m}^2\text{s)}$，肌肉组织的 $Z_2 = 1.70\times10^6\ \text{kg/(m}^2\text{s)}$。代入反射系数公式：</p>
+$$R = \left(\frac{1.70-1.34}{1.70+1.34}\right)^2 = \left(\frac{0.36}{3.04}\right)^2 \approx 0.014$$
+<p>即约 1.4% 的声能被反射回探头，其余 98.6% 继续向深层传播，可用于探测更深的结构。这也解释了为何超声探头需要涂抹耦合剂——空气与皮肤的声阻抗差异极大（$R$ 接近 1），几乎全反射，若不排除空气层，声波根本无法进入体内。</p>
+<p><strong>问题解决应用</strong></p>
+<p>临床工程师需要根据回声时间反推深度，用于测量胎儿头径或器官大小。若某回声在发射后 $t = 0.13\ \text{ms}$ 返回，软组织声速取 1540 m/s，则该界面深度为</p>
+$$d = \frac{1540 \times 0.13\times10^{-3}}{2} \approx 0.10\ \text{m} = 10\ \text{cm}$$
+<p>分辨率与频率相关：频率越高，波长越短，分辨率越好，但穿透深度越浅（高频声波衰减更快）。因此腹部深部成像常用较低频率（2–5 MHz），而甲状腺等浅表结构成像则用较高频率（7–15 MHz），这体现了工程设计中"分辨率—穿透深度"的权衡取舍，是超声设备选型的核心决策依据。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

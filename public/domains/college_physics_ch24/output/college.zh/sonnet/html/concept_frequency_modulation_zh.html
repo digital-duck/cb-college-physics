@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frequency Modulation | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="frequency-modulation">Frequency Modulation</h2>
+<p><strong>定义</strong></p>
+<p>调频（Frequency Modulation, FM）是一种将音频信息编码到无线电载波上的方法：让载波的<strong>频率</strong>随调制信号（音频)的瞬时幅度而变化，同时保持载波<strong>振幅</strong>恒定。这与调幅（AM）形成对比——AM 是让振幅随音频变化、频率保持不变。由于噪声（如雷电、电气干扰）主要以振幅突变的形式叠加到信号上，FM 接收机通过限幅器（limiter）电路可以直接切除这些振幅噪声而不影响所携带的信息，因而 FM 天然具有更强的抗噪声能力，这也是调频广播（88–108 MHz）音质优于调幅广播的根本原因。</p>
+<p>数学上，设音频信号为 $m(t)$，载波角频率为 $\omega_c$，则调频信号可写为：</p>
+$$
+s(t) = A_c \cos\!\left(\omega_c t + k_f \int_0^t m(\tau)\, d\tau\right)
+$$
+<p>其中 $A_c$ 为恒定振幅，$k_f$ 为频率灵敏度常数。瞬时频率为：</p>
+$$
+f_i(t) = f_c + \frac{k_f}{2\pi} m(t)
+$$
+<p>可见频率偏移量正比于音频幅度，而振幅 $A_c$ 全程不变。</p>
+<p><strong>工作示例</strong></p>
+<p>假设某调频台标称频率 $f_c = 100\ \text{MHz}$，音频信号 $m(t) = \cos(2\pi \times 1000\, t)$（1 kHz 单音），频率灵敏度 $k_f/(2\pi) = 75\ \text{kHz/V}$，且音频峰值为 1 V。则瞬时频率在 $100\ \text{MHz} \pm 75\ \text{kHz}$ 之间摆动——这个 75 kHz 就是<strong>最大频偏</strong> $\Delta f$。调频广播标准正是规定 $\Delta f_{\max} = 75\ \text{kHz}$，以此保证相邻频道（间隔 200 kHz）互不干扰。</p>
+<p><strong>问题求解应用</strong></p>
+<p>调频系统设计的核心权衡是<strong>带宽与抗噪声能力</strong>。卡森法则（Carson's Rule）给出所需传输带宽的估算：</p>
+$$
+B_T \approx 2(\Delta f + f_m)
+$$
+<p>其中 $f_m$ 是音频信号的最高频率分量。以上例代入 $f_m = 15\ \text{kHz}$（人耳可闻上限）：</p>
+$$
+B_T \approx 2(75 + 15) = 180\ \text{kHz}
+$$
+<p>这与实际调频信道带宽（约 200 kHz）吻合。这一公式说明：增大频偏 $\Delta f$ 能提升信噪比（调制指数越大，抗噪声增益越强），但代价是占用更宽的频谱——这正是 FM 广播比 AM 广播占用带宽大得多、却音质更好的工程根源。学生可据此计算：若将 $\Delta f$ 提高到 100 kHz，所需带宽将如何变化，并权衡频谱资源与音质之间的取舍。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

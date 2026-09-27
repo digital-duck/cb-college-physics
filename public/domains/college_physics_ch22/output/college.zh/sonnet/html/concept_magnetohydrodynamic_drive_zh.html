@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetohydrodynamic Drive | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="magnetohydrodynamic-drive">Magnetohydrodynamic Drive</h2>
+<p><strong>定义</strong></p>
+<p>磁流体动力驱动（MHD 驱动）是一种利用洛伦兹力推动导电流体运动的无机械运动部件的推进或泵送系统。其核心原理源自洛伦兹力定律：当电流密度 $\vec{J}$ 通过一个施加的磁场 $\vec{B}$ 中的导电流体时，流体单位体积受到的力为</p>
+$$
+\vec{f} = \vec{J} \times \vec{B}
+$$
+<p>只要电流方向与磁场方向不平行（通常设计为相互垂直，即 $\vec{J} \perp \vec{B}$），该叉乘就会产生一个同时垂直于两者的力，方向沿流体通道推动工质前进。由于没有叶轮、活塞或转轴,系统不存在因摩擦、磨损或密封失效而导致故障的机械部件，这使其特别适合高腐蚀性流体（如液态金属、海水）或需要极高可靠性的场合（如核反应堆冷却回路、潜艇推进）。</p>
+<p><strong>电流的产生方式</strong>决定了两种主要工作模式：外部电源驱动电流的称为“<strong>导体泵</strong>”（conduction pump），常用于液态金属冷却回路；而依靠感应磁场自身在流体中感应出涡流的称为“<strong>感应泵</strong>”（induction pump），无需与流体直接电接触，更适合腐蚀性介质。</p>
+<p><strong>工程算例</strong></p>
+<p>设一段矩形通道内海水（电导率 $\sigma \approx 4\ \text{S/m}$）在电极间施加电流密度 $J = 2000\ \text{A/m}^2$，磁场强度 $B = 1.5\ \text{T}$，两者互相垂直。体积力密度为</p>
+$$
+f = JB = 2000 \times 1.5 = 3000\ \text{N/m}^3
+$$
+<p>若通道横截面积 $A = 0.01\ \text{m}^2$、长度 $L = 0.5\ \text{m}$，则该段流体所受总推力为</p>
+$$
+F = f \cdot A \cdot L = 3000 \times 0.01 \times 0.5 = 15\ \text{N}
+$$
+<p>这一推力直接转化为流体加速度与压升，构成 MHD 推进器（如实验性 EMS-1 潜艇原型）或 MHD 泵的设计基础。</p>
+<p><strong>问题求解应用</strong></p>
+<p>在实际设计中，工程师常需反解所需电流：给定目标推力 $F$、磁场 $B$ 与通道几何尺寸，可由</p>
+$$
+J = \frac{F}{AB\,L}
+$$
+<p>求出所需电流密度，再结合流体电导率 $\sigma$ 与所加电压差 $V$（满足欧姆定律 $J = \sigma E = \sigma V/d$，其中 $d$ 为电极间距）确定电源规格。功率效率分析还需考虑焦耳热损耗 $P_{\text{loss}} = J^2/\sigma$ 与流体粘滞阻力的权衡，这正是 MHD 驱动效率普遍低于机械泵（通常低于 30%）但仍被选用于极端环境的核心工程取舍。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

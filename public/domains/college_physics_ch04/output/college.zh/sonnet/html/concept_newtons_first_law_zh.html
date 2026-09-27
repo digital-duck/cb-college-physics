@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newtons First Law | College Physics Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="newtons-first-law">Newtons First Law</h2>
+<p><strong>定义</strong></p>
+<p>牛顿第一定律（惯性定律）指出：若一个物体所受合外力为零，则静止的物体将保持静止，运动的物体将保持匀速直线运动。用数学语言表述为：</p>
+$$
+\sum \vec{F} = 0 \quad \Longrightarrow \quad \vec{v} = \text{常矢量}
+$$
+<p>这条定律的核心并不是"力使物体运动"，而是<strong>惯性</strong>本身——物体维持其运动状态（无论是静止还是匀速直线运动）的固有倾向。力不是维持运动所必需的，力是<strong>改变</strong>运动状态所必需的。这一点在伽利略之前长期被误解，亚里士多德学派认为运动需要持续的力来维持，而牛顿第一定律纠正了这一直觉性错误。</p>
+<p>需要强调的是，这条定律只在<strong>惯性参考系</strong>中成立——即本身不加速的参考系。在非惯性参考系（如加速的汽车内）中，物体看似无故运动，这是虚拟力（如离心力）的表现，而非真实的物理规律失效。</p>
+<p><strong>例题</strong></p>
+<p>一个冰球在光滑冰面上以 $3\ \text{m/s}$ 的速度水平滑动。假设摩擦力和空气阻力可忽略不计，求 $10$ 秒后冰球的速度。</p>
+<p>由于合外力为零（重力与冰面法向力相互抵消，无水平方向的力），根据第一定律：</p>
+$$
+\vec{v}(10\,\text{s}) = \vec{v}(0) = 3\ \text{m/s（沿原方向）}
+$$
+<p>冰球既不会加速也不会减速，将保持恒定速度运动。</p>
+<p><strong>问题解决应用</strong></p>
+<p>第一定律的关键应用在于<strong>判断合外力是否为零</strong>，这是解决动力学问题的第一步。例如，分析一个悬挂静止的物体：若绳的张力恰好等于重力，物体保持静止，说明合外力为零，这是应用牛顿第二定律 $\sum \vec{F} = m\vec{a}$（当 $\vec{a}=0$）之前必须验证的前提条件。</p>
+<p>在工程与物理问题中，第一定律常作为<strong>受力分析（Free-Body Diagram）</strong>的判定标准：若观察到物体做匀速直线运动或保持静止，即可推断作用在其上的所有力的矢量和为零，从而列出平衡方程组，求解未知的力或张力。这种"由运动状态反推受力情况"的思路，是解决静力学与动力学问题的基本方法论。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch4: Dynamics: Force and Newton's Laws of Motion (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

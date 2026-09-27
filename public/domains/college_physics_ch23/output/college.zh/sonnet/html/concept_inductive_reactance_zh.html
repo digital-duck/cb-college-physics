@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inductive Reactance | College Physics Ch23</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="inductive-reactance">Inductive Reactance</h2>
+<p><strong>定义</strong></p>
+<p>当交流电流通过电感器时,电感器会产生一个随频率变化的阻碍作用,称为感抗(inductive reactance),记作 $X_L$。其大小由下式给出:</p>
+$$X_L = 2\pi f L = \omega L$$
+<p>其中 $f$ 为交流电源的频率(单位:赫兹,Hz),$L$ 为电感值(单位:亨利,H),$\omega = 2\pi f$ 为角频率(单位:弧度/秒)。感抗的单位与电阻相同,为欧姆($\Omega$)。</p>
+<p>感抗的物理根源在于楞次定律(Lenz's law):电感器中变化的电流会在其内部产生自感电动势,阻碍电流的变化。电流变化越快(频率越高),这种阻碍效应就越强,因此 $X_L$ 与 $f$ 成正比——这与电容器的容抗 $X_C = \dfrac{1}{2\pi f C}$ 正好相反。</p>
+<p>由于电感器对电流变化的阻碍,电感两端的电压相位超前电流相位 $90°$(即 $\pi/2$ 弧度)。用相量表示,电感的阻抗为:</p>
+$$Z_L = jX_L = j\omega L$$
+<p>其中虚数单位 $j$ 表示相位超前 $90°$。</p>
+<p><strong>例题</strong></p>
+<p>一个 $L = 50\ \text{mH}$ 的电感器接入频率为 $f = 60\ \text{Hz}$ 的交流电源,求其感抗,并求当电流有效值为 $2\ \text{A}$ 时电感两端的电压有效值。</p>
+<p>解:</p>
+$$X_L = 2\pi f L = 2\pi (60)(0.050) \approx 18.85\ \Omega$$
+<p>由欧姆定律(相量形式)得电压有效值:</p>
+$$V_L = I \cdot X_L = 2 \times 18.85 \approx 37.7\ \text{V}$$
+<p>且该电压相位超前电流 $90°$。</p>
+<p><strong>问题解决应用</strong></p>
+<p>在含电感的交流电路分析中,感抗是计算总阻抗、功率因数及谐振频率的关键量。例如,在 RLC 串联电路中,总阻抗为 $Z = R + j(X_L - X_C)$,当 $X_L = X_C$ 时电路发生谐振,此时阻抗最小且为纯电阻性。掌握 $X_L$ 随频率的线性关系,是设计滤波器、调谐电路以及分析电动机、变压器等电感性负载功率损耗的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch23: Electromagnetic Induction, AC Circuits, and Electrical Technologies (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuclear Fusion | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="nuclear-fusion">Nuclear Fusion</h2>
+<p><strong>定义</strong></p>
+<p>核聚变是两个轻原子核结合形成一个较重原子核的核反应。由于生成核的每核子结合能大于反应物的每核子结合能，反应会释放能量。这一能量释放可由爱因斯坦质能关系定量描述：</p>
+$$
+\Delta E = \Delta m \, c^2
+$$
+<p>其中 $\Delta m$ 是反应前后总静止质量的亏损（反应物质量之和减去产物质量之和），$c$ 为真空光速。由于结合能与核子数的关系曲线（比结合能曲线）在铁（$^{56}\text{Fe}$）附近达到峰值，轻核聚变（曲线左侧上升段）和重核裂变（曲线右侧下降段）都能使产物向峰值靠拢，从而释放能量。</p>
+<p><strong>范例计算</strong></p>
+<p>以氘氚聚变反应为例，这是最容易在实验室条件下实现的聚变反应：</p>
+$$
+{}^{2}_{1}\text{H} + {}^{3}_{1}\text{H} \rightarrow {}^{4}_{2}\text{He} + {}^{1}_{0}\text{n}
+$$
+<p>已知各核素静止质量（以原子质量单位 u 计）：氘 $2.014102\ \text{u}$，氚 $3.016049\ \text{u}$，氦-4 $4.002602\ \text{u}$，中子 $1.008665\ \text{u}$。</p>
+<p>质量亏损为：</p>
+$$
+\Delta m = (2.014102 + 3.016049) - (4.002602 + 1.008665) = 0.018884\ \text{u}
+$$
+<p>利用 $1\ \text{u} = 931.5\ \text{MeV}/c^2$，释放能量为：</p>
+$$
+\Delta E = 0.018884 \times 931.5 \approx 17.6\ \text{MeV}
+$$
+<p>这一能量远高于化学反应（通常为电子伏特量级），也是太阳等恒星以及托卡马克装置能量来源的定量基础。</p>
+<p><strong>应用与问题求解</strong></p>
+<p>工程上评估聚变反应堆可行性时，需比较反应释放能量与克服核间库仑斥力所需的能量（即“点火温度”问题）。由于两核都带正电，聚变要求核子接近到强相互作用力范围（约 $10^{-15}\ \text{m}$），这需要极高动能，对应上亿开尔文的等离子体温度——这正是磁约束或惯性约束聚变工程设计的核心约束条件。在计算反应堆能量增益（如劳森判据）时，上述质量亏损公式提供了每次反应的理论能量上限，是评估反应效率与工程可行性的起点。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

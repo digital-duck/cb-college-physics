@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poiseuilles Law | College Physics Ch12</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="poiseuilles-law">Poiseuilles Law</h2>
+<p><strong>定义</strong></p>
+<p>泊肃叶定律（Poiseuille's Law）描述了粘性流体在圆形管道中做层流（laminar flow）运动时，体积流量与驱动压强差之间的定量关系。对于半径为 $r$、长度为 $l$ 的管道，两端压强分别为 $P_1$ 和 $P_2$，流体粘度为 $\eta$，则体积流量 $Q$ 满足：</p>
+$$Q = \frac{(P_2 - P_1)\pi r^4}{8\eta l}$$
+<p>这个公式可以改写成与电路中欧姆定律完全类似的形式：$\Delta P = QR$，其中流动阻力定义为</p>
+$$R = \frac{8\eta l}{\pi r^4}$$
+<p>阻力的关键特征是它与半径的<strong>四次方</strong>成反比——这不是一个近似,而是从纳维-斯托克斯方程在层流边界条件下严格推导出的结果:流体在管壁附近速度为零、在管中心速度最大,形成抛物线形速度分布,对该分布积分即得到 $r^4$ 依赖关系。</p>
+<p><strong>推导要点（简述）</strong></p>
+<p>考虑管道内半径为 $\rho$ 的薄圆环流体层，压强差驱动该层克服粘性剪切力运动。对牛顿粘性流体，剪切应力 $\tau = \eta \, dv/d\rho$，结合力平衡方程可解出速度分布 $v(\rho) = \frac{(P_1-P_2)}{4\eta l}(r^2 - \rho^2)$。将此速度分布对整个横截面积积分（即 $Q = \int_0^r v(\rho) \cdot 2\pi\rho \, d\rho$），便得到上述 $Q$ 公式。</p>
+<p><strong>问题求解应用</strong></p>
+<p>若将某输液管道的半径从 $r$ 缩小为 $0.8r$（其他条件不变），流量变为原来的 $0.8^4 \approx 0.41$ 倍，即下降约 59%。这解释了为何血管轻微狭窄（如动脉粥样硬化导致半径减少 20%）会使血流量骤降近六成，是心血管疾病症状恶化的物理根源。</p>
+<p>反过来，若要在半径减半（$r \to r/2$）的情况下维持相同流量，则需将压强差提高至原来的 16 倍（因为 $R \propto 1/r^4$，阻力增加 16 倍）。这类计算广泛应用于医学导管设计、静脉输液速率控制，以及工业管道系统的流量-压强权衡分析中。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch12: Fluid Dynamics and Its Biological and Medical Applications (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

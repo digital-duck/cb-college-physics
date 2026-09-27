@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Single Slit Diffraction | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="single-slit-diffraction">Single Slit Diffraction</h2>
+<p><strong>定义</strong></p>
+<p>当一束光通过一条宽度为 $D$ 的狭缝(而非无限窄的点)时,惠更斯原理告诉我们缝内每一点都可视为次级波源。这些次级波源发出的波在缝后空间相互叠加,产生的干涉图样并非简单的单一亮斑,而是一个宽阔的中央主极大,两侧伴随着一系列强度迅速衰减的次极大,极大之间被一系列暗纹(极小)分隔。这与双缝干涉不同:双缝产生的是间距均匀、强度大致相等的亮纹,而单缝衍射的核心特征是"中央主极大宽、两侧次极大窄且暗"。</p>
+<p>暗纹位置由以下条件给出:</p>
+$$D\sin\theta = m\lambda, \quad m = \pm 1, \pm 2, \pm 3, \dots$$
+<p>其中 $D$ 为缝宽,$\theta$ 为衍射角(相对于入射方向),$\lambda$ 为光的波长,$m$ 为非零整数。注意 $m=0$ 对应的是中央主极大的中心,而不是暗纹——这是单缝衍射公式与双缝干涉公式在形式上相似但物理意义相反的关键之处。</p>
+<p>该公式的推导思路是把缝分成若干成对的次级波源:当缝宽满足 $D\sin\theta = m\lambda$ 时,可以把整条缝均分为 $2m$ 个等宽小段,相邻小段发出的波恰好相差半个波长,两两完全相消,从而在该角度上总强度为零。</p>
+<p><strong>例题</strong></p>
+<p>一束波长 $\lambda = 600\ \text{nm}$ 的红光垂直照射到宽度 $D = 0.20\ \text{mm}$ 的狭缝上。求第一暗纹相对于中心线的角度。</p>
+<p>由 $D\sin\theta = m\lambda$,取 $m=1$:</p>
+$$\sin\theta = \frac{\lambda}{D} = \frac{600\times10^{-9}}{0.20\times10^{-3}} = 3.0\times10^{-3}$$
+<p>因角度很小,$\theta \approx 3.0\times10^{-3}\ \text{rad} \approx 0.17^\circ$。</p>
+<p><strong>应用与解题</strong></p>
+<p>若屏幕距缝 $L=2.0\ \text{m}$,可用小角近似 $\sin\theta\approx\tan\theta = y/L$,求得第一暗纹到中心的距离 $y = L\tan\theta \approx (2.0)(3.0\times10^{-3}) = 6.0\ \text{mm}$。中央主极大的全宽约为此值的两倍,即约 $12\ \text{mm}$——这说明缝越窄,衍射越明显,中央亮斑越宽,这正是"波长与孔径尺寸可比拟时衍射效应显著"这一普遍规律的具体体现。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

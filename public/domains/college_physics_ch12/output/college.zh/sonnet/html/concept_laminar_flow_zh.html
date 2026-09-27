@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laminar Flow | College Physics Ch12</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="laminar-flow-层流">Laminar Flow（层流）</h2>
+<p><strong>定义</strong></p>
+<p>层流是指流体以平行分层的方式运动，各层之间不发生宏观混合，流线保持清晰、互不交叉的流动状态。与之相对的是湍流（turbulence），其特征是流线混乱、存在涡旋与随机扰动。判断流动属于层流还是湍流的核心判据是<strong>雷诺数</strong>（Reynolds number）：</p>
+$$
+Re = \frac{\rho v L}{\mu} = \frac{vL}{\nu}
+$$
+<p>其中 $\rho$ 为流体密度，$v$ 为特征速度，$L$ 为特征长度（如管道直径），$\mu$ 为动力粘度，$\nu = \mu/\rho$ 为运动粘度。雷诺数本质上是惯性力与粘性力之比。当 $Re$ 较小时，粘性力占主导，扰动被迅速耗散，流动保持层流；当 $Re$ 超过临界值（管流中约为 $Re_c \approx 2300$）时，扰动会自我放大，流动转捩为湍流。</p>
+<p><strong>推导：泊肃叶流动（Hagen–Poiseuille flow）</strong></p>
+<p>在圆管中稳态、不可压缩的层流可由 Navier-Stokes 方程简化得到。沿轴向的力平衡给出速度剖面为抛物线形：</p>
+$$
+v(r) = \frac{\Delta P}{4\mu L}\left(R^2 - r^2\right)
+$$
+<p>其中 $R$ 为管半径，$r$ 为径向坐标，$\Delta P$ 为管道两端压差，$L$ 为管长。对该速度剖面在截面上积分，可得体积流量（泊肃叶定律）：</p>
+$$
+Q = \frac{\pi R^4 \Delta P}{8\mu L}
+$$
+<p>该结果显示流量与半径的四次方成正比——这正是医学上血管轻微收缩会显著减少血流量的物理根源。</p>
+<p><strong>问题求解应用</strong></p>
+<p>设某输液导管半径 $R = 0.5\text{ mm}$，长度 $L = 0.3\text{ m}$，血液粘度 $\mu = 3\times10^{-3}\text{ Pa·s}$，两端压差 $\Delta P = 2000\text{ Pa}$。首先验证流动是否为层流：估算平均流速 $\bar{v} = Q/(\pi R^2)$，代入雷诺数公式，若 $Re \ll 2300$，则层流假设（从而泊肃叶定律）成立。代入数值计算得 $Q \approx \dfrac{\pi (0.5\times10^{-3})^4 (2000)}{8(3\times10^{-3})(0.3)} \approx 1.64\times10^{-8}\text{ m}^3/\text{s}$。这类计算是理解微流控芯片设计、血流动力学建模乃至石油管道输运效率的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch12: Fluid Dynamics and Its Biological and Medical Applications (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spectroscopic Dispersion | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="spectroscopic-dispersion">Spectroscopic Dispersion</h2>
+<p><strong>定义</strong></p>
+<p>光谱色散（Spectroscopic Dispersion）是利用衍射光栅或干涉装置，将包含多种波长的光在空间上按波长分开，从而实现光谱分析与波长测量的技术。其物理基础是光的衍射与干涉：当平行光垂直照射到刻有等间距狭缝的衍射光栅上时，每条狭缝都成为次级波源，各狭缝发出的光波相互干涉，只有在特定方向上满足相长干涉条件的光才会形成亮纹。该条件由光栅方程给出：</p>
+$$
+d\sin\theta_m = m\lambda, \quad m = 0, \pm1, \pm2, \dots
+$$
+<p>其中 $d$ 为光栅常数（相邻狭缝间距），$\theta_m$ 为第 $m$ 级衍射角，$\lambda$ 为波长，$m$ 为衍射级次。由于 $\theta_m$ 依赖于 $\lambda$，不同波长的光会在不同角度形成亮纹，从而实现空间上的色散分离。这正是该概念必须使用公式描述的原因——色散本质上是一个由干涉相位条件决定的角度—波长映射关系，脱离方程无法准确表达"分开多远"这一核心问题。</p>
+<p><strong>样题解析</strong></p>
+<p>设光栅刻线密度为每毫米 600 条，即 $d = 1/600\ \text{mm} = 1.667\times10^{-6}\ \text{m}$。求波长 $\lambda = 589\ \text{nm}$（钠黄光）在一级衍射（$m=1$）中的衍射角。</p>
+<p>代入光栅方程：</p>
+$$
+\sin\theta_1 = \frac{m\lambda}{d} = \frac{(1)(589\times10^{-9})}{1.667\times10^{-6}} \approx 0.3534
+$$
+<p>解得 $\theta_1 \approx 20.7^\circ$。若光源中同时含有 $\lambda = 589\ \text{nm}$ 与 $\lambda = 589.6\ \text{nm}$（钠双线），二者衍射角的微小差异即可被光谱仪分辨，这正是光栅用于精细光谱分析的原理。</p>
+<p><strong>应用与问题求解</strong></p>
+<p>光栅的分辨本领 $R = \lambda/\Delta\lambda = mN$（$N$ 为被照亮的刻线总数）表明：提高分辨率可通过增大级次 $m$ 或增加参与干涉的刻线数 $N$ 实现。例如，若要分辨钠双线（$\Delta\lambda = 0.6\ \text{nm}$，$\lambda \approx 589\ \text{nm}$），所需 $R \approx 982$；在一级衍射下，至少需要约 982 条刻线被照亮。这类计算是光谱仪设计中的核心问题：如何在光栅尺寸、级次与入射光斑大小之间权衡，以达到目标分辨率，同时避免不同级次谱线的重叠（自由光谱范围限制）。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

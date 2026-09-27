@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuses And Circuit Breakers | College Physics Ch20</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="fuses-and-circuit-breakers">Fuses And Circuit Breakers</h2>
+<p><strong>定义</strong></p>
+<p>保险丝和断路器都是过流保护装置：当电路中持续电流超过安全限值时，它们会自动切断电路，防止导线因电阻发热而引发火灾或损坏设备。二者的物理原理不同。保险丝内部是一段低熔点金属丝，依据焦耳定律，导体单位时间产生的热量为</p>
+$$
+P = I^2 R
+$$
+<p>其中 $I$ 为电流，$R$ 为保险丝自身电阻。当 $I$ 超过额定值，$P$ 急剧上升，热量来不及散失，金属丝熔断，电路被物理性地断开。断路器则依靠电磁或双金属片机制：过大电流产生的磁场吸动衔铁，或双金属片受热弯曲，触发机械跳闸,断开触点，且可以复位重新使用，不像保险丝需要更换。</p>
+<p><strong>电路分析：额定值的选择</strong></p>
+<p>设某支路正常工作电流为 $I_{normal}$，导线的安全载流量（由导线规格决定）为 $I_{max}$。保护装置的额定电流 $I_{rated}$ 必须满足</p>
+$$
+I_{normal} < I_{rated} \le I_{max}
+$$
+<p>若 $I_{rated}$ 定得过低，正常启动电流（如电机启动瞬间电流可达额定值的 5–7 倍）就会造成误跳闸；若定得过高，则导线可能在保护装置动作前就已过热。这是一个典型的串联电路问题：保护装置与被保护导线共享同一电流 $I$，因此其额定值必须以导线的热限制为上限，而不是以负载的理想值为标准。</p>
+<p><strong>应用实例</strong></p>
+<p>某家庭电路的导线安全载流量为 20 A，接入了额定电流 15 A 的空气断路器。若同时使用一台 1800 W 的电暖器和一台 1000 W 的微波炉，电路电压为 120 V，总电流为</p>
+$$
+I = \frac{1800\text{ W} + 1000\text{ W}}{120\text{ V}} \approx 23.3\text{ A}
+$$
+<p>该电流超过断路器额定值 15 A，断路器会跳闸，切断电路——这正是设计的目的：在导线因 23.3 A 电流过热（进而可能引燃周围绝缘材料）之前先行动作。工程实践中，保护装置的选型本质上是在“误跳闸风险”与“热损坏风险”之间求解一个安全区间，这也是电气设计规范（如额定电流须为线路安全载流量的 80% 左右）背后的物理依据。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch20: Electric Current, Resistance, and Ohm's Law (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

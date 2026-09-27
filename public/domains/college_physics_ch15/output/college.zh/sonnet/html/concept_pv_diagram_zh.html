@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pv Diagram | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="pv-diagram">Pv Diagram</h2>
+<p><strong>定义</strong></p>
+<p>P-V 图（压强-体积图）以体积 $V$ 为横轴、压强 $P$ 为纵轴，描绘热力学系统在某一过程中状态的变化轨迹。图上的每一点代表系统的一个平衡态 $(V, P)$，曲线本身则记录了系统从初态到末态所经历的完整路径。P-V 图的核心价值在于：曲线下方的面积在数值上等于该过程中气体所做的功（或环境对气体所做的功）。这是因为在准静态过程中，微小体积变化 $dV$ 对应的微功为</p>
+$$dW = P\,dV$$
+<p>对整个过程积分，即得总功：</p>
+$$W = \int_{V_1}^{V_2} P\,dV$$
+<p>若过程使气体膨胀（$V_2 > V_1$），气体对外做正功；若被压缩（$V_2 < V_1$），则外界对气体做正功，此时 $W<0$（按气体做功为正的约定）。</p>
+<p><strong>范例</strong></p>
+<p>考虑一定量理想气体经历等压过程，压强恒为 $P_0 = 2.0\times10^5\ \text{Pa}$，体积从 $V_1 = 1.0\times10^{-3}\ \text{m}^3$ 膨胀到 $V_2 = 3.0\times10^{-3}\ \text{m}^3$。在 P-V 图上，该过程是一条水平线段，其下方是一个矩形，面积即为功：</p>
+$$W = P_0(V_2 - V_1) = (2.0\times10^5)(2.0\times10^{-3}) = 400\ \text{J}$$
+<p>若同样的初末体积改为等温过程（$PV = nRT = \text{常数}$），曲线变为双曲线，此时</p>
+$$W = nRT\ln\frac{V_2}{V_1} = P_1 V_1 \ln\frac{V_2}{V_1}$$
+<p>两种路径连接相同的两个端点，但曲线下方面积不同，说明<strong>功不是状态函数，而是与路径相关的量</strong>——这正是 P-V 图教学的关键洞见。</p>
+<p><strong>解题应用</strong></p>
+<p>解决 P-V 图相关问题时，遵循以下步骤：(1) 判断过程类型（等压、等温、等容、绝热），确定 $P$ 与 $V$ 的函数关系；(2) 写出 $dW = P\,dV$ 并代入该关系式积分；(3) 若图形是分段折线（如先等压后等容的循环过程），分段计算面积后求和，注意各段功的正负号；(4) 对于循环过程，净功等于闭合曲线所围的面积，顺时针循环对外做正功，逆时针则相反。掌握“面积即功”这一几何直觉，是分析热机效率、卡诺循环等后续内容的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power Station Efficiency | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="power-station-efficiency">Power Station Efficiency</h2>
+<p><strong>定义</strong></p>
+<p>发电站本质上是一台大型热机：燃料燃烧(煤电)或核裂变(核电)释放能量,将水加热为高温高压蒸汽,推动涡轮机转动,再带动发电机产生电能。根据热力学第二定律,任何热机都无法将热量 100% 转化为有用功——这一限制由卡诺效率给出理论上限:</p>
+$$\eta_{\text{Carnot}} = 1 - \frac{T_C}{T_H}$$
+<p>其中 $T_H$ 为高温热源(蒸汽)的绝对温度,$T_C$ 为低温热源(冷凝器排热环境,如冷却水或大气)的绝对温度,单位均为开尔文(K)。实际电站的效率 $\eta_{\text{actual}} = W_{\text{out}}/Q_{\text{in}}$ 总是低于 $\eta_{\text{Carnot}}$,因为存在摩擦、热传导损失、涡轮机不完全绝热等不可逆因素。</p>
+<p><strong>范例计算</strong></p>
+<p>某燃煤电站锅炉将水加热至蒸汽温度 $T_H = 838\text{ K}$(约565°C),冷凝器排热到 $T_C = 313\text{ K}$(约40°C)的冷却水中。</p>
+$$\eta_{\text{Carnot}} = 1 - \frac{313}{838} \approx 0.626 = 62.6\%$$
+<p>这是理论上限。实际燃煤电站受限于材料耐温、机械损耗等因素,实测效率通常只有 $35\%$–$45\%$。若该电站每小时消耗煤炭释放热能 $Q_{\text{in}} = 1000\text{ MJ}$,实际效率取 $40\%$,则输出电功为:</p>
+$$W_{\text{out}} = \eta_{\text{actual}} \times Q_{\text{in}} = 0.40 \times 1000\text{ MJ} = 400\text{ MJ}$$
+<p>剩余 $600\text{ MJ}$ 以废热形式排入环境,这正是冷却塔和河流水温上升的来源。</p>
+<p><strong>问题解决应用</strong></p>
+<p>核电站的蒸汽温度通常低于燃煤电站(反应堆材料耐温限制),典型 $T_H \approx 600\text{ K}$,$T_C \approx 300\text{ K}$,故 $\eta_{\text{Carnot}} \approx 50\%$,实际效率约 $33\%$,低于先进燃煤电站。这解释了为何核电站废热排放(热污染)问题更突出,却几乎不产生 $\text{CO}_2$。</p>
+<p>工程决策中,提高 $T_H$ 或降低 $T_C$ 均可提升效率上限:超临界锅炉技术提高 $T_H$;沿海电站利用低温海水降低 $T_C$。计算不同设计方案下的 $\eta_{\text{Carnot}}$,并比较实际效率与理论上限的差距,是评估电站技术改造经济性与环境影响的核心方法。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

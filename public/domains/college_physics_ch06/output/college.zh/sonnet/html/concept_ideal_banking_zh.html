@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ideal Banking | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="ideal-banking">Ideal Banking</h2>
+<p><strong>定义</strong></p>
+<p>当车辆在弯道上行驶时，若路面是水平的，唯一能提供向心力的就是轮胎与路面之间的摩擦力。一旦车速过高或路面湿滑导致摩擦力不足，车辆便会发生侧滑。为了在<strong>不依赖摩擦力</strong>的情况下也能安全转弯，工程师会将弯道路面向内侧倾斜一个角度 $\theta$，这就是<strong>理想斜面弯道（ideal banking）</strong>。</p>
+<p>此时，车辆所受的重力 $mg$ 与路面法向力 $N$ 的合力，恰好提供所需的向心力，指向弯道圆心。将 $N$ 分解为竖直分量 $N\cos\theta$ 与水平分量 $N\sin\theta$：</p>
+$$
+N\cos\theta = mg \qquad (\text{竖直方向平衡})
+$$
+$$
+N\sin\theta = \frac{mv^2}{r} \qquad (\text{水平方向提供向心力})
+$$
+<p>两式相除，消去 $N$ 与 $m$，得到理想斜面角公式：</p>
+$$
+\tan\theta = \frac{v^2}{rg}
+$$
+<p>这个结果的关键特征是：$\theta$ 与车辆质量 $m$ <strong>无关</strong>。也就是说，无论是小轿车还是重型卡车，只要速度 $v$ 和弯道半径 $r$ 相同，所需的倾斜角度都一样。这正是道路和赛车赛道设计中广泛采用统一倾角的物理依据。</p>
+<p><strong>例题</strong></p>
+<p>某高速公路弯道半径 $r = 200\text{ m}$，设计车速为 $v = 25\text{ m/s}$（约 90 km/h）。求理想斜面角 $\theta$（取 $g = 9.8\text{ m/s}^2$）。</p>
+$$
+\tan\theta = \frac{v^2}{rg} = \frac{25^2}{200 \times 9.8} = \frac{625}{1960} \approx 0.319
+$$
+$$
+\theta \approx \arctan(0.319) \approx 17.7^\circ
+$$
+<p><strong>解题应用</strong></p>
+<p>理想斜面角公式常用于两类实际问题：</p>
+<li><strong>已知设计车速反推倾角</strong>（如上例），用于道路或铁路弯道的工程设计；</li>
+<li><strong>已知倾角反推"安全车速"</strong>，即 $v = \sqrt{rg\tan\theta}$，用于判断某一弯道在无摩擦（如结冰路面）条件下的最大安全通过速度——若实际车速超过此值，车辆将向外侧滑出；若低于此值，则会向内侧下滑。</li>
+<p>需要强调的是，公式成立的前提是<strong>完全忽略摩擦力</strong>。实际弯道设计中往往会额外考虑摩擦系数 $\mu$，从而得到一个允许车速的<strong>安全区间</strong>，而非单一数值。理想斜面角公式提供的正是这一区间的中心参考点。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

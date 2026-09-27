@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceleration | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="acceleration">Acceleration</h2>
+<p><strong>定义</strong></p>
+<p>加速度描述的是速度随时间变化的快慢，记作 $\vec{a}$。由于速度本身是矢量（既有大小又有方向），加速度不仅可以由"变快变慢"引起，也可以仅仅由方向改变引起——即使物体的速率保持不变，只要运动方向在变化，物体就在加速。数学上，加速度定义为速度对时间的导数：</p>
+$$
+\vec{a}(t) = \frac{d\vec{v}}{dt} = \frac{d^2\vec{x}}{dt^2}
+$$
+<p>在一维匀加速运动（$a$ 为常数）的特殊情形下，可以积分得到熟悉的运动学方程：</p>
+$$
+v(t) = v_0 + at, \qquad x(t) = x_0 + v_0 t + \tfrac{1}{2}at^2, \qquad v^2 = v_0^2 + 2a(x-x_0)
+$$
+<p><strong>范例</strong></p>
+<p>一辆赛车从静止出发，以恒定加速度 $a = 4\ \text{m/s}^2$ 行驶。求 5 秒后的速度以及这 5 秒内行驶的距离。</p>
+<p>代入公式：</p>
+$$
+v = 0 + (4)(5) = 20\ \text{m/s}
+$$
+$$
+x = 0 + 0\cdot5 + \tfrac{1}{2}(4)(5^2) = 50\ \text{m}
+$$
+<p>再看方向改变引起加速度的例子：一个物体以恒定速率 $v$ 做圆周运动，速度方向不断改变，因此存在指向圆心的<strong>向心加速度</strong>：</p>
+$$
+a_c = \frac{v^2}{r}
+$$
+<p>这说明"加速度"并不等同于"变快"，理解这一点对后续学习圆周运动、力与牛顿第二定律至关重要。</p>
+<p><strong>问题求解应用</strong></p>
+<p>处理加速度问题时，第一步永远是明确坐标系与正方向，因为 $a$、$v$、$x$ 都是矢量，符号错误是最常见的失误来源。第二步判断问题类型：若加速度恒定，直接使用上述三个运动学方程中信息量最匹配的一个；若加速度随时间变化（如 $a(t) = kt$），则必须回到微积分定义，先对 $a(t)$ 积分求 $v(t)$，再积分求 $x(t)$，并利用初始条件确定积分常数。</p>
+<p>例如，已知 $a(t) = 6t\ \text{m/s}^2$，初速度 $v_0 = 2\ \text{m/s}$，求 $t=3\text{s}$时的速度：</p>
+$$
+v(t) = v_0 + \int_0^t 6t'\,dt' = 2 + 3t^2 \quad\Rightarrow\quad v(3) = 2 + 27 = 29\ \text{m/s}
+$$
+<p>掌握"恒定加速度用代数公式、变化加速度用微积分"这一分流判断，是解决加速度问题的核心技能。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

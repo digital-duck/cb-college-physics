@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetic Mirror | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="magnetic-mirror-磁镜">Magnetic Mirror（磁镜）</h2>
+<p><strong>定义</strong></p>
+<p>当带电粒子沿磁场线运动，进入磁场强度逐渐增大的区域时，其平行于磁场方向的速度分量会不断转化为垂直分量，最终使粒子被"反射"回磁场较弱的区域——这一现象称为磁镜效应。其物理基础是<strong>磁矩绝热不变量</strong>：</p>
+$$
+\mu = \frac{m v_\perp^2}{2B} = \text{常数（绝热近似下）}
+$$
+<p>当粒子沿磁场线漂移进入 $B$ 增大的区域，且磁场变化在粒子回旋周期尺度上足够缓慢时，$\mu$ 保持不变。由能量守恒 $\frac{1}{2}m(v_\parallel^2 + v_\perp^2) = E = \text{常数}$，结合 $\mu$ 不变，可得</p>
+$$
+\frac{v_\perp^2}{B} = \text{常数} \;\Rightarrow\; v_\perp^2 = v_\perp^2(0)\,\frac{B}{B_0}
+$$
+<p>由此可见随 $B$ 增大，$v_\perp$ 增大而 $v_\parallel$ 减小；当 $v_\parallel = 0$ 时，粒子到达"镜点"并被反射回去。</p>
+<p><strong>镜点条件与损失锥</strong></p>
+<p>设粒子在弱场区（$B_0$）的投掷角为 $\theta_0$（速度与磁场方向的夹角），利用不变量关系可推出反射条件：</p>
+$$
+\sin^2\theta_0 = \frac{B_0}{B_m}
+$$
+<p>其中 $B_m$ 为磁镜峰值场强。若粒子的 $\theta_0$ 小于此临界值对应的角度（即初始速度过于"平行"于磁场线），则它在到达 $B_m$ 之前 $v_\parallel$ 不会降为零，粒子会直接穿过磁镜区域逃逸。这一角度范围称为<strong>损失锥（loss cone）</strong>：</p>
+$$
+\sin^2\theta_c = \frac{B_0}{B_m} = \frac{1}{R_m}
+$$
+<p>$R_m = B_m/B_0$ 称为镜比。</p>
+<p><strong>问题求解应用</strong></p>
+<p>设计一个磁镜约束装置，若要求投掷角 $\theta_0 \geq 30^\circ$ 的粒子全部被约束，需要多大的镜比？由 $\sin^2 30^\circ = 1/4$，代入损失锥公式得 $R_m = 4$，即磁镜峰值场强至少是中心场强的 4 倍。这正是地球范艾伦辐射带、托卡马克装置端塞磁镜以及太阳附近日冕环中粒子被捕获的核心物理机制——磁场几何形状本身充当了"无实体墙壁"的反射器。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

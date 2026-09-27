@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Falling Objects Calculation | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="falling-objects-calculation">Falling Objects Calculation</h2>
+<p><strong>定义</strong></p>
+<p>自由落体是恒定加速度运动的特例：物体仅在重力作用下运动，忽略空气阻力，加速度大小恒定为 $g \approx 9.8 \text{ m/s}^2$，方向始终指向地心。若取竖直向上为正方向，则加速度 $a = -g$；若取竖直向下为正方向，则 $a = +g$。方向的选取纯粹是约定，但一旦选定，必须在整个问题中保持一致——初速度、位移、加速度的符号都要相应地统一。</p>
+<p>将匀加速运动的三个基本方程代入 $a = \pm g$，即可得到自由落体的核心工具：</p>
+$$v = v_0 + at, \qquad x = x_0 + v_0 t + \tfrac{1}{2}at^2, \qquad v^2 = v_0^2 + 2a(x - x_0)$$
+<p>其中 $x_0, v_0$ 为初始位置和初速度，$t$ 为时间。这三个方程分别联系了"速度与时间"、"位置与时间"、"速度与位置"（消去时间），根据题目给出的已知量选择合适的方程是解题的关键技巧。</p>
+<p><strong>范例</strong></p>
+<p>一物体从高度 $h_0 = 45\text{ m}$ 处由静止释放，求它落地所需时间及落地速度。</p>
+<p>取竖直向下为正，则 $a = g = 9.8 \text{ m/s}^2$，$v_0 = 0$，位移 $x = 45\text{ m}$。</p>
+<p>由 $x = v_0 t + \tfrac{1}{2}gt^2$：</p>
+$$45 = \tfrac{1}{2}(9.8)t^2 \implies t^2 = 9.18 \implies t \approx 3.03\text{ s}$$
+<p>落地速度由 $v = v_0 + gt = 9.8 \times 3.03 \approx 29.7 \text{ m/s}$，或用 $v^2 = 2gx$ 验证：$v = \sqrt{2 \times 9.8 \times 45} \approx 29.7\text{ m/s}$，两法结果一致。</p>
+<p><strong>解题应用</strong></p>
+<p>处理更复杂的情形——如物体先以初速度竖直上抛，再落回原点——时，符号约定的作用尤为突出。设初速度 $v_0 = 20\text{ m/s}$（向上为正，故 $a=-g$），求物体回到出发点所需总时间。由 $x - x_0 = v_0 t - \tfrac{1}{2}gt^2 = 0$，解得 $t(v_0 - \tfrac{1}{2}gt) = 0$，非零解为 $t = 2v_0/g \approx 4.08\text{ s}$。这体现了一个通用策略：先明确坐标系与符号，再判断哪个方程直接连接已知量与未知量，避免不必要的中间计算。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

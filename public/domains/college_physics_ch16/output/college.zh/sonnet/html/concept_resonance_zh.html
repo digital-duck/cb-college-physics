@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resonance | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="共振">共振</h2>
+<p><strong>定义</strong></p>
+<p>当一个振动系统受到周期性外力驱动，且驱动频率等于（或接近）系统的固有频率时，系统的振幅会急剧增大，这种现象称为共振（resonance）。对于阻尼较小的系统，理论上驱动频率精确等于固有频率时振幅趋于最大值，这一物理事实由受迫振动的运动方程直接给出。</p>
+<p>考虑一个带阻尼的受迫振子，其运动方程为：</p>
+$$
+m\ddot{x} + c\dot{x} + kx = F_0\cos(\omega t)
+$$
+<p>其中 $m$ 为质量，$c$ 为阻尼系数，$k$ 为弹簧常数，$F_0$ 为驱动力振幅，$\omega$ 为驱动角频率。系统固有角频率为 $\omega_0 = \sqrt{k/m}$。稳态解的振幅为：</p>
+$$
+A(\omega) = \frac{F_0}{\sqrt{(k - m\omega^2)^2 + (c\omega)^2}}
+$$
+<p>对 $A(\omega)$ 关于 $\omega$ 求导并令其为零，可得振幅最大时对应的频率（共振频率）：</p>
+$$
+\omega_{\text{res}} = \sqrt{\omega_0^2 - \frac{c^2}{2m^2}}
+$$
+<p>可见阻尼越小，$\omega_{\text{res}}$ 越接近 $\omega_0$；当 $c \to 0$ 时，$\omega_{\text{res}} \to \omega_0$，且 $A \to \infty$，这正是无阻尼系统在固有频率驱动下振幅无限增长的极限情形。</p>
+<p><strong>实例分析</strong></p>
+<p>塔科马海峡吊桥（Tacoma Narrows Bridge）1940 年坍塌事件常被引用为共振案例：风力形成的涡旋脱落频率接近桥梁某阶固有频率，导致振幅持续增大直至结构破坏（尽管后续研究指出实际机制更复杂，涉及气动弹性颤振，而非单纯的线性共振，但驱动频率匹配固有频率致振幅放大的核心思想是一致的）。另一个更纯粹的例子是儿童荡秋千：只有当推动的节奏与秋千的固有摆动周期同步时，才能用很小的力使摆幅持续增大。</p>
+<p><strong>解题应用</strong></p>
+<p>工程上常利用共振频率公式反向设计——已知系统需要避开某驱动频率范围（如发动机转速），可通过调整 $k$、$m$ 来改变 $\omega_0 = \sqrt{k/m}$，使其远离危险频段。计算题中，给定 $m$、$k$、$c$ 和驱动力 $F_0$，代入 $A(\omega)$ 公式即可求出任意驱动频率下的稳态振幅，并可比较无阻尼共振振幅（理论无穷大）与实际有阻尼系统的有限峰值，理解阻尼在抑制共振破坏中的关键作用。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

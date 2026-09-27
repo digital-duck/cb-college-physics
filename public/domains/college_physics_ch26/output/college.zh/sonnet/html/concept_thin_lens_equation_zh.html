@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thin Lens Equation | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="thin-lens-equation">Thin Lens Equation</h2>
+<p><strong>定义</strong></p>
+<p>薄透镜方程描述了光线通过一个理想薄透镜时，物体、像与透镜焦距三者之间的定量关系：</p>
+$$\frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{f}$$
+<p>其中 $d_o$ 是物距（物体到透镜光心的距离），$d_i$ 是像距（像到透镜光心的距离），$f$ 是透镜的焦距。三者均沿光轴测量，符号遵循笛卡尔符号约定：对于凸透镜（会聚透镜）$f>0$；对于凹透镜（发散透镜）$f<0$；实像的 $d_i>0$，虚像的 $d_i<0$。该方程本质上是几何光学中相似三角形推导的结果，是分析成像系统不可或缺的定量工具，理解它必须借助这一代数关系本身，而非仅靠定性描述。</p>
+<p>与之配套的还有横向放大率公式：</p>
+$$m = -\frac{d_i}{d_o}$$
+<p>其中负号表示像相对物体是倒立（$m<0$）还是正立（$m>0$），$|m|$ 表示放大或缩小的倍数。</p>
+<p><strong>例题</strong></p>
+<p>设有一个焦距 $f = 10\ \text{cm}$ 的凸透镜，物体放置在 $d_o = 15\ \text{cm}$ 处。求像距及放大率。</p>
+<p>代入方程：</p>
+$$\frac{1}{15} + \frac{1}{d_i} = \frac{1}{10}$$
+$$\frac{1}{d_i} = \frac{1}{10} - \frac{1}{15} = \frac{3-2}{30} = \frac{1}{30}$$
+$$d_i = 30\ \text{cm}$$
+<p>由于 $d_i>0$，这是一个实像，出现在透镜另一侧 30 cm 处。放大率：</p>
+$$m = -\frac{30}{15} = -2$$
+<p>即像是倒立的，且放大为原来的 2 倍。</p>
+<p><strong>问题解决应用</strong></p>
+<p>薄透镜方程的价值在于反解未知量，处理实际光学设计问题。例如，相机设计中已知焦距和期望的像距（传感器到镜头的距离），需反解物距以确定对焦范围；显微镜与望远镜的设计中，需要将多个透镜的方程级联求解，前一透镜的像作为后一透镜的物体。当 $d_o \to f^+$ 时，$d_i \to \infty$，这解释了为何物体越接近焦点，成像越远、放大率越大——这一极限行为正是投影仪与放大镜设计的物理基础。练习时应特别注意符号约定的一致性，这是解题出错的最常见来源。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

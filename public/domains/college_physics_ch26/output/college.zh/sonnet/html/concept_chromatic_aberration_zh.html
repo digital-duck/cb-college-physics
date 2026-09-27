@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chromatic Aberration | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="chromatic-aberration">Chromatic Aberration</h2>
+<p><strong>定义</strong></p>
+<p>色差(chromatic aberration)源于介质折射率 $n$ 对波长 $\lambda$ 的依赖关系,即色散(dispersion)。根据 Snell 定律 $n_1\sin\theta_1 = n_2\sin\theta_2$,同一入射角下不同波长的光在透镜表面会发生不同程度的偏折。由于短波长光(如蓝光)通常对应更大的折射率(正常色散),它比长波长光(如红光)弯折得更厉害,因而两者穿过同一透镜后会聚焦在光轴上不同的位置。这种"位置依波长而异"的现象分为两类:<strong>纵向色差</strong>(longitudinal chromatic aberration)指不同颜色的焦点沿光轴前后错开;<strong>横向色差</strong>(lateral chromatic aberration)指不同颜色的像在垂直于光轴的方向上产生位置偏移,常表现为图像边缘的彩色条纹。</p>
+<p><strong>量化:色散本领</strong></p>
+<p>透镜的成像能力由其焦距 $f$ 决定,而磨镜者公式给出</p>
+$$\frac{1}{f} = (n-1)\left(\frac{1}{R_1}-\frac{1}{R_2}\right)$$
+<p>因为 $n=n(\lambda)$,所以 $f=f(\lambda)$ 也随波长变化。工程上用<strong>阿贝数</strong>(Abbe number)量化材料的色散程度:</p>
+$$V_d = \frac{n_d - 1}{n_F - n_C}$$
+<p>其中 $n_d, n_F, n_C$ 分别是材料在黄、蓝、红三个标准谱线处的折射率。$V_d$ 越大,说明色散越小,色差问题越轻。设计者据此选材,而非仅凭经验试错。</p>
+<p><strong>问题求解:消色差透镜设计</strong></p>
+<p>单片透镜无法同时对两种波长成像于同一点,但可以用两片不同材料(高、低色散各一片)粘合组成<strong>消色差透镜组</strong>(achromatic doublet),使红光与蓝光焦距相等。设两片透镜焦距分别为 $f_1, f_2$,组合焦距满足 $\frac{1}{f}=\frac{1}{f_1}+\frac{1}{f_2}$,消色差条件要求</p>
+$$\frac{1}{f_1 V_1} + \frac{1}{f_2 V_2} = 0$$
+<p>由此可解出各片所需焦距,使正、负光焦度透镜的色差相互抵消。这正是望远镜、显微镜镜头设计中的标准步骤:先测各玻璃材料的阿贝数,再联立上述方程求解 $f_1, f_2$,最终选定曲率半径,完成消色差方案。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

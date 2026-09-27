@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concave Mirror Heater | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="concave-mirror-heater">Concave Mirror Heater</h2>
+<p><strong>定义</strong></p>
+<p>凹面镜（凹球面镜）是反射面向内凹陷的球面镜,对于平行于主轴入射的光线,凹面镜能将其反射并会聚到一点,这一点称为焦点。设球面镜的曲率半径为 $R$,则在近轴近似(光线与主轴夹角很小)下,焦距满足</p>
+$$f = \frac{R}{2}$$
+<p>这一关系可由反射定律结合几何作图导出:平行于主轴的入射光线经反射后,与主轴的交点到镜面顶点的距离恰为曲率半径的一半。正是这种"将分散的平行辐射汇聚到一点"的能力,使凹面镜成为太阳灶、太阳能集热器以及室内取暖器反射罩的核心元件——它们都利用凹面镜把来自远处光源(如太阳)或镜前电热丝发出的辐射,集中投射到目标位置,从而在焦点附近获得远高于原始辐射强度的能量密度。</p>
+<p><strong>范例分析</strong></p>
+<p>某太阳灶所用凹面镜的曲率半径 $R = 1.2\ \text{m}$,则其焦距为</p>
+$$f = \frac{R}{2} = \frac{1.2}{2} = 0.6\ \text{m}$$
+<p>这意味着,只要将待加热的锅具放置在镜前 $0.6\ \text{m}$ 处,来自太阳的平行光线经镜面反射后就会全部会聚于此,实现高效加热。反之,若是室内电暖器,则做法相反:发热丝置于焦点处($0.6\ \text{m}$ 位置),使其发出的辐射经镜面反射后成为平行光束,均匀投向房间,从而实现远距离定向加热。</p>
+<p><strong>问题求解应用</strong></p>
+<p>设计此类装置时,常需要根据镜面口径和聚焦效果反推曲率半径,或利用镜面成像公式</p>
+$$\frac{1}{v} + \frac{1}{u} = \frac{1}{f}$$
+<p>分析光源不在无穷远处(如电热丝置于近处而非焦点)时反射光的会聚或发散情况。例如,若电热丝误置于距镜面 $0.5\ \text{m}$ 处(而非焦点 $0.6\ \text{m}$),取 $u = -0.5\ \text{m}$(按笛卡尔符号约定,物距取负),代入公式可解得像距 $v$:</p>
+$$\frac{1}{v} = \frac{1}{f} - \frac{1}{u} = \frac{1}{-0.6} - \frac{1}{-0.5} = -1.667 + 2 = 0.333$$
+<p>得 $v = 3\ \text{m}$,即反射后的辐射并非平行光,而是会聚于镜前 $3\ \text{m}$ 处——说明加热效率会因热源偏离焦点而显著下降,并出现局部过热区。这类计算是设计太阳灶尺寸、评估热效率损失的基本工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

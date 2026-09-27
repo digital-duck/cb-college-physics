@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Critical Damping | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="critical-damping">Critical Damping</h2>
+<p><strong>定义</strong></p>
+<p>考虑一个二阶线性常微分方程描述的阻尼振动系统，其运动方程为</p>
+$$m\ddot{x} + c\dot{x} + kx = 0$$
+<p>其中 $m$ 为质量，$c$ 为阻尼系数，$k$ 为弹性系数。将其改写为标准形式</p>
+$$\ddot{x} + 2\zeta\omega_0\dot{x} + \omega_0^2 x = 0$$
+<p>其中 $\omega_0 = \sqrt{k/m}$ 为无阻尼自然频率，$\zeta = \dfrac{c}{2\sqrt{mk}}$ 为<strong>阻尼比</strong>。特征方程 $r^2 + 2\zeta\omega_0 r + \omega_0^2 = 0$ 的根为</p>
+$$r = -\zeta\omega_0 \pm \omega_0\sqrt{\zeta^2 - 1}$$
+<p>当 $\zeta = 1$ 时，判别式为零，特征方程出现<strong>重根</strong> $r = -\omega_0$（二重）。此时系统处于<strong>临界阻尼</strong>：这是系统不发生振荡（不越过平衡位置）的前提下，回到平衡位置速度最快的阻尼状态。若 $\zeta < 1$（欠阻尼），系统会振荡衰减；若 $\zeta > 1$（过阻尼），系统单调回归但速度更慢。</p>
+<p><strong>推导：重根解的形式</strong></p>
+<p>由于特征根重复，通解不能简单写成两个指数项之和（否则退化为一个自由常数），而必须包含一个额外的 $t$ 因子：</p>
+$$x(t) = (A + Bt)\,e^{-\omega_0 t}$$
+<p>其中 $A, B$ 由初始条件 $x(0)$ 和 $\dot{x}(0)$ 确定。可以验证，该解在 $t\to\infty$ 时以最快的指数速率 $e^{-\omega_0 t}$（乘以线性项）趋于零，且不含正弦、余弦项，因此轨迹不振荡。</p>
+<p><strong>应用：设计临界阻尼系统</strong></p>
+<p>设 $m = 1\,\text{kg}$，$k = 100\,\text{N/m}$，要求系统临界阻尼，求所需的阻尼系数 $c$。</p>
+<p>第一步：$\omega_0 = \sqrt{k/m} = 10\,\text{rad/s}$。</p>
+<p>第二步：由 $\zeta = 1$ 及 $\zeta = c/(2\sqrt{mk})$，得</p>
+$$c = 2\sqrt{mk} = 2\sqrt{1\times100} = 20\,\text{N·s/m}$$
+<p>这一设计原则广泛应用于减震器、门阻器和电流表指针的悬挂系统：工程师通常选择略低于精确临界值（$\zeta$ 稍小于 1）的阻尼，以牺牲极小的过冲为代价，换取更快的实际响应时间，因为纯临界阻尼在实际制造误差下极易滑入欠阻尼区间而产生振荡。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

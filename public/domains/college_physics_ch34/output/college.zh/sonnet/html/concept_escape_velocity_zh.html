@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Escape Velocity | College Physics Ch34</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="escape-velocity-逃逸速度">Escape Velocity（逃逸速度）</h2>
+<p><strong>定义</strong></p>
+<p>逃逸速度是指物体在不依赖后续推力的情况下，克服某天体引力束缚、恰好能到达无穷远处（此时速度趋于零）所需的最小初始速度。它由能量守恒决定：物体的初始动能必须至少等于将其从天体表面移动到无穷远处所需克服的引力势能。</p>
+<p>设天体质量为 $M$，半径为 $R$，物体质量为 $m$，万有引力常数为 $G$。物体在表面的引力势能为 $U = -\dfrac{GMm}{R}$（取无穷远处势能为零）。若物体以速度 $v$ 逃离，其总机械能须满足</p>
+$$
+\frac{1}{2}mv^2 - \frac{GMm}{R} \ge 0
+$$
+<p>取等号即得到最小的逃逸速度：</p>
+$$
+v_{esc} = \sqrt{\frac{2GM}{R}}
+$$
+<p>注意 $v_{esc}$ 与逃离方向无关，也与物体自身质量 $m$ 无关——这是因为等式两边的 $m$ 相互抵消，体现了引力问题中"惯性质量与引力质量等价"的深层结果。</p>
+<p><strong>例题</strong></p>
+<p>地球质量 $M = 5.97\times10^{24}\,\text{kg}$，半径 $R = 6.37\times10^6\,\text{m}$，$G = 6.674\times10^{-11}\,\text{N·m}^2/\text{kg}^2$。代入公式：</p>
+$$
+v_{esc} = \sqrt{\frac{2 \times 6.674\times10^{-11} \times 5.97\times10^{24}}{6.37\times10^6}} \approx 11.2\ \text{km/s}
+$$
+<p>这正是火箭必须达到的著名"第二宇宙速度"。</p>
+<p><strong>问题求解应用</strong></p>
+<p>逃逸速度公式常用于比较不同天体的引力束缚强度，或反推天体参数。例如，已知月球表面逃逸速度约为 $2.38\,\text{km/s}$，半径约为 $1.74\times10^6\,\text{m}$，可反解月球质量：</p>
+$$
+M_{\text{月}} = \frac{v_{esc}^2 R}{2G} \approx 7.3\times10^{22}\,\text{kg}
+$$
+<p>此外，将逃逸速度公式与第一宇宙速度（近地圆轨道速度 $v_1=\sqrt{GM/R}$）比较，可得 $v_{esc}=\sqrt{2}\,v_1$，这一比例关系在轨道力学中反复出现，是判断探测器能否脱离引力场、进入行星际转移轨道的关键判据。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch34: Frontiers of Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

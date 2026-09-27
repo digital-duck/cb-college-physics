@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Potential Energy | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="potential-energy">Potential Energy</h2>
+<p><strong>定义</strong></p>
+<p>势能（potential energy）是系统因位置、形状或相对构型而储存的能量，这部分能量可以完全转化为功。势能只对<strong>保守力</strong>（conservative force）有定义——即做功与路径无关、只取决于始末位置的力。对于保守力 $\vec{F}$，势能 $U$ 定义为将系统从参考位置移动到位置 $\vec{r}$ 过程中，外力克服该力所做的功：</p>
+$$U(\vec{r}) = -\int_{\vec{r}_0}^{\vec{r}} \vec{F}\cdot d\vec{l}$$
+<p>反过来，力可由势能的负梯度给出：$\vec{F} = -\nabla U$。这一关系并非任意规定，而是保守力的判定标准：力场 $\vec{F}$ 是保守的，当且仅当 $\nabla \times \vec{F} = 0$，此时上述积分才与路径无关，$U$ 才是良定义的标量函数。</p>
+<p><strong>推导示例：重力势能</strong></p>
+<p>取地面附近均匀重力场 $\vec{F} = -mg\hat{y}$，参考点取 $y_0 = 0$。则</p>
+$$U(y) = -\int_0^y (-mg)\,dy' = mgy$$
+<p>这正是熟悉的 $U = mgh$。同理，弹性力 $F = -kx$ 给出弹簧势能 $U(x) = \tfrac{1}{2}kx^2$；两者都是把"对保守力做功"这一统一定义应用到具体力场上得到的结果，而不是各自独立的公式。</p>
+<p><strong>问题求解应用</strong></p>
+<p>势能的核心价值在于配合机械能守恒定律 $E = K + U = \text{常数}$ 简化动力学问题，避免直接对牛顿第二定律积分。</p>
+<p><em>例：</em> 一物块（质量 $m$）从高度 $h$ 的光滑斜面顶端由静止下滑，求到达底端时的速度。</p>
+<p>不必求解加速度沿斜面的运动方程，只需令</p>
+$$mgh + 0 = 0 + \tfrac{1}{2}mv^2 \quad\Rightarrow\quad v = \sqrt{2gh}$$
+<p>结果与斜面角度、路径形状无关——这正是势能"只依赖位置、不依赖路径"这一性质的直接体现。在含多种保守力（重力、弹性力等）的系统中，只需将各势能相加即可统一处理，这也是势能概念在解题中最实用之处。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

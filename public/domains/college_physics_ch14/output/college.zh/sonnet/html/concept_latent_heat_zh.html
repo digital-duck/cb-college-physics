@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latent Heat | College Physics Ch14</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="潜热">潜热</h2>
+<p>物质发生相变(如熔化、凝固、汽化、凝结)时,系统与外界交换的能量并不总是表现为温度变化。当冰在 $0°C$ 融化成水时,持续吸收热量,但温度计读数始终停留在 $0°C$,直到冰完全融化。这部分"隐藏"的能量称为<strong>潜热</strong>(latent heat),记作每单位质量吸收或释放的能量:</p>
+$$Q = mL$$
+<p>其中 $Q$ 为热量(单位:J),$m$ 为物质质量(kg),$L$ 为潜热系数(J/kg),其数值取决于物质种类和相变类型。常见的两类是熔化潜热 $L_f$(固↔液)与汽化潜热 $L_v$(液↔气)。这与显热(sensible heat)公式 $Q = mc\Delta T$ 形成对照——显热对应温度变化,潜热对应相变过程中分子结构重排所需或释放的能量,不体现在温度计上。</p>
+<p><strong>物理机制</strong>:相变的本质是分子间作用力的克服或重建。熔化时,吸收的能量用于打破晶格中分子的有序排列,而非增加分子的平均动能(温度由平均动能决定),因此温度不变。汽化同理,但需要克服更强的分子间吸引力,故 $L_v$ 通常远大于 $L_f$(以水为例,$L_f \approx 334\,\text{kJ/kg}$,$L_v \approx 2260\,\text{kJ/kg}$)。</p>
+<p><strong>例题</strong>:将 $500\,\text{g}$ 的 $0°C$ 冰完全转化为 $100°C$ 的水蒸气,需要多少热量?(已知 $c_{水} = 4186\,\text{J/(kg·°C)}$)</p>
+<p>此过程分三阶段计算:</p>
+<li>熔化($0°C$ 冰 → $0°C$ 水):$Q_1 = mL_f = 0.5 \times 334000 = 167{,}000\,\text{J}$</li>
+<li>加热水($0°C$ → $100°C$):$Q_2 = mc\Delta T = 0.5 \times 4186 \times 100 = 209{,}300\,\text{J}$</li>
+<li>汽化($100°C$ 水 → $100°C$ 蒸气):$Q_3 = mL_v = 0.5 \times 2{,}260{,}000 = 1{,}130{,}000\,\text{J}$</li>
+<p>总热量 $Q = Q_1 + Q_2 + Q_3 \approx 1{,}506{,}300\,\text{J} \approx 1506\,\text{kJ}$。</p>
+<p><strong>应用要点</strong>:解题时务必先判断当前状态处于哪个阶段——温度变化用 $Q=mc\Delta T$,相变阶段用 $Q=mL$,两者不可混用同一公式,也不能忽略相变阶段"温度不变但仍需计算能量"这一关键事实,这正是许多学生失分的根源。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch14: Heat and Heat Transfer Methods (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

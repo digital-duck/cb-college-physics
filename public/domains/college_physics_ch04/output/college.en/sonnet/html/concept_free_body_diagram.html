@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Body Diagram | College Physics Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="free-body-diagram">Free Body Diagram</h2>
+<p>A free body diagram (FBD) isolates a single object from its surroundings and represents every external force acting on it as a vector originating from a point. The object itself is drawn as a dot or a simple box; internal forces (parts of the object pushing on each other) are excluded entirely, and only forces exerted <em>on</em> the body <em>by</em> something else — gravity, normal force, tension, friction, applied push or pull — appear. The diagram is not a picture of the physical scene; it is an abstraction whose sole purpose is to let you apply Newton's second law, $\sum \vec{F} = m\vec{a}$, correctly along chosen coordinate axes.</p>
+<p><strong>Worked example.</strong> A 10 kg block rests on a frictionless incline at $30^\circ$, held stationary by a rope parallel to the incline surface. To find the tension $T$, first isolate the block. Three forces act on it: gravity $\vec{W} = mg$ pointing straight down, the normal force $\vec{N}$ perpendicular to the incline surface, and tension $\vec{T}$ up the incline. Draw these three vectors from a single point representing the block — this is the FBD.</p>
+<p>Rather than resolving gravity into components immediately, it is standard practice to tilt the coordinate system so the $x$-axis lies along the incline. Then $W_x = mg\sin\theta$ (down the incline) and $W_y = mg\cos\theta$ (into the surface). Newton's second law along each axis, with the block in equilibrium, gives:</p>
+$$T - mg\sin\theta = 0 \quad\Rightarrow\quad T = mg\sin\theta = (10)(9.8)(0.5) = 49\ \text{N}$$
+$$N - mg\cos\theta = 0 \quad\Rightarrow\quad N = mg\cos\theta \approx 84.9\ \text{N}$$
+<p>The diagram did the real work here: by forcing every force onto the page as a vector, it made clear which forces have components along which axis, preventing the common error of forgetting the normal force or misassigning gravity's direction.</p>
+<p><strong>Problem-solving application.</strong> The systematic value of an FBD emerges in multi-body problems — e.g., two blocks connected by a rope over a pulley. Draw a <em>separate</em> FBD for each block. Tension appears in both diagrams but is treated as a shared unknown, since by Newton's third law the rope pulls each block with equal magnitude. Writing $\sum F = ma$ for each isolated body yields one equation per block; solving simultaneously determines both the acceleration and the tension. The discipline of isolating one body at a time — never lumping two objects into one diagram unless they move together as a rigid unit — is what makes complex force problems tractable.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch4: Dynamics: Force and Newton's Laws of Motion (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

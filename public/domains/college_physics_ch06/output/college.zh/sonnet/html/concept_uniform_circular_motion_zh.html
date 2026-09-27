@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uniform Circular Motion | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="uniform-circular-motion">Uniform Circular Motion</h2>
+<p><strong>定义</strong></p>
+<p>当一个物体沿圆形路径以恒定速率运动时,称其做<strong>匀速圆周运动</strong>(uniform circular motion)。这里"匀速"指的是速度的<strong>大小</strong>(即速率)不变,但速度的<strong>方向</strong>却在持续变化——因为速度方向始终沿圆的切线方向,而切线方向随物体位置不断转动。由于速度这一矢量的方向在变化,根据加速度的定义 $\vec{a} = \dfrac{d\vec{v}}{dt}$,物体必然存在加速度,即使速率保持不变。</p>
+<p>这个加速度指向圆心,称为<strong>向心加速度</strong>(centripetal acceleration),其大小为:</p>
+$$
+a_c = \frac{v^2}{r}
+$$
+<p>其中 $v$ 是速率,$r$ 是圆的半径。由牛顿第二定律 $F = ma$,维持这种运动所需的净力——<strong>向心力</strong>——同样指向圆心:</p>
+$$
+F_c = \frac{mv^2}{r}
+$$
+<p>这一结果并非任意假设,而是可以通过几何推导严格证明:考虑短时间 $\Delta t$ 内速度矢量的微小变化 $\Delta \vec{v}$,由于速度矢量与位置矢量始终保持垂直,速度矢量所描出的图形与位置矢量所描出的圆是相似三角形,由此可得 $\dfrac{|\Delta \vec{v}|}{v} = \dfrac{|\Delta \vec{r}|}{r}$,两边除以 $\Delta t$ 并取极限,即得 $a_c = v^2/r$。</p>
+<p><strong>应用实例</strong></p>
+<p>一辆质量 $m = 1200\ \text{kg}$ 的汽车,以 $v = 20\ \text{m/s}$ 的速度通过半径 $r = 50\ \text{m}$ 的平坦弯道。所需的向心力为:</p>
+$$
+F_c = \frac{(1200)(20)^2}{50} = 9600\ \text{N}
+$$
+<p>这个力必须由轮胎与路面之间的摩擦力提供。若最大静摩擦力 $F_{\max} = \mu_s m g$,且 $\mu_s = 0.6$,则 $F_{\max} = 0.6 \times 1200 \times 9.8 \approx 7056\ \text{N}$,小于所需的 $9600\ \text{N}$——这意味着汽车会打滑冲出弯道。</p>
+<p><strong>解题应用</strong></p>
+<p>处理此类问题的关键步骤是:先明确"向心力"不是一种新的力,而是某个真实力(摩擦力、张力、重力分量等)沿半径方向的合成效果;再列出牛顿第二定律方程 $\sum F_{\text{径向}} = mv^2/r$ 求解未知量,如最小转弯半径、最大安全速度,或斜坡弯道所需的倾角。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

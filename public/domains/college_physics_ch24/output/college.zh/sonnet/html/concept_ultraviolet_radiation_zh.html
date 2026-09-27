@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultraviolet Radiation | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="ultraviolet-radiation">Ultraviolet Radiation</h2>
+<p><strong>定义</strong></p>
+<p>紫外辐射（ultraviolet radiation, UV）是波长约在 $10\ \text{nm}$ 到 $400\ \text{nm}$ 之间的电磁波，频率高于可见光谱中的紫光。根据电磁波谱关系式</p>
+$$
+E = h\nu = \frac{hc}{\lambda}
+$$
+<p>其中 $h = 6.626\times 10^{-34}\ \text{J·s}$ 为普朗克常数，$c = 3.00\times 10^{8}\ \text{m/s}$ 为光速，波长越短，光子能量越高。紫外辐射由原子或分子中电子在能级间跃迁产生——当电子从高能级跌落到低能级时，多余能量以光子形式释放。由于其光子能量（约 $3$–$124\ \text{eV}$）足以打断化学键（典型共价键能约为 $3$–$5\ \text{eV}$），紫外辐射具有<strong>电离</strong>生物分子（如 DNA）的能力，这也是其造成晒伤和皮肤癌风险的物理根源。</p>
+<p><strong>计算实例</strong></p>
+<p>计算波长 $\lambda = 260\ \text{nm}$（DNA 吸收峰值波长）的紫外光子能量。</p>
+$$
+E = \frac{hc}{\lambda} = \frac{(6.626\times 10^{-34}\ \text{J·s})(3.00\times 10^{8}\ \text{m/s})}{260\times 10^{-9}\ \text{m}} \approx 7.65\times 10^{-19}\ \text{J}
+$$
+<p>换算为电子伏特（$1\ \text{eV} = 1.602\times 10^{-19}\ \text{J}$）：</p>
+$$
+E \approx \frac{7.65\times 10^{-19}}{1.602\times 10^{-19}} \approx 4.78\ \text{eV}
+$$
+<p>这一能量足以断裂 DNA 中相邻胸腺嘧啶碱基间的化学键，形成"胸腺嘧啶二聚体"，是紫外线致突变的直接机制。</p>
+<p><strong>问题求解应用</strong></p>
+<p>紫外辐射按波长细分为三段：UVA（$315$–$400\ \text{nm}$）、UVB（$280$–$315\ \text{nm}$）、UVC（$100$–$280\ \text{nm}$）。已知大气臭氧层几乎完全吸收 UVC，部分吸收 UVB，UVA 大多可穿透。</p>
+<p><strong>问题</strong>：某防晒霜标注可阻挡波长小于 $310\ \text{nm}$ 的辐射的 $99\%$。请判断该产品对 UVA 波段（$350\ \text{nm}$）的防护效果，并结合光子能量公式解释为何 UVB/UVC 比 UVA 对细胞损伤更严重。</p>
+<p><strong>解答思路</strong>：由于 $350\ \text{nm} > 310\ \text{nm}$，该产品对 UVA 几乎不设防护。结合能量公式 $E = hc/\lambda$，波长越短能量越高——UVC（约 $10$–$12\ \text{eV}$）和 UVB（约 $4$–$4.4\ \text{eV}$）光子能量显著高于 UVA（约 $3.1$–$3.9\ \text{eV}$），更易直接电离生物分子或诱导 DNA 损伤，因此消费者应额外选择标注"广谱（broad-spectrum）"防护的产品以覆盖 UVA 波段。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

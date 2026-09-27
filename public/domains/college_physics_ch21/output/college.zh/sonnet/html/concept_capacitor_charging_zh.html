@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capacitor Charging | College Physics Ch21</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="capacitor-charging">Capacitor Charging</h2>
+<p><strong>定义</strong></p>
+<p>当一个未充电的电容器通过电阻与直流电源(电动势为 $\varepsilon$)连接时,电路满足基尔霍夫电压定律:</p>
+$$\varepsilon = iR + \frac{q}{C}$$
+<p>由于 $i = \dfrac{dq}{dt}$,这是一个一阶线性微分方程:</p>
+$$R\frac{dq}{dt} + \frac{q}{C} = \varepsilon$$
+<p>以初始条件 $q(0)=0$ 求解,得到电荷随时间的变化,再除以电容 $C$,即得电容器两端电压随时间变化的规律:</p>
+$$V(t) = \varepsilon\left(1 - e^{-t/\tau}\right), \qquad \tau = RC$$
+<p>其中 $\tau$ 称为<strong>时间常数</strong>,单位为秒(欧姆 × 法拉 = 秒)。它表示电压达到最终值的 $1 - e^{-1} \approx 63.2\%$ 所需的时间。电压曲线随时间指数上升,渐近趋于 $\varepsilon$,但在数学上永远不会真正等于 $\varepsilon$——这正是"渐近逼近"的含义:每经过一个 $\tau$,电压与最终值之间的差距就缩小到原来的 $1/e \approx 36.8\%$。</p>
+<p><strong>范例求解</strong></p>
+<p>设 $\varepsilon = 12\ \text{V}$,$R = 2\ \text{k}\Omega$,$C = 500\ \mu\text{F}$。</p>
+<p>第一步,求时间常数:</p>
+$$\tau = RC = (2000)(500\times10^{-6}) = 1\ \text{s}$$
+<p>第二步,求 $t = 2\ \text{s}$ 时电容器电压:</p>
+$$V(2) = 12\left(1 - e^{-2/1}\right) = 12(1 - 0.1353) \approx 10.4\ \text{V}$$
+<p>第三步,反过来求"充电到 9 V 需要多长时间"这类问题,需要对方程取对数求解 $t$:</p>
+$$9 = 12\left(1-e^{-t/1}\right) \implies e^{-t} = 1 - \frac{9}{12} = 0.25 \implies t = -\ln(0.25) \approx 1.386\ \text{s}$$
+<p><strong>问题解决应用</strong></p>
+<p>这类反解 $t$ 的技巧是处理充电电路问题的核心方法:先将方程整理为 $e^{-t/\tau}$ 单独在一边,再两边取自然对数消去指数,最后解出 $t$。同样的推导方式也适用于放电过程 $V(t)=\varepsilon e^{-t/\tau}$,只是初始条件与符号相反。在实际电路设计中,工程师常利用 $\tau = RC$ 来选择合适的电阻与电容组合,以获得所需的充电速度——例如相机闪光灯电路需要极短的 $\tau$,而定时电路则可能需要数秒甚至更长的 $\tau$。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch21: Circuits and DC Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

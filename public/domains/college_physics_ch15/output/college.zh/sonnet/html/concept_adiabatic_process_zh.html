@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adiabatic Process | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="绝热过程">绝热过程</h2>
+<p><strong>定义</strong></p>
+<p>绝热过程（adiabatic process）是指系统与外界之间没有热量传递的热力学过程，即 $Q = 0$。根据热力学第一定律 $\Delta U = Q - W$（其中 $W$ 为系统对外做的功），当 $Q = 0$ 时，有</p>
+$$\Delta U = -W$$
+<p>这意味着：如果系统对外做正功，其内能必然减少，温度随之下降；反之，外界对系统做功则使内能增加、温度上升。绝热过程之所以重要，是因为它揭示了功与内能之间最直接的转换关系，不受热交换的"干扰"。</p>
+<p>对于理想气体的准静态绝热过程，可以证明压强 $p$ 与体积 $V$ 满足</p>
+$$pV^{\gamma} = \text{常数}$$
+<p>其中 $\gamma = C_p/C_v$ 是定压比热容与定容比热容之比（对单原子理想气体 $\gamma = 5/3$，双原子分子如 $\text{N}_2$、$\text{O}_2$ 约为 $7/5$）。结合理想气体状态方程 $pV = nRT$，还可导出等价关系 $TV^{\gamma-1} = \text{常数}$。这一指数关系与等温过程的 $pV = \text{常数}$ 形成鲜明对比：在 $p$-$V$ 图上，绝热线比等温线更陡峭，因为绝热压缩时温度同时上升，进一步推高压强。</p>
+<p><strong>例题</strong></p>
+<p>某单原子理想气体（$\gamma = 5/3$）初始体积 $V_1 = 2\ \text{L}$，压强 $p_1 = 1\ \text{atm}$，经绝热压缩至 $V_2 = 1\ \text{L}$。求末态压强 $p_2$。</p>
+<p>由 $p_1 V_1^{\gamma} = p_2 V_2^{\gamma}$，得</p>
+$$p_2 = p_1 \left(\frac{V_1}{V_2}\right)^{\gamma} = 1 \times 2^{5/3} \approx 3.17\ \text{atm}$$
+<p><strong>应用于解题</strong></p>
+<p>绝热过程的分析常与其他过程（等温、等压）组合出现在循环问题中，例如卡诺循环的两条绝热支路。解题时的关键步骤是：先确认 $Q=0$ 这一条件是否成立（通常由"快速压缩/膨胀"或"良好绝热壁"等措辞给出），再选用 $pV^{\gamma}=\text{常数}$ 或 $TV^{\gamma-1}=\text{常数}$ 求出未知的状态量，最后用 $W = -\Delta U = -nC_v\Delta T$ 计算做功量。柴油机的压缩冲程正是利用绝热压缩使气体温度骤升至燃料自燃点，是这一原理的经典工程应用。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graphical Analysis Of Motion | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="graphical-analysis-of-motion">Graphical Analysis Of Motion</h2>
+<p><strong>定义</strong></p>
+<p>运动图像分析是通过位置–时间图（$x$–$t$ 图）和速度–时间图（$v$–$t$ 图）来定量描述一维运动的方法。其核心是斜率与曲线下面积的物理意义：</p>
+<p>在 $x$–$t$ 图中，某一时刻的瞬时速度等于该点切线的斜率：</p>
+$$v(t) = \lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t} = \frac{dx}{dt}$$
+<p>在 $v$–$t$ 图中，某一时刻的瞬时加速度等于该点切线的斜率：</p>
+$$a(t) = \frac{dv}{dt}$$
+<p>反过来，$v$–$t$ 图中某段时间内曲线下的面积等于该时间段内的位移 $\Delta x = \int v \, dt$；$a$–$t$ 图下的面积等于速度的变化量 $\Delta v = \int a \, dt$。斜率给出"变化率"，面积给出"累积量"，这两者互为逆运算，是理解运动学图像的关键。</p>
+<p><strong>例题</strong></p>
+<p>一物体的 $x$–$t$ 图为一条分段直线：0–2 s 内位置从 0 m 均匀增加到 10 m；2–5 s 内位置保持 10 m 不变；5–7 s 内位置从 10 m 均匀减少到 0 m。</p>
+<li>0–2 s：斜率 $= \dfrac{10-0}{2-0} = 5\ \text{m/s}$，即物体以 5 m/s 匀速运动。</li>
+<li>2–5 s：斜率 $=0$，物体静止。</li>
+<li>5–7 s：斜率 $= \dfrac{0-10}{7-5} = -5\ \text{m/s}$，物体以 5 m/s 匀速返回原点。</li>
+<p>由此可画出对应的 $v$–$t$ 图：一个阶梯形图形，值依次为 $+5$、$0$、$-5$ m/s。该图下方与时间轴围成的面积（考虑正负号）之和为 $10 + 0 - 10 = 0$ m，与物体最终回到原点一致——这正体现了面积与位移的对应关系。</p>
+<p><strong>解题应用</strong></p>
+<p>图像分析常用于判断运动类型并求解未知量：</p>
+<li><strong>判断运动性质</strong>：$x$–$t$ 图为直线 → 匀速运动；为抛物线 → 匀加速运动；曲率变化 → 加速度非恒定。</li>
+<li><strong>求解加速度</strong>：给定 $v$–$t$ 图中两点 $(t_1, v_1)$ 与 $(t_2, v_2)$，加速度为 $a = \dfrac{v_2 - v_1}{t_2 - t_1}$。</li>
+<li><strong>求解位移</strong>：将 $v$–$t$ 图分割为矩形与三角形，分别计算面积再求和，即可得到总位移，这一方法尤其适用于加速度分段变化的复杂运动，且不依赖具体的解析函数形式。</li>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

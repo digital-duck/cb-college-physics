@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recoil | College Physics Ch08</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="recoil-反冲">Recoil（反冲）</h2>
+<p><strong>定义</strong></p>
+<p>反冲是指一个物体或系统在喷射出部分质量或对外施加作用力时,自身获得与之方向相反的动量变化,是动量守恒定律的直接推论。若系统不受外力作用,则系统总动量守恒:</p>
+$$\vec{p}_{\text{初}} = \vec{p}_{\text{末}}$$
+<p>以静止步枪发射子弹为例,系统初始总动量为零。设子弹质量为 $m$,出膛速度为 $\vec{v}$,步枪质量为 $M$,获得的反冲速度为 $\vec{V}$。由动量守恒:</p>
+$$0 = m\vec{v} + M\vec{V} \quad \Rightarrow \quad \vec{V} = -\frac{m}{M}\vec{v}$$
+<p>负号表明步枪的运动方向与子弹相反,这就是射击时"后坐力"的物理本质。</p>
+<p><strong>范例求解</strong></p>
+<p>一支质量 $M = 4\ \text{kg}$ 的步枪,射出质量 $m = 0.01\ \text{kg}$、速度 $v = 400\ \text{m/s}$ 的子弹。求步枪的反冲速度。</p>
+<p>代入公式:</p>
+$$V = \frac{m v}{M} = \frac{0.01 \times 400}{4} = 1\ \text{m/s}$$
+<p>步枪以 $1\ \text{m/s}$ 的速度向后运动。注意反冲速度远小于子弹速度,原因在于质量比 $m/M$ 很小——这解释了为何射击时人能承受后坐力,而子弹却能高速飞出。</p>
+<p><strong>问题解决应用</strong></p>
+<p>反冲原理不仅适用于枪械,更是火箭推进的核心机制。火箭通过持续喷出高速燃气获得推力,其速度变化由齐奥尔科夫斯基火箭方程描述:</p>
+$$\Delta v = v_e \ln\left(\frac{m_0}{m_f}\right)$$
+<p>其中 $v_e$ 为喷气相对火箭的速度,$m_0$、$m_f$ 分别为火箭的初始质量与末态(燃料耗尽后)质量。该方程可由动量守恒对连续质量喷射过程积分推导得出:每一瞬间喷出的微小质量 $dm$ 都带走动量 $v_e\, dm$,火箭因此获得等量反冲动量,经积分即得对数关系。</p>
+<p>解题时的关键思路是:先明确系统边界(是否包含喷出物质),再对系统整体应用动量守恒,而非孤立分析火箭本身受力。这种"系统思维"是处理变质量问题(如火箭、传送带、喷水装置)的通用策略,也是反冲概念区别于简单碰撞问题的核心所在。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch8: Linear Momentum and Collisions (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceleration Due To Gravity | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="acceleration-due-to-gravity">Acceleration Due To Gravity</h2>
+<p>Near Earth's surface, every freely falling object—regardless of mass—speeds up at the same rate: $g \approx 9.80\ \text{m/s}^2$, directed toward the center of the Earth. This constancy is not a coincidence but a consequence of Newton's second law combined with his law of universal gravitation. The gravitational force on an object of mass $m$ is $F = \dfrac{GMm}{r^2}$, where $M$ is Earth's mass and $r$ is the distance from Earth's center. Newton's second law gives $F = ma$, so setting the two expressions equal:</p>
+$$
+ma = \frac{GMm}{r^2} \quad \Longrightarrow \quad a = \frac{GM}{r^2} = g
+$$
+<p>The mass $m$ cancels, which is why a bowling ball and a feather accelerate identically in a vacuum—a result first demonstrated conceptually by Galileo and confirmed dramatically during the Apollo 15 Moon landing.</p>
+<p><strong>Worked example.</strong> A stone is dropped from rest off a 45 m cliff. How long does it take to hit the ground, and how fast is it moving on impact? Using the kinematic equation for constant acceleration, $y = \frac{1}{2}g t^2$ (taking downward as positive, initial velocity zero):</p>
+$$
+45 = \frac{1}{2}(9.80)t^2 \quad \Longrightarrow \quad t^2 = 9.18 \quad \Longrightarrow \quad t \approx 3.03\ \text{s}
+$$
+<p>The impact speed follows from $v = gt$:</p>
+$$
+v = (9.80)(3.03) \approx 29.7\ \text{m/s}
+$$
+<p><strong>Problem-solving application.</strong> The constancy of $g$ lets you decouple motion into independent horizontal and vertical components—the foundation of projectile motion. For a ball launched horizontally at $20\ \text{m/s}$ from the same 45 m cliff, the vertical fall time is unaffected by the horizontal velocity: it is still $3.03\ \text{s}$, because gravity acts only vertically. The horizontal distance traveled is then simply $x = v_x t = (20)(3.03) \approx 60.6\ \text{m}$. This decoupling strategy—solve the vertical equation for time, then substitute into the horizontal equation—is the standard technique for any two-dimensional motion problem under gravity, from artillery trajectories to basketball shots.</p>
+<pre><code>flowchart LR
+    A["Newton's 2nd Law: F = ma"] --&gt; C["Set equal"]
+    B["Universal Gravitation: F = GMm/r²"] --&gt; C
+    C --&gt; D["ma = GMm/r²"]
+    D --&gt; E["Mass cancels"]
+    E --&gt; F["g = GM/r² ≈ 9.80 m/s²"]</code></pre>
+<p><em>Derivation showing how equating Newton's second law with the law of universal gravitation yields the mass-independent constant g.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

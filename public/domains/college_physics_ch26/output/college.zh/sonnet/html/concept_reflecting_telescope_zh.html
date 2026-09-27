@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reflecting Telescope | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="reflecting-telescope">Reflecting Telescope</h2>
+<p><strong>定义</strong></p>
+<p>反射望远镜（reflecting telescope）以一块凹面镜（concave mirror）作为物镜，取代折射望远镜中使用的透镜。凹面镜将平行入射的光线反射并汇聚到焦点，形成实像，再由目镜或探测器进行放大观测。牛顿于1668年制成第一台实用反射望远镜，其核心动机是解决折射望远镜的两大局限：色差（chromatic aberration）与制造大口径透镜的工程难度。</p>
+<p>透镜之所以产生色差，是因为玻璃的折射率随波长变化（色散），不同颜色的光被折射到不同焦点，导致图像边缘出现彩色晕影。而镜面成像依靠反射定律——入射角等于反射角——这一规律与波长无关，因此反射望远镜从原理上完全消除了色差。此外，透镜只能从边缘固定，随着口径增大，自身重力会使其在中心下垂变形；而镜面可以从背面均匀支撑，因此反射望远镜能够制造远超折射望远镜的大口径，这正是现代大型天文台（如凯克望远镜、詹姆斯·韦伯太空望远镜）普遍采用反射式设计的根本原因。</p>
+<p><strong>几何与成像分析</strong></p>
+<p>理想的反射望远镜物镜常采用抛物面镜（paraboloidal mirror），因为抛物面能将所有平行于主轴的入射光线精确汇聚于一点——焦点。若镜面顶点到焦点的距离为焦距 $f$，抛物面方程可写成：</p>
+$$
+y^2 = 4fx
+$$
+<p>其中 $x$ 为沿主轴方向的坐标，$y$ 为垂直于主轴的高度。对于近轴光线（paraxial rays，即偏离主轴角度很小的光线），可以证明球面镜也近似满足此汇聚性质，误差项与孔径角的高次方成正比。牛顿式反射望远镜进一步在主镜前方加入一块与主轴成 $45°$ 的平面镜（副镜），将汇聚光路引出镜筒侧壁，避免观测者的头部遮挡入射光。</p>
+<p><strong>问题解决应用</strong></p>
+<p>设计任务：某爱好者拥有一块直径 $D = 20\text{ cm}$、焦距 $f = 120\text{ cm}$ 的抛物面主镜，要求计算其焦比（focal ratio，即 $f\text{-number}$）并评估该系统的分辨本领。</p>
+<p>焦比定义为：</p>
+$$
+N = \frac{f}{D} = \frac{120}{20} = 6
+$$
+<p>分辨本领由瑞利判据（Rayleigh criterion）给出，对于波长 $\lambda$ 的光，最小可分辨角为：</p>
+$$
+\theta_{\min} = 1.22\,\frac{\lambda}{D}
+$$
+<p>取可见光 $\lambda \approx 550\text{ nm}$，代入 $D = 0.20\text{ m}$，可得 $\theta_{\min} \approx 3.35 \times 10^{-6}\text{ rad}$，约合 $0.69$ 角秒。此计算表明，口径 $D$ 直接决定望远镜的极限分辨率，而反射望远镜正因摆脱了透镜口径的工程限制，才使得建造远超 $20\text{ cm}$、直逼数米甚至十米级口径的望远镜成为可能，从而将分辨本领提升数十倍。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

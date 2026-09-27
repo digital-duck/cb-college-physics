@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aerodynamic Drag Reduction | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="aerodynamic-drag-reduction">Aerodynamic Drag Reduction</h2>
+<p>物体在流体中运动时,会受到与相对速度方向相反的阻力,其大小由下式给出:</p>
+$$F_D = \frac{1}{2} \rho v^2 C_D A$$
+<p>其中 $\rho$ 为流体密度,$v$ 为相对速度,$A$ 为迎风面积(frontal area),$C_D$ 为阻力系数——一个由物体形状决定的无量纲量。这个公式揭示了减阻工程的核心逻辑:由于阻力与速度的<strong>平方</strong>成正比,在高速场景下(如赛车、飞机、短道速滑),即使 $C_D$ 或 $A$ 的微小下降,也能带来功率消耗的显著降低,因为克服阻力所需的功率 $P = F_D \cdot v \propto v^3$。这正是为什么飞机巡航速度提高 10%,燃油消耗会不成比例地上升。</p>
+<p><strong>减阻的两条路径</strong>分别对应公式中的两个可调量:</p>
+<li><strong>降低 $C_D$</strong>——通过流线型设计减少气流分离(flow separation)。气流分离发生在物体表面曲率变化过快、边界层无法贴附时,会在尾部形成低压紊流区,产生较大的压差阻力(pressure drag)。溜滴形(teardrop)截面正是模仿了自然界中低阻力形状。</li>
+<li><strong>减小 $A$</strong>——压缩物体在气流方向上的投影面积,例如短道速滑运动员采用低姿滑行,或方程式赛车压低车身。</li>
+<p><strong>工程应用示例</strong>:某型商用飞机巡航时 $C_D = 0.024$,机翼参考面积 $A = 320\ \text{m}^2$,空气密度 $\rho = 0.38\ \text{kg/m}^3$(巡航高度),巡航速度 $v = 250\ \text{m/s}$。代入公式:</p>
+$$F_D = \frac{1}{2}(0.38)(250)^2(0.024)(320) \approx 91{,}200\ \text{N}$$
+<p>若工程师通过翼尖小翼(winglet)设计将诱导阻力降低 5%,对应 $C_D$ 下降到 0.0228,阻力减少约 4560 N,巡航所需推力相应降低,直接转化为燃油效率的提升。</p>
+<p><strong>问题解决要点</strong>:在实际设计中,$C_D$ 与 $A$ 常存在权衡——压缩迎风面积可能迫使外形更"钝",反而提高 $C_D$(如自行车骑手蜷缩姿势虽减小 $A$,却可能增加乱流)。因此工程优化的目标函数是乘积 $C_D A$ 的最小化,而非单独优化某一项,这也是风洞测试与计算流体力学(CFD)在减阻设计中不可替代的原因。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

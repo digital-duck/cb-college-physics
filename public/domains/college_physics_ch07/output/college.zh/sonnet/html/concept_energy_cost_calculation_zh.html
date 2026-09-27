@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy Cost Calculation | College Physics Ch07</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="energy-cost-calculation">Energy Cost Calculation</h2>
+<p><strong>定义</strong></p>
+<p>电费计算的核心在于统一功率、时间与费率三个量的单位。用电器消耗的电能并非以焦耳计价，而是以"千瓦时"（kilowatt-hour, kWh）作为商业计费单位——即功率为 1 千瓦（kW）的设备连续工作 1 小时所消耗的能量。若设备的功率为 $P$（单位：kW），使用时长为 $t$（单位：小时），电力公司的单价为 $r$（单位：元/kWh），则总电费 $C$ 由下式给出：</p>
+$$
+C = P \times t \times r
+$$
+<p>若功率以瓦特（W）给出，需先换算：$P_{\text{kW}} = P_{\text{W}} / 1000$。这一公式的物理基础是能量 $E = Pt$（功率乘以时间即为能量），而 $C = E \times r$ 只是将能量按市场价格折算为货币量——本质是单位换算与线性定价的结合，并非复杂定理，但要求学生严格追踪单位。</p>
+<p><strong>范例</strong></p>
+<p>某台 1500 W 的电暖器每天使用 4 小时，当地电价为 0.68 元/kWh，求该设备一个月（30 天）的电费。</p>
+<p>第一步，换算功率：$P = 1500 \text{ W} = 1.5 \text{ kW}$。</p>
+<p>第二步，计算月总使用时长：$t = 4 \times 30 = 120$ 小时。</p>
+<p>第三步，代入公式：</p>
+$$
+C = 1.5 \text{ kW} \times 120 \text{ h} \times 0.68 \text{ 元/kWh} = 122.4 \text{ 元}
+$$
+<p><strong>解题应用</strong></p>
+<p>实际问题常要求比较多台设备或反向求解未知量。例如：某家庭同时运行一台 100 W 的 LED 灯（每天 8 小时）和一台 2000 W 的空调（每天 6 小时），电价 0.68 元/kWh，求两者合计月电费。分别计算能量：灯 $= 0.1 \times 8 \times 30 = 24$ kWh；空调 $= 2 \times 6 \times 30 = 360$ kWh。总能量 $384$ kWh，电费 $= 384 \times 0.68 = 261.12$ 元。</p>
+<p>另一类问题是反解：若某设备月电费为 54.4 元，电价 0.68 元/kWh，每天使用 4 小时，求功率。由 $C = P \cdot t \cdot r$ 得 $P = C / (t \cdot r) = 54.4 / (120 \times 0.68) = 0.667$ kW，即约 667 W。这类"已知费用反推功率或时长"的变形，正是分级能源计费（阶梯电价）等实际问题的基础，要求学生熟练地在公式中互换未知量。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch7: Work, Energy, and Energy Resources (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

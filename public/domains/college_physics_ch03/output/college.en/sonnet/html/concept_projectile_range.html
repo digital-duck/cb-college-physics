@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projectile Range | College Physics Ch03</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="projectile-range">Projectile Range</h2>
+<p>For a projectile launched from and landing on the same horizontal level, with initial speed $v_0$ and launch angle $\theta_0$ above the horizontal, the horizontal distance traveled — the <strong>range</strong> — is</p>
+$$R = \frac{v_0^2 \sin(2\theta_0)}{g}$$
+<p>This follows directly from the kinematic equations for projectile motion, which separate into independent horizontal and vertical components. The horizontal velocity $v_0\cos\theta_0$ is constant (no horizontal force, ignoring air resistance), while the vertical motion decelerates under gravity $g$. Setting the vertical displacement to zero gives the time of flight $t = \dfrac{2v_0\sin\theta_0}{g}$. Multiplying by the horizontal velocity yields $R = v_0\cos\theta_0 \cdot \dfrac{2v_0\sin\theta_0}{g} = \dfrac{2v_0^2\sin\theta_0\cos\theta_0}{g}$, which simplifies to the boxed formula using the identity $2\sin\theta_0\cos\theta_0 = \sin(2\theta_0)$.</p>
+<p>Because $\sin(2\theta_0)$ reaches its maximum value of 1 when $2\theta_0 = 90°$, the range is maximized at $\theta_0 = 45°$, giving $R_{\max} = v_0^2/g$. Note also that any two angles symmetric about 45° (e.g., 30° and 60°) produce the <em>same</em> range, since $\sin(2\theta_0) = \sin(180° - 2\theta_0)$.</p>
+<p><strong>Worked example:</strong> A soccer ball is kicked at $v_0 = 20\ \text{m/s}$ at $\theta_0 = 35°$. Using $g = 9.8\ \text{m/s}^2$:</p>
+$$R = \frac{(20)^2 \sin(70°)}{9.8} = \frac{400 \times 0.940}{9.8} \approx 38.3\ \text{m}$$
+<p><strong>Problem-solving application:</strong> Suppose a coach wants a kick to travel exactly 30 m with the same initial speed of 20 m/s. Solve for $\theta_0$:</p>
+$$\sin(2\theta_0) = \frac{Rg}{v_0^2} = \frac{30 \times 9.8}{400} = 0.735$$
+$$2\theta_0 = \sin^{-1}(0.735) = 47.3° \quad \text{or} \quad 132.7°$$
+$$\theta_0 = 23.65° \quad \text{or} \quad 66.35°$$
+<p>Both angles are valid solutions — a low, flat trajectory or a high, arcing one — illustrating the symmetry property directly. This dual-solution structure is common in range problems: whenever $R < R_{\max}$, two distinct launch angles achieve it, and recognizing this without redoing the full derivation each time is a key problem-solving shortcut.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch3: Two-Dimensional Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

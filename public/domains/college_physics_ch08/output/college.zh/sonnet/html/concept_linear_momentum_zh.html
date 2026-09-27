@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linear Momentum | College Physics Ch08</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="linear-momentum">Linear Momentum</h2>
+<p><strong>定义</strong></p>
+<p>线性动量（linear momentum）是描述物体运动状态的矢量物理量，定义为质量与速度的乘积：</p>
+$$\vec{p} = m\vec{v}$$
+<p>其中 $m$ 为质量（单位：kg），$\vec{v}$ 为速度矢量（单位：m/s），动量 $\vec{p}$ 的国际单位为 $\text{kg·m/s}$。作为矢量，动量的方向始终与速度方向一致。动量之所以重要，是因为它在孤立系统中守恒——这一性质源自牛顿第二定律的矢量形式：</p>
+$$\vec{F}_{\text{net}} = \frac{d\vec{p}}{dt}$$
+<p>当系统所受合外力为零时，总动量保持不变，这就是<strong>动量守恒定律</strong>，适用于碰撞、爆炸、火箭推进等一切内力主导的过程。</p>
+<p><strong>例题</strong></p>
+<p>一辆质量 $1200\ \text{kg}$ 的汽车以 $20\ \text{m/s}$ 向东行驶，与一辆质量 $1500\ \text{kg}$、以 $15\ \text{m/s}$ 向西行驶的卡车发生完全非弹性碰撞（碰后粘合在一起）。求碰撞后两车的共同速度。</p>
+<p>设向东为正方向：</p>
+$$p_{\text{初}} = m_1 v_1 + m_2 v_2 = (1200)(20) + (1500)(-15) = 24000 - 22500 = 1500\ \text{kg·m/s}$$
+<p>由动量守恒，碰后总动量不变：</p>
+$$p_{\text{末}} = (m_1+m_2)v' = 1500\ \text{kg·m/s}$$
+$$v' = \frac{1500}{2700} \approx 0.56\ \text{m/s（向东）}$$
+<p><strong>解题应用</strong></p>
+<p>处理动量问题的关键步骤：(1) 明确系统边界，判断合外力是否可忽略（碰撞时间极短，内力远大于外力，如重力、摩擦，故可近似孤立）；(2) 设定统一正方向，将所有速度矢量投影到该轴上；(3) 分别计算碰撞前后总动量并令其相等；(4) 若为完全非弹性碰撞，末速度共同求解；若为弹性碰撞，还需联立动能守恒方程。</p>
+<p>需特别注意：动量守恒对每个独立方向分别成立——在二维碰撞问题中，应将动量沿 $x$、$y$ 轴分解，各自守恒，再联立求解未知速度分量。这一分量化处理方法是解决斜向碰撞、抛体系统动量分析的通用技巧。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch8: Linear Momentum and Collisions (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

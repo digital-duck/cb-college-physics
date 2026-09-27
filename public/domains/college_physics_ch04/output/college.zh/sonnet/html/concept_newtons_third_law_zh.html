@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newtons Third Law | College Physics Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="牛顿第三定律">牛顿第三定律</h2>
+<p><strong>定义</strong></p>
+<p>牛顿第三定律指出:当物体 A 对物体 B 施加一个力时,物体 B 必定同时对物体 A 施加一个大小相等、方向相反的力。用数学语言表示:</p>
+$$\vec{F}_{A \to B} = -\vec{F}_{B \to A}$$
+<p>这两个力被称为"作用力—反作用力对"(action–reaction pair)。需要特别强调三个关键点,它们是学生最容易混淆的地方:第一,这两个力<strong>大小相等、方向相反</strong>,但<strong>作用在不同的物体上</strong>——因此它们<strong>永远不会相互抵消</strong>,因为力的叠加只对同一物体上的力才有意义;第二,这两个力<strong>同时产生、同时消失</strong>,没有先后顺序;第三,这两个力属于<strong>同一种相互作用</strong>(例如都是引力,或都是接触力),而不是两种不同性质的力。</p>
+<p><strong>例题解析</strong></p>
+<p>设想一个质量 $m_1 = 60\text{ kg}$ 的溜冰者站在冰面上,用力推另一个质量 $m_2 = 90\text{ kg}$ 的溜冰者,施加的力为 $200\text{ N}$。根据牛顿第三定律,第二个溜冰者同时以 $200\text{ N}$ 的力推回第一个溜冰者,方向相反。由牛顿第二定律 $a = F/m$,可得两人获得的加速度分别为:</p>
+$$a_1 = \frac{200}{60} \approx 3.33\text{ m/s}^2 \qquad a_2 = \frac{200}{90} \approx 2.22\text{ m/s}^2$$
+<p>注意:虽然力相等,但由于质量不同,两人获得的加速度并不相等——较轻的溜冰者被推得更快。这正是许多学生误解第三定律的地方:力相等不代表运动效果相等。</p>
+<p><strong>解题应用</strong></p>
+<p>在受力分析(自由体图)中,牛顿第三定律的价值在于帮助我们<strong>正确区分"作用在物体上的力"与"物体施加出去的力"</strong>。例如,分析一本书放在桌面上是否处于平衡态时,真正需要比较的是<strong>书受到的重力</strong>与<strong>桌面对书的支持力</strong>(这两者都作用在书上,是牛顿第二定律要分析的对象),而不是"书对桌面的压力"(这是第三定律配对力,作用在桌面上)。混淆这两组力是初学者最常见的错误。掌握第三定律的关键解题技巧是:遇到任何接触力或引力时,先问"这个力的反作用力作用在谁身上?",从而避免将同一物体上原本不相关的两个力错误地当作作用—反作用对处理。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch4: Dynamics: Force and Newton's Laws of Motion (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

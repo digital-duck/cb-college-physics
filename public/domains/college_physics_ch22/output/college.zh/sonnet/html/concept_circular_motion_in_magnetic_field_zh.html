@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Circular Motion In Magnetic Field | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="circular-motion-in-magnetic-field">Circular Motion In Magnetic Field</h2>
+<p><strong>定义</strong></p>
+<p>当带电粒子以速度 $\vec{v}$ 垂直于匀强磁场 $\vec{B}$ 运动时，其所受磁力（洛伦兹力）大小为 $F = qvB$，方向由 $\vec{F} = q\vec{v} \times \vec{B}$ 给出，始终垂直于速度方向。由于力恒垂直于速度，磁力不对粒子做功，只改变速度方向而不改变速率。这正是向心力的定义特征——大小恒定、方向指向圆心的力——因此粒子将做匀速圆周运动。令磁力等于向心力：</p>
+$$qvB = \frac{mv^2}{r}$$
+<p>解得回旋半径</p>
+$$r = \frac{mv}{qB}$$
+<p>回旋周期与频率则为</p>
+$$T = \frac{2\pi m}{qB}, \qquad f = \frac{qB}{2\pi m}$$
+<p>值得注意的是，$T$ 与 $f$ 不依赖于速度 $v$——这一性质是回旋加速器（cyclotron）设计的核心原理。</p>
+<p><strong>例题</strong></p>
+<p>一个质子（$q = 1.6\times10^{-19}\,\text{C}$，$m = 1.67\times10^{-27}\,\text{kg}$）以 $v = 2.0\times10^6\,\text{m/s}$ 的速度垂直进入 $B = 0.50\,\text{T}$ 的匀强磁场。求其回旋半径与周期。</p>
+$$r = \frac{mv}{qB} = \frac{(1.67\times10^{-27})(2.0\times10^6)}{(1.6\times10^{-19})(0.50)} \approx 4.2\times10^{-2}\,\text{m}$$
+$$T = \frac{2\pi m}{qB} = \frac{2\pi (1.67\times10^{-27})}{(1.6\times10^{-19})(0.50)} \approx 1.3\times10^{-7}\,\text{s}$$
+<p><strong>解题应用</strong></p>
+<p>处理此类问题的关键在于识别三个变量间的耦合关系：$r$、$v$、$B$ 通过 $r = mv/(qB)$ 联系，而 $T$、$f$ 只依赖 $m$、$q$、$B$。常见陷阱包括：(1) 混淆速度分量——若粒子速度与磁场不完全垂直，只有垂直分量 $v_\perp$ 参与圆周运动，平行分量 $v_\parallel$ 保持不变，导致粒子实际轨迹是螺旋线而非圆；(2) 忽略电荷正负号对旋转方向（顺时针或逆时针）的影响。解题时应先画出速度、磁场、力三者的矢量关系图，确认力的方向后再代入公式求解。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

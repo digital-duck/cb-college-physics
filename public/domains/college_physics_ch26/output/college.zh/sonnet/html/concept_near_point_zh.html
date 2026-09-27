@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Near Point | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="near-point">Near Point</h2>
+<p>近点（near point）是指人眼在不使用外部辅助光学器件的情况下，通过睫状肌收缩、增大晶状体曲率（即"调节"作用）所能清晰对焦的最近物距。对于视力正常的年轻成年人，近点通常约为 $d_0 = 25\ \text{cm}$，这一数值被光学工程与生理光学中普遍采用为标准参考值。随着年龄增长，晶状体弹性下降，调节能力减弱，近点会逐渐远移（老花眼，presbyopia），中老年人的近点可能增大到 $50\ \text{cm}$ 甚至更远。</p>
+<p>近点的重要性在于它决定了放大镜、显微镜等光学仪器"角放大率"的计算基准。放大镜的角放大率定义为：物体通过透镜观察时的视角 $\theta'$ 与物体放在近点处裸眼观察时的视角 $\theta$ 之比。当物体放置于凸透镜的焦点处观察时，角放大率为</p>
+$$
+M = \frac{d_0}{f}
+$$
+<p>其中 $f$ 是透镜的焦距，$d_0$ 是观察者的近点距离。这个公式直接说明：近点距离越大（即调节能力越差），同一片透镜带来的视觉放大效果反而越显著——因为裸眼在近点处已经能看到的细节相对更少，透镜的相对改善更明显。</p>
+<p><strong>问题解决应用</strong>：假设一片凸透镜焦距为 $f = 5\ \text{cm}$，分别求一位近点为标准值 $25\ \text{cm}$ 的年轻人和一位近点为 $50\ \text{cm}$ 的中年人使用该透镜观察物体时的角放大率。</p>
+<p>对年轻人：</p>
+$$
+M_1 = \frac{25\ \text{cm}}{5\ \text{cm}} = 5
+$$
+<p>对中年人：</p>
+$$
+M_2 = \frac{50\ \text{cm}}{5\ \text{cm}} = 10
+$$
+<p>可见，近点距离较大的观察者使用同一透镜反而获得更高的放大率。这一结果也提示我们，在设计助视器具（如老花镜、放大镜）时，必须依据使用者的实际近点数据来选择合适的镜片参数，而不能简单套用标准值 $25\ \text{cm}$。这正是近点概念从"生理常数"走向"工程设计变量"的关键一步。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mutual Inductance | College Physics Ch23</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="mutual-inductance">Mutual Inductance</h2>
+<p><strong>定义</strong></p>
+<p>当两个线圈(记为线圈1和线圈2)彼此靠近放置时，线圈1中电流的变化会在其周围产生变化的磁场，这个变化的磁场部分地穿过线圈2，从而在线圈2中感应出电动势。这种耦合效应由<strong>互感</strong> $M$(单位:亨利，H)来定量描述:</p>
+$$
+\varepsilon_2 = -M \frac{\Delta I_1}{\Delta t}
+$$
+<p>其中 $\varepsilon_2$ 是线圈2中感应出的电动势，$\Delta I_1/\Delta t$ 是线圈1中电流的变化率。负号体现楞次定律(Lenz's law)：感应电动势总是反抗引起它的磁通变化。互感 $M$ 只取决于两线圈的<strong>几何形状、匝数、相对位置以及它们之间介质的磁导率</strong>，与电流大小或变化快慢无关——$M$ 是一个纯粹由结构决定的耦合系数。值得注意的是，互感具有对称性: $M_{12} = M_{21} = M$，即线圈1对线圈2的耦合系数，与线圈2对线圈1的耦合系数完全相同，这一结论可由诺伊曼公式(Neumann formula)严格证明，是电磁感应理论中一个优雅而非显然的结果。</p>
+<p><strong>范例</strong></p>
+<p>设线圈1中电流在 $0.02\text{ s}$ 内从 $5\text{ A}$ 均匀降为 $0\text{ A}$，两线圈的互感为 $M = 0.3\text{ H}$。求线圈2中感应电动势的大小。</p>
+<p>代入公式:</p>
+$$
+\varepsilon_2 = -M \frac{\Delta I_1}{\Delta t} = -(0.3)\left(\frac{0 - 5}{0.02}\right) = -(0.3)(-250) = 75\text{ V}
+$$
+<p>感应电动势大小为 $75\text{ V}$，方向由楞次定律确定，即感应电流将试图维持线圈1中原有磁通量的方向。</p>
+<p><strong>问题求解应用</strong></p>
+<p>互感是变压器(transformer)工作的物理基础：初级线圈电流的变化通过互感耦合到次级线圈，产生感应电压。在分析多线圈系统时，若还需计入线圈自身的自感 $L_1, L_2$，则耦合强弱可用<strong>耦合系数</strong> $k = M/\sqrt{L_1 L_2}$($0 \le k \le 1$)描述，$k$ 越接近 1 表示磁通泄漏越小、耦合越紧密。在实际电路设计中，工程师通过调整线圈间距、加入磁芯、或改变绕组方式来控制 $M$，从而实现能量的高效传输或抑制不必要的电磁干扰(EMI)。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch23: Electromagnetic Induction, AC Circuits, and Electrical Technologies (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

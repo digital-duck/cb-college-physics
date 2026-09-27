@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capacitor Discharging | College Physics Ch21</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="capacitor-discharging-电容器放电">Capacitor Discharging（电容器放电）</h2>
+<p><strong>定义</strong></p>
+<p>当一个已充电的电容器通过电阻器连接成闭合回路时，电容器储存的电荷会经由电阻放电，电压随时间呈指数衰减。设电容器初始电压为 $V_0$，放电过程满足：</p>
+$$V(t) = V_0 e^{-t/\tau}$$
+<p>其中 $\tau = RC$ 称为<strong>时间常数</strong>（time constant），$R$ 为电阻（欧姆），$C$ 为电容（法拉）。这一关系源于基尔霍夫电压定律：电阻两端电压等于电容电压，即 $iR = V(t)$，而电流又等于电容释放电荷的速率 $i = -C\,dV/dt$。联立得到一阶线性微分方程：</p>
+$$RC\frac{dV}{dt} = -V$$
+<p>其解正是上述指数衰减式。$\tau$ 的物理意义是电压衰减到初始值的 $1/e \approx 36.8\%$ 所需的时间；经过 $5\tau$，电压已降至初始值的不到 $1\%$，可视为完全放电。</p>
+<p><strong>推导要点（简要证明）</strong></p>
+<p>将微分方程改写为 $\dfrac{dV}{V} = -\dfrac{dt}{RC}$，两边积分：</p>
+$$\ln V(t) - \ln V_0 = -\frac{t}{RC}$$
+<p>取指数即得 $V(t) = V_0 e^{-t/RC}$，验证了衰减形式的唯一性（在给定初始条件下）。</p>
+<p><strong>例题</strong></p>
+<p>某电路中 $C = 100\ \mu F$，$R = 10\ k\Omega$，电容初始电压 $V_0 = 5\ V$。求时间常数 $\tau$，以及 $t = 2\ s$ 时的电压。</p>
+<li>$\tau = RC = (10\times10^3)(100\times10^{-6}) = 1\ s$</li>
+<li>$V(2) = 5\,e^{-2/1} = 5\times0.1353 \approx 0.677\ V$</li>
+<p><strong>问题解决应用</strong></p>
+<p>时间常数 $\tau$ 是设计定时电路、滤波器截止频率、以及闪光灯电容放电速度的核心参数。例如要求电容在 $50\ ms$ 内放电到初始电压的 $10\%$ 以下，需解：</p>
+$$0.1 = e^{-t/\tau} \implies \tau \le \frac{t}{\ln 10} = \frac{0.05}{2.303} \approx 21.7\ ms$$
+<p>据此可反推所需的 $R$（若 $C$ 已固定），即 $R = \tau/C$。这种"给定衰减目标、反解元件参数"的思路，正是电容放电模型在实际电路设计中的核心用途。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch21: Circuits and DC Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

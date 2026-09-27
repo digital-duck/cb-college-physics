@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Musical Instrument Resonance | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="musical-instrument-resonance">Musical Instrument Resonance</h2>
+<p><strong>定义</strong></p>
+<p>乐器发声的物理本质是<strong>驻波共振</strong>：当波在有限长度的介质（弦、空气柱）中传播并在边界处反射时,入射波与反射波叠加,若边界条件与波长匹配,就会形成振幅固定、位置固定的驻波模式,称为<strong>简正模式（normal mode）</strong>或<strong>谐波（harmonic）</strong>。</p>
+<p>对于两端固定的弦(长度 $L$,波速 $v=\sqrt{T/\mu}$,$T$ 为张力,$\mu$ 为线密度),两端必须是波节,因此允许的波长满足</p>
+$$
+L = n\frac{\lambda_n}{2}, \quad n=1,2,3,\dots
+$$
+<p>对应频率为</p>
+$$
+f_n = \frac{nv}{2L} = n f_1
+$$
+<p>即所有谐波频率都是基频 $f_1$ 的整数倍。这就是弦乐器(吉他、小提琴、钢琴)音调由弦长、张力、密度共同决定的原因。</p>
+<p>对于空气柱(管乐器),边界条件取决于管的开闭:</p>
+<li><strong>两端开口</strong>(长笛):两端都是波腹,$f_n = nv/(2L)$,与弦相同,含全部谐波。</li>
+<li><strong>一端封闭、一端开口</strong>(单簧管):封闭端为波节,开口端为波腹,只允许</li>
+$$
+L = (2n-1)\frac{\lambda}{4}, \quad f_n = \frac{(2n-1)v}{4L}
+$$
+<p>即只含<strong>奇次谐波</strong>——这解释了单簧管音色比长笛更"空心"、更暗的物理原因。</p>
+<p><strong>问题求解应用</strong></p>
+<p>设某吉他弦长 $L=0.65\,\text{m}$,基频需调至 $f_1=196\,\text{Hz}$(G弦),已知线密度 $\mu=0.0065\,\text{kg/m}$。求所需张力。</p>
+<p>由 $f_1 = \dfrac{1}{2L}\sqrt{T/\mu}$,解出</p>
+$$
+T = \mu(2Lf_1)^2 = 0.0065 \times (2\times0.65\times196)^2 \approx 686\,\text{N}
+$$
+<p>再考察一根长 $0.30\,\text{m}$ 的单端封闭空气柱(如某些管风琴音管),声速 $v=343\,\text{m/s}$,求其可能发出的最低三个频率:</p>
+$$
+f_1=\frac{343}{4\times0.30}\approx286\,\text{Hz},\quad f_3=3f_1\approx858\,\text{Hz},\quad f_5=5f_1\approx1430\,\text{Hz}
+$$
+<p>注意 $f_2, f_4$ 不存在——这是判断"该乐器是否为闭管"的实验依据:若测得频谱只含奇次谐波,即可反推管的边界类型。这种由边界条件推导允许模式、再由模式反推物理结构的思路,正是驻波理论在声学设计与乐器制造中的核心应用。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

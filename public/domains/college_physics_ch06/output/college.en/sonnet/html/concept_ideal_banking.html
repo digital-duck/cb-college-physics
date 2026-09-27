@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ideal Banking | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="ideal-banking">Ideal Banking</h2>
+<p>When a vehicle rounds a curve, it needs a net centripetal force pointing toward the center of the circular path. On a flat road, only friction supplies this force — and friction can fail on ice, gravel, or at high speed. Engineers solve this by banking the road: tilting its surface at an angle $\theta$ so that the normal force itself contributes a horizontal component toward the center. The <strong>ideal banking angle</strong> is the specific $\theta$ at which the curve can be taken at a given speed with <em>zero</em> reliance on friction.</p>
+<p><strong>Derivation.</strong> Consider a car of mass $m$ on a banked curve of radius $r$, with the road surface tilted at angle $\theta$ from horizontal. The normal force $N$ acts perpendicular to the road surface. Decompose $N$ into vertical and horizontal components:</p>
+<li>Vertical: $N\cos\theta$ balances gravity: $N\cos\theta = mg$</li>
+<li>Horizontal: $N\sin\theta$ supplies the centripetal force: $N\sin\theta = \dfrac{mv^2}{r}$</li>
+<p>Dividing the second equation by the first eliminates both $N$ and $m$:</p>
+$$\tan\theta = \frac{v^2}{rg}$$
+<p>This is a clean result: the ideal angle depends only on speed and radius, not on the vehicle's mass. A loaded truck and a motorcycle need the same banking angle to eliminate friction dependence at a given design speed.</p>
+<p><strong>Worked example.</strong> A highway curve has radius $r = 200\text{ m}$ and is designed for a target speed of $v = 25\text{ m/s}$ (about 90 km/h). Find the ideal banking angle.</p>
+$$\tan\theta = \frac{(25)^2}{(200)(9.8)} = \frac{625}{1960} \approx 0.319$$
+$$\theta \approx \arctan(0.319) \approx 17.7^\circ$$
+<p><strong>Problem-solving application.</strong> Real roads are built for a <em>range</em> of speeds, not one exact value, so engineers pick $\theta$ for a moderate design speed and rely on friction to handle deviations above or below it. If a car travels faster than the ideal speed for a given $\theta$, the banking alone is insufficient and friction must supply the extra centripetal force, directed down the slope; if slower, friction acts up the slope to prevent sliding inward. This is why icy banked curves — where friction vanishes — become dangerous specifically for vehicles traveling faster or slower than the design speed, even though the banking itself hasn't changed.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

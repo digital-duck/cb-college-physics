@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Average Acceleration | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="average-acceleration">Average Acceleration</h2>
+<p><strong>定义</strong></p>
+<p>平均加速度（average acceleration）描述物体速度在一段时间内的变化快慢，定义为速度改变量与所用时间的比值：</p>
+$$
+\bar{a} = \frac{\Delta v}{\Delta t} = \frac{v_f - v_i}{t_f - t_i}
+$$
+<p>其中 $v_i$、$v_f$ 分别为初速度和末速度，$t_i$、$t_f$ 为对应时刻。由于速度 $v$ 是矢量，平均加速度 $\bar{a}$ 同样是矢量——它不仅描述速度大小变化的快慢，也描述方向变化的快慢。国际单位制（SI）下，速度单位为 m/s，时间单位为 s，因此加速度的单位是 $\text{m/s}^2$（米每二次方秒）。需要强调的是，$\bar{a}$ 是整个时间段内的"平均效果"，并不表示物体在该区间内每一时刻的加速度都相同；若要描述某一瞬间的加速度，需要令 $\Delta t \to 0$，得到瞬时加速度。</p>
+<p><strong>例题</strong></p>
+<p>一辆汽车沿直线行驶，在 $t_i = 0\,\text{s}$ 时速度为 $v_i = 10\,\text{m/s}$，经过 $5\,\text{s}$ 后速度增加到 $v_f = 25\,\text{m/s}$。求这段时间内的平均加速度。</p>
+<p>代入公式：</p>
+$$
+\bar{a} = \frac{v_f - v_i}{t_f - t_i} = \frac{25 - 10}{5 - 0} = \frac{15}{5} = 3\,\text{m/s}^2
+$$
+<p>结果为正值，表示加速度方向与所设正方向（即速度增大的方向）一致，汽车在加速。</p>
+<p><strong>解题应用</strong></p>
+<p>平均加速度常用于分析物体在给定时间内速度变化的整体趋势，尤其是当速度并非均匀变化（例如刹车、加速踩油门等真实场景）时。解题时应注意：</p>
+<li><strong>符号方向</strong>：一维运动中先设定正方向，速度和加速度的正负号表示方向，负值的 $\bar{a}$ 并不一定意味着"减速"，而要结合速度方向判断——例如物体在负方向上速度绝对值增大，其加速度也为负，但物体其实在加速。</li>
+<li><strong>反解未知量</strong>：公式可变形求解任一未知量，如 $v_f = v_i + \bar{a}\,\Delta t$，这是运动学中常用的推导起点。</li>
+<li><strong>单位一致性</strong>：代入计算前务必统一时间与速度的单位，避免混用 km/h 与 m/s 导致的数值错误。</li>
+<p>掌握平均加速度是进一步学习瞬时加速度、匀加速直线运动方程（如 $v = v_0 + at$）以及牛顿第二定律 $F = ma$ 的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

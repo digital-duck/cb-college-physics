@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gravitational Waves | College Physics Ch34</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="gravitational-waves">Gravitational Waves</h2>
+<p><strong>定义</strong></p>
+<p>引力波是时空曲率的扰动，由加速的质量（尤其是非球对称分布的质量系统）产生，并以光速 $c$ 向外传播。广义相对论将引力描述为时空几何的弯曲，而不是牛顿意义上的"力"；当大质量物体（如双黑洞或双中子星）相互绕转时，时空本身会产生周期性的拉伸与压缩，这种扰动脱离波源独立传播，即为引力波。爱因斯坦场方程在弱场近似下线性化后，度规扰动 $h_{\mu\nu}$ 满足波动方程：</p>
+$$\Box h_{\mu\nu} = -\frac{16\pi G}{c^4} T_{\mu\nu}$$
+<p>其中 $\Box = \frac{1}{c^2}\partial_t^2 - \nabla^2$ 是达朗贝尔算符，$T_{\mu\nu}$ 是能量-动量张量。在真空中（$T_{\mu\nu}=0$），该方程简化为标准波动方程 $\Box h_{\mu\nu} = 0$，其解以光速传播，具有两种独立的偏振模式（"+"模式和"×"模式）。</p>
+<p><strong>理论必要性说明</strong>：与电磁辐射类比，电磁波源于变化的电偶极矩（因为不存在负电荷，单极辐射被禁止）；引力波则要求质量四极矩（quadrupole moment）随时间变化，因为质量单极（总质量守恒）和质量偶极（动量守恒）都不能产生辐射。辐射功率由四极公式给出：</p>
+$$P = \frac{G}{5c^5}\left\langle \dddot{Q}_{ij}\dddot{Q}^{ij} \right\rangle$$
+<p>其中 $Q_{ij}$ 是约化四极矩张量。这解释了为何引力波极其微弱——分母中的 $c^5$ 使得只有天体物理尺度的致密天体（如双黑洞并合）才能产生可探测的信号。</p>
+<p><strong>应用实例</strong></p>
+<p>以双中子星系统为例：轨道半径 $r$、总质量 $M$ 的双星系统，其引力波辐射导致轨道能量损失，轨道半径按下式收缩：</p>
+$$\frac{dr}{dt} = -\frac{64}{5}\frac{G^3 m_1 m_2 (m_1+m_2)}{c^5 r^3}$$
+<p>这一"轨道衰减"效应正是 LIGO 于 2015 年首次探测到的信号（GW150914）——两个约 30 倍太阳质量的黑洞并合前最后 0.2 秒内，轨道频率从 35 Hz 上升至 250 Hz，形成特征性的"啁啾"（chirp）波形。通过测量啁啾频率的变化率，可反推出系统的"啁啾质量" $\mathcal{M} = (m_1 m_2)^{3/5}/(m_1+m_2)^{1/5}$，这是天文学中直接从波形数据求解物理参数的典型问题求解范式。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch34: Frontiers of Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

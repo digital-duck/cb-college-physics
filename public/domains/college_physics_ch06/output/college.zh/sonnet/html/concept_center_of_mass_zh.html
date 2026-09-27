@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Center Of Mass | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="center-of-mass">Center Of Mass</h2>
+<p><strong>定义</strong></p>
+<p>质心（center of mass）是一个系统中质量分布的加权平均位置，可以将整个系统的质量视为集中于此点，用于分析平动和转动效应。对于由 $n$ 个质点组成的系统，若第 $i$ 个质点质量为 $m_i$，位置矢量为 $\vec{r}_i$，则质心位置定义为：</p>
+$$
+\vec{R}_{cm} = \frac{\sum_{i=1}^{n} m_i \vec{r}_i}{\sum_{i=1}^{n} m_i} = \frac{1}{M}\sum_{i=1}^{n} m_i \vec{r}_i
+$$
+<p>其中 $M = \sum m_i$ 是系统总质量。对于连续质量分布（如刚体），求和变为积分：</p>
+$$
+\vec{R}_{cm} = \frac{1}{M}\int \vec{r}\, dm
+$$
+<p>质心之所以重要，是因为牛顿第二定律对复杂系统同样成立：系统所受合外力等于总质量乘以质心的加速度，即 $\vec{F}_{ext} = M\vec{a}_{cm}$，即使系统内部各部分正在做复杂的相对运动或转动。</p>
+<p><strong>例题</strong></p>
+<p>考虑一根质量分布不均匀的细棒，长度为 $2\,\text{m}$，左端质量为 $3\,\text{kg}$，位于 $x=0$；右端质量为 $1\,\text{kg}$，位于 $x=2\,\text{m}$（视为两个质点近似）。质心位置为：</p>
+$$
+x_{cm} = \frac{(3)(0) + (1)(2)}{3+1} = \frac{2}{4} = 0.5\,\text{m}
+$$
+<p>质心更靠近质量较大的一端，符合直觉：质心是"加权"平均，而非几何中点。</p>
+<p><strong>问题求解应用</strong></p>
+<p>质心的核心用途在于将复杂多体问题简化为单质点问题。例如，分析一个正在翻滚的扳手抛向空中的运动：扳手的每一点轨迹都很复杂，但其质心必然沿抛物线运动，因为只有重力这一外力作用于质心。</p>
+<p>求解策略：</p>
+<li>若问题涉及<strong>外力如何影响系统整体运动</strong>（抛体、碰撞后系统运动），聚焦于质心运动方程 $\vec{F}_{ext} = M\vec{a}_{cm}$。</li>
+<li>若涉及<strong>离散质点组合</strong>，直接套用求和公式；若为<strong>连续刚体</strong>（如三角板、圆盘），利用对称性简化积分——对称轴上必有质心。</li>
+<li>组合体问题（如挖去一部分的圆盘）：可用"负质量法"，将挖去部分视为负质量质点，与整体质心公式叠加计算，避免重新积分。</li>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

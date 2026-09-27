@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transformer | College Physics Ch23</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="变压器">变压器</h2>
+<p>变压器利用两个绕在共同铁芯上的线圈——原线圈（primary）和副线圈（secondary）——之间的互感现象，实现交流电压的升高或降低。当原线圈通入交变电流时，铁芯中产生随时间变化的磁通量 $\Phi(t)$，根据法拉第电磁感应定律，这一变化磁通会在原、副线圈中分别感应出电动势：</p>
+$$
+V_p = N_p \frac{d\Phi}{dt}, \qquad V_s = N_s \frac{d\Phi}{dt}
+$$
+<p>由于铁芯将磁通几乎无损地耦合到两个线圈，两者共享同一个 $d\Phi/dt$，两式相除即得变压器的核心关系：</p>
+$$
+\frac{V_s}{V_p} = \frac{N_s}{N_p}
+$$
+<p>其中 $N_p$、$N_s$ 分别为原、副线圈的匝数。若变压器理想（无功率损耗），输入功率必须等于输出功率，即 $V_p I_p = V_s I_p$，由此推出电流的变化与电压相反：</p>
+$$
+\frac{I_s}{I_p} = \frac{N_p}{N_s}
+$$
+<p>也就是说，电压升高多少倍，电流就相应降低多少倍——变压器不能凭空产生能量，只能在电压和电流之间做权衡。</p>
+<p><strong>例题</strong>：一台理想变压器原线圈有 500 匝，副线圈有 100 匝，原线圈接入 $220\ \text{V}$ 交流电源，副线圈负载消耗电流 $2\ \text{A}$。求副线圈电压及原线圈电流。</p>
+<p>由匝数比：</p>
+$$
+V_s = V_p \cdot \frac{N_s}{N_p} = 220 \times \frac{100}{500} = 44\ \text{V}
+$$
+<p>由功率守恒（理想变压器）：</p>
+$$
+I_p = I_s \cdot \frac{N_s}{N_p} = 2 \times \frac{100}{500} = 0.4\ \text{A}
+$$
+<p>验证：$P_p = 220 \times 0.4 = 88\ \text{W}$，$P_s = 44 \times 2 = 88\ \text{W}$，功率相等，符合理想变压器假设。</p>
+<p><strong>应用</strong>：远距离输电正是利用这一原理——发电厂先用升压变压器将电压提高到数十万伏、电流相应降低，以减少输电线上因电流平方项 $I^2R$ 造成的热损耗；到达用户端后再用降压变压器逐级还原为安全电压（如 220 V）。理解 $V_s/V_p = N_s/N_p$ 与其电流反比关系，是分析任何交流电力系统能量分配问题的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch23: Electromagnetic Induction, AC Circuits, and Electrical Technologies (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

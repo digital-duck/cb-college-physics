@@ -11,6 +11,8 @@ MathJax = {
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
@@ -26,6 +28,12 @@ p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
 footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
       font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
 footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
 .page{max-width:780px;margin:0 auto;padding:40px 32px}
 section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
 section:first-of-type{border-top:none;padding-top:0}
@@ -35,17 +43,23 @@ section:first-of-type{border-top:none;padding-top:0}
 <div class="page">
   <main>
     <h2 id="average-acceleration">Average Acceleration</h2>
-<p>Average acceleration measures how fast velocity changes over a time interval. It is defined as</p>
-$$\bar{a} = \frac{\Delta v}{\Delta t} = \frac{v_f - v_i}{t_f - t_i}$$
-<p>where $v_i$ and $v_f$ are the initial and final velocities and $t_i$, $t_f$ mark the interval's endpoints. Because velocity is a vector, so is average acceleration: it has both magnitude and direction, and its SI unit is meters per second squared ($\text{m/s}^2$). A positive acceleration doesn't always mean "speeding up" — it means the velocity is changing in the positive direction, which could mean speeding up while moving forward or slowing down while moving backward.</p>
-<p><strong>Worked example.</strong> A car traveling east at $v_i = 12\ \text{m/s}$ speeds up to $v_f = 28\ \text{m/s}$ over a time interval of $\Delta t = 8\ \text{s}$. Its average acceleration is</p>
-$$\bar{a} = \frac{28\ \text{m/s} - 12\ \text{m/s}}{8\ \text{s}} = \frac{16\ \text{m/s}}{8\ \text{s}} = 2\ \text{m/s}^2 \text{ (east)}$$
-<p>This means that, on average, the car's eastward velocity increased by 2 m/s during every second of the 8-second interval — though the <em>instantaneous</em> acceleration at any given moment could have been higher or lower, since $\bar{a}$ only reports the net change smoothed over the whole interval.</p>
-<p><strong>Problem-solving application.</strong> Average acceleration is most useful when you're given velocity data at two points in time and asked to characterize the motion between them, without needing (or having) a detailed record of what happened in between. Suppose a cyclist decelerates from $18\ \text{m/s}$ to a stop in $4.5\ \text{s}$ while braking. Rearranging the definition,</p>
-$$\Delta v = \bar{a}\,\Delta t \implies \bar{a} = \frac{0 - 18\ \text{m/s}}{4.5\ \text{s}} = -4\ \text{m/s}^2$$
-<p>The negative sign indicates the acceleration points opposite to the direction of motion — consistent with braking. This same rearranged relationship, $\Delta v = \bar{a}\,\Delta t$, lets you solve for an unknown final velocity, initial velocity, or elapsed time whenever the other two quantities and the average acceleration are known, making it a core algebraic tool for one-dimensional kinematics problems.</p>
+<p>Average acceleration measures how quickly velocity changes over a time interval. It is defined as</p>
+$$
+\bar{a} = \frac{\Delta v}{\Delta t} = \frac{v_f - v_i}{t_f - t_i}
+$$
+<p>where $v_f$ and $v_i$ are the final and initial velocities and $t_f - t_i$ is the elapsed time. Because velocity is a vector, so is acceleration: it points in the direction of the <em>change</em> in velocity, not necessarily in the direction of motion. Its SI unit is meters per second squared ($\text{m/s}^2$), reflecting that it is a rate of a rate — a change in (m/s) per second.</p>
+<p><strong>Worked example.</strong> A car traveling east at $v_i = 12\ \text{m/s}$ speeds up to $v_f = 28\ \text{m/s}$ over $\Delta t = 8\ \text{s}$. Taking east as positive,</p>
+$$
+\bar{a} = \frac{28 - 12}{8} = \frac{16}{8} = 2\ \text{m/s}^2 \text{ (east)}
+$$
+<p>The car gains 2 m/s of eastward speed every second, on average. If instead the car slowed from 28 m/s to 12 m/s over the same interval, $\bar{a} = -2\ \text{m/s}^2$: the negative sign indicates deceleration, i.e., acceleration directed opposite to the velocity.</p>
+<p><strong>Problem-solving application.</strong> The real power of $\bar{a} = \Delta v/\Delta t$ is using it to solve for an unknown among $v_i$, $v_f$, $\Delta t$, or $\bar{a}$ by algebraic rearrangement, e.g. $v_f = v_i + \bar{a}\,\Delta t$. Suppose a cyclist decelerates from $18\ \text{m/s}$ at a constant average rate of $-3\ \text{m/s}^2$ and you need the time to reach $6\ \text{m/s}$:</p>
+$$
+\Delta t = \frac{v_f - v_i}{\bar{a}} = \frac{6 - 18}{-3} = 4\ \text{s}
+$$
+<p>A key distinction for problem-solving: <em>average</em> acceleration uses the net change over the whole interval, while <em>instantaneous</em> acceleration (the derivative $dv/dt$) describes the rate at a single moment. When motion is non-uniform — as on a velocity-time graph with curvature — the average acceleration equals the slope of the straight line connecting the initial and final points, not the slope of the curve itself. Recognizing which quantity a problem asks for, and whether acceleration is constant, determines whether $\bar{a} = \Delta v/\Delta t$ alone suffices or whether calculus-based kinematics equations are needed.</p>
   </main>
-  <footer class="spl-credit">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></footer>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
 </div>
 </body>
 </html>

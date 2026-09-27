@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proper Length | College Physics Ch28</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="proper-length">Proper Length</h2>
+<p><strong>定义</strong></p>
+<p>固有长度 $L_0$ 是指物体的长度在与该物体相对静止的参考系中所测得的数值。换句话说,只有当观察者与被测物体之间没有相对运动时,他所测得的长度才是"固有"的——这是该物体长度的最大可能值。若某个观察者相对物体以速度 $v$ 运动,他测得的长度 $L$ 会小于 $L_0$,这就是狭义相对论中的<strong>长度收缩</strong>效应:</p>
+$$
+L = L_0\sqrt{1 - \frac{v^2}{c^2}} = \frac{L_0}{\gamma}
+$$
+<p>其中 $\gamma = \dfrac{1}{\sqrt{1-v^2/c^2}}$ 为洛伦兹因子,$c$ 为真空中光速。需要强调的是,长度收缩只发生在运动方向上,垂直于运动方向的尺寸不受影响。</p>
+<p><strong>worked example(计算示例)</strong></p>
+<p>一艘飞船在地面参考系中静止时测得长度为 $L_0 = 100\ \text{m}$。若它以 $v = 0.8c$ 的速度相对地面飞行,地面观察者测得的飞船长度是多少?</p>
+$$
+\gamma = \frac{1}{\sqrt{1-0.8^2}} = \frac{1}{\sqrt{0.36}} = \frac{1}{0.6} \approx 1.667
+$$
+$$
+L = \frac{L_0}{\gamma} = \frac{100\ \text{m}}{1.667} \approx 60\ \text{m}
+$$
+<p>地面观察者看到的飞船长度收缩为 60 米,而飞船内的宇航员用自己携带的尺子测量,得到的仍然是固有长度 100 米——两者都是"正确"的,只是相对于不同的参考系。</p>
+<p><strong>问题求解应用</strong></p>
+<p>处理长度收缩问题的关键在于<strong>先确定哪个参考系是"静止系"</strong>,即固有长度所在的系。常见错误是把运动观察者测得的长度误当作 $L_0$。解题步骤通常是:</p>
+<li>明确哪个物体/参考系与被测长度相对静止,该长度即为 $L_0$;</li>
+<li>计算相对速度对应的 $\gamma$;</li>
+<li>代入 $L = L_0/\gamma$ 求解运动观察者测得的收缩长度,或反解 $L_0 = \gamma L$ 求原长。</li>
+<p>例如,若已知运动观察者测得粒子加速器隧道长度为 $L = 2\ \text{km}$,而粒子以 $v = 0.99c$($\gamma \approx 7.09$)运动,则实验室(隧道静止系)中的固有长度为 $L_0 = \gamma L \approx 14.2\ \text{km}$——这类反推常出现在宇宙射线粒子穿越大气层的经典问题中。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch28: Special Relativity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermonuclear Bomb | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="thermonuclear-bomb">Thermonuclear Bomb</h2>
+<p><strong>定义</strong></p>
+<p>热核武器（氢弹）是一种两级核武器：第一级是裂变弹（原子弹），起爆后产生的强辐射（主要是X射线）被用来压缩并点燃第二级中的核聚变燃料——通常是氘化锂（$^6\text{LiD}$）。这种"辐射内爆"设计（Teller-Ulam构型）使聚变反应得以在极短时间内发生，释放出远超纯裂变弹的能量，当量可达百万吨TNT（megaton）级别，理论上不受临界质量限制，几乎可以无限放大。</p>
+<p><strong>物理原理与能量计算</strong></p>
+<p>聚变燃料点燃后发生的核心反应链是：</p>
+$$
+n + {}^{6}\text{Li} \rightarrow {}^{3}\text{H} + {}^{4}\text{He}
+$$
+$$
+{}^{2}\text{H} + {}^{3}\text{H} \rightarrow {}^{4}\text{He} + n + 17.6\ \text{MeV}
+$$
+<p>裂变弹产生的中子先与锂-6反应生成氚（$^3\text{H}$），氚再与氘（$^2\text{H}$）发生D-T聚变，释放的中子又可继续引发更多锂-6反应，形成自持链式过程。</p>
+<p>聚变释放的能量来源于质量亏损，由爱因斯坦质能方程给出：</p>
+$$
+E = \Delta m \, c^2
+$$
+<p>其中 $\Delta m$ 是反应前后总质量的差值。以单次D-T反应为例，$17.6\ \text{MeV}$ 对应的质量亏损约为 $3.13\times10^{-29}\ \text{kg}$，看似微不足道，但因为 $c^2 \approx 9\times10^{16}\ \text{m}^2/\text{s}^2$，加上一次热核爆炸中涉及的反应粒子数量级高达 $10^{25}$ 以上，总能量释放便可达到 $10^{15}$ 焦耳（约合百万吨TNT）量级。</p>
+<p><strong>问题解决应用</strong></p>
+<p>理解热核反应的关键在于对比"每核子结合能"曲线：轻核（如氢、锂）聚变为中等质量核（如氦）时，结合能显著上升，释放的能量差即为可用能量。这也是为什么聚变反应比裂变反应（重核分裂为中等质量核）在单位质量燃料上能释放更高能量密度——氢弹的"虚拟无限当量"正是源于聚变燃料可以不断堆叠，而不像裂变受临界质量上限约束。这一原理同样是可控核聚变（如托卡马克装置）追求"劳森判据"（Lawson criterion）的物理基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resolving Power | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="resolving-power">Resolving Power</h2>
+<p><strong>定义</strong></p>
+<p>分辨本领（resolving power）是指光学系统能够将两个靠得很近的点光源区分为两个独立像点的能力，其物理极限由光的衍射决定，而非透镜制造精度。当一束平行光通过一个直径为 $D$ 的圆形孔径（如望远镜物镜或人眼瞳孔）时，即使成像系统完全无像差，光也会因衍射而扩散成一个中央亮斑加同心环纹的图样，称为<strong>艾里斑（Airy disk）</strong>。两个点光源的艾里斑若靠得太近，其光强分布会重叠，导致人眼或探测器无法将它们区分为两个独立的点。</p>
+<p>判断"恰好能分辨"的标准称为<strong>瑞利判据（Rayleigh criterion）</strong>：当一个点光源衍射图样的中央亮斑峰值，恰好落在另一个点光源衍射图样的第一暗纹处，两者被认为是"刚好可分辨"。由此可得两点光源能被分辨的最小角间距：</p>
+$$
+\theta_{\min} = 1.22\,\frac{\lambda}{D}
+$$
+<p>其中 $\lambda$ 为波长，$D$ 为孔径直径，$\theta_{\min}$ 以弧度为单位。系数 $1.22$ 来自圆形孔径衍射的贝塞尔函数零点位置，是圆孔（而非狭缝）衍射的特有结果。</p>
+<p><strong>例题</strong></p>
+<p>某天文望远镜物镜直径 $D = 2.4\ \text{m}$（类似哈勃望远镜），观测波长 $\lambda = 550\ \text{nm}$（可见光中段）的星光。求其最小可分辨角。</p>
+$$
+\theta_{\min} = 1.22 \times \frac{550\times 10^{-9}\ \text{m}}{2.4\ \text{m}} \approx 2.8\times 10^{-7}\ \text{rad}
+$$
+<p>换算为角秒（$1\ \text{rad} = 206265''$），约为 $0.057''$——这意味着该望远镜理论上能分辨月球表面相距约 100 米的两个点。</p>
+<p><strong>解题应用</strong></p>
+<p>分辨本领的公式常用于两类反向问题：（1）已知所需角分辨率，求所需孔径 $D = 1.22\lambda/\theta_{\min}$，用于设计望远镜或显微物镜；（2）已知孔径与波长，求可分辨的最小实际距离 $d_{\min} = \theta_{\min}\times L$（$L$ 为物距），例如判断卫星相机能否分辨地面两辆相邻的汽车。解题时需注意：波长越短（如紫外或电子束）、孔径越大，分辨本领越高——这正是电子显微镜（波长远小于可见光）能达到纳米级分辨率的根本原因。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

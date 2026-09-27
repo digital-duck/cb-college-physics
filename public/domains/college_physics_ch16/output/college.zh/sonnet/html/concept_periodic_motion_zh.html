@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Periodic Motion | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="periodic-motion-周期运动">Periodic Motion（周期运动）</h2>
+<p><strong>定义</strong></p>
+<p>周期运动是指物体的运动状态每隔固定时间间隔重复一次的运动。这个固定的时间间隔称为周期，记作 $T$（单位：秒），其倒数 $f = 1/T$ 称为频率（单位：赫兹，Hz），表示单位时间内重复的次数。若一个运动量 $x(t)$（如位置、速度）满足</p>
+$$x(t + T) = x(t), \quad \text{对所有 } t$$
+<p>则称该运动以 $T$ 为周期。周期运动广泛存在于自然界与工程系统中：地球公转、心脏跳动、单摆摆动、电路中的交流电，本质上都是周期运动。其中最重要的一类是简谐运动（simple harmonic motion），其位置随时间按正弦函数变化：</p>
+$$x(t) = A\cos(\omega t + \varphi)$$
+<p>这里 $A$ 是振幅，$\omega = 2\pi/T = 2\pi f$ 是角频率，$\varphi$ 是初相位。简谐运动之所以重要，是因为许多复杂的周期运动（傅里叶定理告诉我们）都可以分解为若干简谐运动的叠加。</p>
+<p><strong>例题</strong></p>
+<p>一个弹簧振子的位置由 $x(t) = 5\cos(4\pi t)$（单位：厘米）描述。求其振幅、角频率、周期与频率。</p>
+<li>振幅：直接读出 $A = 5\ \text{cm}$。</li>
+<li>角频率：对比标准形式，$\omega = 4\pi\ \text{rad/s}$。</li>
+<li>周期：由 $\omega = 2\pi/T$ 得 $T = 2\pi/\omega = 2\pi/(4\pi) = 0.5\ \text{s}$。</li>
+<li>频率：$f = 1/T = 2\ \text{Hz}$。</li>
+<p>即该振子每 $0.5$ 秒完成一次完整振动，每秒振动 $2$ 次。</p>
+<p><strong>问题求解应用</strong></p>
+<p>周期运动分析的核心技巧是：从物理情境中提取 $\omega$（角频率），再反推 $T$ 或 $f$，或反过来根据已知周期构造运动方程。</p>
+<p><em>练习</em>：单摆在小角度近似下的角频率为 $\omega = \sqrt{g/L}$，其中 $g = 9.8\ \text{m/s}^2$，摆长 $L = 1\ \text{m}$。求周期 $T$，并判断若摆长增加到 $4$ 米，周期如何变化。</p>
+<p>解：$\omega = \sqrt{9.8/1} \approx 3.13\ \text{rad/s}$，故 $T = 2\pi/\omega \approx 2.01\ \text{s}$。当 $L$ 变为 $4$ 米时，$\omega' = \sqrt{9.8/4} = \omega/2$，因此 $T' = 2T \approx 4.02\ \text{s}$——周期与摆长的平方根成正比，摆长增大 4 倍，周期只增大 2 倍。这一比例关系是分析周期运动时的常见推理模式：抓住变量间的函数依赖，而非重新代入所有数值计算。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

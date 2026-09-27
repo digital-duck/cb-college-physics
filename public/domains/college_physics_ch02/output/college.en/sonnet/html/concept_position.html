@@ -11,6 +11,8 @@ MathJax = {
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
@@ -26,6 +28,12 @@ p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
 footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
       font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
 footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
 .page{max-width:780px;margin:0 auto;padding:40px 32px}
 section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
 section:first-of-type{border-top:none;padding-top:0}
@@ -35,11 +43,11 @@ section:first-of-type{border-top:none;padding-top:0}
 <div class="page">
   <main>
     <h2 id="position">Position</h2>
-<p>Position specifies where an object is located at a given instant, measured relative to a chosen reference frame — a coordinate system with an origin, a set of axes, and a unit of measurement. Because position is always relative, the number describing it depends entirely on the reference point you pick. A car might be "at mile marker 50" relative to a highway, or "3 meters from the wall" relative to a room. In one dimension, position is a single signed number, $x$, often measured in meters, where the sign indicates direction from the origin (positive to the right, negative to the left, by convention). In two or three dimensions, position requires more than one number to pin down — a pair $(x, y)$ or a triple $(x, y, z)$ — but the one-dimensional case captures the core idea and is what the rest of this section uses.</p>
-<p><strong>Worked example.</strong> Suppose a runner starts a race and a stopwatch begins at $t = 0$. Define the reference frame with the starting line as the origin and the positive direction pointing down the track. At $t = 2\text{ s}$, the runner is at $x = 10\text{ m}$; at $t = 4\text{ s}$, she is at $x = 22\text{ m}$. These two values are positions — snapshots of location at specific times. Note what position does <em>not</em> tell you directly: the total distance traveled (if she weaved sideways, distance could exceed the straight-line displacement) or her speed. Position is a description of "where," not "how far traveled" or "how fast."</p>
-<p><strong>Problem-solving application.</strong> Choosing the reference frame wisely is often the key move in solving a mechanics problem. Consider two blocks connected by a string over a pulley, one hanging and one on a table. Defining a consistent positive direction for each block (e.g., "down" as positive for the hanging block, matching the direction of its motion) lets the relationship linking their positions become a simple algebraic statement rather than a sign-error minefield: as one block's position increases, the other's decreases by the same amount, since the string length is fixed. When solving multi-object or multi-stage problems, always state your reference frame explicitly before writing equations: origin, positive direction, and units. This single habit eliminates a large fraction of errors in kinematics problems, since velocity and acceleration are both defined as rates of change of position, and an inconsistent frame propagates errors through every subsequent calculation.</p>
+<p>Position specifies where an object is located at a given instant, always measured relative to a chosen reference frame — an origin, a set of axes, and a choice of units. Without a reference frame, "position" is meaningless: saying a car is "5 km away" only makes sense once you fix what it is 5 km away <em>from</em>. In one dimension, position is written as a signed number $x(t)$, where the sign indicates direction from the origin (positive to the right, negative to the left, by convention). In two or three dimensions, position is a vector $\vec{r}(t) = x(t)\hat{i} + y(t)\hat{j} + z(t)\hat{k}$, whose components are the projections onto each axis — this is the same idea as the one-dimensional case, just tracked along more than one axis at once.</p>
+<p><strong>Worked example.</strong> A runner starts at the 0 m mark on a straight track. At $t = 0\,\text{s}$ she is at $x = 0\,\text{m}$; at $t = 4\,\text{s}$ she is at $x = 28\,\text{m}$. Choosing the starting line as the origin and "forward" as positive, her positions are $x(0) = 0\,\text{m}$ and $x(4) = 28\,\text{m}$. If instead we had chosen the finish line (100 m away) as the origin, with "backward toward the start" as positive, the same physical points would be recorded as $x(0) = 100\,\text{m}$ and $x(4) = 72\,\text{m}$. The runner's motion hasn't changed — only the numbers describing it have, because the reference frame changed. This is the key conceptual point: position is not an intrinsic property of an object, but a relationship between the object and an observer's chosen frame.</p>
+<p><strong>Problem-solving application.</strong> Because position depends on frame choice, the first step in any kinematics problem is to define the origin, positive direction, and units explicitly — before writing any equations or comparing measurements. Once a frame is fixed, every subsequent position value in the problem must be reported in that same frame; switching origins or flipping the positive direction partway through a solution is the single most common source of sign errors in introductory mechanics. This matters especially in multi-object problems — for instance, two cars approaching each other on a highway — where both objects' positions must be expressed relative to the <em>same</em> origin and the <em>same</em> positive direction before any comparison between them is meaningful. A useful habit is to sketch the frame (origin marked, positive direction as an arrow) before assigning any numbers, since a clear diagram makes inconsistent frame choices immediately visible.</p>
   </main>
-  <footer class="spl-credit">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></footer>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
 </div>
 </body>
 </html>

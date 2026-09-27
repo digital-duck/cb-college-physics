@@ -11,6 +11,8 @@ MathJax = {
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
@@ -26,6 +28,12 @@ p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
 footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
       font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
 footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
 .page{max-width:780px;margin:0 auto;padding:40px 32px}
 section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
 section:first-of-type{border-top:none;padding-top:0}
@@ -35,16 +43,19 @@ section:first-of-type{border-top:none;padding-top:0}
 <div class="page">
   <main>
     <h2 id="elapsed-time">Elapsed Time</h2>
-<p>Elapsed time is the interval between the start and end of a motion, defined as $\Delta t = t_f - t_0$, where $t_0$ is the beginning time and $t_f$ is the ending time. It is always measured in seconds (or a converted unit like minutes or hours) and, for physical motion, is always positive — an object cannot finish moving before it starts. Elapsed time is the denominator in nearly every rate calculation you will encounter in kinematics: average velocity, average acceleration, and average speed are all defined as some change divided by $\Delta t$.</p>
-<p><strong>Worked example.</strong> A cyclist passes a marker at $t_0 = 2.5\ \text{s}$ on a stopwatch and passes a second marker at $t_f = 9.1\ \text{s}$. The elapsed time is</p>
-$$\Delta t = t_f - t_0 = 9.1\ \text{s} - 2.5\ \text{s} = 6.6\ \text{s}.$$
-<p>If the markers are $52.8\ \text{m}$ apart, the cyclist's average velocity over that interval is $v_{\text{avg}} = \dfrac{\Delta x}{\Delta t} = \dfrac{52.8\ \text{m}}{6.6\ \text{s}} = 8.0\ \text{m/s}$.</p>
-<p><strong>Problem-solving application.</strong> Elapsed time calculations become error-prone in two common situations, both worth watching for:</p>
-<li><em>Non-zero starting time.</em> Motion problems rarely begin their clock at $t_0 = 0$. If a ball is launched at $t_0 = 3.2\ \text{s}$ and lands at $t_f = 5.7\ \text{s}$, the time of flight is $\Delta t = 2.5\ \text{s}$ — not $5.7\ \text{s}$. Always subtract the given $t_0$ rather than assuming it is zero.</li>
-<li><em>Clock-time versus interval.</em> Times given as clock readings (e.g., "2:15 p.m." to "2:48 p.m.") must first be converted to a common time base — here, minutes elapsed since a reference point — before subtracting. Working in clock format directly (48 − 15 = 33, ignoring the hour) only works when both times share the same hour; crossing an hour or day boundary requires converting everything to a single unit (seconds or minutes) first.</li>
-<p>In multi-stage motion problems — where an object accelerates, then travels at constant velocity, then decelerates — track $\Delta t$ separately for each stage. The total elapsed time is the sum of the stage intervals, but average velocity for the whole trip is <em>not</em> the average of the stage velocities; it is total displacement divided by total elapsed time.</p>
+<p>Elapsed time, denoted $\Delta t$, is the duration between the start and end of a motion or process. It is defined as</p>
+$$
+\Delta t = t_f - t_0
+$$
+<p>where $t_0$ is the initial (beginning) time and $t_f$ is the final (ending) time, both measured in seconds (s) in SI units. Elapsed time is always a positive scalar when $t_f$ occurs after $t_0$; the subtraction convention exists precisely so that a later time minus an earlier time yields a positive duration. Note that $t_0$ and $t_f$ are <em>clock readings</em> (points on a timeline), while $\Delta t$ is an <em>interval</em> — this distinction matters because $t_0$ need not be zero. A stopwatch might read $t_0 = 3.0\text{ s}$ when you start observing a moving object, not because time itself began then, but because that is when your measurement window opened.</p>
+<p><strong>Worked example.</strong> A sprinter is timed starting when a starting gun fires at $t_0 = 0\text{ s}$ and finishing when she crosses the line at $t_f = 11.3\text{ s}$. Her elapsed time is</p>
+$$
+\Delta t = 11.3\text{ s} - 0\text{ s} = 11.3\text{ s}.
+$$
+<p>Now suppose a race official's camera starts recording at $t_0 = 2.0\text{ s}$ (a few seconds before the gun) and captures the finish at $t_f = 13.3\text{ s}$ on the camera's internal clock. The elapsed time is still $\Delta t = 13.3 - 2.0 = 11.3\text{ s}$ — identical to before, confirming that elapsed time is independent of where the clock's zero is set.</p>
+<p><strong>Problem-solving application.</strong> A common error is subtracting times in the wrong order or mixing units (minutes vs. seconds) before subtracting — always convert to a common unit first, then subtract, and check that $\Delta t > 0$ for forward-moving processes. For multi-stage motion (e.g., a car that accelerates, then cruises, then brakes), the total elapsed time is the sum of the elapsed times of each stage: $\Delta t_{\text{total}} = \Delta t_1 + \Delta t_2 + \Delta t_3$. For instance, if a trip involves 5.0 minutes of acceleration, 12.0 minutes of cruising, and 1.5 minutes of braking, the total elapsed time is $5.0 + 12.0 + 1.5 = 18.5$ minutes — a decomposition that will become essential once you start computing rates like velocity and acceleration, where $\Delta t$ serves as the timing measurement underlying every calculation.</p>
   </main>
-  <footer class="spl-credit">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></footer>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
 </div>
 </body>
 </html>

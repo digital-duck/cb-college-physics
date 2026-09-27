@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rocket Acceleration | College Physics Ch08</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="rocket-acceleration">Rocket Acceleration</h2>
+<p><strong>定义</strong></p>
+<p>火箭的运动是变质量系统动力学的经典案例：火箭通过持续喷出高速气体获得推力，而自身质量随时间不断减少。对系统应用动量守恒，可以得到火箭在任意时刻的净加速度：</p>
+$$
+a(t) = \frac{v_e}{m(t)}\left(-\frac{dm}{dt}\right) - g
+$$
+<p>其中 $v_e$ 为喷气相对于火箭的排气速度，$-\dfrac{dm}{dt}$ 为质量喷出率（正值，因为 $m(t)$ 在减小），$m(t)$ 为火箭在时刻 $t$ 的瞬时质量，$g$ 为重力加速度。第一项 $\dfrac{v_e}{m}\left(-\dfrac{dm}{dt}\right)$ 是推力加速度；第二项减去 $g$ 反映重力始终对抗上升运动。这个式子由齐奥尔科夫斯基火箭方程推导而来，其核心在于：<strong>火箭没有把外部质量当作"推蹬"的对象</strong>，它推动的是自己喷出的气体，反作用力由动量守恒保证。</p>
+<p><strong>推导要点（简要）</strong>：设时刻 $t$ 火箭质量为 $m$、速度为 $v$；经过 $dt$ 后喷出质量 $-dm$（相对火箭速度为 $v_e$，方向向后）。系统总动量守恒给出：</p>
+$$
+m\,dv = v_e\,(-dm) - mg\,dt
+$$
+<p>两边除以 $m\,dt$，即得上式加速度表达式。</p>
+<p><strong>工作实例</strong></p>
+<p>一枚火箭初始质量 $m_0 = 5000\ \text{kg}$，燃料燃烧速率为 $-\dfrac{dm}{dt} = 50\ \text{kg/s}$，排气速度 $v_e = 2500\ \text{m/s}$，取 $g = 9.8\ \text{m/s}^2$。</p>
+<p>在燃烧开始瞬间（$m = 5000\ \text{kg}$）：</p>
+$$
+a = \frac{2500 \times 50}{5000} - 9.8 = 25 - 9.8 = 15.2\ \text{m/s}^2
+$$
+<p>当燃烧 60 秒后，质量降为 $m = 5000 - 50\times 60 = 2000\ \text{kg}$：</p>
+$$
+a = \frac{2500 \times 50}{2000} - 9.8 = 62.5 - 9.8 = 52.7\ \text{m/s}^2
+$$
+<p><strong>问题求解应用</strong></p>
+<p>这说明即使推力（$v_e \cdot |dm/dt|$）恒定，加速度也会随质量减小而持续增大——这正是多级火箭设计的动机：抛弃已耗尽燃料的箭体，减小 $m$，从而在后续阶段用更小的推力获得更大的加速度。工程师在设计发射任务时，需要对 $a(t)$ 积分求出速度增量 $\Delta v$（即齐奥尔科夫斯基公式 $\Delta v = v_e \ln(m_0/m_f)$），以判断火箭能否达到轨道所需速度。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch8: Linear Momentum and Collisions (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

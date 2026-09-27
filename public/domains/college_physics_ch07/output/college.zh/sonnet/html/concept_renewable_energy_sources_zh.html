@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renewable Energy Sources | College Physics Ch07</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="renewable-energy-sources">Renewable Energy Sources</h2>
+<p><strong>定义</strong></p>
+<p>可再生能源是指太阳能、风能、水能和生物质能等能够被自然过程持续补充、在人类时间尺度上不会枯竭的能源。这与化石燃料（煤、石油、天然气）形成鲜明对比——后者的形成需要数百万年地质过程，一旦开采使用便无法在合理时间内恢复，属于有限资源。判断一种能源是否"可再生"的关键标准，不在于它是否"用不完"，而在于其补充速率是否等于或大于消耗速率。例如生物质能若过度砍伐森林而不给予恢复时间，也可能演变为事实上的不可再生消耗。</p>
+<p><strong>能量转换与效率分析</strong></p>
+<p>可再生能源系统的核心问题是能量转换效率。以太阳能光伏电池为例，其发电功率可表示为</p>
+$$
+P = \eta \cdot A \cdot I
+$$
+<p>其中 $\eta$ 为光电转换效率（典型单晶硅电池约 $20\%$–$22\%$），$A$ 为电池板面积（$\mathrm{m^2}$），$I$ 为太阳辐照强度（$\mathrm{W/m^2}$，地面标准条件约 $1000\ \mathrm{W/m^2}$）。</p>
+<p>对风能而言，可提取功率随风速呈三次方关系：</p>
+$$
+P = \frac{1}{2} \rho A v^3 C_p
+$$
+<p>其中 $\rho$ 为空气密度，$A$ 为风轮扫掠面积，$v$ 为风速，$C_p$ 为功率系数，其理论上限由贝兹极限（Betz limit）给出：</p>
+$$
+C_{p,\max} = \frac{16}{27} \approx 0.593
+$$
+<p>这一极限来自动量守恒推导：风力涡轮机必须让部分空气减速以提取动能，但若减速过多，气流会绕过涡轮机而非穿过它，因此存在最优减速比使提取功率最大化。</p>
+<p><strong>问题求解应用</strong></p>
+<p><strong>例题</strong>：某风力发电场，空气密度 $\rho = 1.225\ \mathrm{kg/m^3}$，风轮半径 $r = 40\ \mathrm{m}$，风速 $v = 10\ \mathrm{m/s}$，功率系数取贝兹极限的 $80\%$，求发电功率。</p>
+<p>解：扫掠面积 $A = \pi r^2 = \pi (40)^2 \approx 5027\ \mathrm{m^2}$；$C_p = 0.8 \times 0.593 = 0.474$。</p>
+$$
+P = \frac{1}{2}(1.225)(5027)(10)^3(0.474) \approx 1.46\ \mathrm{MW}
+$$
+<p>该例说明：由于风速呈三次方影响功率，选址时风速评估比涡轮尺寸更为关键——风速提升一倍，功率增至八倍。这正是风电场选址需精确测风数据的原因。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch7: Work, Energy, and Energy Resources (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Focal Point | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="focal-point-焦点">Focal Point(焦点)</h2>
+<p><strong>定义</strong></p>
+<p>焦点是光学系统中平行光线经透镜折射或经镜面反射后会聚(或看似发散而来)的特殊点。对于会聚系统(凸透镜、凹面镜),平行于主光轴入射的光线经系统作用后实际会聚于焦点;对于发散系统(凹透镜、凸面镜),平行光线经作用后呈发散状态,但反向延长线会相交于焦点——此时焦点是虚的,光线并未真正经过该点。焦点到透镜光心(或镜面顶点)的距离称为焦距,记作 $f$。焦距的正负号是重要的约定:会聚系统 $f>0$,发散系统 $f<0$。</p>
+<p>焦点的物理成因可由折射定律或反射定律推出。对薄透镜,利用近轴近似(光线与主轴夹角很小,$\sin\theta \approx \theta$),可推得薄透镜公式:</p>
+$$\frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{f}$$
+<p>其中 $d_o$ 为物距,$d_i$ 为像距。该公式的推导正是基于"平行光线会聚于焦点"这一定义,因此焦点不仅是几何位置,更是整个成像公式的锚点。</p>
+<p><strong>范例</strong></p>
+<p>考虑一凸透镜,焦距 $f = 10\text{ cm}$。一束平行光(如遥远星光)沿主轴方向入射,依焦点定义,这些光线必会聚于透镜后方 $10\text{ cm}$ 处——无论入射光束多宽,只要平行于主轴,都会聚于同一点。这正是望远镜物镜和放大镜"点燃纸张"实验的原理:太阳光可视为平行光,会聚于焦点处形成高能量密度的光斑。</p>
+<p><strong>问题求解应用</strong></p>
+<p>已知一凹面镜焦距 $f = 15\text{ cm}$,物体置于 $d_o = 30\text{ cm}$ 处,求像的位置。代入薄透镜(镜)公式:</p>
+$$\frac{1}{30} + \frac{1}{d_i} = \frac{1}{15} \implies \frac{1}{d_i} = \frac{1}{15}-\frac{1}{30} = \frac{1}{30} \implies d_i = 30\text{ cm}$$
+<p>由于 $d_i>0$,像为实像,位于镜前 $30\text{ cm}$ 处。这类问题的求解策略是:先明确焦点位置与符号(会聚为正、发散为负),再代入公式求解未知量,最后依正负号判断像的虚实与正倒——焦点的符号约定是整个光学计算体系的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

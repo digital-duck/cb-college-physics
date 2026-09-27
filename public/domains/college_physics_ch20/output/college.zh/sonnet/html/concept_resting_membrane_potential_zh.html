@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resting Membrane Potential | College Physics Ch20</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="resting-membrane-potential">Resting Membrane Potential</h2>
+<p>神经元在静息状态下，细胞膜内外并非电中性——膜内电位比膜外低约 $-70$ 至 $-90\ \text{mV}$，这就是静息膜电位。它的成因是两种物理效应的叠加：离子的扩散（由浓度梯度驱动，从高浓度向低浓度移动）与库仑力（同性电荷相斥、异性电荷相吸）。当这两种力对某种离子达到平衡时，该离子的净跨膜流动为零，此时的膜电位称为该离子的平衡电位，由 <strong>能斯特方程</strong>（Nernst equation）给出：</p>
+$$
+E_{\text{ion}} = \frac{RT}{zF}\ln\left(\frac{[\text{ion}]_{\text{out}}}{[\text{ion}]_{\text{in}}}\right)
+$$
+<p>其中 $R$ 为气体常数，$T$ 为绝对温度，$z$ 为离子电荷数，$F$ 为法拉第常数。这是一个真正意义上的物理平衡条件，而非经验描述：扩散产生的化学势梯度与电场产生的静电势梯度，在平衡点上大小相等、方向相反。</p>
+<p><strong>计算示例</strong>：细胞外 $\text{K}^+$ 浓度约为 $5\ \text{mM}$，细胞内约为 $140\ \text{mM}$。代入能斯特方程（体温 $37^\circ\text{C}$，$z=+1$），可得 $E_{\text{K}^+} \approx -90\ \text{mV}$，这与实测的静息膜电位高度吻合，说明静息电位主要由 $\text{K}^+$ 的平衡电位决定。</p>
+<p>然而实际膜电位并非单一离子平衡的结果，而是多种离子（$\text{K}^+$、$\text{Na}^+$、$\text{Cl}^-$）按各自膜通透性加权的综合结果，这由 <strong>戈德曼方程</strong>（Goldman-Hodgkin-Katz equation）描述：</p>
+$$
+V_m = \frac{RT}{F}\ln\left(\frac{P_{K}[\text{K}^+]_{\text{out}} + P_{Na}[\text{Na}^+]_{\text{out}} + P_{Cl}[\text{Cl}^-]_{\text{in}}}{P_{K}[\text{K}^+]_{\text{in}} + P_{Na}[\text{Na}^+]_{\text{in}} + P_{Cl}[\text{Cl}^-]_{\text{out}}}\right)
+$$
+<p>静息时膜对 $\text{K}^+$ 的通透性 $P_K$ 远大于 $P_{Na}$，因此 $V_m$ 更接近 $E_{\text{K}^+}$ 而非 $E_{\text{Na}^+}$（约 $+60\ \text{mV}$）。</p>
+<p><strong>问题求解应用</strong>：若某药物使膜对 $\text{Na}^+$ 的通透性 $P_{Na}$ 显著升高（如河豚毒素的反向情形），戈德曼方程预测 $V_m$ 会向 $E_{\text{Na}^+}$ 偏移，即膜发生去极化——这正是动作电位起始阶段的定量基础，也解释了为何离子通道的选择性通透性变化能驱动神经信号的产生。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch20: Electric Current, Resistance, and Ohm's Law (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

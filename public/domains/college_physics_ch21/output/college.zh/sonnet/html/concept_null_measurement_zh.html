@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Null Measurement | College Physics Ch21</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="null-measurement">Null Measurement</h2>
+<p><strong>定义</strong></p>
+<p>零点测量（null measurement）是一种通过调节电路参数，使检流装置（如检流计）中电流恰好为零的测量方法。当电路达到"平衡"状态时，测量支路不再从被测电路中汲取电流，因此不会改变原电路的工作状态——这种由于测量设备本身消耗能量或分流而导致的误差，称为"电路负载效应"（circuit loading）。零点法从根本上消除了这一误差源，因为在平衡点上检流计只起"指示"作用，而不参与实际的电流传导，从而获得比普通电表读数法更高的测量精度。</p>
+<p><strong>工作原理与惠斯通电桥</strong></p>
+<p>最经典的应用是惠斯通电桥（Wheatstone bridge），用于精确测量未知电阻 $R_x$。电桥由四个电阻 $R_1, R_2, R_3, R_x$ 组成菱形结构，电源接在一条对角线上，检流计接在另一条对角线上。调节可变电阻 $R_3$，直到检流计读数为零，此时电桥达到平衡。</p>
+<p>平衡条件的推导：检流计支路无电流，说明该支路两端电压相等，于是流过 $R_1$ 与 $R_2$ 的电流相同（记为 $I_1$），流过 $R_3$ 与 $R_x$ 的电流相同（记为 $I_2$）。由基尔霍夫电压定律，两条支路上的电压降必须匹配：</p>
+$$
+I_1 R_1 = I_2 R_3, \qquad I_1 R_2 = I_2 R_x
+$$
+<p>两式相除消去电流项，得到平衡条件：</p>
+$$
+\frac{R_1}{R_2} = \frac{R_3}{R_x} \quad \Longrightarrow \quad R_x = \frac{R_2}{R_1} R_3
+$$
+<p>这个结果的关键在于：$R_x$ 仅由电阻比值决定，与电源电压、检流计内阻甚至导线电阻都无关——只要检流计能准确判断"零"这一状态即可，其自身灵敏度不影响测量结果的准确性。</p>
+<p><strong>问题解决应用</strong></p>
+<p>设某惠斯通电桥中 $R_1 = 100\,\Omega$，$R_2 = 200\,\Omega$，调节 $R_3$ 至 $150\,\Omega$ 时检流计归零，求 $R_x$。</p>
+<p>代入平衡条件：</p>
+$$
+R_x = \frac{R_2}{R_1} R_3 = \frac{200}{100} \times 150 = 300\,\Omega
+$$
+<p>零点法的思想不止用于电桥：电位差计（potentiometer）用零点法测量电动势而不抽取电流，从而避免内阻压降误差；实验室天平通过配重使指针归零来比较质量。理解这一技术的核心，在于抓住其共同逻辑——通过"调节至平衡、检测零信号",将测量问题转化为已知量之间的比例关系,从而绕开仪器本身带来的系统误差。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch21: Circuits and DC Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hall Probe | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="hall-probe">Hall Probe</h2>
+<p><strong>定义</strong></p>
+<p>霍尔探头（Hall probe）是一种利用霍尔效应测量磁场强度的标定器件。当已知大小的电流 $I$ 通过置于磁场中的导体（或半导体薄片）时，磁场会使载流子受到洛伦兹力偏转，在垂直于电流和磁场的方向上积累电荷，从而产生一个横向电压——霍尔电压 $V_H$。其大小满足：</p>
+$$
+V_H = \frac{I B}{n q t}
+$$
+<p>其中 $B$ 为待测磁场强度，$n$ 为载流子浓度，$q$ 为载流子电荷量，$t$ 为导体薄片厚度。由于 $I$、$n$、$q$、$t$ 均为已知或可标定的常数，测量 $V_H$ 即可反推出 $B$。工程上常将比例系数合并为霍尔灵敏度 $K_H = \dfrac{1}{nqt}$，于是 $V_H = K_H I B$，探头出厂时已通过标准磁场标定好 $K_H$。</p>
+<p><strong>推导要点</strong></p>
+<p>霍尔效应的物理根源是稳态下电场力与磁场力的平衡。设电流沿 $x$ 方向、磁场沿 $z$ 方向，载流子在 $y$ 方向漂移速度为 $v_d$，则受到的洛伦兹力为 $qv_dB$。电荷积累产生的横向电场 $E_y$ 在稳态时满足：</p>
+$$
+qE_y = qv_dB \implies E_y = v_dB
+$$
+<p>又因电流密度 $J = nqv_d$，代入并对薄片宽度积分即得到上述 $V_H$ 表达式。这一步推导表明：霍尔电压的正负还能揭示载流子是电子还是空穴，这是半导体材料表征的重要应用之一。</p>
+<p><strong>解题应用</strong></p>
+<p>例：某霍尔探头厚度 $t = 0.5\,\text{mm}$，载流子浓度 $n = 8.5\times10^{28}\,\text{m}^{-3}$（典型金属值），通过电流 $I = 3\,\text{A}$，测得 $V_H = 1.2\,\mu\text{V}$。求磁场强度 $B$。</p>
+<p>由 $V_H = \dfrac{IB}{nqt}$，解得：</p>
+$$
+B = \frac{V_H \, n q t}{I} = \frac{(1.2\times10^{-6})(8.5\times10^{28})(1.6\times10^{-19})(5\times10^{-4})}{3} \approx 2.72\times10^{-3}\,\text{T}
+$$
+<p>即约 27.2 高斯，与实验室常见永磁体表面场强量级相符。这类计算是磁强计标定、电机气隙测量、电流无损检测（钳形表原理）等实际问题的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dielectric Heating | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="dielectric-heating-介电加热">Dielectric Heating（介电加热）</h2>
+<p><strong>定义</strong></p>
+<p>介电加热是指极性分子（如水分子 $\mathrm{H_2O}$）在振荡电场中因持续重新取向而吸收电磁能，并将其转化为热能的加热机制，微波炉即是其典型应用。水分子具有永久电偶极矩：氧原子电负性强，吸引共用电子对，使分子一端带部分负电荷、另一端带部分正电荷。在真空或静态电场中，偶极子仅需转向一次即可与电场对齐；但微波炉中的电场以约 $2.45\ \mathrm{GHz}$ 的频率振荡，即每秒改变方向 $2.45\times 10^9$ 次。水分子试图跟随电场不断翻转取向，这一过程中分子与周围邻近分子发生剧烈碰撞和摩擦，将电场做的功以分子动能形式耗散，宏观表现为温度升高。</p>
+<p>分子吸收功率与介电损耗密切相关，可用复介电常数描述：$\varepsilon^* = \varepsilon' - i\varepsilon''$，其中 $\varepsilon'$ 表示材料储存电场能量的能力，$\varepsilon''$（介电损耗因子）表示材料将电场能量耗散为热能的能力。单位体积吸收的功率为：</p>
+$$P = 2\pi f \varepsilon_0 \varepsilon'' E_{\text{rms}}^2$$
+<p>其中 $f$ 为电场频率，$\varepsilon_0$ 为真空介电常数，$E_{\text{rms}}$ 为电场均方根强度。该公式表明：加热速率与频率、损耗因子及电场强度平方成正比——这正是微波炉选用 $2.45\ \mathrm{GHz}$（水分子弛豫响应良好且穿透深度适中）的物理依据。</p>
+<p><strong>问题解决应用</strong></p>
+<p>若已知某食物的 $\varepsilon''=12$，微波炉腔内电场 $E_{\text{rms}}=250\ \mathrm{V/m}$，频率 $f=2.45\times10^9\ \mathrm{Hz}$，则可代入上式估算单位体积吸收功率，进而结合食物比热容与密度，通过 $P = \rho c \dfrac{dT}{dt}$ 估算加热速率 $\dfrac{dT}{dt}$。这类计算解释了为何含水量高的食物（如汤、蔬菜）加热迅速，而低含水量、低损耗因子的材料（如陶瓷餐具、冰——冰中水分子被氢键锁定、难以转向）几乎不吸收微波能量，因此可安全用作微波炉容器。理解 $\varepsilon''$ 与频率、温度的依赖关系，也是设计工业微波干燥、解冻及化学反应加热工艺时优化能耗与均匀性的关键。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

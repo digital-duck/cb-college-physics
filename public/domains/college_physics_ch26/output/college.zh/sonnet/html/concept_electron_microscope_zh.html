@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electron Microscope | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="electron-microscope">Electron Microscope</h2>
+<p><strong>定义</strong></p>
+<p>电子显微镜利用聚焦的电子束替代可见光来成像样品，放大倍数可达五千万倍，足以分辨单个原子。其分辨极限由光学系统的普遍规律决定：分辨率 $d$ 与所用波长 $\lambda$ 成正比，</p>
+$$
+d \approx \frac{0.61\,\lambda}{n\sin\theta}
+$$
+<p>其中 $n\sin\theta$ 是数值孔径。可见光波长约为 400–700 nm，而根据德布罗意关系</p>
+$$
+\lambda = \frac{h}{p} = \frac{h}{\sqrt{2m_e eV}}
+$$
+<p>一个经过电压 $V$ 加速的电子，其波长可短至 0.01 nm 量级（$h$ 为普朗克常数，$m_e$ 为电子质量，$e$ 为电子电荷）。波长缩短约五个数量级，分辨率随之提升，这正是电子显微镜能够看到原子尺度结构、而光学显微镜受限于衍射极限（约 200 nm）无法企及的根本原因。</p>
+<p><strong>计算实例</strong></p>
+<p>假设加速电压 $V = 100\text{ kV}$，代入德布罗意公式（需考虑相对论修正，但此处做非相对论近似）：</p>
+$$
+\lambda = \frac{6.63\times10^{-34}}{\sqrt{2\times(9.11\times10^{-31})\times(1.6\times10^{-19})\times(1\times10^5)}} \approx 3.9\times10^{-12}\text{ m} = 0.0039\text{ nm}
+$$
+<p>对比可见光 500 nm 的波长，电子波长小了约 13 万倍，理论分辨率因此可提升到亚埃米（sub-Å）级别，足以分辨晶格中相邻原子（原子间距通常为 0.1–0.3 nm）。</p>
+<p><strong>解题应用</strong></p>
+<p>电子显微镜分为两大工作模式：透射式（TEM）让电子穿过极薄样品，利用透射与散射的强度差异成像内部结构；扫描式（SEM）让电子束逐点扫描样品表面，收集反射的二次电子以重建三维形貌。选择模式时需权衡：TEM 分辨率更高但要求样品切片至纳米厚度，制样复杂；SEM 制样简单、景深大，适合观察表面形貌，但分辨率略逊。</p>
+<p>在实际问题中，若已知所需分辨的最小特征尺寸 $d$，可通过上式反推所需加速电压下限：先由 $d$ 估算允许的最大波长 $\lambda$，再代入德布罗意公式求解 $V$。这种"由目标分辨率倒推仪器参数"的思路，是电子显微学实验设计中最常见的定量推理方法。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

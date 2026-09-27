@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conduction | College Physics Ch14</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="conduction-热传导">Conduction（热传导）</h2>
+<p><strong>定义</strong></p>
+<p>热传导是热量在静止物质内部通过分子碰撞传递动能、从高温区域流向低温区域的过程。在固体中，这一过程主要由晶格振动（声子）和自由电子的碰撞实现；在流体中，则依赖分子间的直接碰撞。热传导不涉及物质的宏观位移，这一点将它与对流（convection）区分开来。</p>
+<p>描述稳态热传导的核心定律是<strong>傅里叶定律（Fourier's Law）</strong>：</p>
+$$
+q = -k \frac{dT}{dx}
+$$
+<p>其中 $q$ 为单位面积的热流密度（$\text{W/m}^2$），$k$ 为材料的导热系数（$\text{W/(m·K)}$），$\dfrac{dT}{dx}$ 为沿传导方向的温度梯度。负号表明热量总是从高温流向低温，即沿温度下降的方向传递。</p>
+<p><strong>推导：一维稳态传导中的温度分布</strong></p>
+<p>考虑一块厚度为 $L$ 的平板，左侧维持温度 $T_1$，右侧维持温度 $T_2$（$T_1 > T_2$），且无内部热源。在稳态下，通过任一截面的热流 $q$ 必须处处相等（否则内部会累积或损失能量）。若 $k$ 为常数，对傅里叶定律积分：</p>
+$$
+q \int_0^L dx = -k \int_{T_1}^{T_2} dT \implies q = \frac{k(T_1 - T_2)}{L}
+$$
+<p>这表明稳态下温度分布是线性的，热流量与温差成正比、与厚度成反比——这与欧姆定律 $I = V/R$ 的结构完全类比，其中"热阻" $R_{th} = L/(kA)$。</p>
+<p><strong>问题求解应用</strong></p>
+<p>例：一面墙由两层材料串联组成，第一层厚 $0.1\ \text{m}$，$k_1 = 0.8\ \text{W/(m·K)}$；第二层厚 $0.05\ \text{m}$，$k_2 = 0.04\ \text{W/(m·K)}$（保温层）。室内温度 $20°C$，室外 $-10°C$，墙面积 $A = 10\ \text{m}^2$。</p>
+<p>利用串联热阻叠加：</p>
+$$
+R_{total} = \frac{L_1}{k_1 A} + \frac{L_2}{k_2 A} = \frac{0.1}{0.8 \times 10} + \frac{0.05}{0.04 \times 10} = 0.0125 + 0.125 = 0.1375\ \text{K/W}
+$$
+<p>热流量：</p>
+$$
+Q = \frac{\Delta T}{R_{total}} = \frac{30}{0.1375} \approx 218.2\ \text{W}
+$$
+<p>可见薄薄一层低导热系数材料的热阻远大于厚层高导热材料，这正是保温层设计的物理依据。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch14: Heat and Heat Transfer Methods (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

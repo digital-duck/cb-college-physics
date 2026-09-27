@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deformation | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="deformation">Deformation</h2>
+<p>Deformation is any change in an object's shape or size resulting from an applied force. When a force acts on a solid object, the object's internal structure resists the load, and the material stretches, compresses, bends, or twists in response. If the deformation is small and the object fully returns to its original shape once the force is removed, the response is called <strong>elastic deformation</strong>. If the force is large enough to permanently rearrange the material's internal structure, the object does not fully recover, and the response is called <strong>plastic deformation</strong>.</p>
+<p>For elastic deformation, the relationship between applied force and resulting deformation is often linear over a limited range — a behavior described by Hooke's Law:</p>
+$$F = -kx$$
+<p>Here $F$ is the restoring force, $x$ is the displacement from the equilibrium shape, and $k$ is the stiffness constant of the material or structure. The negative sign indicates that the restoring force opposes the deformation, pulling the object back toward its original shape.</p>
+<p><strong>Worked example.</strong> A spring with stiffness $k = 250\ \text{N/m}$ is stretched by $0.04\ \text{m}$. The restoring force is</p>
+$$F = -kx = -(250)(0.04) = -10\ \text{N}$$
+<p>meaning the spring pulls back with $10\ \text{N}$ of force. If the applied force is removed, the spring returns to its natural length — this is elastic behavior.</p>
+<p><strong>Problem-solving application.</strong> Suppose the same spring is stretched until it no longer returns to its original length after the force is removed — engineers call this point the <strong>elastic limit</strong>. Beyond this point, Hooke's Law no longer applies, and the material undergoes plastic deformation. This concept is essential in structural engineering: a bridge cable or building beam must be designed so that expected loads keep the material well within its elastic limit, ensuring the structure always returns to its original shape rather than accumulating permanent damage over repeated stress cycles.</p>
+<pre class="mermaid">flowchart LR
+    A[Force applied to object] --> B{Deformation exceeds elastic limit?}
+    B -->|No| C[Elastic deformation]
+    C --> D[Object returns to original shape]
+    B -->|Yes| E[Plastic deformation]
+    E --> F[Object retains permanent change]</pre>
+<p><em>Decision path showing how the magnitude of an applied force determines whether an object undergoes elastic or plastic deformation.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

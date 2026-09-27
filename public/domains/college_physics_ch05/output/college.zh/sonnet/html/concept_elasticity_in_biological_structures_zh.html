@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elasticity In Biological Structures | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="elasticity-in-biological-structures">Elasticity In Biological Structures</h2>
+<p>生物组织虽然结构复杂,但在承受生理载荷时,其力学行为仍可用工程弹性理论描述。核心工具是三个量:应力(stress)、应变(strain)与弹性模量(elastic modulus)。应力 $\sigma = F/A$ 表示单位横截面积上承受的力,单位为帕斯卡(Pa);应变 $\varepsilon = \Delta L / L_0$ 是形变量与原长之比,为无量纲量。在弹性变形范围内(即形变可完全恢复的区间),二者近似满足胡克定律:</p>
+$$\sigma = E \varepsilon$$
+<p>其中 $E$ 为杨氏模量,反映材料抵抗拉伸或压缩形变的刚度。不同组织的 $E$ 值差异极大:骨约为 $10$–$20\ \text{GPa}$,肌腱约为 $1$–$2\ \text{GPa}$,而动脉壁仅约 $0.1$–$1\ \text{MPa}$。这种差异并非偶然,而是各组织功能需求的直接体现——骨骼需要刚性以支撑体重并抵抗弯曲,动脉则需要高度顺应性以缓冲每次心跳产生的压力脉冲。</p>
+<p><strong>实例分析</strong>:考虑一段跟腱,横截面积 $A = 80\ \text{mm}^2$,原长 $L_0 = 250\ \text{mm}$,杨氏模量 $E = 1.5\ \text{GPa}$。若在剧烈跳跃中跟腱承受张力 $F = 3000\ \text{N}$(约为体重数倍,这在运动中很常见),可求形变量:</p>
+$$\sigma = \frac{F}{A} = \frac{3000}{80\times10^{-6}} \approx 3.75\times10^{7}\ \text{Pa}$$
+$$\varepsilon = \frac{\sigma}{E} = \frac{3.75\times10^{7}}{1.5\times10^{9}} \approx 0.025$$
+$$\Delta L = \varepsilon L_0 \approx 6.25\ \text{mm}$$
+<p>即跟腱在此载荷下伸长约 6.25 毫米,仍处于弹性范围内,卸载后可恢复原长。若同样的应力施加于骨骼(因 $E$ 大得多),形变量会小一到两个数量级,这解释了为何骨骼在正常活动中几乎不可见地"弯曲"。</p>
+<p><strong>应用与局限</strong>:需要注意的是,大多数生物软组织(如肌腱、血管壁)并不严格遵循线性胡克定律——它们表现出<strong>应力-应变曲线的非线性</strong>,即模量随应变增大而增大(常称为"应变硬化"),这是由胶原纤维逐步被拉直、参与承载的机制所致。因此工程师和生物力学研究者常采用局部切线模量 $E(\varepsilon) = d\sigma/d\varepsilon$ 来描述特定应变区间内的刚度,而非单一常数。理解这一区别,是从简单弹性模型迈向真实组织损伤阈值分析(如韧带撕裂临界应变)的关键一步。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

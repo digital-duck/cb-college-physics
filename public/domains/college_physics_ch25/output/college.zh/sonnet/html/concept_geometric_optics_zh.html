@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geometric Optics | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="geometric-optics">Geometric Optics</h2>
+<p><strong>定义</strong></p>
+<p>几何光学是光学的一个分支，它把光简化为沿直线传播的"光线"，用几何方法描述光的反射、折射与成像。这种简化之所以成立，是因为几何光学处理的对象——透镜、镜面、光阑的孔径——尺寸远大于光的波长（可见光约 $400$–$700\text{ nm}$）。当物体尺度 $\gg \lambda$ 时，光的波动性（衍射、干涉）可以忽略，光线传播遵循两条基本定律：</p>
+<p>反射定律：$\theta_i = \theta_r$（入射角等于反射角，均相对于法线测量）。</p>
+<p>折射定律（斯涅尔定律）：</p>
+$$n_1 \sin\theta_1 = n_2 \sin\theta_2$$
+<p>其中 $n_1, n_2$ 为两种介质的折射率，$\theta_1, \theta_2$ 为入射角与折射角。</p>
+<p>对于薄透镜和球面镜，成像满足<strong>薄透镜方程</strong>：</p>
+$$\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}$$
+<p>其中 $f$ 为焦距，$d_o$ 为物距，$d_i$ 为像距。放大率为 $m = -d_i/d_o$。</p>
+<p><strong>推导要点（为何该方程成立）</strong>：薄透镜方程来自傍轴近似（paraxial approximation）——只考虑与光轴夹角很小的光线，此时 $\sin\theta \approx \tan\theta \approx \theta$，斯涅尔定律线性化，再结合透镜两个球面的折射关系（透镜制造者公式）联立消元即可得到上式。这是几何光学中少数需要形式化推导的结果，因为它本质上是傍轴近似下斯涅尔定律的代数结果，而非经验规则。</p>
+<p><strong>例题</strong></p>
+<p>一物体放在凸透镜前 $d_o = 30\text{ cm}$，透镜焦距 $f = 10\text{ cm}$，求像的位置与放大率。</p>
+<p>代入薄透镜方程：</p>
+$$\frac{1}{10} = \frac{1}{30} + \frac{1}{d_i} \implies \frac{1}{d_i} = \frac{1}{10} - \frac{1}{30} = \frac{2}{30} \implies d_i = 15\text{ cm}$$
+<p>放大率 $m = -15/30 = -0.5$，即像为实像、倒立、缩小为原来的一半。</p>
+<p><strong>解题应用</strong></p>
+<p>处理透镜/镜面成像问题时，先统一符号约定（凸透镜 $f>0$，凹透镜 $f<0$；实像 $d_i>0$），再代入方程求解未知量；若涉及多个光学元件（如显微镜、望远镜的目镜与物镜组合），需将前一元件的像作为下一元件的物，逐级传递求解，这是分析复合光学系统的标准方法。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

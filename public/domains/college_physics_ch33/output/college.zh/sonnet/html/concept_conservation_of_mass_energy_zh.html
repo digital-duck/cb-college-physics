@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conservation Of Mass Energy | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="conservation-of-mass-energy">Conservation Of Mass Energy</h2>
+<p><strong>定义</strong></p>
+<p>在狭义相对论建立之前，物理学分别信奉两条独立的守恒定律：质量守恒（化学反应前后总质量不变）与能量守恒（能量可以转化形式但总量不变）。爱因斯坦的质能关系</p>
+$$E = mc^2$$
+<p>揭示了这两条定律实为同一条更深刻定律的两个侧面：质量本身就是能量的一种高度浓缩的形式，其中 $c \approx 3\times10^8\ \text{m/s}$ 是光速。因此现代表述是<strong>质量—能量守恒</strong>：在一个孤立系统中，总质能 $E_{\text{total}} = mc^2 + E_{\text{动能}} + E_{\text{其他}}$ 保持不变；质量可以转化为能量，能量也可以表现为质量，但二者之和不变。这解释了为何核反应中"质量亏损"（$\Delta m$）看似违反质量守恒，实则精确转化为释放的能量 $\Delta E = \Delta m \cdot c^2$。</p>
+<p><strong>例题</strong></p>
+<p>太阳每秒通过核聚变损失约 $4.26 \times 10^9\ \text{kg}$ 的质量，转化为辐射能量。求这一质量亏损对应释放多少能量。</p>
+<p>代入公式：</p>
+$$\Delta E = \Delta m \cdot c^2 = (4.26\times10^9\ \text{kg}) \times (3\times10^8\ \text{m/s})^2 \approx 3.8\times10^{26}\ \text{J}$$
+<p>这与太阳每秒辐射的总功率（太阳光度 $\approx 3.8\times10^{26}\ \text{W}$）高度吻合，验证了 $E=mc^2$ 并非抽象公式，而是可直接用于估算恒星能量输出的工具。</p>
+<p><strong>解题应用</strong></p>
+<p>处理质能守恒问题的关键步骤：</p>
+<li>明确系统边界，确认是否有质量或能量流出/流入；</li>
+<li>若涉及反应前后质量差 $\Delta m$（如裂变、聚变、正负电子湮灭），用 $\Delta E = \Delta m c^2$ 求出释放或吸收的能量；</li>
+<li>注意 $c^2 \approx 9\times10^{16}\ \text{m}^2/\text{s}^2$ 极大，微小的质量变化（毫克级）即可对应巨大能量，这也是为何日常化学反应中"质量守恒"看似严格成立——其质量亏损小到无法测量。</li>
+<p>例如，1 克反物质与 1 克物质完全湮灭，释放能量为：</p>
+$$E = (2\times10^{-3}\ \text{kg}) \times (3\times10^8)^2 \approx 1.8\times10^{14}\ \text{J}$$
+<p>约等于广岛原子弹爆炸释放能量的十倍，说明该定律在核物理、粒子物理及能源工程中具有直接的定量预测力。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

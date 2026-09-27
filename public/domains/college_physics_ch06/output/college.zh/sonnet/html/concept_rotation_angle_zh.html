@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rotation Angle | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="旋转角">旋转角</h2>
+<p><strong>定义</strong></p>
+<p>当一个物体沿曲线路径运动时,旋转角 $\Delta\theta$ 描述了位置矢量(或物体本身)转过的角度大小,其定义为弧长与曲率半径之比:</p>
+$$
+\Delta\theta = \frac{\Delta s}{r}
+$$
+<p>其中 $\Delta s$ 是沿圆弧走过的弧长,$r$ 是圆的半径(即曲率半径)。由于弧长和半径的单位都是长度(如米),两者相除后单位相互抵消,因此旋转角本身是一个<strong>无量纲量</strong>——但我们仍给它一个专属单位:<strong>弧度(radian, rad)</strong>,以区别于普通的无量纲数。这个定义之所以自然,是因为它把"转了多少"与具体的半径大小解耦:无论圆多大,只要弧长与半径的比值相同,转过的角度就相同。当 $\Delta s = r$ 时,$\Delta\theta = 1\ \text{rad}$;绕完整一圈时,$\Delta s = 2\pi r$,于是 $\Delta\theta = 2\pi\ \text{rad} = 360°$,由此得到弧度与角度的换算关系 $1\ \text{rad} = \dfrac{180°}{\pi} \approx 57.3°$。</p>
+<p><strong>例题</strong></p>
+<p>一个半径 $r = 0.5\ \text{m}$ 的转盘边缘上有一点,该点沿圆周走过的弧长为 $\Delta s = 1.2\ \text{m}$。求转盘转过的旋转角(分别用弧度和角度表示)。</p>
+<p>解:直接代入定义式,</p>
+$$
+\Delta\theta = \frac{\Delta s}{r} = \frac{1.2\ \text{m}}{0.5\ \text{m}} = 2.4\ \text{rad}
+$$
+<p>换算为角度:</p>
+$$
+2.4\ \text{rad} \times \frac{180°}{\pi} \approx 137.5°
+$$
+<p><strong>应用于解题</strong></p>
+<p>旋转角是连接"直线运动量"与"角运动量"的桥梁,在旋转动力学中处处出现。例如,已知一个飞轮以角速度 $\omega$ 匀速转动,经过时间 $t$ 后转过的角度为 $\Delta\theta = \omega t$;若还需求某半径 $r$ 处一点走过的弧长,只需反用定义式 $\Delta s = r\,\Delta\theta$。</p>
+<p><strong>练习</strong>:一辆自行车车轮半径为 $0.35\ \text{m}$,骑行 $10\ \text{m}$ 后,车轮转过了多少弧度?又转了多少圈?</p>
+<p>提示:先用 $\Delta\theta = \Delta s / r$ 求出弧度数,再除以 $2\pi$ 得到圈数(答案约为 $28.6\ \text{rad}$,约 $4.55$ 圈)。这类计算在分析车轮转速、齿轮传动比或卫星轨道运动时都会反复用到,是后续学习角速度、角加速度的基础工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

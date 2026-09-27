@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muscles Joints Statics | College Physics Ch09</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="muscles-joints-statics">Muscles Joints Statics</h2>
+<p>人体的四肢本质上是由骨骼、关节和肌肉构成的杠杆系统。关节是支点(fulcrum),骨骼是刚性杠杆臂,肌肉收缩提供驱动力矩,外部负荷(如手中的重物)则产生阻力矩。分析这类系统的核心工具仍是静力平衡条件:合力为零,合力矩为零,即 $\sum F = 0$,$\sum \tau = 0$,其中力矩定义为 $\tau = F \cdot d$,$d$ 为力臂——力的作用线到支点的垂直距离。</p>
+<p>人体杠杆系统的关键特征是:肌肉附着点通常非常靠近关节(支点),而负荷往往作用在杠杆臂的远端。这意味着肌肉的力臂 $d_{\text{肌肉}}$ 远小于负荷的力臂 $d_{\text{负荷}}$。要维持平衡,两者的力矩必须相等:</p>
+$$F_{\text{肌肉}} \cdot d_{\text{肌肉}} = F_{\text{负荷}} \cdot d_{\text{负荷}}$$
+<p>由于 $d_{\text{肌肉}} \ll d_{\text{负荷}}$,肌肉必须产生远大于负荷本身的力,即 $F_{\text{肌肉}} = F_{\text{负荷}} \cdot \dfrac{d_{\text{负荷}}}{d_{\text{肌肉}}}$。</p>
+<p><strong>例题</strong>:考虑前臂屈肘动作。肘关节为支点,肱二头肌附着在肘关节前方约 $d_{\text{肌肉}} = 5\ \text{cm}$ 处,垂直向上牵拉前臂;手中持有重物,重力 $F_{\text{负荷}} = 50\ \text{N}$,作用在距肘关节 $d_{\text{负荷}} = 35\ \text{cm}$ 处(忽略前臂自重)。求肱二头肌所需的收缩力。</p>
+<p>由力矩平衡:</p>
+$$F_{\text{肌肉}} = \frac{F_{\text{负荷}} \cdot d_{\text{负荷}}}{d_{\text{肌肉}}} = \frac{50\ \text{N} \times 0.35\ \text{m}}{0.05\ \text{m}} = 350\ \text{N}$$
+<p>肌肉力是外部负荷的 7 倍。这一放大效应解释了为何人体肌肉的实际承受力远超我们直觉预期的负荷大小,也说明了肌肉、肌腱和关节软骨为何需要承受远高于外部表观负荷的机械应力,这与运动损伤(如肌腱炎、关节软骨磨损)的力学起源密切相关。</p>
+<p>进一步地,若还需求解关节反作用力,可结合 $\sum F = 0$:关节处的反作用力 $R$ 需与肌肉力和负荷力共同满足竖直方向合力为零,即 $R = F_{\text{肌肉}} - F_{\text{负荷}} = 350 - 50 = 300\ \text{N}$(方向与肌肉力相反),这进一步说明关节所承受的压缩力同样被显著放大。这类三力(肌肉力、负荷力、关节反作用力)平衡分析,是理解人体运动力学与康复医学中负荷设计的基础工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch9: Statics and Torque (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wavefront | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="波前">波前</h2>
+<p><strong>定义</strong></p>
+<p>波前（wavefront）是指波场中所有振动相位相同的点所连成的曲面（或曲线）。对于从点源发出的波，波前是以点源为中心的一系列同心球面；在离点源足够远处，球面的局部曲率可以忽略，波前近似为平面，称为平面波。波前的传播方向由波矢 $\vec{k}$ 给出，其方向处处垂直于波前曲面——这正是"波线"（ray）与波前正交的几何原理，也是几何光学中"光线"概念的物理基础。</p>
+<p>数学上，若一列简谐波沿 $\vec{k}$ 方向传播，其相位为</p>
+$$
+\phi(\vec{r}, t) = \vec{k}\cdot\vec{r} - \omega t + \phi_0
+$$
+<p>则波前就是满足 $\phi(\vec{r}, t) = \text{常数}$ 的曲面族。对平面波，$\vec{k}\cdot\vec{r} = \text{const}$ 定义了一族与 $\vec{k}$ 垂直的平行平面；对球面波，波前方程为 $|\vec{r} - \vec{r}_0| = \text{const}$，即以波源 $\vec{r}_0$ 为心的同心球面。</p>
+<p><strong>举例说明</strong></p>
+<p>考虑向平静水面中央投下一颗石子。水面上产生的每一圈同心圆环，就是某一时刻具有相同相位（例如都处于波峰）的所有点的集合——这就是波前的直观图像。随着时间推移，这些圆环以恒定的相速度 $v$ 向外扩张，圆环之间的间距等于波长 $\lambda$。</p>
+<p><strong>问题求解应用</strong></p>
+<p>惠更斯原理（Huygens' Principle）利用波前概念解释波的传播与衍射：把某一时刻的波前上每一点都视为发射球面子波的新点源，这些子波的包络就构成下一时刻的新波前。利用这一原理，可以定量分析波通过狭缝后如何绕射、波在介质界面处如何按斯涅尔定律折射（波前在界面处因传播速度改变而发生"转向"）。</p>
+<p><strong>例题</strong>：一平面声波在空气中以 $v=340\ \text{m/s}$ 传播，频率 $f=170\ \text{Hz}$。求相邻两个波前（同相位波峰面）之间的距离。</p>
+<p>解：波长 $\lambda = v/f = 340/170 = 2\ \text{m}$，即相邻波前间距为 $2\ \text{m}$。这类计算是分析干涉、衍射图样间距的基础，例如双缝干涉中相邻亮纹的位置正是由波前叠加时的相位差决定的。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

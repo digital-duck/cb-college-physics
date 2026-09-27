@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destructive Interference | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="相消干涉">相消干涉</h2>
+<p><strong>定义</strong></p>
+<p>当两列（或多列）波在空间中某点相遇时，若它们的相位差恰好使一列波的波峰与另一列波的波谷重合，波峰与波谷相互抵消，合成波的振幅显著减小甚至完全消失，这种现象称为<strong>相消干涉</strong>。设两列振幅相同、频率相同的波分别为</p>
+$$
+y_1 = A\sin(kx - \omega t), \qquad y_2 = A\sin(kx - \omega t + \varphi)
+$$
+<p>其中 $\varphi$ 为两波之间的相位差。利用三角恒等式叠加：</p>
+$$
+y_1 + y_2 = 2A\cos\!\left(\frac{\varphi}{2}\right)\sin\!\left(kx-\omega t+\frac{\varphi}{2}\right)
+$$
+<p>合成振幅为 $2A\cos(\varphi/2)$。当 $\varphi = \pi, 3\pi, 5\pi, \dots$（即相位差为 $\pi$ 的奇数倍）时，$\cos(\varphi/2)=0$，合成振幅为零——这就是完全相消干涉的条件。用波程差表示则为</p>
+$$
+\Delta L = \left(m+\tfrac{1}{2}\right)\lambda, \qquad m = 0, 1, 2, \dots
+$$
+<p>即两波源到该点的路径差为半波长的奇数倍。</p>
+<p><strong>范例分析</strong></p>
+<p>考虑经典的双缝干涉装置：两条缝间距为 $d$，屏幕距双缝距离为 $L$（$L \gg d$），入射光波长为 $\lambda$。屏幕上某点相对中心的角位置为 $\theta$，两条光路的波程差近似为 $\Delta L = d\sin\theta$。若要求该点出现暗纹（相消干涉），需满足</p>
+$$
+d\sin\theta = \left(m+\tfrac{1}{2}\right)\lambda
+$$
+<p>例如取 $d = 0.20\ \text{mm}$，$\lambda = 600\ \text{nm}$，求第一级暗纹（$m=0$）的角度：</p>
+$$
+\sin\theta = \frac{(0+0.5)(600\times10^{-9}\,\text{m})}{0.20\times10^{-3}\,\text{m}} = 1.5\times10^{-3}
+$$
+<p>于是 $\theta \approx 1.5\times10^{-3}\ \text{rad}$，对应屏幕上极小的暗条纹位置，可换算成实际距离 $y = L\tan\theta \approx L\theta$。</p>
+<p><strong>解题应用</strong></p>
+<p>处理这类问题的关键步骤：(1) 明确波程差 $\Delta L$ 的几何表达式（依装置而定，如双缝、薄膜、单缝衍射等）；(2) 将相消干涉条件 $\Delta L = (m+\tfrac12)\lambda$ 代入求解未知量（角度、波长或间距）；(3) 注意边界情形——若两波振幅不等，合成振幅公式需推广为 $\sqrt{A_1^2+A_2^2+2A_1A_2\cos\varphi}$，此时振幅只能减小而非完全为零。掌握这一区分，是分析噪声抵消耳机、薄膜反光镀层设计等实际工程问题的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

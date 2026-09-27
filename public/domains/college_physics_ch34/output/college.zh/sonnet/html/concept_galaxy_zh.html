@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galaxy | College Physics Ch34</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="星系">星系</h2>
+<p>星系是由数十亿颗恒星、气体、尘埃与暗物质通过引力束缚在一起的天体系统，其尺度通常介于几千光年到数十万光年之间。星系并非静态的恒星集合，而是一个动力学系统：其中的恒星、气体云在整体引力势阱中绕星系中心运动，同时星系自身的结构与演化受万有引力定律支配。理解星系动力学的核心工具是<strong>维里定理</strong>与<strong>开普勒式的旋转曲线分析</strong>，它们让我们能够从可观测的运动推断出不可见的质量分布——这正是暗物质存在的关键证据之一。</p>
+<p><strong>理论基础：旋转曲线与质量推断</strong></p>
+<p>对于一颗质量为 $m$、距星系中心半径 $r$ 处做圆周运动的恒星，其向心力由该半径以内的总质量 $M(r)$ 提供：</p>
+$$
+\frac{m v(r)^2}{r} = \frac{G M(r) m}{r^2}
+$$
+<p>化简得到轨道速度：</p>
+$$
+v(r) = \sqrt{\frac{G M(r)}{r}}
+$$
+<p>若星系的可见质量（恒星与气体）主要集中在中心区域，则在远离中心处 $M(r)$ 趋于常数，预期 $v(r) \propto r^{-1/2}$，即速度应随半径增大而下降——这与太阳系行星轨道速度随距离减小的规律一致。</p>
+<p><strong>worked example（应用实例）</strong></p>
+<p>天文学家维拉·鲁宾（Vera Rubin）在 20 世纪 70 年代测量了多个旋涡星系外围恒星与气体的旋转速度，发现实际观测中 $v(r)$ 在大半径处趋于<strong>平坦</strong>，而非按预期下降。将平坦旋转曲线代入上式，$v(r) \approx \text{常数}$ 意味着：</p>
+$$
+M(r) \propto r
+$$
+<p>即星系的总质量随半径线性增长，远超可见光所示的恒星与气体质量。这一质量亏损问题的解释是：星系被一个远大于可见部分的<strong>暗物质晕</strong>所包围。</p>
+<p><strong>问题求解应用</strong></p>
+<p>给定某星系在 $r = 20\text{ kpc}$ 处测得旋转速度 $v = 220\text{ km/s}$，可反解该半径内总质量：</p>
+$$
+M(r) = \frac{v^2 r}{G}
+$$
+<p>代入数值（换算单位后）可得 $M(r) \approx 2.2 \times 10^{11}\, M_\odot$，再与该区域内可见恒星光度估算的重子质量比较，两者之间的显著差值即为暗物质晕质量的直接证据。这种"由运动反推质量"的方法，正是天体物理学中处理不可见组分的标准范式。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch34: Frontiers of Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

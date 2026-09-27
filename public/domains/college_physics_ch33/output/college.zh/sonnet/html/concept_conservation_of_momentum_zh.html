@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conservation Of Momentum | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="动量守恒定律">动量守恒定律</h2>
+<p><strong>定义</strong></p>
+<p>对于一个孤立系统（不受外力，或所受合外力为零），系统的总动量保持不变：</p>
+$$
+\vec{p}_{\text{初}} = \vec{p}_{\text{末}}
+$$
+<p>对于由两个物体组成的系统，动量守恒可写为：</p>
+$$
+m_1\vec{v}_1 + m_2\vec{v}_2 = m_1\vec{v}_1' + m_2\vec{v}_2'
+$$
+<p>其中未加撇号的量表示碰撞（或相互作用）前的速度，加撇号的量表示之后的速度。这一定律来自牛顿第三定律：两物体相互作用时，彼此施加的力大小相等、方向相反，作用时间相同，因此各自动量的变化量必然大小相等、方向相反，总和为零变化量。动量守恒对<strong>完全弹性碰撞</strong>（动能也守恒）和<strong>完全非弹性碰撞</strong>（碰后物体粘合、动能有损失）都成立，区别仅在于动能是否守恒。</p>
+<p><strong>例题</strong></p>
+<p>一节质量 $2000\ \text{kg}$ 的火车车厢以 $3\ \text{m/s}$ 的速度向东行驶，与静止的质量为 $3000\ \text{kg}$ 的车厢相撞并挂钩在一起（完全非弹性碰撞）。求碰后的共同速度。</p>
+<p>由动量守恒：</p>
+$$
+m_1 v_1 = (m_1+m_2)v'
+$$
+$$
+2000 \times 3 = (2000+3000)v'
+$$
+$$
+v' = \frac{6000}{5000} = 1.2\ \text{m/s（向东）}
+$$
+<p>验证碰撞确实非弹性：碰前动能 $\frac{1}{2}(2000)(3)^2 = 9000\ \text{J}$，碰后动能 $\frac{1}{2}(5000)(1.2)^2 = 3600\ \text{J}$，损失的 $5400\ \text{J}$ 转化为热能和形变能，这正是非弹性碰撞的特征。</p>
+<p><strong>解题应用</strong></p>
+<p>处理动量守恒问题时，第一步永远是明确"系统"边界，判断外力（如摩擦、重力在斜面上的分量）是否可忽略；若不可忽略，则应检查该外力在特定方向上的分量是否为零，从而在该方向上仍可应用动量守恒（例如爆炸问题中，若忽略空气阻力，仍可在水平方向单独守恒）。第二步是设定统一的正方向，将矢量方程拆分为分量方程求解，尤其是在二维碰撞（如台球碰撞）中，需分别对 $x$、$y$ 方向列方程。第三步，若题目同时给出"碰撞类型"，可结合动能是否守恒作为第二个方程，联立求解两个未知末速度。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atomic De Excitation | College Physics Ch30</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="atomic-de-excitation">Atomic De Excitation</h2>
+<p><strong>定义</strong></p>
+<p>原子退激发（atomic de-excitation）是指处于激发态的原子通过发射一个光子跃迁到较低能级（包括基态）的过程。根据玻尔模型与量子力学的能级理论,原子只能占据一系列离散的能量状态 $E_1, E_2, E_3, \dots$。当原子从高能级 $E_i$ 跃迁到低能级 $E_f$（$E_i > E_f$）时,能量差必须以电磁辐射的形式释放,发射光子的频率由玻尔频率条件给出:</p>
+$$
+h\nu = E_i - E_f
+$$
+<p>其中 $h$ 为普朗克常数（$h = 6.626 \times 10^{-34}\ \text{J·s}$）,$\nu$ 为发射光子的频率。这一关系是原子光谱学的核心,因为它把"能级结构"这一抽象概念直接转化为可观测的光谱线。退激发可以是自发的（自发辐射,发生概率由该能级的平均寿命决定,寿命通常在 $10^{-8}$ 秒量级）,也可以是受激的（受激辐射,即激光工作的基础）。</p>
+<p><strong>范例</strong></p>
+<p>以氢原子为例,其能级由公式 $E_n = -\dfrac{13.6\ \text{eV}}{n^2}$ 给出。若一个氢原子从 $n=3$ 跃迁到 $n=2$,能量差为:</p>
+$$
+\Delta E = E_3 - E_2 = \left(-\frac{13.6}{9}\right) - \left(-\frac{13.6}{4}\right) \approx 1.89\ \text{eV}
+$$
+<p>对应发射光子的波长:</p>
+$$
+\lambda = \frac{hc}{\Delta E} \approx 656\ \text{nm}
+$$
+<p>这正是巴尔末系（Balmer series）中著名的 $H_\alpha$ 红色谱线,是天文学家用来识别氢云、恒星大气成分的关键工具之一。</p>
+<p><strong>问题求解应用</strong></p>
+<p>给定发射谱线的波长,可以反推原子的能级结构,这是光谱分析的基本方法。例如,已知某未知谱线波长为 $\lambda = 486\ \text{nm}$,可先求出光子能量 $\Delta E = hc/\lambda \approx 2.55\ \text{eV}$,再结合已知的能级公式,判断该跃迁对应的初末量子数（此例对应 $n=4 \to n=2$,即 $H_\beta$ 线）。这类"由光谱反推能级"的推理,是分析恒星光谱、确定星际气体成分、以及设计激光增益介质时的通用解题思路：先用玻尔频率条件建立能量-频率桥梁,再结合具体原子的能级模型求解未知量。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch30: Atomic Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

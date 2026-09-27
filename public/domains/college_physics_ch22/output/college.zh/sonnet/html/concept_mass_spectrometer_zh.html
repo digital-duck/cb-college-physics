@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mass Spectrometer | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="质谱仪">质谱仪</h2>
+<p><strong>定义</strong></p>
+<p>质谱仪（Mass Spectrometer）是一种利用运动电荷在电场与磁场中的受力规律，测定离子质荷比 $m/q$ 的仪器。其核心由两部分组成：<strong>速度选择器</strong>和<strong>匀强磁场偏转区</strong>。速度选择器通过相互垂直的电场 $E$ 与磁场 $B_1$，使只有速度满足</p>
+$$
+qE = qvB_1 \quad\Rightarrow\quad v = \frac{E}{B_1}
+$$
+<p>的离子能沿直线穿过狭缝，实现"筛选特定速度"的效果——电场力与磁场力相互抵消，其余速度的离子则发生偏转被挡住。</p>
+<p>进入第二个匀强磁场区域 $B_2$ 后，离子仅受洛伦兹力作用，该力提供圆周运动所需的向心力：</p>
+$$
+qvB_2 = \frac{mv^2}{r} \quad\Rightarrow\quad r = \frac{mv}{qB_2}
+$$
+<p>离子沿半径为 $r$ 的圆弧运动，最终打在探测板上，通过测量入射点与出射点间的距离（即 $2r$），即可反推出质荷比。</p>
+<p><strong>例题</strong></p>
+<p>某离子经速度选择器后以 $v = 2.0\times10^5 \text{ m/s}$ 的速度进入磁场区域，该区域磁场强度 $B_2 = 0.40\text{ T}$。若该离子带一个基本电荷 $q = 1.6\times10^{-19}\text{ C}$，测得其圆周运动半径 $r = 0.12\text{ m}$，求该离子的质量。</p>
+<p>由 $r = \dfrac{mv}{qB_2}$ 变形：</p>
+$$
+m = \frac{qB_2 r}{v} = \frac{(1.6\times10^{-19})(0.40)(0.12)}{2.0\times10^5} \approx 3.84\times10^{-26}\text{ kg}
+$$
+<p>换算成原子质量单位（$1\text{ u} \approx 1.66\times10^{-27}\text{ kg}$），约为 23 u，与钠离子（Na⁺）的质量吻合。</p>
+<p><strong>问题解决应用</strong></p>
+<p>质谱仪的实际价值在于<strong>同位素分离与鉴定</strong>：由于同位素电荷相同而质量不同，它们在磁场中的偏转半径不同，从而在探测器上形成分立的谱线。解题时的核心策略是：先用速度选择器方程锁定速度，再用半径方程建立质量与几何量之间的比例关系。特别注意，若两种离子电荷相同、磁场相同，则半径之比直接等于质量之比：</p>
+$$
+\frac{r_1}{r_2} = \frac{m_1}{m_2}
+$$
+<p>这一比例关系使得即使不知道绝对质量，也能通过谱线间距比较不同同位素的相对丰度与质量差异，这正是质谱法在化学分析、考古年代测定和药物代谢研究中广泛应用的物理基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

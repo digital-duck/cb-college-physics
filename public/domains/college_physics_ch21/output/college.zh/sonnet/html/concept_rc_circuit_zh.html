@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rc Circuit | College Physics Ch21</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="rc-circuit">Rc Circuit</h2>
+<p><strong>定义</strong></p>
+<p>RC 电路由电阻 $R$ 和电容 $C$ 串联组成。与纯电阻电路不同，电容两端电压不能瞬间跳变，因为电压突变意味着电容极板上电荷瞬间改变，这需要无穷大电流。因此，RC 电路中电容的充电或放电过程是指数式的，其时间尺度由<strong>时间常数</strong> $\tau = RC$ 决定——这是电路能否"跟上"输入信号变化的关键参数。</p>
+<p>对于充电电路（电源电压 $V_0$ 通过电阻给初始不带电的电容充电），应用基尔霍夫电压定律：</p>
+$$V_0 = i(t)R + \frac{q(t)}{C}$$
+<p>代入 $i(t) = \dfrac{dq}{dt}$，得到一阶线性微分方程：</p>
+$$R\frac{dq}{dt} + \frac{q}{C} = V_0$$
+<p>求解该方程（分离变量并积分，利用初始条件 $q(0)=0$），得电容电压：</p>
+$$V_C(t) = V_0\left(1 - e^{-t/\tau}\right), \qquad \tau = RC$$
+<p>放电情形（电容初始电压 $V_0$，通过电阻放电，无外加电源）满足齐次方程 $RC\dfrac{dV_C}{dt} + V_C = 0$，解为：</p>
+$$V_C(t) = V_0\, e^{-t/\tau}$$
+<p><strong>例题</strong></p>
+<p>设 $R = 10\ \text{k}\Omega$，$C = 100\ \mu\text{F}$，电源 $V_0 = 5\ \text{V}$，电容初始不带电。求 $\tau$，以及 $t = \tau$ 和 $t = 5\tau$ 时的电容电压。</p>
+<p>$\tau = RC = (10\times10^3)(100\times10^{-6}) = 1\ \text{s}$。</p>
+<p>在 $t=\tau$ 时：$V_C = 5(1-e^{-1}) \approx 5(0.632) = 3.16\ \text{V}$——即完成约 63.2% 的充电，这是 $\tau$ 的标准物理意义。</p>
+<p>在 $t=5\tau$ 时：$V_C = 5(1-e^{-5}) \approx 5(0.9933) = 4.97\ \text{V}$，可视为"基本充满"（工程上常以 $5\tau$ 作为稳态近似判据）。</p>
+<p><strong>问题求解应用</strong></p>
+<p>RC 电路是分析滤波器、定时电路和信号响应速度的基础工具。典型问题类型：（1）已知 $R, C$ 和目标电压百分比，反解充放电时间 $t = -\tau\ln\!\left(1-\dfrac{V_C}{V_0}\right)$；（2）已知响应时间要求，反推所需 $R$ 或 $C$ 的取值。例如，设计一个需要在 $2\ \text{ms}$ 内充至 90% 电压的电路，若固定 $C=1\ \mu\text{F}$，则由 $0.9 = 1-e^{-t/\tau}$ 得 $\tau = t/\ln 10 \approx 0.87\ \text{ms}$，从而 $R = \tau/C \approx 870\ \Omega$。掌握这一指数模型，是理解后续 RL、RLC 电路乃至一阶系统瞬态响应的前提。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch21: Circuits and DC Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuclear Decay | College Physics Ch31</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="nuclear-decay-核衰变">Nuclear Decay（核衰变）</h2>
+<p><strong>定义</strong></p>
+<p>原子核由质子和中子构成，当核内质子数与中子数的比例偏离稳定区间时，核力无法维持结构的长期稳定，原子核会自发地放出粒子或辐射，转变为另一种核素，这一过程称为核衰变。母核（parent nucleus）衰变为子核（daughter nucleus），整个过程遵循几条严格的守恒定律：质量数 $A$ 守恒、电荷数 $Z$ 守恒、能量守恒以及动量守恒。核衰变主要有三种基本类型：</p>
+<li>$\alpha$ 衰变：放出氦核 $^4_2\text{He}$，$Z$ 减 2，$A$ 减 4；</li>
+<li>$\beta^-$ 衰变：中子转变为质子，放出电子和反中微子，$Z$ 加 1，$A$ 不变；</li>
+<li>$\gamma$ 衰变：激发态核释放光子回到基态，$Z$、$A$ 均不变。</li>
+<p>核衰变是一个<strong>随机过程</strong>，无法预测某个特定原子核何时衰变，但大量原子核的集体行为服从确定的指数衰变规律：</p>
+$$N(t) = N_0 e^{-\lambda t}$$
+<p>其中 $N_0$ 是初始核数，$\lambda$ 是衰变常数（单位时间内单个核发生衰变的概率）。由此可导出半衰期 $t_{1/2}$（核数衰减到一半所需时间）与 $\lambda$ 的关系：</p>
+$$t_{1/2} = \frac{\ln 2}{\lambda}$$
+<p><strong>推导要点</strong>：衰变速率正比于当前核数，即 $\frac{dN}{dt} = -\lambda N$，这是一阶线性微分方程，分离变量积分即得指数解。这一形式与放射性碳定年、药物代谢等许多"比例式衰减"现象共享同一数学结构。</p>
+<p><strong>例题</strong></p>
+<p>碳-14 的半衰期为 5730 年。若某考古样本中碳-14 含量为初始值的 25%，求样本年龄。</p>
+<p>由 $N/N_0 = e^{-\lambda t} = 0.25 = (1/2)^2$，得 $t = 2 \times t_{1/2} = 2 \times 5730 = 11460$ 年。</p>
+<p><strong>应用与守恒律验证</strong></p>
+<p>写出 $^{238}_{92}\text{U}$ 经 $\alpha$ 衰变的核反应方程：</p>
+$$^{238}_{92}\text{U} \rightarrow \,^{234}_{90}\text{Th} + \,^{4}_{2}\text{He}$$
+<p>检验：质量数 $238 = 234 + 4$ ✓；电荷数 $92 = 90 + 2$ ✓。任何合理的衰变方程都必须首先通过这两个守恒律的代数检验，这是解决核反应配平问题的标准方法。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch31: Radioactivity and Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

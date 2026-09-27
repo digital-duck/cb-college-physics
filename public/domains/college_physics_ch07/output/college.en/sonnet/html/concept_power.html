@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power | College Physics Ch07</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="power">Power</h2>
+<p>Power measures how quickly energy is transferred or work is performed. Two systems can accomplish the identical task — lifting the same crate to the same shelf — yet differ enormously in how fast they do it, and that speed is what power quantifies. Formally,</p>
+$$P = \frac{W}{t}$$
+<p>where $W$ is work in joules and $t$ is the time interval in seconds. The SI unit of power is the watt (W), with $1\text{ W} = 1\text{ J/s}$. Since work equals force times displacement along the direction of motion ($W = Fd$), power can also be written for constant force and velocity as</p>
+$$P = \frac{Fd}{t} = Fv$$
+<p>which is often the more practical form, since velocity is frequently known directly.</p>
+<p><strong>Worked example.</strong> A motor lifts a 50 kg load a vertical height of 6 m in 4 s at constant velocity. The work done against gravity is $W = mgh = (50)(9.8)(6) = 2940\text{ J}$. Dividing by time, $P = 2940/4 = 735\text{ W}$. If instead the same motor lifted the load in only 2 s, the work would be unchanged, but power would double to 1470 W — power depends on <em>rate</em>, not just total energy transferred.</p>
+<p><strong>Problem-solving application.</strong> Power calculations become essential when comparing how much force a machine can sustain at a given speed. Suppose an engine rated at 2000 W drives a cart at a cruising speed of 8 m/s. Using $P = Fv$, the maximum force the engine can sustain at that speed is $F = P/v = 2000/8 = 250\text{ N}$. Now suppose the cart speeds up to 10 m/s while the engine still delivers 2000 W: the sustainable force drops to $F = 2000/10 = 200\text{ N}$. This inverse relationship — more speed means less available force at fixed power — is a direct consequence of $P = Fv$ and is worth checking numerically whenever a problem gives power and asks for force, or vice versa: hold $P$ fixed, and $F$ and $v$ must trade off accordingly.</p>
+<pre class="mermaid">flowchart LR
+    A["Work done, W (J)"] --> C["Power, P = W / t"]
+    B["Time interval, t (s)"] --> C
+    C --> D["Force x Velocity, P = Fv"]</pre>
+<p><em>Two equivalent routes to power: from total work over time, or from force and velocity for constant-force motion.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch7: Work, Energy, and Energy Resources (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

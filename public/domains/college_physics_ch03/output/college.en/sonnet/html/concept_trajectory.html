@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trajectory | College Physics Ch03</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="trajectory">Trajectory</h2>
+<p>A trajectory is the path traced by a projectile moving under constant gravitational acceleration alone, once launched. Because horizontal and vertical motion are independent (Galileo's key insight), each axis obeys its own simple kinematic equation, and combining them produces the curved path.</p>
+<p>Set up coordinates with the launch point at the origin, launch speed $v_0$, and launch angle $\theta$ above the horizontal. The initial velocity components are $v_{0x} = v_0\cos\theta$ and $v_{0y} = v_0\sin\theta$. Horizontal velocity stays constant (no horizontal force, ignoring air resistance), while vertical velocity changes under gravitational acceleration $g$:</p>
+$$x(t) = v_0\cos\theta \, t, \qquad y(t) = v_0\sin\theta \, t - \tfrac{1}{2}g t^2$$
+<p>Solving the first equation for $t = x / (v_0\cos\theta)$ and substituting into the second eliminates time entirely, giving $y$ as a function of $x$:</p>
+$$y(x) = x\tan\theta - \frac{g}{2v_0^2\cos^2\theta}\,x^2$$
+<p>This is a quadratic in $x$, confirming that the trajectory is a parabola — the "combining" in the definition is literally the algebraic elimination of the shared parameter $t$.</p>
+<p><strong>Worked example.</strong> A ball is launched at $v_0 = 20\ \text{m/s}$, $\theta = 30°$, with $g = 9.8\ \text{m/s}^2$. Time of flight (return to launch height) is found by setting $y(t)=0$: $t = 2v_0\sin\theta/g = 2(20)(0.5)/9.8 \approx 2.04\ \text{s}$. Range is $x = v_0\cos\theta \cdot t \approx (20)(0.866)(2.04) \approx 35.3\ \text{m}$. Maximum height occurs at half the flight time, $t=1.02\ \text{s}$: $y_{max} = v_0\sin\theta\, t - \tfrac12 g t^2 \approx 10.2 - 5.1 \approx 5.1\ \text{m}$.</p>
+<p><strong>Problem-solving application.</strong> The parabolic form reveals a useful shortcut: range $R = \dfrac{v_0^2\sin(2\theta)}{g}$, maximized when $\theta = 45°$ since $\sin(2\theta)$ peaks at $2\theta = 90°$. This lets you answer optimization questions — "at what angle does a cannon achieve maximum range?" — without re-deriving the trajectory each time. It also explains a classic symmetry: launch angles $\theta$ and $90°-\theta$ give the same range but different flight times and peak heights, since $\sin(2\theta) = \sin(2(90°-\theta))$.</p>
+<pre><code>graph LR
+    A["Launch: v0, θ"] --&gt; B["Horizontal: x = v0 cosθ · t"]
+    A --&gt; C["Vertical: y = v0 sinθ · t − ½gt²"]
+    B --&gt; D["Eliminate t"]
+    C --&gt; D
+    D --&gt; E["Parabolic trajectory y(x)"]</code></pre>
+<p><em>How independent horizontal and vertical motion combine, via elimination of the time parameter, into the parabolic trajectory equation.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch3: Two-Dimensional Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

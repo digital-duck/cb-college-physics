@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baryon Number Conservation | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="baryon-number-conservation">Baryon Number Conservation</h2>
+<p><strong>定义</strong></p>
+<p>重子数 $B$ 是粒子物理中的一个可加性量子数，用来标记强子的组成结构。对每个重子（如质子、中子，均由三个夸克组成）赋值 $B=+1$；对每个反重子赋值 $B=-1$；对介子（夸克-反夸克对）、轻子（如电子、中微子）以及光子等玻色子赋值 $B=0$。夸克本身携带 $B=+1/3$，反夸克携带 $B=-1/3$，因此任何由夸克构成的强子的重子数都是整数。重子数守恒定律指出：在一切已观测到的相互作用中，反应前后总重子数保持不变，</p>
+$$\sum_i B_i^{\text{初态}} = \sum_i B_i^{\text{末态}}$$
+<p>这一定律至今没有发现任何例外，被视为标准模型中一条极为稳固的经验定律（尽管并非源自某个已知的规范对称性，其地位不同于电荷守恒）。</p>
+<p><strong>举例说明</strong></p>
+<p>考虑中子的 $\beta$ 衰变：</p>
+$$n \rightarrow p^+ + e^- + \bar{\nu}_e$$
+<p>初态：中子，$B=+1$。末态：质子 $B=+1$，电子 $B=0$，反中微子 $B=0$，总和 $B=+1$。两边相等，守恒成立——这也是为什么衰变产物中必须出现一个重子（质子），而不能是两个轻子了事。</p>
+<p>再看正负质子对撞产生新粒子对：</p>
+$$p^+ + \bar{p}^- \rightarrow p^+ + \bar{p}^- + p^+ + \bar{p}^-$$
+<p>初态 $B = 1 + (-1) = 0$，末态 $B = 1-1+1-1=0$。可见即使产生了新的重子，也必然伴随等量的反重子一起生成，重子只能"成对"凭空产生。</p>
+<p><strong>解题应用</strong></p>
+<p>重子数守恒常被用作判断一个假想反应是否物理可行的"快速筛查工具"，先于能量、电荷等其他守恒律检验。例如判断反应</p>
+$$p^+ + p^+ \rightarrow p^+ + \pi^+$$
+<p>是否可能发生：初态 $B = 1+1=2$，末态 $\pi^+$ 是介子 $B=0$，质子 $B=1$，末态总和 $B=1$。两边不等，故此反应被重子数守恒禁止，无论能量和电荷是否满足都不会发生。</p>
+<p>这一定律也解释了为何质子极其稳定（实验测得其寿命下限超过 $10^{34}$ 年）：质子是重子数为 $+1$ 的最轻粒子，若要衰变，末态必须由更轻的、重子数为 $0$ 的粒子（如正电子、介子）组成，这将违反重子数守恒。因此，即使质子衰变在能量和电荷上完全允许，重子数守恒仍将其牢牢禁止——这也是为什么"质子衰变"若被观测到，将是超越标准模型新物理的重大证据。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

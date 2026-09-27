@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lorentz Factor | College Physics Ch28</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="lorentz-factor">Lorentz Factor</h2>
+<p><strong>定义</strong></p>
+<p>洛伦兹因子（Lorentz factor）是狭义相对论中衡量相对论效应强弱的核心无量纲量，定义为</p>
+$$\gamma = \frac{1}{\sqrt{1 - \dfrac{v^2}{c^2}}}$$
+<p>其中 $v$ 是物体相对于观察者的速度，$c$ 是真空中的光速。$\gamma$ 恒大于等于 1，且仅当 $v = 0$ 时 $\gamma = 1$。当 $v \to c$ 时，分母 $\sqrt{1 - v^2/c^2} \to 0$，故 $\gamma \to \infty$。这个因子直接出现在时间膨胀 $\Delta t = \gamma \Delta t_0$、长度收缩 $L = L_0/\gamma$ 以及相对论动量 $p = \gamma m v$ 等所有核心公式中，是连接经典力学与相对论力学的换算桥梁。</p>
+<p><strong>推导要点</strong></p>
+<p>$\gamma$ 并非凭空引入的系数，而是由洛伦兹变换在保持光速不变这一公设下自然导出的。设两个惯性系以相对速度 $v$ 运动，要求变换后光速在两系中都等于 $c$，代入变换方程并求解比例系数，即可得到上式。这也解释了为何 $v \ge c$ 时 $\gamma$ 无实数解——这正是狭义相对论中"任何有质量物体都无法达到或超过光速"这一结论的数学根源。</p>
+<p><strong>例题</strong></p>
+<p>一艘飞船以 $v = 0.8c$ 的速度飞行。求 $\gamma$。</p>
+$$\gamma = \frac{1}{\sqrt{1 - 0.8^2}} = \frac{1}{\sqrt{1 - 0.64}} = \frac{1}{\sqrt{0.36}} = \frac{1}{0.6} \approx 1.667$$
+<p>这意味着飞船上乘员经历 1 秒时，地面观察者测得的时间为 $1 \times \gamma \approx 1.667$ 秒；飞船在地面观察者看来沿运动方向的长度收缩为原长的 $1/\gamma \approx 0.6$ 倍。</p>
+<p><strong>问题求解应用</strong></p>
+<p>求解涉及 $\gamma$ 的问题时，标准步骤是：先由已知条件（速度、动能或动量）求出 $\gamma$，再代入相应关系式求目标量。例如已知粒子总能量 $E = 5m c^2$，由 $E = \gamma m c^2$ 可得 $\gamma = 5$，进而反解 $v/c = \sqrt{1 - 1/\gamma^2} = \sqrt{1 - 1/25} \approx 0.98$。掌握 $\gamma$ 与 $v/c$ 之间的这种互逆求解能力，是处理粒子加速器、宇宙线以及 GPS 卫星时钟修正等实际相对论问题的基本功。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch28: Special Relativity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

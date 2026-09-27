@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linear Thermal Expansion | College Physics Ch13</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="linear-thermal-expansion">Linear Thermal Expansion</h2>
+<p><strong>定义</strong></p>
+<p>绝大多数固体材料受热时会膨胀，冷却时会收缩。对于一根长度为 $L_0$ 的杆或棒，当温度变化 $\Delta T$ 较小时，实验表明其长度变化 $\Delta L$ 与原长 $L_0$ 及温度变化 $\Delta T$ 成正比：</p>
+$$
+\Delta L = \alpha L_0 \Delta T
+$$
+<p>其中 $\alpha$ 称为<strong>线膨胀系数</strong>（coefficient of linear expansion），单位为 $\text{K}^{-1}$（或 $^{\circ}\text{C}^{-1}$）。$\alpha$ 是材料的固有属性：金属通常较大（如铝 $\alpha \approx 23 \times 10^{-6}\,\text{K}^{-1}$），而某些陶瓷或合金（如殷钢 Invar）$\alpha$ 极小，专为需要尺寸稳定的场合而设计。</p>
+<p>需要注意，该关系本质上是对更精确的指数关系 $L(T) = L_0 e^{\alpha(T-T_0)}$ 在 $\alpha \Delta T \ll 1$ 时的一阶泰勒近似，因此只在温度变化不太剧烈时成立。</p>
+<p><strong>推导小结</strong>：定义 $\alpha$ 为单位长度、单位温度变化下的相对伸长率：</p>
+$$
+\alpha \equiv \frac{1}{L_0}\frac{dL}{dT}
+$$
+<p>若 $\alpha$ 在所考察的温度范围内近似为常数，对其积分即得到线性公式 $\Delta L = \alpha L_0 \Delta T$。</p>
+<p><strong>例题</strong></p>
+<p>一根长度为 $L_0 = 2.000\,\text{m}$ 的钢制铁轨，在铺设时温度为 $10^{\circ}\text{C}$。已知钢的 $\alpha = 12 \times 10^{-6}\,\text{K}^{-1}$，求夏季温度升至 $40^{\circ}\text{C}$ 时铁轨伸长多少？</p>
+$$
+\Delta L = \alpha L_0 \Delta T = (12\times10^{-6})(2.000)(30) = 7.2\times10^{-4}\,\text{m} = 0.72\,\text{mm}
+$$
+<p><strong>应用与解题</strong></p>
+<p>工程中常需预留<strong>伸缩缝</strong>（expansion joint）以避免热胀导致的结构应力破坏，例如桥梁、铁轨、输油管道的设计都必须计算全年温差下的最大 $\Delta L$，并据此确定间隙宽度或采用波纹管补偿。反过来，若已知某结构因温差产生的应力超出许可范围，也可通过限制约束（阻止自由膨胀）来反推所需的内应力 $\sigma = E\alpha\Delta T$（$E$ 为杨氏模量），这将该概念与材料力学中的应力—应变分析直接联系起来。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch13: Temperature, Kinetic Theory, and the Gas Laws (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

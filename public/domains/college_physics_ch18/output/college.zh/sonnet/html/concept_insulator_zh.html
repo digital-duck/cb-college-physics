@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insulator | College Physics Ch18</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="绝缘体">绝缘体</h2>
+<p><strong>定义</strong>：绝缘体（insulator）是一类内部电荷被原子牢牢束缚、无法自由移动的材料。在绝缘体中，电子紧密地束缚在各自原子的价壳层上，与导体中可以在整个材料内部自由漂移的"电子海"形成鲜明对比。常见的绝缘体包括橡胶、玻璃、干燥的木材、塑料和空气。当我们把电荷放在绝缘体的某一处（例如用摩擦的方式让一块橡胶带上负电荷），这些电荷会停留在原地，不会扩散到整个材料表面，这与金属导体的行为完全不同——在金属导体中，多余的电荷会迅速重新分布，直到整个导体表面达到静电平衡（表面电场处处垂直、内部场强为零）。</p>
+<p><strong>举例说明</strong>：设想用丝绸摩擦一根玻璃棒，玻璃棒表面获得正电荷。如果我们只在棒的一端摩擦，这些正电荷会几乎精确地停留在被摩擦的那一小段区域，几小时后测量仍能发现电荷分布高度局域化。这是因为玻璃中的电子被原子核以及共价键结构紧紧束缚，缺乏能在整个材料中迁移的自由电子（不像金属那样存在离域的传导电子）。相比之下，如果把同样的正电荷放在一根金属棒的一端,电荷会几乎瞬间（在很短的弛豫时间内）重新分布到整根棒上，最终均匀覆盖整个表面。</p>
+<p><strong>问题解决应用</strong>：理解绝缘体的这一性质，是分析静电屏蔽、电荷储存装置（如平行板电容器）以及高压输电系统绝缘设计的基础。例如，在设计一个平行板电容器时，两块导体极板之间必须填充绝缘介质（空气或电介质材料），其作用正是阻止电荷从一块极板直接穿越到另一块极板，从而维持两极板之间的电势差 $V = Q/C$。若介质的绝缘性能不足（即存在"漏电"），电荷会逐渐泄漏，电容器就无法维持稳定电场。再如，考虑高压电线外包裹的橡胶或聚合物护套：其厚度与介电强度（单位为 $\text{V/m}$，即材料在被击穿放电前所能承受的最大电场强度）必须经过计算，以确保在给定工作电压 $V$ 下，护套内部电场 $E = V/d$ 始终低于材料的击穿场强，从而防止漏电或电弧放电。这类计算体现了绝缘体不仅是定性概念，更是工程设计中必须量化处理的安全参数。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch18: Electric Charge and Electric Field (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

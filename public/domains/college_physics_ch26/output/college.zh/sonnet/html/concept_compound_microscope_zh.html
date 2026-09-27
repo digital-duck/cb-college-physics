@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compound Microscope | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="复式显微镜">复式显微镜</h2>
+<p><strong>定义</strong>：复式显微镜（compound microscope）由两个凸透镜组成——靠近物体的<strong>物镜</strong>（objective lens）和靠近眼睛的<strong>目镜</strong>（eyepiece）。物镜的焦距很短，将紧邻其焦点外侧放置的微小物体成一个放大的<strong>实像</strong>；这个实像落在目镜的焦点以内，目镜再将其作为"物体"，形成一个供眼睛观察的放大<strong>虚像</strong>。两级放大的组合使总放大率远超单一透镜所能达到的水平。</p>
+<p>物镜的横向放大率由薄透镜成像公式给出：</p>
+$$m_o = -\frac{v_o}{u_o}$$
+<p>其中 $u_o$、$v_o$ 分别是物镜的物距和像距。目镜通常按简单放大镜处理，其角放大率为</p>
+$$m_e = \frac{25\text{ cm}}{f_e}$$
+<p>（$25\text{ cm}$ 为标准明视距离，$f_e$ 为目镜焦距）。显微镜的<strong>总放大率</strong>近似为两者之积：</p>
+$$M \approx m_o \times m_e = \left(\frac{v_o}{u_o}\right)\left(\frac{25}{f_e}\right)$$
+<p><strong>例题</strong>：某物镜焦距 $f_o = 0.5\text{ cm}$，物体置于距物镜 $u_o = 0.52\text{ cm}$ 处；目镜焦距 $f_e = 5\text{ cm}$。求总放大率。</p>
+<p>先用透镜公式求物镜像距：</p>
+$$\frac{1}{v_o} = \frac{1}{f_o} - \frac{1}{u_o} = \frac{1}{0.5} - \frac{1}{0.52} \approx 0.0769\text{ cm}^{-1}$$
+<p>得 $v_o \approx 13\text{ cm}$，故 $m_o = v_o/u_o \approx 25$。目镜放大率 $m_e = 25/5 = 5$。总放大率</p>
+$$M \approx 25 \times 5 = 125$$
+<p><strong>问题解决应用</strong>：这一模型说明为何显微镜设计要在"高放大率"与"成像质量、视场"之间权衡——单纯缩短 $f_o$ 或 $f_e$ 会提升 $M$，但会引入球差、色差并缩小视场,实际仪器需结合复合透镜组来抑制这些缺陷。理解 $M \approx m_o m_e$ 这一乘积结构,也是分析望远镜、投影仪等多级光学系统放大率的通用方法。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

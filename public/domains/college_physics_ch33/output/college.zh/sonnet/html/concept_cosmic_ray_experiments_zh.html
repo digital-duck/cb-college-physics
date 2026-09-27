@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cosmic Ray Experiments | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="cosmic-ray-experiments">Cosmic Ray Experiments</h2>
+<p><strong>定义</strong></p>
+<p>宇宙射线是来自太阳、超新星遗迹乃至银河系外的高能粒子流，主要成分是质子和原子核，能量范围可跨越十几个数量级，最高能事件的能量可达 $10^{20}\,\text{eV}$ 以上——远超地球上任何加速器所能达到的水平。当这些粒子进入大气层，会与氮、氧原子核发生强相互作用，产生级联式的次级粒子簇射（air shower）。典型的产生链条是：初级质子撞击大气核，产生带电和中性的 $\pi$ 介子；中性 $\pi^0$ 迅速衰变为光子对，引发电磁簇射；带电 $\pi^\pm$ 则继续衰变为 $\mu^\pm$ 与中微子：</p>
+$$
+\pi^{+}\rightarrow \mu^{+}+\nu_\mu, \qquad \pi^{-}\rightarrow \mu^{-}+\bar\nu_\mu
+$$
+<p>由于 $\mu$ 子寿命较长（约 $2.2\,\mu s$）且与物质相互作用微弱，大量得以穿透大气层到达地面甚至地下探测器，这正是宇宙射线实验的关键可观测信号。</p>
+<p><strong>历史实例（相当于"应用实例"）</strong></p>
+<p>1937 年，Anderson 与 Neddermeyer 在云室中分析宇宙射线径迹时，发现了一种电荷与电子相同、但穿透能力（对应质量）远大于电子的粒子——后来确认为 $\mu$ 子，质量约为电子的 207 倍。起初物理学家误以为这就是汤川秀树预言的、传递核力的介子，但穿透力和相互作用截面的实验数据表明二者性质不符。直到 1947 年，Powell 团队用感光乳胶板在高海拔（比利牛斯山、玻利维亚安第斯山）暴露记录径迹，才捕捉到 $\pi$ 介子先衰变为 $\mu$ 子、$\mu$ 子再衰变为电子的完整链条，从而把 $\pi$ 介子和 $\mu$ 子在实验上彻底区分开。</p>
+<p><strong>解题应用</strong></p>
+<p>在分析云室或乳胶板径迹时，核心的定量工具是相对论性动量—曲率关系：带电粒子在磁场 $B$ 中作圆周运动，半径 $r$ 满足</p>
+$$
+p = qBr
+$$
+<p>结合径迹的电离密度（判断电荷 $q$ 与速度 $\beta$）以及衰变前后的动量守恒，即可反推母粒子与子粒子的质量。例如，已知 $\mu$ 子径迹半径与已知磁场强度，可计算其动量 $p$；再由衰变产物电子的射程与角分布，验证衰变是否满足二体或三体运动学，从而确认 $\pi^\pm \to \mu^\pm + \nu$ 是二体衰变（子粒子动量唯一确定），而非三体过程。这种"径迹几何 + 动量守恒"的定量分析范式，正是现代高能物理探测器（如径迹室、量能器）设计与粒子鉴别算法的思想源头。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

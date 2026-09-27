@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Dimensional Kinematics | College Physics Ch03</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="one-dimensional-kinematics">One Dimensional Kinematics</h2>
+<p><strong>定义</strong></p>
+<p>一维运动学描述物体沿单一坐标轴（通常记为 $x$ 轴）的运动，其中加速度 $a$ 为常数。位置 $x(t)$、速度 $v(t)$ 与加速度 $a$ 之间的关系可由三个匀加速运动方程给出：</p>
+$$v(t) = v_0 + at$$
+$$x(t) = x_0 + v_0 t + \frac{1}{2}at^2$$
+$$v^2 = v_0^2 + 2a(x - x_0)$$
+<p>其中 $x_0$、$v_0$ 分别为初始位置与初始速度。这三个方程并非彼此独立的假设，而是由 $a = dv/dt$ 为常数这一条件，通过积分依次导出：对 $a$ 积分一次得到 $v(t)$，再积分一次得到 $x(t)$；第三式则是消去时间变量 $t$ 后的代数结果，适用于时间未知但位移已知的问题。</p>
+<p><strong>例题</strong></p>
+<p>一辆汽车以 $v_0 = 20\ \text{m/s}$ 的速度行驶，刹车产生恒定加速度 $a = -4\ \text{m/s}^2$。求汽车完全停止所需的时间，以及在此过程中行驶的距离。</p>
+<p>由 $v(t) = v_0 + at$，令末速度 $v = 0$：</p>
+$$0 = 20 + (-4)t \implies t = 5\ \text{s}$$
+<p>代入位移公式：</p>
+$$x = 0 + 20(5) + \frac{1}{2}(-4)(5)^2 = 100 - 50 = 50\ \text{m}$$
+<p>也可直接用第三式验证：$0 = 20^2 + 2(-4)(x) \implies x = 400/8 = 50\ \text{m}$，两种方法结果一致，说明三个方程内部自洽。</p>
+<p><strong>应用于二维运动的推广</strong></p>
+<p>一维运动学的关键价值在于：当运动发生在二维（甚至三维）平面内时，只要加速度沿各坐标轴的分量彼此独立（例如重力只沿竖直方向），就可以将运动分解为两个互不干扰的一维问题分别求解，再用矢量合成组合结果。例如抛体运动中，水平方向 $a_x = 0$，竖直方向 $a_y = -g$，于是</p>
+$$x(t) = x_0 + v_{0x}t, \qquad y(t) = y_0 + v_{0y}t - \frac{1}{2}gt^2$$
+<p>分别应用上述一维公式即可求解落地时间、射程与轨迹形状。这种"分轴独立求解、再矢量合成"的策略，是后续处理更复杂运动问题（如斜抛、圆周运动分量分析）的基础方法。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch3: Two-Dimensional Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

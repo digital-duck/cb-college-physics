@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X Ray Diffraction | College Physics Ch30</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="x-ray-diffraction">X Ray Diffraction</h2>
+<p><strong>定义</strong></p>
+<p>X 射线衍射（X-ray Diffraction, XRD）是利用 X 射线在晶体点阵中发生相干散射的现象，来确定晶体内部原子排列方式的一种实验与理论方法。晶体是原子按周期性重复排列而成的结构，其重复单元称为晶胞（unit cell）。当波长与原子间距同数量级（约 $10^{-10}\,\text{m}$）的 X 射线照射到晶体上时，晶体中每一层原子面都会像镜面一样反射入射波；只有当各层反射波之间的光程差恰好等于波长的整数倍时，这些散射波才会发生相长干涉，从而在特定角度产生强衍射峰。这一条件由 <strong>布拉格定律（Bragg's Law）</strong> 给出：</p>
+$$
+n\lambda = 2d\sin\theta
+$$
+<p>其中 $n$ 为整数（衍射级次），$\lambda$ 为 X 射线波长，$d$ 为相邻晶面间距，$\theta$ 为入射角（掠射角）。这是一个必须以公式形式理解的结果：衍射峰的位置由 $d$ 唯一决定，因此测出 $\theta$ 即可反推出晶体内部的原子间距。</p>
+<p><strong>例题</strong></p>
+<p>某晶体样品用波长 $\lambda = 1.54\ \text{Å}$（Cu Kα 特征谱线）的 X 射线照射，在 $\theta = 15.0^\circ$ 处观测到一级衍射峰（$n=1$）。求对应的晶面间距 $d$。</p>
+<p>由布拉格定律：</p>
+$$
+d = \frac{n\lambda}{2\sin\theta} = \frac{1 \times 1.54}{2\sin(15.0^\circ)} \approx \frac{1.54}{2 \times 0.259} \approx 2.97\ \text{Å}
+$$
+<p>即该晶面族的层间距约为 $2.97\ \text{Å}$，与许多简单立方或面心立方金属晶体的原子面间距量级一致。</p>
+<p><strong>解题应用</strong></p>
+<p>实际研究中，XRD 常用于反推整个晶胞的尺寸而非单一间距。对于立方晶系，晶面间距与米勒指数 $(hkl)$ 及晶格常数 $a$ 满足：</p>
+$$
+d_{hkl} = \frac{a}{\sqrt{h^2+k^2+l^2}}
+$$
+<p>将其代入布拉格定律，可得到不同 $(hkl)$ 对应衍射角的关系，从而通过扫描一系列衍射峰、拟合各峰对应的指数组合，反解出晶格常数 $a$，进而重建晶体结构。这正是蛋白质晶体学、材料相鉴定和纳米颗粒尺寸分析（结合谢乐公式 Scherrer equation）中的核心分析步骤：先测角、再套公式、最后拟合出原子尺度的几何结构。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch30: Atomic Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

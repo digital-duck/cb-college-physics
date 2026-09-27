@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newton Problem Solving Strategy | College Physics Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="newton-problem-solving-strategy">Newton Problem Solving Strategy</h2>
+<p>Newton's second law, $\sum \vec{F} = m\vec{a}$, is deceptively simple to write down and easy to misapply. The four-step strategy — <strong>sketch, identify system and free-body diagram, apply $\sum \vec{F} = m\vec{a}$, check reasonableness</strong> — turns the law into a repeatable procedure rather than a guess-and-check exercise.</p>
+<p><strong>Step 1 — Sketch.</strong> Draw the physical situation: objects, surfaces, ropes, angles. This step catches geometric details (an incline angle, a pulley's orientation) that are easy to lose once the problem becomes abstract symbols.</p>
+<p><strong>Step 2 — Identify the system and draw a free-body diagram (FBD).</strong> Choose which object (or set of objects) is "the system," then isolate it and draw every force acting <em>on</em> it — gravity, normal force, tension, friction, applied force — as vectors from a single point. Forces the system exerts on <em>other</em> objects do not belong in this diagram; this is the most common source of sign errors.</p>
+<p><strong>Step 3 — Apply Newton's second law.</strong> Choose a coordinate axis aligned with the expected acceleration (e.g., along an incline), resolve each force into components, and write $\sum F_x = ma_x$ and $\sum F_y = ma_y$ separately. This converts one vector equation into two scalar equations, which is what actually gets solved algebraically.</p>
+<p><strong>Step 4 — Check reasonableness.</strong> Confirm units are consistent, signs match the assumed direction of acceleration, and limiting cases behave sensibly — e.g., if friction $\to 0$, does the block's acceleration approach $g\sin\theta$ on a frictionless incline?</p>
+<p><strong>Worked example.</strong> A 5 kg block slides down a frictionless $30^\circ$ incline. FBD: weight $mg$ downward, normal force $N$ perpendicular to the incline. Aligning axes with the incline: $x$-direction gives $mg\sin\theta = ma$, so $a = g\sin(30^\circ) = 4.9\ \text{m/s}^2$; $y$-direction gives $N = mg\cos\theta = 42.4\ \text{N}$. Reasonableness check: $a < g$, as expected since only a component of gravity drives the motion, and $a \to g$ as $\theta \to 90^\circ$, matching free fall.</p>
+<p>The power of this strategy is that it separates geometry (Steps 1–2) from algebra (Step 3), so errors are localized and easy to trace — a discipline that scales directly to multi-body systems, pulleys, and circular motion problems later in the course.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch4: Dynamics: Force and Newton's Laws of Motion (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

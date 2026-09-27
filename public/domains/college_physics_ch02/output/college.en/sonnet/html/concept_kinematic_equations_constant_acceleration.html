@@ -11,6 +11,8 @@ MathJax = {
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
@@ -26,6 +28,12 @@ p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
 footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
       font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
 footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
 .page{max-width:780px;margin:0 auto;padding:40px 32px}
 section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
 section:first-of-type{border-top:none;padding-top:0}
@@ -35,20 +43,23 @@ section:first-of-type{border-top:none;padding-top:0}
 <div class="page">
   <main>
     <h2 id="kinematic-equations-constant-acceleration">Kinematic Equations Constant Acceleration</h2>
-<p>When acceleration is constant, the motion of an object — its position, velocity, and time — is fully described by four algebraic relationships. Each equation connects a different subset of five variables: initial position $x_0$, final position $x$, initial velocity $v_0$, final velocity $v$, acceleration $a$, and time $t$:</p>
-$$v = v_0 + at$$
-$$x = x_0 + \bar{v}t, \quad \text{where } \bar{v} = \frac{v_0+v}{2}$$
-$$x = x_0 + v_0t + \tfrac{1}{2}at^2$$
-$$v^2 = v_0^2 + 2a\Delta x$$
-<p>These are not four independent laws of physics — they are algebraic consequences of two definitions (average velocity and constant acceleration) combined and rearranged. The reason there are four is practical: each equation omits one variable, so you can pick the one equation that doesn't require a quantity you don't know.</p>
-<p><strong>Worked example.</strong> A car accelerates from rest ($v_0 = 0$) at $a = 3\ \text{m/s}^2$ for $t = 4\ \text{s}$. Find its displacement.</p>
-<p>Here the unknown we don't care about is final velocity $v$, so use the equation without $v$:</p>
-$$x - x_0 = v_0t + \tfrac{1}{2}at^2 = 0 + \tfrac{1}{2}(3)(4)^2 = 24\ \text{m}$$
-<p>Check with a second equation: $v = v_0 + at = 0 + 12 = 12\ \text{m/s}$, and $\bar{v}t = \frac{0+12}{2}(4) = 24\ \text{m}$. Consistent.</p>
-<p><strong>Problem-solving strategy.</strong> The four equations form a small toolkit, and the skill being tested is <em>selection</em>, not memorization. List the five variables, mark which three are given and which one is asked for, and pick the equation that excludes the fifth (unknown-and-unwanted) variable. This avoids solving a quadratic or a two-step chain when a single direct equation exists.</p>
-<p>For example, a braking-distance problem ("car slows from 20 m/s to 0 over $\Delta x = 40\ \text{m}$; find $a$") gives $v_0, v, \Delta x$ and asks for $a$ — no $t$ appears, so $v^2 = v_0^2 + 2a\Delta x$ is the direct route: $a = \frac{0 - 400}{80} = -5\ \text{m/s}^2$. Recognizing which variable is absent from the question is the actual problem-solving skill these equations train.</p>
+<p>When acceleration $a$ is constant, velocity changes linearly with time and position changes quadratically with time. Four equations capture every relationship among displacement $\Delta x$, initial velocity $v_0$, final velocity $v$, acceleration $a$, and time $t$:</p>
+$$v = v_0 + at \qquad (1)$$
+$$x = x_0 + \bar{v}t, \quad \bar{v} = \frac{v_0+v}{2} \qquad (2)$$
+$$x = x_0 + v_0t + \tfrac{1}{2}at^2 \qquad (3)$$
+$$v^2 = v_0^2 + 2a\Delta x \qquad (4)$$
+<p>Equation (1) comes directly from the definition $a = \Delta v/\Delta t$. Equation (3) integrates velocity over time; equation (4) eliminates $t$ algebraically between (1) and (3) — useful when time isn't given. Each equation omits exactly one of the five variables ($x, v_0, v, a, t$), so the practical skill is matching the equation to the three variables you know and the one you want.</p>
+<p><strong>Worked example.</strong> A car accelerates from rest at $a = 3\ \text{m/s}^2$ for $t = 4\ \text{s}$. Find its displacement and final velocity.</p>
+<p>Since $v_0 = 0$, equation (3) gives $x = 0 + 0 + \tfrac{1}{2}(3)(4)^2 = 24\ \text{m}$. Equation (1) gives $v = 0 + (3)(4) = 12\ \text{m/s}$. Check with equation (4): $v^2 = 0 + 2(3)(24) = 144$, so $v = 12\ \text{m/s}$ — consistent.</p>
+<p><strong>Problem-solving application.</strong> A ball is thrown upward at $v_0 = 20\ \text{m/s}$; find the maximum height, using $a = -9.8\ \text{m/s}^2$. At the peak, $v = 0$, so time isn't known but height is wanted — reach for equation (4), which skips $t$ entirely: $0 = (20)^2 + 2(-9.8)\Delta x \Rightarrow \Delta x = \frac{400}{19.6} \approx 20.4\ \text{m}$. This variable-elimination strategy — identifying which of the five quantities is absent from the problem and choosing the one equation that also omits it — is the core problem-solving move for all constant-acceleration motion, from projectile ranges to braking distances.</p>
+<pre><code>flowchart TD
+    A["Known: v0, a, t&lt;br/&gt;Unknown: v"] --&gt;|Eq 1| B["v = v0 + at"]
+    C["Known: x0, v0, v, t&lt;br/&gt;Unknown: x"] --&gt;|Eq 2| D["x = x0 + v_bar * t"]
+    E["Known: v0, a, t&lt;br/&gt;Unknown: x"] --&gt;|Eq 3| F["x = x0 + v0*t + 1/2*a*t^2"]
+    G["Known: v0, a, dx&lt;br/&gt;Unknown: v, no t"] --&gt;|Eq 4| H["v^2 = v0^2 + 2a*dx"]</code></pre>
+<p><em>Decision map for choosing which kinematic equation to apply based on which variable is unknown or absent from the problem.</em></p>
   </main>
-  <footer class="spl-credit">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></footer>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
 </div>
 </body>
 </html>

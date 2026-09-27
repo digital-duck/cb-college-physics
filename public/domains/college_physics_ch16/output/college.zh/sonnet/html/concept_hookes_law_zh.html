@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hookes Law | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="hookes-law">Hookes Law</h2>
+<p><strong>定义</strong></p>
+<p>胡克定律描述了理想弹簧在小形变范围内所表现出的线性弹性行为：弹簧施加的恢复力与其偏离平衡位置的位移成正比，方向与位移相反。数学表达式为</p>
+$$F = -kx$$
+<p>其中 $x$ 是相对于平衡位置的位移，$k$ 是弹簧的力常数（单位：$\mathrm{N/m}$），负号表明恢复力总是指向平衡位置，即与位移方向相反。$k$ 越大，弹簧越"硬"，产生相同形变所需的力也越大。需要强调的是，胡克定律只在<strong>弹性限度</strong>内成立——超过这一限度，材料会发生永久形变，线性关系不再适用。</p>
+<p><strong>例题</strong></p>
+<p>一根弹簧的力常数为 $k = 200\ \mathrm{N/m}$。若将其压缩 $0.05\ \mathrm{m}$，求恢复力的大小与方向。</p>
+<p>代入公式：</p>
+$$F = -kx = -(200\ \mathrm{N/m})(0.05\ \mathrm{m}) = -10\ \mathrm{N}$$
+<p>负号表示恢复力方向与压缩方向相反，即弹簧试图将物体推回平衡位置，大小为 $10\ \mathrm{N}$。</p>
+<p><strong>问题解决应用</strong></p>
+<p>胡克定律不仅用于计算单一时刻的力，更是分析弹簧系统能量与运动的基础。例如，弹簧的弹性势能可由该力对位移的积分得到：</p>
+$$U(x) = -\int_0^x F\,dx' = -\int_0^x (-kx')\,dx' = \frac{1}{2}kx^2$$
+<p>这一结果可用于能量守恒问题：若一物体从弹簧释放，其弹性势能将转化为动能，由此可求出物体离开平衡位置时的速度。</p>
+<p>此外，将胡克定律代入牛顿第二定律 $F = ma$，可得微分方程</p>
+$$m\frac{d^2x}{dt^2} = -kx$$
+<p>该方程的解为简谐振动 $x(t) = A\cos(\omega t + \varphi)$，其中角频率 $\omega = \sqrt{k/m}$。这一联系表明，胡克定律不仅是静力学中的比例关系,更是简谐运动理论的物理起点——理解 $k$ 与 $m$ 如何共同决定振动频率，是后续学习振荡系统、波动乃至量子谐振子的重要基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

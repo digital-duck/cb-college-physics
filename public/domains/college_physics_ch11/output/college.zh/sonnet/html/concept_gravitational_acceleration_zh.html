@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gravitational Acceleration | College Physics Ch11</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="gravitational-acceleration">Gravitational Acceleration</h2>
+<p><strong>定义</strong></p>
+<p>地球表面附近，任何物体在只受重力作用(忽略空气阻力)时，都会以相同的加速度下落，记作 $g$。在地球表面，其标准值为</p>
+$$
+g \approx 9.80\ \text{m/s}^2
+$$
+<p>这个值来自牛顿万有引力定律。设地球质量为 $M$，半径为 $R$，物体质量为 $m$，则物体所受重力为</p>
+$$
+F = \frac{GMm}{R^2} = mg
+$$
+<p>约去 $m$ 后得到</p>
+$$
+g = \frac{GM}{R^2}
+$$
+<p>其中 $G = 6.674 \times 10^{-11}\ \text{N·m}^2/\text{kg}^2$ 为万有引力常数。这说明 $g$ 并非任意设定的常数，而是由地球的质量和半径决定的——它对所有质量的物体都相同，这正是伽利略"自由落体与质量无关"结论的理论根源。</p>
+<p><strong>例题</strong></p>
+<p>一个物体从静止开始自由下落，忽略空气阻力，求其下落 $3.0\ \text{s}$ 后的速度和下落距离。</p>
+<p>利用运动学公式：</p>
+$$
+v = gt = 9.80 \times 3.0 = 29.4\ \text{m/s}
+$$
+$$
+h = \frac{1}{2}gt^2 = \frac{1}{2}\times 9.80 \times (3.0)^2 = 44.1\ \text{m}
+$$
+<p><strong>问题求解应用</strong></p>
+<p>某工程师需要估算从高度 $h = 78.4\ \text{m}$ 的塔顶释放一个测试探头，落地所需时间及末速度。</p>
+<p>由 $h = \frac{1}{2}gt^2$ 解出：</p>
+$$
+t = \sqrt{\frac{2h}{g}} = \sqrt{\frac{2\times 78.4}{9.80}} = \sqrt{16} = 4.0\ \text{s}
+$$
+<p>末速度为</p>
+$$
+v = gt = 9.80 \times 4.0 = 39.2\ \text{m/s}
+$$
+<p>这类问题的关键在于识别已知量与未知量之间的运动学关系，并选择合适的公式求解，而不是死记结论。若探头质量增加一倍，由于 $g$ 与质量无关，下落时间和末速度不变——这一点常被初学者误判，值得在实际计算前先做定性判断。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch11: Fluid Statics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

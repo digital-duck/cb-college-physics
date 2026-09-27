@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Independence Of Perpendicular Motions | College Physics Ch03</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="independence-of-perpendicular-motions">Independence Of Perpendicular Motions</h2>
+<p><strong>Definition.</strong> In two-dimensional motion, the horizontal ($x$) and vertical ($y$) components of an object's motion are independent: the acceleration, velocity, and position along one axis do not depend on the motion along the perpendicular axis. This follows directly from the vector nature of Newton's second law. Force, acceleration, velocity, and displacement are all vectors, and Cartesian components of a vector combine additively but do not interact:</p>
+$$
+\vec{a} = a_x\,\hat{x} + a_y\,\hat{y}, \qquad F_x = m a_x, \qquad F_y = m a_y
+$$
+<p>Because $F_x$ depends only on forces acting along $x$ (and similarly for $F_y$), solving for $x(t)$ and $y(t)$ becomes two separate, uncoupled one-dimensional problems that share only a common time variable $t$.</p>
+<p><strong>Worked example.</strong> A ball is launched horizontally at $v_0 = 20\ \text{m/s}$ from a cliff of height $h = 45\ \text{m}$, with $g = 9.8\ \text{m/s}^2$. Vertically, the ball behaves exactly as if dropped from rest — the horizontal launch speed has zero effect on how fast it falls:</p>
+$$
+y(t) = h - \tfrac{1}{2}g t^2 = 0 \quad\Rightarrow\quad t = \sqrt{\frac{2h}{g}} = \sqrt{\frac{2(45)}{9.8}} \approx 3.03\ \text{s}
+$$
+<p>Horizontally, there is no acceleration ($a_x = 0$), so the ball travels at constant velocity for that same time:</p>
+$$
+x = v_0 t \approx 20(3.03) \approx 60.6\ \text{m}
+$$
+<p>Note the key move: $t$ is found purely from the vertical equation, then substituted into the horizontal equation. The two axes never exchange information except through $t$.</p>
+<p><strong>Problem-solving application.</strong> This independence is the standard strategy for any projectile problem: solve the vertical axis (constant acceleration $-g$) to find how long the motion lasts, solve the horizontal axis (constant velocity, $a_x = 0$) independently, then recombine the two results using the shared time $t$ to answer questions about range, time of flight, or trajectory. It also explains classic demonstrations, such as a bullet fired horizontally and a bullet dropped from the same height landing simultaneously — their vertical motions are identical despite vastly different horizontal speeds.</p>
+<pre><code>graph TD
+    A["Motion with components vx, vy"] --&gt; B["Horizontal axis: ax = 0"]
+    A --&gt; C["Vertical axis: ay = -g"]
+    B --&gt; D["x(t) = v_x t"]
+    C --&gt; E["y(t) = h - 0.5 g t^2"]
+    D --&gt; F["Combine via shared time t"]
+    E --&gt; F
+    F --&gt; G["Trajectory, range, time of flight"]</code></pre>
+<p><em>The horizontal and vertical components evolve independently under their own kinematics, reuniting only through the shared time variable to describe the full trajectory.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch3: Two-Dimensional Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

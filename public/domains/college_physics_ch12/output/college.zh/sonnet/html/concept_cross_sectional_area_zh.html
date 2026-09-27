@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cross Sectional Area | College Physics Ch12</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="cross-sectional-area">Cross Sectional Area</h2>
+<p><strong>定义</strong></p>
+<p>横截面积（cross-sectional area）是指与流体流动方向垂直的导管截面的面积，记作 $A$，单位通常为平方米（$\text{m}^2$）。对于管道、河道或血管等任意导管，横截面积决定了在给定流速下能够通过的流体体积。这个概念之所以重要，是因为它与流速 $v$ 共同决定了体积流量 $Q$：</p>
+$$
+Q = A v
+$$
+<p>其中 $Q$ 的单位是 $\text{m}^3/\text{s}$。这一关系来自连续性方程（conservation of mass 在不可压缩流体中的表现形式），它表明：在没有流体源或汇的稳定流动中，通过导管任一横截面的体积流量必须保持恒定。</p>
+<p><strong>几何计算</strong></p>
+<p>横截面积的计算取决于导管的几何形状。对于圆形管道，若内半径为 $r$，则</p>
+$$
+A = \pi r^2
+$$
+<p>对于矩形通道，若宽为 $w$、高为 $h$，则 $A = wh$。</p>
+<p><strong>求解应用</strong></p>
+<p>考虑一段半径为 $r_1 = 0.10\ \text{m}$ 的管道，其中水以 $v_1 = 2.0\ \text{m/s}$ 的速度流动。该管道随后收缩为半径 $r_2 = 0.05\ \text{m}$ 的窄段。求窄段中的流速 $v_2$。</p>
+<p><strong>第一步</strong>：计算两段的横截面积。</p>
+$$
+A_1 = \pi (0.10)^2 = 0.0314\ \text{m}^2
+$$
+$$
+A_2 = \pi (0.05)^2 = 0.00785\ \text{m}^2
+$$
+<p><strong>第二步</strong>：应用连续性方程 $A_1 v_1 = A_2 v_2$（由 $Q$ 恒定推出），求解 $v_2$：</p>
+$$
+v_2 = \frac{A_1 v_1}{A_2} = \frac{0.0314 \times 2.0}{0.00785} = 8.0\ \text{m/s}
+$$
+<p>结果表明：横截面积缩小为原来的四分之一（因为半径减半、面积按平方关系缩小），流速则相应增大为原来的四倍。这正是花园浇水时用手指按压水管出口、水流会喷得更远更急的物理原因——手指减小了出口的横截面积，迫使水流速度增大以维持体积流量不变。这一原理同样应用于血管狭窄对血流速度的影响，以及风洞、喷嘴等工程设计中的流速控制问题。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch12: Fluid Dynamics and Its Biological and Medical Applications (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

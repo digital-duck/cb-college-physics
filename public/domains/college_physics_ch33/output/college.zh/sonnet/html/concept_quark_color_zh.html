@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quark Color | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="quark-color">Quark Color</h2>
+<p><strong>定义</strong></p>
+<p>夸克色荷（quark color）是强相互作用中的一种量子数，与电荷类似，但取三种"色"而非正负两种：红（red）、绿（green）、蓝（blue），记作 $r, g, b$；反夸克则携带对应的反色 $\bar r, \bar g, \bar b$。色荷是量子色动力学（QCD）中 $SU(3)$ 规范对称性的荷，胶子（gluon）正是传递色荷相互作用的媒介粒子，共有 $3^2 - 1 = 8$ 种。自然界中观测到的强子必须是"色中性"（color singlet，即"白色"）的：重子（baryon）由三个夸克组成，色的组合方式为 $r+g+b = \text{白}$；介子（meson）由一个夸克和一个反夸克组成，组合为色与其反色抵消，如 $r\bar r$。这一约束称为色禁闭（color confinement）——单个带色夸克无法被自由观测到。</p>
+<p><strong>推导要点</strong></p>
+<p>色禁闭并非附加假设，而是 $SU(3)_c$ 规范理论的自然结果：强子波函数必须是色群的单态（singlet）表示。三夸克重子的色波函数可写成反对称组合：</p>
+$$
+\psi_{\text{color}} = \frac{1}{\sqrt{6}}\sum_{i,j,k} \epsilon_{ijk}\,|q_i q_j q_k\rangle
+$$
+<p>其中 $\epsilon_{ijk}$ 是列维-奇维塔符号，$i,j,k \in \{r,g,b\}$。该反对称性同时解释了泡利不相容原理在重子（如 $\Delta^{++} = uuu$）中看似被违反的现象：三个全同的上夸克可以处于同一自旋-空间态，正是因为色自由度提供了额外的反对称维度。</p>
+<p><strong>问题解决应用</strong></p>
+<p>判断以下强子的色组合是否允许存在：(1) 由两个夸克组成的粒子 $q_i q_j$（$i=j$，同色）；(2) 由四个夸克组成的粒子 $q_r q_g q_b q_r$。</p>
+<p>分析：(1) 两个同色夸克无法与反色抵消，也无法构成三色齐全的重子结构，故不是色单态，被禁闭机制排除，这也是为何自然界不存在"双夸克"强子的原因之一。(2) 四夸克态需检验是否可分解为色单态组合，例如可视为重子核 $rgb$（白）加一个多余的 $r$——此时多余的 $r$ 必须与某个 $\bar r$ 配对才能保持整体色中性，否则该组合不能作为孤立强子存在。这类分析正是奇特强子（如四夸克态 tetraquark、五夸克态 pentaquark）实验搜寻中判断候选结构是否合法的第一步。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Endoscope | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="endoscope">Endoscope</h2>
+<p>内窥镜是一种利用光纤维束和全反射原理，将照明光输入体内、并将反射图像导出体外的医疗器械。它由两束光纤组成：一束是非相干光纤束，负责把外部光源导入体腔内部照亮观察部位；另一束是相干光纤束（纤维在两端保持严格对应的空间排列），负责把体内反射的图像逐点传出，在体外重新拼合成完整影像。每根光纤本身是一根"核心—包层"结构：核心折射率 $n_1$ 略高于包层折射率 $n_2$。光线只要以大于临界角 $\theta_c$ 的入射角打在核心—包层界面上，就会发生全反射，从而沿光纤内部无损耗地传播，即使光纤本身被弯曲成复杂路径。</p>
+<p>临界角由斯涅尔定律导出：当光从核心射向包层、折射角恰为 $90^\circ$ 时，</p>
+$$n_1 \sin\theta_c = n_2 \sin 90^\circ \implies \sin\theta_c = \frac{n_2}{n_1}$$
+<p><strong>worked example</strong>：设某医用光纤核心折射率 $n_1 = 1.62$，包层折射率 $n_2 = 1.52$。则</p>
+$$\sin\theta_c = \frac{1.52}{1.62} \approx 0.938 \implies \theta_c \approx 69.8^\circ$$
+<p>也就是说，只有以大于 $69.8^\circ$（相对于界面法线）射向侧壁的光线才能被全反射并继续沿光纤传播；角度不足的光线会折射进入包层而损失掉。</p>
+<p><strong>problem-solving application</strong>：设计者更关心的是"光纤能接收多大范围的入射光"，这由数值孔径（Numerical Aperture, NA）刻画：</p>
+$$\mathrm{NA} = \sqrt{n_1^2 - n_2^2}$$
+<p>代入上例数值：</p>
+$$\mathrm{NA} = \sqrt{1.62^2 - 1.52^2} = \sqrt{0.314} \approx 0.560$$
+<p>若光纤一端处于空气中（$n_0=1$），则外部光线能被耦合进光纤并维持全反射传播的最大入射角 $\theta_{\max}$ 满足 $\sin\theta_{\max} = \mathrm{NA}/n_0$，解得 $\theta_{\max} \approx 34.0^\circ$。这意味着只有落在半顶角约 $34^\circ$ 的圆锥内的入射光才能被有效导入并传输——这一"接受锥"参数直接决定了内窥镜物镜的采光效率与图像亮度，是光纤维束设计与选型时必须计算的核心指标。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

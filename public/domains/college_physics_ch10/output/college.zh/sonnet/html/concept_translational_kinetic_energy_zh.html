@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Translational Kinetic Energy | College Physics Ch10</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="平动动能">平动动能</h2>
+<p>平动动能（translational kinetic energy）描述物体作为一个整体沿直线或曲线运动时所携带的能量，其表达式为</p>
+$$E_k = \frac{1}{2}mv^2$$
+<p>其中 $m$ 为物体质量，$v$ 为质心运动速度。这一公式可由动能定理（work-energy theorem）严格导出：一个力 $F$ 作用在质量为 $m$ 的物体上,使其从速度 $v_1$ 变为 $v_2$，做的功等于</p>
+$$W = \int F\,dx = \int m\frac{dv}{dt}\,dx = \int mv\,dv = \frac{1}{2}mv_2^2 - \frac{1}{2}mv_1^2$$
+<p>即净功等于动能的变化量 $\Delta E_k$。这说明动能本质上是"做功能力"的度量，而非仅仅是速度的函数。</p>
+<p><strong>例题</strong>：一辆质量为 $1200\ \text{kg}$ 的汽车以 $20\ \text{m/s}$ 的速度行驶，刹车后速度降为 $5\ \text{m/s}$。求刹车过程中损失的动能。</p>
+$$\Delta E_k = \frac{1}{2}(1200)(20^2) - \frac{1}{2}(1200)(5^2) = 240000 - 15000 = 225000\ \text{J}$$
+<p>这 $225\ \text{kJ}$ 的能量通过摩擦转化为热能耗散,这正是动能定理在实际问题中的体现——能量守恒并非消失,而是转移形式。</p>
+<p><strong>应用与解题策略</strong>：在涉及碰撞、下落、斜面滑动等问题时，动能公式常与功能关系联立求解。例如,一个质量 $2\ \text{kg}$ 的物体从高度 $5\ \text{m}$ 自由下落（忽略空气阻力），落地时的动能可直接由重力做的功求得：</p>
+$$E_k = mgh = (2)(9.8)(5) = 98\ \text{J}$$
+<p>进而反解速度 $v = \sqrt{2E_k/m} = \sqrt{2 \times 98/2} \approx 9.9\ \text{m/s}$，与自由落体公式 $v=\sqrt{2gh}$ 一致，验证了动能法与运动学法的等价性。</p>
+<p>需要注意的是，公式 $\frac{1}{2}mv^2$ 仅适用于速度远小于光速的经典力学情形；当 $v$ 接近光速 $c$ 时，须使用相对论动能表达式 $E_k = (\gamma - 1)mc^2$，其中 $\gamma = 1/\sqrt{1-v^2/c^2}$。这一限制提醒我们：任何物理公式都有其适用范围，脱离该范围直接套用会导致错误结论。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch10: Rotational Motion and Angular Momentum (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

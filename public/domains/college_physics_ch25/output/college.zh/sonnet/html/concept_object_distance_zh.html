@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Object Distance | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="object-distance">Object Distance</h2>
+<p><strong>定义</strong></p>
+<p>物距（object distance）$d_o$ 是指物体到透镜或反射镜中心（或光心）的距离，通常沿主光轴测量，单位为米（m）或厘米（cm）。物距是薄透镜方程和反射镜方程中的核心变量之一，与像距 $d_i$、焦距 $f$ 共同满足：</p>
+$$\frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{f}$$
+<p>按照惯例（笛卡尔符号约定），实物的物距取正值，即光线从物体出发、朝透镜或镜面传播的一侧，$d_o > 0$。物距的大小直接决定了成像的位置、大小和虚实性质，因此准确测量或给定 $d_o$ 是求解几何光学问题的第一步。</p>
+<p><strong>例题</strong></p>
+<p>一个焦距 $f = 10\text{ cm}$ 的凸透镜前方 $d_o = 15\text{ cm}$ 处放置一个物体，求像距 $d_i$。</p>
+<p>代入透镜方程：</p>
+$$\frac{1}{15} + \frac{1}{d_i} = \frac{1}{10}$$
+$$\frac{1}{d_i} = \frac{1}{10} - \frac{1}{15} = \frac{3 - 2}{30} = \frac{1}{30}$$
+$$d_i = 30\text{ cm}$$
+<p>由于 $d_i > 0$，像为实像，成在透镜另一侧 $30\text{ cm}$ 处。</p>
+<p><strong>解题应用</strong></p>
+<p>在实际问题中，物距常常是唯一已知的自变量，题目要求你判断像的性质（实像/虚像、放大/缩小、正立/倒立）会如何随 $d_o$ 变化。关键的判断技巧是比较 $d_o$ 与焦距 $f$ 的相对大小：</p>
+<li>当 $d_o > 2f$：成缩小、倒立的实像；</li>
+<li>当 $f < d_o < 2f$：成放大、倒立的实像；</li>
+<li>当 $d_o < f$：透镜方程给出 $d_i < 0$，即物体在焦点以内，成正立、放大的虚像（如放大镜的工作原理）。</li>
+<p>解题时，先明确物距的符号约定和取值范围，再代入透镜/镜面方程求解未知量，最后通过横向放大率 $m = -d_i/d_o$ 验证像的大小与朝向是否与预期的物理图像一致。这种“先定性判断、再定量计算、最后交叉验证”的顺序，能有效避免符号错误导致的物理意义误判。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

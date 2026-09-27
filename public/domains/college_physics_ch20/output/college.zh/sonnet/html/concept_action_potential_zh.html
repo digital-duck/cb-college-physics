@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Action Potential | College Physics Ch20</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="action-potential-动作电位">Action Potential(动作电位)</h2>
+<p><strong>定义</strong></p>
+<p>动作电位是细胞膜受到刺激后产生的一次短暂、可再生的电压脉冲。静息状态下，神经元膜内外存在约 $V_m = -70\text{ mV}$ 的跨膜电位差，这是由钠钾泵维持的离子浓度梯度（膜内 $K^+$ 高、$Na^+$ 低）与膜的选择性通透性共同决定的。当刺激使膜电位去极化超过阈值（约 $-55\text{ mV}$）时，电压门控 $Na^+$ 通道迅速开放，$Na^+$ 顺浓度梯度大量内流，使膜电位迅速上升甚至反转至约 $+40\text{ mV}$（去极化，depolarization）。随后 $Na^+$ 通道失活，电压门控 $K^+$ 通道开放，$K^+$ 外流使膜电位恢复并短暂低于静息值（复极化，repolarization，常伴超极化）。整个过程遵循"全或无"定律：刺激达到阈值则产生固定幅度的动作电位，未达阈值则不产生任何反应，其大小与刺激强度无关。</p>
+<p><strong>工作实例</strong></p>
+<p>用能斯特方程可估算离子的平衡电位：</p>
+$$E_{\text{ion}} = \frac{RT}{zF}\ln\frac{[\text{ion}]_{\text{out}}}{[\text{ion}]_{\text{in}}}$$
+<p>在体温下，$Na^+$ 的平衡电位约为 $+60\text{ mV}$，$K^+$ 的平衡电位约为 $-90\text{ mV}$。动作电位的峰值之所以接近但达不到 $+60\text{ mV}$，是因为去极化阶段膜对 $Na^+$ 的通透性虽然大幅升高，却并非无限大，膜电位实际由戈德曼方程（考虑多离子通透性加权平均）决定，而非单一离子的能斯特电位。</p>
+<p><strong>问题求解应用</strong></p>
+<p>给定静息电位 $-70\text{ mV}$、阈值 $-55\text{ mV}$，可判断：若刺激仅使膜去极化至 $-60\text{ mV}$，未达阈值，$Na^+$ 通道不足以形成正反馈开放，动作电位不会触发（阈下反应，随距离衰减）。这一"全或无 + 阈值"特性解释了为何神经信号编码依赖动作电位的<strong>频率</strong>而非<strong>幅度</strong>——工程上可类比为数字信号（脉冲编码调制）而非模拟信号，这正是神经系统实现远距离无衰减信息传递的关键机制。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch20: Electric Current, Resistance, and Ohm's Law (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

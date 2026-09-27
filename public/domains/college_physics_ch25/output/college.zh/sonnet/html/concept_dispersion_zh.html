@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dispersion | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="色散">色散</h2>
+<p><strong>定义</strong></p>
+<p>色散（dispersion）是指白光通过介质时，因介质的折射率 $n$ 随光的波长 $\lambda$ 变化而分裂为完整光谱的现象。折射率并非一个常数，而是波长的函数 $n(\lambda)$，这一关系通常称为色散关系。对大多数透明介质（如玻璃、水）而言，$n(\lambda)$ 在可见光波段内是递减函数——波长越短（如紫光），折射率越大；波长越长（如红光），折射率越小。这一经验规律称为正常色散，可用柯西方程近似描述：</p>
+$$
+n(\lambda) \approx A + \frac{B}{\lambda^2}
+$$
+<p>其中 $A$、$B$ 为与介质有关的常数。由斯涅尔定律 $n_1 \sin\theta_1 = n_2 \sin\theta_2$ 可知，折射率随波长变化，必然导致不同波长的光在同一界面发生不同角度的折射，从而使原本混合在一起的白光被空间上分开。</p>
+<p><strong>范例</strong></p>
+<p>考虑白光以入射角 $\theta_1 = 45^\circ$ 从空气（$n_1 = 1.000$）射入一块三棱镜玻璃，玻璃对红光的折射率为 $n_{\text{红}} = 1.513$，对紫光为 $n_{\text{紫}} = 1.532$。由斯涅尔定律可分别求出两色光的折射角：</p>
+$$
+\sin\theta_2 = \frac{n_1 \sin\theta_1}{n_2}
+$$
+<p>代入数据：红光 $\sin\theta_{\text{红}} = \dfrac{1.000 \times 0.7071}{1.513} = 0.4674$，得 $\theta_{\text{红}} \approx 27.86^\circ$；紫光 $\sin\theta_{\text{紫}} = \dfrac{0.7071}{1.532} = 0.4616$，得 $\theta_{\text{紫}} \approx 27.49^\circ$。两者相差约 $0.37^\circ$——正是这一微小角度差，经过三棱镜两个折射面的累积放大，才在光屏上呈现出清晰可辨的彩虹光谱。</p>
+<p><strong>问题求解应用</strong></p>
+<p>处理色散问题的关键步骤是：（1）确认介质在相关波长下的折射率数据（或色散公式）；（2）对每一种波长分别应用斯涅尔定律，求出各自的折射角；（3）比较不同波长光线的角度差，以确定色散展开的空间范围或成像清晰度。这一方法不仅用于解释彩虹和棱镜分光，也用于分析光学透镜的色差（chromatic aberration）——即因色散导致不同颜色光的焦点位置不重合，是设计消色差透镜时必须通过组合不同色散特性的玻璃来校正的核心问题。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>
