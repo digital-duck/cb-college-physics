@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Pendulum | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="simple-pendulum">Simple Pendulum</h2>
+<p><strong>定义</strong></p>
+<p>单摆由一根不可伸长、质量可忽略的细线悬挂一个质点（摆锤）构成，在重力作用下绕悬挂点做往复摆动。当摆角 $\theta$ 足够小（通常要求 $\theta < 15°$，此时 $\sin\theta \approx \theta$，误差小于 1%）时，摆锤的运动是简谐运动（SHM），其周期为</p>
+$$
+T = 2\pi\sqrt{\frac{L}{g}}
+$$
+<p>其中 $L$ 为摆长，$g$ 为当地重力加速度。值得注意的是，周期与摆锤质量 $m$ 及振幅（在小角度范围内）无关——这正是伽利略等时性的核心结论。</p>
+<p><strong>理论推导简述</strong></p>
+<p>对摆锤沿圆弧方向应用牛顿第二定律，切向恢复力为 $-mg\sin\theta$，对应角加速度方程为</p>
+$$
+\ddot\theta + \frac{g}{L}\sin\theta = 0
+$$
+<p>小角度近似 $\sin\theta \approx \theta$ 后，方程化为标准简谐振动形式</p>
+$$
+\ddot\theta + \omega^2 \theta = 0, \qquad \omega = \sqrt{\frac{g}{L}}
+$$
+<p>由 $T = 2\pi/\omega$ 即得上述周期公式。这一步"线性化"是理解为何单摆是 SHM 的关键——它不是精确解，而是小角度下的近似,当角度增大时会出现非线性修正项。</p>
+<p><strong>例题</strong></p>
+<p>某单摆摆长 $L = 0.994\ \text{m}$，在地球表面（$g = 9.8\ \text{m/s}^2$）测得周期为</p>
+$$
+T = 2\pi\sqrt{\frac{0.994}{9.8}} \approx 2\pi \times 0.3184 \approx 2.00\ \text{s}
+$$
+<p>这正是"秒摆"的经典设计，17 世纪曾被用作计时标准。</p>
+<p><strong>问题解决应用</strong></p>
+<p>单摆常被用来<strong>反推重力加速度</strong>：已知 $L$，测出 $T$，可得</p>
+$$
+g = \frac{4\pi^2 L}{T^2}
+$$
+<p>这是许多实验室测量当地 $g$ 值的标准方法。此外，理解周期与质量无关这一性质，有助于分析"为何胖瘦不同的钟摆孩子荡秋千频率相同"这类现实问题；而认识到公式仅在小角度下成立，则提醒我们在设计精密计时装置（如机械钟摆）时必须严格控制摆动振幅，否则周期会随振幅增大而变长，导致计时误差。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refractive Index | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="折射率">折射率</h2>
+<p><strong>定义</strong></p>
+<p>折射率(refractive index)是一个无量纲数,用来描述光在某种介质中传播时相对于真空被"减速"或"弯折"的程度。其定义为</p>
+$$
+n = \frac{c}{v}
+$$
+<p>其中 $c$ 是光在真空中的速度($c \approx 3.00 \times 10^8 \ \text{m/s}$),$v$ 是光在该介质中的传播速度。由于介质中光速总是小于或等于真空光速,故 $n \geq 1$。折射率越大,说明光在该介质中传播得越慢,光线在界面处的弯折程度也越大。这一现象背后的物理机制是光与介质中原子的电磁相互作用:入射光的电场使介质中的电子振荡,再辐射出次级波,这些次级波与原波叠加后产生了净减速效应。</p>
+<p>折射率不仅决定光速,还通过<strong>斯涅尔定律(Snell's Law)</strong>决定光线穿过两种介质界面时的弯折角度:</p>
+$$
+n_1 \sin\theta_1 = n_2 \sin\theta_2
+$$
+<p>其中 $\theta_1, \theta_2$ 分别是入射角与折射角(均以法线为基准测量)。</p>
+<p><strong>范例解析</strong></p>
+<p>考虑光从空气($n_1 = 1.00$)以 $30^\circ$ 入射角进入水中($n_2 = 1.33$)。求折射角 $\theta_2$。</p>
+<p>由斯涅尔定律:</p>
+$$
+\sin\theta_2 = \frac{n_1 \sin\theta_1}{n_2} = \frac{1.00 \times \sin 30^\circ}{1.33} = \frac{0.500}{1.33} \approx 0.376
+$$
+$$
+\theta_2 = \arcsin(0.376) \approx 22.1^\circ
+$$
+<p>可见光线从光疏介质(折射率小)进入光密介质(折射率大)时会向法线方向偏折,折射角小于入射角,这与直觉一致——水中光速变慢,波前需要"转向"以维持相位连续。</p>
+<p><strong>问题求解应用</strong></p>
+<p>折射率还可用来判断<strong>全反射(total internal reflection)</strong>是否发生,这是光纤通信的核心原理。当光从光密介质射向光疏介质($n_1 > n_2$)时,存在一个临界角 $\theta_c$,使得</p>
+$$
+\sin\theta_c = \frac{n_2}{n_1}
+$$
+<p>当入射角超过 $\theta_c$ 时,折射光完全消失,能量全部反射回原介质。例如玻璃光纤($n_1 = 1.50$)外包层($n_2 = 1.45$)的临界角为</p>
+$$
+\theta_c = \arcsin\!\left(\frac{1.45}{1.50}\right) \approx 74.5^\circ
+$$
+<p>只要光线入射角大于该值,就能在光纤内部持续全反射传播,几乎无损耗地传输数千公里,这正是现代通信网络的物理基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

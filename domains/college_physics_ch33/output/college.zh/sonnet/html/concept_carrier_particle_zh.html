@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrier Particle | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="传力粒子">传力粒子</h2>
+<p><strong>定义</strong>：在量子场论中，两个粒子之间的相互作用并非"超距作用"，而是通过交换一种称为<strong>传力粒子</strong>（force carrier，也叫规范玻色子）的中间粒子来实现的。这类粒子通常是<strong>虚粒子</strong>——它们不满足自由粒子的质能关系 $E^2 = (pc)^2 + (mc^2)^2$，其存在时间极短，是海森堡不确定性原理 $\Delta E \, \Delta t \gtrsim \hbar$ 所允许的"能量借贷"。四种基本相互作用各有其传力粒子：电磁力对应光子（无质量）、强力对应胶子（无质量）、弱力对应 $W^\pm, Z^0$ 玻色子（有质量）、引力对应假想的引力子（尚未探测到）。</p>
+<p><strong>理论推导</strong>：1935年，汤川秀树提出核内的强相互作用是通过交换一种有质量的介子传递的，并由此建立了传力粒子质量与力程之间的定量关系。设虚粒子借用能量 $\Delta E \approx mc^2$ 用于"凭空产生"自身，则按不确定性原理，其存在时间不超过 $\Delta t \approx \dfrac{\hbar}{mc^2}$。由于该虚粒子最多以光速 $c$ 传播，它能到达的最大距离，也就是这种力的<strong>作用力程</strong> $R$，满足：</p>
+$$
+R \approx c \, \Delta t = \frac{\hbar}{mc}
+$$
+<p>这就是<strong>汤川关系</strong>：传力粒子质量越大，力程越短；质量为零的传力粒子（如光子）对应无限力程。</p>
+<p><strong>例题</strong>：已知核力的有效力程约为 $R \approx 1.4 \times 10^{-15}\ \text{m}$，代入上式反解质量：</p>
+$$
+m \approx \frac{\hbar}{Rc} \approx \frac{1.055\times10^{-34}}{(1.4\times10^{-15})(3\times10^8)} \approx 2.5\times10^{-28}\ \text{kg} \approx 140\ \text{MeV}/c^2
+$$
+<p>这一预测的粒子后来被实验证实，即 $\pi$ 介子（π-meson），质量约 139–140 MeV/$c^2$，与理论值高度吻合，成为粒子物理学"由力程预测粒子质量"的经典范例。</p>
+<p><strong>问题求解应用</strong>：同样的关系式可反向使用——已知传力粒子质量，求相互作用的有效力程。弱力的传力粒子 $W^\pm/Z^0$ 玻色子质量约 $80$–$91\ \text{GeV}/c^2$，代入公式得力程 $R \sim 10^{-18}\ \text{m}$，远小于原子核尺度，这正解释了为什么弱相互作用（如 $\beta$ 衰变）在宏观甚至核尺度上显得如此"短程而微弱"。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

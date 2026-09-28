@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sound | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="声音">声音</h2>
+<p><strong>定义</strong></p>
+<p>声音是物质中的扰动，以纵波（疏密波）的形式从声源向外传播。当声源振动时，会周期性地压缩和稀疏周围的介质（如空气），使局部压强偏离平衡值 $p_0$。这种压强扰动 $p(x,t)$ 沿传播方向依次推进，其运动规律满足一维波动方程：</p>
+$$
+\frac{\partial^2 p}{\partial t^2} = v^2 \frac{\partial^2 p}{\partial x^2}
+$$
+<p>其中 $v$ 是声速。与横波（如水波、电磁波）不同，纵波中介质质点的振动方向与波的传播方向<strong>平行</strong>——这正是"纵波"名称的由来，也是声音无法在真空中传播的原因：没有可供压缩和膨胀的介质。</p>
+<p>声音在介质中的传播速度取决于介质的弹性和密度。对于理想气体，声速可表示为：</p>
+$$
+v = \sqrt{\frac{\gamma R T}{M}}
+$$
+<p>其中 $\gamma$ 为绝热指数，$R$ 为气体常数，$T$ 为绝对温度，$M$ 为气体摩尔质量。这一公式表明：<strong>声速只取决于介质的温度和性质，与波的频率或振幅无关</strong>。</p>
+<p><strong>例题</strong></p>
+<p>已知空气在 $20\,^\circ\text{C}$（即 $T = 293\,\text{K}$）时，$\gamma = 1.4$，$M = 0.029\,\text{kg/mol}$，$R = 8.314\,\text{J/(mol·K)}$。求此时空气中的声速。</p>
+<p>代入公式：</p>
+$$
+v = \sqrt{\frac{1.4 \times 8.314 \times 293}{0.029}} \approx \sqrt{117{,}760} \approx 343\,\text{m/s}
+$$
+<p>这与实验测得的常温声速吻合，也解释了为什么闪电与雷声之间的时间差可用来估算距离：光速远大于声速，观察者可近似认为闪光是瞬时到达的，而雷声按 $343\,\text{m/s}$ 传播。</p>
+<p><strong>应用：解决实际问题</strong></p>
+<p>若某人在看到闪电后 $3\,\text{s}$ 听到雷声，闪电发生地与观察者的距离约为：</p>
+$$
+d = v \times t = 343 \times 3 \approx 1029\,\text{m} \approx 1\,\text{km}
+$$
+<p>这种"测距"方法广泛应用于气象观测、地震学（利用 P 波与 S 波到达时间差定位震源）以及声呐系统中，体现了波动方程与声速公式在实际工程测量中的核心作用。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

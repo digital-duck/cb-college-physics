@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Antimatter | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="antimatter">Antimatter</h2>
+<p><strong>定义</strong></p>
+<p>每一种基本粒子都存在一个对应的反粒子:质量、自旋等固有属性完全相同,但电荷及其他量子数(如轻子数、重子数)符号相反。例如电子 $e^-$ 的反粒子是正电子 $e^+$,带正电荷;质子 $p$ 的反粒子是反质子 $\bar{p}$,带负电荷。当一个粒子与其反粒子相遇时会发生<strong>湮灭</strong>(annihilation):两者质量完全转化为能量(通常以光子形式释放),遵循爱因斯坦质能关系</p>
+$$
+E = mc^2
+$$
+<p>对于正负电子对湮灭这一最常见的实验室过程,由于动量守恒要求至少产生两个光子,总释放能量为</p>
+$$
+E_{\text{total}} = 2 m_e c^2 \approx 1.022\ \text{MeV}
+$$
+<p>其中 $m_e = 9.109 \times 10^{-31}\ \text{kg}$ 是电子静止质量。反过来,足够高能的光子(如伽马射线)在原子核附近也可以通过"对产生"(pair production)过程转化为一对正负电子,这是湮灭的逆过程,同样受能量与动量守恒约束。</p>
+<p><strong>范例计算</strong></p>
+<p>假设一个正电子与一个电子在静止状态下发生湮灭,求释放的总能量,并与化学燃烧反应(如 1 kg 汽油燃烧释放约 $4.4 \times 10^7\ \text{J}$)做比较。</p>
+<p>由上式,单对湮灭释放能量约 $1.022\ \text{MeV} = 1.637 \times 10^{-13}\ \text{J}$。若考虑 1 kg 反物质与 1 kg 正物质完全湮灭(质量总和 $m = 2\ \text{kg}$ 转化为能量):</p>
+$$
+E = mc^2 = (2\ \text{kg})(3\times10^8\ \text{m/s})^2 \approx 1.8\times10^{17}\ \text{J}
+$$
+<p>这一数值是同质量汽油燃烧释放能量的约 <strong>四百万倍</strong>,直观展示了反物质湮灭作为能量密度上限的物理意义。</p>
+<p><strong>应用与问题求解</strong></p>
+<p>在实际问题中,反物质相关计算常涉及三个核心量的联立:反应前后总质量亏损 $\Delta m$、释放光子能量、以及动量守恒对光子能量分配的约束。求解此类问题的标准步骤是:(1) 写出反应前后的总静止质量,得到 $\Delta m$;(2) 应用 $E=\Delta m c^2$ 求总能量;(3) 若产物为多个光子,利用动量守恒确定各光子能量与传播方向的关系。这一方法同样适用于医学 PET 成像(正电子湮灭产生的一对 511 keV 反向光子的探测原理)以及粒子物理实验中对撞机内产生反质子束流的能量核算。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

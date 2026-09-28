@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="time">Time</h2>
+<p>Time is the physical quantity that orders events and measures the interval between them. In the International System of Units (SI), time is measured in seconds (s), and since 1967 the second has been defined not by astronomical motion but by an atomic standard: 1 second equals 9,192,631,770 periods of the radiation emitted by a cesium-133 atom transitioning between two hyperfine energy levels. This definition replaced earlier ones based on Earth's rotation because atomic transitions are far more stable and reproducible — Earth's spin varies slightly due to tidal friction and geological events, while a cesium atom's transition frequency does not drift.</p>
+<p><strong>Worked example.</strong> Suppose a cesium clock counts oscillations to measure an event lasting exactly 2.5 seconds. The number of periods counted is</p>
+$$
+N = 2.5 \times 9{,}192{,}631{,}770 = 22{,}981{,}579{,}425 \text{ periods}.
+$$
+<p>This illustrates the operational meaning of "one second": it is not an abstract unit but a literal count of physical oscillations, calibrated against a reproducible natural process.</p>
+<p><strong>Problem-solving application.</strong> Time measurement underlies velocity, acceleration, and rate calculations throughout physics and engineering. Consider a GPS satellite, which relies on atomic clocks to timestamp signals to nanosecond precision. General relativity predicts that a clock in the satellite's weaker gravitational field runs faster than one on Earth's surface by about $45.7\ \mu\text{s/day}$, while special relativity (due to the satellite's orbital speed) causes it to run slower by about $7.2\ \mu\text{s/day}$. The net effect, $+38.5\ \mu\text{s/day}$, must be corrected in the satellite's onboard clock; uncorrected, positioning errors would accumulate at roughly $10\ \text{km/day}$. This example shows why time is not merely a background parameter but an actively engineered quantity: precise timekeeping standards, and the physical laws governing how time itself behaves under motion and gravity, directly determine the accuracy of technologies like GPS.</p>
+<p>Time's role as the SI base unit for the second also makes it foundational to defining other units — the meter, for instance, is defined via the distance light travels in a fixed fraction of a second — illustrating how a single precise standard can anchor an entire system of measurement.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

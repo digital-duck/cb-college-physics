@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changing Electric Field Creates Magnetic Field | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="changing-electric-field-creates-magnetic-field">Changing Electric Field Creates Magnetic Field</h2>
+<p><strong>定义</strong></p>
+<p>安培定律的原始形式指出，电流会在其周围产生磁场：$\oint \vec{B} \cdot d\vec{l} = \mu_0 I_{enc}$。然而麦克斯韦发现，这一表述在电容器充电这类情形下会出现逻辑矛盾——如果安培环路所围的曲面选在电容器两极板之间的空隙中，那里并没有实际电流穿过，安培定律便会预测出零磁场，这与实验和对称性直觉相悖。</p>
+<p>麦克斯韦的关键洞见是：电容器极板间虽然没有传导电流，但极板上电荷不断增加，导致两极板间的电场 $\vec{E}$ 随时间变化。他提出，变化的电场本身就等效于一种电流，称为<strong>位移电流</strong>（displacement current），其密度定义为</p>
+$$\vec{J}_d = \epsilon_0 \frac{\partial \vec{E}}{\partial t}$$
+<p>将其加入安培定律，得到麦克斯韦修正后的安培-麦克斯韦定律：</p>
+$$\oint \vec{B} \cdot d\vec{l} = \mu_0 I_{enc} + \mu_0 \epsilon_0 \frac{d\Phi_E}{dt}$$
+<p>这使电磁理论实现了美妙的对称：法拉第定律说"变化的磁场产生电场"，安培-麦克斯韦定律说"变化的电场（或电流）产生磁场"。</p>
+<p><strong>例题</strong></p>
+<p>一个平行板电容器正在充电，两极板间电场按 $E(t) = 5\times10^{6}\, t$ V/m 变化（$t$ 以秒计），极板面积为 $A = 0.02\,\text{m}^2$。求某时刻电容器内部的位移电流。</p>
+<p>首先计算电场变化率：$\frac{dE}{dt} = 5\times10^{6}$ V/(m·s)。位移电流为</p>
+$$I_d = \epsilon_0 A \frac{dE}{dt} = (8.85\times10^{-12})(0.02)(5\times10^{6}) \approx 8.85\times10^{-7}\,\text{A}$$
+<p>这一微小但非零的电流，恰好等于此刻流入电容器另一侧导线的传导电流，从而保证了安培环路定律在任何闭合曲面选择下都自洽一致。</p>
+<p><strong>问题求解应用</strong></p>
+<p>在实际电路分析或电磁波推导中，位移电流项的意义远不止“修补漏洞”：正是这一项使得电场和磁场可以在没有任何导线或电荷的真空中相互感应、传播开来——这正是电磁波存在的数学根源。求解此类问题时，关键步骤是：先判断安培环路所围曲面上是否存在传导电流，若曲面选在"空隙"区域，则必须计算穿过该曲面的电通量变化率 $d\Phi_E/dt$，并代入位移电流公式，才能得到与曲面选择无关的一致磁场结果。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bernoullis Principle | College Physics Ch12</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="bernoullis-principle">Bernoullis Principle</h2>
+<p><strong>定义</strong></p>
+<p>伯努利原理描述了理想流体（不可压缩、无粘性、层流）在流动过程中压强、速度与高度之间的定量关系。当流体沿同一水平面（高度不变）流动时，伯努利方程简化为：</p>
+$$P_1 + \frac{1}{2}\rho v_1^2 = P_2 + \frac{1}{2}\rho v_2^2$$
+<p>其中 $P$ 为压强，$\rho$ 为流体密度，$v$ 为流速，下标 $1,2$ 表示流管上两个不同截面。该方程本质上是能量守恒定律（功–能定理）在流体力学中的表现形式：单位体积流体的压强能与动能之和沿流线保持不变。由此可直接得出核心结论——<strong>在同一高度上，流速增大的地方压强必然减小</strong>，反之亦然。这不是经验规律，而是牛顿第二定律应用于流体微元后严格推导的结果，因此它具有定律的确定性，而非近似或经验描述。</p>
+<p><strong>推导要点</strong></p>
+<p>考虑连续性方程 $A_1v_1 = A_2v_2$（质量守恒），当管道截面 $A$ 变窄时，$v$ 必然增大以维持流量不变。将此代入伯努利方程可见，若 $v_2 > v_1$，则右边动能项增大，为使等式成立，$P_2$ 必须小于 $P_1$。压强与速度的这种反向耦合，是理解飞机升力、文丘里管、喷雾器等现象的数学基础。</p>
+<p><strong>例题：文丘里流量计</strong></p>
+<p>水以密度 $\rho = 1000\ \text{kg/m}^3$ 流经水平管道，宽段截面积 $A_1 = 0.02\ \text{m}^2$，速度 $v_1 = 1\ \text{m/s}$；窄段截面积 $A_2 = 0.01\ \text{m}^2$。求窄段压强变化 $\Delta P = P_1 - P_2$。</p>
+<p>由连续性方程：$v_2 = \dfrac{A_1 v_1}{A_2} = \dfrac{0.02 \times 1}{0.01} = 2\ \text{m/s}$</p>
+<p>代入伯努利方程：</p>
+$$\Delta P = \frac{1}{2}\rho(v_2^2 - v_1^2) = \frac{1}{2}(1000)(4 - 1) = 1500\ \text{Pa}$$
+<p>窄段压强比宽段低 1500 帕。这一压差正是文丘里流量计测量流速、化油器雾化燃料的物理依据：只需测出 $\Delta P$，即可反推流速与流量,无需直接测量高速流体本身。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch12: Fluid Dynamics and Its Biological and Medical Applications (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gravitational Wave Detection | College Physics Ch34</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="gravitational-wave-detection">Gravitational Wave Detection</h2>
+<p><strong>定义</strong></p>
+<p>引力波是时空曲率的波动，由加速运动的质量（尤其是双黑洞或双中子星并合等剧烈事件）以光速向外传播而产生，其存在由爱因斯坦广义相对论场方程的弱场近似直接预言。当引力波经过某一区域时，它会交替地拉伸和压缩空间本身，对相互垂直方向上的长度产生极其微小的相对形变，其应变幅度 $h = \Delta L / L$ 通常小于 $10^{-21}$。LIGO（激光干涉引力波天文台）利用迈克尔逊干涉仪探测这一效应：两条长度为 4 公里的正交臂中各有一束激光来回反射，若无引力波经过，两臂光程相等，返回光束发生相消干涉；引力波经过时，两臂长度发生差异化的微小变化，导致干涉图样发生可测量的偏移。</p>
+<p><strong>实例分析</strong></p>
+<p>2015 年 9 月 14 日，LIGO 首次直接探测到引力波信号 GW150914，源自两个约 30 倍太阳质量的黑洞并合，事件发生于约 13 亿光年之外。信号持续时间不到 0.2 秒，探测到的应变峰值约为 $h \approx 10^{-21}$——这意味着 4 公里的臂长变化不到一个原子核直径的千分之一。正是这一极端灵敏度要求，使得 LIGO 需要主动隔振系统、超高真空管道以及功率循环激光技术，以压制地震噪声、热噪声和量子散粒噪声。</p>
+<p><strong>问题求解应用</strong></p>
+<p>分析引力波数据的核心工具是匹配滤波（matched filtering）：将探测器输出的噪声信号与一组理论预测的"模板"波形（由数值相对论模拟并合过程得到）进行相关运算，找出信噪比最高的匹配。由于并合双星的引力波频率随时间"啁啾"（chirp）上升，其频率变化率 $\dot{f}$ 与系统的啁啾质量 $\mathcal{M}$ 直接相关：</p>
+$$
+\mathcal{M} = \frac{c^3}{G}\left(\frac{5}{96}\pi^{-8/3} f^{-11/3}\dot{f}\right)^{3/5}
+$$
+<p>学生在处理相关习题时，应练习：(1) 从给定的频率-时间轨迹估算啁啾质量；(2) 利用到达时间差（毫秒量级）在多个探测器网络（LIGO Hanford、Livingston 与 Virgo）间进行三角定位，估算波源天区位置；(3) 讨论为何需要至少三个探测器才能对波源方向进行较精确定位。这类计算训练将信号处理、相对论物理与实测天文学联系起来，体现了引力波探测作为多学科交叉前沿的本质。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch34: Frontiers of Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

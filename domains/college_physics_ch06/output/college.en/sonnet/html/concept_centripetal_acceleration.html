@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centripetal Acceleration | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="centripetal-acceleration">Centripetal Acceleration</h2>
+<p>An object moving at constant speed along a circular path is still accelerating, even though its speed never changes. This is because velocity is a vector, and direction counts: as the object moves around the circle, the direction of its velocity constantly changes, and any change in velocity — speed, direction, or both — is by definition an acceleration. This acceleration, called <strong>centripetal acceleration</strong>, always points toward the center of the circle (the word <em>centripetal</em> means "center-seeking"). Its magnitude is</p>
+$$a_c = \frac{v^2}{r} = \omega^2 r$$
+<p>where $v$ is the tangential speed, $r$ is the radius of the circular path, and $\omega$ is the angular velocity ($v = \omega r$). This result follows from analyzing how the velocity vector rotates: over a small time interval $\Delta t$, the velocity vector sweeps through the same angle $\Delta\theta$ as the position vector, and geometric similarity between the position and velocity triangles gives $|\Delta v|/v = |\Delta r|/r$, which in the limit $\Delta t \to 0$ yields $a_c = v^2/r$.</p>
+<p><strong>Worked example.</strong> A car rounds a curve of radius 50 m at a constant speed of 20 m/s. Its centripetal acceleration is</p>
+$$a_c = \frac{v^2}{r} = \frac{(20)^2}{50} = 8\ \text{m/s}^2$$
+<p>This is about 0.82g — a noticeable sideways acceleration that some real force must be producing.</p>
+<p><strong>Problem-solving application.</strong> Centripetal acceleration by itself doesn't explain <em>why</em> an object turns — that requires combining $a_c = v^2/r$ with Newton's second law, giving the net inward force $F_c = ma_c = mv^2/r$. For the car above, this force is supplied by friction between the tires and the road; since friction has a maximum value before the tires slip, there is a maximum speed at which the car can take the curve without skidding. The same net-force equation governs every circular-motion scenario — gravity supplies $F_c$ for an orbiting satellite, tension supplies it for a ball on a string — but the analysis always starts the same way: identify which real force, or combination of forces, points toward the center, then set it equal to $mv^2/r$. A common error is treating centripetal acceleration as an "outward" force pushing the object away from the center, confusing it with the fictitious centrifugal force felt only in a rotating, non-inertial reference frame. In an inertial frame there is no outward force; $a_c$ is the real, inward acceleration produced entirely by whatever net force is acting.</p>
+<pre class="mermaid">graph TD
+    A["Object moving at constant speed v on circular path"] --> B["Velocity direction changes continuously"]
+    B --> C["Centripetal acceleration a_c = v²/r, directed toward center"]
+    C --> D["Newton's 2nd law: F_c = m·a_c = m·v²/r"]
+    D --> E1["Gravity: orbits"]
+    D --> E2["Friction: cars on curves"]
+    D --> E3["Tension: strings, loops"]</pre>
+<p><em>How centripetal acceleration arises from changing velocity direction and connects, via Newton's second law, to the real force that causes it.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

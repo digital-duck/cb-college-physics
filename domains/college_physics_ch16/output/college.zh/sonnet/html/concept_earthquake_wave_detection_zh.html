@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Earthquake Wave Detection | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="earthquake-wave-detection">Earthquake Wave Detection</h2>
+<p><strong>定义</strong></p>
+<p>地震发生时,震源(focus)释放的能量以两类地震波向外传播:纵波(P波,primary wave)和横波(S波,secondary wave)。P波是压缩波,质点振动方向与传播方向平行,传播速度较快,约为 $v_P \approx 6$–$8\ \text{km/s}$;S波是剪切波,质点振动方向与传播方向垂直,速度较慢,约为 $v_S \approx 3$–$5\ \text{km/s}$,且不能通过液态介质(如地核外层)传播。由于两者速度不同,同时从震源出发的P波和S波会先后到达地震仪,这个到达时间差记为 $\Delta t = t_S - t_P$,是定位震中(epicenter)的核心依据。</p>
+<p>设震中到某观测站的距离为 $d$,则</p>
+$$
+t_P = \frac{d}{v_P}, \qquad t_S = \frac{d}{v_S}
+$$
+<p>两式相减并整理,得到关键公式:</p>
+$$
+d = \Delta t \cdot \left(\frac{v_P v_S}{v_S - v_P}\right)^{-1} \cdot (-1)
+= \frac{v_P v_S}{v_P - v_S}\,\Delta t
+$$
+<p>即只需测出到达时间差 $\Delta t$,再代入已知的波速,就能算出该观测站到震中的距离 $d$。</p>
+<p><strong>例题</strong></p>
+<p>某地震台记录到 P 波与 S 波到达时间差 $\Delta t = 40\ \text{s}$,取 $v_P = 7\ \text{km/s}$,$v_S = 4\ \text{km/s}$。代入公式:</p>
+$$
+d = \frac{7 \times 4}{7 - 4} \times 40 = \frac{28}{3} \times 40 \approx 373\ \text{km}
+$$
+<p>即该台站距震中约 373 千米。</p>
+<p><strong>问题解决的应用:三站定位法</strong></p>
+<p>单个台站只能确定"震中在以该台站为圆心、半径为 $d$ 的圆上",无法确定具体方位。实际定位需要至少三个不共线的观测台站,分别算出各自到震中的距离 $d_1, d_2, d_3$,以各台站坐标为圆心画圆,三圆的公共交点(理想情况下应重合于一点,实际中因误差常形成一个小三角区域)即为震中位置。这种"多站测距—几何交会"的方法(称为三边定位法,trilateration)不仅用于确定震中,还可结合波的反射、折射与干涉图案分析地下岩层界面,推断地壳分层结构,是地震学与勘探地球物理学的基础工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

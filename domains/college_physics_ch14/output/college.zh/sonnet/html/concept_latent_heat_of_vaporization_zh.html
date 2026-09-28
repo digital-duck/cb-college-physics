@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latent Heat Of Vaporization | College Physics Ch14</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="latent-heat-of-vaporization">Latent Heat Of Vaporization</h2>
+<p><strong>定义</strong></p>
+<p>汽化潜热（latent heat of vaporization,记作 $L_v$）是指在沸点温度下，单位质量的物质从液态转变为气态所需吸收的能量；反之，气体凝结为液体时会释放等量的能量。之所以称为"潜"热，是因为这部分能量并不改变物质的温度——在整个相变过程中，温度保持恒定，吸收的能量全部用于克服分子间的吸引力，使分子从紧密排列的液态结构中挣脱出来。</p>
+<p>若质量为 $m$ 的物质完全发生相变，所需（或释放）的热量为：</p>
+$$
+Q = m L_v
+$$
+<p>其中 $Q$ 的单位是焦耳（J），$m$ 的单位是千克（kg），$L_v$ 的单位是 J/kg。以水为例，在标准大气压下 $L_v \approx 2.26 \times 10^6 \ \text{J/kg}$，这个数值远大于水的比热容对应的加热能量，说明相变过程本身极其"耗能"。</p>
+<p><strong>例题</strong></p>
+<p>计算将 0.50 kg 的水在 100°C 完全汽化所需的热量。</p>
+<p>代入公式：</p>
+$$
+Q = m L_v = 0.50 \ \text{kg} \times 2.26 \times 10^6 \ \text{J/kg} = 1.13 \times 10^6 \ \text{J}
+$$
+<p>作为对比，将同样质量的水从 20°C 加热到 100°C（比热容 $c = 4186 \ \text{J/(kg·°C)}$）仅需：</p>
+$$
+Q' = mc\Delta T = 0.50 \times 4186 \times 80 \approx 1.67 \times 10^5 \ \text{J}
+$$
+<p>可见，汽化所需能量约为升温阶段的 6.8 倍——这正是蒸汽烫伤远比等温热水烫伤更严重的物理原因：蒸汽在皮肤上凝结时会释放这部分巨大的潜热。</p>
+<p><strong>问题解决应用</strong></p>
+<p>汽化潜热在能量守恒问题中常与比热容公式联立求解，典型情形是"混合相变"问题：例如将冰块加热至沸腾并部分汽化，需要分阶段计算——升温阶段用 $Q = mc\Delta T$，相变阶段用 $Q = mL_v$（或熔化时用 $L_f$），再将各阶段能量相加。解题的关键在于识别物质当前所处的相态区间，判断温度是否恒定，从而选用正确的公式，避免在相变平台期误用比热容计算。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch14: Heat and Heat Transfer Methods (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

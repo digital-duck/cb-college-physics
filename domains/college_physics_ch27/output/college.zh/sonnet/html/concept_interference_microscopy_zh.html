@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interference Microscopy | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="interference-microscopy">Interference Microscopy</h2>
+<p><strong>定义</strong></p>
+<p>干涉显微镜利用光波的干涉效应来增强样品的成像衬度，特别适用于观察活细胞、透明生物样品等在普通明场显微镜下几乎不可见的结构（因为它们对光的吸收极弱，主要改变的是光的相位而非振幅）。这类技术的核心原理是：将一束通过样品的光（物光）与一束未经样品或经过参考路径的光（参考光）重新叠加，利用两束光的相位差转化为可观测的强度（亮度）差异。属于这一大类的具体技术包括：</p>
+<li><strong>相衬显微镜（phase-contrast microscopy）</strong>：由泽尔尼克（Frits Zernike）发明，通过环形光阑和相位板，将样品引起的光程差（相位延迟）转换为强度对比，无需染色即可观察透明细胞结构。</li>
+<li><strong>干涉显微镜（interference microscope，狭义）</strong>：使用分束器将光路分为物光束与参考光束，二者重新汇合时发生干涉，可定量测量样品的光程差（optical path difference, OPD），从而反推样品厚度或折射率。</li>
+<li><strong>共聚焦显微镜（confocal microscopy）</strong>：虽然不直接依赖双光束干涉，但通过针孔（pinhole）滤除离焦光，结合逐点扫描成像，显著提高了轴向分辨率和衬度，常与干涉/相衬技术配合使用于三维成像。</li>
+<p><strong>光程差与强度的关系</strong></p>
+<p>两束相干光叠加后的强度遵循：</p>
+$$
+I = I_1 + I_2 + 2\sqrt{I_1 I_2}\,\cos(\Delta\varphi)
+$$
+<p>其中 $\Delta\varphi = \dfrac{2\pi}{\lambda}\,\Delta n \cdot d$ 是由样品引起的相位差，$\lambda$ 为波长，$\Delta n$ 为样品与周围介质的折射率差，$d$ 为样品厚度。这个公式说明：即使样品完全透明（不吸收光，$I_1 \approx I_2$），只要存在微小的相位差 $\Delta\varphi$，输出强度 $I$ 也会随之显著变化——这正是干涉/相衬技术能"看见"透明样品的数学基础。</p>
+<p><strong>问题求解应用</strong></p>
+<p>设某活细胞样品的折射率比周围培养液高 $\Delta n = 0.02$，厚度 $d = 5\ \mu\text{m}$，入射光波长 $\lambda = 550\ \text{nm}$。求该区域引起的相位差，并判断在相衬显微镜下该处将呈现相对亮还是暗。</p>
+<p>代入公式：</p>
+$$
+\Delta\varphi = \frac{2\pi}{550\times10^{-9}}\times(0.02)\times(5\times10^{-6}) \approx \frac{2\pi \times 1.818\times10^{-7}}{5.5\times10^{-7}} \approx 2.08\ \text{rad}
+$$
+<p>由于 $\Delta\varphi \approx 2.08\ \text{rad} < \pi$，代入强度公式可知 $\cos(\Delta\varphi) < 0$（因为 $\pi/2 < 2.08 < \pi$），故该处强度低于背景，在正相衬模式下呈现为<strong>较暗区域</strong>。这类计算是显微成像定量分析（如厚度反演、折射率测绘）的基础步骤。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hyperopia | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="远视">远视</h2>
+<p>远视（Hyperopia）是一种眼睛屈光能力不足或眼轴过短所导致的视力缺陷：来自近处物体的光线经过眼睛的角膜和晶状体折射后，会聚焦在视网膜<strong>后方</strong>，而不是精确地落在视网膜上。由于成像点位于视网膜之后，落在视网膜上的实际光斑是一个尚未完全聚拢的光锥截面，因此近处的物体在视网膜上形成的是模糊像，而远处物体因光线本身较为平行、所需折射较少，往往仍能清晰成像。这与近视（光线聚焦在视网膜前方，即眼睛屈光"过度"）正好相反。</p>
+<p><strong>光学原理与矫正计算</strong></p>
+<p>眼睛的成像可以用薄透镜成像公式描述：</p>
+$$\frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{f}$$
+<p>其中 $d_o$ 是物距，$d_i$ 是像距（此处近似为眼轴长度，即角膜到视网膜的距离），$f$ 是眼睛屈光系统的有效焦距。远视眼的问题在于：对于正常的近距离物距 $d_o$，眼睛现有的焦距 $f$ 太长（屈光力太弱），使得按公式算出的像距 $d_i$ 大于实际眼轴长度——光线还没聚焦就已经到达视网膜。</p>
+<p>矫正方法是在眼睛前方加一片<strong>凸透镜</strong>（正屈光度），增加整个系统的总屈光力，把焦点向前"拉近"，使其正好落在视网膜上。透镜屈光力通常以屈光度（诊断记录中的 D）表示，定义为焦距（单位：米）的倒数：</p>
+$$P = \frac{1}{f_{\text{lens}}}\ (\text{单位：D})$$
+<p>远视矫正需要正屈光度（如 $+2.00\,D$），这与近视矫正所需的负屈光度恰好相反。</p>
+<p><strong>问题求解练习</strong></p>
+<p>假设某远视患者裸眼看近处物体时，其眼睛系统的有效焦距使得物距为 $25\,\text{cm}$ 处的物体本应聚焦在视网膜后方 $1\,\text{cm}$ 处。要计算所需矫正透镜的屈光度，验光师会先测出患者的"近点"（裸眼能清晰对焦的最近距离，例如实际测得为 $100\,\text{cm}$，而正常近点应为 $25\,\text{cm}$）。矫正透镜的屈光度可用近点公式估算：</p>
+$$P \approx \frac{1}{d_{\text{目标}}} - \frac{1}{d_{\text{实际近点}}}$$
+<p>代入 $d_{\text{目标}} = 0.25\,\text{m}$，$d_{\text{实际近点}} = 1.00\,\text{m}$，得 $P \approx 4.00 - 1.00 = 3.00\,D$。这正是验光配镜时"度数"计算的基本逻辑，也说明了为什么远视随年龄增长（老花眼）通常需要逐步增加正屈光度的镜片。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

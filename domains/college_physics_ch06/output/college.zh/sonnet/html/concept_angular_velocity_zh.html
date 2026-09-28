@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angular Velocity | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="angular-velocity">Angular Velocity</h2>
+<p><strong>定义</strong></p>
+<p>角速度描述物体绕某一轴旋转时，转过的角度随时间变化的快慢。设物体在时间间隔 $\Delta t$ 内转过的角度为 $\Delta \theta$（以弧度为单位），则平均角速度定义为</p>
+$$
+\bar{\omega} = \frac{\Delta \theta}{\Delta t}
+$$
+<p>当 $\Delta t \to 0$ 时，我们得到瞬时角速度：</p>
+$$
+\omega = \lim_{\Delta t \to 0} \frac{\Delta \theta}{\Delta t} = \frac{d\theta}{dt}
+$$
+<p>角速度的国际单位是弧度每秒（$\mathrm{rad/s}$）。角速度是矢量，其方向由右手定则确定：右手四指沿旋转方向弯曲，拇指所指方向即为角速度矢量的方向，沿旋转轴。</p>
+<p>角速度与线速度密切相关。对于半径为 $r$、绕固定轴做圆周运动的质点，其线速度大小满足</p>
+$$
+v = \omega r
+$$
+<p>这个关系式是连接旋转运动与平动运动的桥梁，在后续学习角加速度、转动惯量和角动量时会反复使用。</p>
+<p><strong>例题</strong></p>
+<p>一个半径 $r = 0.5\ \text{m}$ 的转盘，在 $2\ \text{s}$ 内匀速转过了 $180^\circ$。求其角速度，以及转盘边缘上一点的线速度。</p>
+<p>解：先将角度换算为弧度，$\Delta\theta = 180^\circ = \pi\ \text{rad}$。</p>
+$$
+\omega = \frac{\Delta\theta}{\Delta t} = \frac{\pi}{2} \approx 1.57\ \text{rad/s}
+$$
+<p>再由 $v = \omega r$：</p>
+$$
+v = 1.57 \times 0.5 \approx 0.785\ \text{m/s}
+$$
+<p><strong>解决问题的应用</strong></p>
+<p>角速度概念的实用价值在于它把"转多快"这一模糊描述变成可计算的量，从而能解决实际工程与物理问题：例如已知发动机转速（常以转每分钟 rpm 给出），可换算为角速度 $\omega = \dfrac{2\pi N}{60}$（$N$ 为 rpm），再结合齿轮半径求出传动带或齿轮啮合点的线速度；又如卫星绕地球做匀速圆周运动时，已知周期 $T$，可用 $\omega = \dfrac{2\pi}{T}$ 求角速度，进而求出向心加速度 $a = \omega^2 r$，用于分析所需的向心力。掌握角速度的定义和换算，是解决一切旋转动力学问题的第一步。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

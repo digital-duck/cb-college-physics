@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Permittivity Of Free Space | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="真空介电常数">真空介电常数</h2>
+<p><strong>定义</strong></p>
+<p>真空介电常数 $\varepsilon_0$（也称电容率）是描述真空中电场与电荷相互作用强度的基本物理常数，其数值为</p>
+$$\varepsilon_0 \approx 8.854 \times 10^{-12}\ \text{F/m} \ (\text{法拉/米})$$
+<p>它出现在库仑定律中，联系两个点电荷之间的静电力与它们的电荷量、间距的关系：</p>
+$$F = \frac{1}{4\pi\varepsilon_0}\frac{q_1 q_2}{r^2}$$
+<p>其中 $q_1, q_2$ 为电荷量（单位：C），$r$ 为两电荷间距离（单位：m），$F$ 为作用力（单位：N）。系数 $\dfrac{1}{4\pi\varepsilon_0}$ 常记作 $k \approx 8.99\times10^{9}\ \text{N·m}^2/\text{C}^2$，即库仑常数。$\varepsilon_0$ 的物理意义是：它衡量真空"传递"电场作用的能力——数值越小，说明单位电荷在真空中产生的场越强,因为它出现在分母。</p>
+<p><strong>例题</strong></p>
+<p>两个点电荷 $q_1 = 2\ \mu\text{C}$，$q_2 = 3\ \mu\text{C}$，相距 $r = 0.5\ \text{m}$，求它们之间的静电力。</p>
+<p>代入公式：</p>
+$$F = \frac{1}{4\pi\varepsilon_0}\frac{q_1 q_2}{r^2} = (8.99\times10^{9})\times\frac{(2\times10^{-6})(3\times10^{-6})}{(0.5)^2}$$
+$$F = 8.99\times10^{9}\times\frac{6\times10^{-12}}{0.25} \approx 0.216\ \text{N}$$
+<p><strong>解题应用</strong></p>
+<p>$\varepsilon_0$ 不仅出现在库仑定律中，还是麦克斯韦方程组的核心参数,并决定光速：</p>
+$$c = \frac{1}{\sqrt{\varepsilon_0 \mu_0}}$$
+<p>其中 $\mu_0$ 为真空磁导率。这一关系揭示了电磁学与光学的统一——真空中电场和磁场的耦合方式，恰好决定了电磁波传播速度即为光速。</p>
+<p>解题时应注意单位一致性：电荷用库仑（C）、距离用米（m），力自然得到牛顿（N）。当题目给出"库仑常数 $k$"而非 $\varepsilon_0$ 时，可直接使用 $k \approx 8.99\times10^9$，两者本质相同，只是表达形式不同,便于快速计算而省略 $4\pi$ 因子。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

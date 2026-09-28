@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isolated System | College Physics Ch08</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="isolated-system">Isolated System</h2>
+<p><strong>定义</strong></p>
+<p>孤立系统（isolated system）是指所受外力矢量和为零的系统：$\sum \vec{F}_{\text{ext}} = 0$。根据牛顿第二定律，系统的总动量 $\vec{p}_{\text{total}} = \sum_i m_i \vec{v}_i$ 满足</p>
+$$
+\frac{d\vec{p}_{\text{total}}}{dt} = \sum \vec{F}_{\text{ext}} = 0
+$$
+<p>因此孤立系统的总动量守恒：$\vec{p}_{\text{total}} = \text{常数}$。需要强调的是，"孤立"并不要求系统内部没有力——系统内各部分之间的相互作用力（内力）总是成对出现，根据牛顿第三定律两两抵消，不影响总动量。真正要求为零的只是<strong>外力</strong>的矢量和。这一点是动量守恒定律的核心，也是它区别于机械能守恒（要求内力为保守力）的关键：动量守恒的条件更宽松，适用范围更广，包括碰撞、爆炸等存在能量损耗的过程。</p>
+<p><strong>范例</strong></p>
+<p>考虑两个滑块在无摩擦轨道上发生碰撞。滑块 A（质量 $m_A = 2\,\text{kg}$，速度 $v_A = 3\,\text{m/s}$）与静止的滑块 B（$m_B = 1\,\text{kg}$）碰撞后粘连在一起。轨道无摩擦意味着地面对系统的净外力（重力与支持力）在水平方向上为零，故水平方向动量守恒：</p>
+$$
+m_A v_A + m_B \cdot 0 = (m_A + m_B) v'
+$$
+$$
+2(3) + 0 = 3v' \implies v' = 2\,\text{m/s}
+$$
+<p>注意，碰撞过程中两滑块之间的接触力可能很大，且动能有损失（转化为热和形变能），但只要外力为零，动量依然守恒。</p>
+<p><strong>解题应用</strong></p>
+<p>判断一个系统是否可视为孤立系统，是求解碰撞、爆炸、火箭推进等问题的第一步。实用判据：</p>
+<li><strong>系统边界的选取</strong>：把所有相互作用的物体都纳入系统内部，使相互作用力变为内力。例如研究爆炸的弹片飞散问题时，应将所有碎片作为一个系统，而非单独分析某一块碎片。</li>
+<li><strong>外力是否近似为零</strong>：重力、摩擦力、空气阻力若存在但作用时间极短（如碰撞瞬间），其冲量 $\int \vec{F}\,dt$ 可忽略，此时动量近似守恒，即使系统严格意义上不是孤立系统。</li>
+<li><strong>分方向处理</strong>：若外力仅在某一方向不为零（如重力在竖直方向作用），可对水平方向单独应用动量守恒，这是抛体碰撞类问题的常见解法。</li>
+<p>掌握孤立系统的判定，是将动量守恒定律正确应用于实际问题的前提。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch8: Linear Momentum and Collisions (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

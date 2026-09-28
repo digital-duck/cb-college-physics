@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conservation Of Energy | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="conservation-of-energy">Conservation Of Energy</h2>
+<p><strong>定义</strong></p>
+<p>能量守恒定律指出：在一个孤立系统（closed system）中，能量既不能凭空产生，也不能凭空消失，只能从一种形式转化为另一种形式，系统的总能量保持不变。对于力学系统而言，最常用的表述是机械能守恒：若系统只受保守力（如重力、弹性力）作用，没有摩擦等耗散力做功，则动能 $E_k=\frac{1}{2}mv^2$ 与势能 $E_p$ 之和为常数：</p>
+$$
+E_k + E_p = \frac{1}{2}mv^2 + mgh = \text{常量}
+$$
+<p>这一定律不是经验总结，而是牛顿力学在保守力场下的必然推论，也是热力学第一定律在无热交换、无非保守力条件下的特例。</p>
+<p><strong>推导实例</strong></p>
+<p>考虑质量为 $m$ 的小球从高度 $h_1$（速度 $v_1$）下落到高度 $h_2$（速度 $v_2$），忽略空气阻力。由机械能守恒：</p>
+$$
+\frac{1}{2}mv_1^2 + mgh_1 = \frac{1}{2}mv_2^2 + mgh_2
+$$
+<p>若小球从静止（$v_1=0$）自高度 $h$ 落下，落地时 $h_2=0$，代入可得：</p>
+$$
+v_2=\sqrt{2gh}
+$$
+<p>这正是自由落体末速度公式，展示了守恒定律如何直接导出运动学结果，而无需逐步积分加速度。</p>
+<p><strong>问题求解中的应用：通向伯努利方程</strong></p>
+<p>对于理想流体（不可压缩、无粘性），可将单位体积流体视为一个"质点"，其能量由压强能 $p$、动能密度 $\frac{1}{2}\rho v^2$ 与势能密度 $\rho gh$ 三部分组成。沿同一流线应用能量守恒，得到：</p>
+$$
+p_1+\frac{1}{2}\rho v_1^2+\rho gh_1 = p_2+\frac{1}{2}\rho v_2^2+\rho gh_2
+$$
+<p>这就是伯努利方程——本质上是能量守恒定律在流体动力学中的具体形式，其中压强项对应流体压力对单位体积做的功。</p>
+<p><strong>练习</strong>：水平管道中理想流体流速从 $2\,\text{m/s}$ 增至 $4\,\text{m/s}$，密度 $\rho=1000\,\text{kg/m}^3$，求压强变化 $\Delta p$。由于 $h_1=h_2$，能量守恒给出 $\Delta p = \frac{1}{2}\rho(v_1^2-v_2^2) = -6000\,\text{Pa}$，即流速增大处压强降低，这正是机翼升力的物理基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

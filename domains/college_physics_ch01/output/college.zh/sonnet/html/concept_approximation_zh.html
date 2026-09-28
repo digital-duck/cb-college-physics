@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Approximation | College Physics Ch01</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="approximation">Approximation</h2>
+<p><strong>定义</strong></p>
+<p>在科学与工程实践中，我们经常需要一个数量的数值，却没有条件或时间去精确测量或计算它。<strong>近似（approximation）</strong>是指在已知测量值、单位换算关系和数量级思维的基础上，构造一个合理接近真实值的估计。近似不是"随便猜"，而是一种有方法、有依据的推理过程：先分解问题，再对每个子部分给出粗略但可辩护的数值，最后通过单位运算把它们组合起来。近似值通常伴随一个隐含或显式的误差范围，而不追求小数点后多位的精度。</p>
+<p><strong>实例演示</strong></p>
+<p>经典例子是费米问题（Fermi problem）："某城市有多少家钢琴调音师？"我们无法直接查到答案，但可以分解为已知或可估计的量：</p>
+<p>设城市人口 $P \approx 1{,}000{,}000$；平均每户人数约 $2.5$，故家庭数约 $P/2.5 = 400{,}000$；假设约 $1/20$ 的家庭拥有钢琴，得钢琴数约 $20{,}000$；每架钢琴平均每年调音一次，调音师每天完成约 $4$ 架、每年工作约 $250$ 天，即每位调音师年产能约 $1{,}000$ 架次。于是调音师人数约为</p>
+$$
+N \approx \frac{20{,}000}{1{,}000} = 20
+$$
+<p>每一步的假设都可能有 2 倍左右的误差，但由于是乘除组合，最终结果的数量级（十几到几十人）通常仍然可信——这正是<strong>数量级思维（order-of-magnitude thinking）</strong>的核心：容忍每个因子的误差，但关注整体结果是否落在正确的十进制量级内。</p>
+<p><strong>问题解决应用</strong></p>
+<p>近似的实用价值在于快速判断一个答案"是否合理"，尤其是在精确计算成本高、数据不完整、或只需要决策级精度的场景。工程师用它做可行性初筛（如"这座桥能承受多少辆卡车"），数据科学家用它做量纲检验（单位对不对、结果数量级对不对），创业者用它做市场规模估算（TAM 估算）。练习近似的关键技巧是：（1）把复杂问题拆成可独立估计的小量；（2）为每个小量取整数量级的合理猜测，而非追求精确；（3）用单位分析确认组合运算的正确性；（4）对最终结果做"合理性检查"——如果偏离常识两个数量级以上，需要回头检查哪个假设有误。掌握近似，本质上是在不确定性中依然能做出有依据的判断。</p>
+  </main>
+  <footer class="spl-credit">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></footer>
+</div>
+</body>
+</html>

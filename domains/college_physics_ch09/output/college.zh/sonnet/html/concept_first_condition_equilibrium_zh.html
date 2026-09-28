@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>First Condition Equilibrium | College Physics Ch09</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="first-condition-equilibrium">First Condition Equilibrium</h2>
+<p><strong>定义</strong></p>
+<p>平动平衡的第一条件指出:若一个系统(可视为质点或刚体)在所有方向上所受合外力为零,则该系统处于平动平衡状态。数学上表示为:</p>
+$$\sum \vec{F}_{ext} = 0$$
+<p>由于力是矢量,这一条件实际上等价于在每个独立坐标方向上分别成立的标量方程。在二维问题中,通常分解为:</p>
+$$\sum F_x = 0, \qquad \sum F_y = 0$$
+<p>需要注意的是,合外力为零并不意味着物体一定静止不动。根据牛顿第一定律,合外力为零只保证物体的加速度为零,因此物体可以处于静止状态(静平衡),也可以处于匀速直线运动状态(动平衡)。这正是"平衡"一词在力学中的严格含义——加速度为零,而非速度为零。</p>
+<p><strong>例题</strong></p>
+<p>一盏质量为 $m = 5\ \text{kg}$ 的吊灯用两根绳子悬挂在天花板上,两绳与水平方向的夹角分别为 $37^\circ$ 和 $53^\circ$。求两绳中的张力 $T_1$ 和 $T_2$。</p>
+<p><strong>求解思路:</strong></p>
+<p>首先画出吊灯的受力图,受力包括重力 $mg$(方向竖直向下)以及两根绳的张力 $T_1$、$T_2$。将张力分解到水平和竖直方向,分别应用平衡条件:</p>
+<p>水平方向:</p>
+$$T_1\cos 37^\circ = T_2\cos 53^\circ$$
+<p>竖直方向:</p>
+$$T_1\sin 37^\circ + T_2\sin 53^\circ = mg$$
+<p>联立这两个方程可解出 $T_1 \approx 29.4\ \text{N}$,$T_2 \approx 39.2\ \text{N}$(取 $g = 9.8\ \text{m/s}^2$)。</p>
+<p><strong>解题应用</strong></p>
+<p>第一条件平衡是解决静力学问题的核心工具,尤其在处理斜面、滑轮系统、桁架结构和悬挂物体时至关重要。解题的标准步骤为:(1) 明确研究对象,画出完整受力图;(2) 选取合适的坐标系,将所有斜向力分解为分量;(3) 分别对每个方向列出 $\sum F = 0$ 方程;(4) 联立求解未知量。当系统含有多个未知力(如多根绳索或多个接触面)时,往往需要结合第二条件平衡(力矩平衡)才能完全确定所有未知量,这也是后续章节将要讨论的内容。掌握第一条件平衡,是理解更复杂刚体静力学问题的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch9: Statics and Torque (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

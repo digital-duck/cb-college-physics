@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Second Postulate | College Physics Ch28</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="second-postulate">Second Postulate</h2>
+<p><strong>定义</strong></p>
+<p>爱因斯坦第二假设指出：在真空中，光速 $c$ 对于所有惯性参考系中的观察者都是相同的，与光源的运动状态无关。其精确值为</p>
+$$c = 299{,}792{,}458 \text{ m/s} \approx 3.00 \times 10^8 \text{ m/s}$$
+<p>这一假设与经典力学的直觉严重冲突。按照伽利略速度叠加原理，若光源以速度 $v$ 相对观察者运动并发出光，观察者测得的光速应为 $c+v$ 或 $c-v$。但实验（如迈克尔逊-莫雷实验）反复证实，无论光源如何运动，测得的光速始终是 $c$。第二假设与第一假设（物理定律在所有惯性系中形式相同）共同构成了狭义相对论的基石，并直接导致了时间膨胀、长度收缩等效应——这些正是为了在光速不变的前提下，仍能保持物理定律一致性所必须付出的代价。</p>
+<p><strong>例题</strong></p>
+<p>设想一艘飞船以 $0.8c$ 的速度飞离地球，并从飞船尾部向后方发射一束激光。</p>
+<li>按经典叠加：地球观察者测得的光速应为 $c - 0.8c = 0.2c$。</li>
+<li>按第二假设（实验事实）：地球观察者测得的光速仍然是 $c$。</li>
+<p>这说明"速度叠加"这一经典概念在光速问题上完全失效，必须用洛伦兹速度变换取代伽利略变换。</p>
+<p><strong>问题解决应用</strong></p>
+<p>第二假设不仅是一个孤立的实验事实，它是推导狭义相对论所有定量结果的出发点。考虑两个事件：飞船上的光源在 $t=0$ 发出一个光信号，飞船上的接收器在固有距离 $L_0$ 处接收到它。</p>
+<p>在飞船参考系中，光传播时间为 $\Delta t' = L_0 / c$。</p>
+<p>在地球参考系中，由于光速仍为 $c$（第二假设），但飞船本身在运动，几何关系变得复杂，必须引入洛伦兹变换：</p>
+$$\Delta t = \gamma\left(\Delta t' + \frac{v \Delta x'}{c^2}\right), \qquad \gamma = \frac{1}{\sqrt{1-v^2/c^2}}$$
+<p>正是因为 $c$ 在方程中被强制保持不变，时间和空间坐标才必须相应地"弯曲"（膨胀或收缩），以保证光速测量结果在所有参考系中恒定。这是解决相对论问题的核心技巧：<strong>先固定 $c$ 不变，再让时间和空间去适应它</strong>，而不是反过来。掌握这一逻辑，是理解后续时间膨胀公式 $\Delta t = \gamma \Delta t_0$ 和长度收缩公式 $L = L_0/\gamma$ 的关键前提。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch28: Special Relativity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

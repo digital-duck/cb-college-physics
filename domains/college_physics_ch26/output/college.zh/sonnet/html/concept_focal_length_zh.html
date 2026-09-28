@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Focal Length | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="focal-length-焦距">Focal Length（焦距）</h2>
+<p><strong>定义</strong></p>
+<p>焦距 $f$ 是透镜或反射镜的光心（或镜面顶点）到其焦点的距离。焦点是平行于主光轴的光线经折射或反射后会聚（或看似发散的延长线相交）的位置。按照笛卡尔符号约定：会聚透镜（凸透镜）和凹面镜的 $f > 0$，发散透镜（凹透镜）和凸面镜的 $f < 0$。焦距的大小反映了光学元件弯曲光线能力的强弱——$|f|$ 越小，折射或反射能力越强，光线会聚得越快。</p>
+<p>焦距与物距 $d_o$、像距 $d_i$ 之间由薄透镜方程（对镜子同样适用）联系起来：</p>
+$$
+\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}
+$$
+<p>其中 $d_o$、$d_i$、$f$ 均遵循同一套符号约定（实物、实像为正）。</p>
+<p><strong>例题</strong></p>
+<p>一枚会聚透镜的焦距为 $f = 10\ \text{cm}$，物体放在 $d_o = 15\ \text{cm}$ 处。求像的位置。</p>
+<p>代入方程：</p>
+$$
+\frac{1}{10} = \frac{1}{15} + \frac{1}{d_i}
+\quad\Rightarrow\quad
+\frac{1}{d_i} = \frac{1}{10} - \frac{1}{15} = \frac{1}{30}
+$$
+<p>于是 $d_i = 30\ \text{cm}$，为正值，说明像是实像，位于透镜另一侧 $30\ \text{cm}$ 处。</p>
+<p><strong>解题应用</strong></p>
+<p>焦距是判断光学系统成像性质（实像/虚像、放大/缩小、正立/倒立）的关键参数,也是设计相机、望远镜、显微镜时的核心指标。</p>
+<p>解题时可遵循以下步骤：</p>
+<li>明确元件类型，判断 $f$ 的符号（会聚为正，发散为负）；</li>
+<li>代入薄透镜方程求 $d_i$；</li>
+<li>用横向放大率 $m = -d_i/d_o$ 判断像的大小与朝向：$|m|>1$ 放大，$m<0$ 倒立；</li>
+<li>若 $d_i$ 为负,说明像为虚像,与物体位于透镜同侧。</li>
+<p>例如,当 $d_o < |f|$（物体在焦点以内)时,凸透镜产生正立放大的虚像——这正是放大镜的工作原理;而当 $d_o$ 远大于 $|f|$ 时,则得到缩小倒立的实像,这是相机镜头成像的基础。掌握焦距与物距、像距的定量关系,是分析和设计任何成像系统的第一步。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

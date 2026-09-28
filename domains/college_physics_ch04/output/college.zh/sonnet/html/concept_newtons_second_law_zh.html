@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newtons Second Law | College Physics Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="newtons-second-law">Newtons Second Law</h2>
+<p><strong>定义</strong></p>
+<p>牛顿第二定律指出，物体的加速度与作用在其上的合外力成正比，与物体的质量成反比，且加速度方向与合外力方向相同。用矢量形式表示为：</p>
+$$\vec{F}_{net} = m\vec{a}$$
+<p>更严格地说，牛顿第二定律的原始表述是关于动量变化率的：</p>
+$$\vec{F}_{net} = \frac{d\vec{p}}{dt} = \frac{d(m\vec{v})}{dt}$$
+<p>当质量 $m$ 恒定时，上式简化为 $\vec{F}_{net} = m\vec{a}$。这个方程是矢量方程，意味着它在每个坐标方向上都独立成立：$F_x = ma_x$，$F_y = ma_y$。理解这一点至关重要，因为它允许我们将复杂的二维或三维问题分解为多个一维问题分别求解。</p>
+<p><strong>例题解析</strong></p>
+<p>考虑一个质量为 $5\text{ kg}$ 的木箱，在水平地面上受到 $20\text{ N}$ 的水平拉力，同时受到 $6\text{ N}$ 的摩擦力阻碍其运动。求木箱的加速度。</p>
+<p>第一步：明确合外力。水平方向上，拉力与摩擦力方向相反，故</p>
+$$F_{net} = 20\text{ N} - 6\text{ N} = 14\text{ N}$$
+<p>第二步：应用 $F_{net} = ma$，解出加速度：</p>
+$$a = \frac{F_{net}}{m} = \frac{14\text{ N}}{5\text{ kg}} = 2.8\text{ m/s}^2$$
+<p>木箱沿拉力方向以 $2.8\text{ m/s}^2$ 的加速度运动。</p>
+<p><strong>解题应用</strong></p>
+<p>牛顿第二定律解题的标准流程是：先画受力图（free-body diagram），列出所有作用力；再沿选定坐标轴分解各力，写出 $\sum F_x = ma_x$ 和 $\sum F_y = ma_y$；最后代入已知量求解未知量。</p>
+<p>例如，一个斜面问题中，物体质量 $m$ 沿倾角 $\theta$ 的无摩擦斜面下滑，其加速度沿斜面方向为 $a = g\sin\theta$，这是通过将重力分解为沿斜面分量 $mg\sin\theta$ 和垂直斜面分量 $mg\cos\theta$，再对沿斜面方向应用 $F_{net} = ma$ 得出的。掌握这种矢量分解与合力分析的方法，是解决多体系统、滑轮问题及圆周运动问题的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch4: Dynamics: Force and Newton's Laws of Motion (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electromagnetic Force | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="electromagnetic-force">Electromagnetic Force</h2>
+<p>电磁力是自然界四种基本相互作用之一,支配着所有带电粒子之间的相互作用,其力程为无限远,并遵循平方反比衰减规律。在量子场论框架下,电磁力由虚光子(virtual photon)传递——两个带电粒子通过交换光子来传递动量与能量,这一过程是量子电动力学(QED)的核心内容。经典层面上,两个静止点电荷 $q_1$、$q_2$ 之间的相互作用力由库仑定律给出:</p>
+$$
+F = k_e \frac{q_1 q_2}{r^2}, \qquad k_e = \frac{1}{4\pi\varepsilon_0} \approx 8.99\times10^9\ \text{N·m}^2/\text{C}^2
+$$
+<p>其中 $r$ 为两电荷间距,$\varepsilon_0$ 为真空介电常数。当电荷运动时,电磁力的完整描述需要引入电场 $\vec{E}$ 与磁场 $\vec{B}$,统一表达为洛伦兹力公式:</p>
+$$
+\vec{F} = q\vec{E} + q\vec{v}\times\vec{B}
+$$
+<p>这一公式说明电场对任意带电粒子施加沿场方向的力,而磁场仅对运动电荷施力,且力的方向垂直于速度与磁场构成的平面。</p>
+<p><strong>范例分析</strong>:考虑一个电荷 $q = 2\ \mu\text{C}$、速度 $\vec{v} = 3\times10^6\ \hat{x}\ \text{m/s}$ 的粒子,置于均匀磁场 $\vec{B} = 0.5\ \hat{z}\ \text{T}$ 中,且无电场。代入洛伦兹力公式:</p>
+$$
+\vec{F} = q\vec{v}\times\vec{B} = (2\times10^{-6})(3\times10^6\ \hat{x})\times(0.5\ \hat{z}) = 3\ \hat{x}\times\hat{z}\ \text{N} = -3\ \hat{y}\ \text{N}
+$$
+<p>（利用 $\hat{x}\times\hat{z} = -\hat{y}$)。这一横向力正是粒子在磁场中做圆周运动的根源,回旋半径为 $r = mv/(qB)$。</p>
+<p><strong>问题求解应用</strong>:在设计粒子加速器或质谱仪时,工程师需要联立求解洛伦兹力与牛顿第二定律,以确定粒子轨迹曲率、周期或所需磁场强度。例如,已知粒子质量与期望回旋半径,可反解所需 $B$ 值;若同时存在电场与磁场(速度选择器结构),令电场力与磁场力相互抵消 $qE = qvB$,即可筛选出特定速度 $v = E/B$ 的粒子。这类联立方程的求解能力,是理解带电粒子束流控制、回旋加速器与磁约束等技术的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

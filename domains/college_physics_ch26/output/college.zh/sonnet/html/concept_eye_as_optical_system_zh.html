@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eye As Optical System | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="eye-as-optical-system">Eye As Optical System</h2>
+<p><strong>定义</strong></p>
+<p>人眼可以建模为一个由角膜（cornea）和晶状体（lens）共同构成的单一薄透镜系统。光线经过角膜（贡献约60%的总屈光力）和晶状体（可通过睫状肌调节曲率,贡献约40%）折射后,会聚在视网膜（retina）上,形成一个实像、倒立、缩小的图像。这一系统遵循薄透镜成像公式:</p>
+$$\frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{f}$$
+<p>其中 $d_o$ 是物距,$d_i$ 是像距（在眼中近似固定,约为眼轴长度 $\approx 2.4\text{ cm}$),$f$ 是等效焦距。由于像距固定,眼睛通过改变晶状体的曲率来改变焦距 $f$,从而对不同距离的物体完成调焦(称为“调节”,accommodation)。屈光力通常以屈光度(diopter,D)表示,定义为 $P = 1/f$(以米为单位),正常人眼总屈光力约为60D。</p>
+<p><strong>举例说明</strong></p>
+<p>假设某人正在阅读放在眼前 $d_o = 25\text{ cm} = 0.25\text{ m}$ 处的书,眼轴长度(像距)为 $d_i = 2.4\text{ cm} = 0.024\text{ m}$。所需焦距为:</p>
+$$\frac{1}{f} = \frac{1}{0.25} + \frac{1}{0.024} = 4 + 41.67 = 45.67\ \text{D}$$
+<p>即眼睛需将总屈光力调节至约45.67D才能使近处物体清晰成像于视网膜。若此人正常放松状态下(看远处物体,$d_o \to \infty$)的屈光力为60D,则说明晶状体在近距离阅读时通过调节额外增加了约14D的屈光力——这正是晶状体弹性(调节幅度)所允许的范围。</p>
+<p><strong>问题解决应用</strong></p>
+<p>这一模型是理解常见视力缺陷及矫正原理的基础。例如,近视(myopia)源于眼轴过长或屈光力过强,导致远处物体的像成在视网膜前方;通过在眼前加一片焦距为负的凹透镜,可以将等效焦距重新拉长,使像准确落在视网膜上。设患者裸眼能看清的最远点(远点)为 $d_o = 2\text{ m}$,则矫正透镜所需屈光力为:</p>
+$$P_{\text{lens}} = -\frac{1}{d_o} = -0.5\ \text{D}$$
+<p>这种“薄透镜叠加”思路(角膜-晶状体系统与矫正镜片屈光力相加)正是验光配镜处方的数学基础,也说明了为何精确测量眼轴长度和角膜曲率对个性化矫正至关重要。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

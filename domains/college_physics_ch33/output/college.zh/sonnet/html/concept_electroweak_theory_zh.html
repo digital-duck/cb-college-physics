@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electroweak Theory | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="electroweak-theory">Electroweak Theory</h2>
+<p><strong>定义</strong></p>
+<p>电弱理论由格拉肖、温伯格和萨拉姆于1960年代提出,证明电磁力与弱相互作用在足够高的能量下是同一种基本力的两种表现形式——即"电弱统一"。该理论基于 $SU(2)_L \times U(1)_Y$ 规范对称群:$SU(2)_L$ 描述弱同位旋(仅作用于左手费米子),$U(1)_Y$ 描述弱超荷。理论要求存在四种规范玻色子:$W^1, W^2, W^3$(来自 $SU(2)_L$)和 $B$(来自 $U(1)_Y$)。在低能标下,通过自发对称破缺(希格斯机制),这四个场混合并"分裂"为我们观测到的粒子:</p>
+$$
+W^\pm_\mu = \frac{1}{\sqrt{2}}(W^1_\mu \mp iW^2_\mu)
+$$
+$$
+\begin{pmatrix} Z_\mu \\ A_\mu \end{pmatrix} = \begin{pmatrix} \cos\theta_W & -\sin\theta_W \\ \sin\theta_W & \cos\theta_W \end{pmatrix} \begin{pmatrix} W^3_\mu \\ B_\mu \end{pmatrix}
+$$
+<p>其中 $\theta_W$ 为温伯格角,是实验测定的关键参数。$A_\mu$ 对应无质量的光子(电磁力载体),而 $W^\pm$ 和 $Z^0$ 因希格斯机制获得质量,成为弱力的短程载体。</p>
+<p><strong>范例演示</strong></p>
+<p>温伯格角把电磁耦合常数 $e$ 与弱耦合常数 $g$、$g'$ 联系起来:</p>
+$$
+e = g\sin\theta_W = g'\cos\theta_W
+$$
+<p>实验测得 $\sin^2\theta_W \approx 0.231$,由此可预测 $W$、$Z$ 玻色子质量之比:</p>
+$$
+\frac{M_W}{M_Z} = \cos\theta_W \approx 0.881
+$$
+<p>代入已知的 $M_Z \approx 91.19\text{ GeV}$,预测 $M_W \approx 80.4\text{ GeV}$——与1983年在CERN实验中直接测得的数值高度吻合,这正是电弱理论最有力的验证之一。</p>
+<p><strong>问题求解应用</strong></p>
+<p>理解电弱统一的关键在于"能量尺度依赖性":耦合常数并非固定值,而是随能量标度"跑动"(running coupling)。在低能下,弱力因 $W$、$Z$ 玻色子质量巨大而显得极其微弱、短程;但当碰撞能量接近或超过 $M_W c^2 \approx 80\text{ GeV}$ 时,弱力与电磁力的强度趋于一致。求解此类问题时,应先辨识给定能标是否接近电弱统一能标(约100 GeV 量级),再决定是否需用统一后的单一耦合常数,还是分别处理电磁与弱相互作用。此框架也是理解希格斯玻色子存在必要性的前提:没有希格斯机制,$SU(2)_L \times U(1)_Y$ 对称性无法解释规范玻色子为何具有不同质量。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

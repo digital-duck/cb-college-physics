@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Natural Frequency | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="natural-frequency-固有频率">Natural Frequency（固有频率）</h2>
+<p><strong>定义</strong></p>
+<p>固有频率是一个系统在不受外部驱动力、也不受阻尼耗散的情况下自由振动时所呈现的振动频率，通常记为 $\omega_0$（角频率，单位 $\text{rad/s}$）或 $f_0 = \omega_0/(2\pi)$（单位 $\text{Hz}$）。它完全由系统自身的物理属性决定——例如惯性（质量 $m$）与恢复力的强度（劲度系数 $k$）——而与初始扰动的大小或方式无关。对于最基本的无阻尼简谐振子，运动方程为</p>
+$$
+m\ddot{x} + kx = 0,
+$$
+<p>其通解为 $x(t) = A\cos(\omega_0 t + \phi)$，其中</p>
+$$
+\omega_0 = \sqrt{\frac{k}{m}}.
+$$
+<p>这个结果之所以必须用微分方程推导而非直觉描述，是因为固有频率本质上是该方程特征根的虚部——它是系统数学结构的产物，而不是可以随便测量或调节的外部参数。</p>
+<p><strong>推导与求解示例</strong></p>
+<p>考虑一个质量 $m = 2\ \text{kg}$、弹簧常数 $k = 8\ \text{N/m}$ 的弹簧振子。将其代入公式：</p>
+$$
+\omega_0 = \sqrt{\frac{8}{2}} = 2\ \text{rad/s}, \qquad f_0 = \frac{\omega_0}{2\pi} \approx 0.318\ \text{Hz}.
+$$
+<p>也就是说，若把此振子拉离平衡位置后释放，它每秒约完成 0.318 次完整振荡，且这个数值不会因为你拉得多远（振幅大小）而改变——这是简谐振动的一个关键性质，称为等时性。</p>
+<p><strong>应用于问题求解</strong></p>
+<p>固有频率的核心应用场景是判断共振风险：当外部驱动频率 $\omega$ 接近 $\omega_0$ 时，系统振幅会急剧放大，这是桥梁、建筑、机械转子设计中必须规避的情形（如著名的塔科马海峡大桥垮塌事故）。求解此类问题的标准流程是：</p>
+<li>由系统的惯性与恢复力参数（如 $m, k$，或对单摆则为 $g, L$，$\omega_0=\sqrt{g/L}$）计算出 $\omega_0$；</li>
+<li>将其与实际驱动频率 $\omega$ 比较；</li>
+<li>若两者接近，则需通过改变质量分布、增大阻尼或调整刚度来重新设计系统，使 $\omega_0$ 偏离危险驱动频率范围。</li>
+<p>掌握 $\omega_0$ 的计算，是后续学习受迫振动、阻尼振动与共振现象的必要基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microwaves | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="微波">微波</h2>
+<p>微波是波长约在 $1\ \text{mm}$ 到 $1\ \text{m}$ 之间、频率约为 $1$–$300\ \text{GHz}$ 的电磁波，由宏观电路振荡（如速调管、磁控管、固态振荡器）或物质的热运动产生。它们处于无线电波与红外光之间的过渡区域：波长足够短，可以用类似光学的方式被天线、波导和抛物面反射器聚焦成窄波束；波长又足够长，能够穿透云层、烟雾和非金属材料，这使它们特别适合通信、雷达探测和加热应用。</p>
+<p><strong>定义与物理机制</strong>：微波的产生依赖于振荡电流在导体或谐振腔中建立随时间变化的电场与磁场。根据麦克斯韦方程组，振荡电荷产生的电磁场以光速 $c = \lambda f$ 向外辐射，其中 $\lambda$ 为波长，$f$ 为频率。当频率达到 GHz 量级时，普通导线上的电流分布不再均匀，必须使用谐振腔、波导或微带线等结构来约束和传输能量——这正是微波工程区别于低频电路设计的核心。</p>
+<p><strong>工作实例——微波炉加热</strong>：微波炉利用磁控管产生约 $2.45\ \text{GHz}$ 的微波，对应波长约 $\lambda = c/f \approx (3\times10^8)/(2.45\times10^9) \approx 12.2\ \text{cm}$。这一频率恰好接近水分子（极性分子）的旋转弛豫频率，使水分子在振荡电场中反复取向翻转，通过分子间摩擦将电磁能转化为热能。金属之所以不能放入微波炉，是因为自由电子在其表面感应出强大的振荡电流，可能产生电弧放电，而食物中的水和脂肪则通过介质损耗吸收能量。</p>
+<p><strong>问题求解应用——雷达测距</strong>：雷达利用微波的反射估算距离，原理是测量脉冲往返时间 $t$：</p>
+$$
+d = \frac{c \cdot t}{2}
+$$
+<p>除以 $2$ 是因为 $t$ 包含了信号发射到目标、再反射回接收器的完整路径。例如，若测得往返时间 $t = 2\ \mu\text{s}$，则目标距离为</p>
+$$
+d = \frac{(3\times10^8\ \text{m/s})(2\times10^{-6}\ \text{s})}{2} = 300\ \text{m}
+$$
+<p>微波频段被雷达和卫星通信广泛采用，正是因为其波长既能提供足够的方向性（波束可被天线有效聚焦），又能在恶劣天气下保持较好的穿透性，兼顾了精度与可靠性。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

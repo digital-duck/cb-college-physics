@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Law Of Reflection | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="law-of-reflection">Law Of Reflection</h2>
+<p><strong>定义</strong></p>
+<p>反射定律描述光（或任何波）遇到反射面时传播方向的变化规律。定律指出：入射光线、反射光线与该点的法线（垂直于界面的直线）共面，且反射角等于入射角，两角均从法线量起：</p>
+$$\theta_r = \theta_i$$
+<p>其中 $\theta_i$ 为入射角，$\theta_r$ 为反射角。这个关系并非经验拟合，而是可以从费马原理（光沿用时最短的路径传播）严格推导出来：设光从点 $A$ 出发经界面上一点 $P$ 到达点 $B$，令 $P$ 沿界面移动，光程 $L(x) = AP + PB$ 是 $P$ 位置 $x$ 的函数。对 $L(x)$ 求导并令导数为零，得到的驻点条件恰好等价于 $\sin\theta_i = \sin\theta_r$，即 $\theta_i = \theta_r$。这说明反射定律本质上是一个极值（最短时间）问题的解。</p>
+<p><strong>范例求解</strong></p>
+<p>设光线以 $\theta_i = 35^\circ$ 入射到平面镜上，求反射光线方向，并求入射光线与反射光线之间的夹角。</p>
+<p>由定律，$\theta_r = 35^\circ$。入射线与反射线之间的夹角是两者与法线夹角之和：</p>
+$$\alpha = \theta_i + \theta_r = 70^\circ$$
+<p>若已知入射方向的单位向量 $\vec{d}$ 与表面法线 $\hat{n}$，还可用向量形式直接计算反射方向 $\vec{d}\,'$：</p>
+$$\vec{d}\,' = \vec{d} - 2(\vec{d}\cdot\hat{n})\hat{n}$$
+<p>该公式在计算机图形学的光线追踪中被大量使用，其正确性正是反射定律的向量表述。</p>
+<p><strong>问题解决应用</strong></p>
+<p>考虑两块互成 $90^\circ$ 的平面镜（直角反射器）。证明：无论入射角为何值，经两次反射后出射光线都与入射光线反向平行。</p>
+<p>设第一面镜子法线为 $\hat{n}_1$，第二面为 $\hat{n}_2$，且 $\hat{n}_1 \perp \hat{n}_2$。利用向量反射公式连续应用两次：</p>
+$$\vec{d}_1 = \vec{d} - 2(\vec{d}\cdot\hat{n}_1)\hat{n}_1,\qquad \vec{d}_2 = \vec{d}_1 - 2(\vec{d}_1\cdot\hat{n}_2)\hat{n}_2$$
+<p>展开并代入 $\hat{n}_1\cdot\hat{n}_2 = 0$，可得 $\vec{d}_2 = -\vec{d}$，与入射角无关。这正是猫眼反射器与角反射镜（corner reflector）的工作原理：无论光从哪个方向射入，都会精确沿原路返回，这一结论直接来自反射定律的向量推导，而非几何直觉的巧合。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

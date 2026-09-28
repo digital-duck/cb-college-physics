@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emissivity | College Physics Ch14</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="发射率">发射率</h2>
+<p><strong>定义</strong></p>
+<p>发射率（emissivity，记作 $\varepsilon$）是一个无量纲量，取值范围为 $0 \le \varepsilon \le 1$，用来描述一个真实物体相对于理想黑体在辐射（发射）和吸收电磁能量方面的效率。黑体是一种理想化模型，其 $\varepsilon = 1$，能以给定温度下物理允许的最大速率发射热辐射；真实材料由于表面结构、化学成分和波长依赖的吸收特性，发射效率总是低于黑体，因此 $\varepsilon < 1$。发射率与吸收率密切相关：根据基尔霍夫热辐射定律，在热平衡状态下，同一表面在同一波长下的发射率等于其吸收率，即 $\varepsilon_\lambda = \alpha_\lambda$。这解释了为何深色、粗糙表面（高发射率）既善于辐射热量，也善于吸收辐射热量，而抛光金属表面（低发射率）二者皆弱。</p>
+<p>发射率将理想化的斯特藩-玻尔兹曼定律修正为适用于真实物体的形式：</p>
+$$
+P = \varepsilon \sigma A T^4
+$$
+<p>其中 $P$ 为辐射功率（瓦特），$\sigma = 5.67 \times 10^{-8}\ \text{W/(m}^2\text{K}^4)$ 为斯特藩-玻尔兹曼常数，$A$ 为表面积，$T$ 为绝对温度（开尔文）。</p>
+<p><strong>例题</strong></p>
+<p>一块面积为 $0.02\ \text{m}^2$ 的氧化铝陶瓷加热片，发射率 $\varepsilon = 0.85$，表面温度为 $500\ \text{K}$，求其辐射功率。</p>
+<p>代入公式：</p>
+$$
+P = 0.85 \times 5.67\times10^{-8} \times 0.02 \times (500)^4
+$$
+<p>计算 $(500)^4 = 6.25\times10^{10}$，代入得：</p>
+$$
+P \approx 0.85 \times 5.67\times10^{-8} \times 0.02 \times 6.25\times10^{10} \approx 60.3\ \text{W}
+$$
+<p>若该加热片改为抛光铝表面（$\varepsilon \approx 0.05$），在相同温度下辐射功率将降至约 $3.5\ \text{W}$——差距达十七倍，这正是保温瓶内壁镀银、卫星外壳采用特定涂层的物理依据。</p>
+<p><strong>应用于问题求解</strong></p>
+<p>发射率是热管理设计中的关键自由变量。工程师可通过改变表面涂层来主动调控 $P$：需要散热的部件（如CPU散热片、深空探测器辐射板）应选高 $\varepsilon$ 材料；需要保温的部件（如保温杯、航天器隔热层）则选低 $\varepsilon$ 材料。求解此类问题时，先确认物体温度、面积，再查表或实验测定 $\varepsilon$，代入斯特藩-玻尔兹曼公式即可定量比较不同材料方案的散热效果。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch14: Heat and Heat Transfer Methods (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feynman Diagram | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="feynman-diagram-费曼图">Feynman Diagram（费曼图）</h2>
+<p><strong>定义</strong></p>
+<p>费曼图是理查德·费曼于1948年发明的一种图示化工具，用时间轴与空间轴描绘亚原子粒子之间通过交换虚粒子而发生的相互作用。图中实线代表费米子（如电子、夸克）的传播，波浪线或虚线代表玻色子（如光子、胶子）的传播，顶点表示相互作用发生的时空点。每一条费曼图并非单纯的示意图，而是与一个精确的数学表达式一一对应——图中的每一根线、每一个顶点都按照费曼规则翻译为传播子（propagator）或耦合常数因子，最终相乘积分得到该过程的<strong>振幅</strong>（amplitude）$\mathcal{M}$。相互作用发生的概率（截面或衰变率）正比于振幅模平方 $|\mathcal{M}|^2$。因此费曼图既是物理直觉的图像，也是量子场论微扰计算的严格算法。</p>
+<p><strong>范例演算</strong></p>
+<p>考虑两个电子通过交换一个虚光子发生散射（Møller 散射），即最低阶（树图）QED 过程。图中两条入射电子线在顶点 $A$ 与虚光子线相连，光子传播到顶点 $B$ 与两条出射电子线相连。按费曼规则，此图对应的振幅为</p>
+$$
+i\mathcal{M} = (ie\bar{u}(p_3)\gamma^\mu u(p_1)) \left(\frac{-ig_{\mu\nu}}{q^2}\right) (ie\bar{u}(p_4)\gamma^\nu u(p_2))
+$$
+<p>其中 $e$ 是电荷耦合常数，$\gamma^\mu$ 是狄拉克矩阵，$q$ 是虚光子传递的四动量，中间项 $\dfrac{-ig_{\mu\nu}}{q^2}$ 即为光子传播子。虚光子偏离质壳（$q^2 \neq 0$）正是"虚"字的含义：它不满足自由粒子的能量-动量关系，只在极短时间内根据海森堡不确定性原理存在。</p>
+<p><strong>应用于问题求解</strong></p>
+<p>在实际计算中，一个过程往往需要对所有阶数（树图、单圈图、双圈图……）的费曼图求和，圈图数目对应耦合常数的幂次，构成微扰级数：</p>
+$$
+\mathcal{M} = \mathcal{M}^{(0)} + \alpha\,\mathcal{M}^{(1)} + \alpha^2\,\mathcal{M}^{(2)} + \cdots
+$$
+<p>其中 $\alpha \approx 1/137$ 是精细结构常数。由于 $\alpha$ 很小，树图贡献通常已给出很好的近似，高阶圈图给出修正（如兰姆位移的精确预言）。求解具体问题时，标准步骤是：（1）依据初末态粒子画出所有拓扑上不同的费曼图；（2）对每条线、每个顶点套用费曼规则写出对应因子；（3）对内部圈动量积分并对末态相空间积分；（4）对振幅取模平方并按需对自旋、极化求和平均，得到可与实验对比的截面或衰变宽度。这一图形化-代数化的对应关系，使费曼图成为粒子物理标准模型中不可替代的计算与直觉工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

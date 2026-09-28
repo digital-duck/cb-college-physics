@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reversible Process | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="可逆过程">可逆过程</h2>
+<p><strong>定义</strong></p>
+<p>可逆过程（reversible process）是指系统经历某一变化后，能够沿原路径逆向进行，使系统和环境都精确恢复到初始状态，且不留下任何净变化的过程。这要求过程在每一步都无限接近平衡态（准静态），并且没有摩擦、粘滞、电阻等耗散效应，也没有有限温差下的热传导。现实中的过程都存在某种程度的不可逆性，可逆过程是一种理想化的极限情形，但它在热力学中至关重要，因为它给出了效率和熵变的理论上限（或下限）。</p>
+<p>可逆过程的核心判据可以用熵来表达。对于孤立系统，一个过程可逆的充要条件是总熵变为零：</p>
+$$
+\Delta S_{\text{universe}} = \Delta S_{\text{system}} + \Delta S_{\text{surroundings}} = 0
+$$
+<p>而任何真实（不可逆）过程都满足 $\Delta S_{\text{universe}} > 0$。</p>
+<p><strong>范例：可逆等温膨胀</strong></p>
+<p>考虑理想气体在温度 $T$ 下准静态、无摩擦地膨胀，体积从 $V_1$ 变到 $V_2$，并始终与温度为 $T$ 的热库保持热接触。由于过程无限缓慢，气体在每一瞬间都处于平衡态，外界压力始终等于气体压力 $p = nRT/V$。气体对外做的功为：</p>
+$$
+W = \int_{V_1}^{V_2} p \, dV = nRT \ln\frac{V_2}{V_1}
+$$
+<p>由于理想气体等温过程内能不变，吸收的热量 $Q = W$。系统熵变为 $\Delta S_{\text{sys}} = Q/T = nR\ln(V_2/V_1)$，热库放出等量热量，熵变为 $-Q/T$，两者相加为零——过程可逆。若沿原路径压缩气体回到 $V_1$，则气体和热库都精确恢复到初始状态，没有任何净能量或熵的转移。</p>
+<p><strong>解题应用</strong></p>
+<p>可逆过程的实际价值在于给出理论上限：卡诺循环告诉我们，工作于两个热库 $T_H$、$T_C$ 之间的任何热机，其效率满足</p>
+$$
+\eta \le \eta_{\text{Carnot}} = 1 - \frac{T_C}{T_H}
+$$
+<p>等号仅在所有子过程都可逆时成立。因此，在计算题中，若题目给出"可逆"条件，可直接令 $\Delta S_{\text{universe}} = 0$，从而求出未知的热量、温度或做功量；若过程标明存在摩擦或有限温差换热，则必须使用不等式 $\Delta S_{\text{universe}} > 0$ 来判断过程方向或估算最小耗散。这一区分是解决热机效率、制冷系数上限，以及判断某化学或物理过程能否自发进行等问题的关键工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

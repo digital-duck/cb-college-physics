@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time Dilation | College Physics Ch28</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="time-dilation">Time Dilation</h2>
+<p><strong>定义</strong></p>
+<p>时间膨胀是狭义相对论的核心结论之一：相对于某观察者运动的时钟，其走动速率在该观察者看来变慢了。设 $\Delta t_0$ 为事件在其自身静止参考系中测得的时间间隔（称为<strong>本征时间</strong>，proper time），$\Delta t$ 为相对该参考系以速度 $v$ 运动的观察者测得的同一时间间隔，则两者满足</p>
+$$
+\Delta t = \gamma \, \Delta t_0, \qquad \gamma = \frac{1}{\sqrt{1 - v^2/c^2}}
+$$
+<p>其中 $c$ 是光速，$\gamma \geq 1$ 称为<strong>洛伦兹因子</strong>。由于光速不变原理是相对论的公设而非可推导的结论，这一关系式本质上是几何事实（时空间隔不变性）的直接推论，因此必须以精确的代数形式给出，不能仅用文字描述其"变慢"的定性效果。</p>
+<p><strong>推导要点</strong></p>
+<p>考虑一个静止于飞船中的光钟，光在两镜之间垂直往返一次即为一个"滴答"，静止观察者测得的周期为 $\Delta t_0 = 2L/c$。而站在地面观察飞船以速度 $v$ 飞行的人看到光走的是斜边路径，光速仍为 $c$（光速不变公设），故</p>
+$$
+c\,\Delta t/2 = \sqrt{L^2 + (v\,\Delta t/2)^2}
+$$
+<p>解出 $\Delta t$，即得 $\Delta t = \gamma \Delta t_0$。</p>
+<p><strong>例题</strong></p>
+<p>一艘飞船以 $v = 0.8c$ 相对地球飞行，飞船上的宇航员测得心跳间隔为 $\Delta t_0 = 1\text{ s}$。地面观察者测得的心跳间隔是多少？</p>
+$$
+\gamma = \frac{1}{\sqrt{1-0.8^2}} = \frac{1}{\sqrt{0.36}} = \frac{1}{0.6} \approx 1.667
+$$
+$$
+\Delta t = 1.667 \times 1\text{ s} \approx 1.67\text{ s}
+$$
+<p>即地面观察者认为宇航员的心跳变慢了。</p>
+<p><strong>解题应用</strong></p>
+<p>处理这类问题时，关键是准确识别<strong>谁测得本征时间</strong> $\Delta t_0$——它必须是在事件发生地"静止"的那个观察者所测的间隔。常见陷阱是把地面时间误当作本征时间代入。例如缪子在大气层中以接近光速产生，其静止参考系中的平均寿命 $\Delta t_0 \approx 2.2\,\mu s$，但地面观察者测得的寿命经 $\gamma$ 放大后显著延长，这正是缪子能够到达地面而被实验探测到的原因，也是时间膨胀最经典的实验验证之一。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch28: Special Relativity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

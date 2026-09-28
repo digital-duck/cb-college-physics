@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refraction | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="refraction">Refraction</h2>
+<p><strong>定义</strong></p>
+<p>当光从一种介质进入另一种介质时,由于光速发生变化,光线的传播方向会发生改变,这种现象称为折射。光在介质中的传播速度由该介质的折射率 $n$ 决定,定义为</p>
+$$n = \frac{c}{v}$$
+<p>其中 $c$ 是真空中的光速,$v$ 是光在该介质中的速度。折射行为由<strong>斯涅尔定律</strong>(Snell's Law)精确描述:</p>
+$$n_1 \sin\theta_1 = n_2 \sin\theta_2$$
+<p>这里 $\theta_1$ 是入射角,$\theta_2$ 是折射角,均从界面法线量起。这一定律不是经验拟合,而是费马最短时间原理的直接推论——光沿着使传播时间取极值的路径行进,当路径跨越两种速度不同的介质时,数学上必然导出这一正弦关系。这正是折射区别于纯粹描述性物理现象的地方:它有严格的理论基础,理解这一点比记住公式更重要。</p>
+<p><strong>例题</strong></p>
+<p>一束光从空气($n_1 = 1.00$)以 $30°$ 入射角射入水中($n_2 = 1.33$),求折射角 $\theta_2$。</p>
+<p>代入斯涅尔定律:</p>
+$$1.00 \times \sin 30° = 1.33 \times \sin\theta_2$$
+$$\sin\theta_2 = \frac{0.500}{1.33} = 0.376$$
+$$\theta_2 = \arcsin(0.376) \approx 22.1°$$
+<p>光线进入水中后偏向法线,这是因为水的折射率更大、光速更慢——光从低折射率介质进入高折射率介质时,总是向法线偏折,反之则远离法线。</p>
+<p><strong>问题求解应用</strong></p>
+<p>折射率之比还决定了一个重要的临界现象:全内反射。当光从高折射率介质射向低折射率介质($n_1 > n_2$)时,存在一个<strong>临界角</strong> $\theta_c$,使得</p>
+$$\sin\theta_c = \frac{n_2}{n_1}$$
+<p>当入射角超过 $\theta_c$ 时,斯涅尔定律要求 $\sin\theta_2 > 1$,这在数学上无解,意味着光无法折射进入第二介质,而是完全反射回原介质。这正是光纤通信的物理基础:光在纤芯(高 $n$)与包层(低 $n$)的界面以超过临界角的角度不断发生全反射,从而被限制在纤芯内长距离传输,几乎无损耗。求解此类问题时,先判断入射角是否超过临界角,再决定应用斯涅尔定律还是全反射条件,是解题的关键步骤。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sublimation | College Physics Ch13</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="升华">升华</h2>
+<p><strong>定义</strong></p>
+<p>升华（sublimation）是物质在不经过液态的情况下，直接由固态转变为气态的相变过程。这一现象的发生依赖于压强条件：只有当系统压强低于该物质的三相点压强 $p_t$ 时，升华才可能发生。三相点是相图上固、液、气三相共存的唯一状态点，对应特定的温度 $T_t$ 和压强 $p_t$。在高于 $p_t$ 的压强下，固体加热时会先熔化为液体，再蒸发为气体；而在低于 $p_t$ 的压强下，固-气边界曲线直接决定了固体在给定温度下何时直接转化为气体，中间不存在稳定的液态。这正是相图中固-气共存曲线所描述的物理内容：它给出了在不同压强下，物质发生升华所需的温度。</p>
+<p><strong>范例</strong></p>
+<p>最常见的例子是干冰（固态 $\mathrm{CO_2}$）。$\mathrm{CO_2}$ 的三相点压强约为 $5.11\ \text{atm}$，远高于标准大气压（$1\ \text{atm}$）。因此，在常压环境下，固态 $\mathrm{CO_2}$ 无法以液态形式存在——它只能直接升华为气体，这也是干冰常温下"冒烟"的原因。另一个例子是冰箱冷冻室中的冰块长期存放后体积缩小，这是水冰在低分压水蒸气环境下缓慢升华的结果，尽管此时压强高于水的三相点（约 $611.7\ \text{Pa}$），但局部水蒸气分压低于该温度下冰的平衡蒸气压，使升华在动力学上持续发生。</p>
+<p><strong>问题求解应用</strong></p>
+<p>判断某物质在给定压强 $p$ 和温度 $T$ 下会发生升华还是熔化，关键在于比较 $p$ 与该物质的三相点压强 $p_t$：若 $p < p_t$，则加热固体时将沿固-气曲线直接气化，不出现液态；若 $p > p_t$，则必须先跨越固-液曲线熔化，再跨越液-气曲线蒸发。实际工程中，这一原理被用于真空冷冻干燥（freeze-drying）：将样品降温至冰点以下形成固态水，再降低环境压强至水的三相点以下，使冰直接升华逃逸，从而在不破坏样品结构（避免液态水造成的组织损伤）的前提下完成脱水，广泛应用于食品保存和药物制剂。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch13: Temperature, Kinetic Theory, and the Gas Laws (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

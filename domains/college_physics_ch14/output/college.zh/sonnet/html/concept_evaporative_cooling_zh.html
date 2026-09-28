@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evaporative Cooling | College Physics Ch14</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="蒸发冷却">蒸发冷却</h2>
+<p><strong>定义</strong></p>
+<p>蒸发冷却指液体表面分子逃逸为气相时,从周围环境(包括液体自身)吸收汽化潜热,从而使剩余液体及其附着表面温度下降的现象。液体分子的动能服从统计分布,总有一部分高能分子克服分子间引力逃逸到气相;由于逃逸的是高能分子,留下的液体平均动能降低,即温度下降。汽化所需的能量称为汽化潜热 $L_v$,单位质量液体蒸发吸收的热量为</p>
+$$
+Q = m L_v
+$$
+<p>若该热量来自与液体接触的物体(比热容为 $c$、质量为 $M$),在绝热近似下,物体温度变化 $\Delta T$ 满足能量守恒:</p>
+$$
+M c\, \Delta T = -m L_v
+$$
+<p>负号表示物体因供热而降温。</p>
+<p><strong>实例分析</strong></p>
+<p>以人体出汗为例。水的汽化潜热约为 $L_v = 2.26 \times 10^{6}\ \text{J/kg}$(常温下)。若一名运动员在剧烈运动中蒸发了 $50\ \text{g} = 0.05\ \text{kg}$ 的汗液,带走的热量为</p>
+$$
+Q = 0.05 \times 2.26 \times 10^{6} = 1.13 \times 10^{5}\ \text{J}
+$$
+<p>假设人体等效质量为 $M = 70\ \text{kg}$,体液比热容近似取水的比热容 $c = 4186\ \text{J/(kg·°C)}$,则理论温降为</p>
+$$
+\Delta T = \frac{Q}{Mc} = \frac{1.13 \times 10^{5}}{70 \times 4186} \approx 0.39\ ^\circ\text{C}
+$$
+<p>这解释了为何出汗能有效帮助人体散热并维持体温稳定——实际身体调节更复杂(涉及血液循环重新分配热量),但核心机制正是潜热吸收。</p>
+<p><strong>问题求解应用</strong></p>
+<p>蒸发冷却原理广泛用于工程降温设计,例如"沙漠空调"(evaporative cooler):水流经湿帘,风扇将空气吹过湿帘使水蒸发,带走空气中的热量,从而降低出风温度而无需压缩机制冷。</p>
+<p>练习:一台沙漠空调每小时蒸发 $2\ \text{kg}$ 水,若假设该热量全部用于降低流经的 $100\ \text{kg}$ 空气(比热容 $c_{air} \approx 1005\ \text{J/(kg·°C)}$)的温度,求空气温降。</p>
+<p>解:</p>
+$$
+\Delta T = \frac{m L_v}{M_{air}\, c_{air}} = \frac{2 \times 2.26\times10^{6}}{100 \times 1005} \approx 45\ ^\circ\text{C}
+$$
+<p>此结果说明为何蒸发冷却在干燥气候下降温效果显著,但在高湿度环境中效率大幅下降——因为空气中水蒸气分压升高会抑制水的进一步蒸发,这也是该技术在潮湿地区应用受限的物理根源。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch14: Heat and Heat Transfer Methods (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

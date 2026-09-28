@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Harmonic Motion | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="simple-harmonic-motion">Simple Harmonic Motion</h2>
+<p><strong>定义</strong></p>
+<p>当物体所受的净恢复力与其位移成正比、方向相反时，物体所做的运动称为简谐运动（Simple Harmonic Motion, SHM）。这一关系即胡克定律：</p>
+$$F = -kx$$
+<p>其中 $x$ 为相对平衡位置的位移，$k$ 为劲度系数（正常数），负号表示力始终指向平衡位置。由牛顿第二定律 $F = ma = m\ddot{x}$，代入得二阶线性微分方程：</p>
+$$m\ddot{x} + kx = 0 \quad\Longrightarrow\quad \ddot{x} + \omega^2 x = 0, \qquad \omega = \sqrt{\frac{k}{m}}$$
+<p>该方程的通解为：</p>
+$$x(t) = A\cos(\omega t + \varphi)$$
+<p>其中 $A$ 为振幅，$\omega$ 为角频率，$\varphi$ 为初相位，均由初始条件决定。周期 $T = \dfrac{2\pi}{\omega}$，与振幅无关——这是简谐运动的核心特征：<strong>等时性</strong>。</p>
+<p><strong>推导要点</strong>：为何解一定是正弦形式？因为 $\ddot{x} = -\omega^2 x$ 要求函数对时间二次求导后与自身成负比例，而 $\sin$、$\cos$ 恰好满足此性质，其线性组合构成该方程的完备解空间。</p>
+<p><strong>范例</strong></p>
+<p>一个质量 $m = 0.5\ \text{kg}$ 的物块连接劲度系数 $k = 200\ \text{N/m}$ 的弹簧，将其拉离平衡位置 $A = 0.1\ \text{m}$ 后由静止释放。求角频率、周期，以及 $t = 0.1\ \text{s}$ 时的位移与速度。</p>
+$$\omega = \sqrt{\frac{200}{0.5}} = 20\ \text{rad/s}, \qquad T = \frac{2\pi}{20} \approx 0.314\ \text{s}$$
+<p>由静止释放意味着 $\dot{x}(0) = 0$，故 $\varphi = 0$，即 $x(t) = 0.1\cos(20t)$。</p>
+$$x(0.1) = 0.1\cos(2) \approx -0.0416\ \text{m}$$
+$$v(t) = -A\omega\sin(\omega t) \;\Rightarrow\; v(0.1) = -0.1(20)\sin(2) \approx -1.819\ \text{m/s}$$
+<p><strong>问题解决应用</strong></p>
+<p>处理 SHM 问题的关键在于识别系统中"位移-恢复力"的线性关系，并据此确定等效的 $k$ 与 $m$，从而求出 $\omega$。例如单摆在小角度近似下（$\sin\theta \approx \theta$）满足 $\ddot{\theta} + \dfrac{g}{L}\theta = 0$，其角频率为 $\omega = \sqrt{g/L}$，与摆的质量无关——这提示我们：先将物理情境化简为标准形式 $\ddot{x} + \omega^2 x = 0$，再套用通解，是解决一切 SHM 类问题的通用策略。此外，系统的总机械能 $E = \tfrac{1}{2}kA^2$ 守恒，常可用能量法快速求出任意位置的速度，避免直接对运动方程积分。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

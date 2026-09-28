@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Period | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="period">Period</h2>
+<p><strong>定义</strong></p>
+<p>周期（Period），记作 $T$，是指振动系统完成一次完整振荡循环所需要的时间，单位为秒（s）。所谓"完整循环"，是指物体从某一状态出发，经过全部中间状态后，第一次回到与初始时刻位置和速度都相同的那一状态。周期是简谐运动（Simple Harmonic Motion, SHM）的基本时间尺度，与振幅无关——这正是简谐运动最重要的特性之一：无论摆动幅度大小，只要恢复力满足胡克定律形式 $F=-kx$，完成一次振荡所需的时间保持不变。</p>
+<p>周期与频率 $f$（单位时间内完成的振荡次数）互为倒数：</p>
+$$T=\frac{1}{f}$$
+<p>对于弹簧-质量系统，周期由系统的物理参数决定：</p>
+$$T=2\pi\sqrt{\frac{m}{k}}$$
+<p>其中 $m$ 为振子质量，$k$ 为弹簧劲度系数。对于单摆（小角度近似下），周期为：</p>
+$$T=2\pi\sqrt{\frac{L}{g}}$$
+<p>其中 $L$ 为摆长，$g$ 为重力加速度。这两个公式的共同结构揭示了一个深层规律：周期由"惯性因素"（$m$ 或 $L$）与"回复力强度"（$k$ 或 $g$）的比值决定，比值越大，系统越"迟钝"，周期越长。</p>
+<p><strong>例题</strong></p>
+<p>一根弹簧一端固定，另一端悬挂质量 $m=0.5\text{ kg}$ 的物块，劲度系数 $k=20\text{ N/m}$。求该系统的振动周期。</p>
+$$T=2\pi\sqrt{\frac{m}{k}}=2\pi\sqrt{\frac{0.5}{20}}=2\pi\sqrt{0.025}\approx 2\pi(0.158)\approx 0.99\text{ s}$$
+<p><strong>应用与解题技巧</strong></p>
+<p>处理周期相关问题时，注意区分"已知周期反求参数"与"参数变化后周期如何变化"两类题型。例如，若将上题中的质量增加为原来的 4 倍，由于 $T\propto\sqrt{m}$，周期将变为原来的 2 倍，而与振幅、初始位移等条件无关。求解此类问题时，先确定系统类型（弹簧振子还是单摆），选用对应公式，再利用比例关系简化计算，往往比直接代入数值更快捷、更不易出错。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

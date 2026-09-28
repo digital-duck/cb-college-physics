@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projectile Motion Applications | College Physics Ch03</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="projectile-motion-applications">Projectile Motion Applications</h2>
+<p>Projectile motion — the curved path of an object launched into the air and acted on only by gravity — governs phenomena as varied as a fireworks shell bursting overhead, a chunk of volcanic ejecta arcing back to the ground, and a soccer ball sailing toward a goal. The key insight is that horizontal and vertical motion are independent: gravity ($g = 9.8\ \text{m/s}^2$) acts only vertically, while horizontal velocity stays constant (ignoring air resistance).</p>
+<p>Resolve the launch velocity $v_0$ at angle $\theta$ into components:</p>
+$$v_{0x} = v_0\cos\theta, \qquad v_{0y} = v_0\sin\theta$$
+<p>Three quantities follow directly. Time to reach maximum height occurs when vertical velocity is zero: $t_{up} = v_{0y}/g$. Maximum height is</p>
+$$H = \frac{v_{0y}^2}{2g}$$
+<p>For a launch and landing at the same elevation, total flight time is $t = 2v_{0y}/g$, giving range</p>
+$$R = v_{0x} \cdot t = \frac{v_0^2 \sin(2\theta)}{g}$$
+<p>Since $\sin(2\theta)$ peaks at $\theta = 45°$, this angle maximizes range for equal launch/landing heights — a fact coaches and artillery engineers alike exploit.</p>
+<p><strong>Worked example:</strong> A fireworks shell launches at $v_0 = 40\ \text{m/s}$, $\theta = 60°$. Then $v_{0y} = 40\sin(60°) \approx 34.6\ \text{m/s}$ and $v_{0x} = 40\cos(60°) = 20\ \text{m/s}$. Maximum height: $H = (34.6)^2/(2 \times 9.8) \approx 61.2\ \text{m}$ — the altitude at which the shell detonates. Impact velocity (if it fell back to launch height) equals $v_0$ in magnitude, but a fireworks shell instead explodes at $H$, so its fragments inherit only the residual horizontal velocity plus whatever the burst imparts.</p>
+<p><strong>Problem-solving application:</strong> Volcanic ejecta and sports problems often add a twist — unequal launch and landing heights. If a projectile launches from height $y_0$, use kinematics directly: solve $y_0 + v_{0y}t - \tfrac12 g t^2 = 0$ for $t$ via the quadratic formula, then substitute into $R = v_{0x}t$. This generalizes the range formula and is essential for volcanology (ejecta landing below the crater rim) and sports (a golf ball launched from an elevated tee). Always separate the two axes, solve time from the vertical equation, then apply that time to the horizontal one.</p>
+<pre><code>flowchart LR
+    A["Launch velocity v0, angle θ"] --&gt; B["Resolve into components"]
+    B --&gt; C["Horizontal: v0x = v0 cos θ (constant)"]
+    B --&gt; D["Vertical: v0y = v0 sin θ (accel. -g)"]
+    D --&gt; E["Time to peak: t_up = v0y / g"]
+    E --&gt; F["Max height H = v0y² / 2g"]
+    D --&gt; G["Total flight time t"]
+    C --&gt; H["Range R = v0x · t"]
+    G --&gt; H</code></pre>
+<p><em>Diagram showing how launch velocity splits into independent horizontal and vertical components, which separately determine flight time, maximum height, and range.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch3: Two-Dimensional Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

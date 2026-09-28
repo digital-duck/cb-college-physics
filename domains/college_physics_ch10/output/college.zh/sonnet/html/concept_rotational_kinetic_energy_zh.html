@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rotational Kinetic Energy | College Physics Ch10</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="rotational-kinetic-energy">Rotational Kinetic Energy</h2>
+<p>一个旋转物体虽然整体质心可能静止，但组成它的每一个质元都在绕转轴做圆周运动，因而具有各自的平动动能。将这些动能对整个刚体求和，就得到了物体因转动而具有的能量——<strong>转动动能</strong>。</p>
+<p>设刚体由许多质元组成，第 $i$ 个质元的质量为 $m_i$，到转轴的距离为 $r_i$，角速度为 $\omega$（刚体上各点角速度相同）。该质元的线速度为 $v_i = r_i \omega$，其动能为 $\frac{1}{2}m_i v_i^2 = \frac{1}{2}m_i r_i^2 \omega^2$。对全部质元求和：</p>
+$$
+KE_{rot} = \sum_i \frac{1}{2}m_i r_i^2 \omega^2 = \frac{1}{2}\omega^2 \sum_i m_i r_i^2 = \frac{1}{2} I \omega^2
+$$
+<p>其中 $I = \sum_i m_i r_i^2$ 就是转动惯量。可以看到，转动动能公式 $KE_{rot} = \frac{1}{2}I\omega^2$ 与平动动能 $KE_{trans} = \frac{1}{2}mv^2$ 在结构上完全对应：质量 $m$ 对应转动惯量 $I$，线速度 $v$ 对应角速度 $\omega$。这不是巧合，而是因为 $I$ 本质上就是刚体对"转动加速难易程度"的度量，正如 $m$ 度量物体对"平动加速难易程度"的抵抗。</p>
+<p><strong>例题</strong>：一个半径 $R=0.2\,\text{m}$、质量 $M=2\,\text{kg}$ 的均匀圆盘，绕过中心且垂直于盘面的轴以角速度 $\omega = 10\,\text{rad/s}$ 旋转。圆盘的转动惯量为 $I = \frac{1}{2}MR^2 = \frac{1}{2}(2)(0.2)^2 = 0.04\,\text{kg·m}^2$。代入公式：</p>
+$$
+KE_{rot} = \frac{1}{2}(0.04)(10)^2 = 2\,\text{J}
+$$
+<p><strong>应用问题</strong>：一个圆盘从斜面顶端由静止滚下（无滑动），高度差为 $h$。利用能量守恒 $Mgh = KE_{trans} + KE_{rot} = \frac{1}{2}Mv^2 + \frac{1}{2}I\omega^2$，并结合滚动约束 $v = R\omega$，可以求出物体到达底部的速度 $v$。由于圆盘的转动惯量分走了一部分势能，其下滑速度会比同高度自由滑落（无转动）的物体更慢——这正是转动动能存在这一事实带来的可测量、可预测的物理后果，也是分析滚动物体问题的核心思路。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch10: Rotational Motion and Angular Momentum (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

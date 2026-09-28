@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Body Diagram | College Physics Ch09</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="free-body-diagram">Free Body Diagram</h2>
+<p><strong>定义</strong></p>
+<p>受力图（Free Body Diagram，简称 FBD）是将研究对象抽象为一个点，并画出作用在该物体上所有外力的矢量示意图。它是牛顿第二定律 $\sum \vec{F} = m\vec{a}$ 在实际问题中得以应用的第一步：只有先把物体从周围环境中"隔离"出来，明确列出每一个外力（重力、法向力、张力、摩擦力、外加力等），才能正确写出各方向上的力平衡方程或运动方程。受力图不包括物体施加给其他物体的力，也不包括内力——它只关注"外界对这个物体做了什么"。</p>
+<p><strong>范例</strong></p>
+<p>考虑一个质量为 $m$ 的木块静止在倾角为 $\theta$ 的光滑斜面上，并用一条水平绳固定在墙上。第一步，将木块抽象为一个点。第二步，逐一列出外力：</p>
+<li>重力 $\vec{W} = mg$，竖直向下；</li>
+<li>斜面法向力 $\vec{N}$，垂直于斜面指向物体；</li>
+<li>绳的张力 $\vec{T}$，沿绳方向（水平）。</li>
+<p>画出这三个矢量后，选取合适的坐标轴（通常沿斜面方向和垂直斜面方向）分解各力。沿斜面方向：</p>
+$$T\cos\theta - mg\sin\theta = 0$$
+<p>垂直斜面方向：</p>
+$$N - mg\cos\theta - T\sin\theta = 0$$
+<p>由第一式可解出 $T = mg\tan\theta$，再代入第二式求得 $N$。这个例子说明：受力图不是"画得好看"，而是把矢量方程转化为可解的代数方程的必要中间步骤——遗漏一个力，方程组就会不闭合，解出的结果必然错误。</p>
+<p><strong>解题应用</strong></p>
+<p>在实际解题中，受力图的价值在于暴露隐藏的约束关系。常见错误包括：把物体对绳的拉力误画成作用在物体上（违反牛顿第三定律的作用对象）、遗漏摩擦力的方向、或者混淆"重力沿斜面的分量"与"重力本身"。规范流程是：</p>
+<li>隔离物体，标出所有接触点和场作用（如重力场）；</li>
+<li>为每个接触/作用画一个力矢量，标明来源；</li>
+<li>选择坐标系，将力矢量分解为分量；</li>
+<li>应用 $\sum F_x = ma_x,\ \sum F_y = ma_y$ 求解未知量。</li>
+<p>当系统包含多个相连物体（如通过绳或弹簧连接的两个木块）时，需要为<strong>每个物体单独画一张受力图</strong>，再通过牛顿第三定律和运动约束（如绳长不变）把各方程联立求解。这种系统化方法是解决复杂力学问题的基础技能。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch9: Statics and Torque (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

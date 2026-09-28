@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lorentz Force | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="lorentz-force">Lorentz Force</h2>
+<p><strong>定义</strong></p>
+<p>当带电量为 $q$ 的粒子以速度 $\vec{v}$ 在磁场 $\vec{B}$ 中运动时，磁场对它施加的作用力称为洛伦兹力（磁场部分），其大小为</p>
+$$F = qvB\sin\theta$$
+<p>其中 $\theta$ 是 $\vec{v}$ 与 $\vec{B}$ 之间的夹角。更完整地，用矢量叉乘表示为</p>
+$$\vec{F} = q\,\vec{v} \times \vec{B}$$
+<p>这个表达式包含了大小与方向两方面的信息：叉乘的性质决定了 $\vec{F}$ 必须同时垂直于 $\vec{v}$ 和 $\vec{B}$，其方向由右手定则确定（若 $q$ 为负，则方向反转）。值得注意的是，当 $\vec{v}$ 与 $\vec{B}$ 平行（$\theta=0$）时，$\sin\theta=0$，磁场对电荷不做任何作用——这正是叉乘公式必然蕴含的结果，而非附加规则。</p>
+<p><strong>例题</strong></p>
+<p>一个电子（$q = -1.6\times10^{-19}\,\text{C}$）以 $v = 2.0\times10^6\,\text{m/s}$ 的速度沿 $x$ 轴正方向运动，磁场 $\vec{B} = 0.5\,\text{T}$ 沿 $z$ 轴正方向。求电子所受磁场力。</p>
+<p>由于 $\vec{v} \perp \vec{B}$，$\theta = 90^\circ$，$\sin\theta = 1$，故</p>
+$$F = |q|vB = (1.6\times10^{-19})(2.0\times10^6)(0.5) = 1.6\times10^{-13}\,\text{N}$$
+<p>方向：$\hat{x}\times\hat{z} = -\hat{y}$，再考虑电荷为负，实际力方向沿 $+\hat{y}$。</p>
+<p><strong>问题求解应用</strong></p>
+<p>洛伦兹力最重要的推论是：它只改变速度方向，不改变速率，因为力始终垂直于速度，故不做功（$\vec{F}\cdot\vec{v}=0$）。这使带电粒子在均匀磁场中做匀速圆周运动，半径由力平衡条件 $qvB = \dfrac{mv^2}{r}$ 给出：</p>
+$$r = \frac{mv}{qB}$$
+<p>这一关系是分析回旋加速器、质谱仪和磁约束等真实系统的出发点：只要知道粒子的质量、电荷和速度，就能预测其轨道半径，反之亦然，可由观测到的半径反推粒子的荷质比。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

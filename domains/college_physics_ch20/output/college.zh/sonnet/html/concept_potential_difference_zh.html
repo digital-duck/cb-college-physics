@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Potential Difference | College Physics Ch20</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="potential-difference-电势差">Potential Difference（电势差）</h2>
+<p><strong>定义</strong></p>
+<p>电势差（potential difference），也称电压，描述电场中两点之间单位电荷所具有的能量差异。设点 $A$、$B$ 处的电势分别为 $V_A$、$V_B$，则电势差定义为</p>
+$$
+U_{AB} = V_A - V_B = \frac{W_{AB}}{q}
+$$
+<p>其中 $W_{AB}$ 是将电荷 $q$（单位：库仑，C）从 $A$ 点移动到 $B$ 点电场力所做的功（单位：焦耳，J）。电势差的单位是伏特（V），$1\text{ V} = 1\text{ J/C}$。电势本身是标量场，其数值依赖于参考点的选取，但两点之间的电势差与参考点无关，是可测量的物理量。</p>
+<p>对于匀强电场中沿场线方向的位移 $d$，电势差与场强 $E$ 之间满足</p>
+$$
+U = E \cdot d
+$$
+<p>这一关系表明，场强越大、两点间距越远，电势差越大；这也是电场强度单位可以写成 V/m 的原因。</p>
+<p><strong>例题</strong></p>
+<p>平行板电容器两极板间距 $d = 2\text{ mm}$，场强为 $E = 5\times 10^4\text{ V/m}$。求两极板间的电势差。</p>
+<p>代入 $U = E \cdot d = (5\times10^4)\times(2\times10^{-3}) = 100\text{ V}$。</p>
+<p>若将电荷量 $q = 3\times10^{-6}\text{ C}$ 从正极板移动到负极板，电场力做的功为</p>
+$$
+W = qU = (3\times10^{-6})(100) = 3\times10^{-4}\text{ J}
+$$
+<p><strong>解题应用</strong></p>
+<p>电势差概念是分析电路和带电粒子运动的核心工具。在电路问题中，欧姆定律 $U = IR$ 将电势差与电流、电阻联系起来，是求解串并联电路的基础。在粒子加速问题中，若带电粒子仅受电场力作用，可用能量守恒直接求末速度，而不必先求出力再做运动学分析：</p>
+$$
+qU = \frac{1}{2}mv^2 - \frac{1}{2}mv_0^2
+$$
+<p>例如，电子（$q = 1.6\times10^{-19}\text{ C}$，$m = 9.1\times10^{-31}\text{ kg}$）从静止经过 $U = 1000\text{ V}$ 的加速电压，末速度可由 $v = \sqrt{2qU/m}$ 直接求得，无需知道电场强度或加速距离。这种"用电势差替代力和距离"的思路，正是电势差作为标量势能工具在解题中最实用的价值所在。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch20: Electric Current, Resistance, and Ohm's Law (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

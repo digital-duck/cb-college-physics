@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adaptive Optics | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="adaptive-optics-自适应光学">Adaptive Optics（自适应光学）</h2>
+<p><strong>定义</strong></p>
+<p>星光穿过大气层时,不同高度的空气层因温度和密度差异而具有不同的折射率。这些不断翻涌的湍流层使原本平行的波前发生扭曲,导致地面望远镜看到的星像抖动、模糊,分辨率远低于望远镜口径本应达到的衍射极限。自适应光学(Adaptive Optics, AO)是一套实时补偿系统:它先用波前传感器(wavefront sensor)测量入射光波前相对于理想平面波的畸变,再由计算机在毫秒级时间内计算出一面可变形镜(deformable mirror)应施加的形状,通过背后成百上千个促动器(actuator)推拉镜面,使反射光重新恢复为平整波前。整个闭环——传感、计算、驱动——每秒要重复数百到上千次,因为大气湍流本身在快速变化。</p>
+<p><strong>波前误差的数学描述</strong></p>
+<p>工程上常用泽尼克多项式(Zernike polynomials)$Z_n^m(\rho,\theta)$展开波前相位误差:</p>
+$$
+\phi(\rho,\theta) = \sum_{n,m} a_n^m \, Z_n^m(\rho,\theta)
+$$
+<p>其中$\rho,\theta$是瞳孔面上的极坐标,系数$a_n^m$对应倾斜、离焦、彗差、像散等具体畸变模式。可变形镜的任务就是产生一个反向相位$-\phi(\rho,\theta)$去抵消它。补偿效果常用斯特列尔比(Strehl ratio)衡量,它是实际点扩散函数峰值强度与衍射极限理想值之比,数值越接近1说明成像质量越接近理论最优。</p>
+<p><strong>问题求解应用</strong></p>
+<p>假设某系统闭环带宽为200 Hz,而大气相干时间(Greenwood time,湍流"冻结"波前的典型时间尺度)约为5毫秒。要判断系统是否跟得上湍流变化,需比较采样周期$T = 1/200\text{ Hz} = 5\text{ ms}$与相干时间——二者接近,说明系统处于临界响应区,残余波前误差不会为零,而是留下有限的均方根相位误差$\sigma_\phi^2$,进而通过 Maréchal 近似估算斯特列尔比:</p>
+$$
+S \approx e^{-\sigma_\phi^2}
+$$
+<p>若已知残余RMS波前误差为100 nm、观测波长为500 nm,则相位误差(弧度)为$\sigma_\phi = 2\pi(100/500) \approx 1.26$ rad,代入得$S \approx e^{-1.26^2} \approx 0.20$,表明即便有AO校正,系统仍只能恢复约20%的理想衍射极限强度——这类计算正是设计激光导星(laser guide star)功率、促动器密度和采样速率时必须权衡的核心问题。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

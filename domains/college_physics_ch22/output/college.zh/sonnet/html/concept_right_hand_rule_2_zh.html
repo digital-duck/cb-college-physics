@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Right Hand Rule 2 | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="right-hand-rule-2">Right Hand Rule 2</h2>
+<p><strong>定义</strong></p>
+<p>安培定律指出，电流会在其周围产生环绕的磁场，而右手定则二（也称"安培右手定则"或"抓握定则"）给出了确定这一磁场方向的几何方法：将右手大拇指指向电流 $I$ 流动的方向，其余四指自然弯曲、环绕导线的方向，即为磁场 $\vec{B}$ 的方向。这一磁场并非指向某一点，而是在垂直于导线的平面内形成一系列同心圆形磁力线，磁场方向处处与这些圆相切。</p>
+<p>这一规则本质上是安培定律的矢量方向表述。对无限长直导线，磁场大小由</p>
+$$B = \frac{\mu_0 I}{2\pi r}$$
+<p>给出，其中 $\mu_0$ 为真空磁导率，$r$ 为到导线的垂直距离；而右手定则二则补充了这一标量公式所缺失的方向信息。</p>
+<p><strong>范例</strong></p>
+<p>设一根竖直导线，电流方向向上（从下往上流动）。将右手大拇指指向上方，四指自然弯曲的方向是：从导线右侧看去，磁场线呈逆时针方向环绕（俯视图中）。因此，站在导线正上方向下看，若电流向上（朝向观察者），磁场方向为逆时针；若电流方向反转（向下流动），则磁场方向变为顺时针。这与洛伦兹力公式 $\vec{F} = q\vec{v} \times \vec{B}$ 中矢量叉乘的右手定则是同一套手性约定，二者不可混淆但相互配合使用。</p>
+<p><strong>解题应用</strong></p>
+<p>判断磁场方向的标准步骤：</p>
+<li>明确电流的实际流向（正电荷运动方向）；</li>
+<li>用右手大拇指指向该方向；</li>
+<li>四指弯曲方向即为该点磁场的环绕方向；</li>
+<li>在具体观察点，磁场矢量沿切线方向，指向四指弯曲经过该点时的指向。</li>
+<p>对于螺线管或线圈，规则需要变形使用：让四指沿电流环绕方向弯曲，此时大拇指指向即为螺线管内部磁场 $\vec{B}$ 的方向——这常被称为"右手定则二的螺线管形式"。练习时应特别注意：先固定电流方向不变，再单独判断磁场方向，避免与安培力方向（涉及另一次叉乘）的判定步骤相混淆，这是学生最常出现的概念混用错误。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy Stored In Capacitors | College Physics Ch19</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="energy-stored-in-capacitors">Energy Stored In Capacitors</h2>
+<p><strong>定义</strong></p>
+<p>给电容器充电的过程,本质上是把电荷从一个极板搬运到另一个极板。由于极板之间已经存在电压,搬运每一小份电荷都需要克服电场做功,这部分功以电势能的形式储存在电容器中。设某一时刻电容器上的电荷为 $q$,对应电压为 $v = q/C$,再搬运一份微小电荷 $dq$ 所需的功为</p>
+$$dW = v\,dq = \frac{q}{C}\,dq$$
+<p>将电荷从 $0$ 积分到最终值 $Q$,即可得到总储能:</p>
+$$E = \int_0^{Q} \frac{q}{C}\,dq = \frac{Q^2}{2C}$$
+<p>利用 $Q = CV$,这个结果可以等价地写成三种常用形式:</p>
+$$E = \frac{1}{2}QV = \frac{1}{2}CV^2 = \frac{Q^2}{2C}$$
+<p>注意系数 $\tfrac{1}{2}$ 的来源:充电过程中电压是从 $0$ 线性增长到 $V$ 的,并不是恒定电压 $V$ 对恒定电荷 $Q$ 做功(那样会是 $QV$),而是电压随电荷积累而增大,做功呈三角形面积关系,因此比简单的 $QV$ 少了一半。</p>
+<p><strong>例题</strong></p>
+<p>一个 $C = 4\ \mu\text{F}$ 的电容器被充电到 $V = 12\ \text{V}$。求其储存的能量,以及此时极板上的电荷量。</p>
+<p>电荷:</p>
+$$Q = CV = (4\times10^{-6}\ \text{F})(12\ \text{V}) = 4.8\times10^{-5}\ \text{C}$$
+<p>能量(用 $E = \tfrac{1}{2}CV^2$ 最方便,因为 $C$、$V$ 已知):</p>
+$$E = \frac{1}{2}(4\times10^{-6})(12)^2 = \frac{1}{2}(4\times10^{-6})(144) = 2.88\times10^{-4}\ \text{J}$$
+<p><strong>解题应用</strong></p>
+<p>三种公式并非互相独立的知识点,而是同一个 $E$ 在不同已知量组合下的最优表达式,解题时应按"已知什么、缺什么"来选择:</p>
+<li>已知 $Q$ 与 $V$ → 用 $E=\tfrac12 QV$;</li>
+<li>已知 $C$ 与 $V$(最常见,如接在电源上)→ 用 $E=\tfrac12 CV^2$;</li>
+<li>已知 $Q$ 与 $C$(如电容器已断开电源,电荷保持不变)→ 用 $E=\dfrac{Q^2}{2C}$。</li>
+<p>一个典型陷阱出现在"电容器接入电路后再改变电容"的问题中:若电容器与电源保持连接,$V$ 不变,应选 $E=\tfrac12CV^2$;若电容器先充电后与电源断开(即 $Q$ 守恒),再改变 $C$(例如拉开极板),则应选 $E=\dfrac{Q^2}{2C}$,此时 $C$ 减小会使 $E$ 增大——这正是外力对分离极板做功的来源。正确辨认"充电后电路是否仍与电源相连"这一物理条件,往往是这类题目的关键。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch19: Electric Potential and Electric Field (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

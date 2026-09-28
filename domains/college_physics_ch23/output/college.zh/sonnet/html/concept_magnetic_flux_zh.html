@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetic Flux | College Physics Ch23</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="magnetic-flux">Magnetic Flux</h2>
+<p><strong>定义</strong></p>
+<p>磁通量（magnetic flux）$\Phi_B$ 描述穿过某一面积的磁场"总量"，是电磁感应现象的核心物理量。对于均匀磁场 $\vec{B}$ 穿过一个平面面积 $A$，若磁场方向与该面法线方向的夹角为 $\theta$，则磁通量定义为：</p>
+$$\Phi_B = BA\cos\theta$$
+<p>其中 $B$ 为磁场强度（单位：特斯拉，T），$A$ 为面积（单位：$\text{m}^2$），$\theta$ 为磁场方向与面法向量之间的夹角。磁通量的单位是韦伯（Weber, Wb），$1\ \text{Wb} = 1\ \text{T}\cdot\text{m}^2$。</p>
+<p>注意 $\cos\theta$ 的作用：当磁场垂直穿过平面（$\theta = 0°$）时，磁通量最大，$\Phi_B = BA$；当磁场平行于平面（$\theta = 90°$）时，没有磁场线真正"穿过"该面，磁通量为零。这正是为什么磁通量不是简单的 $B \times A$，而必须考虑磁场与法线方向的几何关系——磁通量本质上衡量的是磁场沿法线方向的分量。</p>
+<p><strong>范例</strong></p>
+<p>一个半径为 $0.1\ \text{m}$ 的圆形线圈平放在桌面上，磁场 $B = 0.5\ \text{T}$ 竖直向上穿过桌面。</p>
+<p>面积：$A = \pi r^2 = \pi (0.1)^2 \approx 0.0314\ \text{m}^2$</p>
+<p>由于磁场方向与线圈法线方向重合，$\theta = 0°$，所以：</p>
+$$\Phi_B = BA\cos 0° = 0.5 \times 0.0314 \approx 0.0157\ \text{Wb}$$
+<p>若将线圈倾斜 $60°$（法线与磁场夹角为 $60°$），则：</p>
+$$\Phi_B = 0.5 \times 0.0314 \times \cos 60° \approx 0.00785\ \text{Wb}$$
+<p>磁通量减半，因为线圈"迎向"磁场线的有效面积减少了。</p>
+<p><strong>解题应用</strong></p>
+<p>磁通量本身是标量，但它随时间的变化率决定了感应电动势的大小，这是法拉第电磁感应定律 $\varepsilon = -\dfrac{d\Phi_B}{dt}$ 的基础（该定律将在下一节详细展开）。因此，解决感应问题的第一步永远是正确计算 $\Phi_B$ 及其随时间、面积或角度的变化方式。</p>
+<p><strong>练习</strong>：一个边长为 $0.2\ \text{m}$ 的正方形线圈处于 $B = 0.3\ \text{T}$ 的磁场中，线圈以角速度 $\omega = 10\ \text{rad/s}$ 绕过中心的轴旋转。写出 $\Phi_B(t)$ 的表达式，并求 $t = 0.1\ \text{s}$ 时的磁通量。</p>
+<p>（提示：旋转使 $\theta = \omega t$，故 $\Phi_B(t) = BA\cos(\omega t)$，代入数值求解。）</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch23: Electromagnetic Induction, AC Circuits, and Electrical Technologies (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

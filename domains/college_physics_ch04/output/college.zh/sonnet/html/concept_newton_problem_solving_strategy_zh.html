@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newton Problem Solving Strategy | College Physics Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="newton-problem-solving-strategy">Newton Problem Solving Strategy</h2>
+<p>牛顿运动定律给出了力与运动之间的精确数学关系，但将其应用于具体问题时，学生常常因为受力分析混乱而出错。为此需要一套系统化的四步策略，确保每次分析都不遗漏、不出错。</p>
+<p><strong>第一步：画草图（Sketch）。</strong> 将题目中的物理情境画成简图，标出物体的位置、运动方向以及已知的角度、力和加速度。草图的作用是把文字描述转化为可视化几何关系，避免遗漏坐标信息。</p>
+<p><strong>第二步：确定系统并画受力图（Free-body Diagram）。</strong> 明确要分析的"系统"（一个物体、还是相互连接的多个物体），然后仅画出作用在该系统上的<strong>外力</strong>——重力 $mg$、法向力 $N$、张力 $T$、摩擦力 $f$ 等，内力（如系统内部物体之间的相互作用力）不出现在受力图中。这一步是整个策略的核心：受力图错了，后续方程必然错。</p>
+<p><strong>第三步：应用牛顿第二定律。</strong> 选定坐标系（通常沿运动方向为一轴，垂直方向为另一轴），将受力图中每个力沿坐标轴分解，写出</p>
+$$\sum F_x = ma_x, \qquad \sum F_y = ma_y$$
+<p>对于多物体系统，需对每个物体分别写方程，再利用约束条件（如绳的张力相等、加速度大小相同）联立求解。</p>
+<p><strong>第四步：检验合理性（Check）。</strong> 检查单位是否一致、极限情形是否符合直觉（例如摩擦系数为零时结果应退化为无摩擦情形），以及数值大小是否符合常识。</p>
+<p><strong>应用示例：</strong> 质量 $m=5\text{ kg}$ 的木块置于倾角 $\theta=30^\circ$ 的斜面上，斜面与木块间动摩擦系数 $\mu=0.2$，求木块沿斜面下滑的加速度。</p>
+<p>沿斜面方向：$mg\sin\theta - \mu mg\cos\theta = ma$</p>
+<p>垂直斜面方向：$N = mg\cos\theta$（用于验证摩擦力表达式 $f=\mu N$）</p>
+<p>代入数值：</p>
+$$a = g(\sin\theta - \mu\cos\theta) = 9.8(0.5 - 0.2\times0.866) \approx 3.20 \text{ m/s}^2$$
+<p>检验：若 $\mu=0$，则 $a=g\sin\theta$，与无摩擦斜面结果一致，说明推导正确。</p>
+<p>这套四步法不仅适用于单物体问题，也是分析滑轮系统、连接体、圆周运动等复杂问题的通用框架——受力图始终是求解的关键枢纽。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch4: Dynamics: Force and Newton's Laws of Motion (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

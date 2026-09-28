@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stress | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="stress">Stress</h2>
+<p><strong>定义</strong></p>
+<p>应力（stress）是材料内部单位截面积上所承受的内力，用符号 $\sigma$ 表示。当外力 $F$ 垂直作用于横截面积为 $A$ 的构件时，正应力定义为</p>
+$$\sigma = \frac{F}{A}$$
+<p>单位为帕斯卡（$\mathrm{Pa} = \mathrm{N/m^2}$）。若外力沿截面方向（即剪切方向）作用，则称为剪应力 $\tau = F_{\parallel}/A$。应力不同于力本身：同样大小的力作用在不同截面积上，会产生完全不同的内部效应——这正是应力概念被引入的原因，它衡量的是"力的集中程度"，而非力的绝对大小。需要注意，应力严格来说是一个二阶张量（在三维中有 9 个分量，包括 3 个正应力和 6 个剪应力），但在初等分析中，我们通常只考虑沿单一方向的一维简化情形。</p>
+<p><strong>例题</strong></p>
+<p>一根钢缆的横截面积为 $A = 2 \times 10^{-4}\ \mathrm{m^2}$（约为直径 1.6 cm 的圆），承受拉力 $F = 8000\ \mathrm{N}$。求钢缆内部的应力，并判断是否超过钢材的许用应力（假设许用应力上限为 $250\ \mathrm{MPa}$）。</p>
+$$\sigma = \frac{F}{A} = \frac{8000\ \mathrm{N}}{2\times10^{-4}\ \mathrm{m^2}} = 4\times10^{7}\ \mathrm{Pa} = 40\ \mathrm{MPa}$$
+<p>由于 $40\ \mathrm{MPa} < 250\ \mathrm{MPa}$，钢缆在安全范围内，且有较大的安全裕度。</p>
+<p><strong>问题求解应用</strong></p>
+<p>工程设计中，应力分析常用于反向求解：已知材料的许用应力 $\sigma_{\text{allow}}$ 和预期载荷 $F$，求所需的最小截面积：</p>
+$$A_{\min} = \frac{F}{\sigma_{\text{allow}}}$$
+<p>例如，若一根支柱需承受 $F = 5\times10^{5}\ \mathrm{N}$ 的压力，材料许用应力为 $\sigma_{\text{allow}} = 150\ \mathrm{MPa}$，则</p>
+$$A_{\min} = \frac{5\times10^{5}}{1.5\times10^{8}} \approx 3.33\times10^{-3}\ \mathrm{m^2}$$
+<p>即截面积至少约为 33.3 cm²。这种"由许用应力反推几何尺寸"的思路，是结构设计（桥梁、建筑立柱、机械轴类零件）中最基本也最核心的计算步骤，也是应力概念区别于纯粹力学分析、进入材料强度设计领域的关键应用。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

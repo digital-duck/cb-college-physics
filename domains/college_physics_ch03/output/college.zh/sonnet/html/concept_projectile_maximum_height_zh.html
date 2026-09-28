@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projectile Maximum Height | College Physics Ch03</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="projectile-maximum-height">Projectile Maximum Height</h2>
+<p><strong>定义</strong></p>
+<p>抛体运动可以分解为水平和竖直两个独立方向的运动:水平方向不受力(忽略空气阻力),做匀速运动;竖直方向仅受重力加速度 $g$ 作用,做匀减速再匀加速运动。抛体到达<strong>最大高度</strong>的时刻,正是竖直速度分量恰好为零的时刻——此后重力将使其重新加速下落。</p>
+<p>设初始竖直速度分量为 $v_{0y}$,竖直方向速度随时间变化满足</p>
+$$v_y(t) = v_{0y} - gt$$
+<p>令 $v_y(t)=0$,解得到达最高点所需时间</p>
+$$t_{peak} = \frac{v_{0y}}{g}$$
+<p>代入竖直位移公式 $y(t) = v_{0y}t - \tfrac{1}{2}gt^2$,消去时间变量 $t$,可得最大高度公式:</p>
+$$H = \frac{v_{0y}^2}{2g}$$
+<p>这一结果也可由能量守恒直接导出:在最高点竖直动能完全转化为重力势能,即 $\tfrac{1}{2}mv_{0y}^2 = mgH$,两者殊途同归,说明该公式的物理根基是能量守恒定律,而非仅是运动学巧合。</p>
+<p><strong>例题</strong></p>
+<p>一枚烟花以初速度 $30\ \text{m/s}$、与水平方向成 $60°$ 角发射,取 $g = 9.8\ \text{m/s}^2$。求其能达到的最大高度。</p>
+<p>首先分解初速度的竖直分量:</p>
+$$v_{0y} = 30\sin 60° \approx 25.98\ \text{m/s}$$
+<p>代入公式:</p>
+$$H = \frac{(25.98)^2}{2 \times 9.8} \approx \frac{674.9}{19.6} \approx 34.4\ \text{m}$$
+<p><strong>应用与解题要点</strong></p>
+<p>解此类问题最常见的错误,是误用全部初速度 $v_0$ 而非其竖直分量 $v_{0y}$ 代入公式——水平速度分量 $v_{0x}=v_0\cos\theta$ 与最大高度完全无关,只影响射程和飞行时间。此外,该公式隐含一个可用于快速验证答案合理性的推论:发射角度为 $90°$(竖直上抛)时 $H$ 最大;角度越接近 $0°$,$H$ 越趋近于零。掌握"先分解速度分量,再判断哪个分量决定所求物理量"这一策略,是解决二维抛体问题的通用方法。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch3: Two-Dimensional Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

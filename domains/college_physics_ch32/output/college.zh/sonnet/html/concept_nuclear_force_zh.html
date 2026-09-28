@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuclear Force | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="nuclear-force">Nuclear Force</h2>
+<p><strong>定义</strong></p>
+<p>核力（nuclear force），又称强相互作用的残余效应，是使质子和中子（统称核子）结合在一起、形成原子核的短程吸引力。它必须克服质子之间因带同种电荷而产生的库仑排斥力，因此其强度远超电磁力，但作用范围极短，仅约 $1$–$3\ \text{fm}$（$1\ \text{fm} = 10^{-15}\ \text{m}$）。核力具有三个关键特征：其一，短程性——当核子间距超过约 $2.5\ \text{fm}$ 后，核力迅速衰减至可忽略；其二，在极短距离（小于约 $0.7\ \text{fm}$）内转为强烈排斥，防止核子相互坍缩，这解释了原子核具有近似恒定的密度；其三，电荷无关性——质子-质子、中子-中子、质子-中子之间的核力强度大致相同（在考虑库仑修正后）。核力的势能曲线常用汤川势（Yukawa potential）近似描述：</p>
+$$
+V(r) = -g^2\,\frac{e^{-r/r_0}}{r}
+$$
+<p>其中 $r_0 \approx 1.4\ \text{fm}$ 对应介子交换的特征长度，$g$ 为耦合强度。指数衰减因子 $e^{-r/r_0}$ 正是核力短程性的数学体现。</p>
+<p><strong>范例分析</strong></p>
+<p>考虑氘核（deuteron），由一个质子和一个中子构成，是最简单的复合核。实验测得其结合能约为 $2.22\ \text{MeV}$，对应的核子间平均距离约 $2$ fm。若仅有库仑斥力而无核力，质子和中子根本无法维持在如此近的距离内共存；正是核力在此尺度上的强吸引效应，克服了量子力学零点能带来的离散趋势，形成一个束缚态。氘核的存在及其结合能数值，是检验核力模型（如汤川势参数）的重要实验基准。</p>
+<p><strong>问题解决应用</strong></p>
+<p>在计算原子核的结合能与稳定性时，半经验质量公式（液滴模型）中的体积项 $a_V A$ 直接源于核力的短程饱和性质：由于每个核子只与邻近的少数核子发生强相互作用（而非与所有核子成对作用），结合能近似与核子数 $A$ 成正比，而非与 $A(A-1)/2$ 成正比——这与长程力（如引力）行为形成鲜明对比。理解这一点是解决"为什么重核结合能曲线趋于平缓"这类问题的关键：表面项和库仑项的竞争最终导致铁附近核素结合能最高，这正是恒星核合成与核裂变/聚变能量释放机制的理论基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

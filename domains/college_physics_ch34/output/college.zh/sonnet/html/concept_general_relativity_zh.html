@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>General Relativity | College Physics Ch34</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="general-relativity">General Relativity</h2>
+<p><strong>定义</strong></p>
+<p>广义相对论（General Relativity, GR）是爱因斯坦于 1915 年建立的引力理论，其核心思想是：引力并非一种作用力，而是物质与能量使时空发生弯曲的几何效应。物体在弯曲时空中沿"测地线"（geodesic，即局域最短路径）运动，我们感受到的"引力"其实是时空弯曲对惯性运动的偏折。该理论将狭义相对论（适用于匀速惯性系）推广到任意加速参考系与引力场，统一了加速运动与引力的物理描述——这正是"等效原理"（equivalence principle）的内容：局部而言，加速参考系中的物理效应与引力场中的效应不可区分。</p>
+<p>理论的数学核心是爱因斯坦场方程：</p>
+$$
+G_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}
+$$
+<p>其中 $G_{\mu\nu}$ 是描述时空曲率的爱因斯坦张量，$T_{\mu\nu}$ 是描述物质与能量分布的应力-能量张量，$g_{\mu\nu}$ 是度规张量（决定时空中距离与时间间隔的度量），$\Lambda$ 是宇宙学常数。这个方程言简意赅地表达了惠勒（Wheeler）的名言："物质告诉时空如何弯曲，时空告诉物质如何运动。"</p>
+<p><strong>推导要点：史瓦西度规</strong></p>
+<p>对于静止、球对称的质量 $M$（如恒星），场方程的一个精确解是史瓦西度规：</p>
+$$
+ds^2 = -\left(1 - \frac{2GM}{rc^2}\right)c^2\,dt^2 + \left(1 - \frac{2GM}{rc^2}\right)^{-1}dr^2 + r^2\,d\Omega^2
+$$
+<p>其中 $r_s = 2GM/c^2$ 称为史瓦西半径。当 $r \to r_s$ 时，时间膨胀项发散，这正是黑洞事件视界的数学起源。这一结果解释了 GPS 卫星的时钟修正：卫星处于较弱引力场（$r$ 较大），其固有时相对地面走得更快，若不做相对论修正，每天会累积约 38 微秒的误差，足以使定位偏差达数公里。</p>
+<p><strong>解决问题：光线偏折</strong></p>
+<p>利用测地线方程，可以计算光线经过太阳附近时的偏折角：</p>
+$$
+\delta\phi = \frac{4GM}{c^2 b}
+$$
+<p>其中 $b$ 是光线到太阳中心的最近距离（撞击参数）。代入太阳质量与半径，得 $\delta\phi \approx 1.75$ 角秒，这正是 1919 年爱丁顿日食观测所验证的数值，也是广义相对论首次获得实验证实的关键证据。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch34: Frontiers of Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

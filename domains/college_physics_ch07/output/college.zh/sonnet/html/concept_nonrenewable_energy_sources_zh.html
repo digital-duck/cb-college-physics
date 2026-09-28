@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nonrenewable Energy Sources | College Physics Ch07</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="不可再生能源">不可再生能源</h2>
+<p>不可再生能源指石油、天然气和煤炭等化石燃料——它们由数百万年前的生物遗骸经地质作用埋藏、受高温高压压缩而成。这种形成速度极其缓慢，相对于人类的开采和消耗速度而言几乎可以视为"固定储量"：一旦燃烧释放其中储存的化学能，这份资源便不可能在人类可预见的时间尺度内得到补充。这与太阳能、风能等可再生能源形成鲜明对比——后者的供给在人类时间尺度上是持续不断的。</p>
+<p>燃烧化石燃料的本质是一个氧化反应：燃料中的碳氢化合物与氧气反应，释放化学键中储存的能量，同时生成二氧化碳和水。以甲烷（天然气主要成分）完全燃烧为例：</p>
+$$\text{CH}_4 + 2\text{O}_2 \rightarrow \text{CO}_2 + 2\text{H}_2\text{O} + \text{能量}$$
+<p>每千克不同化石燃料释放的能量（热值）和每单位能量产生的二氧化碳量并不相同。例如，天然气燃烧每释放1兆焦耳能量约排放0.05千克二氧化碳，而煤炭在相同能量下的排放量可达0.09千克以上——这正是电力行业推动"煤转气"的物理依据。</p>
+<p><strong>问题解决应用</strong>：假设某燃煤电厂年发电量为 $10^{10}$ 千瓦时，电厂发电效率为35%（即输入燃料能量中只有35%转化为电能），煤炭热值为 $2.9 \times 10^7$ 焦耳/千克，且每千克煤炭燃烧排放0.09千克二氧化碳。求该电厂年二氧化碳排放量。</p>
+<p>首先将发电量换算为焦耳：$10^{10} \text{ kWh} \times 3.6\times10^6 \text{ J/kWh} = 3.6\times10^{16}\text{ J}$。</p>
+<p>由于效率为35%，所需燃料输入能量为：</p>
+$$\frac{3.6\times10^{16}\text{ J}}{0.35} \approx 1.03\times10^{17}\text{ J}$$
+<p>所需煤炭质量为：</p>
+$$\frac{1.03\times10^{17}\text{ J}}{2.9\times10^7\text{ J/kg}} \approx 3.55\times10^9 \text{ kg}$$
+<p>对应二氧化碳排放量：</p>
+$$3.55\times10^9 \text{ kg} \times 0.09 \approx 3.2\times10^8 \text{ kg} = 32万吨$$
+<p>这类计算是能源政策与气候建模的基础：只要知道发电效率、燃料热值和排放系数，就能定量比较不同能源方案的环境代价，而不仅仅停留在"化石能源不环保"这类定性判断上。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch7: Work, Energy, and Energy Resources (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

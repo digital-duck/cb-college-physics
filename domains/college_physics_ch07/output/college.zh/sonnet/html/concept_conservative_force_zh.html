@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conservative Force | College Physics Ch07</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="保守力">保守力</h2>
+<p><strong>定义</strong></p>
+<p>若一个力做的功只取决于物体的起点和终点位置，而与运动轨迹无关，则称该力为<strong>保守力</strong>（conservative force）。等价地说，保守力沿任意闭合路径做的总功为零：</p>
+$$
+\oint \vec{F} \cdot d\vec{l} = 0
+$$
+<p>这一性质的深刻之处在于：它使我们能够定义一个只依赖于位置的标量函数——<strong>势能</strong> $U(\vec{r})$，满足</p>
+$$
+W_{A \to B} = -\big[U(B) - U(A)\big] = -\Delta U
+$$
+<p>并且力可以由势能的空间变化率给出：</p>
+$$
+\vec{F} = -\nabla U
+$$
+<p>在一维情形下，这简化为 $F(x) = -\dfrac{dU}{dx}$。重力 $F=-mg$、弹簧力 $F=-kx$、静电力都是保守力；而摩擦力、空气阻力等耗散力不是保守力，因为它们做的功依赖于路径长度（走得越远，摩擦损耗的能量越多）。</p>
+<p><strong>推导示例：重力做功与路径无关</strong></p>
+<p>考虑质量为 $m$ 的物体，从高度 $y_1$ 沿任意曲线路径运动到高度 $y_2$。设路径上某微元的位移为 $d\vec{l} = (dx, dy)$，重力为 $\vec{F} = (0, -mg)$。则</p>
+$$
+W = \int \vec{F} \cdot d\vec{l} = \int_{y_1}^{y_2} (-mg)\, dy = -mg(y_2 - y_1)
+$$
+<p>注意到积分中 $dx$ 项被 $\vec{F}$ 的 $x$ 分量（为零）消去，因此结果只依赖于 $y_1, y_2$，而与路径的具体形状、长度完全无关。这验证了 $U(y) = mgy$ 是合理的势能定义，且 $W = -\Delta U$ 成立。</p>
+<p><strong>问题求解应用</strong></p>
+<p>保守力的核心价值在于<strong>能量守恒定律</strong>的建立：当系统只受保守力作用时，</p>
+$$
+E = K + U = \text{常数}
+$$
+<p>这使许多力学问题不必求解运动方程，直接用能量法求解。例如：一个质量 $m$ 的滑块从光滑斜面顶端（高度 $h$）由静止下滑，求到达底部时的速度。用牛顿第二定律需要考虑斜面角度和加速度分量，但用能量守恒：</p>
+$$
+mgh = \frac{1}{2}mv^2 \implies v = \sqrt{2gh}
+$$
+<p>无需知道斜面的具体形状！这正是保守力"路径无关"性质在解题中的威力：只要初末状态确定，能量法便能绕过复杂的路径几何直接给出答案。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch7: Work, Energy, and Energy Resources (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Standard Model | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="standard-model">Standard Model</h2>
+<p>标准模型（Standard Model）是描述已知基本粒子及其相互作用的理论框架，它将量子色动力学（QCD，描述强相互作用）与电弱理论（描述电磁力与弱相互作用的统一）结合为一个规范场论体系。其数学基础是规范对称群</p>
+$$
+SU(3)_C \times SU(2)_L \times U(1)_Y,
+$$
+<p>其中 $SU(3)_C$ 对应夸克与胶子之间的色荷相互作用，$SU(2)_L \times U(1)_Y$ 在希格斯机制下自发对称破缺为电磁相互作用的 $U(1)_{\text{EM}}$。标准模型包含两类基本粒子：费米子（夸克与轻子，构成物质）和玻色子（光子、$W^\pm$、$Z^0$、胶子，传递相互作用），此外还有赋予粒子质量的希格斯玻色子。</p>
+<p><strong>规范不变性作为组织原理</strong>：标准模型的粒子谱与相互作用形式并非任意假设，而是由要求拉格朗日量在上述规范群下局域不变这一原则唯一确定的。以电弱部分为例，若拉格朗日量在局域 $SU(2)_L \times U(1)_Y$ 变换下不变，则必须引入规范玻色子场 $W^1_\mu, W^2_\mu, W^3_\mu, B_\mu$，它们通过协变导数</p>
+$$
+D_\mu = \partial_\mu - ig\,T^a W^a_\mu - ig'\,\tfrac{Y}{2}B_\mu
+$$
+<p>与费米子耦合。但规范对称性本身禁止玻色子和费米子拥有质量项，这与实验观测（$W$、$Z$ 及费米子确实有质量）矛盾——这正是希格斯机制被引入的原因：一个具有非零真空期望值 $\langle \phi \rangle = v/\sqrt{2}$ 的标量场自发破缺 $SU(2)_L \times U(1)_Y \to U(1)_{\text{EM}}$，使 $W^\pm$、$Z^0$ 获得质量 $M_W = gv/2$，而光子保持无质量。</p>
+<p><strong>解决问题的应用</strong>：标准模型的威力在于其预测精度可直接检验。例如，利用测得的 $M_W$、$M_Z$ 与精细结构常数 $\alpha$，可通过弱混合角关系</p>
+$$
+\sin^2\theta_W = 1 - \frac{M_W^2}{M_Z^2}
+$$
+<p>预测其他电弱参数，其理论值与实验值符合到 $10^{-4}$ 精度以内。这种"由对称性推导相互作用形式、再用实验参数拟合耦合常数"的方法，是粒子物理中解决"某个衰变道是否被允许""某反应截面应为多大"等具体问题的标准范式，也是 2012 年希格斯玻色子在 LHC 被发现前，理论预测其质量范围的依据。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

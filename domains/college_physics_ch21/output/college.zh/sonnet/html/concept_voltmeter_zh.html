@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voltmeter | College Physics Ch21</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="电压表">电压表</h2>
+<p><strong>定义</strong>：电压表是用于测量电路中两点之间电势差（电压）的仪器。使用时必须与被测元件<strong>并联</strong>，这样电压表两端所承受的电压才等于该元件两端的电压。为了尽量不影响原电路的工作状态，电压表内部电阻必须远大于被测元件的电阻，从而只分流极小的电流。电压表的核心部件是<strong>检流计</strong>（galvanometer），它本身只能测量微安至毫安级的小电流。要把检流计改造成电压表，需要在其内部线圈上串联一个阻值很大的<strong>倍增电阻</strong>（multiplier resistance），用它来限制流过检流计的电流，同时把量程扩展到所需的电压范围。</p>
+<p>设检流计满偏电流为 $I_g$，内阻为 $R_g$，若希望电压表满偏时对应电压为 $V$，则串联后总电阻须满足：</p>
+$$R_g + R_m = \frac{V}{I_g}$$
+<p>因此所需倍增电阻为：</p>
+$$R_m = \frac{V}{I_g} - R_g$$
+<p><strong>例题</strong>：某检流计满偏电流 $I_g = 1\ \text{mA}$，内阻 $R_g = 50\ \Omega$。要把它改装成量程为 $10\ \text{V}$ 的电压表，求所需串联的倍增电阻。</p>
+<p>代入公式：</p>
+$$R_m = \frac{10}{0.001} - 50 = 10000 - 50 = 9950\ \Omega$$
+<p>即需串联一个约 $9950\ \Omega$ 的电阻。</p>
+<p><strong>问题解决应用</strong>：理想电压表内阻应为无穷大，实际电压表内阻有限，接入电路后会分走一部分电流，造成"负载效应"（loading error）。例如，若被测电阻 $R$ 与电压表内阻 $R_V$ 相当，二者并联后的等效电阻会显著小于 $R$，导致测得的电压值偏低。测量误差可估算为：</p>
+$$\text{误差百分比} \approx \frac{R}{R + R_V} \times 100\%$$
+<p>因此，在精密测量或高阻抗电路（如放大器输出级）中，应选用内阻远大于被测电阻的数字万用表，以减小负载效应带来的系统误差。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch21: Circuits and DC Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

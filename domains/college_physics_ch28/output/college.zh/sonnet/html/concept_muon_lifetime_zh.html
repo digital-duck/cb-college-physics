@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muon Lifetime | College Physics Ch28</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="muon-lifetime">Muon Lifetime</h2>
+<p><strong>定义</strong></p>
+<p>μ子（muon）是一种不稳定的基本粒子，静止时的平均寿命为 $\tau_0 \approx 2.2\ \mu\text{s}$，通过弱相互作用衰变为电子和中微子。宇宙射线中的高能质子撞击大气层上层（约海拔 15 km 处）会产生大量μ子，这些μ子以接近光速的速度（$v \approx 0.994c$，对应 $\gamma \approx 9$）向地面运动。按照经典（非相对论）计算，μ子在寿命 $\tau_0$ 内的平均飞行距离仅为</p>
+$$
+d = v\tau_0 \approx (0.994c)(2.2\times10^{-6}\,\text{s}) \approx 660\ \text{m}
+$$
+<p>远小于 15 km，因此经典预测中能到达地面的μ子应极少。但实验测量表明，地面探测到的μ子通量远高于经典预测——这正是狭义相对论中<strong>时间膨胀</strong>的直接证据。在地面观察者的参考系中，运动μ子的固有寿命被延长为</p>
+$$
+\tau_{\text{observed}} = \gamma\,\tau_0 = \frac{\tau_0}{\sqrt{1-v^2/c^2}}
+$$
+<p><strong>解题示例</strong></p>
+<p>设 $\gamma = 9$，则观测寿命 $\tau_{\text{observed}} = 9 \times 2.2\ \mu\text{s} \approx 19.8\ \mu\text{s}$。相应的平均飞行距离变为</p>
+$$
+d' = v\,\tau_{\text{observed}} \approx (0.994c)(19.8\times10^{-6}\,\text{s}) \approx 5.9\ \text{km}
+$$
+<p>这一距离虽仍小于 15 km，但结合μ子数量按指数衰减规律 $N(t) = N_0\, e^{-t/\tau}$，存活到地面的比例已大幅提高，与实验观测（如 Frisch–Smith 1963 年实验）高度吻合。</p>
+<p>若改从μ子自身参考系分析，μ子并未经历时间膨胀（它感受到的仍是固有寿命 $\tau_0$），但此时地球到发射点的距离在μ子参考系中因<strong>长度收缩</strong>而缩短：</p>
+$$
+L' = \frac{L_0}{\gamma} = \frac{15\ \text{km}}{9} \approx 1.7\ \text{km}
+$$
+<p>这与 $v\tau_0 \approx 660$ m 到 1.7 km 尺度相符（考虑衰变分布并非严格截止值）。两种视角——地面系的时间膨胀与μ子系的长度收缩——描述的是同一物理事实，二者预测的存活比例完全一致，这正体现了狭义相对论中不同惯性系描述的自洽性。</p>
+<p><strong>应用要点</strong>：解此类问题时，需先明确分析所选参考系；在地面系用 $\gamma\tau_0$ 延长寿命计算飞行距离，在粒子系则应改用收缩后的距离 $L_0/\gamma$ 而寿命不变，二者不可混用，否则会重复计入 $\gamma$ 因子导致错误。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch28: Special Relativity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

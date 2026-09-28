@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electrostatic Precipitator | College Physics Ch18</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="静电除尘器">静电除尘器</h2>
+<p><strong>定义</strong></p>
+<p>静电除尘器（electrostatic precipitator，简称 ESP）是一种利用静电力从气流中脱除悬浮颗粒物的空气净化装置。其工作原理分两个阶段：首先，含尘气流通过一组带高压负电（通常为 $-30\text{ kV}$ 到 $-60\text{ kV}$）的放电电极（细导线），电极周围强电场使空气分子电离，产生电晕放电，自由电子附着在颗粒表面，使颗粒带上负电荷；随后，带电颗粒随气流进入接地或带正电的收集极板区域，在电场力作用下向极板迁移并沉积，从而与洁净气流分离。这一过程本质上是库仑力驱动的分离，颗粒所受电场力为</p>
+$$
+F = qE
+$$
+<p>其中 $q$ 为颗粒所带电荷，$E$ 为极板间电场强度。</p>
+<p><strong>核心量：漂移速度与 Deutsch-Anderson 方程</strong></p>
+<p>颗粒在电场力与空气阻力（斯托克斯阻力）达到平衡时，获得恒定的横向漂移速度 $w$（也称有效迁移速度）。工程上常用 Deutsch-Anderson 方程估算除尘效率 $\eta$：</p>
+$$
+\eta = 1 - e^{-\frac{wA}{Q}}
+$$
+<p>其中 $A$ 是收集极板总面积，$Q$ 是气流体积流量，$w$ 是漂移速度。这个方程之所以必要，是因为它把除尘器的物理设计参数（板面积、气体流速、颗粒迁移速度）直接与可测量的性能指标（去除效率）联系起来，是工程选型和优化的定量依据，而不仅仅是定性描述。</p>
+<p><strong>解题应用</strong></p>
+<p>例：某电厂除尘器板面积 $A = 2000\ \text{m}^2$，处理烟气流量 $Q = 50\ \text{m}^3/\text{s}$，颗粒漂移速度 $w = 0.08\ \text{m/s}$。求除尘效率。</p>
+<p>代入方程：</p>
+$$
+\eta = 1 - e^{-\frac{(0.08)(2000)}{50}} = 1 - e^{-3.2} \approx 1 - 0.0408 = 0.959
+$$
+<p>即效率约为 $95.9\%$。</p>
+<p>若要求效率提升到 $99\%$，可反解所需面积：</p>
+$$
+0.99 = 1 - e^{-\frac{wA}{Q}} \;\Rightarrow\; A = -\frac{Q}{w}\ln(0.01) = -\frac{50}{0.08}\ln(0.01) \approx 2878\ \text{m}^2
+$$
+<p>即需将板面积增至约 $2878\ \text{m}^2$，这类反算是工业除尘系统设计中评估投资与性能权衡的典型步骤。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch18: Electric Charge and Electric Field (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

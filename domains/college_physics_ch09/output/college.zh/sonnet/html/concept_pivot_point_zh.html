@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pivot Point | College Physics Ch09</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="pivot-point-转轴点-参考点">Pivot Point（转轴点/参考点）</h2>
+<p><strong>定义</strong></p>
+<p>在力矩分析中，力矩（torque）不是力本身固有的属性，而是相对于某个选定参考点——转轴点（pivot point）——计算出来的量。给定作用力 $\vec{F}$ 在位置 $\vec{r}$ 处作用于刚体上，力矩定义为</p>
+$$
+\vec{\tau} = \vec{r} \times \vec{F}
+$$
+<p>其中 $\vec{r}$ 是从转轴点指向力的作用点的位移向量。这里的关键在于：$\vec{r}$ 的取值完全依赖于转轴点的选择。同一个力，选择不同的转轴点，会得到不同的力矩值（大小甚至方向都可能改变），除非该力恰好通过新选定的转轴点（此时 $\vec{r} = 0$，力矩为零）。</p>
+<p>对于刚体处于静力平衡的情形，合力矩为零这一条件对<strong>任意</strong>转轴点都成立——这是刚体平衡的一个重要定理:若 $\sum \vec{F} = 0$（合力为零），则对任意一点计算的合力矩都相等；因此只要合力为零，转轴点可以任意选择而不影响平衡条件的判断。</p>
+<p><strong>解题示例</strong></p>
+<p>一根长 $4\,\text{m}$ 的均匀横梁，重 $200\,\text{N}$，两端分别由支柱 A（左端）和支柱 B（距左端 $3\,\text{m}$）支撑。求支柱 B 所受的支撑力。</p>
+<p>选择支柱 A 为转轴点。这样选择的巧妙之处在于：支柱 A 处的未知支撑力 $F_A$ 的力臂为零，它对该点的力矩为零，从方程中直接消去，只剩一个未知量 $F_B$。</p>
+<p>横梁重力作用在几何中心，即距 A 点 $2\,\text{m}$ 处，产生顺时针力矩：$200\,\text{N} \times 2\,\text{m} = 400\,\text{N·m}$。$F_B$ 在距 A 点 $3\,\text{m}$ 处产生逆时针力矩：$F_B \times 3\,\text{m}$。平衡要求两力矩相等：</p>
+$$
+F_B \times 3 = 400 \quad \Rightarrow \quad F_B \approx 133.3\,\text{N}
+$$
+<p><strong>解题策略</strong></p>
+<p>这个例子揭示了转轴点选择的实用价值：<strong>将转轴点选在含有未知力的作用点上，可以直接消去该未知量</strong>，把一个含两个未知数的方程简化为一元方程。在多力、多支撑点的复杂系统中，反复更换转轴点（对每个未知力分别设置转轴点）是求解静力平衡问题的标准策略，也是工程力学中分析桁架、杠杆和梁结构的核心技巧。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch9: Statics and Torque (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

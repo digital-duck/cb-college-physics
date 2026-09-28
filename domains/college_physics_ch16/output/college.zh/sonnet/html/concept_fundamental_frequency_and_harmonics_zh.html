@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fundamental Frequency And Harmonics | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="fundamental-frequency-and-harmonics">Fundamental Frequency And Harmonics</h2>
+<p><strong>定义</strong></p>
+<p>当波被约束在有限空间中传播时（例如两端固定的弦、一端开口的管），只有特定波长的波能与边界条件相容，从而形成稳定的驻波（standing wave）。这些允许的波长对应一系列离散的振动模式。其中波长最长、频率最低的模式称为<strong>基频</strong>（fundamental frequency），记作 $f_1$；其余允许的振动模式称为<strong>谐波</strong>（harmonics）或<strong>泛音</strong>（overtones），它们的频率是基频的整数倍：</p>
+$$
+f_n = n f_1, \qquad n = 1, 2, 3, \dots
+$$
+<p>对于两端固定、长度为 $L$ 的弦，边界条件要求两端为波节（振幅为零），因此允许的波长满足</p>
+$$
+\lambda_n = \frac{2L}{n}.
+$$
+<p>结合波速关系 $v = f\lambda$，可得</p>
+$$
+f_n = \frac{nv}{2L} = n f_1, \qquad f_1 = \frac{v}{2L}.
+$$
+<p>这个整数倍关系并非近似，而是边界条件（两端节点）与正弦波形叠加所导出的精确结果——这正是驻波理论的核心内容,必须用波方程的通解与边界条件严格推出，而不能仅凭直觉描述。</p>
+<p><strong>例题</strong></p>
+<p>一根吉他弦长 $L = 0.65\ \text{m}$，弦上波速 $v = 260\ \text{m/s}$。求其基频及前三个谐波的频率。</p>
+<p>由 $f_1 = v/(2L) = 260/(2 \times 0.65) = 200\ \text{Hz}$。</p>
+<p>于是 $f_2 = 400\ \text{Hz}$，$f_3 = 600\ \text{Hz}$，$f_4 = 800\ \text{Hz}$。这些频率解释了弦乐器音色中"基音+泛音列"的物理来源。</p>
+<p><strong>问题求解应用</strong></p>
+<p>若要将该弦的基频提高到 $300\ \text{Hz}$（不改变材料，只调整张力 $T$），由 $v = \sqrt{T/\mu}$（$\mu$ 为线密度）及 $f_1 = v/(2L)$，可得</p>
+$$
+f_1 = \frac{1}{2L}\sqrt{\frac{T}{\mu}} \;\Rightarrow\; T = 4L^2 \mu f_1^{2}.
+$$
+<p>因此张力需按 $f_1^2$ 成比例调节——这是调音、乐器设计乃至管乐共振腔长度设计中反复使用的定量关系：先由边界条件确定 $f_1$ 与几何长度、波速的函数式，再反解出需要控制的物理参数（张力、长度或介质密度）。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

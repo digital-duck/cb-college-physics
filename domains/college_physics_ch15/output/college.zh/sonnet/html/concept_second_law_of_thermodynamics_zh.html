@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Second Law Of Thermodynamics | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="second-law-of-thermodynamics">Second Law Of Thermodynamics</h2>
+<p><strong>定义</strong></p>
+<p>热力学第一定律断言能量守恒，却未说明能量转化的<em>方向</em>。第二定律弥补了这一空白：它指出自然过程存在不可逆的方向性。其经典表述有两种等价形式——</p>
+<li><strong>克劳修斯表述</strong>：不可能把热量从低温物体传递到高温物体而不引起其他变化。</li>
+<li><strong>开尔文表述</strong>：不可能从单一热源吸收热量，使之完全变为功，而不产生其他影响（即不存在效率为 100% 的循环热机）。</li>
+<p>这两种表述可以证明彼此等价：若克劳修斯表述被违反，则可构造出一台不消耗净功即可将热量从冷源送到热源的装置，进而破坏开尔文表述；反之亦然。第二定律还引出了<strong>熵</strong>这一状态函数，其增量定义为</p>
+$$
+dS = \frac{\delta Q_{\text{rev}}}{T}
+$$
+<p>对于孤立系统，任何自发过程满足</p>
+$$
+\Delta S_{\text{univ}} \geq 0
+$$
+<p>等号仅在可逆过程中成立。</p>
+<p><strong>范例</strong></p>
+<p>考虑一台工作于高温热源 $T_H$ 与低温热源 $T_C$ 之间的卡诺热机。第二定律限制了其效率的上限：</p>
+$$
+\eta \leq \eta_{\text{Carnot}} = 1 - \frac{T_C}{T_H}
+$$
+<p>设 $T_H = 600\text{ K}$，$T_C = 300\text{ K}$，则</p>
+$$
+\eta_{\text{Carnot}} = 1 - \frac{300}{600} = 0.5
+$$
+<p>即无论热机设计多么精巧，效率都不可能超过 50%。任何声称效率为 70% 的设计方案，必定违反第二定律，在物理上不可实现。</p>
+<p><strong>解题应用</strong></p>
+<p>第二定律的实际价值在于判断过程的可行性与效率上限。例如，在评估一个新型发电循环、制冷系统或热泵方案时，工程师首先计算对应的卡诺效率或熵变，以此作为不可逾越的理论界限，再考察实际设计与该界限的差距，从而定位不可逆损耗（如摩擦、热传导温差、节流）的来源。求解此类问题的标准步骤是：确定系统与环境的温度、写出理想（可逆）过程的熵变或效率表达式、代入数值得出理论极限，最后比较实际数据以量化不可逆性。这种"先求理论上限、再评估实际差距"的思路，是热力学分析中最核心的解题范式。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

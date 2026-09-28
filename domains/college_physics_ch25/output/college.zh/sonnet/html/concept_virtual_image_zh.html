@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virtual Image | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="虚像">虚像</h2>
+<p><strong>定义</strong></p>
+<p>虚像（virtual image）是光线经反射或折射后，看起来像是从某一点发散出来，但实际上并未在该点相交或通过的像。人眼（或相机）沿着这些发散的光线反向延长，会在某一位置"重构"出一个像，但那里并没有真实的光能量汇聚。因此虚像有两个本质特征：<strong>不能投影在屏幕上</strong>（因为屏幕上没有实际光线到达该点），以及<strong>总是正立的</strong>。这与实像（real image）相反——实像是光线真正相交、汇聚而成，可以呈现在屏幕上，且常常是倒立的。</p>
+<p>日常最熟悉的例子是平面镜中的像：当你站在镜子前，镜子并不会让光线真正聚焦到镜子后方，但你的大脑沿着反射光线反向延长后，"看到"一个与你等大、正立、左右对调的像，仿佛就在镜面后方。凸透镜和凹透镜在物距小于焦距时，也会产生虚像，放大镜就是典型应用。</p>
+<p><strong>薄透镜成像公式与虚像的判定</strong></p>
+<p>对于薄透镜，成像关系由公式给出：</p>
+$$\frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{f}$$
+<p>其中 $d_o$ 为物距，$d_i$ 为像距，$f$ 为焦距。符号约定：光线从左向右传播，$d_i > 0$ 表示实像（在透镜右侧、光线实际会聚处），$d_i < 0$ 表示虚像（像在透镜左侧，与物体同侧）。</p>
+<p><strong>例题</strong>：一个凸透镜焦距 $f = 10\text{ cm}$，物体放在 $d_o = 6\text{ cm}$ 处（小于焦距）。求像的位置与性质。</p>
+<p>代入公式：</p>
+$$\frac{1}{6} + \frac{1}{d_i} = \frac{1}{10}$$
+$$\frac{1}{d_i} = \frac{1}{10} - \frac{1}{6} = \frac{3 - 5}{30} = -\frac{2}{30}$$
+$$d_i = -15\text{ cm}$$
+<p>$d_i$ 为负值，说明像位于透镜同一侧，为虚像，且放大率 $m = -d_i/d_o = 15/6 = 2.5$，为正值，表示像是正立、放大的——这正是放大镜的工作原理：物体必须置于焦距以内，才能获得正立放大的虚像。</p>
+<p><strong>应用要点</strong>：判断成像类型时，先比较物距与焦距的大小关系，再用符号规则验证 $d_i$ 的正负，这是解决透镜与镜面成像问题的标准流程。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

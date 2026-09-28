@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermal Expansion | College Physics Ch13</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="thermal-expansion">Thermal Expansion</h2>
+<p><strong>定义</strong></p>
+<p>物质在温度升高时,其分子热运动加剧,原子间平均间距增大,导致宏观尺寸或体积发生变化,这一现象称为热膨胀。对于固体,若温度变化不大,长度的相对变化与温度变化近似成正比:</p>
+$$\Delta L = \alpha L_0 \Delta T$$
+<p>其中 $L_0$ 为初始长度,$\Delta T$ 为温度变化量,$\alpha$ 为<strong>线膨胀系数</strong>(单位:$\text{K}^{-1}$),其数值取决于材料本身。对于三维物体的体积膨胀,类似地有:</p>
+$$\Delta V = \beta V_0 \Delta T$$
+<p>其中体膨胀系数 $\beta \approx 3\alpha$(对各向同性固体成立)。这一近似源于:若各方向均按 $\alpha$ 线性膨胀,则体积 $V = L^3$ 展开后一阶项系数恰为 $3\alpha$,忽略了 $\alpha^2, \alpha^3$ 的高阶小量。</p>
+<p><strong>例题</strong></p>
+<p>一根钢制铁轨在 $20\,^\circ\text{C}$ 时长 $25\,\text{m}$,钢的线膨胀系数 $\alpha = 1.2\times10^{-5}\,\text{K}^{-1}$。若夏季轨道温度升至 $50\,^\circ\text{C}$,求铁轨伸长量。</p>
+$$\Delta L = \alpha L_0 \Delta T = (1.2\times10^{-5})(25)(30) = 9.0\times10^{-3}\,\text{m} = 9\,\text{mm}$$
+<p>这正是铁路轨道之间必须预留伸缩缝的物理原因——若刚性拼接,热应力会使钢轨弯曲变形。</p>
+<p><strong>问题求解应用</strong></p>
+<p>热膨胀不仅是描述性现象,更是工程设计中必须定量处理的约束条件。典型应用包括:</p>
+<li><strong>双金属片</strong>:两种膨胀系数不同的金属条粘合后,受热时弯曲程度可由 $\alpha_1, \alpha_2$ 之差及片厚计算,广泛用于温控开关。</li>
+<li><strong>液体体膨胀</strong>:液体没有固定形状,只讨论体膨胀系数 $\beta$,例如温度计中水银膨胀驱动液柱上升,读数即依据 $\Delta V = \beta V_0 \Delta T$ 与管径反推。</li>
+<li><strong>反常膨胀</strong>:水在 $0$–$4\,^\circ\text{C}$ 之间反而随温度升高体积<strong>减小</strong>(密度增大),这打破了"温度越高体积越大"的直觉,是解释湖泊冬季表层结冰而底层维持 $4\,^\circ\text{C}$、鱼类得以存活的关键。</li>
+<p>解题时应注意区分线膨胀与体膨胀公式的适用场景,并检查温度变化范围是否落在 $\alpha$ 近似为常数的区间内——若跨度过大(如金属接近熔点),需查阅温度相关的膨胀系数表而非套用线性公式。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch13: Temperature, Kinetic Theory, and the Gas Laws (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

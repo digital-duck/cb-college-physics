@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doppler Shifted Ultrasound | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="多普勒超声">多普勒超声</h2>
+<p><strong>定义</strong></p>
+<p>多普勒超声是一种利用超声波反射时发生的多普勒频移来探测运动、测量速度的诊断技术，临床上最常用于测量血流速度。当发射频率为 $f_0$ 的超声波遇到运动的散射体（如血液中的红细胞）时，探头接收到的反射频率会发生偏移，偏移量与散射体沿声束方向的速度分量成正比。这是一个双程效应：散射体先作为"运动观察者"接收到偏移后的频率，再作为"运动声源"将偏移后的频率反射回探头，因此频移量是单程多普勒效应的两倍。</p>
+<p>对于声速为 $v$、探头静止、散射体以速度 $v_b$ 运动、声束与运动方向夹角为 $\theta$ 的情形，频移公式为：</p>
+$$
+\Delta f = \frac{2 f_0 \, v_b \cos\theta}{v}
+$$
+<p>其中 $v_b \cos\theta$ 是血流速度在声束方向上的投影。角度 $\theta$ 至关重要：当 $\theta = 90^\circ$ 时 $\cos\theta = 0$，即使血流很快，仪器测得的频移也接近零——这是临床操作中探头必须与血管保持一定夹角（通常小于 $60^\circ$）的物理原因。</p>
+<p><strong>范例</strong></p>
+<p>假设某超声探头发射频率 $f_0 = 5\ \text{MHz}$ 的声波，人体软组织中声速约为 $v = 1540\ \text{m/s}$，探头与血流方向夹角 $\theta = 45^\circ$，测得频移 $\Delta f = 1000\ \text{Hz}$。求血流速度 $v_b$：</p>
+$$
+v_b = \frac{\Delta f \cdot v}{2 f_0 \cos\theta} = \frac{1000 \times 1540}{2 \times 5\times10^6 \times \cos 45^\circ} \approx 0.218\ \text{m/s}
+$$
+<p>即约 21.8 cm/s，与正常动脉血流速度量级相符。</p>
+<p><strong>问题求解应用</strong></p>
+<p>在实际诊断中，公式常被反用：临床设备预设 $f_0$、$v$ 已知，操作者调整探头角度 $\theta$，仪器实时解算 $v_b$ 并显示血流速度-时间波形。这类问题的关键陷阱在于角度误差的放大效应——由于 $\cos\theta$ 在 $\theta$ 接近 $90^\circ$ 时变化率很大，角度测量哪怕只有几度的误差，也会导致速度读数出现显著偏差。因此规范操作要求将声束角控制在 $60^\circ$ 以内，此区间内 $\cos\theta$ 对角度误差相对不敏感，测量结果更可靠。此外，频移的正负号还能区分血流方向（朝向或远离探头），这是彩色多普勒血流成像的物理基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

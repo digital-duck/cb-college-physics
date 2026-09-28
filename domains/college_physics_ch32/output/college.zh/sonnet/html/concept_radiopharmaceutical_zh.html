@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radiopharmaceutical | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="radiopharmaceutical-放射性药物">Radiopharmaceutical(放射性药物)</h2>
+<p><strong>定义</strong></p>
+<p>放射性药物是将放射性核素与具有特定生物学靶向性的化学载体结合而成的化合物。载体分子负责识别并富集于特定器官、组织或病变部位(如甲状腺、骨骼、肿瘤细胞),放射性核素则通过衰变释放可探测或可治疗的辐射。根据用途不同,放射性药物分为两大类:诊断型(利用发射 $\gamma$ 射线或正电子的核素,如 $^{99m}\text{Tc}$、$^{18}\text{F}$,用于 SPECT 或 PET 显像)和治疗型(利用发射 $\beta$ 或 $\alpha$ 粒子的核素,如 $^{131}\text{I}$、$^{177}\text{Lu}$,通过局部电离辐射杀伤病变细胞)。这种"诊断-治疗一体化"的设计理念称为 <strong>theranostics(诊疗一体化)</strong>——用同一分子载体、不同核素分别完成定位诊断与靶向治疗。</p>
+<p><strong>核心原理:半衰期与剂量的匹配</strong></p>
+<p>放射性药物的关键工程问题是选择半衰期 $T_{1/2}$ 与载体的生物学清除速率相匹配的核素。若核素衰变过快,药物尚未到达靶器官便已失效;若衰变过慢,则患者体内滞留不必要的辐射负担。放射性活度随时间的衰减遵循:</p>
+$$
+A(t) = A_0 \, e^{-\lambda t}, \qquad \lambda = \frac{\ln 2}{T_{1/2}}
+$$
+<p>例如,$^{99m}\text{Tc}$(锝-99m)半衰期约 6 小时,恰好足够完成从生产、标记到成像的全过程,又能使患者体内辐射迅速衰减,是全球应用最广的显像核素。</p>
+<p><strong>问题解决应用:剂量计算实例</strong></p>
+<p>假设某患者注射 $^{99m}\text{Tc}$-标记药物,初始活度 $A_0 = 750\ \text{MBq}$。若显像需在注射后 4 小时进行,此时体内剩余活度为:</p>
+$$
+\lambda = \frac{\ln 2}{6} \approx 0.1155\ \text{h}^{-1}
+$$
+$$
+A(4) = 750 \times e^{-0.1155 \times 4} \approx 750 \times 0.6300 \approx 472.5\ \text{MBq}
+$$
+<p>医生需据此判断该剩余活度是否仍足以产生清晰图像信号,若不足则需重新调整初始注射剂量或核素选择。这类计算是核医学科室日常剂量规划的核心工作:既要保证诊断信号强度,又要遵循"合理可行尽量低"(ALARA)原则,将患者及医护人员的辐射暴露降到最低。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

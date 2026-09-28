@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isolated System | College Physics Ch08</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="isolated-system">Isolated System</h2>
+<p>An <strong>isolated system</strong> is a collection of objects on which the net external force is zero. Internal forces — between objects inside the system — can act freely and can be large and complicated, but as long as nothing from outside pushes or pulls on the system as a whole, its total momentum cannot change. This is a direct consequence of Newton's second law applied to a system of particles:</p>
+$$
+\vec{F}_{\text{net, ext}} = \frac{d\vec{p}_{\text{total}}}{dt}
+$$
+<p>If $\vec{F}_{\text{net, ext}} = 0$, then $\vec{p}_{\text{total}}$ is constant — this is the <strong>law of conservation of momentum</strong>, and it holds only when the system is isolated. Internal forces (like the force one colliding cart exerts on another) always come in Newton's-third-law pairs <em>within</em> the system, so they cancel exactly when you sum forces over the whole system and cannot change $\vec{p}_{\text{total}}$.</p>
+<p><strong>Worked example.</strong> Two ice skaters, mass 60 kg and 80 kg, stand at rest on frictionless ice and push off each other. Treating "both skaters" as the system, gravity and the normal force from the ice are external but vertical and balanced, and there is no horizontal external force (ice is frictionless) — so the system is isolated horizontally. Total momentum before pushing is zero, so it must remain zero after:</p>
+$$
+m_1 v_1 + m_2 v_2 = 0 \quad\Rightarrow\quad (60)v_1 = -(80)v_2
+$$
+<p>If the 80 kg skater moves off at $2\ \text{m/s}$, then $v_1 = -\dfrac{80 \times 2}{60} = -2.67\ \text{m/s}$: the lighter skater moves faster in the opposite direction.</p>
+<p><strong>Problem-solving application.</strong> The key skill is correctly <em>choosing the boundary</em> of the system so it qualifies as isolated. Include an object that exerts an unbalanced external force (e.g., the ice with friction, or a wall someone pushes off), and momentum conservation fails for your chosen system — you'd need to expand the boundary (e.g., include the Earth) to restore isolation. This boundary-choice step is what separates correct momentum problems from incorrect ones: always ask "is there any external horizontal force on everything I've drawn inside my system?" before applying $\Delta \vec{p}_{\text{total}} = 0$.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch8: Linear Momentum and Collisions (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

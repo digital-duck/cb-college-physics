@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gauss Law Electricity | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="gauss-law-electricity">Gauss Law Electricity</h2>
+<p><strong>定义</strong></p>
+<p>高斯定律是麦克斯韦方程组之一,它将穿过任意闭合曲面的电通量与曲面内所包围的净电荷联系起来。设 $S$ 为一个闭合曲面(高斯面),$Q_{enc}$ 为该曲面内包围的净电荷,$\varepsilon_0$ 为真空介电常数($\varepsilon_0 \approx 8.85 \times 10^{-12}\ \text{F/m}$),则电场 $\vec{E}$ 满足:</p>
+$$\oint_S \vec{E} \cdot d\vec{A} = \frac{Q_{enc}}{\varepsilon_0}$$
+<p>这个积分的物理意义是:电场线"净流出"闭合曲面的总量,只取决于曲面内部的电荷,与曲面外部的电荷无关,也与曲面的具体形状无关。正电荷是电场线的源头,负电荷是电场线的终点,这正是高斯定律与电场线图像相符的地方——电场线不会凭空产生或消失于真空之中,除非遇到电荷。</p>
+<p><strong>推导:点电荷的高斯定律验证</strong></p>
+<p>对于一个点电荷 $q$,选取半径为 $r$ 的球面作为高斯面。由对称性,电场 $\vec{E}$ 处处沿径向,大小 $E$ 在球面上处处相等,方向与面积微元 $d\vec{A}$ 平行,因此:</p>
+$$\oint_S \vec{E} \cdot d\vec{A} = E \cdot 4\pi r^2 = \frac{q}{\varepsilon_0}$$
+<p>解得 $E = \dfrac{q}{4\pi\varepsilon_0 r^2}$,这正是库仑定律给出的场强表达式。这一致性说明高斯定律与库仑定律等价,但高斯定律的积分形式在处理具有高度对称性的电荷分布时更为强大。</p>
+<p><strong>问题求解应用</strong></p>
+<p>例如,求均匀带电、电荷密度为 $\rho$、半径为 $R$ 的实心球体内部($r < R$)的电场。选取半径为 $r$ 的同心球面作为高斯面,内部包围的电荷为 $Q_{enc} = \rho \cdot \dfrac{4}{3}\pi r^3$。代入高斯定律:</p>
+$$E \cdot 4\pi r^2 = \frac{\rho \cdot \frac{4}{3}\pi r^3}{\varepsilon_0} \implies E = \frac{\rho r}{3\varepsilon_0}$$
+<p>可见球体内部电场随 $r$ 线性增长,而球外($r > R$)电场则退化为等效点电荷的库仑场 $E = \dfrac{Q}{4\pi\varepsilon_0 r^2}$,其中 $Q = \rho \cdot \frac{4}{3}\pi R^3$ 为总电荷。这种"选对称高斯面 → 提取常数电场 → 代入求解"的策略,是处理均匀带电球、无限长带电直线、无限大带电平面等问题的通用解题范式。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Damped Harmonic Motion | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="damped-harmonic-motion">Damped Harmonic Motion</h2>
+<p><strong>定义</strong></p>
+<p>理想的简谐运动假设系统不受能量损耗，振幅永远保持不变。但现实中的振子——无论是汽车悬架、钟摆还是分子振动——都会受到摩擦力、空气阻力或电阻等非保守力的作用，这些力持续地从系统中带走能量，使振幅随时间衰减。这种运动称为阻尼谐振动。</p>
+<p>若阻尼力与速度成正比（$F_{damp} = -bv$，其中 $b$ 为阻尼系数），牛顿第二定律给出运动方程：</p>
+$$m\ddot{x} + b\dot{x} + kx = 0$$
+<p>将其改写为标准形式，定义 $\omega_0 = \sqrt{k/m}$（无阻尼时的自然角频率）和 $\gamma = b/(2m)$（阻尼率），方程变为：</p>
+$$\ddot{x} + 2\gamma\dot{x} + \omega_0^2 x = 0$$
+<p>这是一个二阶线性常微分方程，其特征方程为 $r^2 + 2\gamma r + \omega_0^2 = 0$，解得：</p>
+$$r = -\gamma \pm \sqrt{\gamma^2 - \omega_0^2}$$
+<p>判别式的符号决定了三种运动类型：<strong>欠阻尼</strong>（$\gamma < \omega_0$，振荡衰减）、<strong>过阻尼</strong>（$\gamma > \omega_0$，无振荡缓慢趋于零）、<strong>临界阻尼</strong>（$\gamma = \omega_0$，最快趋于平衡且不振荡）。</p>
+<p><strong>推导与求解</strong></p>
+<p>在欠阻尼情形下，解具有振荡衰减的形式：</p>
+$$x(t) = A e^{-\gamma t}\cos(\omega_d t + \phi)$$
+<p>其中 $\omega_d = \sqrt{\omega_0^2 - \gamma^2}$ 是阻尼后的振荡频率，$A$、$\phi$ 由初始条件确定。注意 $\omega_d < \omega_0$：阻尼不仅使振幅衰减，还降低了振荡频率。</p>
+<p><strong>问题求解应用</strong></p>
+<p>一个质量 $m = 0.5\text{ kg}$ 的振子，弹簧常数 $k = 8\text{ N/m}$，阻尼系数 $b = 2\text{ kg/s}$。求其运动类型及衰减后的频率。</p>
+<p>先计算 $\omega_0 = \sqrt{8/0.5} = 4\text{ rad/s}$，$\gamma = 2/(2\times0.5) = 2\text{ rad/s}$。由于 $\gamma < \omega_0$，系统欠阻尼。阻尼频率为：</p>
+$$\omega_d = \sqrt{4^2 - 2^2} = \sqrt{12} \approx 3.46\text{ rad/s}$$
+<p>振幅按 $e^{-2t}$ 衰减，经过 $t = 1/\gamma = 0.5\text{ s}$ 后振幅降为初始值的 $1/e \approx 37\%$——这段时间称为系统的<strong>时间常数</strong>，是判断阻尼强弱的实用指标。工程设计中（如悬架系统），常通过调节 $b$ 使系统接近临界阻尼，以兼顾快速回复平衡与避免持续振荡。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

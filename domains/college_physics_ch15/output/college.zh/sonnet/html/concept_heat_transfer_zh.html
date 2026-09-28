@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heat Transfer | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="heat-transfer-热传递">Heat Transfer（热传递）</h2>
+<p><strong>定义</strong></p>
+<p>热（heat，记作 $Q$）是由温度差驱动、在两个系统之间传递的能量，其微观本质是分子无规则热运动所携带能量的净转移。热与功一样，都不是系统的状态量，而是<strong>过程量</strong>——它依赖于系统从初态到末态所经历的具体路径，而非仅仅取决于初态和末态本身。这一点与内能 $U$ 形成鲜明对比：内能是状态函数，只由系统当前状态决定。热力学第一定律将三者联系起来：</p>
+$$\Delta U = Q - W$$
+<p>其中 $W$ 是系统对外做的功。由于 $Q$ 和 $W$ 都依赖路径，只有它们的差 $\Delta U$ 是路径无关的。</p>
+<p><strong>路径依赖性：为什么重要</strong></p>
+<p>考虑理想气体从状态 A 膨胀到状态 B。若沿等压路径进行，气体一边膨胀一边吸热做功；若先等容降压再等温膨胀，则传递的热量 $Q$ 和做的功 $W$ 数值都不同，尽管 $\Delta U$ 相同（因为理想气体内能只依赖温度）。这正是为什么工程师在设计发动机循环（如卡诺循环、奥托循环）时，必须精确规定每一步的路径——路径不同，可提取的净功和所需的热输入完全不同。</p>
+<p><strong>问题求解应用</strong></p>
+<p>例：1 mol 理想单原子气体从 $V_1=1\text{ L}$、$T=300\text{ K}$ 等温膨胀到 $V_2=2\text{ L}$。</p>
+<p>等温过程中 $\Delta U = 0$（理想气体内能只依赖 $T$），所以由第一定律：</p>
+$$Q = W = \int_{V_1}^{V_2} p\,dV = nRT\ln\frac{V_2}{V_1}$$
+<p>代入 $n=1$、$R=8.314\text{ J/(mol·K)}$、$T=300\text{ K}$：</p>
+$$Q = (1)(8.314)(300)\ln(2) \approx 1729\text{ J}$$
+<p>此处全部吸收的热量都转化为对外做的功，$\Delta U=0$。若换成绝热路径（$Q=0$）达到同样的体积变化，则 $\Delta U = -W$，气体温度会下降——末态温度、压强都不同于等温情形，尽管体积变化相同。这说明：仅知道初末状态不足以确定 $Q$ 或 $W$，必须明确路径，这正是热力学教学中最容易被忽视、却最关键的一点。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

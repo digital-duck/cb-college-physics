@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quark | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="夸克">夸克</h2>
+<p><strong>定义</strong></p>
+<p>夸克是构成物质的基本费米子（自旋为 $\tfrac{1}{2}$ 的基本粒子），带有分数电荷。标准模型中共有六种"味"的夸克：上（$u$）、下（$d$）、粲（$c$）、奇异（$s$）、顶（$t$）、底（$b$），分为三代。上型夸克（$u, c, t$）带电荷 $+\tfrac{2}{3}e$，下型夸克（$d, s, b$）带电荷 $-\tfrac{1}{3}e$，其中 $e$ 为基本电荷。夸克永远不会单独存在，这一现象称为"色禁闭"（color confinement）：由于强相互作用（由胶子传递）的能量随夸克间距增大而增大，孤立夸克在自然界中无法被观测到。夸克必须组合成"色中性"的复合粒子——重子（baryon）由三个夸克组成，如质子（$uud$）和中子（$udd$）；介子（meson）由一个夸克与一个反夸克组成，如带正电的 $\pi^+$（$u\bar{d}$）。</p>
+<p><strong>理论要点：荷的可加性与色荷</strong></p>
+<p>夸克的电荷组合必须满足观测到的复合粒子总电荷。以质子为例：</p>
+$$
+Q_{\text{proton}} = 2\left(+\frac{2}{3}e\right) + \left(-\frac{1}{3}e\right) = e
+$$
+<p>中子的电荷则为：</p>
+$$
+Q_{\text{neutron}} = \left(+\frac{2}{3}e\right) + 2\left(-\frac{1}{3}e\right) = 0
+$$
+<p>这一简单的分数电荷加和规则解释了为何重子必须由恰好三个夸克组成——只有三个满足强相互作用"色中性"条件的夸克（分别携带红、绿、蓝三种"色荷"之一，混合后色中性，类比光的三原色叠加为白色）组合，才能形成稳定的强子。介子则通过夸克的"色"与反夸克的"反色"相消而中性。</p>
+<p><strong>问题应用</strong></p>
+<p>给定一个由三个夸克组成的重子，已知其中两个是下夸克，求第三个夸克使总电荷为 $+1e$（即识别该粒子）。</p>
+<p>设第三个夸克电荷为 $Q_3$：</p>
+$$
+2\left(-\frac{1}{3}e\right) + Q_3 = e \implies Q_3 = e + \frac{2}{3}e = \frac{5}{3}e
+$$
+<p>由于不存在电荷为 $\tfrac{5}{3}e$ 的夸克，说明"两个下夸克 + 总电荷 $+e$"这一组合物理上不可能实现——这正体现了夸克模型的预测力：它不仅解释已知粒子，还能排除不存在的组合，为强子谱系提供严格的分类框架。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

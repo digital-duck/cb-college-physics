@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conservation Of Charge | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="conservation-of-charge">Conservation Of Charge</h2>
+<p><strong>定义</strong></p>
+<p>电荷守恒定律指出：在任何孤立系统中，电荷既不能被创造，也不能被消灭，总电荷量 $Q_{\text{total}}$ 保持恒定。电荷可以从一个物体转移到另一个物体，也可以在正负电荷对之间重新分布（例如正负电子对的产生与湮灭），但系统的净电荷始终不变。用数学语言表述，若系统由 $n$ 个带电体组成，则</p>
+$$
+Q_{\text{total}} = \sum_{i=1}^{n} q_i = \text{常数}
+$$
+<p>在电路分析中，这一定律的局部形式尤为重要：对电路中的任意一个节点（多条导线的交汇点），流入该节点的电流之和必须等于流出该节点的电流之和，因为电荷不会在节点处堆积或凭空消失。这正是<strong>基尔霍夫电流定律（KCL）</strong>的物理基础：</p>
+$$
+\sum_{k} I_{k,\text{in}} = \sum_{k} I_{k,\text{out}}
+$$
+<p><strong>范例解析</strong></p>
+<p>考虑一个节点连接三条导线：电流 $I_1 = 5\ \text{A}$ 和 $I_2 = 3\ \text{A}$ 流入节点，电流 $I_3$ 流出节点。由电荷守恒（即 KCL）可知，流入的电荷速率必须等于流出的电荷速率：</p>
+$$
+I_1 + I_2 = I_3 \quad\Rightarrow\quad I_3 = 5 + 3 = 8\ \text{A}
+$$
+<p>若该节点在某一瞬间出现 $I_1 + I_2 \neq I_3$，则意味着电荷正在节点处累积，这与电荷守恒定律矛盾——在稳态电路中这是不可能发生的。</p>
+<p><strong>解题应用</strong></p>
+<p>在复杂电路中，通常有多个未知支路电流。求解步骤为：</p>
+<li>为每条支路电流设定方向假设（正负号待定）；</li>
+<li>在每个节点写出 KCL 方程：流入电流之和减去流出电流之和为零；</li>
+<li>结合欧姆定律 $V = IR$ 与基尔霍夫电压定律，联立求解线性方程组。</li>
+<p>例如，若某节点有三条支路电流 $I_1, I_2, I_3$，全部规定为流出节点为正，则电荷守恒要求：</p>
+$$
+I_1 + I_2 + I_3 = 0
+$$
+<p>若解出某个电流为负值，说明其实际方向与假设相反，而非违反守恒定律——这提醒我们，电荷守恒只约束"总量"，不预先限定电流的具体流向。掌握这一原则，是分析任何复杂网络电路、乃至理解半导体器件中载流子行为的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

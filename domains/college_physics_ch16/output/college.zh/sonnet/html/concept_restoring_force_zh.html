@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restoring Force | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="restoring-force-回复力">Restoring Force 回复力</h2>
+<p><strong>定义</strong></p>
+<p>回复力（restoring force）是指方向始终与物体偏离平衡位置的位移方向相反、并驱使物体返回平衡位置的力。其核心特征是力与位移反向：一旦物体偏离平衡点，回复力便试图把它"拉回来"或"推回去"。最典型的例子是理想弹簧所遵循的胡克定律：</p>
+$$
+F = -kx
+$$
+<p>其中 $x$ 是物体相对平衡位置的位移，$k$ 是弹簧的劲度系数（恒正），负号表明力的方向与位移方向相反。当 $x>0$（物体被拉伸）时，$F<0$，力指向平衡位置；当 $x<0$（物体被压缩）时，$F>0$，同样指向平衡位置。正是这个负号，使回复力成为简谐振动（simple harmonic motion）的动力学根源，而非单纯的"弹性形变"描述。</p>
+<p><strong>推导：简谐运动方程</strong></p>
+<p>将胡克定律代入牛顿第二定律 $F=ma=m\ddot{x}$，得到二阶线性微分方程：</p>
+$$
+m\ddot{x} = -kx \quad\Longrightarrow\quad \ddot{x} + \omega^2 x = 0,\qquad \omega = \sqrt{\dfrac{k}{m}}
+$$
+<p>这是一个标准的简谐振动方程，其通解为</p>
+$$
+x(t) = A\cos(\omega t + \varphi)
+$$
+<p>其中 $A$ 为振幅，$\varphi$ 为初相位，均由初始条件决定。角频率 $\omega$ 只由系统本身的物理参数 $k$ 和 $m$ 决定，与振幅无关——这正是简谐振动"等时性"的数学来源。</p>
+<p><strong>问题求解应用</strong></p>
+<p>设一质量 $m = 0.5\,\text{kg}$ 的滑块连接劲度系数 $k = 200\,\text{N/m}$ 的弹簧，在光滑水平面上运动。若将滑块拉离平衡位置 $x_0 = 0.1\,\text{m}$ 后由静止释放，求其运动方程及最大加速度。</p>
+<p>首先求角频率：$\omega = \sqrt{k/m} = \sqrt{200/0.5} = 20\,\text{rad/s}$。由初始条件 $x(0)=0.1$，$\dot{x}(0)=0$，可得 $\varphi = 0$，$A = 0.1\,\text{m}$，故</p>
+$$
+x(t) = 0.1\cos(20t)\ \text{m}
+$$
+<p>最大加速度出现在位移最大处（$x=\pm A$），由 $F=-kx=ma$ 得</p>
+$$
+a_{\max} = \frac{k A}{m} = \frac{200 \times 0.1}{0.5} = 40\ \text{m/s}^2
+$$
+<p>这类问题的通用解法是：先由回复力表达式求出 $\omega$，再结合初始条件确定 $A$ 与 $\varphi$，最后利用运动方程求解速度、加速度或能量等物理量。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

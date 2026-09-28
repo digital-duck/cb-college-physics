@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telescope | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="望远镜">望远镜</h2>
+<p><strong>定义</strong></p>
+<p>望远镜是利用两个共轴光学元件——长焦距物镜和短焦距目镜——将远处物体成像并放大视角的光学仪器。物镜将来自无穷远物体的平行光会聚成一个实像，目镜再把这个实像当作"物体"进一步放大，使人眼感受到的视角远大于裸眼直接观察的视角。望远镜不改变物体的实际大小，也不能让远处的物体"变大"，它改变的是光线进入人眼的<strong>角度</strong>，因此其核心性能指标是<strong>角放大率</strong>而非线性放大率。</p>
+<p>对于开普勒式（天文）望远镜，物镜焦距为 $f_o$，目镜焦距为 $f_e$，两镜之间的距离恰为 $f_o + f_e$（使物镜的像正好落在目镜的焦点上，形成平行光出射，适合人眼放松观察）。角放大率为：</p>
+$$
+M = \frac{f_o}{f_e}
+$$
+<p><strong>推导要点</strong>：物镜将远处物体（视角 $\theta_o$）成像在焦平面上，像高 $h = f_o \theta_o$（小角近似）。目镜将此像置于自己的焦点处，出射光线的视角为 $\theta_e = h / f_e = \dfrac{f_o}{f_e}\theta_o$。因此角放大率恰为两焦距之比。</p>
+<p><strong>例题</strong></p>
+<p>某折射望远镜物镜焦距 $f_o = 1000\ \text{mm}$，配备焦距 $f_e = 10\ \text{mm}$ 的目镜。求角放大率，并说明若换用 $f_e = 25\ \text{mm}$ 的目镜，放大率如何变化。</p>
+<p>解：</p>
+$$
+M_1 = \frac{1000}{10} = 100\times, \qquad M_2 = \frac{1000}{25} = 40\times
+$$
+<p>可见，目镜焦距越短，放大率越高；但放大率提高的代价是视场变窄、成像变暗（因为像面照度守恒，光被分摊到更大的角度范围内）。</p>
+<p><strong>应用与问题求解</strong></p>
+<p>在实际选购或设计望远镜时，需要在放大率与两个约束之间权衡：</p>
+<li><strong>物镜口径决定分辨率极限</strong>（由衍射决定，与焦距无关），放大率超过口径所能支持的极限（约为口径毫米数的 2 倍）只会放大模糊而非细节，称为"空放大率"。</li>
+<li><strong>出瞳直径</strong> $D_e = D_o / M$（$D_o$ 为物镜口径）需与人眼瞳孔匹配（约 5–7 mm），否则夜间观测时有效集光量下降。</li>
+<p>因此，设计问题往往归结为：给定物镜口径 $D_o$，求既不超过分辨率极限、又能保证出瞳直径不小于某阈值的目镜焦距范围。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drag Coefficient | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="drag-coefficient">Drag Coefficient</h2>
+<p>The drag force on an object moving through a fluid is given by</p>
+$$F_D = \tfrac{1}{2}\,\rho\, v^2\, C_D\, A,$$
+<p>where $\rho$ is fluid density, $v$ is relative speed, $A$ is a reference area (usually the frontal cross-section), and $C_D$ is the drag coefficient — a dimensionless number that absorbs everything about the object's shape, surface texture, and orientation that the other variables don't capture. Because $C_D$ is dimensionless, it lets engineers compare the aerodynamic efficiency of a bicycle helmet and a jumbo jet on the same scale, independent of size or speed, as long as the flow regime (Reynolds number) is similar.</p>
+<p>$C_D$ is not derived from first principles for real shapes; it is measured. A scale model or full-size object is placed in a wind tunnel, air is driven past it at controlled speed, and a force balance measures $F_D$ directly. Rearranging the drag equation gives $C_D = 2F_D / (\rho v^2 A)$, so the coefficient is simply back-calculated from the measured force. A smooth sphere has $C_D \approx 0.47$; a streamlined teardrop shape drops to about $0.04$; a flat plate perpendicular to the flow can exceed $1.1$. Lower $C_D$ means the shape sheds less energy to turbulent wake for the same frontal area.</p>
+<p><strong>Worked example.</strong> A sedan has frontal area $A = 2.2\ \text{m}^2$, drag coefficient $C_D = 0.30$, and cruises at $v = 30\ \text{m/s}$ (about 108 km/h) through air with $\rho = 1.2\ \text{kg/m}^3$. Then</p>
+$$F_D = \tfrac{1}{2}(1.2)(30)^2(0.30)(2.2) \approx 356\ \text{N}.$$
+<p>The power needed just to overcome drag is $P = F_D v \approx 10.7\ \text{kW}$. If engineers redesign the body to cut $C_D$ to $0.25$ — a 17% reduction — drag force and power scale proportionally, saving roughly 1.8 kW at highway speed, which is exactly why automakers chase small $C_D$ reductions in wind-tunnel testing.</p>
+<p><strong>Problem-solving application.</strong> Because $F_D \propto v^2$, doubling speed quadruples drag force and requires eight times the power (since $P = F_D v$). This is why fuel economy drops sharply at highway speeds and why cyclists, swimmers, and vehicle designers treat $C_D$ reduction as a high-leverage lever: a fixed percentage cut in $C_D$ yields the same percentage cut in drag at every speed, but the payoff in power savings grows with the cube of speed.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

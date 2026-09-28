@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wave Equation Em | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="wave-equation-em">Wave Equation Em</h2>
+<p><strong>定义</strong></p>
+<p>麦克斯韦方程组在无源真空中可以合并、消去电场或磁场其中一个变量，得到一个纯粹描述波动传播的偏微分方程——电磁波动方程。以电场分量 $E$ 为例，其形式为：</p>
+$$
+\frac{\partial^2 E}{\partial x^2} = \mu_0 \varepsilon_0 \frac{\partial^2 E}{\partial t^2}
+$$
+<p>这是标准的一维波动方程 $\dfrac{\partial^2 u}{\partial x^2} = \dfrac{1}{v^2}\dfrac{\partial^2 u}{\partial t^2}$ 的特例，其中传播速度满足</p>
+$$
+v = \frac{1}{\sqrt{\mu_0 \varepsilon_0}} = c \approx 3.00 \times 10^{8}\ \text{m/s}
+$$
+<p>这个结果之所以必须用微分方程和推导来呈现，而不能停留在"光是一种波"的定性描述上，是因为它揭示了一个深刻事实：光速 $c$ 完全由电学常数 $\varepsilon_0$（真空介电常数）和磁学常数 $\mu_0$（真空磁导率）决定，与光本身的任何"光学"性质无关。这正是麦克斯韦在 1865 年据此预言光是电磁波的关键一步。</p>
+<p><strong>已解决的例题</strong></p>
+<p>已知 $\mu_0 = 4\pi \times 10^{-7}\ \text{T·m/A}$，$\varepsilon_0 = 8.85 \times 10^{-12}\ \text{C}^2/(\text{N·m}^2)$，验证波速：</p>
+$$
+v = \frac{1}{\sqrt{(4\pi \times 10^{-7})(8.85 \times 10^{-12})}} = \frac{1}{\sqrt{1.11 \times 10^{-17}}} \approx 3.00 \times 10^{8}\ \text{m/s}
+$$
+<p>结果与实验测得的光速精确吻合，这不是巧合，而是方程结构决定的必然结论。</p>
+<p><strong>问题求解应用</strong></p>
+<p>波动方程的解为正弦行波 $E(x,t) = E_0 \sin(kx - \omega t)$，代入方程可得色散关系 $\dfrac{\omega}{k} = v = c$，即所有电磁波在真空中以相同速度传播，与频率无关（真空中无色散）。结合关系式 $c = f\lambda$（正文中已给出），可以反推任意频率对应的波长。</p>
+<p><strong>例</strong>：某 Wi-Fi 信号频率为 $f = 2.4\ \text{GHz}$，求其波长。</p>
+$$
+\lambda = \frac{c}{f} = \frac{3.00 \times 10^{8}}{2.4 \times 10^{9}} \approx 0.125\ \text{m} = 12.5\ \text{cm}
+$$
+<p>这说明：波动方程不仅解释了"光为什么是电磁波"，还为工程中天线尺寸设计（通常取 $\lambda/4$ 或 $\lambda/2$）提供了直接的定量依据——这正是理论结构决定实践参数的典型例子。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

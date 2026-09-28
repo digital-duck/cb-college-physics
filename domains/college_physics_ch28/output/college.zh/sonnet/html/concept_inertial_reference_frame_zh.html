@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inertial Reference Frame | College Physics Ch28</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="inertial-reference-frame">Inertial Reference Frame</h2>
+<p><strong>定义</strong></p>
+<p>惯性参考系（inertial reference frame）是指牛顿第一定律成立的参考系：在其中，不受外力（或所受合外力为零）的物体，若原本静止则保持静止，若原本运动则保持匀速直线运动。换句话说，这是一个不发生加速度的观察平台——参考系本身既不加速、不减速，也不旋转。任何相对于某个惯性系做匀速直线运动的参考系，也同样是惯性系；反之，相对于惯性系发生加速（包括转弯、变速、旋转）的参考系则是<strong>非惯性参考系（non-inertial frame）</strong>，其中会出现虚假的"惯性力"，例如离心力或科里奥利力。</p>
+<p>判定一个参考系是否为惯性系的数学表述是：对物体应用牛顿第二定律 $\sum \vec{F} = m\vec{a}$，若该定律在此参考系中对所有孤立物体成立（即 $\sum \vec{F} = 0 \Rightarrow \vec{a} = 0$），则该参考系为惯性系。地面参考系严格来说因地球自转和公转而非完全惯性，但在大多数力学问题的精度要求下，可近似视为惯性系。</p>
+<p><strong>实例解析</strong></p>
+<p>设想你坐在一列匀速行驶的火车车厢内（速度恒定、无转弯），把一个球放在光滑桌面上。对车内乘客而言，球保持静止——车厢是惯性系。现在火车突然刹车（减速），球会"无缘无故"地向前滑动，尽管没有真实力作用在球上。此时车厢参考系是非惯性系，观察者若坚持用牛顿定律解释球的运动，就必须引入一个虚拟的"惯性力"（方向与减速方向相反）来配平方程——但这个力并不对应任何真实的物理相互作用（如引力、接触力、电磁力），它纯粹是参考系加速度的数学产物。</p>
+<p><strong>问题求解应用</strong></p>
+<p>判断惯性系的关键技巧：检验参考系自身是否存在加速度（线加速度或角加速度）。具体步骤：</p>
+<li>确定所讨论的参考系是否相对某已知惯性系（如遥远恒星背景）做匀速直线运动；</li>
+<li>若参考系存在转弯、加减速或旋转，则为非惯性系，需在牛顿第二定律中额外加入惯性力项（如 $-m\vec{a}_{frame}$）才能正确描述物体运动；</li>
+<li>在工程与物理问题中（如分析旋转离心机、加速电梯内物体的表观重量、卫星轨道力学），正确识别参考系类型是设定受力图、避免遗漏或虚增力项的第一步，直接决定后续动力学方程能否正确求解。</li>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch28: Special Relativity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

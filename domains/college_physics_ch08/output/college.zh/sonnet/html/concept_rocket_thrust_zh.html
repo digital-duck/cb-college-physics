@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rocket Thrust | College Physics Ch08</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="rocket-thrust">Rocket Thrust</h2>
+<p><strong>定义</strong></p>
+<p>火箭推力是火箭通过高速喷射废气而获得的反作用力。其根源是牛顿第三定律：火箭以极高速度向后抛出燃烧产生的气体，气体对火箭施加大小相等、方向相反的推力。由于火箭在飞行过程中不断消耗燃料，其质量随时间减小，因此不能简单套用恒定质量物体的牛顿第二定律 $F=ma$，而必须从动量守恒出发推导。</p>
+<p>设某时刻火箭质量为 $m$，速度为 $v$；经过极短时间 $dt$ 后，火箭喷出质量为 $dm$（$dm>0$ 为正的消耗量）、相对火箭速度为 $u$（喷气速度，方向与火箭运动方向相反）的气体。对"火箭+废气"这一孤立系统应用动量守恒，可以推导出著名的齐奥尔科夫斯基推力方程：</p>
+$$
+F_{thrust} = u \frac{dm}{dt}
+$$
+<p>其中 $\dfrac{dm}{dt}$ 是单位时间内消耗的燃料质量（质量流率），$u$ 是废气相对火箭的排出速度。这正是题目所强调的：<strong>推力等于喷气速度乘以质量喷出率</strong>。</p>
+<p><strong>推导要点（理论环节）</strong></p>
+<p>由动量守恒，系统总动量不变：</p>
+$$
+mv = (m-dm)(v+dv) + dm(v-u)
+$$
+<p>展开并忽略二阶小量 $dm\,dv$，整理得：</p>
+$$
+m\,dv = u\,dm
+$$
+<p>两边除以 $dt$，即得火箭方程：</p>
+$$
+m\frac{dv}{dt} = u\frac{dm}{dt} = F_{thrust}
+$$
+<p>这说明推力本质上是"动量流"，而非牛顿第二定律中恒定质量下的 $ma$。</p>
+<p><strong>例题</strong></p>
+<p>某火箭发动机每秒消耗燃料 $\dfrac{dm}{dt} = 250\ \text{kg/s}$，喷气速度 $u = 3000\ \text{m/s}$，求推力。</p>
+$$
+F_{thrust} = u\frac{dm}{dt} = 3000 \times 250 = 7.5\times10^{5}\ \text{N}
+$$
+<p><strong>应用与拓展</strong></p>
+<p>若已知推力目标（如需克服重力 $mg$ 实现起飞），可反解所需质量流率 $\dfrac{dm}{dt} = F/u$，这是火箭发动机设计中权衡"高喷气速度、低燃料消耗"与"低喷气速度、高燃料消耗"两种方案的核心依据，也是齐奥尔科夫斯基火箭方程（求解总速度增量 $\Delta v$）的出发点。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch8: Linear Momentum and Collisions (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

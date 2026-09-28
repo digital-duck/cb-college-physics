@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skydiver Terminal Velocity | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="跳伞者的终端速度">跳伞者的终端速度</h2>
+<p>一名跳伞者从高空跳下后，作用在他身上的力有两个：向下的重力 $mg$，以及向上的空气阻力。空气阻力的大小由经验公式给出：</p>
+$$F_d = \frac{1}{2} C_d \rho A v^2$$
+<p>其中 $\rho$ 是空气密度，$A$ 是跳伞者迎风的有效横截面积，$C_d$ 是与身体形状有关的阻力系数，$v$ 是下落速度。注意阻力与速度的<strong>平方</strong>成正比——这意味着速度越快，阻力增长得越快，最终会追上并抵消重力。</p>
+<p>由牛顿第二定律，沿下落方向写出运动方程：</p>
+$$m\frac{dv}{dt} = mg - \frac{1}{2} C_d \rho A v^2$$
+<p>当加速度为零时，跳伞者达到<strong>终端速度</strong> $v_t$（terminal velocity）——此后速度不再增加，做匀速运动。令 $dv/dt = 0$，解得：</p>
+$$v_t = \sqrt{\frac{2mg}{C_d \rho A}}$$
+<p><strong>例题</strong>：一名质量 $m = 80\ \text{kg}$ 的跳伞者，展开双臂呈"大字形"姿势自由下落，有效面积 $A \approx 0.7\ \text{m}^2$，阻力系数 $C_d \approx 1.0$，空气密度取 $\rho = 1.2\ \text{kg/m}^3$，$g = 9.8\ \text{m/s}^2$。代入公式：</p>
+$$v_t = \sqrt{\frac{2 \times 80 \times 9.8}{1.0 \times 1.2 \times 0.7}} \approx \sqrt{1866.7} \approx 43.2\ \text{m/s} \approx 156\ \text{km/h}$$
+<p>这与实测的"大字形"跳伞终端速度（约 190–200 km/h）量级一致，差异来自 $C_d$ 与 $A$ 的粗略估计。</p>
+<p><strong>问题求解应用</strong>：公式揭示了两个可控变量如何改变终端速度。若跳伞者收拢四肢改为"头朝下"俯冲姿势，有效面积可降至 $A \approx 0.18\ \text{m}^2$，代入同一公式可得 $v_t \approx 83\ \text{m/s}$（约 300 km/h），这正是跳伞运动员用来加速冲刺的技巧。反过来，开伞后系统的总面积 $A$ 剧增、$C_d$ 也随伞形改变而增大，分母急剧变大，使 $v_t$ 骤降到安全落地速度（约 5–7 m/s）。由此可见，终端速度公式不仅解释了"为什么下落速度存在上限"，还给出了工程设计（伞的面积、形状）与运动策略（身体姿势）如何共同决定安全性的定量关系——这正是牛顿第二定律与阻力模型结合后产生的实际预测能力。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

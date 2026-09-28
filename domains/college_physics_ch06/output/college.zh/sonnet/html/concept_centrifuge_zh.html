@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centrifuge | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="离心机">离心机</h2>
+<p><strong>定义</strong></p>
+<p>离心机是一种通过高速旋转样品来产生远大于重力加速度的向心加速度，从而快速分离不同密度物质的装置。当样品在半径 $r$ 处以角速度 $\omega$ 旋转时，所需的向心加速度为</p>
+$$
+a = \omega^2 r
+$$
+<p>由于向心力必须指向圆心，密度较大的颗粒需要更大的向心力才能维持圆周运动；当悬浮介质（如血浆或缓冲液）提供的力不足以驱动重颗粒做圆周运动时，重颗粒会相对于介质向外（远离转轴）沉降，而轻颗粒则相对向内移动，从而实现分层。工程上常用"相对离心力"（relative centrifugal force, RCF）以重力加速度 $g$ 为单位表示：</p>
+$$
+\text{RCF} = \frac{\omega^2 r}{g}
+$$
+<p><strong>计算示例</strong></p>
+<p>设某台微量离心机转子半径 $r = 0.10\ \text{m}$，转速为每分钟 $12{,}000$ 转（rpm）。先将转速换算为角速度：</p>
+$$
+\omega = \frac{2\pi \times 12000}{60} \approx 1257\ \text{rad/s}
+$$
+<p>代入向心加速度公式：</p>
+$$
+a = \omega^2 r = (1257)^2 \times 0.10 \approx 1.58 \times 10^5\ \text{m/s}^2
+$$
+<p>换算为相对离心力：</p>
+$$
+\text{RCF} = \frac{1.58 \times 10^5}{9.8} \approx 16{,}100 \times g
+$$
+<p>也就是说，样品此时承受的"人造重力"约为地球重力的一万六千倍——这正是普通重力沉降需要数小时甚至数天才能完成的分离，离心机能在几分钟内实现的原因。</p>
+<p><strong>问题解决应用</strong></p>
+<p>在实验设计中，常见任务是反推所需转速。例如，若某实验要求 RCF 至少达到 $20{,}000 \times g$，转子半径固定为 $0.08\ \text{m}$，则可由</p>
+$$
+\omega = \sqrt{\frac{\text{RCF} \times g}{r}}
+$$
+<p>求出所需角速度，再换算为 rpm 设定离心机参数。这类"目标 RCF → 转速"的反算，是分子生物学、临床检验中配置离心程序的标准步骤，也体现了向心加速度公式作为设计约束（而非单纯描述性物理量）的实际价值。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

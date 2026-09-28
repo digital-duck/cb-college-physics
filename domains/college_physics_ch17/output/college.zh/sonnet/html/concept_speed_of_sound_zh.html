@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speed Of Sound | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="speed-of-sound">Speed Of Sound</h2>
+<p><strong>定义</strong></p>
+<p>声速是声波（一种纵向压力扰动）在介质中传播的速度。它由介质的力学性质决定：介质的<strong>劲度</strong>（抵抗压缩的能力，用体积模量或弹性模量描述）越大，声速越快；介质的<strong>密度</strong>越大，声速越慢。对于理想气体，声速还直接由<strong>温度</strong>决定，与压强本身无关。</p>
+<p>一般关系式为：</p>
+$$
+v = \sqrt{\frac{B}{\rho}}
+$$
+<p>其中 $B$ 是介质的弹性模量（固体中为杨氏模量，流体中为体积模量），$\rho$ 是介质密度。</p>
+<p>对于理想气体，可以进一步推导出：</p>
+$$
+v = \sqrt{\frac{\gamma R T}{M}}
+$$
+<p>其中 $\gamma$ 是气体的绝热指数（空气约为 $1.4$），$R$ 是理想气体常数，$T$ 是绝对温度（单位 K），$M$ 是气体的摩尔质量。这个公式说明了一个常被误解的事实：声速随温度升高而增大，但与压强无关——因为压强升高时密度也按比例升高，两者在公式中相互抵消。</p>
+<p><strong>例题</strong></p>
+<p>计算 20°C（即 $T = 293\ \text{K}$）时空气中的声速，已知 $\gamma = 1.4$，$R = 8.314\ \text{J/(mol·K)}$，空气的平均摩尔质量 $M = 0.029\ \text{kg/mol}$。</p>
+$$
+v = \sqrt{\frac{1.4 \times 8.314 \times 293}{0.029}} \approx \sqrt{117{,}800} \approx 343\ \text{m/s}
+$$
+<p>这与实验测得的常温声速（约 343 m/s）高度吻合。</p>
+<p><strong>问题求解应用</strong></p>
+<p>工程与物理问题中，常需要利用声速公式反推介质性质或环境条件。例如：某测温装置通过测量声波在空气中传播 100 m 所需的时间为 0.284 s，求当时的气温。</p>
+<p>先求声速：</p>
+$$
+v = \frac{100\ \text{m}}{0.284\ \text{s}} \approx 352\ \text{m/s}
+$$
+<p>再由 $v = \sqrt{\gamma R T / M}$ 反解 $T$：</p>
+$$
+T = \frac{v^2 M}{\gamma R} = \frac{352^2 \times 0.029}{1.4 \times 8.314} \approx 309\ \text{K} \approx 36°C
+$$
+<p>这种"测时间反推温度"的方法正是超声波测风温、声呐测水温等实际系统的核心原理，也说明了声速公式不仅是理论描述，更是可直接用于设计测量装置的工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

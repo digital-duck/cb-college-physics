@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Superposition | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="superposition-波的叠加原理">Superposition（波的叠加原理）</h2>
+<p><strong>定义</strong></p>
+<p>当两个或多个波在空间同一点相遇时，该点的合位移等于各个波单独存在时在该点产生位移的代数和。这就是叠加原理（superposition principle）。设两列波在某点、某时刻的扰动分别为 $y_1(x,t)$ 和 $y_2(x,t)$，则合成波的位移为</p>
+$$
+y(x,t) = y_1(x,t) + y_2(x,t)
+$$
+<p>叠加原理成立的前提是波动方程为<strong>线性</strong>方程——介质中每一点的位移与恢复力成正比，波不改变介质本身的性质。波相遇后并不会相互"碰撞"或改变彼此的传播方向与频率，各自穿过对方后继续独立传播，这一点与粒子的碰撞行为形成鲜明对比。</p>
+<p><strong>推导：两列同频波的叠加</strong></p>
+<p>考虑两列振幅相同、频率相同、但相位不同的简谐波：</p>
+$$
+y_1 = A\sin(kx - \omega t), \qquad y_2 = A\sin(kx - \omega t + \phi)
+$$
+<p>利用三角恒等式 $\sin\alpha + \sin\beta = 2\sin\left(\frac{\alpha+\beta}{2}\right)\cos\left(\frac{\alpha-\beta}{2}\right)$，合成波为</p>
+$$
+y = y_1 + y_2 = 2A\cos\left(\frac{\phi}{2}\right)\sin\left(kx - \omega t + \frac{\phi}{2}\right)
+$$
+<p>这个结果揭示了干涉的本质：合成波仍是同频率的简谐波，但其振幅 $2A\cos(\phi/2)$ 取决于相位差 $\phi$。</p>
+<li>当 $\phi = 0, 2\pi, 4\pi,\dots$（同相）时，$\cos(\phi/2) = \pm1$，振幅达到最大值 $2A$，称为<strong>相长干涉</strong>（constructive interference）。</li>
+<li>当 $\phi = \pi, 3\pi,\dots$（反相）时，$\cos(\phi/2) = 0$，振幅为零，两波完全抵消，称为<strong>相消干涉</strong>（destructive interference）。</li>
+<p><strong>问题求解应用</strong></p>
+<p>例：两个扬声器同步发出频率相同、振幅均为 $A=0.02\ \text{m}$ 的声波，某听者所在位置两波程差恰为半个波长。求该点合成波振幅。</p>
+<p>半波长的波程差对应相位差 $\phi = \pi$。代入公式：</p>
+$$
+2A\cos\left(\frac{\pi}{2}\right) = 2(0.02)\times 0 = 0
+$$
+<p>该点为静音点——这正是杨氏双缝实验、降噪耳机及天线阵列设计中应用干涉原理的数学基础：通过控制波程差（进而控制相位差），可以精确预测并设计出振幅增强或抵消的空间位置。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

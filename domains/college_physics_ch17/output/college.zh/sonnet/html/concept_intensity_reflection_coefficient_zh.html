@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intensity Reflection Coefficient | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="intensity-reflection-coefficient">Intensity Reflection Coefficient</h2>
+<p>当一列声波从介质 1 传播到介质 2 的分界面时，部分能量会反射回介质 1，部分能量透射进入介质 2。能量分配的比例由两种介质的<strong>声阻抗</strong>（acoustic impedance）$Z = \rho c$ 决定，其中 $\rho$ 为介质密度，$c$ 为声速。强度反射系数 $R$ 定义为反射波强度 $I_r$ 与入射波强度 $I_i$ 之比：</p>
+$$
+R = \frac{I_r}{I_i} = \left(\frac{Z_2 - Z_1}{Z_2 + Z_1}\right)^2
+$$
+<p>该公式可由边界处压强与质点速度连续的条件推导得出，是波动方程在阻抗不连续界面上的必然结果。注意 $R$ 恒为非负值（因取平方），且与波从哪一侧入射无关——交换 $Z_1$ 与 $Z_2$ 不改变 $R$ 的值。由能量守恒，透射系数满足 $T = 1 - R$。</p>
+<p><strong>例题</strong>：医学超声中，声波从软组织（$Z_1 \approx 1.63 \times 10^6\ \text{kg/(m}^2\text{s)}$）传播到骨骼（$Z_2 \approx 7.8 \times 10^6\ \text{kg/(m}^2\text{s)}$）。求强度反射系数。</p>
+<p>代入公式：</p>
+$$
+R = \left(\frac{7.8 - 1.63}{7.8 + 1.63}\right)^2 = \left(\frac{6.17}{9.43}\right)^2 \approx 0.428
+$$
+<p>即约 43% 的入射能量在软组织—骨骼界面被反射，仅 57% 透射进入骨骼。这解释了为何超声成像中骨骼后方会出现明显的"声影"——大部分能量根本无法穿透。</p>
+<p><strong>问题解决应用</strong>：这一系数是设计超声耦合剂、换能器匹配层的核心依据。若两种介质阻抗接近（如软组织与软组织之间，$Z_1 \approx Z_2$），则 $R \to 0$，几乎全部能量透射，界面在图像上表现为"透明"；反之，空气（$Z \approx 415\ \text{kg/(m}^2\text{s)}$）与皮肤之间阻抗相差三个数量级，$R$ 接近 1，几乎全反射——这正是超声检查必须涂抹耦合凝胶、排除皮肤与探头间空气层的物理原因。反过来，工程师也可利用该公式反推所需的"阻抗匹配层"厚度与材料，使 $R$ 最小化，从而提升能量传输效率，这在无损检测与声呐系统设计中同样适用。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

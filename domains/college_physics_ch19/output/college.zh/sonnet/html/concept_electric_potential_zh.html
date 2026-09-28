@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electric Potential | College Physics Ch19</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="electric-potential">Electric Potential</h2>
+<p><strong>定义</strong></p>
+<p>电势（electric potential）描述电场中某点单位电荷所具有的电势能，单位是伏特（V），即 $1\text{ V} = 1\text{ J/C}$。若将检验电荷 $q_0$ 从参考点（通常取无穷远处，$V=0$）移动到场中某点，外力克服电场力所做的功为 $W$，则该点的电势定义为</p>
+$$
+V = \frac{U}{q_0} = \frac{W}{q_0}
+$$
+<p>电势是标量，不像电场强度那样带方向；它只有大小和正负之分。两点之间的电势差（potential difference），即电压，为 $\Delta V = V_B - V_A$，它决定了电荷在这两点间移动时电场做的功：$W_{A\to B} = q(V_A - V_B)$。</p>
+<p>对于点电荷 $Q$ 产生的电势，在距离 $r$ 处：</p>
+$$
+V(r) = \frac{kQ}{r}, \qquad k = 8.99\times10^{9}\ \text{N·m}^2/\text{C}^2
+$$
+<p>电势与电场强度的关系为 $E = -\dfrac{dV}{dr}$（一维情形），说明电场指向电势下降最快的方向。</p>
+<p><strong>例题</strong></p>
+<p>一个点电荷 $Q = 5\times10^{-9}\text{ C}$ 固定在原点。求距其 $r = 0.3\text{ m}$ 处的电势，以及一个 $q_0 = 2\times10^{-6}\text{ C}$ 的检验电荷从无穷远移到该点时电场力做的功。</p>
+$$
+V = \frac{(8.99\times10^9)(5\times10^{-9})}{0.3} \approx 150\text{ V}
+$$
+<p>电场力做的功等于电势能的减少：$W = q_0 V = (2\times10^{-6})(150) = 3\times10^{-4}\text{ J}$。</p>
+<p><strong>解题应用</strong></p>
+<p>处理多电荷系统时，电势具有可加性（标量叠加），比电场的矢量叠加简单得多：$V_{\text{总}} = \sum_i \dfrac{kQ_i}{r_i}$。这使得计算复杂电荷分布在某点的电势往往比先求电场再积分更高效。此外，等势面（equipotential surface）上电场力不做功，因此在分析带电粒子沿等势面运动、电容器储能（$U = \frac12 CV^2$）或加速器中粒子获得动能（$q\Delta V = \Delta KE$）等问题时，优先从电势出发常能大幅简化计算。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch19: Electric Potential and Electric Field (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

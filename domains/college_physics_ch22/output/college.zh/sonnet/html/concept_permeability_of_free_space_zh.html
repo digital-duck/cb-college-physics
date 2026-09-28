@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Permeability Of Free Space | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="permeability-of-free-space">Permeability Of Free Space</h2>
+<p><strong>定义</strong></p>
+<p>真空磁导率 $\mu_0$ 是描述电流产生磁场能力的基本物理常数,其值为</p>
+$$\mu_0 = 4\pi \times 10^{-7}\ \text{T·m/A}$$
+<p>(在国际单位制 SI 的旧定义中,这一数值是精确的;2019 年单位制修订后,$\mu_0$ 变为由实验测定的常数,但数值仍极接近 $4\pi \times 10^{-7}$。)$\mu_0$ 出现在几乎所有描述磁场与电流关系的定律中,例如毕奥-萨伐尔定律(Biot–Savart law)和安培定律(Ampère's law):</p>
+$$\oint \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{enc}}$$
+<p>直观地说,$\mu_0$ 衡量的是"真空对磁场的响应能力"——它决定了单位电流在空间中激发出多强的磁场。这与电场中的真空电容率 $\varepsilon_0$ 地位相当,二者共同满足</p>
+$$c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}}$$
+<p>将磁学、电学与光学统一在电磁理论框架之下。</p>
+<p><strong>例题</strong></p>
+<p>计算两条相距 $d = 0.02\ \text{m}$、各载有 $I = 5\ \text{A}$ 电流的无限长平行直导线之间,单位长度所受的磁力。</p>
+<p>利用安培定律推导出的长直导线磁场公式 $B = \dfrac{\mu_0 I}{2\pi d}$,以及洛伦兹力公式 $F = BIL$,单位长度受力为:</p>
+$$\frac{F}{L} = \frac{\mu_0 I_1 I_2}{2\pi d} = \frac{(4\pi \times 10^{-7})(5)(5)}{2\pi (0.02)}$$
+<p>计算得:</p>
+$$\frac{F}{L} = \frac{10^{-7} \times 4\pi \times 25}{2\pi \times 0.02} = \frac{2 \times 10^{-7} \times 25}{0.02} = 2.5 \times 10^{-4}\ \text{N/m}$$
+<p><strong>解题应用</strong></p>
+<p>在实际问题中,$\mu_0$ 通常作为固定系数出现在磁场强度计算中,解题的关键是正确识别几何构型(直导线、螺线管、环形线圈等)对应的磁场公式,并代入 $\mu_0$ 求数值解。例如,螺线管内部磁场 $B = \mu_0 n I$($n$ 为单位长度匝数)常用于设计电磁铁或磁悬浮系统,其磁场强度直接由 $\mu_0$、电流大小和绕线密度共同决定。掌握 $\mu_0$ 的数值和单位,是把安培定律、毕奥-萨伐尔定律等理论公式转化为可计算的工程与实验结果的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overtones And Harmonics | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="overtones-and-harmonics">Overtones And Harmonics</h2>
+<p><strong>定义</strong></p>
+<p>当一根两端固定的弦（或一根空气柱)振动时，它并不只以一种方式振动，而是同时以一系列离散的模式振动。其中频率最低的模式称为<strong>基频</strong>（fundamental frequency），记作 $f_1$。所有高于基频的共振频率称为<strong>泛音</strong>（overtones）。基频与其全部泛音共同构成的频率集合，称为<strong>谐波</strong>（harmonics）。</p>
+<p>对于两端固定、长度为 $L$ 的弦，边界条件要求弦的两端始终是波节（振幅为零）。这一约束筛选出满足条件的驻波：弦长必须容纳半波长的整数倍，即</p>
+$$
+L = n \cdot \frac{\lambda_n}{2}, \qquad n = 1, 2, 3, \dots
+$$
+<p>由波速关系 $v = f\lambda$，可得第 $n$ 次谐波的频率为</p>
+$$
+f_n = \frac{n v}{2L} = n f_1.
+$$
+<p>因此，弦的谐波频率是基频的整数倍：$f_1, 2f_1, 3f_1, \dots$。第 $n=2$ 项称为第一泛音（即第二谐波），$n=3$ 为第二泛音（第三谐波），依此类推——注意"第几泛音"比"第几谐波"编号少一。</p>
+<p><strong>推导示例</strong></p>
+<p>设一根吉他弦长 $L = 0.65\ \text{m}$，波在弦上的传播速度为 $v = 260\ \text{m/s}$。基频为</p>
+$$
+f_1 = \frac{v}{2L} = \frac{260}{2 \times 0.65} = 200\ \text{Hz}.
+$$
+<p>于是谐波序列为 $200\ \text{Hz}, 400\ \text{Hz}, 600\ \text{Hz}, \dots$，其中 $400\ \text{Hz}$ 是第一泛音，$600\ \text{Hz}$ 是第二泛音。</p>
+<p><strong>问题解决应用</strong></p>
+<p>真实乐器发出的音色之所以彼此不同（即使演奏同一音高），正是因为各次谐波的相对强度（振幅）不同——这构成了<strong>音色</strong>（timbre）的物理基础，可通过傅里叶级数将复合波形分解为各谐波分量之和来定量分析。此外，两端开口的空气柱（如长笛）满足相同的整数倍谐波关系 $f_n = nf_1$，而一端封闭的空气柱（如单簧管近似模型）由于边界条件不同，只允许<strong>奇次</strong>谐波（$f_n = (2n-1)f_1$）。这一差异直接决定了不同管乐器音色的本质区别，是分析乐器声学结构时的关键计算依据。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

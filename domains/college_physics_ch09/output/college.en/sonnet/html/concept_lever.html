@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lever | College Physics Ch09</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="lever">Lever</h2>
+<p>A lever is a rigid bar that pivots about a fixed point called the fulcrum, transmitting an input force applied at one point to an output force at another. Its behavior is governed by rotational equilibrium: at balance, the net torque about the fulcrum is zero. Since torque equals force times the perpendicular distance from the fulcrum (the lever arm), a lever lets a small input force at a long arm produce a large output force at a short arm — or vice versa.</p>
+<p>Formally, if $F_i$ is the input force applied at distance $d_i$ from the fulcrum, and $F_o$ is the output force (load) at distance $d_o$, equilibrium requires</p>
+$$F_i \, d_i = F_o \, d_o.$$
+<p>The mechanical advantage (MA) is the ratio of output force to input force:</p>
+$$MA = \frac{F_o}{F_i} = \frac{d_i}{d_o}.$$
+<p>This is a direct consequence of the torque balance, not an independent rule — it tells you that whatever force you gain, you pay for in distance moved, since the work done, $F_i d_i \theta = F_o d_o \theta$ for a small rotation $\theta$, is conserved (ignoring friction).</p>
+<p>Worked example: You want to lift a 300 N rock using a 2 m bar. You place the fulcrum 0.4 m from the rock, so $d_o = 0.4$ m and $d_i = 1.6$ m. Then</p>
+$$MA = \frac{d_i}{d_o} = \frac{1.6}{0.4} = 4,$$
+<p>so the input force needed is $F_i = F_o / MA = 300/4 = 75$ N. Moving the fulcrum closer to the load increases $d_i$ relative to $d_o$, raising the mechanical advantage — but you must push your end through a proportionally longer arc to lift the rock the same height.</p>
+<p>Problem-solving application: Given a required MA, solve for fulcrum placement: rearrange $d_i/d_o = MA$ with $d_i + d_o = L$ (total bar length) to get $d_o = L/(MA+1)$. For $L = 2$ m and a desired MA of 5, $d_o = 2/6 \approx 0.33$ m — the fulcrum should sit about a third of a meter from the load. This same torque-balance equation underlies analysis of see-saws, crowbars, nutcrackers (class 2 levers, fulcrum at one end), and human forearms (class 3 levers, where MA < 1 trades force for speed and range of motion).</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch9: Statics and Torque (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Immersion Lens | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="浸没透镜">浸没透镜</h2>
+<p><strong>定义</strong></p>
+<p>数值孔径（numerical aperture, NA）决定了显微物镜的分辨本领与集光能力，其定义为</p>
+$$
+NA = n \sin\theta
+$$
+<p>其中 $n$ 是物镜与样品之间介质的折射率，$\theta$ 是物镜能够收集到的光锥的半张角（最大可达接近 $90^\circ$）。在空气中，$n \approx 1.00$，因此即便 $\theta$ 趋近于 $90^\circ$，$NA$ 也无法超过 1.00。浸没物镜（immersion lens）通过在物镜与样品之间填充折射率更高的介质——通常是水（$n \approx 1.33$）或香柏油（$n \approx 1.515$）——来突破这一上限，使 $NA$ 可达到 1.4 甚至更高。</p>
+<p><strong>举例说明</strong></p>
+<p>根据阿贝衍射极限公式，显微镜能分辨的最小距离为</p>
+$$
+d = \frac{\lambda}{2\,NA}
+$$
+<p>其中 $\lambda$ 是照明光的波长。假设 $\lambda = 550\ \text{nm}$（可见光中段）：</p>
+<li>干式物镜，$NA = 0.95$：$d \approx 550/(2\times0.95) \approx 289\ \text{nm}$</li>
+<li>油浸物镜，$NA = 1.40$：$d \approx 550/(2\times1.40) \approx 196\ \text{nm}$</li>
+<p>可见，仅通过更换介质、提高 $NA$，分辨率就提升了约 32%，这在观察细胞器、细菌等亚微米结构时至关重要。</p>
+<p><strong>问题解决应用</strong></p>
+<p>浸没介质起作用的物理原因在于折射率失配会导致光线在空气—玻璃界面发生全反射，损失掉高角度（大 $\theta$）的光线，而这些高角度光线恰恰携带了样品的精细结构信息。当介质折射率与物镜前透镜玻璃的折射率相近时（油浸油的 $n \approx 1.515$ 与普通玻璃接近），光路近似不发生折射，高角度光线得以进入物镜，从而实现更大的有效 $\theta$、更大的 $NA$。</p>
+<p>在实际操作中，选择浸没介质需要匹配折射率：水浸物镜只能用水，绝不能用油，因为二者折射率不同会引入球差，反而降低成像质量。计算给定物镜 $NA$ 与介质折射率所允许的最大半张角 $\theta = \arcsin(NA/n)$，是评估物镜性能、选型时的常见工程练习。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convection | College Physics Ch14</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="对流">对流</h2>
+<p><strong>定义</strong></p>
+<p>对流（convection）是指流体（气体或液体）因宏观整体运动而携带热量传递的过程。当流体的某一部分被加热时，其密度会因热膨胀而降低，浮力使这部分较轻的流体上升，而周围较冷、较密的流体则下沉填补空缺，从而形成循环流动，即"对流环流"（convection cell）。这与依靠分子间碰撞逐层传递能量的<strong>传导</strong>（conduction）有本质区别：对流的能量载体是流体本身的宏观位移，而不是相邻粒子间的振动传递。</p>
+<p>对流可分为两类：<strong>自然对流</strong>（natural convection），完全由密度差和重力驱动，例如房间里暖气片上方的热空气上升；<strong>受迫对流</strong>（forced convection），流体运动由外部装置（风扇、泵）驱动，例如汽车散热器或计算机 CPU 风扇。受迫对流的换热效率通常远高于自然对流，因为外力能维持更高的流速，从而更快地把热流体带离热源。</p>
+<p><strong>牛顿冷却定律与换热系数</strong></p>
+<p>工程上常用<strong>牛顿冷却定律</strong>描述对流换热速率：</p>
+$$
+\dot{Q} = h A (T_s - T_\infty)
+$$
+<p>其中 $\dot{Q}$ 为单位时间传递的热量（单位：W），$A$ 为与流体接触的表面积，$T_s$ 为固体表面温度，$T_\infty$ 为远处流体的主体温度，$h$ 为<strong>对流换热系数</strong>（单位：$\mathrm{W/(m^2 \cdot K)}$）。$h$ 并非材料常数，而是取决于流体性质、流速、表面几何形状以及流动是层流还是湍流，通常由经验公式或实验测定。</p>
+<p><strong>问题求解示例</strong></p>
+<p>一块表面积 $A = 0.5\ \mathrm{m^2}$ 的金属板，表面温度 $T_s = 80^\circ\mathrm{C}$，暴露于 $T_\infty = 20^\circ\mathrm{C}$ 的空气中，风扇提供受迫对流，测得 $h = 25\ \mathrm{W/(m^2\cdot K)}$。求散热速率：</p>
+$$
+\dot{Q} = h A (T_s - T_\infty) = 25 \times 0.5 \times (80 - 20) = 750\ \mathrm{W}
+$$
+<p>若关闭风扇，流动退化为自然对流，$h$ 可能降至 $5\ \mathrm{W/(m^2\cdot K)}$，此时 $\dot{Q} = 150\ \mathrm{W}$——散热能力下降为原来的五分之一。这说明为何电子设备散热设计中，风扇（受迫对流）比被动散热片（自然对流）效果显著更好。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch14: Heat and Heat Transfer Methods (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acoustic Impedance | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="声阻抗">声阻抗</h2>
+<p><strong>定义</strong></p>
+<p>声阻抗（acoustic impedance）是描述介质对声波传播"抵抗程度"的物理量，定义为介质密度 $\rho$ 与声速 $c$ 的乘积：</p>
+$$Z = \rho c$$
+<p>其单位为瑞利（Rayl），即 $\text{kg} \cdot \text{m}^{-2} \cdot \text{s}^{-1}$。声阻抗本质上刻画了介质中声压与质点速度之间的比例关系——阻抗越大，同样的质点振动速度所对应的声压就越大。这个量之所以重要，并不在于它本身的数值，而在于<strong>两种介质声阻抗的差异</strong>决定了声波在边界上如何反射与透射。</p>
+<p><strong>推导：边界处的反射与透射</strong></p>
+<p>当一列平面声波从介质 1（阻抗 $Z_1$）垂直入射到介质 2（阻抗 $Z_2$）的边界时，声压反射系数为：</p>
+$$R = \left(\frac{Z_2 - Z_1}{Z_2 + Z_1}\right)^2$$
+<p>这一结果来自边界处声压与质点速度连续性条件的联立求解。可以立即读出两个极限：若 $Z_1 = Z_2$（阻抗匹配），则 $R = 0$，声波完全透射，没有反射；若 $Z_1$ 与 $Z_2$ 相差悬殊（如空气 $Z \approx 415\ \text{Rayl}$ 对比水 $Z \approx 1.48\times10^6\ \text{Rayl}$），则 $R \to 1$，几乎全部反射。这正是空气与水界面处声音几乎无法传入水中的原因。</p>
+<p><strong>问题求解应用</strong></p>
+<p>医学超声成像正是利用这一原理：人体软组织（$Z \approx 1.63\times10^6\ \text{Rayl}$）与骨骼（$Z \approx 7.8\times10^6\ \text{Rayl}$）阻抗差异较大，界面处产生强反射信号，从而在超声图像上显现清晰轮廓；而超声探头与皮肤之间必须涂抹耦合凝胶，正是为了消除空气间隙（否则 $R$ 会接近 1，信号几乎全部损失）。</p>
+<p><strong>例题</strong>：设声波从软组织（$Z_1 = 1.63\times10^6$）垂直入射到骨骼（$Z_2 = 7.8\times10^6$），求反射的声强比例。</p>
+<p>代入公式：</p>
+$$R = \left(\frac{7.8 - 1.63}{7.8 + 1.63}\right)^2 = \left(\frac{6.17}{9.43}\right)^2 \approx 0.428$$
+<p>即约 42.8% 的声强被反射回探头，其余透射进入骨骼继续传播——这一数值直接决定了超声图像中骨骼边界的亮度与清晰度。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

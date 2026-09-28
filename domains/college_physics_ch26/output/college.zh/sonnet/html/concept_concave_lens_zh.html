@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concave Lens | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="concave-lens-凹透镜">Concave Lens（凹透镜）</h2>
+<p><strong>定义</strong></p>
+<p>凹透镜中央薄、边缘厚，是一种发散透镜。当平行于主光轴的光线穿过凹透镜后，折射光线不会像凸透镜那样会聚于一点，而是向外发散，其反向延长线相交于透镜前方的一点，称为虚焦点。凹透镜的焦距 $f$ 按惯例取为负值（$f<0$），这与凸透镜的正焦距形成对照，也决定了它在薄透镜成像公式中的行为。</p>
+<p>薄透镜成像遵循高斯公式：</p>
+$$
+\frac{1}{v} - \frac{1}{u} = \frac{1}{f}
+$$
+<p>其中 $u$ 为物距（物体在光轴上到透镜光心的距离，按符号约定取负），$v$ 为像距，$f$ 为焦距。放大率为</p>
+$$
+m = \frac{v}{u}
+$$
+<p><strong>例题</strong></p>
+<p>一枚凹透镜的焦距为 $f = -20\ \text{cm}$，物体置于透镜前方 $u = -30\ \text{cm}$ 处（按笛卡尔符号约定，物距在入射光一侧取负）。求像的位置与放大率。</p>
+<p>代入公式：</p>
+$$
+\frac{1}{v} = \frac{1}{f} + \frac{1}{u} = \frac{1}{-20} + \frac{1}{-30} = -\frac{3}{60} - \frac{2}{60} = -\frac{5}{60}
+$$
+$$
+v = -12\ \text{cm}
+$$
+<p>由于 $v$ 为负值且 $|v| < |u|$，说明像位于物体同侧、透镜前方 $12\ \text{cm}$ 处，是虚像。放大率为</p>
+$$
+m = \frac{v}{u} = \frac{-12}{-30} = 0.4
+$$
+<p>$m$ 为正值且小于 1，说明像是正立、缩小的虚像——这正是凹透镜的标志性成像特征：无论物体放在何处，凹透镜产生的像永远是正立、缩小的虚像。</p>
+<p><strong>问题解决应用</strong></p>
+<p>这一性质使凹透镜成为分析光学系统时的可预测工具。例如，在设计近视矫正眼镜时，医生根据患者眼睛的"眼镜度数"（屈光度 $D = 1/f$，单位为米的倒数）直接选择凹透镜的焦距，使得远处物体经透镜后形成的虚像恰好落在患者眼睛能够聚焦的范围内。工程上遇到多透镜组合系统（如伽利略望远镜，由一个凸透镜物镜和一个凹透镜目镜组成）时，可将前一透镜的像距作为后一透镜的物距，逐级应用薄透镜公式求出最终像的位置与总放大率，这种逐透镜代入法是分析任何复合光学系统的通用策略。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

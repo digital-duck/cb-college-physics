@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geiger Tube | College Physics Ch31</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="geiger-tube">Geiger Tube</h2>
+<p><strong>定义</strong></p>
+<p>盖革计数管（Geiger-Müller tube）是一种充气电离探测器，用于探测和计数电离辐射粒子（如 $\alpha$、$\beta$ 粒子或 $\gamma$ 光子）。其结构为一根圆柱形金属阴极管，中心轴上张有一根细金属丝作为阳极，管内充有惰性气体（如氩气）并混有少量猝灭气体（如卤素或有机蒸气）。当一个电离粒子穿过管内气体时，会与气体分子碰撞并使其电离，产生初始的电子—离子对。中心阳极丝与阴极之间施加的高压（通常为 400–900 V）在管内建立强电场，使初始电子在向阳极加速的过程中获得足够能量，与更多气体分子发生碰撞电离，从而引发<strong>雪崩式放大</strong>（avalanche multiplication）。在盖革区（Geiger region）工作电压下，这一放大过程会沿整根阳极丝扩散，形成一次完整的"盖革放电"，产生一个与入射粒子能量无关、幅度固定的大脉冲信号。</p>
+<p><strong>工作例子</strong></p>
+<p>假设某盖革管连接到计数电路，1 分钟内记录到 720 次脉冲，则平均计数率为</p>
+$$
+R = \frac{720\ \text{counts}}{60\ \text{s}} = 12\ \text{counts/s（cps）}
+$$
+<p>若已知探测器对某放射源的探测效率为 $\varepsilon = 5\%$，则源的实际发射率（活度相关量）可估算为</p>
+$$
+A \approx \frac{R}{\varepsilon} = \frac{12}{0.05} = 240\ \text{particles/s}
+$$
+<p>这说明盖革管给出的原始计数率并不等于放射源的真实活度，必须结合探测效率进行校正。</p>
+<p><strong>问题求解应用：死时间修正</strong></p>
+<p>盖革管每次放电后，正离子云需要一定时间漂移至阴极并被中性化，此期间管子无法响应新的电离事件，这段时间称为<strong>死时间</strong>（dead time，$\tau$，典型值 $100$–$300\ \mu\text{s}$）。若测得表观计数率为 $R_m$，真实计数率 $R_t$ 满足：</p>
+$$
+R_t = \frac{R_m}{1 - R_m \tau}
+$$
+<p><strong>例题</strong>：某盖革管死时间 $\tau = 200\ \mu\text{s} = 2\times10^{-4}\,\text{s}$，测得表观计数率 $R_m = 2000\ \text{cps}$，求真实计数率。</p>
+<p>代入公式：</p>
+$$
+R_t = \frac{2000}{1 - 2000 \times 2\times10^{-4}} = \frac{2000}{1 - 0.4} = \frac{2000}{0.6} \approx 3333\ \text{cps}
+$$
+<p>可见，当计数率较高时，死时间导致的漏计数不可忽略（约 40%），必须进行修正才能得到准确的辐射强度估计。这一修正在高活度样品测量、核医学剂量评估等实际场景中至关重要。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch31: Radioactivity and Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

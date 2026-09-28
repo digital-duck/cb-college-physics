@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newtons Second Law | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="newtons-second-law">Newtons Second Law</h2>
+<p>Newton's second law states that the acceleration of an object is directly proportional to the net external force acting on it, points in the same direction as that force, and is inversely proportional to the object's mass:</p>
+$$\vec{F}_{net} = m\vec{a}$$
+<p>Here $\vec{F}_{net}$ is the vector sum of all forces acting on the object (in newtons, N), $m$ is the mass (in kilograms, a scalar measure of inertia — the object's resistance to acceleration), and $\vec{a}$ is the resulting acceleration (in m/s²). Because force and acceleration are vectors, the law must be applied component-by-component: $F_{net,x} = ma_x$, $F_{net,y} = ma_y$, and so on. This law is not just descriptive — it is the equation you solve to predict motion whenever you know the forces, or to infer unknown forces whenever you know the motion.</p>
+<p><strong>Worked example.</strong> A 12 kg sled is pulled across ice by a rope with tension 40 N at $20°$ above horizontal, while friction opposes the motion with a force of 6 N. Find the sled's horizontal acceleration.</p>
+<p>Resolve the tension into components: $F_x = 40\cos(20°) \approx 37.6$ N. The net horizontal force is $F_{net,x} = 37.6 - 6 = 31.6$ N. Applying $F_{net} = ma$:</p>
+$$a_x = \frac{F_{net,x}}{m} = \frac{31.6}{12} \approx 2.63 \text{ m/s}^2$$
+<p><strong>Problem-solving application.</strong> In any system with multiple forces, the working procedure is: (1) isolate the object of interest with a free-body diagram showing every force acting on it, (2) sum the forces along convenient axes to get $F_{net}$, and (3) set $F_{net} = ma$ and solve for whatever is unknown — acceleration, an individual force, or the mass. Applying this to the sled above: once you know $a_x$, the same equation lets you work backward — if the sled were instead observed to accelerate at a <em>given</em> rate, you could solve for the unknown friction or tension rather than for $a$. This flexibility — solving the same equation for whichever quantity is missing — is what makes Newton's second law the computational backbone of classical mechanics, scaling from a sled on ice to rockets and structural loads.</p>
+<pre class="mermaid">flowchart LR
+    A[Identify all forces on object] --> B[Draw free-body diagram]
+    B --> C[Sum forces along axes: F_net]
+    C --> D[Apply F_net = ma, solve for unknown]</pre>
+<p><em>The standard procedure for applying Newton's second law to any mechanics problem.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

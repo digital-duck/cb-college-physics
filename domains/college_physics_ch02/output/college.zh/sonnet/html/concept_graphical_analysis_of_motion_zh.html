@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graphical Analysis Of Motion | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="graphical-analysis-of-motion">Graphical Analysis Of Motion</h2>
+<p><strong>定义</strong></p>
+<p>在一维运动中，位置–时间图（$x$–$t$ 图）与速度–时间图（$v$–$t$ 图）不仅是运动的可视化记录，更是提取动力学信息的计算工具。位置–时间图上任意一点的<strong>瞬时速度</strong>等于该点切线的斜率：</p>
+$$v(t) = \frac{dx}{dt} = \lim_{\Delta t \to 0} \frac{x(t+\Delta t) - x(t)}{\Delta t}$$
+<p>对于匀速运动，$x$–$t$ 图是直线，斜率即为常数速度。对于变速运动，图线弯曲，此时<strong>平均速度</strong>是两点间的连线（弦）斜率，而<strong>瞬时速度</strong>才是切线斜率——二者的区别正是微积分中平均变化率与瞬时变化率的区别。同理，速度–时间图上任意一点切线的斜率给出<strong>瞬时加速度</strong>：</p>
+$$a(t) = \frac{dv}{dt}$$
+<p>此外，位移可由 $v$–$t$ 图中曲线下的<strong>面积</strong>求得：$\Delta x = \int_{t_1}^{t_2} v(t)\,dt$。这是图像法的核心——斜率给出导数（速度、加速度），面积给出积分（位移、速度变化）。</p>
+<p><strong>范例</strong></p>
+<p>一辆汽车的位置数据为：$t=0$ s 时 $x=0$ m，$t=2$ s 时 $x=8$ m，$t=4$ s 时 $x=32$ m。若将三点绘于 $x$–$t$ 图上，可见曲线上凹（斜率递增），说明车辆在加速。计算 $t=0$ 到 $t=2$ s 的平均速度：$\bar{v} = \frac{8-0}{2-0} = 4$ m/s；$t=2$ 到 $t=4$ s：$\bar{v} = \frac{32-8}{4-2} = 12$ m/s。平均速度递增，证实加速运动，且可估算 $t=2$ s 附近的瞬时加速度约为 $a \approx \frac{12-4}{2} = 4$ m/s²。</p>
+<p><strong>解题应用</strong></p>
+<p>图像法的实用价值在于<strong>逆向推断</strong>：给定 $v$–$t$ 图，可通过分段计算面积（梯形或矩形）求总位移，而不需要已知运动方程。例如，若 $v$–$t$ 图显示物体先以 $10$ m/s 匀速运动 $3$ s，再在 $2$ s 内匀减速至 $0$，总位移为两段面积之和：$10 \times 3 + \frac{1}{2} \times 10 \times 2 = 30 + 10 = 40$ m。掌握斜率与面积的双重解读，是处理复杂运动学问题（尤其是非常量加速度情形）最有效的定量分析手段。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

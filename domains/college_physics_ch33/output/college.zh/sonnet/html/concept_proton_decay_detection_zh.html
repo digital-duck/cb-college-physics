@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proton Decay Detection | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="proton-decay-detection">Proton Decay Detection</h2>
+<p><strong>定义</strong></p>
+<p>大统一理论（GUT）预言，质子并非绝对稳定的粒子。在标准模型中，重子数 $B$ 是精确守恒的，质子作为最轻的重子无法衰变；但当强、弱、电磁三种力在能标 $\sim 10^{16}\,\text{GeV}$ 统一为单一规范群（如 $SU(5)$）时，存在交换重规范玻色子（X、Y 玻色子）的过程，能够把夸克转化为轻子，从而破坏重子数守恒，使质子衰变为更轻的粒子，例如：</p>
+$$
+p \rightarrow e^{+} + \pi^{0}
+$$
+<p>衰变的分支比与规范玻色子质量的四次方成正比，理论预测质子的平均寿命极长，约为 $\tau_p \sim 10^{34}$–$10^{39}$ 年，远超宇宙年龄（约 $1.4\times10^{10}$ 年）。探测质子衰变因此成为检验大统一理论的关键实验窗口：一旦观测到该过程,即可直接证明重子数不是精确守恒量,为超越标准模型的物理提供决定性证据。</p>
+<p><strong>探测原理与实例</strong></p>
+<p>由于单个质子的衰变概率极低，实验无法等待某个质子衰变，而是利用统计学原理：聚集海量质子（通常以数万吨超纯水或液氩为探测介质），并长期监测。若寿命为 $\tau_p$，则在观测时间 $t$ 内、样本含 $N$ 个质子时，预期发生衰变数为</p>
+$$
+N_{\text{decay}} \approx \frac{N \cdot t}{\tau_p}
+$$
+<p>日本的超级神冈探测器（Super-Kamiokande）是该领域的代表性实验：它是一个装有 5 万吨超纯水的地下探测器，利用切伦科夫辐射（带电粒子在水中以超过光速的速度运动时发出的光锥）来捕捉衰变产物的径迹与能量。由于探测器建在地下 1000 米，可屏蔽绝大部分宇宙射线本底噪声，从而提高信噪比。</p>
+<p><strong>问题解决应用</strong></p>
+<p>设某实验的探测介质含质子数 $N = 7.5\times10^{33}$，运行 $t = 20$ 年未观测到衰变事例，可利用泊松统计推算寿命下限。若要求在 90% 置信水平下排除某寿命值，需满足 $N_{\text{decay}} < 2.3$（对应零事例的泊松上限），代入上式可得：</p>
+$$
+\tau_p > \frac{N \cdot t}{2.3} \approx 6.5\times10^{34}\ \text{年}
+$$
+<p>这正是实验物理学家从"零结果"中提炀有效信息的方法：未观测到衰变并不意味着实验失败，而是为质子寿命设定了越来越严格的下限，逐步排除多种 GUT 模型（如最简单的 $SU(5)$ 理论已被排除），推动理论向更复杂的对称破缺方案演化。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

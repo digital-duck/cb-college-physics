@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equilibrium | College Physics Ch09</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="equilibrium">Equilibrium</h2>
+<p>A rigid body is in <strong>equilibrium</strong> when it has zero linear acceleration and zero angular acceleration — equivalently, its net external force and net external torque both vanish. This is not the same as being at rest: a body moving at constant velocity or spinning at constant angular velocity is also in equilibrium, since neither its velocity nor angular velocity is changing. The two conditions are independent and both must hold:</p>
+$$\sum \vec{F}_{ext} = 0 \qquad \text{and} \qquad \sum \vec{\tau}_{ext} = 0$$
+<p>The first condition follows directly from Newton's second law, $\sum \vec{F} = m\vec{a}$, with $\vec{a} = 0$; the second follows from its rotational analog, $\sum \vec{\tau} = I\alpha$, with $\alpha = 0$. A body can satisfy the first condition and still rotate if the forces, though balanced, are applied off-axis — so both sums must be checked separately.</p>
+<p><strong>Worked example.</strong> A 4 m uniform beam of weight $W = 200\,\text{N}$ rests horizontally on two supports: one at the left end (A) and one 1 m from the right end (B). Find the support forces $F_A$ and $F_B$.</p>
+<p>Translational equilibrium (vertical axis):</p>
+$$F_A + F_B - W = 0$$
+<p>Rotational equilibrium, taking torques about A so that $F_A$ drops out of the equation. The beam's weight acts at its center, 2 m from A; $F_B$ acts at 3 m from A:</p>
+$$F_B(3\,\text{m}) - W(2\,\text{m}) = 0 \implies F_B = \frac{200 \times 2}{3} \approx 133.3\,\text{N}$$
+<p>Substituting back: $F_A = 200 - 133.3 \approx 66.7\,\text{N}$.</p>
+<p><strong>Problem-solving strategy.</strong> Equilibrium problems reduce to a systematic procedure: (1) isolate the body with a free-body diagram; (2) write $\sum F_x = 0$ and $\sum F_y = 0$; (3) choose a pivot and write $\sum \tau = 0$ about it; (4) solve the resulting system. Placing the pivot at an unknown force's point of application eliminates that unknown from the torque equation, since equilibrium requires zero net torque about every axis, not just one — the same trick used for $F_A$ above turns a two-unknown system into two one-unknown equations.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch9: Statics and Torque (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

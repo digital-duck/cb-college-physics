@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angular Momentum | College Physics Ch10</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="angular-momentum">Angular Momentum</h2>
+<p>Angular momentum $L$ is the rotational counterpart of linear momentum $p = mv$, and it is the one new primitive of this section. You already know moment of inertia $I$ (how mass is distributed about a rotation axis, kg·m²) and angular velocity $\omega$ (rad/s) from earlier sections; angular momentum simply combines them:</p>
+$$L = I\omega$$
+<p>with units kg·m²/s. Just as linear momentum measures "how hard it is to stop a moving object," angular momentum measures "how hard it is to stop a spinning one." Recall that torque is related to angular momentum the same way force is related to linear momentum: $\tau = \dfrac{dL}{dt}$. Since this is just the rotational form of Newton's second law you already met, no new symbol is needed to see the consequence: when net external torque $\tau = 0$, $L$ stays constant. This is the law of conservation of angular momentum.</p>
+<p><strong>Worked example.</strong> A figure skater spins with arms extended, $I_1 = 4.0\ \text{kg·m}^2$, at $\omega_1 = 2.0\ \text{rad/s}$. She pulls her arms in, reducing her moment of inertia to $I_2 = 1.0\ \text{kg·m}^2$. Friction with the ice exerts negligible torque about the vertical axis, so angular momentum is conserved:</p>
+$$I_1\omega_1 = I_2\omega_2$$
+$$(4.0)(2.0) = (1.0)\,\omega_2 \implies \omega_2 = 8.0\ \text{rad/s}$$
+<p>Her spin rate quadruples — the same physics that lets a diver tuck to spin faster, and the same reasoning behind Kepler's observation that planets sweep out equal areas in equal times, since gravity exerts no torque about the Sun.</p>
+<p><strong>Problem-solving application.</strong> The general strategy: (1) confirm net external torque is zero, so $L_i = L_f$; (2) write $L = I\omega$ for each configuration, recomputing $I$ if mass redistributes; (3) solve for the unknown. This same three-step approach applies to a ball striking a rotating door, an exploding rotating system, or a satellite changing orbital radius — making $L = I\omega$ conservation, alongside energy and linear momentum conservation, one of the most versatile tools in rotational dynamics.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch10: Rotational Motion and Angular Momentum (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

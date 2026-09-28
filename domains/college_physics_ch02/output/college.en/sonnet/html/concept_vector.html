@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vector | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="vector">Vector</h2>
+<p>A <strong>vector</strong> is a mathematical object defined by two properties simultaneously: a <strong>magnitude</strong> (size, always non-negative) and a <strong>direction</strong> in space. This distinguishes it from a <strong>scalar</strong>, which carries magnitude only (e.g., temperature, mass, time). Graphically, a vector is drawn as an arrow: length encodes magnitude, and the arrowhead encodes direction. Vectors are written in several equivalent notations: $\vec{v}$, $\mathbf{v}$, or as an ordered tuple of components, $\vec{v} = \langle v_x, v_y \rangle$ in two dimensions.</p>
+<p>Given a vector's components, its magnitude follows from the Pythagorean theorem:</p>
+$$|\vec{v}| = \sqrt{v_x^2 + v_y^2}$$
+<p>and its direction is the angle $\theta$ it makes with a reference axis:</p>
+$$\theta = \tan^{-1}\left(\frac{v_y}{v_x}\right)$$
+<p>These two formulas are simply two ways of reading the same object — the component form $\langle v_x, v_y \rangle$ and the magnitude-direction form $(|\vec{v}|, \theta)$ describe the identical arrow.</p>
+<p><strong>Worked example.</strong> A drone's displacement from its launch point is recorded as $\vec{d} = \langle 3, 4 \rangle$ km. To report this to a pilot who thinks in terms of "how far and which way" rather than "how far east and how far north," convert to magnitude-direction form:</p>
+$$|\vec{d}| = \sqrt{3^2+4^2} = 5 \text{ km}, \qquad \theta = \tan^{-1}(4/3) \approx 53.1^\circ \text{ north of east}$$
+<p>The drone is 5 km from launch, at a bearing of 53.1° north of east — the 3-4-5 right triangle appears here not as an abstract exercise but as the geometry underlying any two-component vector.</p>
+<p><strong>Problem-solving application.</strong> The reverse conversion matters just as much: given magnitude and direction, recover the components. A vector of magnitude 10 N at 30° above the horizontal has components</p>
+$$v_x = 10\cos(30^\circ) \approx 8.66, \qquad v_y = 10\sin(30^\circ) = 5$$
+<p>This decomposition into components along a shared set of axes is the standard first move in most physics and engineering problems, since it puts every vector into a form that can be worked with numerically rather than geometrically. Practicing conversion in both directions — components to magnitude/direction, and magnitude/direction to components — builds the fluency needed for every later operation performed on vectors.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

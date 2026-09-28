@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electric Current | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="electric-current">Electric Current</h2>
+<p><strong>定义</strong></p>
+<p>电流描述的是电荷通过某一截面的速率。设在时间间隔 $\Delta t$ 内,有净电荷量 $\Delta Q$ 通过导体的某一横截面,则电流定义为</p>
+$$
+I = \frac{\Delta Q}{\Delta t}
+$$
+<p>电流的国际单位是安培(A),$1\text{ A} = 1\text{ C/s}$。当电荷流动的速率随时间变化时,更严格的定义采用瞬时形式:</p>
+$$
+I(t) = \frac{dQ}{dt}
+$$
+<p>习惯上,电流的方向被定义为正电荷运动的方向——即使在金属导体中,真正移动的载流子是带负电的电子,电流方向仍与电子实际运动方向相反。这一约定源于本杰明·富兰克林时代对电荷本质的历史性(且不完全正确的)假设,但至今仍是电路分析的标准规则。</p>
+<p><strong>例题</strong></p>
+<p>一根导线的横截面上,在 $5\text{ s}$ 内通过了 $2\text{ C}$ 的电荷,求电流大小。</p>
+$$
+I = \frac{\Delta Q}{\Delta t} = \frac{2\text{ C}}{5\text{ s}} = 0.4\text{ A}
+$$
+<p>若已知导线中电子数密度 $n$、电子电荷量 $e$、导线横截面积 $A$,还可以进一步反推电子的平均漂移速度 $v_d$,因为</p>
+$$
+I = nAv_d e
+$$
+<p>这一关系把宏观可测的电流与微观载流子的运动联系起来,是理解导体输运机制的关键桥梁。</p>
+<p><strong>问题求解应用</strong></p>
+<p>在电路分析中,电流公式常与电荷的时间积分结合使用。已知某电路中电流随时间变化为 $I(t) = 3t^2$(单位:A,$t$ 单位:s),求从 $t=0$ 到 $t=2\text{ s}$ 内通过的总电荷:</p>
+$$
+\Delta Q = \int_0^2 I(t)\, dt = \int_0^2 3t^2\, dt = \left[t^3\right]_0^2 = 8\text{ C}
+$$
+<p>这类题目训练学生把"速率"与"总量"通过积分/微分相互转换的能力——这正是电流概念(以及后续学习电容、电感中电压-电流关系)的核心数学工具。掌握 $I=\Delta Q/\Delta t$ 及其积分形式,是分析基尔霍夫电流定律、RC电路暂态过程等后续内容的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

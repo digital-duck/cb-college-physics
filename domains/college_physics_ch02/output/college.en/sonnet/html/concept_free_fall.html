@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Fall | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="free-fall">Free Fall</h2>
+<p>Free fall is the idealized motion of an object under the influence of gravity alone, with air resistance and friction ignored. Near Earth's surface, this means every object—regardless of mass—experiences the same constant downward acceleration, $g \approx 9.8\ \text{m/s}^2$. Choosing "up" as the positive direction, the acceleration is written $a = -g$, since gravity always pulls toward Earth. Because acceleration is constant, the standard kinematic equations apply directly:</p>
+$$v(t) = v_0 - gt$$
+$$y(t) = y_0 + v_0 t - \tfrac{1}{2}g t^2$$
+$$v^2 = v_0^2 - 2g(y - y_0)$$
+<p><strong>Worked example.</strong> A ball is thrown straight up from ground level with initial speed $v_0 = 20\ \text{m/s}$. How high does it rise, and when does it return to the ground?</p>
+<p>At the peak, $v = 0$, so $0 = v_0 - gt_{\text{peak}}$, giving $t_{\text{peak}} = v_0/g \approx 2.04\ \text{s}$. The maximum height is $y_{\max} = v_0^2/(2g) \approx 20.4\ \text{m}$. By symmetry, the ball returns to the ground at $t = 2t_{\text{peak}} \approx 4.08\ \text{s}$, striking the ground with speed $v_0$ (downward)—a direct consequence of energy conservation, since the same height is lost that was gained.</p>
+<p><strong>Problem-solving application.</strong> Free-fall problems are solved by identifying which of the three kinematic variables ($t$, $v$, $y$) is unknown and selecting the equation that omits the irrelevant one. For instance, if a rock is dropped ($v_0 = 0$) from a 45 m cliff, the time to reach the bottom uses the position equation directly:</p>
+$$45 = \tfrac{1}{2}g t^2 \implies t = \sqrt{\frac{2(45)}{9.8}} \approx 3.03\ \text{s}$$
+<p>A common pitfall is sign confusion: once "up" is chosen as positive, $v_0$, $y_0$, and $y$ must all be assigned consistent signs, and $g$ itself stays positive—only the acceleration term $-g$ carries the negative sign. Mastering free fall builds the foundation for projectile motion, where horizontal and vertical components are treated independently, with the vertical component obeying exactly these same equations.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

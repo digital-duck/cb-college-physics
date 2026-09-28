@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fundamental Frequency | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="fundamental-frequency-基频">Fundamental Frequency（基频）</h2>
+<p><strong>定义</strong></p>
+<p>当一根弦或一段空气柱发生振动时，它并不是只以单一方式振动，而是可以同时支持一系列离散的振动模式，称为<strong>简正模式</strong>（normal modes）。这些模式中频率最低的一个，称为<strong>基频</strong>（fundamental frequency），记作 $f_1$。其余较高频率的模式称为<strong>泛音</strong>（overtones）或<strong>谐波</strong>（harmonics），它们的频率通常是基频的整数倍（对两端固定的弦）或奇数倍（对一端封闭的空气柱）。基频由系统的边界条件、几何长度 $L$ 以及波在介质中的传播速度 $v$ 共同决定。</p>
+<p>对于两端固定的弦（如吉他弦），边界条件要求两端为波节，因此稳定驻波必须满足：</p>
+$$L = n\cdot\frac{\lambda_n}{2}, \quad n = 1, 2, 3, \dots$$
+<p>对应的频率为：</p>
+$$f_n = \frac{nv}{2L}$$
+<p>当 $n=1$ 时即为基频：</p>
+$$f_1 = \frac{v}{2L}$$
+<p>而弦上波速由张力 $T$ 与线密度 $\mu$ 决定：$v = \sqrt{T/\mu}$，因此：</p>
+$$f_1 = \frac{1}{2L}\sqrt{\frac{T}{\mu}}$$
+<p><strong>范例演算</strong></p>
+<p>设一根吉他弦长 $L = 0.65\ \text{m}$，线密度 $\mu = 0.006\ \text{kg/m}$，张力 $T = 80\ \text{N}$。先求波速：</p>
+$$v = \sqrt{\frac{80}{0.006}} \approx 115.5\ \text{m/s}$$
+<p>代入基频公式：</p>
+$$f_1 = \frac{115.5}{2 \times 0.65} \approx 88.8\ \text{Hz}$$
+<p><strong>问题解决应用</strong></p>
+<p>基频公式的实用价值在于它揭示了四个可调参数（长度、张力、线密度、边界条件）之间的定量关系，这正是乐器设计与调音的核心原理。例如，吉他手按压琴格缩短有效弦长 $L$ 会提高 $f_1$；调音钮增大张力 $T$ 同样提高音高；而低音弦故意加粗（增大 $\mu$）以在相同长度下获得更低的基频。对于管乐器，基频还依赖于空气柱是两端开口还是一端封闭——一端封闭的空气柱只能产生奇次谐波，其基频为 $f_1 = v/(4L)$，这解释了为何单簧管（一端近似封闭）与长笛（两端开口）在相同管长下音高不同。掌握这一关系，学生便能反向求解：已知目标音高与材料参数，设计出所需的弦长或管长。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

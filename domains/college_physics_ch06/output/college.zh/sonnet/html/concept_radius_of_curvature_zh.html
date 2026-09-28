@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radius Of Curvature | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="radius-of-curvature">Radius Of Curvature</h2>
+<p><strong>定义</strong></p>
+<p>曲率半径 $r$ 是物体沿曲线运动时，在某一点上与该曲线最贴合的圆的半径。对于最简单也最常见的情形——匀速圆周运动——曲线本身就是一个半径为 $r$ 的圆，物体到圆心的距离处处相等，$r$ 也就是这段圆周路径的半径。$r$ 的大小决定了旋转与向心量的尺度：路径弯曲得越急（$r$ 越小），物体改变运动方向所需的向心加速度就越大；路径越平缓（$r$ 越大），方向改变得越"温和"。</p>
+<p>对匀速圆周运动，向心加速度与曲率半径的关系为</p>
+$$a_c = \frac{v^2}{r}$$
+<p>其中 $v$ 是速度大小。由牛顿第二定律，维持该运动所需的向心力为</p>
+$$F_c = \frac{mv^2}{r}$$
+<p><strong>例题</strong></p>
+<p>一辆质量 $m = 1200\ \text{kg}$ 的汽车以 $v = 20\ \text{m/s}$ 的速度通过一段弯道。若弯道的曲率半径为 $r = 50\ \text{m}$，求汽车所需的向心力。</p>
+<p>代入公式：</p>
+$$F_c = \frac{mv^2}{r} = \frac{1200 \times 20^2}{50} = \frac{1200 \times 400}{50} = 9600\ \text{N}$$
+<p>这个力由轮胎与路面之间的摩擦力提供。若弯道半径改为 $r = 20\ \text{m}$（弯道更急），则</p>
+$$F_c = \frac{1200 \times 400}{20} = 24000\ \text{N}$$
+<p>可见曲率半径越小，所需向心力越大，这解释了为何急弯处更容易发生打滑。</p>
+<p><strong>问题求解应用</strong></p>
+<p>曲率半径常作为"给定条件"出现在工程与物理问题中，用来反推允许的最大速度或所需的摩擦系数。例如，已知路面与轮胎间最大静摩擦系数 $\mu$，可令 $F_c \le \mu mg$，从而解出安全通过弯道的最大速度：</p>
+$$\frac{mv^2}{r} \le \mu mg \quad\Longrightarrow\quad v_{\max} = \sqrt{\mu g r}$$
+<p>这类问题的关键在于识别出 $r$ 是路径的几何属性（由道路设计给定），而 $v$、$F_c$ 是待求的动力学量。掌握 $r$ 与 $a_c$、$F_c$ 的关系，是分析摩天轮、离心机、卫星轨道等一切圆周或近似圆周运动问题的起点。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

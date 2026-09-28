@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intrinsic Spin | College Physics Ch30</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="intrinsic-spin">Intrinsic Spin</h2>
+<p><strong>定义</strong></p>
+<p>电子除了绕原子核运动所具有的轨道角动量外，还具有一种与运动状态无关的固有角动量，称为自旋（intrinsic spin）。自旋不是电子真的在"自转"——若把电子当作经典带电小球计算，要产生观测到的角动量，其表面线速度将远超光速，这在物理上是不可能的。因此自旋是一个纯粹的量子力学属性，源自相对论性量子理论（狄拉克方程）的自然推论，没有经典对应物。</p>
+<p>自旋角动量的大小由自旋量子数 $s$ 决定，对电子而言 $s = \dfrac{1}{2}$，是固定不变的常数，不像轨道角动量量子数 $\ell$ 可取多个值。自旋角动量的大小为</p>
+$$
+S = \hbar\sqrt{s(s+1)} = \hbar\sqrt{\tfrac{1}{2}\cdot\tfrac{3}{2}} = \frac{\sqrt{3}}{2}\hbar
+$$
+<p>在任意选定的测量方向（通常记为 $z$ 轴）上，自旋角动量的投影只能取两个分立值，由磁自旋量子数 $m_s$ 描述：</p>
+$$
+S_z = m_s \hbar, \qquad m_s = +\tfrac{1}{2} \;(\text{自旋向上}, \uparrow) \ \text{或} \ -\tfrac{1}{2} \;(\text{自旋向下}, \downarrow)
+$$
+<p><strong>推导实例</strong></p>
+<p>斯特恩-格拉赫实验（Stern–Gerlach）证实了这种二值性：将一束银原子通过不均匀磁场，经典理论预测原子会连续散开成一条带；实验却观测到束流分裂成<strong>两条</strong>分立的痕迹，直接证明角动量在空间中的取向是量子化的，而非连续可调。这正是 $m_s = +\frac{1}{2}$ 与 $m_s = -\frac{1}{2}$ 两个态在磁场中受到方向相反的力所致。</p>
+<p><strong>问题求解应用</strong></p>
+<p>自旋是构建原子电子排布规则的关键工具。泡利不相容原理要求同一原子中任何两个电子不能拥有完全相同的四个量子数 $(n, \ell, m_\ell, m_s)$。由于 $m_s$ 只有两个取值，这意味着<strong>每个空间轨道最多容纳两个电子</strong>，且二者自旋必须相反（一上一下）。</p>
+<p>例如，判断氮原子（$Z=7$）的基态电子排布 $1s^2 2s^2 2p^3$ 是否合理：$1s$ 与 $2s$ 轨道各填满 2 个自旋相反的电子；$2p$ 亚层有 3 个简并轨道，根据洪特规则，3 个电子应分占三个轨道且自旋方向相同（均为 $\uparrow$），以使总自旋最大、能量最低。这一分析直接依赖对自旋量子化本质的理解，是求解多电子原子排布、磁性及光谱选择定则问题的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch30: Atomic Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

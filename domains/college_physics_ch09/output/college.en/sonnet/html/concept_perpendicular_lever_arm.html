@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perpendicular Lever Arm | College Physics Ch09</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="perpendicular-lever-arm">Perpendicular Lever Arm</h2>
+<p>Torque measures how effectively a force rotates an object about a pivot. When the force does not act exactly perpendicular to the object, only part of it contributes to rotation — and the perpendicular lever arm is the tool that isolates that effective part.</p>
+<p>Formally, torque is defined as $\tau = r_\perp F$, where $F$ is the magnitude of the applied force and $r_\perp$ is the <strong>perpendicular lever arm</strong>: the shortest distance from the pivot to the <em>line of action</em> of the force (the infinite line along which the force points, extended in both directions). This is equivalent to the more general vector definition $\tau = rF\sin\theta$, where $r$ is the distance from the pivot to the point of application and $\theta$ is the angle between the position vector and the force vector. The two formulas agree because $r_\perp = r\sin\theta$ — the perpendicular lever arm is just the component of $r$ that is perpendicular to $F$.</p>
+<p><strong>Worked example.</strong> A mechanic applies a $150\text{ N}$ force to a wrench handle $0.30\text{ m}$ long, pulling at an angle of $60°$ above the handle. Rather than computing $rF\sin\theta$ directly, find $r_\perp$ geometrically: drop a perpendicular from the pivot (the bolt) to the line along which the force acts. That perpendicular distance is $r_\perp = r\sin\theta = (0.30\text{ m})\sin(60°) = 0.26\text{ m}$. Then $\tau = r_\perp F = (0.26\text{ m})(150\text{ N}) = 39\text{ N·m}$.</p>
+<p><strong>Problem-solving application.</strong> The perpendicular lever arm method is often faster than the vector formula when a diagram is available: extend the force's line of action, drop a perpendicular from the pivot, and measure that segment directly — no angle needed. This is especially useful when force direction is given graphically rather than numerically. It also clarifies a key design principle: since $\tau = r_\perp F$, maximizing torque for a fixed force means maximizing $r_\perp$, which happens only when the force is applied <em>perpendicular to the lever</em> ($\theta = 90°$, so $r_\perp = r$). This is why door handles are placed far from hinges and wrenches are pulled perpendicular to their handle — both maximize the perpendicular lever arm to get the most torque from a given force.</p>
+<pre class="mermaid">graph TD
+    P["Pivot point"] -->|"r (position vector)"| A["Point of force application"]
+    A -->|"Force F acts along this line"| L["Line of action"]
+    P -->|"shortest distance, drawn perpendicular"| L
+    P -.->|"r_perp = r sin(theta)"| L</pre>
+<p><em>The perpendicular lever arm is the perpendicular segment from the pivot to the extended line of action of the force.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch9: Statics and Torque (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mechanical Advantage | College Physics Ch09</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="mechanical-advantage">Mechanical Advantage</h2>
+<p><strong>定义</strong></p>
+<p>机械利益（Mechanical Advantage，简称 MA）是简单机械输出力与输入力之比，用来衡量机械对施加力的放大程度：</p>
+$$
+MA = \frac{F_{\text{out}}}{F_{\text{in}}}
+$$
+<p>对于理想（无摩擦）机械，还可以用位移之比来计算，因为机械做的功不变——输入功等于输出功：</p>
+$$
+F_{\text{in}} \cdot d_{\text{in}} = F_{\text{out}} \cdot d_{\text{out}}
+\quad\Longrightarrow\quad
+MA_{\text{ideal}} = \frac{d_{\text{in}}}{d_{\text{out}}}
+$$
+<p>实际机械存在摩擦，输出功小于输入功，因此实际机械利益总是小于理想机械利益，二者之比定义为机械效率 $\eta = MA_{\text{actual}}/MA_{\text{ideal}}$。</p>
+<p><strong>范例</strong></p>
+<p>以杠杆为例：支点到输入力作用点的距离为 $d_{\text{in}} = 2\ \text{m}$，到输出端的距离为 $d_{\text{out}} = 0.5\ \text{m}$。理想机械利益为</p>
+$$
+MA_{\text{ideal}} = \frac{2\ \text{m}}{0.5\ \text{m}} = 4
+$$
+<p>这意味着施加 $50\ \text{N}$ 的输入力，理论上可以撬动 $200\ \text{N}$ 的负载。若实际测得撬动负载所需输入力为 $60\ \text{N}$（负载仍为 $200\ \text{N}$，说明存在摩擦损耗），则</p>
+$$
+MA_{\text{actual}} = \frac{200\ \text{N}}{60\ \text{N}} \approx 3.33,\qquad
+\eta = \frac{3.33}{4} \approx 83\%
+$$
+<p><strong>解题应用</strong></p>
+<p>设计或分析简单机械时，先明确力的方向与作用点，再判断该问题是"已知位移比求力比"还是相反。例如，斜面问题中，斜面长度 $L$ 与高度 $h$ 满足 $MA_{\text{ideal}} = L/h$；已知需要用 $100\ \text{N}$ 的力将 $500\ \text{N}$ 的物体沿斜面推上高度 $2\ \text{m}$ 的平台，可先求所需 $MA \geq 5$，再反推斜面长度 $L \geq 5 \times 2\ \text{m} = 10\ \text{m}$。对于滑轮组、齿轮组等复合机械，总机械利益等于各级机械利益的乘积，这一性质使得复杂机械系统的分析可以拆解为多个简单机械的连乘问题，是工程设计中估算所需机械结构规模的核心方法。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch9: Statics and Torque (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

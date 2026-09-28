@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atomic Nucleus | College Physics Ch30</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="atomic-nucleus">Atomic Nucleus</h2>
+<p><strong>定义</strong></p>
+<p>原子核（atomic nucleus）是原子中体积极小、密度极高、带正电的核心部分，集中了原子几乎全部的质量。原子核由质子（proton，带正电荷 $+e$）和中子（neutron，电中性）构成，二者统称为核子（nucleon）。原子核的半径约为 $10^{-15}\,\text{m}$（1 费米），而整个原子的半径约为 $10^{-10}\,\text{m}$，两者相差约十万倍——这意味着原子的绝大部分体积是电子云占据的"空旷空间"，而质量几乎全部集中在中心那个极小的核上。</p>
+<p>核内质子数 $Z$（原子序数）决定元素种类，质子数与中子数之和 $A = Z + N$ 称为质量数。将质子紧密束缚在如此微小空间内需要克服它们之间强烈的静电排斥力，这依赖于一种更强的相互作用——强核力（strong nuclear force），其作用距离极短（约 $10^{-15}\,\text{m}$），但强度远超电磁力。</p>
+<p><strong>质量与结合能</strong></p>
+<p>原子核的质量并不等于其组成核子质量的简单相加，而是存在"质量缺失"（mass defect）：</p>
+$$\Delta m = Z m_p + N m_n - m_{\text{nucleus}}$$
+<p>根据爱因斯坦质能关系，这部分缺失的质量转化为将核子束缚在一起所需的结合能（binding energy）：</p>
+$$E_b = \Delta m \, c^2$$
+<p><strong>worked example</strong>：氦-4 原子核由 2 个质子和 2 个中子组成。已知 $m_p = 1.007825\,\text{u}$，$m_n = 1.008665\,\text{u}$，实测氦核质量为 $4.001506\,\text{u}$。质量缺失为：</p>
+$$\Delta m = 2(1.007825) + 2(1.008665) - 4.001506 = 0.030474\,\text{u}$$
+<p>换算为能量（$1\,\text{u} \approx 931.5\,\text{MeV}/c^2$）：</p>
+$$E_b \approx 0.030474 \times 931.5 \approx 28.4\,\text{MeV}$$
+<p><strong>解决问题的应用</strong></p>
+<p>每核子结合能 $E_b/A$ 是判断原子核稳定性的关键指标：该值在铁、镍附近（$A \approx 56$）达到最大，这解释了为什么轻核聚变（如太阳内部氢聚变为氦）和重核裂变（如铀核裂变）都能释放能量——两者都是系统向每核子结合能更高、更稳定的方向演化。这一原理是核能发电、核武器设计以及恒星演化理论的定量基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch30: Atomic Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phase Change | College Physics Ch14</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="相变">相变</h2>
+<p><strong>定义</strong></p>
+<p>相变是物质在固态、液态、气态之间发生转变的过程，其发生条件由温度 $T$ 和压强 $P$ 共同决定。每种物质都有一张<strong>相图</strong>（phase diagram），用 $P$-$T$ 平面上的曲线划分出固、液、气三个区域。曲线本身代表两相共存的边界条件；三条边界曲线的交点称为<strong>三相点</strong>（triple point），此时固、液、气三相同时稳定共存；液气边界曲线的终点称为<strong>临界点</strong>（critical point），超过此点后液态与气态不再有明确区别。</p>
+<p>相变发生时，物质吸收或释放的能量称为<strong>潜热</strong>（latent heat），记作 $L$。与比热容不同，潜热对应的是相变过程中温度保持不变、能量用于改变分子间结合状态的能量：</p>
+$$Q = mL$$
+<p>其中 $Q$ 为吸收或释放的总热量，$m$ 为质量。例如水的汽化潜热约为 $L_v \approx 2.26 \times 10^6\ \text{J/kg}$，熔化潜热约为 $L_f \approx 3.34 \times 10^5\ \text{J/kg}$。</p>
+<p><strong>范例分析</strong></p>
+<p>考虑将 $200\text{ g}$ 的 $0^\circ\text{C}$ 冰完全转变为 $100^\circ\text{C}$ 水蒸气所需的总热量。此过程包含四个阶段：熔化（吸热但温度不变）、升温至 $100^\circ\text{C}$（吸热且温度变化，用比热容 $c$ 计算）、汽化（吸热但温度不变）。</p>
+$$Q_{\text{total}} = mL_f + mc\Delta T + mL_v$$
+<p>代入数值（$c_{\text{水}} = 4186\ \text{J/(kg·K)}$）：</p>
+$$Q_1 = 0.2 \times 3.34\times10^5 = 6.68\times10^4\ \text{J}$$
+$$Q_2 = 0.2 \times 4186 \times 100 = 8.37\times10^4\ \text{J}$$
+$$Q_3 = 0.2 \times 2.26\times10^6 = 4.52\times10^5\ \text{J}$$
+<p>三者相加，$Q_{\text{total}} \approx 6.03\times10^5\ \text{J}$。可见汽化阶段消耗的能量远超熔化与升温之和，这解释了为何蒸汽烫伤远比沸水烫伤更严重——同等质量下，蒸汽在凝结为水时释放的潜热是巨大的。</p>
+<p><strong>问题求解应用</strong></p>
+<p>在相图分析中，压强变化同样能诱发相变而无需改变温度：高压锅利用提高压强来提升水的沸点，从而在更高温度下烹煮食物；反之，高海拔地区气压降低，水的沸点随之下降，需要更长烹煮时间。求解此类问题时，应先判断系统位于相图的哪个区域，再确定越过边界曲线所需的 $\Delta P$ 或 $\Delta T$，并用潜热公式计算对应的能量收支。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch14: Heat and Heat Transfer Methods (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

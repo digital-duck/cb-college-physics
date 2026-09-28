@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carnot Cycle | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="carnot-cycle">Carnot Cycle</h2>
+<p><strong>定义</strong></p>
+<p>卡诺循环是由两条可逆等温过程和两条可逆绝热过程交替组成的闭合热力学循环，是在给定高温热源 $T_H$ 和低温热源 $T_C$ 之间运行的一切热机中效率最高的理论极限。其四个阶段为：(1) 在 $T_H$ 下等温膨胀，从热源吸热 $Q_H$；(2) 绝热膨胀，气体继续做功但不与外界换热，温度降至 $T_C$；(3) 在 $T_C$ 下等温压缩，向冷源排热 $Q_C$；(4) 绝热压缩，温度回升至 $T_H$，完成循环。由于每一步都是可逆的，整个循环不产生熵增，这正是卡诺循环效率最优的根本原因——它是热力学第二定律给出的效率上限的具体实现。</p>
+<p><strong>理论推导</strong></p>
+<p>对于理想气体，等温过程中吸放热量与体积变化的关系为 $Q_H = nRT_H \ln(V_2/V_1)$，$Q_C = nRT_C \ln(V_3/V_4)$。结合两条绝热过程满足的关系 $T_H V_2^{\gamma-1} = T_C V_3^{\gamma-1}$ 及 $T_C V_4^{\gamma-1} = T_H V_1^{\gamma-1}$，可以证明 $V_2/V_1 = V_3/V_4$，于是热量比恰好等于温度比：</p>
+$$\frac{Q_C}{Q_H} = \frac{T_C}{T_H}$$
+<p>由此得到卡诺效率：</p>
+$$\eta_{\text{Carnot}} = 1 - \frac{Q_C}{Q_H} = 1 - \frac{T_C}{T_H}$$
+<p>这个结果只依赖于两个热源的绝对温度，与工作物质的种类无关，这是卡诺定理的核心结论。</p>
+<p><strong>问题求解应用</strong></p>
+<p>设某发电厂的锅炉将水加热至 $T_H = 600\ \text{K}$，冷凝器排热至环境 $T_C = 300\ \text{K}$。卡诺效率上限为</p>
+$$\eta = 1 - \frac{300}{600} = 0.5 = 50\%$$
+<p>这意味着即使工程上做到极致，理论上也无法超过 50% 的热功转换效率；实际发电厂受不可逆损耗（摩擦、有限时间热传导等）影响，效率通常只有 35%–45%。</p>
+<p>反过来，该模型也可用于制冷循环分析：若将卡诺循环逆向运行，可作为制冷机或热泵，其性能系数 $\text{COP} = T_C/(T_H - T_C)$ 揭示了低温差制冷远比大温差制冷更节能。这类计算是工程热力学中评估动力循环、制冷系统理论上限的标准工具，也是理解真实循环（如奥托循环、朗肯循环）为何总是逊于卡诺极限的出发点。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

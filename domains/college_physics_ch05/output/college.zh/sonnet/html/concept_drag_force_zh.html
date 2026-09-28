@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drag Force | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="drag-force-阻力">Drag Force（阻力）</h2>
+<p><strong>定义</strong></p>
+<p>当物体在流体（空气或液体）中运动时，流体会对其施加一个与相对运动方向相反的阻碍力，称为阻力（drag force）。对于低速、体积小的物体，阻力近似与速度成正比（斯托克斯阻力）；但对于体积较大、速度较快的物体（如汽车、跳伞者、飞行的棒球），阻力主要来自流体被物体推开时产生的压差与湍流，这时阻力与速度的平方成正比：</p>
+$$
+F_D = \frac{1}{2} C \rho A v^2
+$$
+<p>其中 $C$ 是阻力系数（由物体形状决定的无量纲量），$\rho$ 是流体密度，$A$ 是物体垂直于运动方向的有效横截面积，$v$ 是物体相对于流体的速度。速度平方项意味着阻力随速度增加得非常快：速度加倍，阻力变为原来的 4 倍。</p>
+<p><strong>举例说明</strong></p>
+<p>一名跳伞者张开降落伞前，以质量 $m = 75\ \text{kg}$、速度 $v = 50\ \text{m/s}$ 下落。设其有效横截面积 $A = 0.7\ \text{m}^2$，阻力系数 $C = 1.0$，空气密度 $\rho = 1.2\ \text{kg/m}^3$。代入公式：</p>
+$$
+F_D = \frac{1}{2}(1.0)(1.2)(0.7)(50)^2 \approx 1050\ \text{N}
+$$
+<p>与重力 $mg \approx 735\ \text{N}$ 相比，阻力已超过重力，说明跳伞者正在减速——这正是终端速度（terminal velocity）出现前的过渡阶段。</p>
+<p><strong>问题解决应用：求终端速度</strong></p>
+<p>当阻力恰好等于重力时，物体不再加速，达到终端速度 $v_t$。令 $F_D = mg$：</p>
+$$
+\frac{1}{2} C \rho A v_t^2 = mg \quad \Rightarrow \quad v_t = \sqrt{\frac{2mg}{C \rho A}}
+$$
+<p>代入上例数值：</p>
+$$
+v_t = \sqrt{\frac{2(75)(9.8)}{(1.0)(1.2)(0.7)}} \approx 42\ \text{m/s}
+$$
+<p>这一结果解释了为什么跳伞者在自由落体阶段速度会趋于一个稳定值，而不是无限增大。这类问题在工程设计中同样重要：设计汽车或自行车头盔时，工程师正是通过调整 $C$（流线型）和 $A$（迎风面积）来降低阻力，从而提高能效或速度上限。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

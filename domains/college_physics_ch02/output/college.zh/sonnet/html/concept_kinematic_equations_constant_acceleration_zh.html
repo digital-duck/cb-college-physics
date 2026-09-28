@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinematic Equations Constant Acceleration | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="kinematic-equations-constant-acceleration">Kinematic Equations Constant Acceleration</h2>
+<p><strong>定义</strong></p>
+<p>当物体的加速度 $a$ 恒定时，位移 $x$、速度 $v$、加速度 $a$ 与时间 $t$ 之间满足四个代数方程，统称为匀加速运动方程：</p>
+$$v = v_0 + at \tag{1}$$
+$$x = x_0 + \bar{v}t, \quad \bar{v} = \frac{v_0+v}{2} \tag{2}$$
+$$x = x_0 + v_0 t + \frac{1}{2}at^2 \tag{3}$$
+$$v^2 = v_0^2 + 2a\Delta x \tag{4}$$
+<p>这四个方程并非彼此独立的物理定律，而是由加速度的定义 $a = dv/dt$（恒定时即 $a=\Delta v/\Delta t$）出发，通过积分或代数消元推导出的等价表达式。方程 (3) 是对 (1) 关于时间积分得到的位移表达式；方程 (4) 则是消去 (1)(3) 中的时间变量 $t$ 后得到的、不含时间的关系式——这一点在解题时至关重要：每个方程都缺少五个运动学量（$x_0, v_0, v, a, t$）中的一个，因此解题的关键是根据已知量和未知量选择合适的方程，而不是死记硬背。</p>
+<p><strong>范例</strong></p>
+<p>一辆车以 $v_0 = 20\ \text{m/s}$ 行驶，刹车后以 $a = -4\ \text{m/s}^2$ 减速。求车辆停止前行驶的距离。</p>
+<p>已知量：$v_0=20$，$a=-4$，末速度 $v=0$（停止）；未知量：$\Delta x$，时间 $t$ 未知且不需要。选用方程 (4)，因为它恰好不含 $t$：</p>
+$$0^2 = 20^2 + 2(-4)\Delta x \implies \Delta x = \frac{-400}{-8} = 50\ \text{m}$$
+<p><strong>解题应用</strong></p>
+<p>解匀加速问题的标准流程是：(1) 列出五个量中已知的三个；(2) 找出题目未涉及、也不需要求出的那个量；(3) 选择恰好不包含该量的方程。例如若已知 $v_0, a, t$ 而不关心 $v$，直接用方程 (3) 求 $x$，无需先算出末速度再代入 (2)。当题目分多个阶段（如先加速后匀速）时，需对每一阶段分别应用方程，并以前一阶段的末状态作为后一阶段的初始条件 $x_0, v_0$。需特别注意：这四个方程仅在加速度恒定的区间内成立；一旦加速度发生跳变（如刹车瞬间），必须将运动分段处理，不能跨越间断点直接套用同一组方程。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

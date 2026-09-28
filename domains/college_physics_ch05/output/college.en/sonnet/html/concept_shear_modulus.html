@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shear Modulus | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="shear-modulus">Shear Modulus</h2>
+<p>The shear modulus $S$ (also written $G$) is a material-specific constant, measured in $\text{N/m}^2$ (pascals), that quantifies how strongly a material resists shear deformation — a distortion in which parallel layers of the material slide relative to one another, changing the material's shape without changing its volume. Shear modulus relates the shear stress applied to an object to the resulting shear strain:</p>
+$$
+S = \frac{\text{shear stress}}{\text{shear strain}} = \frac{F/A}{\Delta x / h}
+$$
+<p>Here $F$ is the force applied parallel to a surface of area $A$, $\Delta x$ is the lateral displacement produced, and $h$ is the height (or thickness) over which that displacement occurs. Unlike Young's modulus, which governs stretching or compressing along an axis, $S$ governs distortion of angles — think of pushing the top of a deck of cards sideways while the bottom stays fixed. Values of $S$ are tabulated experimentally for each material (e.g., steel: $\sim 80 \times 10^9\ \text{N/m}^2$; aluminum: $\sim 25 \times 10^9\ \text{N/m}^2$; rubber: $\sim 0.0003 \times 10^9\ \text{N/m}^2$) and cannot be derived from first principles for a general course — they depend on atomic bonding and microstructure.</p>
+<p><strong>Worked example</strong>: A steel rod of cross-sectional area $A = 2 \times 10^{-4}\ \text{m}^2$ and length $h = 0.50\ \text{m}$ is fixed at one end. A shear force of $F = 4000\ \text{N}$ is applied parallel to the free end. Using $S_{\text{steel}} = 80 \times 10^9\ \text{N/m}^2$, solve for the lateral displacement $\Delta x$:</p>
+$$
+\Delta x = \frac{Fh}{SA} = \frac{(4000)(0.50)}{(80\times10^9)(2\times10^{-4})} = 1.25 \times 10^{-4}\ \text{m}
+$$
+<p>This displacement of about $0.125\ \text{mm}$ is tiny, consistent with steel's high resistance to shear.</p>
+<p><strong>Problem-solving application</strong>: Given any three of the four quantities $F$, $A$, $h$, $\Delta x$ (with $S$ looked up from a table), you can solve for the fourth. This is the core skill: identify which quantity is unknown, rearrange the defining relation algebraically, and substitute consistent SI units. A common pitfall is confusing $A$ (the area parallel to the applied force, i.e., the face being sheared) with the cross-sectional area perpendicular to an axial load — these are the same surface in shear problems but easy to mislabel when transitioning from tension/compression problems.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

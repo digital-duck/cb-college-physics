@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camera Lens | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="camera-lens">Camera Lens</h2>
+<p><strong>定义</strong></p>
+<p>照相机镜头是一个会聚透镜系统，当物体位于焦点之外（物距 $d_o > f$）时，会在感光元件（胶片或传感器）上形成一个实像。这正是薄透镜成像的"情形一"：只要物距大于焦距，透镜就能把发散光线重新会聚，在像方形成一个倒立、缩小的实像。成像关系由薄透镜方程给出：</p>
+$$
+\frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{f}
+$$
+<p>其中 $d_o$ 为物距，$d_i$ 为像距，$f$ 为焦距。放大率为</p>
+$$
+m = -\frac{d_i}{d_o}
+$$
+<p>负号表示像是倒立的；$|m| < 1$ 时像缩小，这也是远处物体在照相机中成像的典型情形。感光元件必须精确放置在像距 $d_i$ 处才能获得清晰对焦的图像——这就是相机对焦机构（前后移动镜头或传感器）存在的物理原因。</p>
+<p><strong>例题</strong></p>
+<p>某相机镜头焦距 $f = 50\ \text{mm}$，拍摄一个距离镜头 $d_o = 5\ \text{m} = 5000\ \text{mm}$ 的物体。求像距 $d_i$，并判断像的大小相对物体缩小了多少倍。</p>
+<p>代入薄透镜方程：</p>
+$$
+\frac{1}{d_i} = \frac{1}{f} - \frac{1}{d_o} = \frac{1}{50} - \frac{1}{5000} = \frac{100 - 1}{5000} = \frac{99}{5000}
+$$
+$$
+d_i = \frac{5000}{99} \approx 50.5\ \text{mm}
+$$
+<p>放大率：</p>
+$$
+m = -\frac{d_i}{d_o} = -\frac{50.5}{5000} \approx -0.0101
+$$
+<p>即像的高度约为物体高度的 $1\%$，并且倒立——这也解释了为什么早期相机和暗箱成像装置中，图像在传感器上是上下颠倒的，需要电子或机械方式再翻转过来。</p>
+<p><strong>应用与解题练习</strong></p>
+<p>在实际问题中，常见的求解顺序是：已知焦距和物距，求像距与放大率（如上例）；或者已知所需的传感器尺寸和物体实际高度，反推所需焦距。例如，若要让远处一栋 $10\ \text{m}$ 高的建筑物在 $24\ \text{mm}$ 宽的全画幅传感器上刚好清晰成像并布满画面，可先用放大率关系 $|m| = h_i / h_o$ 求出所需 $m$，再结合 $d_o \gg f$ 时 $d_i \approx f$ 的近似（因为像距趋近焦距），估算出合适的焦距。这类"给定约束、反推透镜参数"的练习，正是理解变焦镜头（改变有效焦距 $f$）与定焦镜头设计权衡的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

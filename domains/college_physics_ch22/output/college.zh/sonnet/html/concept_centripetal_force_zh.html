@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centripetal Force | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="centripetal-force">Centripetal Force</h2>
+<p><strong>定义</strong></p>
+<p>当物体做匀速圆周运动时，速度的大小不变，但方向不断改变，因此物体必定存在加速度。这个加速度始终指向圆心，称为<strong>向心加速度</strong>，其大小为 $a_c = \dfrac{v^2}{r}$。根据牛顿第二定律 $F = ma$，维持这种运动所需的合外力也必须指向圆心，这个合外力就叫做<strong>向心力</strong>：</p>
+$$
+F_c = \frac{mv^2}{r} = m r \omega^2
+$$
+<p>其中 $m$ 为物体质量，$v$ 为线速度，$r$ 为圆周半径，$\omega$ 为角速度（$v = r\omega$）。需要强调的是，向心力<strong>不是一种新的力</strong>，而是所有指向圆心的合力的名称——它可能由绳的张力、重力、摩擦力、正压力，甚至几种力的合力共同提供。</p>
+<p><strong>推导要点</strong></p>
+<p>设位置矢量大小不变、方向以角速度 $\omega$ 旋转，可证明速度矢量 $\vec{v}$ 垂直于半径，加速度矢量 $\vec{a}$ 指向圆心，大小为 $\omega^2 r = v^2/r$。这一结果来自对位置矢量求二阶导数，是圆周运动的几何必然结果，而非某种额外假设。</p>
+<p><strong>例题</strong></p>
+<p>一辆质量 $1200\ \text{kg}$ 的汽车以 $20\ \text{m/s}$ 的速度通过半径 $50\ \text{m}$ 的水平弯道。求路面摩擦力至少提供多大的向心力才能使汽车不打滑？</p>
+$$
+F_c = \frac{mv^2}{r} = \frac{1200 \times 20^2}{50} = 9600\ \text{N}
+$$
+<p>若已知路面与轮胎间最大静摩擦力为 $\mu m g$，则要求 $\mu \geq \dfrac{v^2}{gr} = \dfrac{400}{9.8 \times 50} \approx 0.82$，否则汽车会沿切线方向滑出弯道。</p>
+<p><strong>问题解决策略</strong></p>
+<p>分析向心力问题的关键步骤：(1) 明确圆周运动的半径 $r$ 与速度或角速度；(2) 找出所有指向圆心方向的实际力（张力、重力分量、摩擦力、正压力等），对其在径向方向列牛顿第二定律方程 $\sum F_{\text{径向}} = \dfrac{mv^2}{r}$；(3) 注意切向方向若有分力，则对应切向加速度，与向心力无关。常见错误是把"向心力"当作与重力、张力并列的第三种力去叠加，而正确做法是将其视为合力的名称与方向要求。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

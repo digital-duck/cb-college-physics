@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Displacement | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="displacement">Displacement</h2>
+<p>Displacement is the vector quantity describing the change in an object's position, defined as $\Delta x = x_f - x_i$, where $x_i$ is the initial position and $x_f$ is the final position. Because displacement is a vector, it carries both magnitude (how far) and direction (which way), and it depends only on the starting and ending points — not on the path taken to get there. This distinguishes displacement from distance, the total length of the path traveled, regardless of direction. In one dimension, a positive or negative sign encodes direction (e.g., $+x$ for rightward, $-x$ for leftward); in two or three dimensions, displacement is expressed as an ordered pair of components, $\Delta x$ and $\Delta y$ along perpendicular axes.</p>
+<p><strong>Worked example.</strong> A runner starts at $x_i = 2\text{ m}$, jogs to $x = 10\text{ m}$, then turns back to $x_f = 6\text{ m}$. The distance traveled is $8\text{ m} + 4\text{ m} = 12\text{ m}$, but the displacement is $\Delta x = 6 - 2 = 4\text{ m}$ in the positive direction — much smaller than the distance because the return trip partially cancels the outward trip.</p>
+<p><strong>Problem-solving application.</strong> Displacement problems typically require tracking direction carefully through multiple stages of motion, then combining components rather than magnitudes. For a 2D case, suppose a hiker walks $3\text{ km}$ east then $4\text{ km}$ north. Using the Pythagorean theorem, the net displacement magnitude is $|\vec{\Delta x}| = \sqrt{3^2 + 4^2} = 5\text{ km}$, directed at $\theta = \tan^{-1}(4/3) \approx 53.1^\circ$ north of east — even though the hiker walked $7\text{ km}$ total. Resolving motion into perpendicular components, combining each axis separately, then recombining the result is the standard method for any multi-leg displacement problem, and the same approach will apply directly to velocity and acceleration vectors later in kinematics.</p>
+<pre class="mermaid">flowchart LR
+    A["Position A (start)"] -.->|"curved path: distance traveled"| B["Position B (end)"]
+    A -->|"straight arrow: displacement (magnitude + direction)"| B</pre>
+<p><em>Displacement is the straight-line vector from start to end, while distance follows the actual curved path traveled.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

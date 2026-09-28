@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virtual Particle | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="虚粒子">虚粒子</h2>
+<p><strong>定义。</strong> 虚粒子是量子场论中出现的一种数学与物理对象：它不满足自由粒子应满足的能量-动量关系 $E^2 = (pc)^2 + (mc^2)^2$，也无法被探测器直接捕获,只能在极短的时间和空间尺度内"借用"能量而存在。其存在依据是海森堡能量-时间不确定性原理:</p>
+$$\Delta E \, \Delta t \gtrsim \frac{\hbar}{2}$$
+<p>这意味着,只要一个能量涨落 $\Delta E$ 在时间 $\Delta t \sim \hbar / \Delta E$ 内被"归还",它就不违反能量守恒——真空可以短暂地"借出"能量用于产生粒子对,只要迅速偿还。虚粒子正是力的传递者：电磁力由虚光子传递,强核力由虚胶子传递,弱核力由虚 $W^\pm, Z^0$ 玻色子传递。</p>
+<p><strong>推导示例：力程与粒子质量的关系。</strong> 一个有质量 $m$ 的虚粒子能存在的最长时间约为 $\Delta t \sim \hbar/(mc^2)$。在此时间内,它传播的最大距离(即力的作用范围)为</p>
+$$R \sim c\,\Delta t \sim \frac{\hbar}{mc}$$
+<p>这就是汤川势(Yukawa potential)力程公式的物理来源。代入胶子质量 $m=0$,得 $R \to \infty$——这正是电磁力和引力为长程力的原因。代入 $W$ 玻色子质量 $m_W c^2 \approx 80.4\text{ GeV}$,得</p>
+$$R \sim \frac{\hbar c}{m_W c^2} \approx \frac{197\text{ MeV·fm}}{80{,}400\text{ MeV}} \approx 2.4\times10^{-3}\text{ fm}$$
+<p>这与实验测得的弱相互作用作用距离（约 $10^{-18}$ 米）高度吻合,解释了为什么弱力如此短程。</p>
+<p><strong>问题解决应用。</strong> 费曼图中的内部线代表虚粒子,外部线代表可观测的实粒子。计算跃迁概率时,虚粒子的贡献以"传播子"(propagator)形式出现在积分中,其形式为 $1/(q^2 - m^2c^2)$,其中 $q$ 是四动量。当交换粒子质量增大,传播子被压低,相互作用被削弱——这正是核力随距离和交换粒子质量变化的定量基础。理解虚粒子,关键在于认识到"不可观测"与"效应可测"并不矛盾：卡西米尔效应(真空虚光子对之间产生的可测力)与兰姆位移都是虚粒子存在的实验证据,这类计算题要求学生把不确定性原理转化为具体的力程或能级修正估算。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

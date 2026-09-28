@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermometer | College Physics Ch13</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="thermometer">Thermometer</h2>
+<p><strong>定义</strong></p>
+<p>温度计是利用某种物理性质随温度发生可重复变化的原理来测量温度的装置。最常见的原理是热膨胀：液体（如水银或酒精）、固体（如双金属片）或气体在温度升高时体积或长度会按照近似线性的规律增大。设某种测温物质的长度或体积为 $L(T)$，在温度变化不大的范围内，其与温度 $T$ 的关系可近似写作：</p>
+$$
+L(T) = L_0\,[1 + \alpha (T - T_0)]
+$$
+<p>其中 $L_0$ 是参考温度 $T_0$ 下的长度，$\alpha$ 是该物质的线膨胀系数。由于 $\alpha$ 对每种物质而言在一定温度区间内几乎是常数，长度 $L$ 与温度 $T$ 之间就建立了一一对应、可重复的映射关系，这正是温度计能够"读出"温度的物理基础。</p>
+<p><strong>校准与刻度换算</strong></p>
+<p>温度计本身并不直接测出绝对温度，而是通过两个<strong>固定点</strong>来建立刻度。例如摄氏温标选取水的冰点（记为 $0^\circ C$）和沸点（记为 $100^\circ C$）作为基准，将两点之间的长度差 $L_{100} - L_0$ 均分为 100 等份，任意温度对应的读数为：</p>
+$$
+T(^\circ C) = 100 \times \frac{L(T) - L_0}{L_{100} - L_0}
+$$
+<p>这就是线性插值的校准方法。若要换算为华氏温标或开尔文温标，只需做线性变换：</p>
+$$
+T(^\circ F) = \tfrac{9}{5}\,T(^\circ C) + 32,\qquad T(K) = T(^\circ C) + 273.15
+$$
+<p><strong>问题解决示例</strong></p>
+<p>假设某水银温度计在冰点时水银柱长 $2.0\text{ cm}$，在沸点时长 $12.0\text{ cm}$。若某次测量读数为 $8.0\text{ cm}$，求对应的摄氏温度、华氏温度以及开尔文温度。</p>
+<p>代入校准公式：</p>
+$$
+T(^\circ C) = 100 \times \frac{8.0 - 2.0}{12.0 - 2.0} = 60^\circ C
+$$
+<p>再换算：$T(^\circ F) = \tfrac{9}{5}(60) + 32 = 140^\circ F$，$T(K) = 60 + 273.15 = 333.15\ K$。</p>
+<p>这个例子说明：只要膨胀关系在测量区间内保持线性（或经过合理的非线性校正），任何具有可重复热响应的物理量——电阻、体积、电压——都可以被"标定"成温度计，这也是现代热电偶、热敏电阻等电子温度计设计的核心思路。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch13: Temperature, Kinetic Theory, and the Gas Laws (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Converging Lens | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="凸透镜">凸透镜</h2>
+<p><strong>定义</strong></p>
+<p>凸透镜（会聚透镜）是一种中央厚、边缘薄的透镜，其两个表面通常是球面的一部分。根据折射定律，当一束平行于主光轴的光线穿过凸透镜时，每条光线在两个表面各发生一次折射，最终都会汇聚到主光轴上的同一点——<strong>焦点</strong>（focal point）。从透镜光心到焦点的距离称为<strong>焦距</strong> $f$，凸透镜的焦距定义为正值（$f>0$），这与凹透镜（发散透镜，$f<0$）形成对比。</p>
+<p>凸透镜成像遵循<strong>薄透镜公式</strong>：</p>
+$$\frac{1}{d_o}+\frac{1}{d_i}=\frac{1}{f}$$
+<p>其中 $d_o$ 是物距，$d_i$ 是像距。放大率为</p>
+$$m=-\frac{d_i}{d_o}$$
+<p>符号约定：实像的 $d_i>0$，$m<0$ 表示倒立；虚像的 $d_i<0$，$m>0$ 表示正立。</p>
+<p><strong>范例</strong></p>
+<p>设某凸透镜焦距 $f=10\text{ cm}$，物体置于 $d_o=15\text{ cm}$ 处。代入薄透镜公式：</p>
+$$\frac{1}{15}+\frac{1}{d_i}=\frac{1}{10}$$
+$$\frac{1}{d_i}=\frac{1}{10}-\frac{1}{15}=\frac{3-2}{30}=\frac{1}{30}$$
+<p>得 $d_i=30\text{ cm}$，为正值，说明成实像。放大率 $m=-30/15=-2$，即像是倒立的，且高度为物体的 2 倍。</p>
+<p><strong>解题应用</strong></p>
+<p>判断像的性质本质上是比较物距与焦距的相对关系，可分三种情形处理：</p>
+<li>$d_o>2f$：像为倒立、缩小的实像，位于 $f<d_i<2f$ 之间——这是相机成像的典型情形。</li>
+<li>$f<d_o<2f$：像为倒立、放大的实像，$d_i>2f$——投影仪即利用此原理。</li>
+<li>$d_o<f$：此时 $1/d_i=1/f-1/d_o<0$，$d_i$ 为负值，表示像位于物体同侧，为正立、放大的<strong>虚像</strong>——这正是放大镜的工作原理。</li>
+<p>解题时应先确定 $d_o$ 相对于 $f$ 的区间，预判像的类型，再代入公式求解 $d_i$ 与 $m$，并检验符号是否与预判一致，以避免符号错误。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

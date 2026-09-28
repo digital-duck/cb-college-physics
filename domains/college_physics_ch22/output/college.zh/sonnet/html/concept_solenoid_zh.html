@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solenoid | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="solenoid">Solenoid</h2>
+<p><strong>定义</strong></p>
+<p>螺线管（solenoid）是将导线密绕成许多匝、排列成长直圆柱形的线圈。当电流 $I$ 通过时，每一匝线圈都会产生自己的磁场，这些磁场在螺线管内部叠加增强，在外部则相互抵消。其结果是一个非常特殊的磁场分布：<strong>内部磁场几乎完全均匀，方向沿轴线；外部磁场几乎为零</strong>。这与单匝载流线圈或直导线周围逐渐衰减的磁场形成鲜明对比。</p>
+<p>利用安培定律（Ampère's Law）对一个矩形闭合回路（一条边在管内、平行于轴线，另一条边在管外）应用 $\oint \vec{B} \cdot d\vec{l} = \mu_0 I_{enc}$，并结合外部场为零、内部场垂直于两条短边的事实，可以严格推导出内部磁场大小为</p>
+$$B = \mu_0 n I$$
+<p>其中 $n = N/L$ 是单位长度上的匝数，$I$ 是电流，$\mu_0 = 4\pi \times 10^{-7}\ \text{T·m/A}$ 是真空磁导率。这个结果的关键在于：$B$ 与位置无关（只要在管内足够远离两端），也与螺线管的半径无关——这正是螺线管在实验和工程中如此有用的原因。</p>
+<p><strong>例题</strong></p>
+<p>一个螺线管长 $0.50\ \text{m}$，共绕 $2000$ 匝，通以电流 $I = 3.0\ \text{A}$。求管内磁场大小。</p>
+<p>解：先求单位长度匝数</p>
+$$n = \frac{N}{L} = \frac{2000}{0.50} = 4000\ \text{匝/m}$$
+<p>代入公式：</p>
+$$B = \mu_0 n I = (4\pi \times 10^{-7})(4000)(3.0) \approx 1.5 \times 10^{-2}\ \text{T}$$
+<p>这大约是地球磁场的 300 倍，说明密绕多匝线圈能高效地产生较强磁场。</p>
+<p><strong>解题应用</strong></p>
+<p>螺线管公式常用于反向设计：给定所需磁场，求所需电流或匝数。例如，若要在同一螺线管中获得 $B = 0.10\ \text{T}$，则</p>
+$$I = \frac{B}{\mu_0 n} = \frac{0.10}{(4\pi \times 10^{-7})(4000)} \approx 19.9\ \text{A}$$
+<p>这类计算在设计电磁铁、MRI 磁体和粒子加速器磁场时至关重要：工程师需要在导线载流能力（发热限制）与匝数密度之间权衡，以达到目标场强。理解 $B$ 只依赖于 $n$ 和 $I$（而非螺线管半径）也解释了为何实际螺线管可以做得细长而不损失场强均匀性。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

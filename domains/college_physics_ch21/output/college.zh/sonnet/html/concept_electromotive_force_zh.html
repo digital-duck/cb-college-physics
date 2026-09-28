@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electromotive Force | College Physics Ch21</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="electromotive-force">Electromotive Force</h2>
+<p><strong>定义</strong></p>
+<p>电动势（electromotive force，简称 emf，符号 $\varepsilon$）是指电源在没有电流通过时两端的电势差，代表电源内部化学反应或其他机制每单位电荷所提供的能量。严格地说，电动势并不是一种"力"，而是一种能量转换率：</p>
+$$\varepsilon = \frac{dW}{dq}$$
+<p>其中 $dW$ 是电源内部机制（电池的化学反应、发电机中的电磁感应等）对电荷 $dq$ 所做的功。单位与电压相同，都是伏特（V）。</p>
+<p>关键区别在于：电动势是电源的"理想"输出能力，而端电压（terminal voltage）$V$ 是电源实际对外提供的电压，二者关系为</p>
+$$V = \varepsilon - Ir$$
+<p>其中 $I$ 是电路中的电流，$r$ 是电源的内阻。当电路开路（$I=0$）时，端电压等于电动势；一旦电流开始流动，内阻上会消耗一部分能量，端电压随之下降。</p>
+<p><strong>例题</strong></p>
+<p>一节电池的电动势为 $\varepsilon = 9.0\ \text{V}$，内阻 $r = 0.50\ \Omega$。将其接入外部电阻 $R = 4.0\ \Omega$ 的电路中，求电路电流和端电压。</p>
+<p>由基尔霍夫电压定律：</p>
+$$\varepsilon = I(R + r)$$
+$$I = \frac{\varepsilon}{R+r} = \frac{9.0}{4.0+0.50} = 2.0\ \text{A}$$
+<p>端电压为：</p>
+$$V = \varepsilon - Ir = 9.0 - (2.0)(0.50) = 8.0\ \text{V}$$
+<p>可以看出，端电压（8.0 V）小于电动势（9.0 V），差值正是内阻上消耗的电压降。</p>
+<p><strong>问题解决应用</strong></p>
+<p>电动势概念的实际价值在于诊断电源性能。例如，若测得某电池空载电压为 12.6 V（近似等于 $\varepsilon$），接入 $2.0\ \Omega$ 负载后端电压降为 11.4 V，可反推内阻：</p>
+$$I = \frac{V}{R} = \frac{11.4}{2.0} = 5.7\ \text{A}, \qquad r = \frac{\varepsilon - V}{I} = \frac{12.6-11.4}{5.7} \approx 0.21\ \Omega$$
+<p>内阻增大通常意味着电池老化——这正是电动势与内阻概念在电池检测、电动车续航估算、电源设计中的核心应用。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch21: Circuits and DC Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radiation | College Physics Ch14</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="radiation">Radiation</h2>
+<p>热传递除了依靠传导（需要接触的介质）和对流（需要流体的宏观运动）之外，还存在第三种方式——辐射：一切温度高于绝对零度的物体都会以电磁波的形式向外发射能量，这种能量传递<strong>不需要任何介质</strong>，可以在真空中传播。太阳的热量穿越真空到达地球，正是辐射的典型例证。</p>
+<p>辐射的定量描述由<strong>斯特藩-玻尔兹曼定律</strong>给出：一个表面积为 $A$、绝对温度为 $T$ 的物体，单位时间内以辐射方式发出的功率为</p>
+$$P = \varepsilon \sigma A T^4$$
+<p>其中 $\sigma = 5.67 \times 10^{-8}\ \text{W/(m}^2\text{K}^4\text{)}$ 是斯特藩-玻尔兹曼常数，$\varepsilon$ 是物体表面的<strong>发射率</strong>（取值在 0 到 1 之间，理想黑体 $\varepsilon = 1$）。这个定律中温度以四次方出现，说明辐射功率对温度极其敏感——温度翻倍，辐射功率增至 16 倍。</p>
+<p><strong>例题</strong>：一块黑体金属板（$\varepsilon = 1$），面积 $A = 0.05\ \text{m}^2$，温度为 $T = 800\ \text{K}$，求其辐射功率。</p>
+$$P = \sigma A T^4 = (5.67\times10^{-8})(0.05)(800)^4$$
+<p>先算 $800^4 = 4.096\times10^{11}$，代入得</p>
+$$P = 5.67\times10^{-8} \times 0.05 \times 4.096\times10^{11} \approx 1161\ \text{W}$$
+<p><strong>问题求解应用</strong>：若物体同时向温度为 $T_{\text{env}}$ 的环境辐射并从环境吸收辐射，净辐射功率为</p>
+$$P_{\text{net}} = \varepsilon \sigma A (T^4 - T_{\text{env}}^4)$$
+<p>这一形式在工程与物理问题中非常实用：例如计算一个暴露在 300 K 房间中、表面温度为 500 K 的加热元件的净散热功率，只需将两个温度的四次方相减再代入公式，而不能简单地用温度差的一次方近似（除非温差远小于绝对温度本身，此时可用线性化近似 $\Delta P \approx 4\varepsilon\sigma A T^3 \Delta T$）。理解 $T^4$ 依赖关系，是分析恒星光度、建筑保温设计、电子元件散热等实际问题的关键出发点。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch14: Heat and Heat Transfer Methods (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

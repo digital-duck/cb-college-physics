@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radian | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="radian">Radian</h2>
+<p><strong>定义</strong></p>
+<p>弧度（radian）是角度的一种度量单位，其定义基于圆的几何性质：在半径为 $r$ 的圆中，若一段圆弧的长度恰好等于半径 $r$，则该弧所对的圆心角为 $1$ 弧度。一般地，若弧长为 $s$，半径为 $r$，则圆心角 $\theta$（以弧度为单位）满足</p>
+$$
+\theta = \frac{s}{r}
+$$
+<p>由于弧度是"长度除以长度"，它是一个<strong>无量纲量</strong>——这一点与"度"不同，度是人为约定的单位（将一个圆等分为 $360$ 份）。因为圆的周长为 $2\pi r$，所以整个圆周对应的圆心角为</p>
+$$
+\theta_{\text{full}} = \frac{2\pi r}{r} = 2\pi \text{ 弧度}
+$$
+<p>由此得到角度制与弧度制之间的换算关系：$180^\circ = \pi \text{ 弧度}$，即</p>
+$$
+1 \text{ 弧度} = \frac{180^\circ}{\pi} \approx 57.3^\circ, \qquad 1^\circ = \frac{\pi}{180} \text{ 弧度}
+$$
+<p><strong>例题</strong></p>
+<p>将 $150^\circ$ 转换为弧度：</p>
+$$
+150^\circ \times \frac{\pi}{180^\circ} = \frac{150\pi}{180} = \frac{5\pi}{6} \text{ 弧度}
+$$
+<p>反过来，将 $\dfrac{3\pi}{4}$ 弧度转换为角度：</p>
+$$
+\frac{3\pi}{4} \times \frac{180^\circ}{\pi} = 135^\circ
+$$
+<p><strong>问题求解中的应用</strong></p>
+<p>弧度制之所以在数学与物理中不可或缺，是因为它使许多公式在形式上大幅简化。例如：</p>
+<li>弧长公式：$s = r\theta$（若用角度制则需写成 $s = r\theta \cdot \pi/180$，更繁琐）；</li>
+<li>扇形面积：$A = \frac{1}{2}r^2\theta$；</li>
+<li>更关键的是，微积分中三角函数的导数公式</li>
+$$
+\frac{d}{d\theta}\sin\theta = \cos\theta
+$$
+<p><strong>只有当 $\theta$ 以弧度为单位时才成立</strong>。若用角度制，导数会多出一个因子 $\pi/180$，破坏公式的简洁性。这正是弧度被称为角度的"自然单位"的原因：它让角度与弧长、面积、导数等量之间的关系不依赖任何人为选定的比例常数。</p>
+<p>在解题时，凡涉及圆周运动的角速度 $\omega$（单位：弧度/秒）、简谐振动的相位、或三角函数求导求积分的题目，都必须先将角度统一换算为弧度，否则数值将出现系统性错误。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

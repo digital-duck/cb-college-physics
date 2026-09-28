@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viscosity | College Physics Ch12</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="粘度">粘度</h2>
+<p><strong>定义</strong></p>
+<p>当流体内部相邻层之间存在相对运动时，会产生一种阻碍运动的内摩擦力，称为<strong>粘滞力</strong>。粘度（记作 $\eta$，也叫粘滞系数）就是衡量这种内摩擦大小的物理量。设想两块平行板之间夹着一层流体，上板以速度 $v$ 相对下板滑动，两板间距为 $L$，接触面积为 $A$。要维持上板匀速运动，需要施加切向力 $F$，实验发现：</p>
+$$F = \eta \frac{vA}{L}$$
+<p>这个关系式说明：所需的力与接触面积 $A$ 成正比，与板间距 $L$ 成反比，与速度 $v$ 成正比。更一般地，若流体中速度沿垂直于流动方向的坐标 $y$ 变化，我们定义<strong>速度梯度</strong> $\dfrac{dv}{dy}$，则单位面积上的切应力为：</p>
+$$\tau = \eta \frac{dv}{dy}$$
+<p>这就是牛顿粘性定律。$\eta$ 的国际单位是 $\text{Pa·s}$（帕斯卡·秒）。$\eta$ 越大，流体越"粘稠"，流动时耗散的能量越多——蜂蜜的 $\eta$ 远大于水，水又大于空气。</p>
+<p><strong>例题</strong></p>
+<p>某粘度计中，一层机油（$\eta = 0.30\ \text{Pa·s}$）夹在两块平行板之间，板间距 $L = 2.0\ \text{mm}$，接触面积 $A = 0.050\ \text{m}^2$。若上板以 $v = 0.40\ \text{m/s}$ 匀速滑动，求所需的拉力 $F$。</p>
+<p>代入公式：</p>
+$$F = \eta \frac{vA}{L} = 0.30 \times \frac{0.40 \times 0.050}{0.002} = 3.0\ \text{N}$$
+<p><strong>问题解决应用</strong></p>
+<p>粘度概念的价值在于它连接了流体的宏观流动行为与内部分子摩擦机制，是分析层流阻力、管道输运功耗、以及生物流体（如血液）流动特性的关键参数。例如，在设计输油管道时，工程师需要根据 $\eta$ 估算泵送所需功率；温度升高通常使液体粘度下降（分子热运动增强，削弱内聚力），而使气体粘度上升（分子碰撞频率增加）——这一反直觉的对比常出现在工程考题中，提醒我们粘度不是一个孤立常数，而是温度、流体种类和分子结构共同决定的物理属性，需结合具体情境（层流条件、板间距、接触面积）才能正确应用公式求解实际问题。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch12: Fluid Dynamics and Its Biological and Medical Applications (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

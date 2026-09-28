@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultrasound Therapy | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="ultrasound-therapy">Ultrasound Therapy</h2>
+<p><strong>定义</strong></p>
+<p>超声治疗利用高强度聚焦超声（High-Intensity Focused Ultrasound, HIFU）将体外发射的声波能量汇聚到体内一个极小的焦域，通过两种物理机制产生治疗效果：一是<strong>热效应</strong>，声波在组织中传播时因粘滞摩擦而衰减，能量转化为热量，使焦点处温度在数秒内升至 $60$–$85\,^\circ\text{C}$，导致靶组织发生凝固性坏死（例如消融肿瘤）；二是<strong>空化效应（cavitation）</strong>，即声压的快速正负交替使组织或体液中形成微气泡，气泡在负压相膨胀、在正压相剧烈坍塌，瞬间释放局部高压与高温冲击波，从而机械性地击碎结石（如体外碎石术，ESWL 是其低强度变体）或破坏细胞结构。</p>
+<p>声强在焦点处的放大依赖于换能器的几何聚焦。若换能器孔径半径为 $a$，焦距为 $F$，波长为 $\lambda$，焦斑的横向直径近似为</p>
+$$
+d \approx 1.22\,\frac{\lambda F}{a},
+$$
+<p>这与光学衍射极限公式同源——声波与光波都是波动现象，聚焦分辨率都受衍射限制。焦点处声强 $I_f$ 相对换能器表面声强 $I_0$ 的增益大致正比于 $(a/d)^2$，这正是"聚焦"能把体外温和的声能变成体内可摧毁组织的能量密度的关键。</p>
+<p><strong>问题求解应用</strong></p>
+<p>设某 HIFU 系统换能器直径 $a=6\,\text{cm}$，焦距 $F=12\,\text{cm}$，工作频率 $f=1\,\text{MHz}$，人体软组织声速 $c\approx1540\,\text{m/s}$，故 $\lambda = c/f \approx 1.54\,\text{mm}$。代入焦斑公式：</p>
+$$
+d \approx 1.22 \times \frac{1.54\,\text{mm} \times 120\,\text{mm}}{60\,\text{mm}} \approx 3.76\,\text{mm}.
+$$
+<p>这说明该系统能将破坏效应限制在约 4 mm 的球形区域内，从而在毁损肿瘤的同时保护周围健康组织——这正是 HIFU 相比开放手术或全身放疗的核心优势：<strong>空间选择性</strong>。</p>
+<p>临床工程师由此可以反推设计参数：若肿瘤边界要求焦斑不超过 $2\,\text{mm}$，则需提高频率（缩短 $\lambda$）或增大孔径 $a$，但频率越高组织衰减越快、穿透深度越浅，因此频率、孔径与穿透深度之间存在工程权衡，这是超声治疗方案个体化设计（依据病灶深度与大小选择参数）的数学基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

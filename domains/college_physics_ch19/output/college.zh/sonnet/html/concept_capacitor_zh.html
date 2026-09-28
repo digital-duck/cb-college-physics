@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capacitor | College Physics Ch19</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="电容器">电容器</h2>
+<p><strong>定义</strong></p>
+<p>电容器是一种通过在两个相互靠近但不接触的导体表面上维持等量异种电荷来存储电场能量的装置。最常见的结构是<strong>平行板电容器</strong>：两块面积为 $A$ 的平行导体板,间距为 $d$，中间填充介电常数为 $\varepsilon$ 的绝缘介质（电介质）。当在两板间施加电压 $V$ 时，一板聚集正电荷 $+Q$，另一板聚集等量负电荷 $-Q$，电荷之间的静电吸引力使能量储存在两板间的电场中。</p>
+<p>电容器储存电荷的能力用<strong>电容</strong> $C$ 描述，定义为存储电荷量与两板间电压的比值：</p>
+$$
+C = \frac{Q}{V}
+$$
+<p>电容的单位是法拉（$\text{F}$），$1\ \text{F} = 1\ \text{C/V}$。对平行板电容器，可以从静电学推导出：</p>
+$$
+C = \frac{\varepsilon A}{d}
+$$
+<p>这个公式表明，电容只取决于<strong>几何形状</strong>（板的面积 $A$、间距 $d$）和<strong>介质材料</strong>（$\varepsilon$），与外加电压或电荷量无关——增大电压只会成比例地增大储存的电荷，比值 $C$ 保持不变。</p>
+<p><strong>例题</strong></p>
+<p>某平行板电容器的板面积 $A = 2.0 \times 10^{-2}\ \text{m}^2$，间距 $d = 1.0\ \text{mm}$，中间为真空（$\varepsilon_0 = 8.85 \times 10^{-12}\ \text{F/m}$）。求电容值，以及当外加电压 $V = 12\ \text{V}$ 时板上储存的电荷量。</p>
+$$
+C = \frac{\varepsilon_0 A}{d} = \frac{(8.85 \times 10^{-12})(2.0 \times 10^{-2})}{1.0 \times 10^{-3}} \approx 1.77 \times 10^{-10}\ \text{F} = 177\ \text{pF}
+$$
+<p>由 $Q = CV$：</p>
+$$
+Q = (1.77 \times 10^{-10})(12) \approx 2.12 \times 10^{-9}\ \text{C}
+$$
+<p><strong>解题应用</strong></p>
+<p>电容器储存的能量为 $U = \tfrac{1}{2}CV^2$，这一关系在设计储能元件（如相机闪光灯、DC-DC 转换器的滤波电路）时至关重要：若要在有限电压下储存更多能量，可通过增大板面积、减小间距，或选用高介电常数材料（如陶瓷、云母）来提高 $C$。反之，若已知所需储能与允许电压，可反解 $C = 2U/V^2$，进而确定电容器的物理尺寸。这种"电荷—电压—几何"三者互相制约的关系，是电路分析和电子器件设计中反复出现的核心计算模式。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch19: Electric Potential and Electric Field (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

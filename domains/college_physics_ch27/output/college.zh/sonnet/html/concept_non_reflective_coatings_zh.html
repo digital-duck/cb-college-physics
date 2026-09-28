@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Non Reflective Coatings | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="non-reflective-coatings">Non Reflective Coatings</h2>
+<p><strong>定义</strong></p>
+<p>增透膜（non-reflective coating，也称减反射膜）是镀在透镜或光学表面上的一层薄膜，其厚度经过精确设计，使得从薄膜上下两个界面反射回来的光波发生<strong>相消干涉</strong>，从而大幅降低表面反射率、提高透射光强度。这一现象的物理基础是薄膜干涉：光线在薄膜上表面反射一次，在薄膜下表面（膜与基底玻璃的界面）也反射一次，两束反射光会发生叠加。</p>
+<p>设薄膜厚度为 $t$，折射率为 $n_1$，光在薄膜内的传播路径产生的光程差为 $2n_1 t$（光垂直入射时）。要实现相消干涉，还需考虑两次反射是否存在半波损失。当膜的折射率 $n_1$ 介于空气（$n=1$）与玻璃基底（$n_2$）之间时（即 $1<n_1<n_2$），两次反射都发生"光密到光疏"以外的情形，各自产生 $\pi$ 相位跳变，两者相互抵消，因此相消干涉条件为：</p>
+$$2n_1 t = \left(m+\tfrac{1}{2}\right)\lambda, \quad m=0,1,2,\dots$$
+<p>取最小厚度（$m=0$）：</p>
+$$t = \frac{\lambda}{4n_1}$$
+<p>这正是"四分之一波长膜"名称的由来。</p>
+<p><strong>范例解析</strong></p>
+<p>设计一款针对可见光中心波长 $\lambda = 550\text{ nm}$（人眼最敏感的绿光）的增透膜，膜材料为 $\text{MgF}_2$，折射率 $n_1 = 1.38$，玻璃基底折射率 $n_2 = 1.50$。由于 $1 < 1.38 < 1.50$，满足半波损失相互抵消的条件，代入公式：</p>
+$$t = \frac{550\text{ nm}}{4 \times 1.38} \approx 99.6\text{ nm}$$
+<p>即镀膜厚度约为 100 纳米——这也说明为何薄膜干涉现象只在纳米尺度的膜层中才会显著。</p>
+<p><strong>问题解决应用</strong></p>
+<p>增透膜的设计需要处理两个实际约束。第一，由于波长依赖性,该厚度只能让某一特定波长（通常取绿光）达到完全相消，而红光、蓝光只能被部分削弱——这正是镀膜镜头在特定角度下呈现淡紫色或淡绿色反光的原因。第二，实际镜头常采用<strong>多层镀膜</strong>（multi-coating），即交替镀上多层不同折射率的薄膜,每层针对不同波长范围优化，从而将整个可见光谱的反射率压低到 1% 以下。</p>
+<p>在解题时，学生应能反向推导：已知某厂商声称某镜头膜厚为 $92\text{ nm}$，折射率 $1.45$，可反推其设计针对的中心波长 $\lambda = 4n_1t = 4\times1.45\times92\text{ nm}\approx 533\text{ nm}$，从而判断该镀膜是否针对绿光优化。这类计算训练的核心，是将干涉相长/相消条件从纯理论公式转化为光学工程中的选材与制程决策。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

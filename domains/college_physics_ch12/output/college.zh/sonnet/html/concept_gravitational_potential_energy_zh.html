@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gravitational Potential Energy | College Physics Ch12</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="gravitational-potential-energy">Gravitational Potential Energy</h2>
+<p><strong>定义</strong></p>
+<p>重力势能是物体由于在重力场中所处高度而储存的能量。当物体质量为 $m$，处在重力加速度为 $g$ 的均匀场中，相对于某一参考高度的高度为 $h$ 时，其重力势能定义为</p>
+$$
+U = mgh
+$$
+<p>这一表达式来自将重力所做的功与势能的关系联系起来：重力是保守力，做的功只取决于起点和终点的高度差，与路径无关。具体而言，物体从高度 $h_1$ 下降到 $h_2$ 时，重力做的功为</p>
+$$
+W_{\text{gravity}} = mg(h_1 - h_2) = -\Delta U
+$$
+<p>即重力做正功时，势能减少；反之亦然。因为势能只依赖于高度差，参考点（$h=0$ 处）可以任意选取，不影响物理结果，只影响 $U$ 的数值。</p>
+<p><strong>例题</strong></p>
+<p>一个质量为 $2\text{ kg}$ 的物体从 $5\text{ m}$ 高的桌面下落到地面（$g = 9.8\text{ m/s}^2$）。求它在下落过程中损失的重力势能，以及若无空气阻力，它落地时的动能。</p>
+<p>解：势能损失为</p>
+$$
+\Delta U = mgh = (2)(9.8)(5) = 98\text{ J}
+$$
+<p>由能量守恒（无摩擦、无空气阻力），损失的势能全部转化为动能：</p>
+$$
+KE_{\text{final}} = 98\text{ J}
+$$
+<p>由此可反推落地速度：$\tfrac{1}{2}mv^2 = 98 \Rightarrow v = \sqrt{98} \approx 9.9\text{ m/s}$。</p>
+<p><strong>问题求解应用</strong></p>
+<p>重力势能的核心用途在于简化涉及高度变化的动力学问题：只要重力是唯一（或主要）做功的力，就可以用机械能守恒</p>
+$$
+KE_1 + U_1 = KE_2 + U_2
+$$
+<p>来求解，而无需逐步分析加速度和时间。例如，求解过山车在轨道最高点需要多大速度才能维持接触轨道，或计算摆锤从某一角度摆动到最低点时的速度，都可以先设定参考高度、写出两端的 $U$ 和 $KE$，再联立求解未知量。解题的关键技巧是：合理选择参考高度（通常取运动最低点为 $h=0$）以简化计算，并确认过程中除重力外是否还有非保守力（如摩擦、空气阻力）做功——若有，则需在能量方程中加入耗散项 $W_{\text{friction}}$，方程变为 $KE_1 + U_1 = KE_2 + U_2 + |W_{\text{friction}}|$。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch12: Fluid Dynamics and Its Biological and Medical Applications (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

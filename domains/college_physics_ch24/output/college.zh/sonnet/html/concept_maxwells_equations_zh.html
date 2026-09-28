@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maxwells Equations | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="maxwells-equations">Maxwells Equations</h2>
+<p><strong>定义</strong></p>
+<p>麦克斯韦方程组是描述电场与磁场如何产生、如何相互转化的四个偏微分方程,是经典电磁学的完整理论基础。以微分形式表示:</p>
+$$\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0} \quad \text{(高斯电场定律)}$$
+$$\nabla \cdot \mathbf{B} = 0 \quad \text{(高斯磁场定律)}$$
+$$\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t} \quad \text{(法拉第感应定律)}$$
+$$\nabla \times \mathbf{B} = \mu_0 \mathbf{J} + \mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \quad \text{(安培-麦克斯韦定律)}$$
+<p>其中 $\mathbf{E}$、$\mathbf{B}$ 分别为电场、磁场,$\rho$ 为电荷密度,$\mathbf{J}$ 为电流密度,$\varepsilon_0$、$\mu_0$ 为真空介电常数与磁导率。前两式说明电荷是电场的源,而磁场没有"磁荷"源(散度恒为零);后两式说明变化的磁场产生电场(法拉第定律),而变化的电场也能产生磁场——这是麦克斯韦对安培定律的关键修正,称为"位移电流"项 $\mu_0 \varepsilon_0 \, \partial \mathbf{E}/\partial t$。正是这一项使方程组在真空中(无电荷、无电流)呈现出电场与磁场互相耦合、自我维持的振荡结构。</p>
+<p><strong>推导:电磁波方程</strong></p>
+<p>对法拉第定律两边取旋度,并代入安培-麦克斯韦定律(真空中 $\rho = 0$, $\mathbf{J} = 0$):</p>
+$$\nabla \times (\nabla \times \mathbf{E}) = -\frac{\partial}{\partial t}(\nabla \times \mathbf{B}) = -\mu_0 \varepsilon_0 \frac{\partial^2 \mathbf{E}}{\partial t^2}$$
+<p>利用矢量恒等式 $\nabla \times (\nabla \times \mathbf{E}) = \nabla(\nabla \cdot \mathbf{E}) - \nabla^2 \mathbf{E}$,且真空中 $\nabla \cdot \mathbf{E} = 0$,得到波动方程:</p>
+$$\nabla^2 \mathbf{E} = \mu_0 \varepsilon_0 \frac{\partial^2 \mathbf{E}}{\partial t^2}$$
+<p>这与标准波动方程 $\nabla^2 f = \dfrac{1}{v^2}\dfrac{\partial^2 f}{\partial t^2}$ 比较,可得波速</p>
+$$v = \frac{1}{\sqrt{\mu_0 \varepsilon_0}} \approx 3.00 \times 10^8 \ \text{m/s}$$
+<p>这正是光速 $c$。麦克斯韦由此预言光本身就是一种电磁波,统一了光学与电磁学。</p>
+<p><strong>问题求解应用</strong></p>
+<p>已知真空介电常数 $\varepsilon_0 = 8.85 \times 10^{-12}\ \text{F/m}$,真空磁导率 $\mu_0 = 4\pi \times 10^{-7}\ \text{T·m/A}$,代入上式验证 $v \approx 3.00\times 10^8$ m/s,与实测光速吻合。这一推导训练的核心技能是:如何将场方程组通过矢量代数运算(旋度的旋度、恒等式化简)转化为可预测物理现象(波传播、波速)的方程,是电磁学中"由对称方程组导出可观测量"的典型范例。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

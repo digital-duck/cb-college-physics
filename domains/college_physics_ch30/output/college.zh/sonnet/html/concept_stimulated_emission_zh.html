@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stimulated Emission | College Physics Ch30</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="stimulated-emission">Stimulated Emission</h2>
+<p><strong>定义</strong></p>
+<p>当一个原子或分子处于激发态（能级 $E_2$）时，若受到一个能量恰好等于 $E_2 - E_1$ 的光子照射，该光子可以"诱导"原子跃迁回低能级 $E_1$，同时释放出第二个光子。这一过程称为受激发射（stimulated emission），由爱因斯坦于1917年首次提出，是激光（LASER：Light Amplification by Stimulated Emission of Radiation）得以实现的物理基础。</p>
+<p>受激发射产生的新光子与入射光子具有四个完全相同的属性：频率（能量）、相位、偏振方向和传播方向。这种"复制"特性与自发发射（spontaneous emission）截然不同——自发发射的光子方向和相位是随机的，无法产生相干光。</p>
+<p>爱因斯坦用三个系数描述了原子与辐射场相互作用的三种方式：自发发射系数 $A_{21}$，以及受激吸收与受激发射系数 $B_{12}$、$B_{21}$。在热平衡下，通过普朗克黑体辐射公式可推导出关系：</p>
+$$
+\frac{A_{21}}{B_{21}} = \frac{8\pi h \nu^3}{c^3}
+$$
+<p>且简并度相同时 $B_{12} = B_{21}$。这表明，受激发射的速率正比于入射光子的辐射场能量密度 $\rho(\nu)$：</p>
+$$
+R_{\text{stim}} = B_{21}\,\rho(\nu)\, N_2
+$$
+<p>其中 $N_2$ 为处于高能级的粒子数。</p>
+<p><strong>问题解决应用：光增益的条件</strong></p>
+<p>要让受激发射产生净光放大（而非被吸收抵消），必须满足<strong>粒子数反转</strong>（population inversion）：$N_2 > N_1$（按简并度加权）。在正常热平衡下，玻尔兹曼分布保证低能级粒子数总是更多，因此普通物质对光是净吸收的。</p>
+<p>例如，氦氖激光器通过放电激励氦原子，再经共振碰撞将能量转移给氖原子，人为制造 $N_2 > N_1$ 的非平衡状态。此时，一个波长为 632.8 nm 的光子进入增益介质后，触发链式受激发射，每次碰撞都"克隆"出一个相位、方向一致的光子，光强呈指数增长：</p>
+$$
+I(z) = I_0\, e^{g z}
+$$
+<p>其中 $g$ 为增益系数，正比于 $(N_2 - N_1)$。这正是激光腔通过反射镜多次往返放大光强、最终输出高相干光束的物理机制。理解受激发射与粒子数反转的关系，是设计任何激光系统（从激光笔到医用激光手术刀）的理论起点。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch30: Atomic Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

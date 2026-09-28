@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interference Order | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="interference-order">Interference Order</h2>
+<p><strong>定义</strong></p>
+<p>干涉级次 $m$ 是一个整数，用来标记干涉或衍射图样中各级明纹（或暗纹）在序列中的位置。当两束（或多束）相干光波发生叠加时，只有当它们之间的光程差恰好等于波长的整数倍时，波峰才会与波峰重合，产生相长干涉，形成明纹；而当光程差为半波长的奇数倍时，波峰与波谷重合，产生相消干涉，形成暗纹。对于双缝干涉，明纹条件为</p>
+$$d\sin\theta = m\lambda, \quad m = 0, \pm1, \pm2, \dots$$
+<p>其中 $d$ 为缝间距，$\theta$ 为衍射角，$\lambda$ 为波长。$m=0$ 对应中央亮纹（零级，光程差为零），$m=\pm1$ 对应紧邻两侧的第一级亮纹，依此类推。级次 $m$ 越大，说明该级明纹相对中央亮纹的光程差越大。</p>
+<p><strong>范例</strong></p>
+<p>设某双缝实验中，缝间距 $d = 0.20\,\text{mm}$，激光波长 $\lambda = 600\,\text{nm}$，屏幕距双缝 $L = 2.0\,\text{m}$。求第三级亮纹（$m=3$）在屏幕上偏离中心的位置。</p>
+<p>由于 $\theta$ 很小，可用近似 $\sin\theta \approx \tan\theta = y/L$，代入明纹条件：</p>
+$$y_m = \frac{m\lambda L}{d}$$
+$$y_3 = \frac{3 \times 600\times10^{-9}\,\text{m} \times 2.0\,\text{m}}{0.20\times10^{-3}\,\text{m}} = 0.018\,\text{m} = 18\,\text{mm}$$
+<p>即第三级亮纹出现在中央亮纹上方（或下方）$18\,\text{mm}$ 处。</p>
+<p><strong>解题应用</strong></p>
+<p>已知级次公式后，可反过来利用实验测得的条纹间距求波长或缝间距——这是光谱仪、光栅测量等实际仪器的核心原理。例如，若测得相邻亮纹间距 $\Delta y = y_{m+1} - y_m = \lambda L/d$，只需测量 $\Delta y$、$L$、$d$，即可求出未知波长 $\lambda = d\,\Delta y / L$。</p>
+<p>在多缝光栅（衍射光栅）中，级次 $m$ 同样标记不同方向上的强度极大值，且级次越高，角度分辨率越精细，但可用的级次数受限于 $|\sin\theta| \le 1$，即 $m \le d/\lambda$。这一限制在设计光谱分析仪器时是必须考虑的关键约束。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

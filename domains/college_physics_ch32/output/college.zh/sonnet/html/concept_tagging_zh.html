@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tagging | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="tagging-标记法">Tagging（标记法）</h2>
+<p><strong>定义</strong></p>
+<p>标记法（tagging）是将放射性核素连接到某种化合物上，使该化合物在体内的分布、代谢或排泄过程可以被外部探测器追踪的技术。这种带有放射性核素的化合物称为放射性药物（radiopharmaceutical）或标记化合物。标记法的核心原理是：放射性核素的化学性质（决定它与其他原子结合的方式）与其核性质（决定它如何衰变、发射何种辐射）是相互独立的。因此，可以选择一种在生物体内有特定"目的地"的化合物（例如葡萄糖、碘化物或某种抗体），将其中一个原子替换为该元素的放射性同位素，化合物的生物学行为基本不变，但现在它会随身携带一个可探测的"信标"。</p>
+<p><strong>核素选择的关键条件</strong></p>
+<p>一个理想的标记核素需要满足：（1）半衰期足够短，使患者接受的辐射剂量最小化，但又要足够长，能完成从生产、运输到检测的全过程；（2）发射的辐射类型适合探测，通常是 $\gamma$ 射线（穿透力强，可穿出人体被外部探测器捕获），而非 $\alpha$ 或高能 $\beta$ 粒子（会造成局部组织损伤且难以穿透人体成像）。锝-99m（$^{99m}\text{Tc}$）正是因为半衆期约 6 小时、只发射 $140\ \text{keV}$ 的 $\gamma$ 光子，成为医学显像中最常用的标记核素。</p>
+<p><strong>应用实例：碘-131 与甲状腺</strong></p>
+<p>甲状腺细胞天然会从血液中摄取碘，用于合成甲状腺激素，这一生理特性与碘的化学身份有关，与碘的具体同位素无关。若给患者注射含放射性碘-131（$^{131}\text{I}$）的化合物，甲状腺会像摄取普通碘一样摄取它。医生随后用 $\gamma$ 探测器扫描颈部，摄取量分布图可以揭示甲状腺功能是否亢进、是否存在结节或肿瘤区域。</p>
+<p><strong>问题解决应用</strong></p>
+<p>假设某医院使用 $^{131}\text{I}$（半衰期 $T_{1/2}=8.02$ 天）标记的碘化钠溶液进行甲状腺扫描，要求给药后 24 小时内患者体内的放射性活度不超过初始值的 15%，以判断该方案是否满足辐射安全限制。利用衰变公式</p>
+$$A(t) = A_0 \left(\frac{1}{2}\right)^{t/T_{1/2}}$$
+<p>代入 $t = 1$ 天：</p>
+$$\frac{A(1\ \text{天})}{A_0} = \left(\frac{1}{2}\right)^{1/8.02} \approx 0.917$$
+<p>计算结果显示 24 小时后活度仍为初始值的约 91.7%，远高于 15% 的限制，说明短期扫描本身不会大幅降低体内活度，患者辐射暴露的控制主要依赖给药剂量的精确计算，而非依赖核素本身的快速衰变。这一分析体现了标记法应用中定量评估与安全设计之间的直接联系。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

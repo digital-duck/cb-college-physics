@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radioactive Dating | College Physics Ch31</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="放射性测年法">放射性测年法</h2>
+<p><strong>定义</strong></p>
+<p>放射性测年法利用放射性同位素的衰变规律，通过测量样品中剩余母核素与子核素（或初始母核素）的比例，推算材料形成或死亡的年代。核心物理规律是放射性衰变服从一级动力学：设某时刻母核素数量为 $N(t)$，衰变常数为 $\lambda$，则</p>
+$$
+\frac{dN}{dt} = -\lambda N \quad\Longrightarrow\quad N(t) = N_0\, e^{-\lambda t}
+$$
+<p>其中 $N_0$ 为初始核素数量。半衰期 $T_{1/2}$（母核素衰变至一半所需时间）与 $\lambda$ 的关系为</p>
+$$
+T_{1/2} = \frac{\ln 2}{\lambda}
+$$
+<p>两者本质是同一衰变过程的不同参数化方式：$\lambda$ 描述瞬时衰变速率，$T_{1/2}$ 描述特征时间尺度。</p>
+<p><strong>例题</strong></p>
+<p>碳-14 的半衰期约为 5730 年。某古代木炭样品中碳-14 的比例只剩现代大气标准的 25%。求该样品的年龄。</p>
+<p>解：由 $N(t)/N_0 = e^{-\lambda t} = 0.25$，两边取自然对数：</p>
+$$
+-\lambda t = \ln(0.25) = -2\ln 2
+$$
+<p>因为 $\lambda = \ln 2 / T_{1/2}$，代入得</p>
+$$
+t = \frac{2\ln 2}{\lambda} = 2\,T_{1/2} = 2 \times 5730 \approx 11460 \text{ 年}
+$$
+<p>也可以直接理解：剩余 25% 恰好经过两个半衰期（$100\% \to 50\% \to 25\%$），所以年龄是半衰期的整数倍，无需复杂计算。</p>
+<p><strong>问题求解应用</strong></p>
+<p>放射性测年的关键在于选择半衰期与目标年代尺度匹配的同位素：碳-14（半衰期 5730 年）适用于数千至约 5 万年内的有机物；铀-238／铅-206（半衰期约 45 亿年）则用于测定数亿至数十亿年的岩石年龄。求解时的通用步骤是：先由测得的比例 $N(t)/N_0$ 求出 $t/T_{1/2}$ 的值（利用 $\ln$ 关系式），再乘以该同位素的半衰期得到年龄。若样品比例并非半衰期的整数次方，则必须使用对数计算而非直接倍数估算，这正是指数衰变模型不可替代之处。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch31: Radioactivity and Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diamond Sparkle | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="钻石的璀璨">钻石的璀璨</h2>
+<p>钻石的璀璨来源于两个物理量的极端组合：极高的折射率（约 $n \approx 2.42$）和由此产生的极小临界角。根据斯涅尔定律，光从光密介质（钻石）射向光疏介质（空气）时，若入射角超过临界角 $\theta_c$，光线将不再折射出去，而是发生全反射。临界角由下式给出：</p>
+$$
+\theta_c = \arcsin\left(\frac{n_2}{n_1}\right) = \arcsin\left(\frac{1}{n}\right)
+$$
+<p>将钻石的折射率代入，得</p>
+$$
+\theta_c = \arcsin\left(\frac{1}{2.42}\right) \approx 24.4^\circ
+$$
+<p>相比之下，普通玻璃的折射率约为 $1.5$，临界角约为 $41.8^\circ$。临界角越小，意味着光线只需以很小的角度射向内表面，就会被"困住"而无法穿出，因此钻石内部发生全反射的概率远高于玻璃或其他宝石。</p>
+<p><strong>计算实例</strong>：假设一束光在钻石内部以 $30^\circ$ 的入射角射向底部刻面。由于 $30^\circ > \theta_c \approx 24.4^\circ$，该光线会发生全反射，被弹向另一个刻面，而不是穿透逃逸。若同样的光以 $20^\circ$ 入射，则 $20^\circ < \theta_c$，光线会折射出钻石，造成"漏光"。这正是宝石切割师追求精确刻面角度的原因：切工的目标是让几乎所有从底部进入的光线，都以大于临界角的角度反复撞击内表面，经过多次全反射后，最终只从顶部（台面与冠部刻面）集中射出，形成强烈的闪光效果。</p>
+<p><strong>问题求解应用</strong>：切工设计本质上是一个几何优化问题——如何设定亭部（底部）刻面的角度，使入射光线在钻石内部的反射路径始终满足 $\theta > \theta_c$，直至从顶部射出。若亭部角度过浅或过深，光线会以小于临界角的角度撞击相邻刻面而"漏出"，导致钻石看起来发暗（业内称为"鱼眼"或"黑底"现象）。标准圆钻式切工的亭部角约为 $40.75^\circ$，正是通过反复计算光线在多次反射后的累积入射角，确保其始终大于 $24.4^\circ$ 而得出的经验最优解。这说明：一个宝石的美学价值，最终可以归结为一道关于临界角与几何反射路径的光学计算题。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

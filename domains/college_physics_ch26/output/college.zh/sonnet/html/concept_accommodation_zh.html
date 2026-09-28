@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accommodation | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="accommodation-调节作用">Accommodation（调节作用）</h2>
+<p><strong>定义</strong></p>
+<p>调节作用是指睫状肌（ciliary muscle）通过改变晶状体（lens）的形状，从而改变其屈光力（optical power），使眼睛能够对不同距离的物体清晰聚焦的生理过程。根据薄透镜成像公式：</p>
+$$\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}$$
+<p>其中 $f$ 为焦距，$d_o$ 为物距，$d_i$ 为像距（此处固定为视网膜到晶状体的距离，约 $2.4\ \text{cm}$）。屈光力定义为 $P = 1/f$（单位：屈光度 diopter，D，$f$ 以米为单位）。当睫状肌收缩时，悬韧带（zonular fibers）松弛，晶状体因自身弹性变得更凸、更厚，$f$ 减小、$P$ 增大，用于看近处物体；睫状肌松弛时，晶状体被拉平变薄，$f$ 增大、$P$ 减小，用于看远处物体。</p>
+<p><strong>范例演算</strong></p>
+<p>假设某人晶状体到视网膜的距离固定为 $d_i = 2.4\ \text{cm} = 0.024\ \text{m}$。</p>
+<p>(1) 观察远处物体（$d_o \to \infty$）时，所需屈光力为：</p>
+$$P_{远} = \frac{1}{d_i} = \frac{1}{0.024} \approx 41.7\ \text{D}$$
+<p>(2) 观察 $25\ \text{cm}$ 处的书本（近点）时：</p>
+$$P_{近} = \frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{0.25} + \frac{1}{0.024} \approx 4 + 41.7 = 45.7\ \text{D}$$
+<p>两者之差 $\Delta P = 45.7 - 41.7 = 4\ \text{D}$，正是睫状肌调节所提供的额外屈光力，用以弥补近距离物体带来的像距失衡。</p>
+<p><strong>问题解决应用</strong></p>
+<p>调节幅度（amplitude of accommodation）$A = P_{近} - P_{远}$ 是评估眼睛调节能力的关键指标，会随年龄增长而下降（老花眼，presbyopia 的成因）。例如，若某患者的调节幅度仅为 $2\ \text{D}$，可用上述公式反推其可清晰聚焦的最近距离 $d_{o,\min}$：</p>
+$$P_{远} + A = \frac{1}{d_{o,\min}} + \frac{1}{d_i} \;\Rightarrow\; d_{o,\min} = \frac{1}{P_{远} + A - 1/d_i}$$
+<p>代入数值可得该患者近点将显著远离 $25\ \text{cm}$，这正是配戴老花镜（增加外部正透镜屈光力以补足 $A$ 的不足）的定量依据。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

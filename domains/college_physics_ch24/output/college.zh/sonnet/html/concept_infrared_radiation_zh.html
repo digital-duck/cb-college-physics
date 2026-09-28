@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infrared Radiation | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="infrared-radiation">Infrared Radiation</h2>
+<p><strong>定义</strong></p>
+<p>红外辐射（infrared radiation, IR）是电磁波谱中位于可见光谱红端之外、频率低于红光的电磁波，波长范围大致为 $0.7\,\mu\text{m}$ 到 $1\,\text{mm}$。它由物体内部原子和分子的热运动产生：分子振动、转动能级跃迁，以及带电粒子的热激发都会辐射出这一频段的电磁波。任何温度高于绝对零度的物体都会发射红外辐射，这正是黑体辐射（black-body radiation）的基本内容之一。根据维恩位移定律（Wien's displacement law）：</p>
+$$
+\lambda_{\max} T = b, \qquad b \approx 2.898\times 10^{-3}\ \text{m·K}
+$$
+<p>其中 $T$ 为物体的绝对温度（单位 K），$\lambda_{\max}$ 为辐射谱中强度最大处对应的波长。人体（约 $310\,\text{K}$）、室温物体（约 $300\,\text{K}$）辐射的能量峰值恰好落在红外波段，这也是我们将红外辐射感知为"辐射热"的物理原因——皮肤中的热感受器吸收这部分电磁能并转化为热感。</p>
+<p><strong>例题</strong></p>
+<p>问题：一个物体的表面温度为 $37^\circ\text{C}$（人体体温），求其黑体辐射谱峰值波长 $\lambda_{\max}$。</p>
+<p>解：先将摄氏温度换算为开尔文温度：</p>
+$$
+T = 37 + 273.15 = 310.15\ \text{K}
+$$
+<p>代入维恩位移定律：</p>
+$$
+\lambda_{\max} = \frac{b}{T} = \frac{2.898\times10^{-3}\ \text{m·K}}{310.15\ \text{K}} \approx 9.35\times10^{-6}\ \text{m} = 9.35\ \mu\text{m}
+$$
+<p>该结果落在中红外波段，与实际热成像相机（thermal camera）探测人体所使用的波段（约 $8$–$14\,\mu\text{m}$）高度吻合，这解释了为什么夜视热成像设备专门针对该波段设计传感器。</p>
+<p><strong>应用与解题练习</strong></p>
+<p>红外辐射的核心应用之一是遥感测温：卫星或热像仪通过测量物体发射的红外辐射强度反推其表面温度，无需接触物体本身。结合斯特藩-玻尔兹曼定律（Stefan-Boltzmann law）</p>
+$$
+P = \varepsilon \sigma A T^4
+$$
+<p>（其中 $\varepsilon$ 为发射率，$\sigma \approx 5.67\times10^{-8}\ \text{W/(m}^2\text{K}^4\text{)}$ 为斯特藩常数，$A$ 为表面积），可以进一步求出物体单位时间辐射的总功率。练习：若某工业炉内壁温度为 $800\,\text{K}$，发射率 $\varepsilon = 0.9$，表面积 $A = 2\,\text{m}^2$，求其总辐射功率，并估算辐射峰值波长所处的红外子波段（近红外、中红外或远红外）。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>
