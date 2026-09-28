@@ -11,6 +11,8 @@ MathJax = {
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
@@ -28,6 +30,10 @@ footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
 footer.spl-credit a{color:#2563eb;text-decoration:none}
 footer.spl-credit span{display:block}
 footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
 .page{max-width:780px;margin:0 auto;padding:40px 32px}
 section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
 section:first-of-type{border-top:none;padding-top:0}
@@ -36,19 +42,15 @@ section:first-of-type{border-top:none;padding-top:0}
 <body>
 <div class="page">
   <main>
-    <h2 id="位置">位置</h2>
+    <h2 id="position-位置">Position（位置）</h2>
 <p><strong>定义</strong></p>
-<p>位置(position)描述一个物体在某一时刻相对于所选参考系(reference frame)的空间坐标。参考系由原点(origin)和坐标轴构成,一旦确定,物体的位置就可以用一个矢量 $\vec{r}(t)$ 表示,其分量随时间变化。在一维运动中,位置简化为一个带符号的标量 $x(t)$,正负号表示方向;在三维空间中,位置矢量写作</p>
-$$\vec{r}(t) = x(t)\,\hat{i} + y(t)\,\hat{j} + z(t)\,\hat{k}$$
-<p>需要强调的是,位置本身没有绝对意义——同一个物体在不同参考系下的坐标可以完全不同。例如,坐在行驶列车上的乘客相对于车厢座位静止,但相对于地面却在不断改变位置。因此描述位置时必须明确说明"相对于什么参考系"。</p>
+<p>位置（position）描述一个物体在某一时刻相对于所选参考系（reference frame）的空间坐标。要确定位置，必须先固定一个参考系——包括原点、坐标轴方向和单位——因为"位置"本身没有绝对意义，只有相对意义。在一维运动中，位置常用带符号的坐标 $x(t)$ 表示，正负号指示物体相对原点位于哪一侧；在二维或三维中，位置用位置矢量 $\vec{r}(t) = x(t)\,\hat{i} + y(t)\,\hat{j} + z(t)\,\hat{k}$ 表示，它既有大小也有方向。位置与位移（displacement）不同：位移是位置的变化量 $\Delta \vec{r} = \vec{r}(t_2) - \vec{r}(t_1)$，而位置是某一时刻的绝对坐标值。</p>
 <p><strong>范例</strong></p>
-<p>假设一辆汽车沿笔直公路行驶,选取出发点为原点,沿行驶方向为正方向。某时刻汽车的位置为 $x(2\,\text{s}) = 30\,\text{m}$,表示此时汽车在出发点前方 30 米处。若 5 秒后位置变为 $x(5\,\text{s}) = 75\,\text{m}$,则说明汽车继续向正方向移动。若某时刻位置为负值,例如 $x(1\,\text{s}) = -10\,\text{m}$,则表示汽车在出发点之后(反方向)10 米处——负号本身携带方向信息,而不代表"不存在"。</p>
+<p>设一辆车沿笔直公路行驶，选择公路上的收费站为原点，向东为正方向。若车在 $t=0\,\text{s}$ 时位于 $x_0 = 50\,\text{m}$（收费站以东 50 米），并以恒定速度 $v = -20\,\text{m/s}$（向西）行驶，则任意时刻的位置为：</p>
+$$x(t) = x_0 + vt = 50 - 20t$$
+<p>在 $t = 3\,\text{s}$ 时，$x(3) = 50 - 60 = -10\,\text{m}$，说明此时车已越过收费站，来到其西侧 10 米处。这里的负号并不代表"负的距离"，而是相对参考系方向的标记。</p>
 <p><strong>问题求解应用</strong></p>
-<p>位置函数 $x(t)$ 是运动学分析的起点:速度是位置对时间的导数 $v(t) = \dfrac{dx}{dt}$,加速度则是速度的导数。因此,若已知某物体位置随时间变化的表达式,例如</p>
-$$x(t) = 5t^2 - 2t + 3 \quad (\text{单位:米})$$
-<p>可以直接求出任意时刻的位置,也可以通过求导得到瞬时速度 $v(t) = 10t - 2$。</p>
-<p><strong>练习</strong>:某无人机沿垂直方向运动,位置函数为 $x(t) = -4t^2 + 20t$(米,以地面为原点,向上为正)。 (a) 求 $t = 3\,\text{s}$ 时无人机的位置; (b) 判断此时无人机在原点上方还是下方; (c) 求无人机返回地面($x=0$)所需的时间(不计 $t=0$)。</p>
-<p>解题关键在于:先明确参考系与正方向的约定,再代入具体时间求解,最后根据符号判断物理意义——这正是位置概念在实际问题中的核心应用方式。</p>
+<p>处理位置问题的关键步骤是：(1) 明确定义参考系的原点与正方向；(2) 写出位置随时间变化的函数 $x(t)$（若加速度非零，则为 $x(t) = x_0 + v_0 t + \tfrac{1}{2}at^2$）；(3) 代入具体时刻求解坐标；(4) 通过比较两个时刻的位置计算位移，而非直接假设位置等于路程。例如，若要判断两物体何时相遇，只需令它们的位置函数相等 $x_1(t) = x_2(t)$，解出共同时刻 $t$，再代回任一函数求出相遇的具体位置坐标。这种"先建参考系、再列方程、后求解"的流程是运动学分析的基础范式。</p>
   </main>
   <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
 </div>

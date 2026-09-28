@@ -11,6 +11,8 @@ MathJax = {
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
@@ -28,6 +30,10 @@ footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
 footer.spl-credit a{color:#2563eb;text-decoration:none}
 footer.spl-credit span{display:block}
 footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
 .page{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
 nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;
         background:#1e3a5f;color:#e8f0fe;padding:24px 16px}
@@ -69,10 +75,10 @@ nav.toc{position:relative;height:auto}}
     <section>
       <section>
       <h2 id="payoff">Payoff</h2>
-<p>运动学的图像分析——用位置-时间图、速度-时间图、加速度-时间图来描述和推理物体的运动——是这本教材的自然终点,因为它把前面所有分散的工具收拢成一种统一的语言。斜率、面积、切线这些几何操作,现在被赋予了物理含义:位置-时间图上某点的切线斜率就是瞬时速度 $v = \dfrac{dx}{dt}$;速度-时间图上曲线下的面积就是位移 $\Delta x = \displaystyle\int_{t_1}^{t_2} v\,dt$;而速度-时间图的斜率则是加速度 $a = \dfrac{dv}{dt}$。这三张图互为导数与积分的关系,意味着只要给出其中一张,原则上就能重构另外两张——这正是图像分析强大的原因:它把"运动"这个连续变化的过程,转化成可以直接测量、比较、预测的几何对象。</p>
-<p>举一个具体例子:一辆车从静止开始,以恒定加速度 $a = 2\ \text{m/s}^2$ 行驶 $5$ 秒,然后保持匀速运动 $3$ 秒。它的速度-时间图是一段过原点的直线(斜率为 $2$),接着变成一段水平线(高度为 $10\ \text{m/s}$)。此时,总位移就是这两段图形下方梯形与矩形面积之和:$\frac{1}{2}(2)(5)(10) + 10 \times 3 = 25 + 30 = 55\ \text{m}$。不需要死记硬背运动学公式,图像本身就给出了答案,而且能立刻看出运动在哪个阶段加速、哪个阶段匀速。</p>
-<p>这种"看图即理解运动"的能力,正是后续所有应用领域的基础。在工程与车辆动力学中,工程师通过分析加速度-时间图来评估刹车系统或悬挂系统的性能,判断某个瞬间的冲击是否超出安全阈值。在体育科学中,教练利用运动员冲刺时的速度-时间图,找出加速阶段与最高速度阶段的分界点,从而定制训练方案。在天体力学与航天轨道设计中,位置-时间与速度-时间图被用来规划飞船的变轨时刻,因为图像清楚地显示出何时该点火加速、何时该关闭发动机滑行。甚至在医学的步态分析中,病人行走时的速度波动图能帮助医生判断神经或肌肉损伤的位置。</p>
-<p>图像分析之所以成为运动学的终点,正是因为它把抽象的微积分关系,转化成了任何人都能"读出"运动故事的直观工具。接下来,不妨深入探索车辆碰撞测试中的加速度-时间图分析——看看工程师如何从一段短短几十毫秒的曲线中,读出安全带和气囊设计的关键参数。</p>
+<p>运动的图像分析（graphical analysis of motion）之所以成为本书的收官概念，是因为它把前面所学的位置、速度、加速度这些孤立的量，统一编织进一套可读、可算、可预测的视觉语言。一条 $x$-$t$ 图的斜率给出瞬时速度 $v = \dfrac{dx}{dt}$；一条 $v$-$t$ 图的斜率给出加速度 $a = \dfrac{dv}{dt}$，而其下方的面积则给出位移 $\Delta x = \displaystyle\int_{t_1}^{t_2} v\,dt$。掌握了这一点，学生不再需要死记一堆运动学公式，而是能够直接"读出"物体的运动历史：图像的弯曲程度告诉你加速度是否恒定，图像的凹凸方向告诉你速度是在增加还是减少。这正是本书从"描述运动"走向"分析并预测运动"的自然终点——图像成为连接代数公式与物理直觉的桥梁。</p>
+<p>举一个具体的应用场景：假设一辆车的 $v$-$t$ 图在 0 到 10 秒内是一条从 $0$ 上升到 $20\ \text{m/s}$ 的直线，随后 10 秒保持水平。通过读图，我们立刻知道前 10 秒的加速度是 $a = \dfrac{20-0}{10} = 2\ \text{m/s}^2$，而总位移则是梯形面积 $\Delta x = \dfrac{1}{2}(20)(10) + 20 \times 10 = 300\ \text{m}$。这种"以图代算"的能力，正是运动图像分析真正的价值所在：它把微积分的核心思想（斜率即导数、面积即积分）用最直观的方式呈现给尚未系统学习微积分的学生，同时也为已经学过微积分的学生提供了一个几何化的验证工具。</p>
+<p>这项技能的迁移范围远超经典力学课堂本身：无论是分析心跳信号的波形、金融市场价格曲线的涨跌趋势，还是机器人轨迹规划中的速度—时间曲线优化，其底层逻辑都是同一种"从图像中提取变化率与累积量"的思维方式。可以说，运动图像分析不仅是物理学的终点，也是数据素养的起点。</p>
+<p>接下来，建议你选择一个具体方向深入探索：例如，尝试用真实的 GPS 或加速度传感器数据绘制一辆自行车或汽车的运动图像，并从中反推出它的加减速策略——这将是检验你是否真正掌握本书核心思想的最佳试炼场。</p>
     </section>
     </section>
     <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>

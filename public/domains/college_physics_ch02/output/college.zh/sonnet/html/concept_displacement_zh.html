@@ -11,6 +11,8 @@ MathJax = {
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
@@ -28,6 +30,10 @@ footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
 footer.spl-credit a{color:#2563eb;text-decoration:none}
 footer.spl-credit span{display:block}
 footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
 .page{max-width:780px;margin:0 auto;padding:40px 32px}
 section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
 section:first-of-type{border-top:none;padding-top:0}
@@ -37,20 +43,23 @@ section:first-of-type{border-top:none;padding-top:0}
 <div class="page">
   <main>
     <h2 id="displacement">Displacement</h2>
-<p><strong>定义</strong></p>
-<p>位移(displacement)描述物体位置的变化,定义为末位置与初位置之差:</p>
+<p>位移（displacement）描述物体位置的变化，定义为末位置与初位置之差：</p>
 $$\Delta x = x_f - x_i$$
-<p>位移是一个矢量(vector),既有大小又有方向。这一点与路程(distance)不同——路程是标量,只记录物体实际移动的总长度,不考虑方向,也不会因为往返运动而相互抵消。若物体沿一维直线运动,方向通常用正负号表示(例如向右为正、向左为负);若在二维或三维空间中运动,位移则需要用矢量分量 $(\Delta x, \Delta y, \Delta z)$ 或大小与方向角来完整描述。</p>
-<p><strong>范例</strong></p>
-<p>设一名跑步者从起点 $x_i = 0\text{ m}$ 出发,沿直线向东跑到 $x_f = 300\text{ m}$ 处,然后掉头向西跑回到 $x = 100\text{ m}$ 处停下。</p>
-<li>总路程 $= 300\text{ m} + 200\text{ m} = 500\text{ m}$</li>
-<li>位移 $\Delta x = x_f - x_i = 100\text{ m} - 0\text{ m} = 100\text{ m}$(方向:东)</li>
-<p>可以看到,尽管跑步者实际移动了 500 m,但由于返程部分抵消了部分前进距离,最终的位移只有 100 m。这正体现了矢量与标量的本质区别:位移只关心"起点到终点"的净变化,不关心路径细节。</p>
-<p><strong>问题解决应用</strong></p>
-<p>位移的矢量性质在处理多段运动或多维运动时尤为关键。例如,一架无人机先向北飞行 $80\text{ m}$,再向东飞行 $60\text{ m}$。若只按标量方式相加,会误得路程为 $140\text{ m}$;但要求总位移,必须用矢量加法:</p>
-$$|\Delta \vec{x}| = \sqrt{(80\text{ m})^2 + (60\text{ m})^2} = \sqrt{6400 + 3600} = \sqrt{10000} = 100\text{ m}$$
-<p>方向可用 $\theta = \arctan\left(\dfrac{60}{80}\right) \approx 36.9^\circ$(以正北为基准,向东偏转)表示。</p>
-<p>这类分解与合成技巧,是后续学习平均速度 $\bar{v} = \dfrac{\Delta x}{\Delta t}$、加速度以及二维抛体运动的基础——因为速度和加速度都直接建立在位移这一矢量概念之上,而非路程。掌握"何时用标量、何时必须用矢量"的判断,是运动学问题求解的第一步。</p>
+<p>它是一个矢量，既有大小（magnitude）又有方向（direction）。这一点与路程（distance）截然不同：路程只记录物体实际经过的路径长度，是标量，永远为非负值；而位移只关心起点与终点的相对关系，与中间走了多少弯路无关。若物体最终回到出发点，位移为零，但路程可以远大于零。</p>
+<p><strong>例题</strong>：一名学生从教室门口（记为原点，$x_i = 0\text{ m}$）出发，沿走廊向东走了 $12\text{ m}$ 后，又转身向西走回 $5\text{ m}$。</p>
+<li>路程 $= 12 + 5 = 17\text{ m}$（标量，只累加，不考虑方向）</li>
+<li>末位置 $x_f = 12 - 5 = 7\text{ m}$（以向东为正方向）</li>
+<li>位移 $\Delta x = x_f - x_i = 7 - 0 = 7\text{ m}$，方向为东</li>
+<p>可以看到，位移只用起点和终点计算，中间的往返细节被"抵消"掉了。</p>
+<p><strong>问题解决应用</strong>：位移的矢量性质使其可以用坐标或分量相加来处理二维、三维问题。例如，若一人先向东走 $3\text{ m}$，再向北走 $4\text{ m}$，总位移不是简单的 $3+4=7\text{ m}$，而应用矢量加法（勾股定理）求合位移大小：</p>
+$$|\Delta \vec{x}| = \sqrt{3^2 + 4^2} = 5\text{ m}$$
+<p>方向则用 $\theta = \arctan(4/3) \approx 53.1°$（以东为基准，偏北方向）描述。这种矢量合成方法是后续学习速度、加速度、力等矢量运算的基础——只要涉及"变化量"且有方向意义的物理量，都遵循相同的合成规则。</p>
+<pre class="mermaid">flowchart LR
+    A[起始位置 A] -->|弯曲路径：路程| B[终止位置 B]
+    A -.->|直线箭头：位移向量| B
+    B --- C[标注：大小与方向]</pre>
+<p><em>图示：从位置 A 到位置 B，弯曲路径表示实际经过的路程，直线箭头表示位移矢量，同时标注其大小与方向。</em></p>
+<p>理解位移与路程的区别，是建立"矢量思维"的第一步，也是后续学习速度（位移的时间变化率）与加速度概念的必要基础。</p>
   </main>
   <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
 </div>

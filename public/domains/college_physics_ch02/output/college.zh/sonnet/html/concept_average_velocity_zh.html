@@ -11,6 +11,8 @@ MathJax = {
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
@@ -28,6 +30,10 @@ footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
 footer.spl-credit a{color:#2563eb;text-decoration:none}
 footer.spl-credit span{display:block}
 footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
 .page{max-width:780px;margin:0 auto;padding:40px 32px}
 section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
 section:first-of-type{border-top:none;padding-top:0}
@@ -38,21 +44,22 @@ section:first-of-type{border-top:none;padding-top:0}
   <main>
     <h2 id="average-velocity">Average Velocity</h2>
 <p><strong>定义</strong></p>
-<p>平均速度描述物体在一段时间内位置变化的快慢与方向,定义为位移除以经过的时间:</p>
+<p>平均速度是位移与所用时间之比，记作</p>
 $$\bar{v} = \frac{\Delta x}{\Delta t} = \frac{x_2 - x_1}{t_2 - t_1}$$
-<p>这里必须强调:平均速度是<strong>矢量</strong>,其方向与位移方向一致,而非路径方向。国际单位制(SI)下单位为 $\text{m/s}$。平均速度不同于平均速率(average speed,标量,等于总路径长度除以总时间)——若物体往返运动回到出发点,位移为零,平均速度也为零,但平均速率一定大于零。这一区别是理解运动学的关键起点。</p>
+<p>其中 $\Delta x$ 是位移（末位置减初位置），$\Delta t$ 是经过的时间。注意平均速度是<strong>矢量</strong>，其符号（正或负）表示方向；这与"平均速率"不同，后者是标量，等于路程除以时间，恒为非负。在国际单位制中，平均速度的单位是 $\text{m/s}$。</p>
 <p><strong>例题</strong></p>
-<p>一辆车沿直线道路行驶,先向东行驶 $60\ \text{km}$ 用时 $1.0\ \text{h}$,随后掉头向西行驶 $20\ \text{km}$ 用时 $0.5\ \text{h}$。求整个过程的平均速度和平均速率。</p>
-<p>取向东为正方向。总位移:</p>
-$$\Delta x = (+60\ \text{km}) + (-20\ \text{km}) = +40\ \text{km}$$
-<p>总时间:$\Delta t = 1.0\ \text{h} + 0.5\ \text{h} = 1.5\ \text{h}$</p>
-$$\bar{v} = \frac{40\ \text{km}}{1.5\ \text{h}} \approx 26.7\ \text{km/h(向东)}$$
-<p>而平均速率则用总路程 $60 + 20 = 80\ \text{km}$ 计算:</p>
-$$\bar{\text{speed}} = \frac{80\ \text{km}}{1.5\ \text{h}} \approx 53.3\ \text{km/h}$$
-<p>两者数值和物理意义均不同,说明位移与路程不可混淆。</p>
+<p>一辆车在 $t_1 = 2\,\text{s}$ 时位于 $x_1 = 10\,\text{m}$，在 $t_2 = 6\,\text{s}$ 时位于 $x_2 = -2\,\text{m}$。求这段时间内的平均速度。</p>
+$$\bar{v} = \frac{x_2 - x_1}{t_2 - t_1} = \frac{-2\,\text{m} - 10\,\text{m}}{6\,\text{s} - 2\,\text{s}} = \frac{-12\,\text{m}}{4\,\text{s}} = -3\,\text{m/s}$$
+<p>负号说明车沿负方向运动，平均速度大小为 $3\,\text{m/s}$，方向为 $x$ 轴负方向。</p>
 <p><strong>解题应用</strong></p>
-<p>在处理多段运动的问题时,标准做法是:(1) 为每一段运动设定统一的正方向坐标轴;(2) 分别计算各段的带符号位移;(3) 将所有位移求代数和得到总位移;(4) 除以总时间。常见错误是直接对各段的平均速度取算术平均——这只有在各段耗时相等时才恰好成立,一般情况下并不成立,因为平均速度的定义本质上是对时间的加权。</p>
-<p>在 $x$–$t$(位置对时间)图像中,平均速度对应连接两个时刻对应点的<strong>割线斜率</strong>;当时间间隔趋于零时,该斜率的极限即为瞬时速度 $v = dx/dt$,这也是从平均速度过渡到微分描述运动的自然桥梁。</p>
+<p>在位置-时间图中，平均速度等于连接两个数据点的<strong>弦（chord）的斜率</strong>。这是理解平均速度与瞬时速度关系的关键：瞬时速度是位置-时间曲线在某一点处<strong>切线</strong>的斜率，可以看作当 $\Delta t \to 0$ 时弦的斜率的极限。因此，解题时若题目给出位置随时间变化的表格或图像，只需选取起止两点，计算斜率即可得到该时间段内的平均速度；若要求某一时刻的瞬时速度，则需取越来越短的时间间隔，观察弦的斜率是否趋于某个稳定值。这种"弦逼近切线"的思路也是后续学习导数概念的物理直觉基础。</p>
+<pre class="mermaid">graph TD
+    A["位置-时间图：点1 (t₁, x₁)"] --- C["弦：连接点1与点2"]
+    B["位置-时间图：点2 (t₂, x₂)"] --- C
+    C --> D["弦的斜率 = Δx/Δt = 平均速度"]
+    D --> E["当Δt→0：弦斜率 → 切线斜率"]
+    E --> F["切线斜率 = 瞬时速度（更陡）"]</pre>
+<p><em>位置-时间图上两点间的弦斜率表示平均速度，其极限即为某一点处更陡的切线斜率——瞬时速度。</em></p>
   </main>
   <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
 </div>

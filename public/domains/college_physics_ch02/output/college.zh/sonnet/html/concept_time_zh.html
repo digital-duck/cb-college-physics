@@ -11,6 +11,8 @@ MathJax = {
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
@@ -28,6 +30,10 @@ footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
 footer.spl-credit a{color:#2563eb;text-decoration:none}
 footer.spl-credit span{display:block}
 footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
 .page{max-width:780px;margin:0 auto;padding:40px 32px}
 section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
 section:first-of-type{border-top:none;padding-top:0}
@@ -36,31 +42,23 @@ section:first-of-type{border-top:none;padding-top:0}
 <body>
 <div class="page">
   <main>
-    <h2 id="time-时间">Time（时间）</h2>
-<p><strong>定义</strong></p>
-<p>时间是物理变化得以发生和排序的基本量，国际单位制（SI）中以秒（s）为单位。现代秒的定义并非基于地球自转或公转（这些并不完全均匀），而是基于原子物理中一个极为稳定的周期性过程：铯-133 原子基态两个超精细能级之间跃迁所对应的辐射，其振荡频率为</p>
+    <h2 id="time">Time</h2>
+<p>时间是变化发生的区间，用来标定事件的先后顺序与持续长短。在国际单位制（SI）中，时间的单位是秒（s），其现代定义并非基于地球自转或天文周期，而是基于原子物理的一个不变常数：铯-133原子基态两个超精细能级之间跃迁所对应辐射的 $9{,}192{,}631{,}770$ 个周期，定义为 $1\text{ s}$。这一定义之所以被采用，是因为原子跃迁频率极其稳定，不受地理位置、温度或使用年限的影响，从而使全世界的计时基准可以彼此对齐、相互校准。</p>
+<p><strong>校准的层级结构</strong>：日常使用的时钟（手机、电脑、实验室仪器）本身并不直接测量原子跃迁，而是通过网络时间协议（NTP）或全球定位系统（GPS）信号，定期与"原子钟"同步。GPS 卫星上搭载的原子钟持续广播时间戳，接收设备据此修正自身的时钟漂移。这就是为什么手机在飞行模式下几天不联网后，时间仍可能出现秒级误差——本地晶振（石英振荡器）的频率会随温度、电压缓慢漂移，必须周期性地"对表"。</p>
+<p><strong>问题解决应用</strong>：假设某台服务器的本地时钟每天漂移 $0.5$ 秒（即晶振频率略微偏离标称值），运维团队要求任何两台服务器之间的时间差不得超过 $50$ 毫秒，以保证分布式数据库日志的顺序正确性。那么最长可以间隔多久同步一次 NTP？</p>
+<p>设漂移速率为 $r = 0.5\ \text{s/day}$，允许的最大误差为 $\Delta t_{\max} = 0.05\ \text{s}$。同步间隔上限为：</p>
 $$
-\Delta \nu_{Cs} = 9{,}192{,}631{,}770 \ \text{Hz}
+T = \frac{\Delta t_{\max}}{r} = \frac{0.05}{0.5} = 0.1\ \text{day} \approx 2.4\ \text{小时}
 $$
-<p>即 1 秒被定义为该辐射振荡 $9{,}192{,}631{,}770$ 次所经历的时间。这一定义使"秒"成为可在世界任何实验室独立复现、彼此校准的标准，而不依赖某个特定的天体或人工制品。</p>
-<p>在物理学中，时间通常用符号 $t$ 表示，是描述运动、变化速率的自变量。例如平均速度定义为位移对时间的比值：</p>
-$$
-\bar{v} = \frac{\Delta x}{\Delta t}
-$$
-<p>而瞬时速度则是位移对时间的导数：</p>
-$$
-v(t) = \frac{dx}{dt}
-$$
-<p>这说明时间不仅是一个刻度，更是构建"变化率"（导数）这一数学工具的基础变量。</p>
-<p><strong>范例</strong></p>
-<p>原子钟的稳定性极高：目前最好的光晶格钟（optical lattice clock）误差约为 $10^{-18}$ 量级，相当于宇宙年龄（约 138 亿年）内误差不超过 0.1 秒。相比之下，地球自转本身并不均匀——由于潮汐摩擦、地核流动等因素，一天的实际长度每年会有微小漂移，因此"闰秒"（leap second）需要不定期加入协调世界时（UTC）中，以保持原子时间与天文观测的天体时间同步。</p>
-<p><strong>应用与解题练习</strong></p>
-<p>设某原子钟每秒振荡 $9{,}192{,}631{,}770$ 次，若观测到某段时间内振荡了 $4{,}596{,}315{,}885{,}000$ 次，求经过的时间（秒）。</p>
-<p>解：</p>
-$$
-t = \frac{4{,}596{,}315{,}885{,}000}{9{,}192{,}631{,}770} \approx 500 \ \text{s}
-$$
-<p>此类换算是 GPS 卫星定位、精密计时同步、以及相对论效应验证（如卫星钟因引力和速度产生的时间膨胀修正）中的基本计算步骤：只有将"周期计数"精确转换为"秒"，才能进一步比较不同参考系下时间流逝的差异，这正是狭义与广义相对论中时间膨胀公式得以被实验验证的基础。</p>
+<p>即该服务器至少每 $2.4$ 小时需与授时源同步一次，否则时间误差可能导致分布式系统中"先发生"关系（happens-before）判断出错，引发数据不一致。这类计算是分布式系统工程、金融交易时间戳、卫星导航精度设计中的常规实践——把抽象的"时间"概念转化为可预算、可校准的工程约束。</p>
+<pre class="mermaid">flowchart LR
+    A[铯原子跃迁<br>定义1秒] --> B[原子钟<br>国家计量院]
+    B --> C[GPS卫星<br>广播时间戳]
+    B --> D[NTP服务器<br>网络授时]
+    C --> E[本地设备<br>石英振荡器]
+    D --> E
+    E -->|周期性同步| B</pre>
+<p><em>该图展示时间基准从原子跃迁定义，经原子钟、GPS与NTP逐级传递，最终校准本地设备时钟的层级结构。</em></p>
   </main>
   <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
 </div>
