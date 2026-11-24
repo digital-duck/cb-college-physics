@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rolling Without Slipping | College Physics Ch10</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="rolling-without-slipping">Rolling Without Slipping</h2>
+<p><strong>定义</strong></p>
+<p>当一个圆形物体（如轮子、圆柱或球）在表面上滚动而不打滑时，接触点相对于地面的瞬时速度为零。这一约束条件将物体质心的平动速度 $v$ 与其角速度 $\omega$ 联系起来：</p>
+$$v = r\omega$$
+<p>其中 $r$ 为物体半径。对该式求导，可得平动加速度与角加速度之间的对应关系：</p>
+$$a = r\alpha$$
+<p>无滑动滚动的物理本质是静摩擦力提供了所需的约束力，使接触点瞬时静止，但摩擦力本身不做功（因为接触点速度为零），因此系统机械能守恒。这与纯粹滑动摩擦（做负功、耗散能量）形成鲜明对比。</p>
+<p>由于物体同时具有平动和转动，其总动能是两部分之和：</p>
+$$E_k = \frac{1}{2}mv^2 + \frac{1}{2}I\omega^2$$
+<p>将 $\omega = v/r$ 代入，得到用平动速度表示的总动能：</p>
+$$E_k = \frac{1}{2}mv^2 + \frac{1}{2}I\left(\frac{v}{r}\right)^2 = \frac{1}{2}\left(m + \frac{I}{r^2}\right)v^2$$
+<p>这表明，转动惯量 $I$ 越大，物体获得给定速度所需的能量就越多——这正是为什么空心圆环比实心圆盘更难加速滚动。</p>
+<p><strong>例题</strong></p>
+<p>一个实心圆盘（$I = \frac{1}{2}mr^2$）从高度 $h$ 的斜面顶部由静止开始无滑动滚下。求其到达底部时的速度。</p>
+<p>由能量守恒：</p>
+$$mgh = \frac{1}{2}\left(m + \frac{I}{r^2}\right)v^2 = \frac{1}{2}\left(m + \frac{1}{2}m\right)v^2 = \frac{3}{4}mv^2$$
+<p>解得：</p>
+$$v = \sqrt{\frac{4gh}{3}}$$
+<p>注意该结果小于自由落体或无摩擦滑块的速度 $\sqrt{2gh}$，因为部分重力势能转化为了转动动能，而非全部转化为平动动能。</p>
+<p><strong>解题应用</strong></p>
+<p>处理无滑动滚动问题的标准步骤是：先写出平动方向的牛顿第二定律 $F_{\text{net}} = ma$，再写出绕质心的转动方程 $\tau = I\alpha$，最后用约束条件 $a = r\alpha$ 联立求解未知量（如摩擦力大小、加速度或速度）。判断"是否打滑"的关键检验是：所需的静摩擦力是否超过最大静摩擦力 $\mu_s N$；若超过，则物体会打滑，此时约束 $v = r\omega$ 不再成立，须改用动摩擦力重新建模。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch10: Rotational Motion and Angular Momentum (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

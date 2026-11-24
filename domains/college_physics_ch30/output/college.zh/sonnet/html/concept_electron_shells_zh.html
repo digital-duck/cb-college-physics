@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electron Shells | College Physics Ch30</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="electron-shells">Electron Shells</h2>
+<p><strong>定义</strong></p>
+<p>原子中的每个电子都由四个量子数描述，其中主量子数 $n$（$n=1,2,3,\dots$）决定了电子所在的"壳层"（shell），而角量子数 $l$（$l=0,1,\dots,n-1$）决定了壳层内的"支壳层"（subshell，通常用 $s,p,d,f$ 表示 $l=0,1,2,3$）。泡利不相容原理限制了每个支壳层和每个壳层能容纳的电子数目。对于给定的 $l$，磁量子数 $m_l$ 可取 $2l+1$ 个值（即 $-l,\dots,0,\dots,+l$），而每个轨道又能容纳自旋相反的两个电子，因此每个支壳层的最大占据数为</p>
+$$
+N_{subshell} = 2(2l+1)
+$$
+<p>例如 $s$ 支壳层（$l=0$）最多容纳 2 个电子，$p$ 支壳层（$l=1$）最多容纳 6 个，$d$ 支壳层（$l=2$）最多容纳 10 个。将同一壳层内所有支壳层的容量相加，可得整壳层的最大占据数：</p>
+$$
+N_{shell} = \sum_{l=0}^{n-1} 2(2l+1) = 2n^2
+$$
+<p>这个公式的推导用到等差数列求和：$\sum_{l=0}^{n-1}(2l+1) = n^2$，再乘以自旋简并度 2，即得 $2n^2$。</p>
+<p><strong>举例说明</strong></p>
+<p>以 $n=3$（M 壳层）为例。$l$ 可取 $0,1,2$，对应 $3s,3p,3d$ 支壳层，容量分别为 $2,6,10$，总和为 $18 = 2\times3^2$，与公式吻合。可以验证 $n=1$ 壳层容量为 $2$，$n=2$ 壳层容量为 $8$——这正是元素周期表中前几个周期长度（2、8）的物理起源。</p>
+<p><strong>解题应用</strong></p>
+<p>利用这两个公式可以快速判断原子的电子排布是否合理，或反推某壳层已填充电子数对应的支壳层组合。例如，若某壳层共有 32 个电子（$n=4$，因为 $2\times4^2=32$），且已知其中 $s,p,d$ 支壳层已满（$2+6+10=18$），则剩余 $32-18=14$ 个电子必属于 $f$ 支壳层（$l=3$，容量 $2(2\times3+1)=14$），恰好吻合。这类"总数拆分"是分析多电子原子电子排布（如书写电子排布式 $1s^2 2s^2 2p^6\dots$）的基本推理工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch30: Atomic Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

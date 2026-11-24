@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strain | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="strain">Strain</h2>
+<p>When a material is stretched, compressed, or otherwise deformed by an applied force, the amount of deformation depends on both the material and its original size — a longer rod stretches more (in absolute terms) than a short one under the same load. To describe deformation in a way that is independent of the object's original dimensions, engineers use <strong>strain</strong>, defined as the fractional change in length:</p>
+$$
+\varepsilon = \frac{\Delta L}{L_0} = \frac{L - L_0}{L_0}
+$$
+<p>where $L_0$ is the original length, $L$ is the length after deformation, and $\Delta L = L - L_0$. Because strain is a ratio of two lengths, it is dimensionless — often reported as a plain decimal, a percentage, or in microstrain ($\mu\varepsilon$, i.e., $\varepsilon \times 10^6$) for very small deformations. Positive strain indicates elongation (tension); negative strain indicates shortening (compression).</p>
+<p><strong>Worked example.</strong> A steel cable with an original length of $L_0 = 2.000\text{ m}$ is loaded and stretches to $L = 2.003\text{ m}$. The strain is:</p>
+$$
+\varepsilon = \frac{2.003 - 2.000}{2.000} = \frac{0.003}{2.000} = 0.0015
+$$
+<p>This corresponds to 0.15%, or 1500 microstrain. Note that strain alone doesn't tell you whether the cable is close to failure — that depends on the material's strain limits — but it standardizes the measurement so cables of different lengths can be compared directly.</p>
+<p><strong>Problem-solving application.</strong> Strain becomes powerful when paired with stress ($\sigma = F/A$, force per cross-sectional area) through Hooke's Law for elastic materials: $\sigma = E\varepsilon$, where $E$ is the material's Young's modulus. This lets you predict deformation from a known force, or back-calculate force from a measured strain — the exact principle used in strain gauges, which convert tiny length changes into electrical resistance changes to monitor bridges, aircraft wings, and load cells in real time. For example, if a strain gauge on a steel beam ($E = 200\text{ GPa}$) reads $\varepsilon = 0.0005$, the internal stress is $\sigma = (200\times10^9)(0.0005) = 1.0\times10^8\text{ Pa} = 100\text{ MPa}$ — a value engineers compare against the steel's yield strength to assess safety margins.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expansion Joints | College Physics Ch13</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="expansion-joints-伸缩缝">Expansion Joints（伸缩缝）</h2>
+<p><strong>定义</strong></p>
+<p>固体材料受热会膨胀，遇冷会收缩，这是热运动加剧导致分子间平均距离增大的直接结果。对桥梁、铁轨、建筑物这类大尺度结构而言，即使是几十摄氏度的温差，也会带来不可忽视的长度变化。伸缩缝（expansion joint）是工程师有意在结构中预留的间隙或可变形连接件，用来吸收这种因热胀冷缩产生的尺寸变化，防止结构因约束受阻而发生弯曲、隆起甚至断裂。</p>
+<p>材料的线膨胀遵循近似线性关系：</p>
+$$\Delta L = \alpha L_0 \Delta T$$
+<p>其中 $L_0$ 为初始长度，$\alpha$ 为材料的线膨胀系数（单位：$^\circ\text{C}^{-1}$），$\Delta T$ 为温度变化，$\Delta L$ 为长度变化量。这个公式虽然简单，却是设计伸缩缝间隙宽度的核心依据。</p>
+<p><strong>实例演算</strong></p>
+<p>以一段钢制铁轨为例，钢的线膨胀系数约为 $\alpha = 1.2\times10^{-5}\ ^\circ\text{C}^{-1}$。若一段铁轨长 $L_0 = 25\ \text{m}$，当地气温从冬季 $-20^\circ\text{C}$ 升至夏季 $50^\circ\text{C}$，即 $\Delta T = 70^\circ\text{C}$，则：</p>
+$$\Delta L = (1.2\times10^{-5})(25)(70) \approx 0.021\ \text{m} = 21\ \text{mm}$$
+<p>也就是说，这段铁轨在极端温差下会伸长约 21 毫米。如果轨道两端被刚性固定、没有任何间隙,这部分伸长量会转化为内部应力，足以使钢轨发生侧向弯曲（这正是老式连续焊接铁轨在极端高温下"扭曲变形"事故的成因）。</p>
+<p><strong>问题解决应用</strong></p>
+<p>工程设计中,伸缩缝的宽度必须至少等于结构在预期最大温差下的膨胀量,并留出安全余量。若某桥梁伸缩缝设计仅考虑单侧膨胀,工程师需要计算整座桥面板（而不仅是一段轨道）的总伸长量,并核对该缝隙的可压缩范围是否覆盖冬夏温差。此外,不同材料（如混凝土 $\alpha \approx 1.0\times10^{-5}\,^\circ\text{C}^{-1}$ 与钢材）膨胀系数不同,在复合结构中还需分别计算各部分的膨胀量,取相对位移的最大值来确定缝宽,避免因材料失配导致局部应力集中。这正是把 $\Delta L = \alpha L_0 \Delta T$ 从课本公式转化为真实结构安全设计的关键一步。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch13: Temperature, Kinetic Theory, and the Gas Laws (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

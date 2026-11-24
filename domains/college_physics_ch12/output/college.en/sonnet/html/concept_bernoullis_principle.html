@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bernoullis Principle | College Physics Ch12</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="bernoulli-s-principle">Bernoulli's Principle</h2>
+<p><strong>Definition.</strong> Bernoulli's principle expresses conservation of energy for a steady, incompressible, non-viscous fluid flowing along a streamline. At constant height, the sum of pressure and kinetic energy per unit volume is the same at every point:</p>
+$$P_1 + \tfrac{1}{2}\rho v_1^2 = P_2 + \tfrac{1}{2}\rho v_2^2$$
+<p>Here $P$ is the pressure (Pa), $\rho$ is the fluid density (kg/m³), and $v$ is the speed (m/s). Where the fluid moves faster, the pressure is lower. Where it moves slower, the pressure is higher.</p>
+<p>The term $\tfrac{1}{2}\rho v^2$ is kinetic energy per unit volume. Since the total is fixed, any gain in kinetic energy must be paid for by a loss in pressure. The equation applies only if the flow is steady, the fluid is incompressible, viscosity is negligible, and both points lie on the same streamline.</p>
+<p>To find the speeds, we use the continuity relation $A_1 v_1 = A_2 v_2$ that you already know. A fluid speeds up where the pipe narrows.</p>
+<p><strong>Worked example.</strong> Water ($\rho = 1000\ \text{kg/m}^3$) flows through a horizontal pipe. In the wide section the cross-sectional area is $A_1 = 20\ \text{cm}^2$, the speed is $v_1 = 2.0\ \text{m/s}$, and the pressure is $P_1 = 150\ \text{kPa}$. The pipe narrows to $A_2 = 10\ \text{cm}^2$. Find $P_2$.</p>
+<li>Use continuity to find the speed in the narrow section:</li>
+$$v_2 = \frac{A_1}{A_2}v_1 = 2(2.0) = 4.0\ \text{m/s}$$
+<li>Rearrange Bernoulli's equation for $P_2$:</li>
+$$P_2 = P_1 + \tfrac{1}{2}\rho\left(v_1^2 - v_2^2\right)$$
+<li>Substitute:</li>
+$$P_2 = 150\,000 + \tfrac{1}{2}(1000)(4 - 16) = 150\,000 - 6000 = 144\,000\ \text{Pa}$$
+<p>The pressure drops by 6 kPa in the narrow section, where the water moves faster.</p>
+<p><strong>Problem-solving application.</strong> Bernoulli's equation also works in reverse. If you measure the pressure difference $\Delta P = P_1 - P_2$ between the two sections, you can find the flow speed. Substituting $v_2 = (A_1/A_2)v_1$ gives</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch12: Fluid Dynamics and Its Biological and Medical Applications (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

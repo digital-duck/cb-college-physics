@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rc Time Constant | College Physics Ch21</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="rc-time-constant">Rc Time Constant</h2>
+<p><strong>定义</strong></p>
+<p>在一个由电阻 $R$ 和电容 $C$ 串联组成的电路中，电容的充电或放电速率由<strong>时间常数</strong> $\tau = RC$ 决定。$\tau$ 的单位是秒（欧姆 × 法拉 = 秒），它表示电压变化到其总变化范围的 $1 - 1/e \approx 0.632$（约 63.2%）所需的时间。这一结果来自电路方程的求解：对于电容通过电阻充电的电路，基尔霍夫电压定律给出微分方程</p>
+$$RC\frac{dV}{dt} + V = V_s$$
+<p>其中 $V_s$ 是电源电压。这是一个一阶线性微分方程，其解为指数形式：</p>
+$$V(t) = V_s + (V_0 - V_s)e^{-t/RC}$$
+<p>$V_0$ 是电容的初始电压。当 $t = \tau = RC$ 时，指数项变为 $e^{-1} \approx 0.368$，也就是说电压已经完成了剩余变化量的 $1 - 0.368 = 0.632$，即 63.2%。这个指数衰减/增长规律是 RC 电路的核心数学结构，理解它离不开微分方程与自然指数 $e$。</p>
+<p><strong>范例求解</strong></p>
+<p>设一个 RC 电路中 $R = 2\,\text{k}\Omega$，$C = 100\,\mu\text{F}$，电源电压 $V_s = 5\,\text{V}$，电容初始不带电（$V_0 = 0$）。</p>
+<p>首先计算时间常数：</p>
+$$\tau = RC = (2000\,\Omega)(100\times10^{-6}\,\text{F}) = 0.2\,\text{s}$$
+<p>代入充电公式：</p>
+$$V(t) = 5(1 - e^{-t/0.2})$$
+<p>当 $t = 0.2\,\text{s}$（即一个 $\tau$）时：</p>
+$$V(0.2) = 5(1 - e^{-1}) \approx 5 \times 0.632 = 3.16\,\text{V}$$
+<p><strong>问题应用</strong></p>
+<p>工程中常需要反推：给定目标电压比例，求所需时间，或给定时间要求，反推 $R$、$C$ 的取值。例如，若要求电容电压在 $0.5\,\text{s}$ 内充至 $V_s$ 的 95%（即约 $3\tau$，因为 $e^{-3}\approx 0.05$），则需满足</p>
+$$3RC = 0.5\,\text{s} \implies RC \approx 0.167\,\text{s}$$
+<p>若 $C$ 固定为 $10\,\mu\text{F}$，则所需电阻为</p>
+$$R = \frac{0.167}{10\times10^{-6}} \approx 16{,}700\,\Omega$$
+<p>这种"给定响应时间反推元件参数"的推理，正是滤波器设计、定时电路（如 555 定时器）和传感器信号整形中的常见工程问题。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch21: Circuits and DC Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

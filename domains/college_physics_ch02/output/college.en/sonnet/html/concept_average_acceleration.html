@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Average Acceleration | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="average-acceleration">Average Acceleration</h2>
+<p><strong>Definition.</strong> Average acceleration measures how quickly velocity changes over an interval of time. If an object's velocity changes from $v_1$ to $v_2$ over a time interval $\Delta t = t_2 - t_1$, the average acceleration is</p>
+$$\bar{a} = \frac{\Delta v}{\Delta t} = \frac{v_2 - v_1}{t_2 - t_1}$$
+<p>Because velocity is a vector, $\bar{a}$ is also a vector — it points in the direction of the <em>change</em> in velocity, not necessarily in the direction of motion. Its SI unit is meters per second squared ($\text{m/s}^2$), reflecting that it is "velocity per time," or equivalently "(distance per time) per time."</p>
+<p><strong>Worked example.</strong> A car traveling east at $12\ \text{m/s}$ speeds up to $28\ \text{m/s}$ east over $8$ seconds while merging onto a highway. Its average acceleration is</p>
+$$\bar{a} = \frac{28\ \text{m/s} - 12\ \text{m/s}}{8\ \text{s}} = \frac{16\ \text{m/s}}{8\ \text{s}} = 2\ \text{m/s}^2 \text{ (east)}$$
+<p>This says that, on average, the car's eastward speed increases by $2\ \text{m/s}$ every second. Note this is the <em>average</em> rate — the car might accelerate unevenly (faster at first, then leveling off), but $\bar{a}$ smooths that variation into a single representative value over the interval.</p>
+<p><strong>Problem-solving application.</strong> A common trap is treating acceleration as purely a "speeding up" quantity. Consider a ball thrown straight up, which leaves your hand at $v_1 = +15\ \text{m/s}$ (upward) and, $1.5\ \text{s}$ later, is moving at $v_2 = -7.5\ \text{m/s}$ (now downward). Taking up as positive:</p>
+$$\bar{a} = \frac{-7.5\ \text{m/s} - 15\ \text{m/s}}{1.5\ \text{s}} = \frac{-22.5\ \text{m/s}}{1.5\ \text{s}} = -15\ \text{m/s}^2$$
+<p>The negative sign doesn't mean "slowing down" — it means the acceleration vector points downward throughout, consistent with gravity acting continuously, even while the ball is still rising. This distinction — sign indicates <em>direction</em>, not just speeding up versus slowing down — is essential when average acceleration is used to reconstruct motion (e.g., solving for final velocity via $v_2 = v_1 + \bar{a}\,\Delta t$) or to identify the net force via $F = m\bar{a}$ in problems spanning a finite time interval rather than an instant.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

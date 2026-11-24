@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Van Allen Radiation Belts | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="van-allen-radiation-belts">Van Allen Radiation Belts</h2>
+<p><strong>定义</strong></p>
+<p>范艾伦辐射带是地球磁层中两个环绕地球的环形（toroidal）区域，其中充满了被地磁场捕获的高能带电粒子（主要是质子与电子）。内带位于赤道上空约 $1{,}000$–$6{,}000$ 千米处，主要由高能质子组成；外带位于约 $13{,}000$–$60{,}000$ 千米处，主要由高能电子组成。这些粒子并非静止不动，而是沿磁力线做三种复合运动：绕磁力线的<strong>回旋运动</strong>（gyration）、沿磁力线在南北半球之间来回的<strong>弹跳运动</strong>（bounce），以及围绕地球的<strong>漂移运动</strong>（drift，电子向东、质子向西）。</p>
+<p>这一现象的物理本质是带电粒子在磁场中受洛伦兹力作用：</p>
+$$\vec{F} = q\vec{v} \times \vec{B}$$
+<p>由于力始终垂直于速度方向，粒子被迫做螺旋运动而非直线运动。当粒子沿磁力线向地磁两极靠近时，磁场强度增大，根据<strong>磁镜效应</strong>（magnetic mirror effect），粒子的螺旋角会增大直至速度沿磁力线方向的分量为零，随后被"反弹"回来——这正是"陷俘"（trapping）机制的关键。若粒子初始螺旋角过小，则会一头扎入大气层被吸收，形成所谓"损失锥"（loss cone）。</p>
+<p><strong>应用与问题求解</strong></p>
+<p>磁镜效应可用绝热不变量定量描述。粒子的磁矩</p>
+$$\mu = \frac{p_\perp^2}{2mB}$$
+<p>在粒子沿磁力线缓慢移动时近似守恒（$p_\perp$ 为垂直于磁场的动量分量）。这意味着，随着粒子向磁场增强的区域移动，$p_\perp$ 必须增大以维持 $\mu$ 不变，而总动能守恒则要求平行动量分量相应减小，直至反转方向——这就是磁镜"弹回"粒子的定量机制。</p>
+<p>工程实践中，这一模型直接指导卫星轨道设计：地球同步轨道、GPS 中高轨道恰好穿越外带，因此这些卫星必须加装辐射屏蔽层，并对电子器件进行抗辐射加固，以防止单粒子翻转（single-event upset）损坏芯片。载人航天任务（如国际空间站）刻意维持在辐射带下方的低地球轨道，而阿波罗任务则选择快速穿越辐射带较薄的区域以降低宇航员累积剂量——这正是磁镜与漂移动力学在任务规划中的实际应用。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

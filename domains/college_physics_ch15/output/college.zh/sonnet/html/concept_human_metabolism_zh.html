@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Human Metabolism | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="human-metabolism">Human Metabolism</h2>
+<p><strong>定义</strong></p>
+<p>人体新陈代谢是将食物中储存的化学潜能转化为其他能量形式的过程，其基础是热力学第一定律——能量既不会凭空产生，也不会凭空消失，只会从一种形式转化为另一种形式。将人体视为一个热力学系统，能量守恒可以写作：</p>
+$$\Delta E_{\text{stored}} = Q_{\text{in}} - (W_{\text{out}} + Q_{\text{out}})$$
+<p>其中 $Q_{\text{in}}$ 是食物氧化释放的化学能（通常以千卡衡量），$W_{\text{out}}$ 是身体对外做的机械功（如运动、心跳、呼吸肌收缩），$Q_{\text{out}}$ 是以热量形式散失到环境中的能量（维持体温、蒸发散热等）。若摄入的能量超过支出，多余部分便以脂肪形式储存，体现为 $\Delta E_{\text{stored}} > 0$；若摄入不足，身体则动用脂肪储备补足差额，$\Delta E_{\text{stored}} < 0$。</p>
+<p><strong>实例分析</strong></p>
+<p>假设某人每日通过食物摄入 2500 千卡的化学能。其中，基础代谢（维持体温、心跳、脏器运转等热量支出）消耗 1600 千卡，日常活动与运动所做的机械功消耗 700 千卡。根据能量守恒：</p>
+$$\Delta E_{\text{stored}} = 2500 - (700 + 1600) = 200 \text{ 千卡}$$
+<p>这 200 千卡的净盈余会以脂肪形式储存。已知每克脂肪约储存 9 千卡能量，则这一天大约新增储存脂肪：</p>
+$$\frac{200 \text{ 千卡}}{9 \text{ 千卡/克}} \approx 22 \text{ 克}$$
+<p><strong>问题解决应用</strong></p>
+<p>理解这一守恒关系，可以直接指导体重管理的定量决策。例如，若某人希望通过减少脂肪储备来减重，目标是使 $\Delta E_{\text{stored}}$ 为负值，可以通过两条路径实现：降低 $Q_{\text{in}}$（减少摄入热量）或提高 $W_{\text{out}} + Q_{\text{out}}$（增加运动量或提高基础代谢率）。若某人希望每周减少 0.5 千克脂肪（约合 3850 千卡），则每日需制造约 550 千卡的能量缺口——这一缺口既可以来自减少饮食摄入，也可以来自增加运动消耗，或二者结合。这正是热力学第一定律在生理学中最直接、最可量化的应用。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

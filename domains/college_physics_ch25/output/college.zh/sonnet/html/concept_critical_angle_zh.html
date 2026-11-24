@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Critical Angle | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="critical-angle-临界角">Critical Angle（临界角）</h2>
+<p><strong>定义</strong></p>
+<p>当光从光密介质（折射率 $n_1$）射向光疏介质（折射率 $n_2$，且 $n_2 < n_1$）时，折射角总是大于入射角。随着入射角 $\theta_1$ 增大，折射角 $\theta_2$ 也随之增大，直到某一特定入射角，折射光线恰好沿界面传播，即 $\theta_2 = 90°$。这个特殊的入射角称为<strong>临界角</strong>，记作 $\theta_c$。</p>
+<p>由斯涅尔定律 $n_1 \sin\theta_1 = n_2 \sin\theta_2$，代入 $\theta_2 = 90°$（此时 $\sin\theta_2 = 1$），可得：</p>
+$$
+\sin\theta_c = \frac{n_2}{n_1}
+$$
+<p>当入射角超过 $\theta_c$ 时，折射光线不再存在，全部光能反射回原介质，这一现象称为<strong>全内反射（total internal reflection）</strong>。需要强调的是，临界角只有在光从光密介质射向光疏介质（$n_1 > n_2$）时才存在；若 $n_1 < n_2$，方程给出的 $\sin\theta_c > 1$ 无实数解，说明此时任何入射角都不会发生全反射。</p>
+<p><strong>例题</strong></p>
+<p>已知光从玻璃（$n_1 = 1.50$）射向空气（$n_2 = 1.00$），求临界角。</p>
+$$
+\sin\theta_c = \frac{1.00}{1.50} = 0.667
+$$
+$$
+\theta_c = \arcsin(0.667) \approx 41.8°
+$$
+<p>这意味着：当光在玻璃内部以大于 $41.8°$ 的角度射向玻璃-空气界面时,光将完全被反射回玻璃内部,不会有任何光透射到空气中。</p>
+<p><strong>问题求解应用</strong></p>
+<p>临界角是设计光纤（optical fiber）的核心原理。光纤芯层的折射率 $n_1$ 必须高于包层的折射率 $n_2$，使得光在芯层内以大于临界角的角度不断发生全反射，从而沿光纤长距离传输而几乎不损耗。</p>
+<p>练习：某光纤芯层折射率为 $1.48$，包层折射率为 $1.46$。求光线能够在芯层内维持全反射传输所需满足的最小入射角。</p>
+$$
+\sin\theta_c = \frac{1.46}{1.48} \approx 0.9865 \quad\Rightarrow\quad \theta_c \approx 80.6°
+$$
+<p>因此，只有当光线以大于 $80.6°$ 的角度（相对于界面法线）射入芯-包层界面时，才能实现全内反射，保证信号沿光纤有效传输——这正是光纤通信系统設計中角度公差如此严苛的物理原因。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

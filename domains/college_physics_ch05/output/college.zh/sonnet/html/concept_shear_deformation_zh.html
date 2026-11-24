@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shear Deformation | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="shear-deformation">Shear Deformation</h2>
+<p><strong>定义</strong></p>
+<p>剪切形变（shear deformation）描述的是当作用力平行于物体的某一截面（而非垂直压入或拉伸该截面）时，物体所发生的形变。与拉伸或压缩形变不同——那类形变改变的是物体沿力方向的长度——剪切形变改变的是物体的<strong>形状</strong>：物体内部各层相对于彼此发生滑移，产生垂直于原长度方向的位移 $\Delta x$。</p>
+<p>设物体原长为 $L_0$（沿受力面法线方向的尺寸），截面积为 $A$（受力作用的那个面的面积），所受的平行于该面的力为 $F$，材料的剪切模量（shear modulus）为 $S$，则剪切形变量为：</p>
+$$
+\Delta x = \frac{1}{S}\cdot \frac{F}{A}\cdot L_0
+$$
+<p>这个公式的结构与胡克定律（Hooke's law）在拉伸/压缩情形下的形式完全类似：形变量正比于所加的"压强"（这里是剪应力 $F/A$）和原始尺寸 $L_0$，反比于材料的刚度系数 $S$。$S$ 越大，材料越难以被剪切变形，例如金属的 $S$ 远大于橡胶。</p>
+<p><strong>例题</strong></p>
+<p>一本厚度为 $L_0 = 4.0\ \text{cm}$ 的书放在桌上，其上表面面积 $A = 0.20\ \text{m}^2$，剪切模量 $S = 3.0\times 10^{6}\ \text{N/m}^2$。若在书的上表面沿水平方向施加 $F = 20\ \text{N}$ 的力（下表面固定不动），求上表面相对下表面的水平位移 $\Delta x$。</p>
+<p>代入公式：</p>
+$$
+\Delta x = \frac{1}{3.0\times10^{6}}\times\frac{20}{0.20}\times 0.04 = \frac{1}{3.0\times10^{6}}\times 100\times 0.04 \approx 1.3\times10^{-6}\ \text{m}
+$$
+<p>即上表面相对下表面滑移约 $1.3\ \mu\text{m}$，微小但真实存在——这正是地震中岩层剪切、螺栓连接受剪、或齿轮啮合面受力时形变的物理基础。</p>
+<p><strong>解题应用</strong></p>
+<p>处理剪切形变问题时，关键在于正确识别三个量：哪个面是"受剪切的面"（决定 $A$）、哪个方向是原长 $L_0$（通常垂直于受力面，沿滑移方向的深度），以及作用力是否确实平行于该面。常见错误是把压强公式中的面积和形变方向搞反——牢记：剪切中位移 $\Delta x$ 与外力 $F$ 方向相同，且垂直于 $L_0$ 的方向，这与拉伸形变中位移与力共线的情形形成鲜明对比。当已知材料的 $S$ 及所受结构限制（如最大允许 $\Delta x$）时，可反解出该结构能承受的最大剪切力 $F_{\max} = S \cdot A \cdot \Delta x_{\max}/L_0$，这是工程中评估螺栓、铆钉或地基抗剪能力的标准方法。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

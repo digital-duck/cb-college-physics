@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barometer | College Physics Ch11</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="barometer">Barometer</h2>
+<h3 id="definition">Definition</h3>
+<p>A <strong>barometer</strong> measures atmospheric pressure by balancing it against the weight of a liquid column. In the mercury barometer, a glass tube sealed at one end is filled with mercury and inverted into an open dish of mercury. Some mercury drains out, leaving a column of height $h$ with a near-vacuum above it (the "Torricellian vacuum"). Atmospheric pressure pushing on the dish surface holds the column up.</p>
+<p>Why the column stops at a fixed height: the fluid at the dish level must have the same pressure inside and outside the tube. Outside, that pressure is $P_{\text{atm}}$. Inside, it is the pressure at the top of the column plus the hydrostatic pressure of the mercury. The vacuum contributes essentially zero pressure, so</p>
+$$P_{\text{atm}} = \rho g h$$
+<p>where $\rho$ is the mercury density, $g$ is gravitational acceleration, and $h$ is the column height. The height of the column therefore reads out the pressure directly.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>Standard atmospheric pressure is $101{,}325\ \text{Pa}$. Use $\rho_{\text{Hg}} = 13{,}595\ \text{kg/m}^3$ and $g = 9.807\ \text{m/s}^2$. Solving for $h$:</p>
+$$h = \frac{P_{\text{atm}}}{\rho g} = \frac{101{,}325}{(13{,}595)(9.807)} \approx 0.760\ \text{m}$$
+<p>The column stands about $760\ \text{mm}$, which is why $1\ \text{atm} = 760\ \text{mmHg}$.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Why mercury?</strong> Repeat the calculation with water ($\rho = 1000\ \text{kg/m}^3$):</p>
+$$h = \frac{101{,}325}{(1000)(9.807)} \approx 10.3\ \text{m}$$
+<p>A water barometer would need a tube over 10 m tall. Mercury's high density makes a benchtop instrument practical. Mercury also has a very low vapor pressure at room temperature. That keeps the "vacuum" close to a true vacuum.</p>
+<p><strong>Weather and altitude.</strong> A storm system drops the reading from $760$ to $735\ \text{mmHg}$. The pressure change is</p>
+$$\Delta P = \rho g\,\Delta h = (13{,}595)(9.807)(-0.025) \approx -3{,}300\ \text{Pa}$$
+<p>so the pressure fell by about $3.3\ \text{kPa}$. Falling readings usually signal approaching low-pressure weather. Rising readings signal fair weather.</p>
+<p>Altitude has a similar effect. Near sea level, pressure falls roughly $12\ \text{Pa}$ per meter of climb. A hiker who sees the column drop by $60\ \text{mmHg}$ (about $8{,}000\ \text{Pa}$) can estimate the climb:</p>
+$$\Delta z \approx \frac{8{,}000}{12} \approx 670\ \text{m}$$
+<p>This is only an approximation, because air density decreases with height.</p>
+<p><strong>Common errors.</strong></p>
+<li><strong>Tube width:</strong> the column height does not depend on the tube's cross-section. Pressure depends on height, not volume.</li>
+<li><strong>Tilting:</strong> tilting the tube lengthens the mercury inside but leaves the <em>vertical</em> height unchanged.</li>
+<li><strong>Air in the tube:</strong> trapped air adds pressure at the top and makes the reading too low.</li>
+<pre class="mermaid">graph TD
+    A["Atmosphere pushes on dish surface"] --> B["Pressure transmitted through mercury"]
+    B --> C["Column supported inside tube"]
+    D["Vacuum above column: P = 0"] --> E["Weight of column: rho g h"]
+    C --> F["Balance: P_atm = rho g h"]
+    E --> F</pre>
+<p><em>The atmosphere's push on the dish balances the column's weight, so the column height gives the pressure.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch11: Fluid Statics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

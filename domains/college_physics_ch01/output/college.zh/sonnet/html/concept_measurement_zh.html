@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Measurement | College Physics Ch01</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="measurement">Measurement</h2>
+<p><strong>定义</strong></p>
+<p>测量（measurement）是对某一物理属性进行定量确定的过程，其结果表示为一个数值与一个计量单位的组合，例如 $3.2\ \text{m}$ 或 $98.6\ ^\circ\text{F}$。测量分为两类：<strong>直接测量</strong>，即用仪器直接读取属性的数值（如用温度计读取体温）；<strong>间接测量</strong>，即通过已测得的其他量经计算得出目标属性（如用速度和时间计算距离）。任何测量结果都伴随一定的不确定度，通常以有效数字或误差范围表示，反映仪器精度与测量过程的局限性。区分<strong>精确度（accuracy）</strong>——测量值与真实值的接近程度，与<strong>精密度（precision）</strong>——多次重复测量结果彼此的接近程度，对理解测量质量至关重要：一组测量可以非常精密（结果高度一致）却并不精确（系统性偏离真值）。</p>
+<p><strong>实例</strong></p>
+<p>假设你需要测定一块不规则石头的密度。直接测量部分：用天平称得石头质量为 $m = 45.2\ \text{g}$；用排水法测得其排开水的体积为 $V = 15.0\ \text{cm}^3$（先记录量筒初始水位 $20.0\ \text{cm}^3$，放入石头后水位升至 $35.0\ \text{cm}^3$，两次读数之差即为体积）。间接测量部分：密度并非直接读出，而是通过计算得到：</p>
+$$
+\rho = \frac{m}{V} = \frac{45.2\ \text{g}}{15.0\ \text{cm}^3} \approx 3.01\ \text{g/cm}^3
+$$
+<p>这里，质量和体积是直接测量的结果，密度则是间接测量的结果，其不确定度取决于质量和体积各自测量误差的传播。</p>
+<p><strong>解决问题的应用</strong></p>
+<p>在实际科研与工程中，测量常常需要组合多个仪器与计算步骤来获得目标量。例如，要确定一间房间的空气密度，你无法直接"称"空气，而是分别直接测量温度、气压和体积，再利用理想气体定律间接计算出密度。掌握测量的关键在于：（1）判断某个量应当直接测得还是通过计算间接得出；（2）为直接测量选择精度匹配任务需求的仪器；（3）在间接测量中追踪误差如何从输入量传递到最终结果。这种"设计测量方案"的能力，是从实验数据得出可靠结论的基础，也是区分粗略估计与科学测定的核心技能。</p>
+  </main>
+  <footer class="spl-credit">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></footer>
+</div>
+</body>
+</html>

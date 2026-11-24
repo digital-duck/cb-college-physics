@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coefficient Of Kinetic Friction | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="coefficient-of-kinetic-friction">Coefficient Of Kinetic Friction</h2>
+<p><strong>定义</strong></p>
+<p>当两个接触的物体已经发生相对滑动时,阻碍滑动的摩擦力称为<strong>动摩擦力</strong>(kinetic friction),记作 $f_k$。实验表明,在很宽的范围内,动摩擦力的大小近似与接触面之间的法向力(normal force)$N$成正比,而与接触面积、滑动速度关系不大。这一比例关系写作:</p>
+$$f_k = \mu_k N$$
+<p>其中 $\mu_k$ 就是<strong>动摩擦系数</strong>——一个无量纲常数,由接触的两种材料共同决定(例如"木头对木头"、"橡胶对沥青"),必须通过实验测量得到,不能从理论推导。对同一对材料而言,恒有</p>
+$$\mu_k < \mu_s$$
+<p>即维持滑动所需的摩擦力,总小于使物体刚开始滑动所需的最大静摩擦力 $\mu_s N$。这也解释了一个常见现象:推动一个静止的重物比推动一个已经在滑动的重物更费力——一旦克服了静摩擦的"门槛",摩擦力会突然减小。</p>
+<p><strong>范例</strong></p>
+<p>一个质量 $m = 20\ \text{kg}$ 的木箱以恒定速度在水平地面上滑动,已知 $\mu_k = 0.30$。求所需施加的水平推力。</p>
+<p>由于物体做匀速运动,合力为零,所以推力 $F$ 必须恰好等于动摩擦力:</p>
+$$N = mg = 20 \times 9.8 = 196\ \text{N}$$
+$$f_k = \mu_k N = 0.30 \times 196 = 58.8\ \text{N}$$
+<p>因此 $F = 58.8\ \text{N}$。</p>
+<p><strong>解题应用</strong></p>
+<p>动摩擦系数的核心用途,是把"接触面性质"这一复杂的微观现象,压缩成一个可以直接代入牛顿第二定律的数值。典型解题步骤:</p>
+<li>画受力图,识别法向力 $N$(注意斜面或有外加压力时 $N \neq mg$)。</li>
+<li>用 $f_k = \mu_k N$ 求出摩擦力大小,方向始终与相对滑动方向相反。</li>
+<li>代入 $\sum F = ma$,求加速度、速度或所需外力。</li>
+<p>例如,斜面滑块问题中,法向力为 $N = mg\cos\theta$,沿斜面下滑的合力为</p>
+$$ma = mg\sin\theta - \mu_k mg\cos\theta$$
+<p>由此可解出加速度 $a = g(\sin\theta - \mu_k\cos\theta)$。若 $\mu_k$ 已知,该式可直接用于预测滑块能否加速下滑,或求滑块滑行多远后停止。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

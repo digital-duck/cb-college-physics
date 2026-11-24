@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terminal Velocity | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="终端速度">终端速度</h2>
+<p><strong>定义</strong></p>
+<p>当物体在流体（如空气或水）中下落时，会同时受到两个方向相反的力：重力 $mg$（方向向下）和阻力 $F_d$（方向向上，与运动方向相反）。在低速时阻力较小，物体持续加速；但阻力通常随速率增大而增大（常见模型为 $F_d = \frac{1}{2} C_d \rho A v^2$，其中 $C_d$ 为阻力系数，$\rho$ 为流体密度，$A$ 为物体横截面积，$v$ 为速率）。当阻力增大到与重力恰好相等时，合力为零，加速度 $a = 0$，物体此后以恒定速度下落——这个速度称为终端速度 $v_t$。</p>
+<p>令合力为零：</p>
+$$mg = \frac{1}{2} C_d \rho A v_t^2$$
+<p>解得：</p>
+$$v_t = \sqrt{\frac{2mg}{C_d \rho A}}$$
+<p>这是一个平衡态而非静止态：物体仍在运动，只是不再加速。</p>
+<p><strong>例题</strong></p>
+<p>一名跳伞者（含装备）质量 $m = 80\ \text{kg}$，在展开降落伞前呈俯冲姿态，有效横截面积 $A = 0.7\ \text{m}^2$，阻力系数 $C_d = 1.0$，空气密度 $\rho = 1.2\ \text{kg/m}^3$，取 $g = 9.8\ \text{m/s}^2$。求其终端速度。</p>
+<p>代入公式：</p>
+$$v_t = \sqrt{\frac{2 \times 80 \times 9.8}{1.0 \times 1.2 \times 0.7}} = \sqrt{\frac{1568}{0.84}} \approx \sqrt{1867} \approx 43.2\ \text{m/s}$$
+<p>约合每小时 155 公里，这与真实跳伞数据（约 190–200 km/h，俯冲姿态下阻力更小）在数量级上相符，差异来自 $C_d$、$A$ 的估算精度。</p>
+<p><strong>解题应用</strong></p>
+<p>终端速度分析的关键技巧是"先判断是否达到平衡"：若题目给出的时间足够长，或明确说明物体"匀速下落"，则可直接令 $ma = 0$ 求解，而无需求解完整的微分方程 $m\frac{dv}{dt} = mg - \frac{1}{2}C_d\rho A v^2$。</p>
+<p>一个常见的推广应用是比较不同物体的终端速度：由 $v_t \propto \sqrt{m/A}$ 可知，质量大、横截面积小的物体（如实心钢球）终端速度更高；而质量小、横截面积大的物体（如降落伞张开后的跳伞者，或一片羽毛）终端速度低得多。这解释了为何跳伞者展开降落伞后，$A$ 骤增使 $v_t$ 从约 55 m/s 降至约 5–7 m/s——这正是安全着陆所依赖的物理原理。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

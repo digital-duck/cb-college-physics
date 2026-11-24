@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Dimensional Kinematics | College Physics Ch03</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="one-dimensional-kinematics">One Dimensional Kinematics</h2>
+<p>One-dimensional kinematics describes motion along a single straight line without reference to the forces causing it. When acceleration $a$ is constant, three equations relate displacement $\Delta x$, initial velocity $v_0$, final velocity $v$, acceleration $a$, and elapsed time $t$:</p>
+$$v = v_0 + at$$
+$$\Delta x = v_0 t + \tfrac{1}{2}at^2$$
+$$v^2 = v_0^2 + 2a\,\Delta x$$
+<p>These follow directly from the definitions $a = \dfrac{dv}{dt}$ and $v = \dfrac{dx}{dt}$, integrated under the assumption that $a$ is constant in time. Each equation omits one variable, so the choice of formula is dictated by which quantities are known and which is sought.</p>
+<p><strong>Worked example.</strong> A car starts at rest ($v_0 = 0$) and accelerates at $a = 3\ \text{m/s}^2$ for $t = 4\ \text{s}$. Its final velocity is $v = 0 + (3)(4) = 12\ \text{m/s}$, and its displacement is $\Delta x = 0 + \tfrac{1}{2}(3)(4)^2 = 24\ \text{m}$. Checking with the third equation: $v^2 = 0 + 2(3)(24) = 144$, so $v = 12\ \text{m/s}$ — consistent.</p>
+<p><strong>Problem-solving application.</strong> The essential skill is variable identification: list what is given, what is asked, and select the equation that excludes the unknown you don't have. A common trap is sign convention — velocity, acceleration, and displacement must share a consistent positive direction, or braking ($a$ negative) and forward motion ($v_0$ positive) will produce contradictory results.</p>
+<p>Consider a second scenario using the same three equations: a train decelerates from $v_0 = 30\ \text{m/s}$ to rest over a distance of $\Delta x = 150\ \text{m}$. Since $t$ is not given and not asked for, the third equation is the right tool: $0 = 30^2 + 2a(150)$, giving $a = -3\ \text{m/s}^2$. Once $a$ is known, the first equation yields $t = \dfrac{0 - 30}{-3} = 10\ \text{s}$. This two-step pattern — solving for an intermediate unknown before substituting into a second equation — is the core technique behind nearly all constant-acceleration problems, and it is worth practicing until the choice of equation becomes automatic from the list of knowns and unknowns alone.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch3: Two-Dimensional Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

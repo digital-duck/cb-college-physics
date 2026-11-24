@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basal Metabolic Rate | College Physics Ch07</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="基础代谢率">基础代谢率</h2>
+<p><strong>定义</strong>：基础代谢率（Basal Metabolic Rate，简称 BMR）是指人体在完全静息状态下——清醒、空腹、环境温度适宜、不进行任何体力活动——维持基本生理功能（心跳、呼吸、体温调节、细胞代谢、神经系统活动等）所需消耗的能量转化速率。BMR 本质上是一种功率，单位通常为千卡/天（kcal/day）或瓦特（W），它衡量的是身体"待机"时的能量消耗速度，而非总能量。对大多数成年人而言，BMR 约占每日总能量消耗的 75%，其余约 25% 来自体力活动和食物热效应（消化食物所需的能量）。</p>
+<p>BMR 的大小取决于体重、身高、年龄、性别和肌肉含量等因素，常用 Mifflin-St Jeor 公式估算：</p>
+$$
+\text{BMR}_{男} = 10m + 6.25h - 5a + 5
+$$
+$$
+\text{BMR}_{女} = 10m + 6.25h - 5a - 161
+$$
+<p>其中 $m$ 为体重（千克），$h$ 为身高（厘米），$a$ 为年龄（岁），结果单位为 kcal/day。</p>
+<p><strong>举例说明</strong>：设一名 25 岁女性，体重 60 kg，身高 165 cm。代入公式：</p>
+$$
+\text{BMR} = 10(60) + 6.25(165) - 5(25) - 161 = 600 + 1031.25 - 125 - 161 = 1345.25 \text{ kcal/day}
+$$
+<p>这意味着即使她整天卧床不动，身体也会消耗约 1345 kcal 的能量来维持基本生命活动。</p>
+<p><strong>应用于问题求解</strong>：假设这名女性每天通过日常活动（走路、工作等）额外消耗 400 kcal，食物热效应约为摄入热量的 10%。若她每天摄入 2000 kcal，问她的每日净能量平衡是多少？</p>
+<p>首先计算食物热效应：$2000 \times 0.10 = 200$ kcal。 总消耗 $= \text{BMR} + \text{活动消耗} + \text{食物热效应} = 1345.25 + 400 + 200 = 1945.25$ kcal。 净平衡 $= 2000 - 1945.25 = 54.75$ kcal（盈余）。</p>
+<p>这类计算是营养学、体重管理和运动科学中制定热量摄入方案的基础：只要知道 BMR，就能反推出维持体重、减重或增重所需的每日摄入热量目标。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch7: Work, Energy, and Energy Resources (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

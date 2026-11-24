@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>De Broglie Wavelength | College Physics Ch29</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="de-broglie-wavelength">De Broglie Wavelength</h2>
+<p>In 1924, Louis de Broglie proposed that if light, a wave, can behave like a particle with momentum, then particles such as electrons should behave like waves. The <strong>de Broglie wavelength</strong> of any particle with momentum $p$ is</p>
+$$\lambda = \frac{h}{p}$$
+<p>where $h = 6.626\times10^{-34}\ \text{J·s}$ is Planck's constant. For a particle of mass $m$ moving at speed $v$ much less than the speed of light, $p = mv$, so $\lambda = h/(mv)$. If you know the kinetic energy $K$ instead, use $K = p^2/(2m)$ to get $p = \sqrt{2mK}$, so</p>
+$$\lambda = \frac{h}{\sqrt{2mK}}.$$
+<p>Every moving object has such a wavelength. Whether the wave nature can be observed depends on how $\lambda$ compares to the size of the objects or gaps the particle encounters.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>Find the de Broglie wavelength of an electron ($m = 9.11\times10^{-31}$ kg) accelerated through a potential difference of 100 V.</p>
+<p>The kinetic energy is $K = eV = (1.602\times10^{-19})(100) = 1.602\times10^{-17}$ J. Then</p>
+$$p = \sqrt{2mK} = \sqrt{2(9.11\times10^{-31})(1.602\times10^{-17})} = 5.40\times10^{-24}\ \text{kg·m/s},$$
+$$\lambda = \frac{6.626\times10^{-34}}{5.40\times10^{-24}} = 1.23\times10^{-10}\ \text{m} = 0.123\ \text{nm}.$$
+<p>This is comparable to the spacing between atoms in a crystal (about 0.1–0.3 nm).</p>
+<p>Now compare a 0.145 kg baseball thrown at 40 m/s:</p>
+$$\lambda = \frac{6.626\times10^{-34}}{(0.145)(40)} \approx 1.1\times10^{-34}\ \text{m},$$
+<p>roughly $10^{19}$ times smaller than a proton. No experiment could detect it, so everyday objects show no wave behavior.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Why do electrons diffract from crystals but baseballs do not?</strong> A wave spreads and interferes noticeably only when its wavelength is comparable to the size of the gap or obstacle. The 100 V electron has $\lambda \approx 0.12$ nm, about the spacing of atoms in a crystal, so it can produce a diffraction pattern. The baseball's $\lambda$ is far smaller than any obstacle it meets, so it does not. In 1927, Davisson and Germer saw electrons diffract from a nickel crystal, which confirmed de Broglie's hypothesis.</p>
+<p><strong>Problem.</strong> At what kinetic energy does a neutron ($m = 1.675\times10^{-27}$ kg) have $\lambda = 0.200$ nm, comparable to atomic spacing in a crystal?</p>
+<p>Solve $\lambda = h/\sqrt{2mK}$ for $K$:</p>
+$$K = \frac{h^2}{2m\lambda^2} = \frac{(6.626\times10^{-34})^2}{2(1.675\times10^{-27})(2.00\times10^{-10})^2} = 3.28\times10^{-21}\ \text{J}\approx 0.0205\ \text{eV}.$$
+<p>This is close to the average thermal energy of a particle at room temperature ($\approx 0.025$ eV). A neutron with only ordinary thermal motion therefore has a wavelength suited to probing crystals.</p>
+<p><strong>Strategy summary:</strong></p>
+<li>Find $p$ from $mv$ or from $\sqrt{2mK}$.</li>
+<li>Compute $\lambda = h/p$.</li>
+<li>Compare $\lambda$ with the relevant length scale.</li>
+<p>If $\lambda$ is much smaller than that scale, classical physics works. If the two are comparable, you must include wave effects such as diffraction.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch29: Quantum Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colliding Beams | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="colliding-beams">Colliding Beams</h2>
+<p><strong>定义</strong></p>
+<p>对撞束（colliding beams）是一种粒子加速器实验技术：两束粒子沿相反方向运动，在探测器中心发生正面碰撞。其核心优势在于，由于两束粒子动量大小相等、方向相反，碰撞前系统的总动量为零，因此碰撞产生的全部动能都可以转化为新粒子的静止质量，而不像固定靶实验那样，有相当一部分能量必须用于维持末态粒子整体的动量守恒（即"浪费"在系统的整体运动上）。</p>
+<p>要定量描述这一点，需要用到相对论中的不变质量（invariant mass）概念。对于两个粒子，总的四动量为 $P = p_1 + p_2$，其不变量</p>
+$$
+s = (p_1 + p_2)^2 c^2 = E_{\text{cm}}^2
+$$
+<p>在任何参考系中取值相同，其中 $E_{\text{cm}}$ 是质心系总能量，也就是可用于产生新粒子的最大能量。</p>
+<p><strong>推导与对比</strong></p>
+<p>设两束粒子能量均为 $E$，质量可忽略（高能极限），沿相反方向运动，则动量为 $p_1 = -p_2$，总动量 $\vec{P} = 0$。此时</p>
+$$
+E_{\text{cm}} = E_1 + E_2 = 2E
+$$
+<p>即束流总能量全部可用。</p>
+<p>相比之下，固定靶实验中若入射粒子能量为 $E$、质量为 $m$，靶粒子静止，可以证明</p>
+$$
+E_{\text{cm}} = \sqrt{2mc^2 E + 2m^2c^4}
+$$
+<p>在高能极限下 $E_{\text{cm}} \propto \sqrt{E}$，远小于对撞束方式给出的 $E_{\text{cm}} \propto E$。这正是历史上从固定靶实验转向对撞机（如 LHC）的根本原因。</p>
+<p><strong>问题求解应用</strong></p>
+<p>例题：LHC 中两束质子能量各为 $6.5\ \text{TeV}$，求质心系能量，并比较若用同样能量的质子束轰击静止质子靶所能达到的质心系能量。</p>
+<p>对撞情形：$E_{\text{cm}} = 2 \times 6.5\ \text{TeV} = 13\ \text{TeV}$。</p>
+<p>固定靶情形：代入 $E = 6.5\ \text{TeV}$，质子质量 $mc^2 \approx 0.938\ \text{GeV}$，得</p>
+$$
+E_{\text{cm}} = \sqrt{2 \times 0.938\ \text{GeV} \times 6500\ \text{GeV}} \approx 110\ \text{GeV}
+$$
+<p>可见对撞束方案的可用能量高出约两个数量级——这正是探索更高质量新粒子（如希格斯玻色子）必须依赖对撞机技术的定量原因。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Net External Force | College Physics Ch08</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="net-external-force">Net External Force</h2>
+<p><strong>定义</strong></p>
+<p>一个系统所受的净外力，是指作用在该系统边界之外、来自外部物体的所有力的矢量和。牛顿第二定律指出，正是这个净外力（而非单个力）决定了系统质心的加速度：</p>
+$$\vec{F}_{\text{net,ext}} = \sum_i \vec{F}_{i,\text{ext}} = m\vec{a}_{cm}$$
+<p>关键在于"外部"二字：系统内部各部分之间相互施加的力（内力）总是成对出现、方向相反、大小相等（牛顿第三定律），因此在对整个系统求矢量和时会完全抵消，对系统整体的加速度没有贡献。只有跨越系统边界、由外部环境施加的力才会改变系统的运动状态。这也是为什么定义系统边界是分析力学问题的第一步——边界画在哪里，直接决定了哪些力算"外力"，哪些力算"内力"。</p>
+<p><strong>范例</strong></p>
+<p>考虑两节相连的火车车厢，总质量 $m = 2000\ \text{kg}$，机车对前车厢施加牵引力 $F = 4000\ \text{N}$，轨道摩擦阻力共 $f = 800\ \text{N}$。若将两节车厢视为一个整体系统，车厢之间的连接杆张力属于内力，不出现在净外力的计算中：</p>
+$$F_{\text{net,ext}} = F - f = 4000 - 800 = 3200\ \text{N}$$
+$$a = \dfrac{F_{\text{net,ext}}}{m} = \dfrac{3200}{2000} = 1.6\ \text{m/s}^2$$
+<p>若想求出连接杆的张力 $T$，则必须把后车厢单独取为一个子系统，此时连接杆的力就变成了外力，可用同样的加速度 $a$ 代入后车厢的方程求解。</p>
+<p><strong>解题应用</strong></p>
+<p>处理多物体系统问题的核心策略是：先明确系统边界，判断力是内力还是外力，再决定是把整个系统作为一个整体分析（求整体加速度），还是拆分成子系统（求内部相互作用力，如张力、摩擦力、法向力）。常见错误是把内力也计入净外力求和，导致结果偏大；或者反过来，在拆分子系统求内部力时遗漏了应计入的外力。经验法则是：求整体运动状态（加速度）时，尽量取最大系统以消去内力；求系统内部某处的力时，则沿该处切开系统，使该力"外化"，再对子系统应用 $\vec{F}_{\text{net,ext}} = m\vec{a}$。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch8: Linear Momentum and Collisions (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

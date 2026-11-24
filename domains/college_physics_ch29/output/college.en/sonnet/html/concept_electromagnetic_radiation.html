@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electromagnetic Radiation | College Physics Ch29</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="electromagnetic-radiation">Electromagnetic Radiation</h2>
+<p><strong>Definition.</strong> Electromagnetic (EM) radiation consists of coupled, oscillating electric and magnetic fields that sustain each other as they travel through space. The two fields are perpendicular to each other and to the direction of travel, so EM waves are <em>transverse</em>. Unlike sound or water waves, they need no medium. In vacuum they all travel at the same speed:</p>
+$$c = 2.998\times 10^{8}\ \text{m/s}$$
+<p>Every EM wave is described by its frequency $f$ (oscillations per second, in Hz) and its wavelength $\lambda$ (distance between successive crests, in m). These are linked by</p>
+$$c = \lambda f.$$
+<p>Since $c$ is fixed, a higher frequency means a shorter wavelength. In order of increasing frequency, the spectrum runs through radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, and gamma rays. Visible light covers only about 400–700 nm.</p>
+<p><strong>Worked example.</strong> A Wi-Fi router transmits at $f = 2.4\ \text{GHz}$. Find its wavelength.</p>
+$$\lambda = \frac{c}{f} = \frac{2.998\times10^{8}}{2.4\times10^{9}} \approx 0.125\ \text{m}$$
+<p>The wavelength is about 12.5 cm, which is roughly the size of a hand. Radio and microwave waves have wavelengths from millimeters to kilometers, while visible light is about a million times shorter.</p>
+<p><strong>Problem-solving application.</strong> A radio station broadcasts at 98.1 MHz, and a violet laser has wavelength 405 nm. Which has the higher frequency, and by what factor?</p>
+<li>Convert the radio frequency to Hz and find its wavelength:</li>
+$$f_{\text{radio}} = 98.1\times10^{6}\ \text{Hz},\qquad \lambda_{\text{radio}} = \frac{2.998\times10^{8}}{98.1\times10^{6}} \approx 3.06\ \text{m}$$
+<li>Convert the laser wavelength to meters and find its frequency:</li>
+$$f_{\text{laser}} = \frac{c}{\lambda} = \frac{2.998\times10^{8}}{405\times10^{-9}} \approx 7.40\times10^{14}\ \text{Hz}$$
+<li>Compare:</li>
+$$\frac{f_{\text{laser}}}{f_{\text{radio}}} = \frac{7.40\times10^{14}}{9.81\times10^{7}} \approx 7.5\times10^{6}$$
+<p>The violet light has a frequency about 7.5 million times higher. Equivalently, its wavelength is about 7.5 million times shorter ($3.06\ \text{m} \div 405\ \text{nm} \approx 7.5\times10^{6}$), which confirms that $c=\lambda f$ makes frequency and wavelength inversely proportional.</p>
+<p><strong>Strategy.</strong> In any EM problem, first decide which quantity you have ($f$ or $\lambda$). Convert to the other with $c=\lambda f$. Keep units consistent: nm to m, MHz or GHz to Hz. Then check that your answer is reasonable by placing it on the spectrum: a wavelength of meters should be radio, and a wavelength of hundreds of nanometers should be visible.</p>
+<pre class="mermaid">flowchart LR
+    A["Radio<br/>long λ, low f"] --> B["Microwave"]
+    B --> C["Infrared"]
+    C --> D["Visible"]
+    D --> E["Ultraviolet"]
+    E --> F["X-ray"]
+    F --> G["Gamma<br/>short λ, high f"]</pre>
+<p><em>The electromagnetic spectrum, ordered by increasing frequency and decreasing wavelength. All of it travels at $c$ in vacuum.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch29: Quantum Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

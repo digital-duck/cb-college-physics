@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Force Field | College Physics Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="force-field">Force Field</h2>
+<p><strong>定义</strong></p>
+<p>力场是围绕某一物体所存在的空间区域，该区域内任意位置都会对放入其中的检验粒子（test particle）施加力。力场的关键特性在于：它由<strong>源物体</strong>（source object）独立定义，与是否存在检验粒子无关——即便没有检验粒子在场，力场依然客观存在于空间的每一点。数学上，力场是一个<strong>向量场</strong>：空间中每一点 $\vec{r}$ 对应一个矢量 $\vec{F}(\vec{r})$，表示单位检验粒子（或单位电荷、单位质量）在该点将受到的力。</p>
+<p>最常见的两类力场是引力场和电场，二者都遵循平方反比定律：</p>
+$$\vec{g}(\vec{r}) = -\frac{GM}{r^2}\hat{r}, \qquad \vec{E}(\vec{r}) = \frac{kq}{r^2}\hat{r}$$
+<p>其中 $\vec{g}$ 是引力场强度（单位质量所受引力），$\vec{E}$ 是电场强度（单位电荷所受电力），$\hat{r}$ 是由源指向该点的单位矢量。注意两式右边只含源物体的物理量（$M$ 或 $q$）与距离 $r$，不含检验粒子的质量或电荷——这正体现了"场由源独立定义"这一核心思想。</p>
+<p><strong>求解范例</strong></p>
+<p>已知地球质量 $M = 5.97\times10^{24}\,\text{kg}$，求距地心 $r = 6.71\times10^6\,\text{m}$（相当于国际空间站轨道）处的引力场强度。</p>
+$$g = \frac{GM}{r^2} = \frac{(6.67\times10^{-11})(5.97\times10^{24})}{(6.71\times10^6)^2} \approx 8.86\,\text{N/kg}$$
+<p>这个结果与轨道上是否真的放置卫星无关——它是空间中该点本身的属性。一旦有一颗质量 $m$ 的卫星进入该点，它所受的力即为 $F = mg = 8.86m$ 牛顿。</p>
+<p><strong>问题解决应用</strong></p>
+<p>力场概念的实用价值在于<strong>叠加原理</strong>：当空间中存在多个源物体时，总场等于各源单独产生场的矢量和，即 $\vec{F}_{\text{total}} = \sum_i \vec{F}_i$。这使我们无需逐一考虑检验粒子与每个源的相互作用，而可以先算出场分布，再对任意后续放入的粒子直接施力。例如，计算地球和月球共同作用下飞船轨迹时，先分别求出两者引力场并矢量相加，得到该点的合场，再用 $\vec{F}=m\vec{g}_{\text{合}}$ 求飞船受力——这正是分析多体系统、设计卫星轨道、乃至电路中多电荷分布问题的标准解题步骤。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch4: Dynamics: Force and Newton's Laws of Motion (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

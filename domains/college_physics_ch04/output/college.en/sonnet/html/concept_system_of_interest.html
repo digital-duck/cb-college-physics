@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>System Of Interest | College Physics Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="system-of-interest">System Of Interest</h2>
+<p>A <strong>system of interest</strong> is the specific object, or the specific collection of objects, that you deliberately choose to isolate for analysis. Drawing this boundary is not a formality — it is the single decision that determines which forces you must account for and which you can ignore. Any force exerted by something <em>outside</em> the boundary on something <em>inside</em> it is an <strong>external force</strong> and belongs in your analysis. Any force exerted between two objects that are both <em>inside</em> the boundary is an <strong>internal force</strong>; by Newton's third law it appears as an action-reaction pair entirely within the system, and if you are only interested in the system's overall motion, internal forces cancel and can be dropped from the sum.</p>
+<p><strong>Worked example.</strong> Consider a locomotive pulling two rail cars connected by couplers, accelerating along a straight, frictionless track. If your system of interest is "the locomotive plus both cars" (treated as one combined object), the coupler tensions are internal forces — they pull each car forward and pull the neighboring car backward with equal magnitude, so they vanish from the net-force calculation. Only the engine's driving force and gravity/normal force (which cancel vertically) remain external, giving $F_{net} = (m_1+m_2+m_3)a$. But if you instead redraw the boundary around just the second car, the coupler tensions on <em>both</em> sides of that car become external forces, because the objects producing them (the first car and the third car) now lie outside the boundary. The physics hasn't changed — the acceleration $a$ is the same — but the bookkeeping of which forces you write down has changed completely.</p>
+<p><strong>Problem-solving application.</strong> When a problem is difficult with one choice of system, redrawing the boundary is often the fastest way forward. To find the <em>tension in a specific coupler</em>, you must isolate a system that puts that coupler on the boundary — analyzing the whole train, where it's internal, tells you nothing about it. Conversely, to find the <em>overall acceleration</em>, the biggest system you can justify is usually best, since it eliminates the most unknowns. A reliable strategy: identify the one quantity the problem asks for, then choose the smallest system whose boundary is crossed by a force involving that quantity.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch4: Dynamics: Force and Newton's Laws of Motion (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shock Hazard | College Physics Ch20</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="shock-hazard">Shock Hazard</h2>
+<p>A <strong>shock hazard</strong> is a condition in which electric current can pass through the human body. The danger comes from the current, not the voltage alone. Voltage matters only because, together with the body's resistance, it determines the current:</p>
+$$I = \frac{V}{R_{\text{body}}}$$
+<p>Four factors set the severity: the <strong>magnitude</strong> of the current, its <strong>path</strong> through the body, its <strong>duration</strong>, and, for AC, its <strong>frequency</strong>.</p>
+<p><strong>Magnitude.</strong> Typical effects of 60 Hz AC are:</p>
+<p>| Current | Effect | |---|---| | about 1 mA | threshold of perception (tingle) | | 10–20 mA | "let-go" threshold: muscles clamp and the victim cannot release the conductor | | 50–100 mA | ventricular fibrillation is possible | | above 100 mA | severe burns, cardiac arrest |</p>
+<p><strong>Path.</strong> Current that crosses the chest (hand to hand, or hand to foot) passes near the heart and is much more dangerous than current confined to one limb.</p>
+<p><strong>Duration.</strong> A widely used empirical model for fibrillation (Dalziel) gives a safe-current limit that falls as exposure time grows:</p>
+$$I \approx \frac{116}{\sqrt{t}}\ \text{mA}$$
+<p>where $t$ is in seconds. This is why fast-acting protection matters.</p>
+<p><strong>Frequency.</strong> Household 50–60 Hz is especially dangerous because it falls near the heart's vulnerable rhythm and is low enough to cause sustained muscle tetanus. DC tends to cause a single violent jolt. Very high frequencies flow along the skin and cause burns rather than fibrillation.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>A person with dry skin touches a 120 V conductor. Take $R_{\text{body}} \approx 100\,\text{k}\Omega$ for dry skin:</p>
+$$I = \frac{120}{100{,}000} = 1.2\ \text{mA}$$
+<p>This is barely perceptible. Now the person has wet hands, so the skin resistance drops and $R_{\text{body}} \approx 1\,\text{k}\Omega$:</p>
+$$I = \frac{120}{1{,}000} = 120\ \text{mA}$$
+<p>This is in the fibrillation range. The same voltage gives a hundredfold difference in current.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem.</strong> A fault lets a 240 V line contact an appliance case. A person with $R_{\text{body}} = 1.5\,\text{k}\Omega$ touches the case. (a) What is the current? (b) Is it dangerous? (c) How quickly must a protective device trip?</p>
+<p>(a) $I = 240/1500 = 0.16\ \text{A} = 160\ \text{mA}$.</p>
+<p>(b) Yes. It exceeds the 100 mA fibrillation range.</p>
+<p>(c) Solve the Dalziel model for $t$:</p>
+$$t \approx \left(\frac{116}{160}\right)^2 \approx 0.53\ \text{s}$$
+<p>The device must interrupt the circuit in well under half a second.</p>
+<p><strong>Design implications.</strong> This is the reasoning behind common protections:</p>
+<li><strong>Grounding</strong> gives fault current a low-resistance path, so a breaker trips instead of the body carrying the current.</li>
+<li><strong>Ground-fault circuit interrupters (GFCIs)</strong> trip at about 5 mA of imbalance, typically within 25 ms. That is far below both the let-go threshold and the fibrillation limit.</li>
+<li><strong>Insulation and dry conditions</strong> keep $R_{\text{body}}$ high.</li>
+<p>In practice, assess a shock hazard by estimating the plausible current path and resistance, then compare the resulting current and exposure time with these thresholds.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch20: Electric Current, Resistance, and Ohm's Law (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

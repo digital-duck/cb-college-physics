@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermal Expansion | College Physics Ch13</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="thermal-expansion">Thermal Expansion</h2>
+<h3 id="definition">Definition</h3>
+<p>Thermal expansion is the change in a material's size or volume when its temperature changes. Heating increases the average spacing between vibrating atoms, so most materials expand when heated and contract when cooled. For small temperature changes, the change is proportional to $\Delta T$.</p>
+<p><strong>Linear expansion</strong> (length of rods, rails, wires):</p>
+$$\Delta L = \alpha L_0 \,\Delta T$$
+<p><strong>Area expansion</strong> (plates): $\Delta A = 2\alpha A_0\,\Delta T$</p>
+<p><strong>Volume expansion</strong> (solids and liquids):</p>
+$$\Delta V = \beta V_0 \,\Delta T, \qquad \beta \approx 3\alpha \text{ for isotropic solids}$$
+<p>Here $\alpha$ is the coefficient of linear expansion (units $\text{K}^{-1}$ or $^\circ\text{C}^{-1}$) and $\beta$ is the coefficient of volume expansion. Typical values: steel $\alpha \approx 12\times10^{-6}\,\text{K}^{-1}$, aluminum $\approx 23\times10^{-6}\,\text{K}^{-1}$.</p>
+<p>The $3\alpha$ relation follows from $V = L^3$. Expanding $(L_0(1+\alpha\Delta T))^3$ and dropping terms of order $(\alpha\Delta T)^2$ and higher gives $V \approx V_0(1+3\alpha\Delta T)$.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>A steel bridge span is $L_0 = 200\ \text{m}$ long at $-10^\circ\text{C}$. How much longer is it at $40^\circ\text{C}$?</p>
+$$\Delta T = 40-(-10) = 50\ \text{K}$$
+$$\Delta L = (12\times10^{-6})(200)(50) = 0.12\ \text{m}$$
+<p>The span grows by 12 cm. This is why bridges have expansion joints. Without them, the steel would try to expand and be blocked by its supports.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Constrained expansion produces stress.</strong> If a rod is held rigidly so it cannot expand, the thermal strain $\alpha\Delta T$ is converted into stress through Young's modulus $E$:</p>
+$$\sigma = E\,\alpha\,\Delta T$$
+<p>For steel with $E = 200\ \text{GPa}$ and $\Delta T = 50\ \text{K}$:</p>
+$$\sigma = (200\times10^{9})(12\times10^{-6})(50) = 1.2\times10^{8}\ \text{Pa} = 120\ \text{MPa}$$
+<p>This is a large fraction of the yield strength of structural steel, so a fully constrained span would risk buckling.</p>
+<p><strong>Liquids in containers.</strong> A glass flask holds $500\ \text{mL}$ of ethanol ($\beta = 1.1\times10^{-3}\,\text{K}^{-1}$) and is heated by $20\ \text{K}$. Ignoring the flask's expansion, the liquid volume increases by</p>
+$$\Delta V = (1.1\times10^{-3})(500)(20) = 11\ \text{mL}.$$
+<p>This is why containers are never filled completely. The same effect makes thermometers work.</p>
+<p><strong>Bimetallic strips.</strong> Two bonded metals with different $\alpha$ values (for example, steel and brass) bend when heated, because the metal with the larger $\alpha$ lengthens more. Thermostats use this bending to open or close a circuit.</p>
+<p><strong>Strategy for problems:</strong></p>
+<li>Identify which dimension matters (length, area, or volume) and choose $\alpha$ or $\beta$ accordingly.</li>
+<li>Compute $\Delta T$ with a consistent sign: a temperature drop gives a negative $\Delta L$.</li>
+<li>Check that $\alpha\Delta T \ll 1$, which validates the linear approximation.</li>
+<li>If the object is constrained, convert the blocked strain to stress with $\sigma = E\alpha\Delta T$.</li>
+<p><strong>Caveat:</strong> Water is anomalous. Between $0^\circ\text{C}$ and $4^\circ\text{C}$ it contracts on heating, reaching maximum density near $4^\circ\text{C}$. This is why lakes freeze from the top down.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch13: Temperature, Kinetic Theory, and the Gas Laws (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

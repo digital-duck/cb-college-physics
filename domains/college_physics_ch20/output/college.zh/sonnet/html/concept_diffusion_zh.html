@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diffusion | College Physics Ch20</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="diffusion">Diffusion</h2>
+<p><strong>定义</strong></p>
+<p>扩散是指物质由于分子的随机热运动而发生的净迁移现象。即使在没有外力或宏观流动的情况下,分子因热能而不断做无规则运动(布朗运动),经过大量分子的统计平均后,整体表现为物质从高浓度区域向低浓度区域的净迁移。扩散的关键规律是:粒子经过时间 $t$ 后偏离初始位置的均方根距离 $x_{rms}$,并不与时间 $t$ 成正比,而是与 $\sqrt{t}$ 成正比:</p>
+$$
+x_{rms} = \sqrt{2Dt}
+$$
+<p>其中 $D$ 是扩散系数(单位为 $\text{m}^2/\text{s}$),反映了该物质在特定介质中扩散的快慢。这一 $\sqrt{t}$ 关系源于随机行走(random walk)模型:粒子每一步的方向都是随机的,大量独立随机位移的平方和按统计规律线性增长,因此位移本身按时间的平方根增长,而非线性增长。这正是扩散与宏观对流(如水流搬运物质,位移与 $t$ 成正比)本质不同之处。</p>
+<p><strong>范例</strong></p>
+<p>某种染料分子在水中的扩散系数为 $D = 1 \times 10^{-9}\ \text{m}^2/\text{s}$。求该分子经过 $1$ 小时($t = 3600\ \text{s}$)后典型迁移的均方根距离。</p>
+<p>代入公式:</p>
+$$
+x_{rms} = \sqrt{2 \times (1\times10^{-9}) \times 3600} = \sqrt{7.2\times10^{-6}} \approx 2.68\times10^{-3}\ \text{m} \approx 2.7\ \text{mm}
+$$
+<p>可见,尽管经过了整整一小时,分子实际迁移的距离仅约 2.7 毫米——这正说明纯扩散在宏观尺度上是极其缓慢的过程。</p>
+<p><strong>解题应用</strong></p>
+<p>$\sqrt{t}$ 关系带来一个重要推论:若要使扩散距离增加为原来的 2 倍,所需时间必须增加为原来的 <strong>4 倍</strong>(而不是 2 倍),因为</p>
+$$
+\frac{x_2}{x_1} = \sqrt{\frac{t_2}{t_1}} \;\Rightarrow\; t_2 = t_1\left(\frac{x_2}{x_1}\right)^2
+$$
+<p>这一非线性关系解释了为何生物体的细胞尺度普遍很小(微米级):若依赖纯扩散运输氧气或营养物质,距离稍增大,所需时间便呈平方级增长,效率急剧下降,因此大型生物必须依靠对流(如血液循环)而非扩散来实现远距离物质运输。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch20: Electric Current, Resistance, and Ohm's Law (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

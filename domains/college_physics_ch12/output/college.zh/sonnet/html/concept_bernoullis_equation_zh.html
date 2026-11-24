@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bernoullis Equation | College Physics Ch12</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="bernoullis-equation">Bernoullis Equation</h2>
+<p><strong>定义</strong></p>
+<p>伯努利方程是不可压缩、无粘性流体沿流线运动时能量守恒的数学表达式。它指出，在稳定流动中，单位体积流体所具有的压强能、动能与重力势能之和沿同一条流线保持不变：</p>
+$$P + \frac{1}{2}\rho v^2 + \rho g h = \text{常数}$$
+<p>其中 $P$ 为流体的静压强，$\rho$ 为流体密度，$v$ 为流速，$g$ 为重力加速度，$h$ 为流体相对于参考面的高度。该方程本质上是牛顿第二定律（或功能定理）沿流线积分的结果：外力对流体元做的功等于其动能与势能的变化之和。由于推导中假设流体不可压缩且无摩擦损耗，方程只在这些理想化条件下严格成立，但对气流、水流等许多实际问题仍是极好的近似。</p>
+<p>对于同一流线上任意两点 1 和 2，方程可写为比较形式：</p>
+$$P_1 + \frac{1}{2}\rho v_1^2 + \rho g h_1 = P_2 + \frac{1}{2}\rho v_2^2 + \rho g h_2$$
+<p><strong>范例求解</strong></p>
+<p>设水平输水管在某处收缩，截面积从 $A_1 = 0.020\ \text{m}^2$ 减小到 $A_2 = 0.010\ \text{m}^2$。已知入口流速 $v_1 = 2.0\ \text{m/s}$，入口压强 $P_1 = 1.5\times 10^5\ \text{Pa}$，水的密度 $\rho = 1000\ \text{kg/m}^3$，管道水平放置（$h_1 = h_2$）。</p>
+<p>先用连续性方程求出收缩处流速：</p>
+$$v_2 = v_1 \frac{A_1}{A_2} = 2.0 \times \frac{0.020}{0.010} = 4.0\ \text{m/s}$$
+<p>再代入伯努利方程（水平管，$h_1=h_2$ 项相消）：</p>
+$$P_2 = P_1 + \frac{1}{2}\rho(v_1^2 - v_2^2) = 1.5\times10^5 + \frac{1}{2}(1000)(4 - 16) = 1.5\times10^5 - 6000 = 1.44\times10^5\ \text{Pa}$$
+<p>结果表明：管道变窄、流速增大处，压强反而降低——这正是"流速快压强低"这一直觉规律的定量体现。</p>
+<p><strong>问题解决应用</strong></p>
+<p>伯努利方程与连续性方程 $A_1 v_1 = A_2 v_2$ 联立使用，是分析文丘里流量计、机翼升力、喷雾器工作原理的标准方法。解题时应先明确两个分析点、确认流线连续且流体近似无粘，再依次代入已知量求解未知的压强或流速；若涉及高度变化（如虹吸管、水塔供水），务必保留 $\rho g h$ 项，不能像水平管那样直接消去。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch12: Fluid Dynamics and Its Biological and Medical Applications (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faraday Cage | College Physics Ch18</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="faraday-cage">Faraday Cage</h2>
+<p><strong>定义</strong></p>
+<p>法拉第笼是一个由导体材料构成的封闭或近似封闭的外壳,它能屏蔽外部电场对内部空间的影响。其物理机制根源于导体的静电性质:在静电平衡状态下,导体内部电场必须为零,否则自由电子会持续受力运动,与"平衡"矛盾。当外部电场 $\vec{E}_{\text{ext}}$ 施加于导体外壳时,导体中的自由电子会重新分布,在外壳表面形成感应电荷。这些感应电荷产生的电场恰好在导体内部与 $\vec{E}_{\text{ext}}$ 完全抵消,使得</p>
+$$\vec{E}_{\text{inside}} = \vec{E}_{\text{ext}} + \vec{E}_{\text{induced}} = 0$$
+<p>由高斯定律 $\oint \vec{E}\cdot d\vec{A} = Q_{\text{enc}}/\varepsilon_0$ 可知,若导体内部任意闭合面内电场为零,则该闭合面所包围的净电荷必为零——这解释了为何所有多余电荷只能分布在导体的外表面,而不会出现在空腔内壁(假设空腔内无独立电荷源)。</p>
+<p><strong>范例演示</strong></p>
+<p>设一个中空导体球壳置于均匀外电场 $\vec{E}_0$ 中。外壳表面感应出正负电荷分布,正电荷聚集在与 $\vec{E}_0$ 同向的一侧,负电荷聚集在相对一侧。感应电荷产生的内部场恰好等于 $-\vec{E}_0$,两者叠加,球壳空腔内部合场为零。若在此空腔中放入一个不带电的仪器(如敏感电路板),该仪器将完全不受外部电场影响——这正是电子设备机箱、屏蔽电缆网层、乃至飞机机身在雷击时保护乘客的原理。</p>
+<p><strong>应用与问题求解</strong></p>
+<p>工程上常需判断某导体外壳能否有效屏蔽特定频率的电磁场。对静电场(直流场)而言,只要外壳是连续导体或网格间距远小于场变化的空间尺度,屏蔽效果就非常理想,理论上内部场可视为精确为零。但对交变电磁场(如无线电波),屏蔽效果还依赖于导体的表面电阻、网孔尺寸相对于波长的比例,以及"皮肤效应"——高频电流集中在导体表面极薄的一层内流动。工程判据经验法则是:网孔边长应小于所需屏蔽电磁波波长的十分之一。这提醒我们,法拉第笼的"零内部场"结论严格只适用于理想导体和静态(或低频)条件;实际设计屏蔽室或屏蔽材料时,需结合具体频段重新评估屏蔽效能,而非机械套用静电平衡的理想化结果。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch18: Electric Charge and Electric Field (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

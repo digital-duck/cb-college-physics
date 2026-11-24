@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="power">Power</h2>
+<p><strong>定义</strong></p>
+<p>功率(power)描述做功或能量转移的快慢程度，定义为单位时间内完成的功：</p>
+$$P = \frac{W}{t}$$
+<p>其中 $W$ 为在时间间隔 $t$ 内完成的功(单位：焦耳，J)，$P$ 的国际单位是瓦特(watt, W)，且 $1\ \text{W} = 1\ \text{J/s}$。功率是标量，只有大小没有方向；它衡量的不是"做了多少功"，而是"多快做完这些功"——这一点是理解功率的关键：相同的功，用更短的时间完成，功率就更大。</p>
+<p>当力 $F$ 恒定且物体以恒定速度 $v$ 沿力的方向运动时，由于 $W = Fd$，可得瞬时功率的另一常用表达式：</p>
+$$P = \frac{Fd}{t} = Fv$$
+<p>这个式子在处理"匀速运动中发动机需要多大功率"一类问题时非常实用。</p>
+<p><strong>例题</strong></p>
+<p>一台电梯电机需要在 $12\ \text{s}$ 内将质量为 $800\ \text{kg}$ 的轿厢匀速提升 $18\ \text{m}$。求电机输出的平均功率(取 $g = 9.8\ \text{m/s}^2$，忽略摩擦)。</p>
+<p>克服重力做的功：</p>
+$$W = mgh = (800)(9.8)(18) = 141{,}120\ \text{J}$$
+<p>平均功率：</p>
+$$P = \frac{W}{t} = \frac{141{,}120}{12} = 11{,}760\ \text{W} \approx 11.76\ \text{kW}$$
+<p><strong>解题应用</strong></p>
+<p>功率概念在实际问题中常与"效率"和"电学功率"结合出现。例如，若电机的输入电功率为 $P_{in}$，输出的机械功率为 $P_{out}$，则效率 $\eta = P_{out}/P_{in}$；已知效率反推所需输入功率是常见题型。另一类常见问题是比较两个做相同功但用时不同的过程——例如两人分别用 $5\ \text{s}$ 和 $10\ \text{s}$ 把同一重物提升到同一高度，尽管所做的功相同，但前者功率是后者的两倍，说明"更费力"未必意味着"做功更多"，而往往意味着"功率更大"。求解此类问题的标准步骤是：先算出总功 $W$(常用 $W = Fd$ 或 $W = mgh$)，再除以给定的时间 $t$，必要时结合 $P = Fv$ 处理恒速运动情形。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

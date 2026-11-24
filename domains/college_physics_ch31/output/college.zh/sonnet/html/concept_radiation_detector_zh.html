@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radiation Detector | College Physics Ch31</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="radiation-detector-辐射探测器">Radiation Detector（辐射探测器）</h2>
+<p><strong>定义</strong></p>
+<p>辐射探测器是一种利用电离辐射与物质相互作用产生的电离效应来探测和测量辐射的仪器。当带电粒子（如 $\alpha$、$\beta$ 粒子）或高能光子（$\gamma$ 射线、X 射线）穿过探测器的敏感介质（气体、半导体或闪烁体）时，会使介质中的原子电离，产生电子—离子对（气体或半导体探测器）或激发态原子（闪烁体）。这些初级信号经过收集、放大后转换为可测量的电脉冲，脉冲的幅度与入射粒子沉积的能量成正比，脉冲的计数率则反映了辐射强度。</p>
+<p>常见类型包括：气体电离室、正比计数器、盖革-米勒计数器（G-M 管）、闪烁探测器（如 NaI(Tl) 晶体加光电倍增管）以及半导体探测器（如高纯锗 HPGe）。不同类型探测器在能量分辨率、探测效率和响应速度上各有取舍——例如 G-M 管结构简单、灵敏度高，但只能计数、不能分辨能量；HPGe 探测器能量分辨率极高，可用于精确的核素识别。</p>
+<p><strong>工作实例</strong></p>
+<p>以气体正比计数器为例：粒子在气体中产生的初级电子—离子对数目 $n_0$ 大致正比于沉积能量 $E$：</p>
+$$n_0 = \frac{E}{W}$$
+<p>其中 $W$ 是产生一对电子—离子所需的平均能量（空气约为 34 eV）。在正比计数器中，外加电场使初级电子在向阳极漂移过程中获得足够动能引发雪崩式二次电离，产生"气体放大"，放大倍数 $M$ 可达 $10^3$–$10^4$，最终收集到的总电荷为：</p>
+$$Q = n_0 \, e \, M$$
+<p>其中 $e$ 是电子电荷。这一放大机制使得正比计数器既能计数，又能通过脉冲高度区分不同能量的辐射。</p>
+<p><strong>问题解决应用</strong></p>
+<p>若某 $\alpha$ 粒子在探测器气体中沉积能量 $E = 5.0\ \text{MeV}$，气体的 $W = 34\ \text{eV}$，问初级电子—离子对数目 $n_0$ 是多少？若气体放大倍数 $M = 2000$，收集到的总电荷 $Q$ 为多少？</p>
+<p>计算：</p>
+$$n_0 = \frac{5.0 \times 10^6\ \text{eV}}{34\ \text{eV}} \approx 1.47 \times 10^5$$
+$$Q = n_0 \, e \, M = (1.47 \times 10^5)(1.6 \times 10^{-19}\ \text{C})(2000) \approx 4.7 \times 10^{-11}\ \text{C}$$
+<p>这类计算是核仪器设计与刻度中的基本步骤：已知探测器材料的 $W$ 值和放大倍数，工程师可以反推入射粒子能量，从而实现能谱测量与放射性核素的定量分析。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch31: Radioactivity and Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

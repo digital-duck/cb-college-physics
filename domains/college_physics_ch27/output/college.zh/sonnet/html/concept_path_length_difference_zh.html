@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Path Length Difference | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="path-length-difference">Path Length Difference</h2>
+<p><strong>定义</strong></p>
+<p>当两列相干波（频率相同、相位关系恒定）分别从两个波源出发，到达空间中同一点时，它们各自走过的路径长度一般不同。这两段路程之差，称为<strong>波程差</strong>（path length difference），记作 $\Delta L$：</p>
+$$\Delta L = |L_2 - L_1|$$
+<p>其中 $L_1, L_2$ 分别是波源 $S_1$、$S_2$ 到观察点 $P$ 的距离。波程差决定了两列波到达 $P$ 点时的相位关系，从而决定发生<strong>相长干涉</strong>（constructive interference，振幅叠加增强）还是<strong>相消干涉</strong>（destructive interference，振幅相互抵消）。</p>
+<p>判据基于波长 $\lambda$：</p>
+$$\Delta L = m\lambda \quad (m = 0, 1, 2, \dots) \;\Rightarrow\; \text{相长干涉（波峰对波峰）}$$
+$$\Delta L = \left(m + \tfrac{1}{2}\right)\lambda \quad (m = 0, 1, 2, \dots) \;\Rightarrow\; \text{相消干涉（波峰对波谷）}$$
+<p>这是因为波程差每相差整数个波长，两列波便重新同相；每相差半个波长的奇数倍，两列波便刚好反相。</p>
+<p><strong>例题</strong></p>
+<p>两个扬声器 $S_1$、$S_2$ 相距 $2\text{ m}$，同相发出频率为 $340\text{ Hz}$ 的声波，声速 $v = 340\text{ m/s}$，故 $\lambda = v/f = 1\text{ m}$。观察点 $P$ 到 $S_1$ 的距离为 $5.0\text{ m}$，到 $S_2$ 的距离为 $6.0\text{ m}$。</p>
+$$\Delta L = |6.0 - 5.0| = 1.0\text{ m} = 1 \times \lambda$$
+<p>由于 $\Delta L$ 恰为一个整波长，$m=1$，故 $P$ 点发生<strong>相长干涉</strong>，该处声音明显增强。</p>
+<p><strong>解题应用</strong></p>
+<p>在双缝干涉实验中，若两缝间距为 $d$，屏幕距双缝为 $D$（$D \gg d$），观察点在屏上偏离中心轴 $y$ 处，则波程差可用几何近似求得：</p>
+$$\Delta L \approx \frac{d y}{D}$$
+<p>将此式代入相长干涉条件 $\Delta L = m\lambda$，即可解出亮纹位置：</p>
+$$y_m = \frac{m \lambda D}{d}$$
+<p>解题时的通用步骤：先分别计算两条路径的几何长度，求出 $\Delta L$；再将 $\Delta L$ 表示为 $\lambda$ 的倍数（即 $\Delta L / \lambda$）；最后根据该比值是否为整数或半整数，判断干涉类型。这一方法同样适用于分析薄膜干涉、迈克尔逊干涉仪等场景，只是在计算 $\Delta L$ 时需额外考虑介质折射率或反射相位跃变（如半波损失）带来的修正。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

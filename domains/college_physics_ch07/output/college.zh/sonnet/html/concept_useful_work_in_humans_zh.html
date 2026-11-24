@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Useful Work In Humans | College Physics Ch07</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="useful-work-in-humans">Useful Work In Humans</h2>
+<p><strong>定义</strong></p>
+<p>人体做的功可分为两类：<strong>内部功</strong>（internal work）与<strong>有用功</strong>（useful work，亦称外部功）。内部功用于维持生理活动——心脏泵血、呼吸肌收缩、四肢加速再减速等，这部分能量最终以热的形式散失，不改变人体与外部环境之间的能量交换。有用功则是人体克服外部阻力、使身体或物体在环境中产生位移所做的功，例如举起哑铃、攀爬楼梯、推动购物车。其定义与经典力学中的功完全一致：</p>
+$$
+W_{\text{useful}} = F \cdot d \cdot \cos\theta
+$$
+<p>其中 $F$ 为人体施加在外部物体（或自身重心）上、沿位移方向的力，$d$ 为位移大小，$\theta$ 为力与位移方向的夹角。当力与位移同向时（如垂直举起或攀爬），$\cos\theta = 1$，公式简化为 $W_{\text{useful}} = F d$。</p>
+<p><strong>代入实例</strong></p>
+<p>考虑一名质量 $m = 70\ \text{kg}$ 的登山者攀登一段垂直高度 $h = 200\ \text{m}$ 的阶梯。克服重力所需的力为 $F = mg = 70 \times 9.8 = 686\ \text{N}$，位移方向与力方向一致（竖直向上），故：</p>
+$$
+W_{\text{useful}} = mgh = 686 \times 200 = 137{,}200\ \text{J} \approx 137.2\ \text{kJ}
+$$
+<p>这就是该登山者对外部世界（即克服地球引力场）所做的有用功。</p>
+<p><strong>应用于问题求解</strong></p>
+<p>有用功这一概念的实践价值在于评估人体能量转换效率。人体消耗的化学能（代谢能）$E_{\text{in}}$ 远大于有用功输出，二者之比即为<strong>机械效率</strong>：</p>
+$$
+\eta = \frac{W_{\text{useful}}}{E_{\text{in}}} \times 100\%
+$$
+<p>若上述登山者消耗的代谢能为 $E_{\text{in}} = 686\ \text{kJ}$（通过摄氧量测得），则效率为：</p>
+$$
+\eta = \frac{137.2}{686} \times 100\% \approx 20\%
+$$
+<p>这一结果与人体肌肉系统的典型效率（约 15%–25%）吻合，其余约 80% 的能量转化为内部功与热量散失。掌握这一区分，可以解决诸如"计算登山者每日所需热量摄入"或"比较骑自行车与爬楼梯的能量效率"等实际问题：只需先求出有用功 $W_{\text{useful}} = Fd$，再依据已知或测得的效率 $\eta$ 反推所需代谢能 $E_{\text{in}} = W_{\text{useful}}/\eta$。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch7: Work, Energy, and Energy Resources (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

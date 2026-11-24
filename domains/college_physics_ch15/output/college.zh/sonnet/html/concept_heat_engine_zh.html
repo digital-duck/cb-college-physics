@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heat Engine | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="heat-engine">Heat Engine</h2>
+<p><strong>定义</strong></p>
+<p>热机（heat engine）是一种利用热量传递做功的装置：它从高温热源（hot reservoir，温度 $T_H$）吸收热量 $Q_H$，将其中一部分转化为对外输出的功 $W$，而根据热力学第二定律，剩余部分必然以热量 $Q_C$ 的形式排放到低温热源（cold reservoir，温度 $T_C$）——没有任何热机能把吸收的热量全部转化为功。这一限制不是工程缺陷，而是自然规律的必然结果。由能量守恒（热力学第一定律）可得：</p>
+$$
+W = Q_H - Q_C
+$$
+<p>热机的效率定义为输出功与输入热量之比：</p>
+$$
+\eta = \frac{W}{Q_H} = 1 - \frac{Q_C}{Q_H}
+$$
+<p><strong>理论极限：卡诺定理</strong></p>
+<p>对于工作在两个固定温度热源之间的任意热机，其效率存在一个不可超越的上限，由卡诺定理给出：</p>
+$$
+\eta \leq \eta_{Carnot} = 1 - \frac{T_C}{T_H}
+$$
+<p>其中温度以绝对温标（开尔文）计。等号只在理想的可逆过程（卡诺循环）中成立；任何真实热机由于摩擦、热传导等不可逆因素，效率必然低于此上限。这一结果的深刻之处在于：效率的极限完全由两个热源的温度决定，与工质（水蒸气、气体等）或具体机械设计无关。</p>
+<p><strong>例题</strong></p>
+<p>某燃煤发电厂的锅炉产生温度为 $T_H = 800\text{ K}$ 的蒸汽，冷凝器温度为 $T_C = 300\text{ K}$。</p>
+<p>第一步，求理论最高效率：</p>
+$$
+\eta_{Carnot} = 1 - \frac{300}{800} = 1 - 0.375 = 0.625 \;(62.5\%)
+$$
+<p>第二步，若该厂每秒从锅炉吸收 $Q_H = 1000\text{ MJ}$ 热量，实际效率为理论值的 70%（考虑摩擦、热损失等不可逆因素），求实际输出功率：</p>
+$$
+\eta_{actual} = 0.7 \times 0.625 = 0.4375
+$$
+$$
+W = \eta_{actual} \times Q_H = 0.4375 \times 1000\text{ MJ} = 437.5\text{ MJ}
+$$
+<p><strong>解题应用</strong></p>
+<p>面对热机问题时，标准步骤是：(1) 明确 $T_H$、$T_C$（务必换算为开尔文）；(2) 用卡诺公式求理论效率上限，作为判断实际设计合理性的基准；(3) 结合能量守恒 $W = Q_H - Q_C$ 求功或热量。卡诺效率给出的是"能做到多好"的天花板——它解释了为什么提高锅炉温度或降低排热温度是提升发电厂效率的根本途径，而不仅仅是改进机械部件。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

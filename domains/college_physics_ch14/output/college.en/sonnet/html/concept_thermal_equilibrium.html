@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermal Equilibrium | College Physics Ch14</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="thermal-equilibrium">Thermal Equilibrium</h2>
+<p><strong>Definition.</strong> Two objects in thermal contact exchange energy as heat until their temperatures are equal. At that point, the net heat transfer between them is zero, and they are in <em>thermal equilibrium</em>. This is the idea behind the <strong>zeroth law of thermodynamics</strong>: if $A$ is in equilibrium with $C$, and $B$ is in equilibrium with $C$, then $A$ and $B$ are in equilibrium with each other. This law is why temperature is a meaningful, measurable property, and why a thermometer works.</p>
+<p>Equilibrium is dynamic rather than static. Molecules still collide and exchange energy, but the flow from hot to cold exactly balances the flow from cold to hot, so no net change occurs.</p>
+<p><strong>Finding the final temperature.</strong> Suppose the system is isolated, so no energy escapes. Energy lost by the hotter object equals energy gained by the colder one. Heat absorbed by an object of mass $m$ and specific heat capacity $c$ is $Q = mc(T_f - T_i)$, where $T_i$ is its initial temperature and $T_f$ is the common final temperature. Because the heat lost and gained must cancel,</p>
+$$\sum_i m_i c_i (T_f - T_i) = 0 \quad\Longrightarrow\quad T_f = \frac{\sum_i m_i c_i T_i}{\sum_i m_i c_i}$$
+<p>So $T_f$ is a heat-capacity-weighted average of the initial temperatures. This holds as long as no phase change occurs.</p>
+<p><strong>Worked example.</strong> A $0.200\ \text{kg}$ aluminum block at $100\,^\circ\text{C}$ ($c = 900\ \text{J/kg·K}$) is dropped into $0.500\ \text{kg}$ of water at $20\,^\circ\text{C}$ ($c = 4186\ \text{J/kg·K}$) inside an insulated container. Find $T_f$.</p>
+<p>The products $mc$ are</p>
+<li>Aluminum: $0.200 \times 900 = 180\ \text{J/K}$</li>
+<li>Water: $0.500 \times 4186 = 2093\ \text{J/K}$</li>
+<p>Then</p>
+$$T_f = \frac{(180)(100) + (2093)(20)}{180 + 2093} = \frac{18000 + 41860}{2273} \approx 26.3\,^\circ\text{C}$$
+<p>The result lies between $20$ and $100\,^\circ\text{C}$ and is much closer to the water's temperature. This makes sense because the water's $mc$ is more than ten times larger.</p>
+<p><strong>Problem-solving application.</strong> Use this checklist for equilibrium problems:</p>
+<li>Confirm the system is isolated, or account for any heat lost to the surroundings.</li>
+<li>Confirm that no melting or boiling occurs. If it could, this method does not apply directly and extra terms are needed.</li>
+<li>Write $\sum m c (T_f - T_i) = 0$ with one term per object. Signs take care of themselves: the hot object's term is negative and the cold object's term is positive.</li>
+<li>Solve for $T_f$, then check that it lies between the extreme initial temperatures. If it doesn't, an error has crept in.</li>
+<p><em>Check yourself:</em> If $1.00\ \text{kg}$ of water at $80\,^\circ\text{C}$ is mixed with $3.00\ \text{kg}$ of water at $20\,^\circ\text{C}$, the specific heats cancel. This gives $T_f = (1.00 \times 80 + 3.00 \times 20)/4.00 = 35\,^\circ\text{C}$.</p>
+<p><strong>Why it matters.</strong> Equilibrium explains why a cup of coffee cools to room temperature, why calorimetry can measure unknown specific heats, and why engineers use heat sinks to carry heat away from electronics. Each of these situations follows the same rule: heat flows until the temperatures match.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch14: Heat and Heat Transfer Methods (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

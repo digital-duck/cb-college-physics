@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Converging Lens | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="converging-lens">Converging Lens</h2>
+<p>A <strong>converging lens</strong> (also called a convex lens) is thicker at its center than at its edges. When parallel rays travel along its principal axis, refraction at the two curved surfaces bends them toward the axis so they cross at a single point, the <strong>focal point</strong> $F$, on the opposite side. The distance from the lens to $F$ is the <strong>focal length</strong> $f$. For a converging lens, $f > 0$.</p>
+<h3 id="governing-relations">Governing relations</h3>
+<p>For a thin lens, the object distance $d_o$, image distance $d_i$, and focal length $f$ obey the <strong>thin-lens equation</strong>:</p>
+$$\frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{f}$$
+<p>The <strong>magnification</strong> is</p>
+$$m = -\frac{d_i}{d_o} = \frac{h_i}{h_o}$$
+<p>Sign conventions:</p>
+<li>$d_o > 0$ for a real object on the incoming side.</li>
+<li>$d_i > 0$ for a real image on the far side of the lens.</li>
+<li>$d_i < 0$ for a virtual image on the same side as the object.</li>
+<li>$m < 0$ means the image is inverted.</li>
+<p>Three principal rays locate an image:</p>
+<li>A ray parallel to the axis refracts through $F$.</li>
+<li>A ray through the lens center continues undeviated.</li>
+<li>A ray passing through the near-side focal point emerges parallel to the axis.</li>
+<h3 id="worked-example">Worked example</h3>
+<p>An object $4.0$ cm tall is placed $30$ cm from a converging lens with $f = 10$ cm. Find the image.</p>
+$$\frac{1}{d_i} = \frac{1}{f} - \frac{1}{d_o} = \frac{1}{10} - \frac{1}{30} = \frac{2}{30} \quad\Rightarrow\quad d_i = 15 \text{ cm}$$
+$$m = -\frac{15}{30} = -0.50, \qquad h_i = m\,h_o = -2.0 \text{ cm}$$
+<p>The image is real, inverted, and reduced, and it forms 15 cm behind the lens.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p>The object's position relative to $f$ determines the image type:</p>
+<p>| Object position | Image | |---|---| | $d_o > 2f$ | Real, inverted, smaller (camera) | | $d_o = 2f$ | Real, inverted, same size | | $f < d_o < 2f$ | Real, inverted, larger (projector) | | $d_o = f$ | No image; rays emerge parallel | | $d_o < f$ | Virtual, upright, larger (magnifier) |</p>
+<p><strong>Problem.</strong> A magnifying glass has $f = 8.0$ cm. A stamp is held $6.0$ cm from it. Where is the image, and how large is it relative to the stamp?</p>
+<p>Since $d_o = 6.0 < f$, we expect a virtual image.</p>
+$$\frac{1}{d_i} = \frac{1}{8.0} - \frac{1}{6.0} = \frac{3 - 4}{24} = -\frac{1}{24} \quad\Rightarrow\quad d_i = -24 \text{ cm}$$
+$$m = -\frac{-24}{6.0} = +4.0$$
+<p>The image is virtual, upright, and 4.0 times larger. It appears 24 cm from the lens on the same side as the stamp. The negative $d_i$ is how the equation signals that the rays only appear to diverge from that point, so no screen could capture the image.</p>
+<p><strong>Check your answer.</strong> Confirm that the sign of $d_i$ matches the expected image type. A real object with $d_o > f$ must give $d_i > 0$, and $d_o < f$ must give $d_i < 0$. If the signs disagree with this, recheck the arithmetic.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pv Diagram | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="pv-diagram">Pv Diagram</h2>
+<p>A <strong>PV diagram</strong> plots a system's pressure $P$ (vertical axis) against its volume $V$ (horizontal axis). Each point is an equilibrium state, and a curve is a quasi-static process connecting states. Its key property is that the <strong>area under the curve equals the work</strong> done by the gas:</p>
+$$W_{\text{by}} = \int_{V_i}^{V_f} P\,dV$$
+<li>Expansion ($V_f > V_i$, moving right): the gas does positive work, $W_{\text{by}} > 0$.</li>
+<li>Compression (moving left): $W_{\text{by}} < 0$, so work is done on the gas.</li>
+<li>The work done on the gas is $W_{\text{on}} = -W_{\text{by}}$.</li>
+<p>The area depends on the <strong>path</strong>, not just the endpoints. Work is therefore not a state function.</p>
+<p>Common processes:</p>
+<p>| Process | Condition | Work by gas | |---|---|---| | Isobaric | $P$ constant | $P\,\Delta V$ | | Isochoric | $V$ constant | $0$ | | Isothermal (ideal gas) | $T$ constant | $nRT\ln\dfrac{V_f}{V_i}$ | | Adiabatic | $Q=0$ | $-\Delta U$ |</p>
+<p>For the isothermal case, $P = nRT/V$ is substituted into the integral.</p>
+<pre class="mermaid">flowchart LR
+    A["State A: 2 atm, 1 L"] -->|"Isobaric expansion"| B["State B: 2 atm, 3 L"]
+    B -->|"Isochoric cooling"| C["State C: 1 atm, 3 L"]
+    C -->|"Isobaric compression"| D["State D: 1 atm, 1 L"]
+    D -->|"Isochoric heating"| A</pre>
+<p><em>A rectangular cycle on a PV diagram, built from two isobaric and two isochoric steps.</em></p>
+<h3 id="worked-example">Worked example</h3>
+<p>An ideal gas expands isobarically at $P = 2.0\ \text{atm}$ from $V_i = 1.0\ \text{L}$ to $V_f = 3.0\ \text{L}$. Find the work done by the gas.</p>
+<p>Convert units first, using $1\ \text{atm} = 1.013\times10^5\ \text{Pa}$ and $1\ \text{L} = 10^{-3}\ \text{m}^3$:</p>
+$$W = P\,\Delta V = (2.0)(1.013\times10^5)(2.0\times10^{-3}) \approx 405\ \text{J}$$
+<p>This is the area of a rectangle of height $P$ and width $\Delta V$.</p>
+<h3 id="problem-solving-application-cycles">Problem-solving application: cycles</h3>
+<p>For a closed cycle, the <strong>net work equals the area enclosed by the loop</strong>.</p>
+<li>A clockwise loop gives $W_{\text{net}} > 0$. The system acts as a heat engine.</li>
+<li>A counterclockwise loop gives $W_{\text{net}} < 0$. The system acts as a refrigerator.</li>
+<p>Take the cycle $A\to B\to C\to D\to A$ in the diagram above.</p>
+<li>$A\to B$ is an isobaric expansion at 2 atm. Its work is $+405\ \text{J}$.</li>
+<li>$B\to C$ is isochoric, so its work is $0$.</li>
+<li>$C\to D$ is an isobaric compression at 1 atm. Its work is $-(1)(1.013\times10^5)(2.0\times10^{-3}) \approx -203\ \text{J}$.</li>
+<li>$D\to A$ is isochoric, so its work is $0$.</li>
+$$W_{\text{net}} \approx 405 - 203 = 202\ \text{J}$$
+<p>This matches the enclosed rectangle: $(1\ \text{atm})(2\ \text{L}) \approx 203\ \text{J}$, with the small difference due to rounding.</p>
+<p>Because the cycle returns to its starting state, $\Delta U = 0$. The first law then gives $Q_{\text{net}} = W_{\text{net}}$, so about $202\ \text{J}$ of net heat is absorbed per cycle.</p>
+<p><strong>Strategy:</strong> To solve a PV problem, (1) identify each process, (2) compute the area under each segment with the sign set by the direction of travel, and (3) sum the segments. For a closed loop, find the enclosed area and use the direction to set the sign.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

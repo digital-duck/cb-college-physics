@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fulcrum | College Physics Ch09</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="fulcrum">Fulcrum</h2>
+<p>The fulcrum is the fixed point about which a lever rotates. It is the anchor that converts a push or pull applied at one location on a rigid bar into rotational motion, and its position relative to the applied force and the load determines whether the lever amplifies force, amplifies distance, or simply redirects the direction of effort. Every lever — a crowbar, a pair of scissors, a see-saw, the human forearm pivoting at the elbow — has exactly one fulcrum, and the physics of the system is governed by torque, the rotational analog of force.</p>
+<p>Torque ($\tau$) about the fulcrum is the product of the applied force and the perpendicular distance from the fulcrum to the line of action of that force, called the lever arm:</p>
+$$\tau = F \cdot d$$
+<p>A lever is in rotational equilibrium when the torques on either side of the fulcrum balance:</p>
+$$F_1 d_1 = F_2 d_2$$
+<p>This single equation is the basis of mechanical advantage. If the fulcrum sits closer to the load than to the applied effort ($d_1$, the effort arm, is much longer than $d_2$, the load arm), a small effort force can balance or move a much larger load force — this is why a long crowbar with the fulcrum near the nail lets you pry it out with modest hand force.</p>
+<p><strong>Worked example.</strong> A 3 m uniform bar rests on a fulcrum placed 0.5 m from one end. A 400 N weight hangs at that near end. What force applied at the far end (2.5 m from the fulcrum) balances the bar?</p>
+<p>Using $F_1 d_1 = F_2 d_2$: $400 \text{ N} \times 0.5 \text{ m} = F_2 \times 2.5 \text{ m}$, so $F_2 = 80$ N. Moving the fulcrum closer to the load turned a 400 N weight into an 80 N lifting problem — a mechanical advantage of 5.</p>
+<p><strong>Problem-solving application.</strong> Fulcrum placement is the key design variable in lever problems: shifting it toward the load increases force amplification but decreases the distance the load moves for a given effort-arm sweep (energy is conserved — work in equals work out, ignoring friction). Engineers exploit this trade-off in tools (bolt cutters, wheelbarrows) and in structural design (seesaw balance points, brake pedal linkages), where the fulcrum's location is chosen to match the force and precision requirements of the task.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch9: Statics and Torque (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

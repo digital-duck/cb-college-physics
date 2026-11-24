@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Space Quantization | College Physics Ch30</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="space-quantization">Space Quantization</h2>
+<p><strong>定义</strong></p>
+<p>在经典物理中，角动量矢量 $\vec{L}$ 可以指向空间中任意方向。但在量子力学中，当原子处于外部磁场（沿 $z$ 轴方向）中时，轨道角动量矢量并非可以自由取向，而是只能相对于该轴呈现<strong>离散的、量子化的角度</strong>——这一现象称为<strong>空间量子化</strong>（space quantization）。</p>
+<p>具体而言，角动量的大小由量子数 $l$ 决定：</p>
+$$
+|\vec{L}| = \hbar\sqrt{l(l+1)}, \quad l = 0, 1, 2, \dots
+$$
+<p>而其在 $z$ 轴方向上的投影分量则由磁量子数 $m_l$ 决定：</p>
+$$
+L_z = m_l \hbar, \quad m_l = -l, -l+1, \dots, 0, \dots, l-1, l
+$$
+<p>即对给定的 $l$，$m_l$ 只能取 $2l+1$ 个整数值，因此 $\vec{L}$ 与 $z$ 轴的夹角 $\theta$ 只能取满足</p>
+$$
+\cos\theta = \frac{m_l}{\sqrt{l(l+1)}}
+$$
+<p>的一组离散值，而不能连续变化。这正是斯特恩-格拉赫实验（Stern-Gerlach experiment）观察到银原子束在非均匀磁场中分裂成分立斑点的理论基础。</p>
+<p><strong>范例演算</strong></p>
+<p>考虑 $l=1$（如 $p$ 轨道电子）。此时 $|\vec{L}| = \hbar\sqrt{2} \approx 1.414\hbar$，而 $m_l$ 可取 $-1, 0, +1$，对应三个允许角度：</p>
+$$
+\cos\theta = \frac{m_l}{\sqrt{2}} \implies \theta = 45^\circ,\ 90^\circ,\ 135^\circ
+$$
+<p>可见角动量矢量并非只能沿 $z$ 轴的正、负方向排列，而是以三种特定倾角"进动"（precess）分布，形成一个圆锥面的集合——这也解释了为何该矢量在 $xy$ 平面内的分量虽然大小固定，方向却完全不确定（体现测不准原理对 $L_x, L_y$ 的限制）。</p>
+<p><strong>解题应用</strong></p>
+<p><strong>题目</strong>：已知某电子处于 $l=2$ 状态，求其角动量矢量与外磁场方向可能形成的最小夹角。</p>
+<p><strong>解</strong>：$l=2$ 时，$|\vec{L}| = \hbar\sqrt{6}$，$m_l$ 的最大值为 $2$。最小夹角对应 $m_l$ 取最大值：</p>
+$$
+\cos\theta_{\min} = \frac{2}{\sqrt{6}} \approx 0.8165 \implies \theta_{\min} \approx 35.3^\circ
+$$
+<p>注意即使 $m_l = l$（最大投影），$\theta$ 也永远不为 $0^\circ$，即 $\vec{L}$ 永远无法与 $z$ 轴完全对齐——这是量子力学中角动量本征态固有的几何约束，而非测量误差所致。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch30: Atomic Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

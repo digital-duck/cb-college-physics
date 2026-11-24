@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shear Modulus | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="shear-modulus">Shear Modulus</h2>
+<p><strong>定义</strong></p>
+<p>剪切模量（shear modulus，符号 $S$，也常记作 $G$）是描述材料抵抗剪切形变能力的材料特性常数，单位为 $\text{N/m}^2$（帕斯卡，Pa）。当一个物体受到平行于某个表面的力（而非垂直的拉伸或压缩力）作用时，物体会发生"剪切形变"——想象一副扑克牌，用手在牌堆顶部施加一个侧向力，牌与牌之间发生相对滑移，整叠牌从矩形变成平行四边形。</p>
+<p>剪切模量将剪应力（shear stress，单位面积上的切向力，$\tau = F/A$）与剪应变（shear strain，形变角度的正切，$\gamma = \Delta x / h$，无量纲）联系起来：</p>
+$$
+S = \frac{\tau}{\gamma} = \frac{F/A}{\Delta x / h}
+$$
+<p>其中 $F$ 是施加的切向力，$A$ 是受力表面积，$\Delta x$ 是顶面相对底面的位移，$h$ 是物体的高度。$S$ 越大，材料越难以剪切形变，即在相同应力下产生的应变越小。与杨氏模量（描述拉伸/压缩）和体积模量（描述均匀压缩）不同，剪切模量专门针对"形状改变但体积基本不变"的形变模式，因此是液体和气体所不具备的性质——流体的剪切模量为零，这正是"固体能保持形状、流体不能"的力学本质区别。</p>
+<p><strong>例题</strong></p>
+<p>一块钢板的剪切模量 $S = 8.0 \times 10^{10} \text{ N/m}^2$，尺寸为 $h = 0.20\text{ m}$（高）、受力面积 $A = 0.05\text{ m}^2$。若在顶面施加切向力 $F = 4.0 \times 10^{6}\text{ N}$，求顶面相对底面的位移 $\Delta x$。</p>
+<p>由公式变形：</p>
+$$
+\Delta x = \frac{F h}{S A} = \frac{(4.0\times10^{6})(0.20)}{(8.0\times10^{10})(0.05)} = \frac{8.0\times10^{5}}{4.0\times10^{9}} = 2.0\times10^{-4}\text{ m}
+$$
+<p>即顶面相对底面滑移了 $0.2\text{ mm}$。</p>
+<p><strong>解题应用</strong></p>
+<p>处理剪切模量问题的关键是先明确三要素：作用力方向是否平行于受力面（区别于拉伸/压缩问题）、受力面积 $A$ 的正确取法（是被剪切的截面，不是端面）、以及位移 $\Delta x$ 与高度 $h$ 的比值即为应变。常见陷阱是将剪切面积误取为力的作用端面积；建模时应先画出形变示意图，确认哪个方向是"滑移"方向。工程上，剪切模量常用于计算螺栓、铆钉连接件在横向载荷下的形变量，或分析地震波中横波（S波）在地壳材料中的传播速度，因为横波速度 $v_s = \sqrt{S/\rho}$（$\rho$ 为密度）直接由剪切模量决定。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

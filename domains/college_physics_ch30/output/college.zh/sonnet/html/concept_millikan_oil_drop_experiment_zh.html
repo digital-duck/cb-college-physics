@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Millikan Oil Drop Experiment | College Physics Ch30</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="millikan-oil-drop-experiment">Millikan Oil Drop Experiment</h2>
+<p><strong>定义</strong></p>
+<p>密立根油滴实验（1909年）是物理学史上第一次直接测量单个电子电荷量 $e$ 的实验，其核心思想是让重力与电场力在一个带电油滴上达到平衡，从而反解出电荷。实验装置中，微小油滴通过喷雾器进入两块平行金属板之间的空间，油滴在喷射过程中因摩擦而带上少量电荷。当不加电场时，油滴受重力 $mg$ 与空气粘滞阻力作用，最终以恒定的<strong>收尾速度</strong> $v_f$ 下落；由斯托克斯定律，阻力 $F_d = 6\pi \eta r v_f$，与重力平衡后可解出油滴半径 $r$，进而算出质量 $m$。</p>
+<p>当在平行板间加上竖直电场 $E = V/d$（$V$ 为电压，$d$ 为板间距）后，调节电压使某个油滴恰好静止悬浮，此时电场力与重力平衡：</p>
+$$
+qE = mg \quad\Rightarrow\quad q = \frac{mgd}{V}
+$$
+<p><strong>工作实例</strong></p>
+<p>假设测得某油滴质量 $m = 9.9\times10^{-15}\,\text{kg}$，板间距 $d = 1.5\times10^{-2}\,\text{m}$，使其静止所需电压 $V = 500\,\text{V}$。代入公式：</p>
+$$
+q = \frac{(9.9\times10^{-15})(9.8)(1.5\times10^{-2})}{500} \approx 2.91\times10^{-18}\,\text{C}
+$$
+<p><strong>问题求解应用</strong></p>
+<p>密立根的关键洞察在于：对大量油滴反复测量得到的电荷值 $q_1, q_2, q_3, \dots$ 并非任意分布，而全部是某个最小值的整数倍。也就是说，</p>
+$$
+q_n = n e, \quad n = 1, 2, 3, \dots
+$$
+<p>其中 $e \approx 1.602\times10^{-19}\,\text{C}$ 就是单个电子的电荷量。在实际数据分析中，学生的任务往往是：给定一组测得的 $q$ 值，求它们的最大公约数式的最小公共因子，以确定 $e$ 的估计值。例如若测得电荷集合为 $\{4.8, 8.0, 11.2\}\times10^{-19}\,\text{C}$，可验证它们分别约为 $e$ 的 3、5、7 倍，从而反推 $e \approx 1.6\times10^{-19}\,\text{C}$。这种"从多组测量中提取公共量子"的思路，也是后续学习量子化现象（如能级、自旋）时反复出现的分析方法。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch30: Atomic Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

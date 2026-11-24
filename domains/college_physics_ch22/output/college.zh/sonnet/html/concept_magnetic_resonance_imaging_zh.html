@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetic Resonance Imaging | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="magnetic-resonance-imaging">Magnetic Resonance Imaging</h2>
+<p><strong>定义</strong></p>
+<p>磁共振成像（MRI）是一种基于核磁共振（NMR）现象的医学成像技术。人体组织中含有大量氢原子核（质子），质子本身具有自旋，可视为一个微小磁矩。将人体置于强静磁场 $B_0$ 中后，原本方向随机的质子磁矩会趋向沿 $B_0$ 方向进动，进动频率由拉莫尔方程给出：</p>
+$$
+\omega_0 = \gamma B_0
+$$
+<p>其中 $\gamma$ 为旋磁比（氢核约为 $42.58\ \text{MHz/T}$），$\omega_0$ 为拉莫尔频率。此时施加一个频率恰好等于 $\omega_0$ 的射频（RF）脉冲，质子发生共振吸收能量，磁矩偏离 $B_0$ 方向；脉冲停止后，质子逐渐弛豫回平衡态,并以同一频率重新辐射出射频信号——这就是被探测的 MRI 信号。</p>
+<p><strong>弛豫与组织对比度</strong></p>
+<p>弛豫过程分为两种：纵向弛豫时间 $T_1$（磁矩恢复到沿 $B_0$ 方向所需时间）和横向弛豫时间 $T_2$（自旋失去相位一致性所需时间）。不同组织（脂肪、肌肉、脑脊液、肿瘤等）的 $T_1$、$T_2$ 值不同，因此在 $T_1$ 加权像或 $T_2$ 加权像中呈现不同亮度，这正是 MRI 能区分软组织类型而无需电离辐射的核心原理。</p>
+<p><strong>空间编码：梯度场的作用</strong></p>
+<p>单纯的 $B_0$ 无法确定信号来自身体的哪个位置，因为所有质子的进动频率相同。解决方法是叠加空间变化的梯度磁场 $G_x, G_y, G_z$，使得磁场强度、进而拉莫尔频率随位置线性变化：</p>
+$$
+\omega(\vec{r}) = \gamma\big(B_0 + \vec{G}\cdot\vec{r}\big)
+$$
+<p>这样，接收到的信号中不同频率、不同相位分量分别对应不同的空间位置。将采集到的原始信号（称为 k-空间数据）进行二维傅里叶逆变换，即可重建出图像：</p>
+$$
+I(x,y) = \iint S(k_x,k_y)\, e^{i2\pi(k_x x + k_y y)}\, dk_x\, dk_y
+$$
+<p><strong>问题求解应用</strong></p>
+<p>临床医生在阅片时常需判断某病灶在 $T_1$ 加权与 $T_2$ 加权像上信号强弱的组合模式（如"$T_1$ 低信号、$T_2$ 高信号"提示水肿或囊性病变），据此结合弛豫时间差异推断组织性质，这正是傅里叶重建与弛豫物理相结合的实际诊断推理过程。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

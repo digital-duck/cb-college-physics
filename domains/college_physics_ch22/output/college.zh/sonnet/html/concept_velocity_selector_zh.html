@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velocity Selector | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="velocity-selector-速度选择器">Velocity Selector（速度选择器）</h2>
+<p><strong>定义</strong></p>
+<p>速度选择器是一种利用正交电场与磁场对带电粒子进行速度筛选的装置。装置中电场 $\vec{E}$ 与磁场 $\vec{B}$ 相互垂直，且都垂直于粒子的运动方向。带电量为 $q$、速度为 $v$ 的粒子同时受到两个力的作用：电场力 $F_E = qE$ 和洛伦兹力中的磁场分量 $F_B = qvB$。通过合理设置电场与磁场的方向，可使这两个力方向相反。只有当二者大小恰好相等、合力为零时，粒子才能沿直线穿过装置而不发生偏转；速度不满足该条件的粒子则会偏离原路径，被装置边缘或挡板吸收，无法通过出口狭缝。</p>
+<p>令电场力与磁场力相等：</p>
+$$
+qE = qvB
+$$
+<p>电荷量 $q$ 约去后得到筛选速度：</p>
+$$
+v = \frac{E}{B}
+$$
+<p>值得注意的是，这一结果与粒子的电荷 $q$ 及质量 $m$ 无关——速度选择器只对速度进行筛选，而不区分粒子种类。这正是它常与质谱仪（mass spectrometer）联用的原因：先用速度选择器得到单一速度的粒子束,再送入纯磁场区域,由半径 $r = mv/(qB')$ 测出质荷比。</p>
+<p><strong>范例</strong></p>
+<p>设电场强度 $E = 2.0\times10^4\ \text{V/m}$，磁场强度 $B = 0.40\ \text{T}$，方向相互垂直。求能够无偏转通过该装置的粒子速度。</p>
+$$
+v = \frac{E}{B} = \frac{2.0\times10^4}{0.40} = 5.0\times10^4\ \text{m/s}
+$$
+<p>任何速度大于或小于 $5.0\times10^4\ \text{m/s}$ 的粒子，其电场力与磁场力不再平衡，会受到净力而偏离直线路径。</p>
+<p><strong>解题应用</strong></p>
+<p>处理速度选择器问题时，第一步永远是判断电场力与磁场力的方向是否相反——这决定了受力平衡能否成立；第二步套用 $v = E/B$ 求解未知量。常见变式：已知 $v$ 与 $B$ 求所需 $E$（如设计一台仅允许特定速度粒子通过的装置）；或已知 $E$ 与目标筛选速度 $v$，反解所需磁场 $B = E/v$。若题目改为电场、磁场不完全垂直，则需先将 $\vec{E}$、$\vec{B}$ 分解到与速度垂直的分量后再套用平衡条件。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

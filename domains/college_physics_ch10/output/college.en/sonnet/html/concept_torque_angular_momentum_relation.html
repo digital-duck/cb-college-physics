@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Torque Angular Momentum Relation | College Physics Ch10</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="torque-angular-momentum-relation">Torque Angular Momentum Relation</h2>
+<p><strong>Definition.</strong> Just as an unbalanced force changes an object's linear momentum, an unbalanced torque changes its angular momentum. For a system with angular momentum $\vec{L}$, the net external torque is</p>
+$$\vec{\tau}_{\text{net}} = \frac{d\vec{L}}{dt}$$
+<p>This is the rotational analogue of $\vec{F}_{\text{net}} = d\vec{p}/dt$: it follows from applying Newton's second law to every mass element of a rotating body and summing the resulting torques. For a rigid body with moment of inertia $I$, $L = I\omega$, so when $I$ is constant the relation reduces to the familiar $\tau_{\text{net}} = I\alpha$. But $\tau_{\text{net}} = dL/dt$ is more general — it remains valid even when $I$ itself changes, as when a skater pulls in her arms mid-spin, a case $\tau = I\alpha$ cannot handle on its own.</p>
+<p><strong>Worked example.</strong> A merry-go-round with moment of inertia $I = 300\text{ kg·m}^2$ starts at rest. A constant net torque of $150\text{ N·m}$ acts for $4\text{ s}$. Multiplying both sides of $\tau_{\text{net}} = dL/dt$ by $dt$ and integrating over the interval gives $\Delta L = \tau_{\text{net}}\Delta t = (150)(4) = 600\text{ kg·m}^2/\text{s}$. Since $L = I\omega$ and the system starts at rest, $\omega_f = \Delta L / I = 600/300 = 2\text{ rad/s}$.</p>
+<p><strong>Problem-solving application.</strong> The relation $\tau_{\text{net}} = dL/dt$ is essential whenever torque is not constant or $I$ changes during the motion — cases where $\tau = I\alpha$ alone breaks down. If $\tau(t)$ varies with time, integrate directly: $\Delta L = \int \tau(t)\, dt$, the area under the torque-time curve, exactly as linear impulse is the area under a force-time graph. Before reaching for $\tau = I\alpha$, first check whether $I$ is truly constant over the interval; if it isn't, work with $L = I\omega$ and $\tau_{\text{net}} = dL/dt$ directly, computing $\Delta L$ first and extracting $\omega$ or $\alpha$ only afterward. This ordering — momentum first, kinematics second — is what makes variable-$I$ and variable-torque problems tractable.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch10: Rotational Motion and Angular Momentum (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

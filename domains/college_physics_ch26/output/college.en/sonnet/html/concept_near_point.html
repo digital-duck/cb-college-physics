@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Near Point | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="near-point">Near Point</h2>
+<p>The <strong>near point</strong> is the closest distance at which the eye can form a sharp image on the retina. For a young adult with normal vision it is about $N = 25\ \text{cm}$. Closer than this, the eye's lens cannot increase its optical power enough to keep the image focused.</p>
+<p><strong>Why a limit exists.</strong> The eye focuses by changing the lens's focal length (accommodation). The image distance is fixed by the eye's length, about $d_i \approx 2\ \text{cm}$. As the object distance $d_o$ decreases, the lens must grow stronger to satisfy the thin-lens equation:</p>
+$$\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}$$
+<p>The ciliary muscles can only squeeze the lens so far. The shortest focal length they can reach sets the near point. The maximum power $P = 1/f$ (in diopters, with $f$ in meters) is therefore the physical limit.</p>
+<p><strong>The far point</strong> is the opposite limit. It is the farthest distance the eye can focus on, and for a normal eye it is effectively infinity.</p>
+<p><strong>Worked example.</strong> Take a normal eye with $d_i = 2.0\ \text{cm}$ and near point $25\ \text{cm}$. Find the lens's power range.</p>
+<p>At the far point, $d_o \to \infty$:</p>
+$$P_{\min} = \frac{1}{0.020\ \text{m}} = 50\ \text{D}$$
+<p>At the near point:</p>
+$$P_{\max} = \frac{1}{0.25\ \text{m}} + \frac{1}{0.020\ \text{m}} = 4 + 50 = 54\ \text{D}$$
+<p>So accommodation adds only about $4\ \text{D}$. The near point gives a direct measure of the eye's accommodation range, $\Delta P = 1/N$.</p>
+<p><strong>Problem-solving application: correcting a far near point.</strong> With age, the lens stiffens (presbyopia) and the near point recedes. Suppose a person's near point is $N' = 100\ \text{cm}$, but they want to read at $25\ \text{cm}$. A converging lens must form a virtual image at $100\ \text{cm}$ from an object held at $25\ \text{cm}$. Using a negative image distance for a virtual image, with the lens close to the eye:</p>
+$$\frac{1}{f} = \frac{1}{0.25} + \frac{1}{-1.00} = 4.0 - 1.0 = 3.0\ \text{D}$$
+<p>The prescription is $+3.0\ \text{D}$. The lens takes an object at 25 cm and makes it look as if it sits at 100 cm. The eye can focus on that apparent position.</p>
+<p><strong>General result.</strong> To read at distance $d_o$ with near point $N'$, the needed lens power is</p>
+$$P = \frac{1}{d_o} - \frac{1}{N'}$$
+<p><strong>Magnifiers.</strong> The same idea explains why optical instruments are rated relative to $N = 25\ \text{cm}$. A simple magnifier of focal length $f$, with its image at the near point, has angular magnification</p>
+$$M = 1 + \frac{N}{f}$$
+<p>For $f = 5\ \text{cm}$, $M = 1 + 25/5 = 6$. The object appears six times larger than it would if viewed unaided at the near point.</p>
+<p><strong>Check your understanding.</strong> A person with near point $40\ \text{cm}$ wants to read at $25\ \text{cm}$. Using the general result, $P = 4.0 - 2.5 = +1.5\ \text{D}$.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

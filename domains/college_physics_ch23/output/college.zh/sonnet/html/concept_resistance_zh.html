@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resistance | College Physics Ch23</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="resistance">Resistance</h2>
+<p><strong>定义</strong></p>
+<p>电阻（Resistance）是描述材料阻碍电流流动能力的物理量，定义为导体两端电压与通过其电流之比：</p>
+$$R = \frac{V}{I}$$
+<p>其中 $V$ 为电压（伏特，V），$I$ 为电流（安培，A），$R$ 的单位是欧姆（$\Omega$）。这一关系式即欧姆定律的核心表达：对于给定材料，若其电阻近似恒定，则电压与电流成正比，比例系数就是电阻。</p>
+<p>电阻的微观来源是导体内部自由电子与晶格原子发生碰撞、能量耗散的过程；电阻越大，电子通过材料时受到的阻碍越强，需要更大的电压才能维持相同的电流。电阻不仅取决于材料本身（用电阻率 $\rho$ 描述），还取决于几何形状：</p>
+$$R = \rho \frac{L}{A}$$
+<p>其中 $L$ 是导体长度，$A$ 是横截面积。这说明电阻会随导体变长而增大，随横截面变粗而减小——可以类比水流过管道时，管道越长、越细，阻力越大。</p>
+<p><strong>例题</strong></p>
+<p>一段铜导线两端施加 $12\ \text{V}$ 的电压，测得通过的电流为 $3\ \text{A}$。求该导线的电阻。</p>
+$$R = \frac{V}{I} = \frac{12\ \text{V}}{3\ \text{A}} = 4\ \Omega$$
+<p>若将导线长度增加为原来的两倍（材料和横截面积不变），根据 $R = \rho L / A$，电阻将变为原来的两倍，即 $8\ \Omega$；此时若电压不变，电流将减半为 $1.5\ \text{A}$。</p>
+<p><strong>问题解决应用</strong></p>
+<p>电阻概念在电路分析中至关重要。例如，设计一个 LED 电路：电源电压为 $9\ \text{V}$，LED 正向压降为 $2\ \text{V}$，需要限制电流为 $20\ \text{mA} = 0.02\ \text{A}$ 以防止烧毁。此时需要串联一个限流电阻 $R$，两端承受的电压为 $9 - 2 = 7\ \text{V}$，由欧姆定律：</p>
+$$R = \frac{7\ \text{V}}{0.02\ \text{A}} = 350\ \Omega$$
+<p>这类计算是电路设计的基础技能：通过已知电压和目标电流，反推所需电阻值，从而保护元件、控制功耗（$P = I^2 R$）并保证电路安全工作。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch23: Electromagnetic Induction, AC Circuits, and Electrical Technologies (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

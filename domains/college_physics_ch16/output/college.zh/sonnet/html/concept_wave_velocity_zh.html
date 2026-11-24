@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wave Velocity | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="波速">波速</h2>
+<p><strong>定义</strong></p>
+<p>波速（wave velocity）$v_w$ 是波形（扰动）在介质中传播的速度，它由波的频率 $f$ 与波长 $\lambda$ 共同决定：</p>
+$$
+v_w = f \lambda
+$$
+<p>这里 $f$ 表示单位时间内波源振动的次数（单位：Hz），$\lambda$ 表示相邻两个波峰（或任意相同相位点）之间的空间距离（单位：m）。需要强调的是，$v_w$ 描述的是波形本身向前传播的速度，而不是介质中某一点（例如水面上的一片叶子）上下振动的速度——后者是横向的振动速度 $v_y$，两者物理意义完全不同，不可混淆。对于给定介质中的机械波（如声波、水波），波速通常由介质的性质（如弹性模量、密度）决定，是一个常数；而 $f$ 和 $\lambda$ 可以随波源不同而变化，但乘积 $f\lambda$ 必须保持不变。</p>
+<p><strong>例题</strong></p>
+<p>某扬声器发出频率为 $f = 440\text{ Hz}$ 的声波，在 $20^{\circ}\text{C}$ 的空气中传播速度约为 $v_w = 343\text{ m/s}$。求该声波的波长。</p>
+<p>由公式变形：</p>
+$$
+\lambda = \frac{v_w}{f} = \frac{343\text{ m/s}}{440\text{ Hz}} \approx 0.78\text{ m}
+$$
+<p><strong>应用与解题策略</strong></p>
+<p>在处理波动问题时，$v_w = f\lambda$ 是连接"时间特征"（频率、周期 $T = 1/f$）与"空间特征"（波长）的核心桥梁。解题时应遵循以下步骤：</p>
+<li><strong>明确介质决定波速</strong>：先判断波速是否由介质本身固定（如声速取决于介质温度和材料，光速在真空中恒为 $c$），若已知波速为定值，则 $f$ 与 $\lambda$ 成反比关系。</li>
+<li><strong>识别已知量，求解未知量</strong>：题目通常给出三者中的两个，代入公式即可求第三个。</li>
+<li><strong>警惕单位换算</strong>：频率单位为 Hz（即 $\text{s}^{-1}$），波长通常为米，波速单位为 m/s，务必统一后再代入。</li>
+<li><strong>多波源情形</strong>：若同一介质中不同波源发出不同频率的波，波速不变，但波长随频率反比变化——这是理解多普勒效应、驻波产生条件等后续概念的基础。</li>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

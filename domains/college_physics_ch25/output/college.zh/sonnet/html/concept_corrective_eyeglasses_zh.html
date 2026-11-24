@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corrective Eyeglasses | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="corrective-eyeglasses">Corrective Eyeglasses</h2>
+<p>矫正眼镜的作用原理建立在薄透镜成像规律之上。正常眼睛在放松状态下能将远处物体的像精确聚焦在视网膜上；而近视眼（farsightedness 的反面）的眼球轴过长或角膜曲率过大，使远处物体的像聚焦在视网膜前方，需要用<strong>发散透镜</strong>（凹透镜，度数为负）将光线先适度发散，再由眼睛的屈光系统聚焦到视网膜上。远视眼则相反，眼球轴过短，像本应聚焦在视网膜后方，需要用<strong>会聚透镜</strong>（凸透镜，度数为正）提前汇聚光线。</p>
+<p>透镜的处方强度用<strong>屈光度（diopter, D）</strong>表示，定义为焦距（以米为单位）的倒数：</p>
+$$
+P = \frac{1}{f}
+$$
+<p>其中 $f$ 为透镜焦距（米），$P$ 为屈光度。会聚透镜 $f>0$，故 $P>0$；发散透镜 $f<0$，故 $P<0$。屈光度之所以比焦距本身更常用，是因为多片透镜叠加时屈光度可直接相加：$P_{\text{总}} = P_1 + P_2 + \cdots$，这在验光配镜时非常方便。</p>
+<p><strong>例题</strong>：一位近视患者的"远点"（裸眼能看清的最远距离）为 $0.5\ \text{m}$，即超过此距离的物体無法在视网膜上清晰成像。配镜的目标是让透镜把无穷远处的物体成像在患者的远点处，从而被其眼睛正常聚焦。利用薄透镜成像公式</p>
+$$
+\frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{f}
+$$
+<p>取物距 $d_o \to \infty$，像距应为虚像位于远点，即 $d_i = -0.5\ \text{m}$（虚像取负号）。代入得</p>
+$$
+0 + \frac{1}{-0.5} = \frac{1}{f} \quad \Rightarrow \quad f = -0.5\ \text{m}
+$$
+<p>对应屈光度 $P = 1/f = -2.0\ \text{D}$，即需要配一副 $-2.00\ \text{D}$ 的凹透镜。</p>
+<p><strong>问题求解应用</strong>：若某远视患者近点为 $1.0\ \text{m}$（而非正常的约 $0.25\ \text{m}$），配镜目标是让阅读距离 $0.25\ \text{m}$ 处的书本成像在其近点处成为可见虚像。取 $d_o = 0.25\ \text{m}$，$d_i = -1.0\ \text{m}$，代入公式可解得 $f \approx 0.33\ \text{m}$，对应 $P \approx +3.0\ \text{D}$。这类计算是验光师配镜处方的核心步骤：先测出远点或近点，再用薄透镜公式反推所需屈光度。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

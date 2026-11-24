@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transverse Wave | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="transverse-wave-横波">Transverse Wave（横波）</h2>
+<p><strong>定义</strong></p>
+<p>横波是一种扰动方向与传播方向相互垂直的波动形式。当波沿 $x$ 轴传播时，介质中的质点(或场量)在垂直于 $x$ 轴的方向上做振动。这类波的位移函数通常写作</p>
+$$
+y(x,t) = A\sin(kx - \omega t + \varphi)
+$$
+<p>其中 $A$ 为振幅，$k = \dfrac{2\pi}{\lambda}$ 为波数，$\omega = 2\pi f$ 为角频率，$\varphi$ 为初相位。波速由 $v = \dfrac{\omega}{k} = \lambda f$ 给出，它描述的是波形(相位)向前推进的速度，而不是介质质点本身的运动速度——质点只在原地上下(或左右)振动，并不随波整体移动。这一区分是理解横波的关键：能量与相位沿 $x$ 方向传播，位移振动则始终垂直于此方向。</p>
+<p>典型的横波例子包括：绳波、电磁波(电场与磁场都垂直于传播方向)、以及固体中的剪切波(S波)。与之相对的是纵波(如声波)，其振动方向与传播方向平行。</p>
+<p><strong>典型例题</strong></p>
+<p>一根张紧的绳子上传播横波，波长 $\lambda = 0.6\ \text{m}$，频率 $f = 5\ \text{Hz}$，振幅 $A = 0.02\ \text{m}$。求：(1) 波速；(2) 绳上某点的最大振动速度。</p>
+<p>解： 波速 $v = \lambda f = 0.6 \times 5 = 3\ \text{m/s}$。</p>
+<p>绳上质点做简谐振动，其位移 $y = A\sin(\omega t)$，速度为 $\dfrac{dy}{dt} = A\omega\cos(\omega t)$，最大值为</p>
+$$
+v_{\max} = A\omega = A(2\pi f) = 0.02 \times 2\pi \times 5 \approx 0.63\ \text{m/s}
+$$
+<p>注意 $v_{\max}$(质点振动速度)与 $v$(波速)是两个完全不同的物理量，数值上也不相等——这正是初学者最容易混淆之处。</p>
+<p><strong>解题应用</strong></p>
+<p>处理横波问题时，核心策略是把"波的传播"和"质点的振动"当作两套独立运动分别分析：波速 $v=\lambda f$ 由介质性质决定(例如绳的张力与线密度 $v=\sqrt{T/\mu}$)，而质点的振动速度、加速度则由简谐运动公式 $v_y = \partial y/\partial t$、$a_y=\partial^2 y/\partial t^2$ 给出。在电磁波、地震S波等实际情境中，判断"偏振方向"(即扰动方向)与传播方向的几何关系，往往是解决波的反射、折射及偏振滤波问题的第一步。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

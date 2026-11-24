@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radiation Absorbed Dose | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="radiation-absorbed-dose">Radiation Absorbed Dose</h2>
+<p><strong>定义</strong></p>
+<p>吸收剂量（absorbed dose）衡量的是电离辐射在单位质量物质中沉积的能量，回答的问题是："这些辐射究竟对组织做了多少功？"国际单位制中，吸收剂量的单位是戈瑞（Gray，符号 $\mathrm{Gy}$），定义为</p>
+$$
+1\ \mathrm{Gy} = 1\ \frac{\mathrm{J}}{\mathrm{kg}}
+$$
+<p>即每千克物质吸收 1 焦耳的能量。旧制单位是拉德（rad），二者的换算关系为</p>
+$$
+1\ \mathrm{rad} = 0.01\ \mathrm{Gy} = 0.01\ \frac{\mathrm{J}}{\mathrm{kg}}
+$$
+<p>也就是说，$1\ \mathrm{Gy} = 100\ \mathrm{rad}$。吸收剂量只关心<strong>能量沉积总量</strong>，不区分辐射种类（$\alpha$、$\beta$、$\gamma$、中子等），也不评估生物损伤的严重程度——那是"当量剂量"（用希沃特 $\mathrm{Sv}$ 衡量）要解决的问题。可以把吸收剂量类比成"每公斤组织被投递了多少焦耳的能量包裹"，而当量剂量则进一步问"这种包裹的破坏力有多大"。</p>
+<p><strong>例题</strong></p>
+<p>一名患者接受放射治疗，肿瘤组织（质量 $0.5\ \mathrm{kg}$）吸收了 $2.5\ \mathrm{J}$ 的辐射能量。求以 $\mathrm{Gy}$ 和 $\mathrm{rad}$ 表示的吸收剂量。</p>
+$$
+D = \frac{E}{m} = \frac{2.5\ \mathrm{J}}{0.5\ \mathrm{kg}} = 5\ \mathrm{Gy}
+$$
+<p>换算为拉德：</p>
+$$
+5\ \mathrm{Gy} \times 100\ \frac{\mathrm{rad}}{\mathrm{Gy}} = 500\ \mathrm{rad}
+$$
+<p><strong>问题求解应用</strong></p>
+<p>吸收剂量的核心用途是<strong>能量守恒式的正向/反向计算</strong>：已知剂量率和照射时间可求总剂量；已知总剂量和目标剂量限值可反推允许的照射时间。例如，某设备的剂量率为 $0.02\ \mathrm{Gy/s}$，若职业安全限值为单次不超过 $0.05\ \mathrm{Gy}$，则允许的最长照射时间为</p>
+$$
+t = \frac{D_{\max}}{\dot{D}} = \frac{0.05\ \mathrm{Gy}}{0.02\ \mathrm{Gy/s}} = 2.5\ \mathrm{s}
+$$
+<p>这种"剂量 = 剂量率 $\times$ 时间"的线性关系，是放射防护、核医学剂量计算以及辐射事故应急评估中最基本也是最常用的分析工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

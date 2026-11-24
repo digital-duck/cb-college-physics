@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snells Law | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="snells-law">Snells Law</h2>
+<p><strong>定义</strong></p>
+<p>光从一种介质进入另一种介质时,传播方向会在界面处发生偏折,这一现象称为折射。斯涅尔定律(Snell's Law)给出了入射角与折射角之间的定量关系:</p>
+$$n_1 \sin\theta_1 = n_2 \sin\theta_2$$
+<p>其中 $n_1, n_2$ 分别是入射介质和折射介质的折射率,$\theta_1$ 是入射角(相对于界面法线测量),$\theta_2$ 是折射角。折射率 $n = c/v$ 描述光在该介质中传播速度相对于真空光速的减慢程度;$n$ 越大,光速越慢,光线偏折也越明显。这一关系可以从费马原理(光沿用时最短的路径传播)严格推导得出,并非经验拟合,而是几何光学的基本定律之一。</p>
+<p><strong>推导要点</strong></p>
+<p>费马原理指出,光在两点之间传播所需时间取极值(通常是最小值)。设光从介质 1 中的点出发,穿过界面上某点,到达介质 2 中的点。总传播时间是入射角 $\theta_1$ 与折射角 $\theta_2$ 的函数,对界面交点位置求导并令其为零,即可得到</p>
+$$\frac{n_1}{v_1}\sin\theta_1 \cdot \text{(几何因子)} = \frac{n_2}{v_2}\sin\theta_2 \cdot \text{(几何因子)}$$
+<p>化简后正是 $n_1\sin\theta_1 = n_2\sin\theta_2$。这说明折射定律本质上是光"选择"最省时路径的必然结果,而非孤立的经验规则。</p>
+<p><strong>例题</strong></p>
+<p>一束光从空气($n_1 = 1.00$)以 $30°$ 的入射角射入水中($n_2 = 1.33$),求折射角 $\theta_2$。</p>
+<p>代入公式:</p>
+$$\sin\theta_2 = \frac{n_1 \sin\theta_1}{n_2} = \frac{1.00 \times \sin 30°}{1.33} = \frac{0.5}{1.33} \approx 0.376$$
+$$\theta_2 = \arcsin(0.376) \approx 22.1°$$
+<p>由于水的折射率更大,光线偏向法线方向弯曲,折射角小于入射角,这与直觉相符。</p>
+<p><strong>问题解决应用</strong></p>
+<p>斯涅尔定律的一个重要推论是全反射:当光从光密介质($n_1$ 大)射向光疏介质($n_2$ 小)时,若入射角超过临界角 $\theta_c = \arcsin(n_2/n_1)$,折射光将消失,全部能量反射回原介质。这一原理正是光纤通信、棱镜潜望镜以及水下观察"全反射窗"现象的物理基础,是分析光学器件设计问题时必须掌握的工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

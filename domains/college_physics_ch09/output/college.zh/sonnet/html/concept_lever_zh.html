@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lever | College Physics Ch09</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="杠杆">杠杆</h2>
+<p>杠杆是一根可绕固定支点（fulcrum）转动的刚性杆，用来传递并放大力。杠杆的核心物理量是力臂——从支点到力作用线的垂直距离。设动力 $F_1$ 作用在动力臂 $L_1$ 处，阻力 $F_2$ 作用在阻力臂 $L_2$ 处，系统处于平衡（转动力矩之和为零）时满足杠杆原理：</p>
+$$F_1 L_1 = F_2 L_2$$
+<p>由此定义机械利益（mechanical advantage, MA）为输出力与输入力之比，等于两力臂之比：</p>
+$$MA = \frac{F_2}{F_1} = \frac{L_1}{L_2}$$
+<p>这个关系本质上是转动平衡条件 $\sum \tau = 0$ 的直接推论，其中力矩 $\tau = F \times L$。杠杆并不创造能量：根据功的原理，动力做的功等于阻力做的功，$F_1 d_1 = F_2 d_2$，因此动力臂越长、移动距离越大，换来的是所需力越小——省力的代价是费距离。</p>
+<p><strong>例题</strong>：一根撬棍长 $1.5\text{ m}$，支点放在距离阻力端 $0.3\text{ m}$ 处。若需要撬动一块重 $600\text{ N}$ 的石头，求所需的最小动力。</p>
+<p>阻力臂 $L_2 = 0.3\text{ m}$，动力臂 $L_1 = 1.5 - 0.3 = 1.2\text{ m}$。代入杠杆原理：</p>
+$$F_1 = \frac{F_2 L_2}{L_1} = \frac{600 \times 0.3}{1.2} = 150\text{ N}$$
+<p>机械利益 $MA = L_1/L_2 = 4$，即用四分之一的力就能撬动石头。</p>
+<p><strong>问题求解应用</strong>：杠杆按支点、动力、阻力三者的相对位置分为三类——支点在中间（如跷跷板，天平）、阻力在中间（如独轮车、开瓶器）、动力在中间（如镊子、钓竿）。判断某个具体装置属于哪一类、并求出其 $MA$，关键在于先准确识别三个点的位置，再套用同一个平衡方程 $F_1 L_1 = F_2 L_2$。当 $MA > 1$ 时装置省力但费距离（适合搬运重物）；当 $MA < 1$ 时装置省距离但费力（适合需要精细或快速运动的场合，如钓竿甩线）。这一权衡也是理解齿轮组、滑轮组等更复杂机械系统的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch9: Statics and Torque (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

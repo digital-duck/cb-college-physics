@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wave | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="wave">Wave</h2>
+<p>A <strong>wave</strong> is a disturbance that propagates through space (usually through a medium), transferring energy and information without any net transport of matter. A ripple on a pond moves outward, but a floating leaf only bobs up and down. In a <strong>transverse</strong> wave the medium oscillates perpendicular to the direction of travel (string waves). In a <strong>longitudinal</strong> wave it oscillates parallel to it (sound).</p>
+<p>A periodic sinusoidal wave traveling in the $+x$ direction is described by</p>
+$$y(x,t) = A\sin(kx - \omega t + \phi)$$
+<p>where $A$ is the amplitude, $k = 2\pi/\lambda$ is the wave number ($\lambda$ = wavelength), $\omega = 2\pi f$ is the angular frequency, and $\phi$ is the phase constant. The period is $T = 1/f$. The wave pattern advances at the <strong>wave speed</strong></p>
+$$v = \lambda f = \frac{\omega}{k}.$$
+<p>The speed depends on the medium, not on the source. For a string under tension $F_T$ with linear mass density $\mu$, $v = \sqrt{F_T/\mu}$. In general, any function $y = g(x - vt)$ solves the <strong>wave equation</strong></p>
+$$\frac{\partial^2 y}{\partial t^2} = v^2 \frac{\partial^2 y}{\partial x^2}.$$
+<h3 id="worked-example">Worked example</h3>
+<p>A wave on a string is given by $y(x,t) = 0.020\sin(4.0x - 60t)$ in SI units. Find $\lambda$, $f$, $v$, and the maximum transverse speed of a string element.</p>
+<li>$k = 4.0\ \text{m}^{-1}$, so $\lambda = 2\pi/k \approx 1.57\ \text{m}$.</li>
+<li>$\omega = 60\ \text{rad/s}$, so $f = \omega/2\pi \approx 9.5\ \text{Hz}$.</li>
+<li>$v = \omega/k = 60/4.0 = 15\ \text{m/s}$.</li>
+<li>A string element moves according to $\partial y/\partial t = -A\omega\cos(kx-\omega t)$, so its maximum speed is $A\omega = 0.020 \times 60 = 1.2\ \text{m/s}$.</li>
+<p>Notice that the wave moves at 15 m/s while the string itself moves at most 1.2 m/s, and only up and down. The energy travels, but the matter stays.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p>A string with $\mu = 0.010\ \text{kg/m}$ is stretched with tension $F_T = 4.0\ \text{N}$. A student shakes one end at $f = 20\ \text{Hz}$. What wavelength results, and what happens if the tension is quadrupled?</p>
+<li>Wave speed: $v = \sqrt{4.0/0.010} = 20\ \text{m/s}$.</li>
+<li>Wavelength: $\lambda = v/f = 20/20 = 1.0\ \text{m}$.</li>
+<li>With $F_T = 16\ \text{N}$, $v = 40\ \text{m/s}$. The frequency is fixed by the source, so $\lambda = 40/20 = 2.0\ \text{m}$.</li>
+<p>The general strategy is to identify what the <strong>source</strong> fixes (frequency) and what the <strong>medium</strong> fixes (speed). Then use $v = \lambda f$ to find the remaining quantity. Quadrupling the tension only doubles the speed, because $v \propto \sqrt{F_T}$, so the wavelength doubles while the frequency stays the same. The same logic explains why a wave's wavelength changes when it moves from one string section into a heavier one, while its frequency does not.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

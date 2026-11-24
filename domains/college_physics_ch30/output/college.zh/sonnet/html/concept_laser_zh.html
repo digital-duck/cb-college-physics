@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laser | College Physics Ch30</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="激光">激光</h2>
+<p><strong>定义</strong>：激光（LASER，Light Amplification by Stimulated Emission of Radiation）是利用受激辐射实现光放大，从而产生相干、单色、方向性极强的电磁波的装置。其物理基础是爱因斯坦提出的三种辐射过程——自发辐射、受激吸收、受激辐射。当原子处于高能级 $E_2$ 时，入射光子可诱导它跃迁到低能级 $E_1$，并释放出与入射光子频率、相位、方向完全相同的第二个光子，从而实现光的相干放大。要让受激辐射的速率超过受激吸收，必须满足<strong>粒子数反转</strong>条件：</p>
+$$
+\Delta N = N_2 - \frac{g_2}{g_1}N_1 > 0
+$$
+<p>其中 $g_1, g_2$ 为能级简并度。由于热平衡下高能级粒子数总是少于低能级（玻尔兹曼分布），粒子数反转必须靠外部泵浦（光泵浦、电激励等）人为维持，这也是激光器区别于普通光源的关键。</p>
+<p><strong>受激振荡的阈值条件</strong>：光在谐振腔内往返一次的增益必须至少抵消腔内损耗（腔镜透射、内部散射等），才能形成持续振荡。设增益系数为 $g$，腔长为 $L$，两端反射率为 $R_1, R_2$，内部损耗系数为 $\alpha_i$，则阈值增益满足：</p>
+$$
+g_{th} = \alpha_i + \frac{1}{2L}\ln\!\left(\frac{1}{R_1 R_2}\right)
+$$
+<p><strong>举例说明</strong>：以 He-Ne 激光器为例，氦原子通过放电被激发到亚稳态，再通过共振碰撞把能量转移给氖原子，使氖原子的上能级粒子数超过下能级，形成 632.8 nm 波长的粒子数反转。若腔镜反射率 $R_1=0.99$，$R_2=0.98$，腔长 $L=0.3\,\text{m}$，内部损耗 $\alpha_i = 0.005\,\text{m}^{-1}$，代入上式可得 $g_{th}\approx 0.055\,\text{m}^{-1}$，即增益必须超过此值才能起振。</p>
+<p><strong>问题应用</strong>：这一阈值公式可用于反向设计激光器参数——例如，若测得某增益介质的最大增益仅为 $0.03\,\text{m}^{-1}$，工程师便知道必须提高腔镜反射率或缩短腔长以降低 $g_{th}$，否则系统无法起振。这正是激光器设计中平衡增益介质特性与谐振腔损耗的核心问题。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch30: Atomic Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anger Camera | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="anger-camera">Anger Camera</h2>
+<p><strong>定义</strong></p>
+<p>伽玛相机（Anger Camera，也称核医学照相机）是一种利用铅制准直器与闪烁探测器阵列，将体内放射性药物发出的伽玛射线转换为二维图像的医学成像设备，由物理学家 Hal Anger 于1957年发明。其核心部件包括：（1）<strong>铅准直器</strong>——由数千个平行铅孔组成，只允许沿孔轴方向传播的伽玛光子通过，从而在光子到达探测器之前建立起空间对应关系；（2）<strong>碘化钠（NaI）闪烁晶体</strong>，吸收伽玛光子后发出微弱可见光闪烁；（3）<strong>光电倍增管（PMT）阵列</strong>，将光信号转换并放大为电信号。关键原理在于：每个光子在晶体中产生的光斑会被周围多个PMT同时接收，各PMT信号强度不同，通过对信号进行加权定位（重心法），可以反推出光子入射的$(x, y)$坐标，同时各PMT信号之和给出该事件的总能量，用于能量窗口判别以剔除散射光子。</p>
+<p><strong>位置计算的数学原理</strong></p>
+<p>设第$i$个PMT接收到的信号强度为$S_i$，其几何位置为$(x_i, y_i)$，则光子入射位置的重心估计为：</p>
+$$
+x = \frac{\sum_i S_i x_i}{\sum_i S_i}, \qquad y = \frac{\sum_i S_i y_i}{\sum_i S_i}
+$$
+<p>总能量信号 $E = \sum_i S_i$ 用于判断该光子是否属于目标核素的特征能量峰（例如 $^{99m}\text{Tc}$ 的 140 keV），从而排除因康普顿散射而改变方向和能量的伽玛光子，提高图像对比度。</p>
+<p><strong>问题求解应用</strong></p>
+<p>假设某次探测事件中，四个相邻PMT分别测得信号 $S_1=20,\ S_2=50,\ S_3=70,\ S_4=10$（单位：任意光强单位），对应位置分别为 $(0,0),(1,0),(0,1),(1,1)$（单位：cm）。求该光子入射的估计坐标。</p>
+<p>计算：</p>
+$$
+\sum S_i = 20+50+70+10 = 150
+$$
+$$
+x = \frac{20(0)+50(1)+70(0)+10(1)}{150} = \frac{60}{150} = 0.4\ \text{cm}
+$$
+$$
+y = \frac{20(0)+50(0)+70(1)+10(1)}{150} = \frac{80}{150} \approx 0.53\ \text{cm}
+$$
+<p>由此得到该光子的入射位置约为 $(0.4,\ 0.53)$ cm。将大量此类事件按坐标累积成像，即可重建出放射性药物在体内的空间分布图，用于甲状腺扫描、骨扫描等临床诊断。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

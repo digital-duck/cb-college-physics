@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Youngs Modulus | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="youngs-modulus">Youngs Modulus</h2>
+<p>Young's modulus $Y$ (also written $E$) is the constant of proportionality between tensile or compressive stress and the resulting strain, valid within the elastic region of a material. It is defined by</p>
+$$Y = \frac{\text{stress}}{\text{strain}} = \frac{F/A}{\Delta L / L_0}$$
+<p>where $F$ is the applied force, $A$ is the cross-sectional area, $L_0$ is the original length, and $\Delta L$ is the change in length. Since strain is dimensionless, $Y$ carries the units of stress: $\text{N/m}^2$, or pascals. Rearranged, this gives Hooke's law for an extended object:</p>
+$$\Delta L = \frac{F L_0}{A Y}$$
+<p>This is the same linear spring relationship $F = k\,\Delta L$ from introductory mechanics, except $Y$ isolates the material's intrinsic stiffness from the object's geometry — a steel rod and a steel wire share the same $Y$ even though they stretch by very different amounts under the same force.</p>
+<p><strong>Worked example.</strong> A steel wire ($Y = 2.0 \times 10^{11}\ \text{N/m}^2$) has length $L_0 = 2.0\ \text{m}$ and cross-sectional area $A = 1.0 \times 10^{-6}\ \text{m}^2$ (about 1 mm across). A mass hanging from it exerts $F = 200\ \text{N}$. The stretch is:</p>
+$$\Delta L = \frac{F L_0}{A Y} = \frac{(200)(2.0)}{(1.0\times10^{-6})(2.0\times10^{11})} = \frac{400}{2.0\times10^{5}} = 2.0\times10^{-3}\ \text{m}$$
+<p>The wire stretches 2 mm — small, but measurable, and this is the basis of strain gauges.</p>
+<p><strong>Problem-solving application.</strong> Because $Y$ is tabulated per material, the standard workflow is: (1) identify the material and look up $Y$, (2) compute stress from the applied load and geometry, (3) verify stress stays below the material's elastic limit (beyond which $Y$ no longer applies and permanent deformation occurs), and (4) solve for strain or $\Delta L$. This same relation lets engineers work backward — given a maximum allowable deflection $\Delta L$, solve for the minimum cross-sectional area $A$ needed, which is exactly how cable and beam sizing is done in structural design.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Constructive Interference | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="constructive-interference-相长干涉">Constructive Interference（相长干涉）</h2>
+<p><strong>定义</strong></p>
+<p>当两列或多列波在空间中相遇，且在相遇点处相位相同（即波峰与波峰重合、波谷与波谷重合）时，波的振幅会相加，产生振幅更大的合成波，这种现象称为相长干涉。对于两列振幅分别为 $A_1$、$A_2$，频率相同、初相差为 $\Delta\phi$ 的波，合成振幅为</p>
+$$
+A_{\text{合}} = \sqrt{A_1^2 + A_2^2 + 2A_1A_2\cos\Delta\phi}
+$$
+<p>当 $\Delta\phi = 2n\pi$（$n$ 为整数）时，$\cos\Delta\phi = 1$，合成振幅达到最大值 $A_{\text{合}} = A_1 + A_2$，此即相长干涉的条件。若以波程差 $\Delta r$ 表示，条件等价于</p>
+$$
+\Delta r = n\lambda, \quad n = 0, \pm 1, \pm 2, \dots
+$$
+<p>即两列波到达同一点所经过的路程之差为波长的整数倍。</p>
+<p><strong>范例分析</strong></p>
+<p>考虑双缝干涉实验：两条缝间距为 $d$，屏幕距双缝 $L$（且 $L \gg d$），入射光波长为 $\lambda$。在屏幕上距中心线角度 $\theta$ 处，两条光路的波程差为 $\Delta r = d\sin\theta$。当</p>
+$$
+d\sin\theta = n\lambda
+$$
+<p>成立时，该点出现亮纹（相长干涉）。例如，若 $d = 0.20\text{ mm}$，$\lambda = 600\text{ nm}$，求第一级亮纹（$n=1$）对应的角度：</p>
+$$
+\sin\theta = \frac{n\lambda}{d} = \frac{(1)(6.0\times10^{-7}\text{ m})}{2.0\times10^{-4}\text{ m}} = 3.0\times10^{-3}
+$$
+<p>因此 $\theta \approx 0.17^\circ$，角度很小时可用小角近似 $\sin\theta \approx \tan\theta \approx y/L$ 求出屏幕上亮纹的位置 $y$。</p>
+<p><strong>问题求解应用</strong></p>
+<p>相长干涉的分析核心是把"路程差"转化为"相位差"，再对照条件式判断是否满足整数倍波长关系。在实际问题中，需先确定波程差的来源——可能来自几何路径差（如双缝、薄膜干涉），也可能来自介质中传播速度不同引起的光程差（需乘以折射率 $n$，即光程 $= n \cdot d$）。求解步骤通常为：(1) 写出波程差表达式；(2) 令其等于 $n\lambda$；(3) 解出未知几何量或波长。薄膜镀膜中还需额外考虑反射时是否发生半波损失（$\pi$ 相位跳变），这会使条件式变为 $2nt = (m+\tfrac{1}{2})\lambda$ 或 $2nt = m\lambda$，具体取决于两个反射界面的折射率关系。掌握这一分析框架，即可处理声波、光波、水波等各类相长干涉的定量问题。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speed Of Light Vacuum | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="speed-of-light-vacuum">Speed Of Light Vacuum</h2>
+<p><strong>定义</strong></p>
+<p>真空光速 $c \approx 3.00 \times 10^{8}\ \text{m/s}$，是自然界中信息与能量传播的极限速度。这一常数不仅描述光的传播速度，更是麦克斯韦电磁理论与爱因斯坦狭义相对论的核心参数：在真空中，$c$ 与真空介电常数 $\varepsilon_0$、真空磁导率 $\mu_0$ 之间满足</p>
+$$
+c = \frac{1}{\sqrt{\varepsilon_0 \mu_0}}
+$$
+<p>这表明光速并非一个孤立的经验数值，而是由电场与磁场相互耦合产生电磁波这一物理机制所决定的必然结果。需要强调"仅在真空中"这一限定：光在介质（如水、玻璃）中传播时会因与原子相互作用而减速，其有效速度为 $v = c/n$，其中 $n$ 为介质的折射率（$n \geq 1$）。</p>
+<p><strong>推导与物理意义</strong></p>
+<p>狭义相对论进一步指出，$c$ 是任何有质量物体、任何因果信号都无法达到或超越的速度上限。这一结论来自洛伦兹变换中的时间膨胀因子</p>
+$$
+\gamma = \frac{1}{\sqrt{1 - v^2/c^2}}
+$$
+<p>当物体速度 $v \to c$ 时，$\gamma \to \infty$，意味着需要无穷大的能量才能将有质量物体加速到光速——这正是 $c$ 作为"极限速度"而非仅仅"光的速度"的深层含义。</p>
+<p><strong>问题求解应用</strong></p>
+<p>例：某射电望远镜接收到来自半人马座 α 星（距离地球约 $4.37$ 光年）的信号。问该信号在真空中传播所需时间？</p>
+<p>由于"光年"本身定义为光在真空中一年内传播的距离，可直接得出传播时间为 $4.37$ 年，无需代入 $c$ 的具体数值——这体现了 $c$ 作为距离-时间换算基准的实用性。</p>
+<p>进一步地，若已知信号传播距离 $d = 4.13 \times 10^{16}\ \text{m}$，可反解验证：</p>
+$$
+t = \frac{d}{c} = \frac{4.13 \times 10^{16}}{3.00 \times 10^{8}} \approx 1.38 \times 10^{8}\ \text{s} \approx 4.37\ \text{年}
+$$
+<p>此类计算广泛应用于天文测距（如雷达测距、脉冲星计时）以及 GPS 卫星的时间同步修正中，是理解相对论效应工程应用的基础工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

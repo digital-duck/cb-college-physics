@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wave Frequency Wavelength | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="wave-frequency-wavelength">Wave Frequency Wavelength</h2>
+<p><strong>定义</strong></p>
+<p>对于任意以恒定速度传播的波（如声波、光波或水面波），频率 $f$ 表示波源在单位时间内完成的振动次数，单位为赫兹（Hz），即每秒周期数。波长 $\lambda$ 表示波形中两个相邻同相点（如两个相邻波峰）之间的空间距离，单位为米。两者通过传播速度 $v$ 联系在一起，满足波速方程：</p>
+$$v = f\lambda$$
+<p>由于在同一介质中 $v$ 通常固定不变（例如声速在同一温度的空气中约为 $343\ \text{m/s}$，光速在真空中为 $c \approx 3\times10^8\ \text{m/s}$），频率与波长必然成反比：频率越高，波长越短；频率越低，波长越长。这不是经验规律，而是"单位时间内传播的距离等于周期数乘以每个周期对应的长度"这一几何事实的直接推论。</p>
+<p><strong>实例分析</strong></p>
+<p>考虑一段声波在空气中传播，频率为 $f = 440\ \text{Hz}$（钢琴中央 A 音）。已知空气中声速 $v = 343\ \text{m/s}$，求其波长。</p>
+<p>将波速方程改写为：</p>
+$$\lambda = \frac{v}{f} = \frac{343\ \text{m/s}}{440\ \text{Hz}} \approx 0.78\ \text{m}$$
+<p>即该声波每个完整周期在空间中占据约 $0.78$ 米。若频率提高一倍到 $880\ \text{Hz}$（升高一个八度），波长将缩短为约 $0.39$ 米——验证了反比关系。</p>
+<p><strong>问题解决应用</strong></p>
+<p>该关系在实际工程与科学问题中极为常用。例如，WiFi 路由器工作频率为 $2.4\ \text{GHz}$，电磁波以光速传播，可求其波长：</p>
+$$\lambda = \frac{c}{f} = \frac{3\times10^8\ \text{m/s}}{2.4\times10^9\ \text{Hz}} = 0.125\ \text{m}$$
+<p>这一波长决定了天线的合理尺寸（通常为波长的整数分之一），是天线设计必须遵循的物理约束。掌握 $v=f\lambda$ 不仅能解释音调高低、颜色深浅等感知现象，更是设计通信系统、声学装置和光学仪器时进行定量计算的基础工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

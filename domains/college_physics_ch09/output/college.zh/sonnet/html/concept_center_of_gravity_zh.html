@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Center Of Gravity | College Physics Ch09</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="center-of-gravity">Center Of Gravity</h2>
+<p><strong>定义</strong>：重心（center of gravity）是物体所受重力的等效作用点——即可以假设物体的全部重量都集中于此处，用以计算力矩（torque）与平衡条件。对于由 $n$ 个质点组成的系统，若第 $i$ 个质点重量为 $w_i$，位置矢量为 $\vec{r}_i$，则重心位置为：</p>
+$$
+\vec{r}_{cg} = \frac{\sum_{i=1}^{n} w_i \vec{r}_i}{\sum_{i=1}^{n} w_i}
+$$
+<p>若重力场均匀（即所有质点处 $g$ 相同），重心与质心（center of mass）重合，此时上式退化为以质量 $m_i$ 加权的质心公式。但在重力场不均匀的大尺度问题（如高层建筑或航天器姿态分析）中，二者需区分对待。</p>
+<p><strong>推导要点</strong>：重心的定义来自力矩平衡原理。系统所受总重力矩（对任意支点 $O$）等于各质点重力矩之和：</p>
+$$
+\vec{\tau}_{total} = \sum_i \vec{r}_i \times w_i \hat{g} = \left(\sum_i w_i \vec{r}_i\right) \times \hat{g}
+$$
+<p>要使总重力的等效作用点产生相同力矩，该点必须满足 $\vec{r}_{cg} \times \left(\sum_i w_i\right)\hat{g} = \vec{\tau}_{total}$，代入求解即得上述加权平均公式。</p>
+<p><strong>例题</strong>：一根长 $4\text{ m}$ 均匀轻杆，两端分别悬挂重物 $30\text{ N}$（左端，$x=0$）和 $50\text{ N}$（右端，$x=4\text{ m}$）。求系统重心位置（用于确定支点使杆平衡）。</p>
+$$
+x_{cg} = \frac{30(0) + 50(4)}{30+50} = \frac{200}{80} = 2.5\text{ m}
+$$
+<p>即支点应置于距左端 $2.5\text{ m}$ 处，此时系统绕支点的净力矩为零。</p>
+<p><strong>应用于解题</strong>：重心分析是静力学平衡问题的核心工具。典型步骤为：(1) 选定参考点计算各部件力矩；(2) 利用 $\sum \tau = 0$ 求解未知支反力或缺失质量位置；(3) 检验系统是否稳定——重心投影是否落在支撑面（base of support）内决定物体是否会倾覆。工程中常见问题包括：起重机配重设计、车辆防侧翻分析、货物装载重心校核等，均归结为求解或验证 $\vec{r}_{cg}$ 相对支撑边界的位置。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch9: Statics and Torque (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Relativity | College Physics Ch34</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="special-relativity">Special Relativity</h2>
+<p><strong>定义</strong></p>
+<p>狭义相对论建立在两条公设之上：其一,物理定律在所有惯性参考系(即匀速直线运动的参考系)中形式相同;其二,真空中光速 $c$ 对于任何惯性观察者都是恒定值,与光源或观察者的运动状态无关。第二条公设看似简单,却与经典牛顿力学中"速度可以简单相加"的直觉相矛盾,由此引出了一系列反直觉却已被实验反复验证的结果:时间膨胀、长度收缩、同时性的相对性,以及质能关系 $E = mc^2$。</p>
+<p>这些效应由<strong>洛伦兹变换</strong>精确描述。设参考系 $S'$ 相对 $S$ 沿 $x$ 轴以速度 $v$ 运动,则</p>
+$$
+t' = \gamma\left(t - \frac{vx}{c^2}\right), \qquad x' = \gamma(x - vt), \qquad \gamma = \frac{1}{\sqrt{1 - v^2/c^2}}
+$$
+<p>其中 $\gamma$ 称为洛伦兹因子。当 $v \ll c$ 时 $\gamma \approx 1$,方程退化为伽利略变换,这说明狭义相对论并未推翻牛顿力学,而是将其纳入更大框架中的低速近似。</p>
+<p><strong>例题</strong></p>
+<p>一艘飞船以 $v = 0.8c$ 相对地球飞行。飞船上的时钟测得一次事件持续 $\Delta t_0 = 1\text{ s}$(此为"固有时",即在事件发生的静止系中测得的时间)。地球上的观察者测得的时间为多少?</p>
+<p>计算 $\gamma$:</p>
+$$
+\gamma = \frac{1}{\sqrt{1 - 0.8^2}} = \frac{1}{\sqrt{0.36}} = \frac{1}{0.6} \approx 1.667
+$$
+<p>于是地球观察者测得 $\Delta t = \gamma \Delta t_0 \approx 1.667\text{ s}$。飞船上"走过"1 秒,在地球看来却经历了约 1.667 秒——这就是时间膨胀:运动时钟相对静止观察者走得更慢。</p>
+<p><strong>解题应用</strong></p>
+<p>处理相对论问题的关键步骤是:(1)明确谁测得的是"固有时"或"固有长度"(即静止于该事件或物体的参考系);(2)代入 $\gamma$ 计算变换后的量;(3)检查极限情况——当 $v \to 0$ 时结果应趋于经典值,当 $v \to c$ 时 $\gamma \to \infty$。例如 GPS 卫星以约 $3.9\text{ km/s}$ 运行,虽然远低于 $c$,但由狭义相对论(时间变慢)与广义相对论(引力导致时间变快)共同产生的微小时间偏差,若不加以修正,会使定位误差每天累积达数公里——这正是该理论在工程中不可忽视的实际印证。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch34: Frontiers of Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

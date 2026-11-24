@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="time">Time</h2>
+<p>时间是变化发生的区间，用来标定事件的先后顺序与持续长短。在国际单位制（SI）中，时间的单位是秒（s），其现代定义并非基于地球自转或天文周期，而是基于原子物理的一个不变常数：铯-133原子基态两个超精细能级之间跃迁所对应辐射的 $9{,}192{,}631{,}770$ 个周期，定义为 $1\text{ s}$。这一定义之所以被采用，是因为原子跃迁频率极其稳定，不受地理位置、温度或使用年限的影响，从而使全世界的计时基准可以彼此对齐、相互校准。</p>
+<p><strong>校准的层级结构</strong>：日常使用的时钟（手机、电脑、实验室仪器）本身并不直接测量原子跃迁，而是通过网络时间协议（NTP）或全球定位系统（GPS）信号，定期与"原子钟"同步。GPS 卫星上搭载的原子钟持续广播时间戳，接收设备据此修正自身的时钟漂移。这就是为什么手机在飞行模式下几天不联网后，时间仍可能出现秒级误差——本地晶振（石英振荡器）的频率会随温度、电压缓慢漂移，必须周期性地"对表"。</p>
+<p><strong>问题解决应用</strong>：假设某台服务器的本地时钟每天漂移 $0.5$ 秒（即晶振频率略微偏离标称值），运维团队要求任何两台服务器之间的时间差不得超过 $50$ 毫秒，以保证分布式数据库日志的顺序正确性。那么最长可以间隔多久同步一次 NTP？</p>
+<p>设漂移速率为 $r = 0.5\ \text{s/day}$，允许的最大误差为 $\Delta t_{\max} = 0.05\ \text{s}$。同步间隔上限为：</p>
+$$
+T = \frac{\Delta t_{\max}}{r} = \frac{0.05}{0.5} = 0.1\ \text{day} \approx 2.4\ \text{小时}
+$$
+<p>即该服务器至少每 $2.4$ 小时需与授时源同步一次，否则时间误差可能导致分布式系统中"先发生"关系（happens-before）判断出错，引发数据不一致。这类计算是分布式系统工程、金融交易时间戳、卫星导航精度设计中的常规实践——把抽象的"时间"概念转化为可预算、可校准的工程约束。</p>
+<pre class="mermaid">flowchart LR
+    A[铯原子跃迁<br>定义1秒] --> B[原子钟<br>国家计量院]
+    B --> C[GPS卫星<br>广播时间戳]
+    B --> D[NTP服务器<br>网络授时]
+    C --> E[本地设备<br>石英振荡器]
+    D --> E
+    E -->|周期性同步| B</pre>
+<p><em>该图展示时间基准从原子跃迁定义，经原子钟、GPS与NTP逐级传递，最终校准本地设备时钟的层级结构。</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

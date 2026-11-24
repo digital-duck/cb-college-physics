@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetic Field Straight Wire | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="magnetic-field-straight-wire">Magnetic Field Straight Wire</h2>
+<p><strong>定义</strong></p>
+<p>一根载有稳恒电流 $I$ 的无限长直导线，会在其周围空间产生磁场。在垂直于导线、距离导线为 $r$ 的任意一点，磁场大小为</p>
+$$B = \frac{\mu_0 I}{2\pi r}$$
+<p>其中 $\mu_0 = 4\pi \times 10^{-7}\ \text{T·m/A}$ 为真空磁导率。磁场的方向沿以导线为轴心的同心圆环切线方向，具体指向由右手定则确定：拇指指向电流方向，四指弯曲的方向即为磁场方向。这个结果可由安培定律（Ampère's Law）严格推导：取半径为 $r$ 的圆形闭合路径作为安培环路，由对称性磁场大小在环路上处处相等且沿切线方向，故</p>
+$$\oint \vec{B} \cdot d\vec{l} = B \cdot 2\pi r = \mu_0 I_{\text{enc}}$$
+<p>解得 $B = \mu_0 I / (2\pi r)$。值得注意的是场强与 $r$ 成反比，而非像点电荷电场那样与 $r^2$ 成反比——这是因为磁场能量分布在整条无限长导线周围的柱面上，而非从单一点向外扩散。</p>
+<p><strong>范例</strong></p>
+<p>一根长直导线中通有 $I = 5\ \text{A}$ 的电流。求距导线 $2\ \text{cm}$ 处的磁场大小。</p>
+$$B = \frac{(4\pi \times 10^{-7})(5)}{2\pi (0.02)} = \frac{\mu_0 \times 5}{0.04\pi} = 5 \times 10^{-5}\ \text{T} = 50\ \mu\text{T}$$
+<p>作为对照，地磁场大小约为 $25$–$65\ \mu\text{T}$，可见普通实验室电流产生的磁场与地磁场量级相当，这也是为何靠近载流导线的指南针会明显偏转。</p>
+<p><strong>问题求解应用</strong></p>
+<p>该公式常用于两类问题：（1）已知电流求某点磁场，直接代入即可；（2）已知磁场需求解电流或距离，需要对公式做代数变形，例如 $I = 2\pi r B / \mu_0$。在更复杂的情形中——例如两根平行载流导线之间的相互作用力，或多导线叠加产生的合磁场——需要先用该公式分别求出各导线在目标点产生的磁场向量，再进行矢量叠加（应用叠加原理）。这类问题的关键在于准确判断每个磁场的方向（右手定则）与矢量分解，而非公式本身的复杂度。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

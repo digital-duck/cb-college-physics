@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radiation Detector | College Physics Ch31</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="radiation-detector">Radiation Detector</h2>
+<h3 id="definition">Definition</h3>
+<p>A <strong>radiation detector</strong> is an instrument that senses ionizing radiation by measuring the ionization it produces in matter. When an alpha particle, beta particle, gamma ray, or neutron passes through a sensitive medium (a gas, a semiconductor, or a scintillating crystal), it transfers energy to atoms and frees charge carriers. The detector collects this charge and converts it into an electrical signal.</p>
+<p>The key new quantity is the <strong>W-value</strong>: the average energy needed to create one ion pair (or electron–hole pair). For air, $W \approx 34\ \text{eV}$. For silicon, $W \approx 3.6\ \text{eV}$.</p>
+<p>If a particle deposits energy $E$ in the medium, the number of charge carriers is</p>
+$$N = \frac{E}{W}$$
+<p>and the collected charge is $Q = Ne$, where $e = 1.602\times10^{-19}\ \text{C}$. Because $N$ is proportional to $E$, a detector can measure a particle's energy, not just detect its arrival.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>A silicon detector absorbs a 5.48 MeV alpha particle (from $^{241}\text{Am}$) completely. Find the charge collected.</p>
+<li>Number of pairs:</li>
+$$N = \frac{5.48\times10^{6}\ \text{eV}}{3.6\ \text{eV}} \approx 1.52\times10^{6}$$
+<li>Charge:</li>
+$$Q = Ne = (1.52\times10^{6})(1.602\times10^{-19}\ \text{C}) \approx 2.4\times10^{-13}\ \text{C}$$
+<p>This is only 0.24 pC, so the signal must be amplified before it can be read out.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Comparing detector materials.</strong> Suppose the same 5.48 MeV alpha were fully absorbed in air instead of silicon. Then</p>
+$$N_{\text{air}} = \frac{5.48\times10^{6}\ \text{eV}}{34\ \text{eV}} \approx 1.61\times10^{5}$$
+<p>which is about nine to ten times fewer carriers than in silicon ($1.52\times10^{6}$). More carriers means a larger signal and a smaller relative statistical fluctuation in $N$. This is one reason semiconductor detectors give sharper energy measurements than gas detectors.</p>
+<p><strong>Choosing a detector.</strong> Use the W-value logic to match the tool to the question:</p>
+<p>| Goal | Suitable detector | |---|---| | Precise alpha energy spectrum | Silicon semiconductor detector | | Identify isotopes from gamma energies | Scintillator (NaI) or high-purity germanium | | Quick check for contamination | Gas-filled detector (e.g., Geiger–Müller counter) |</p>
+<p><strong>Practice problem.</strong> A germanium detector has $W \approx 2.9\ \text{eV}$. How many pairs does a 662 keV gamma ray produce if it deposits all its energy?</p>
+$$N = \frac{662\times10^{3}\ \text{eV}}{2.9\ \text{eV}} \approx 2.28\times10^{5}$$
+<p>The charge is $Q \approx 3.7\times10^{-14}\ \text{C}$, which again requires amplification.</p>
+<pre class="mermaid">flowchart LR
+    A[Ionizing radiation] --> B[Sensitive medium]
+    B --> C[Ion pairs]
+    C --> D[Charge collection]
+    D --> E[Amplifier]
+    E --> F[Pulse height]</pre>
+<p><em>Signal chain of a radiation detector: radiation creates charge carriers in the medium, which are collected, amplified, and recorded.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch31: Radioactivity and Nuclear Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

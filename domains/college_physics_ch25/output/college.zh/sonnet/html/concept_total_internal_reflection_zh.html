@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Total Internal Reflection | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="total-internal-reflection-全内反射">Total Internal Reflection（全内反射）</h2>
+<p><strong>定义</strong></p>
+<p>当光从光密介质（折射率较大，$n_1$）射向光疏介质（折射率较小，$n_2 < n_1$）时，根据斯涅尔定律：</p>
+$$n_1 \sin\theta_1 = n_2 \sin\theta_2$$
+<p>由于 $n_2 < n_1$，折射角 $\theta_2$ 总是大于入射角 $\theta_1$。当入射角增大到某一临界值 $\theta_c$ 时，折射角恰好达到 $90^\circ$，折射光沿界面掠射而出。此时：</p>
+$$n_1 \sin\theta_c = n_2 \sin 90^\circ = n_2$$
+$$\theta_c = \arcsin\left(\frac{n_2}{n_1}\right)$$
+<p>若入射角继续增大，超过 $\theta_c$，则不再存在满足斯涅尔定律的实数折射角，折射光完全消失，全部光能返回原介质，这就是<strong>全内反射</strong>。它只能发生在光从光密介质射向光疏介质的情形，且入射角必须大于临界角。</p>
+<p><strong>例题</strong></p>
+<p>光纤芯的折射率 $n_1 = 1.50$，包层折射率 $n_2 = 1.45$。求光在芯—包层界面发生全内反射的临界角。</p>
+$$\theta_c = \arcsin\left(\frac{1.45}{1.50}\right) = \arcsin(0.9667) \approx 75.2^\circ$$
+<p>这意味着只要光线以大于 $75.2^\circ$ 的角度（相对于界面法线）射向包层，就会被完全反射回芯内，从而沿光纤长距离传播而几乎不损失能量——这正是光纤通信的物理基础。</p>
+<p><strong>问题求解应用</strong></p>
+<p>水的折射率约为 $1.33$，空气折射率约为 $1.00$。潜水员在水下用手电筒照射水面，求光能从水中射出而不发生全内反射的最大入射角范围。</p>
+<p>先求临界角：</p>
+$$\theta_c = \arcsin\left(\frac{1.00}{1.33}\right) = \arcsin(0.7519) \approx 48.8^\circ$$
+<p>因此，只有当光线与水面法线的夹角小于约 $48.8^\circ$ 时，光才能折射进入空气；超过此角度的所有光线都会被全内反射回水中。这解释了为什么潜水员从水下向上看时，只能在头顶正上方一个约 $97.6^\circ$（$2\theta_c$）张角的圆锥形区域内看到水面外的景象，圆锥之外的水面则像镜子一样反射水下的景物——这一现象称为"斯涅尔窗"（Snell's window）。全内反射的这一临界角计算方法同样适用于设计棱镜、光纤和潜望镜等光学器件。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

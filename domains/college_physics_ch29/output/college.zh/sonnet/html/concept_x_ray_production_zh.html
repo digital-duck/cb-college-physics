@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X Ray Production | College Physics Ch29</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="x-ray-production">X Ray Production</h2>
+<p><strong>定义</strong></p>
+<p>X 射线的产生是通过将电子在高电压下加速，使其获得较大的动能，然后使这些电子撞击金属阳极（靶材），电子的动能在撞击瞬间转化为电磁辐射的过程。这一过程发生在 X 射线管中：阴极（灯丝）被加热后发射电子，电子在阴极与阳极之间的强电场中被加速，加速电压 $V$（通常为几十至上百千伏）决定了电子到达阳极时的最大动能：</p>
+$$
+K_{max} = eV
+$$
+<p>其中 $e$ 为电子电荷量。电子撞击阳极后，产生的 X 射线主要有两种机制：<strong>轫致辐射（bremsstrahlung）</strong>——电子在靶原子核的库仑场中骤然减速，损失的动能以连续谱光子形式辐射出去；以及<strong>特征辐射（characteristic radiation）</strong>——入射电子将靶原子内层电子撞出，外层电子跃迁填补空位时发出的特定波长光子，其能量由靶材原子能级差决定，因此谱线位置随靶材元素而异。</p>
+<p><strong>能量与波长关系</strong></p>
+<p>轫致辐射谱存在一个短波极限 $\lambda_{min}$，对应电子全部动能一次性转化为单个光子的情形：</p>
+$$
+eV = \frac{hc}{\lambda_{min}} \quad \Rightarrow \quad \lambda_{min} = \frac{hc}{eV}
+$$
+<p>其中 $h$ 为普朗克常数，$c$ 为光速。此式称为 Duane–Hunt 定律，是量子化能量转移的直接证据——它无法用经典电磁理论解释，因为经典理论并不禁止更短波长的存在。</p>
+<p><strong>例题</strong></p>
+<p>若 X 射线管加速电压为 $80\ \text{kV}$，求产生 X 射线的最短波长。</p>
+<p>代入数值：$hc \approx 1240\ \text{eV·nm}$，故</p>
+$$
+\lambda_{min} = \frac{1240\ \text{eV·nm}}{80{,}000\ \text{eV}} \approx 0.0155\ \text{nm}
+$$
+<p><strong>应用与问题求解</strong></p>
+<p>这一关系在医学影像与材料检测中至关重要：提高管电压 $V$ 会降低 $\lambda_{min}$，即产生穿透力更强的"硬"X射线，适合厚组织或金属探伤；而降低电压则产生"软"X射线，用于软组织高对比成像。在实际设备调试或习题中，常需要根据目标波长（或对应光子能量）反推所需的最小加速电压，直接应用 $V_{min} = hc/(e\lambda)$ 即可求解，这也是理解 X 射线管设计与安全防护参数选择的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch29: Quantum Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

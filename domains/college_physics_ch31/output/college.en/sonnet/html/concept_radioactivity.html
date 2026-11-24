@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radioactivity | College Physics Ch31</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="radioactivity">Radioactivity</h2>
+<p><strong>Radioactivity</strong> is the spontaneous transformation of an unstable nucleus into a more stable one, accompanied by the emission of radiation. In the process, part of the nuclear mass is converted into energy according to $E = \Delta m\,c^2$. The decay of any single nucleus is random, but a large sample follows a precise statistical law.</p>
+<p><strong>Decay types</strong></p>
+<li><strong>Alpha ($\alpha$):</strong> emission of a ${}^4_2\mathrm{He}$ nucleus.</li>
+<li><strong>Beta-minus ($\beta^-$):</strong> a neutron becomes a proton, emitting an electron and an antineutrino.</li>
+<li><strong>Gamma ($\gamma$):</strong> a nucleus de-excites by emitting a photon.</li>
+<p>Charge number $Z$ and mass number $A$ are conserved in every decay.</p>
+<p><strong>The decay law</strong></p>
+<p>Each nucleus has the same probability per unit time $\lambda$ (the decay constant) of decaying. For $N$ nuclei,</p>
+$$\frac{dN}{dt} = -\lambda N \quad\Longrightarrow\quad N(t) = N_0 e^{-\lambda t}.$$
+<p>The <strong>half-life</strong> is the time for half the sample to decay:</p>
+$$t_{1/2} = \frac{\ln 2}{\lambda}.$$
+<p>Equivalently, $N(t) = N_0\left(\tfrac12\right)^{t/t_{1/2}}$.</p>
+<pre class="mermaid">flowchart LR
+    A["Parent nucleus: N0"] -->|"after 1 half-life"| B["N0/2 remain"]
+    B -->|"after 2 half-lives"| C["N0/4 remain"]
+    C -->|"after 3 half-lives"| D["N0/8 remain"]</pre>
+<p><em>Each half-life halves the number of undecayed nuclei, giving exponential decay.</em></p>
+<p><strong>Worked example</strong></p>
+<p>Write the alpha decay of ${}^{238}_{92}\mathrm{U}$. The alpha particle removes $A=4$, $Z=2$, so the daughter has $A = 234$, $Z = 90$ (thorium):</p>
+$${}^{238}_{92}\mathrm{U} \to {}^{234}_{90}\mathrm{Th} + {}^{4}_{2}\mathrm{He}.$$
+<p><strong>Problem-solving application</strong></p>
+<p>Iodine-131 has $t_{1/2} = 8.0$ days. A sample initially contains $N_0 = 4.0\times10^{6}$ nuclei (a small number, chosen for easy arithmetic). How many nuclei remain after 24 days, and when does the count fall to $1.0\times10^{5}$?</p>
+<p><em>Nuclei after 24 days.</em> Since $24/8.0 = 3$ half-lives,</p>
+$$N = 4.0\times10^{6}\left(\tfrac12\right)^3 = 5.0\times10^{5}.$$
+<p><em>Time to reach $1.0\times10^{5}$.</em> Compute $\lambda = \ln 2 / 8.0 = 0.0866\ \text{day}^{-1}$. Then</p>
+$$t = \frac{1}{\lambda}\ln\frac{N_0}{N} = \frac{1}{0.0866}\ln 40 = \frac{3.689}{0.0866} \approx 43\ \text{days}.$$
+<p>As a check, 43 days is about 5.3 half-lives, and $2^{5.3}\approx 40$, which matches.</p>
+<p><strong>Strategy.</strong> Use the half-life form when the elapsed time is a whole number of half-lives. Otherwise use $N = N_0 e^{-\lambda t}$, and take logarithms to solve for time. The same method underlies radiocarbon dating, medical tracer dosing, and the shielding and storage times for nuclear waste.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch31: Radioactivity and Nuclear Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

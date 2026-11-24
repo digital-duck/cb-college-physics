@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiber Optics | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="fiber-optics">Fiber Optics</h2>
+<p><strong>定义</strong></p>
+<p>光纤通信利用全内反射（total internal reflection）原理，将光信号约束在纤芯（core）内沿玻璃或塑料细丝传播。光纤由折射率较高的纤芯和折射率较低的包层（cladding）构成。当光线从光密介质射向光疏介质、且入射角大于临界角 $\theta_c$ 时，光会完全反射回原介质，不发生透射损失。临界角满足：</p>
+$$
+\theta_c = \arcsin\left(\frac{n_2}{n_1}\right)
+$$
+<p>其中 $n_1$ 为纤芯折射率，$n_2$ 为包层折射率，且 $n_1 > n_2$。只要光线以大于 $\theta_c$ 的角度入射到纤芯—包层界面，就会被反复反射，几乎无损耗地沿光纤传输数公里甚至上百公里。</p>
+<p><strong>数值范例</strong></p>
+<p>设纤芯折射率 $n_1 = 1.48$，包层折射率 $n_2 = 1.46$。则：</p>
+$$
+\theta_c = \arcsin\left(\frac{1.46}{1.48}\right) = \arcsin(0.9865) \approx 80.6^\circ
+$$
+<p>这意味着光线相对于光纤轴线的入射角必须小于 $90^\circ - 80.6^\circ = 9.4^\circ$（即接近轴向传播），才能维持全反射条件——这就决定了光纤的<strong>数值孔径</strong>（numerical aperture, NA）：</p>
+$$
+NA = \sqrt{n_1^2 - n_2^2} = \sqrt{1.48^2 - 1.46^2} \approx 0.243
+$$
+<p>数值孔径越大，光纤能收集并有效传输的入射光锥角越宽，这在光纤耦合设计中是关键工程参数。</p>
+<p><strong>问题解决应用</strong></p>
+<p>工程实践中，数值孔径直接决定了光纤与激光源的耦合效率，以及光纤能否支持多模传播。给定一个应用场景：需要设计单模光纤（仅传输一个模式，避免模式色散),可用归一化频率（V-number）判据：</p>
+$$
+V = \frac{2\pi a}{\lambda} \cdot NA < 2.405
+$$
+<p>其中 $a$ 为纤芯半径，$\lambda$ 为工作波长。若已知 $NA = 0.12$，工作波长 $\lambda = 1550\,\text{nm}$，要求单模传输，可反解出纤芯半径上限：</p>
+$$
+a < \frac{2.405 \cdot \lambda}{2\pi \cdot NA} = \frac{2.405 \times 1550\,\text{nm}}{2\pi \times 0.12} \approx 4.93\,\mu\text{m}
+$$
+<p>这一计算说明了为什么单模光纤纤芯直径通常仅为 8–10 微米——纤芯必须足够细，才能将 $V$ 值压低于 2.405 的截止阈值，从而抑制高阶模式，保证信号在长距离传输中不因模式色散而畸变。这正是光纤设计从物理原理走向工程参数选择的核心推导过程。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

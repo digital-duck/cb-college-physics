@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamics | College Physics Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="dynamics">Dynamics</h2>
+<p><strong>定义</strong></p>
+<p>动力学（dynamics）是力学的一个分支，研究力如何引起物体和系统的运动。与只描述运动几何特征（位置、速度、加速度）而不涉及原因的运动学（kinematics）不同，动力学要回答"为什么"物体会这样运动——答案的核心是牛顿第二定律：</p>
+$$
+\vec{F}_{\text{net}} = m\vec{a} = \frac{d\vec{p}}{dt}
+$$
+<p>其中 $\vec{F}_{\text{net}}$ 是作用在物体上的合外力，$m$ 是质量，$\vec{a}$ 是加速度，$\vec{p}=m\vec{v}$ 是动量。这个方程是一个矢量微分方程：给定初始条件和力的表达式，原则上可以解出物体在任意时刻的位置。动力学的核心任务，就是把物理情境翻译成 $\vec{F}_{\text{net}}$ 的表达式，再求解由此得到的微分方程。</p>
+<p><strong>范例解析</strong></p>
+<p>考虑一个质量为 $m$ 的物块，沿倾角为 $\theta$ 的光滑斜面下滑。受力分析：重力 $mg$（竖直向下）、法向力 $N$（垂直斜面）。将重力沿斜面方向和垂直方向分解：</p>
+<li>沿斜面方向：$mg\sin\theta = ma$</li>
+<li>垂直斜面方向：$N - mg\cos\theta = 0$（因为物块不脱离斜面，此方向加速度为零）</li>
+<p>由第一式直接得到加速度：</p>
+$$
+a = g\sin\theta
+$$
+<p>这个结果本身不含 $m$，说明在无摩擦情形下，加速度与质量无关——这正是牛顿第二定律"力与质量的比值决定加速度"这一结构性质的直接体现。若斜面存在动摩擦系数 $\mu$，则需在受力图中加入摩擦力 $f = \mu N = \mu mg\cos\theta$，方向沿斜面向上（阻碍下滑），此时：</p>
+$$
+a = g(\sin\theta - \mu\cos\theta)
+$$
+<p><strong>解题应用</strong></p>
+<p>动力学问题的标准求解流程是：（1）明确研究对象，画出受力图（free-body diagram），标出每一个力；（2）选取合适的坐标系（通常沿运动方向与垂直方向分解，如上例）；（3）对每个方向分别列出 $\sum F = ma$；（4）联立求解未知量。</p>
+<p>对于多物体系统（如通过绳索连接的两个物块），需要对每个物体单独列方程，并利用绳的约束条件（张力相等、加速度大小相同）作为联立方程组的补充关系。对于变力问题（如弹簧力 $F=-kx$ 或空气阻力 $F \propto v^2$），合力不再是常数，牛顿第二定律退化为一个非平凡的微分方程，需要通过积分或数值方法求解运动规律 $x(t)$。掌握动力学的关键，正是熟练地将物理约束转化为方程组，再运用代数或微积分工具求解。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch4: Dynamics: Force and Newton's Laws of Motion (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

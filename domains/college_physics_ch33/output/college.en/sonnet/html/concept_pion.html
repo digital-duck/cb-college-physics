@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pion | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="pion">Pion</h2>
+<p>The <strong>pion</strong> (or $\pi$ meson) is the lightest meson and the particle that carries the residual strong force between nucleons. It comes in three charge states: $\pi^+$, $\pi^-$ (mass $\approx 139.6\ \text{MeV}/c^2$) and $\pi^0$ (mass $\approx 135.0\ \text{MeV}/c^2$). Each is a quark–antiquark pair of up and down quarks. For example, $\pi^+ = u\bar d$. Pions have spin 0 and are unstable. Charged pions decay in about $2.6\times10^{-8}$ s, and the $\pi^0$ decays in about $8.5\times10^{-17}$ s.</p>
+<h3 id="why-the-pion-s-mass-sets-the-force-s-range">Why the pion's mass sets the force's range</h3>
+<p>In 1935 Yukawa proposed that a force carried by a particle of mass $m$ is short-ranged. A virtual exchange particle can "borrow" energy $\Delta E \approx mc^2$ only for a time $\Delta t \lesssim \hbar/\Delta E$ (the energy–time uncertainty relation). Even traveling near the speed of light, it can cover a distance of about</p>
+$$R \approx c\,\Delta t = \frac{\hbar c}{mc^2}.$$
+<p>The resulting potential has the Yukawa form $V(r)\propto \dfrac{e^{-r/R}}{r}$. It decays much faster than the Coulomb $1/r$ potential.</p>
+<h3 id="worked-example-estimate-the-range">Worked example: estimate the range</h3>
+<p>Use $\hbar c \approx 197.3\ \text{MeV·fm}$ and $m_\pi c^2 \approx 140\ \text{MeV}$:</p>
+$$R \approx \frac{197.3\ \text{MeV·fm}}{140\ \text{MeV}} \approx 1.4\ \text{fm}.$$
+<p>This matches the observed range of the nuclear force, about 1–2 fm, which is roughly the spacing between nucleons in a nucleus. Yukawa used this argument to predict a particle of mass about 100–200 MeV/$c^2$ years before the pion was found in cosmic rays in 1947.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem.</strong> A $\pi^0$ at rest decays into two photons, $\pi^0\to\gamma\gamma$. Find each photon's energy.</p>
+<p><strong>Solution.</strong> Energy conservation gives $E_{\text{total}} = m_{\pi^0}c^2 = 135.0$ MeV. Momentum conservation, starting from zero total momentum, requires the photons to travel in opposite directions with equal momentum. They therefore share the energy equally:</p>
+$$E_\gamma = \frac{m_{\pi^0}c^2}{2} \approx 67.5\ \text{MeV}.$$
+<p>Detecting two back-to-back 67.5 MeV photons is the standard experimental signature of a $\pi^0$ at rest.</p>
+<p><strong>Check the range logic in reverse.</strong> If a force had a range of 0.2 fm, the carrier's mass would be</p>
+$$mc^2 \approx \frac{197.3}{0.2} \approx 1000\ \text{MeV}.$$
+<p>That is about the mass of a heavy meson such as the $\omega$ (about 783 MeV/$c^2$), which helps explain the shorter-range part of the nuclear force.</p>
+<h3 id="key-takeaways">Key takeaways</h3>
+<li>A heavier exchange particle gives a shorter range, $R=\hbar/(mc)$.</li>
+<li>The pion's mass of about 140 MeV/$c^2$ gives the roughly 1.4 fm range of the nuclear force.</li>
+<li>Pions are quark–antiquark pairs. Strictly, the force between nucleons is a residual effect of the strong interaction between quarks.</li>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

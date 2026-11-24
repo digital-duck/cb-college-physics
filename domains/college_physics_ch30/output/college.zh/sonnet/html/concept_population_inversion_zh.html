@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Population Inversion | College Physics Ch30</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="population-inversion-粒子数反转">Population Inversion（粒子数反转）</h2>
+<p><strong>定义</strong></p>
+<p>在处于热平衡的原子系综中，玻尔兹曼分布决定了能级布居：能量较高的态上原子数总是少于能量较低的态。设能级 $E_1 < E_2$，对应布居数 $N_1, N_2$，温度 $T$ 下有</p>
+$$\frac{N_2}{N_1} = \exp\left(-\frac{E_2 - E_1}{k_B T}\right) < 1$$
+<p>对任意有限正温度，这一比值恒小于 1，即基态永远比激发态占据更多原子。<strong>粒子数反转</strong>指的是这一规律被人为打破的非平衡状态：$N_2 > N_1$。由于该状态无法用正温度的玻尔兹曼分布描述，物理上常形式化地引入"负温度"来表征它——这不是真正低于绝对零度，而是布居分布反转的数学表达。</p>
+<p>粒子数反转是激光（laser，Light Amplification by Stimulated Emission of Radiation）产生的必要条件。原因在于受激发射与受激吸收的速率都正比于对应能级的布居数：光子既可能诱导 $E_2 \to E_1$ 的受激发射（增益），也可能诱导 $E_1 \to E_2$ 的受激吸收（损耗）。只有当 $N_2 > N_1$ 时，受激发射速率才超过吸收速率，光在介质中传播时被净放大，而非净衰减。</p>
+<p><strong>能级结构与实现方式</strong></p>
+<p>简单的二能级系统无法实现持续的粒子数反转：泵浦光既会把原子从 $E_1$ 抽运到 $E_2$，也会等速率地诱导受激发射把原子送回 $E_1$，两者在稳态下最多只能使 $N_1 = N_2$，永远达不到反转。实际激光器（如红宝石激光器、He-Ne 激光器）采用三能级或四能级系统：借助一个寿命极短的中间态实现"泵浦—快速弛豫—长寿命亚稳态"的单向布居积累，使亚稳态 $E_2$ 上的原子数持续超过下能级 $E_1$。</p>
+<p><strong>问题求解应用</strong></p>
+<p>在设计激光增益介质时，工程上的关键判据是：给定泵浦速率 $R_p$、亚稳态寿命 $\tau_2$ 和下能级弛豫寿命 $\tau_1$，反转条件近似为 $\tau_2 \gg \tau_1$，即上能级原子来得快、走得慢，下能级原子来得慢、走得快，从而维持 $N_2 > N_1$。这一条件解释了为什么四能级系统（下能级几乎瞬时清空）比三能级系统更容易实现连续激射，也是选择增益介质、评估其激光阈值可行性的核心计算依据。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch30: Atomic Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

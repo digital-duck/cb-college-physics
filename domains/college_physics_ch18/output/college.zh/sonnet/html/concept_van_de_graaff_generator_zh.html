@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Van De Graaff Generator | College Physics Ch18</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="van-de-graaff-generator">Van De Graaff Generator</h2>
+<p><strong>定义</strong></p>
+<p>范德格拉夫起电机（Van de Graaff generator）是一种利用机械传动的绝缘皮带持续搬运电荷、在中空导体球壳上积累高电压的静电发生装置。其工作原理依赖三个关键的静电学事实：电晕放电（尖端放电）便于电荷注入皮带、皮带作为绝缘载体防止电荷提前泄漏、以及导体壳内部电场为零使得电荷只能分布在外表面。装置底部有一个接高压电源的尖细电极（下梳），通过电晕放电把电荷"喷"到运动的皮带上；皮带将电荷机械地输送到顶部的空心金属球内，另一个尖细电极（上梳）把电荷从皮带上收集下来，转移到球壳的内表面。由高斯定律可知，对于一个孤立导体壳，无论壳内已积累多少电荷 $Q$，壳内部电场恒为零，因此新到达的电荷会自动被静电排斥推向外表面——这保证了电荷可以无限期地继续注入，直到达到放电极限。</p>
+<p><strong>理论关键点</strong></p>
+<p>球壳外表面的电势为</p>
+$$
+V = \frac{kQ}{R}
+$$
+<p>其中 $R$ 为球壳半径，$k$ 为库仑常数。表面电场为</p>
+$$
+E = \frac{kQ}{R^2} = \frac{V}{R}
+$$
+<p>由于空气存在介电强度极限 $E_{\text{max}} \approx 3\times10^{6}\ \text{V/m}$，一旦球壳表面场强达到此值，就会发生电晕放电或火花击穿，从而限制了可达到的最大电压 $V_{\max} = E_{\max} R$。</p>
+<p><strong>应用实例</strong></p>
+<p>设某演示用球壳半径 $R = 0.15\ \text{m}$，求空气击穿前可达到的最大电压与对应电荷量。</p>
+$$
+V_{\max} = E_{\max} R = (3\times10^{6})(0.15) \approx 4.5\times10^{5}\ \text{V}
+$$
+$$
+Q_{\max} = \frac{V_{\max} R}{k} = \frac{(4.5\times10^5)(0.15)}{8.99\times10^9} \approx 7.5\times10^{-6}\ \text{C}
+$$
+<p><strong>问题解决要点</strong></p>
+<p>这一结果解释了为何实际的范德格拉夫起电机常做成大球壳、置于高处或抽真空/充惰性气体环境中——增大 $R$ 或提高介质击穿场强 $E_{\text{max}}$，都能按线性关系提升可达到的最大电压，这正是设计高压粒子加速器和静电演示装置时必须权衡的核心工程参数。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch18: Electric Charge and Electric Field (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

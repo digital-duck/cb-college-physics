@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Body Pressures | College Physics Ch11</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="body-pressures-人体压强">Body Pressures（人体压强）</h2>
+<p>人体多个系统依赖<strong>表压</strong>（gauge pressure，相对大气压的压强差）来维持结构和功能，医生通过测量这些压强判断健康状态。表压定义为 $P_{gauge} = P_{abs} - P_{atm}$，其中 $P_{abs}$ 是绝对压强，$P_{atm}$ 是大气压。临床测量的几乎都是表压：眼内压（intraocular pressure, IOP）正常范围约为 $10$–$21\ \text{mmHg}$，青光眼患者可升至 $30\ \text{mmHg}$ 以上，因视网膜血管受压导致视神经损伤；血压以收缩压/舒张压表示，如 $120/80\ \text{mmHg}$；脑脊液压力正常约 $7$–$15\ \text{mmHg}$（卧位测量）；膀胱内压超过 $40\ \text{cmH}_2\text{O}$ 提示储尿功能障碍。</p>
+<p><strong>压强与深度的关系</strong>：体内液体压强遵循流体静力学基本方程</p>
+$$P = P_0 + \rho g h$$
+<p>其中 $\rho$ 是液体密度，$h$ 是深度。这解释了为何站立时脚踝处静脉压远高于心脏处——两者高度差 $h$ 造成的 $\rho g h$ 项不可忽略。</p>
+<p><strong>例题</strong>：一位患者平躺进行腰椎穿刺，测得脑脊液压力为 $12\ \text{mmHg}$。若医生让患者坐起，脊柱内脑脊液柱高度增加 $40\ \text{cm}$，脑脊液密度近似为水，$\rho \approx 1000\ \text{kg/m}^3$，求坐位时穿刺点的压强（换算需用 $1\ \text{mmHg} = 133.3\ \text{Pa}$）。</p>
+<p>解：卧位压强 $P_0 = 12 \times 133.3 = 1600\ \text{Pa}$。坐位时增加的静水压为</p>
+$$\Delta P = \rho g h = 1000 \times 9.8 \times 0.40 = 3920\ \text{Pa}$$
+<p>坐位总压强 $P = 1600 + 3920 = 5520\ \text{Pa} \approx 41.4\ \text{mmHg}$。这正是临床上坐位腰穿测压值远高于卧位的原因，也是标准操作要求患者侧卧的依据。</p>
+<p><strong>应用于诊断</strong>：眼压计通过测量角膜受力反推 $P_{gauge}$；血压计通过袖带充气平衡动脉表压来读数。理解 $P = P_0 + \rho g h$ 使医护人员能校正测量体位、解释异常读数背后的物理机制，而不仅仅是记忆"正常范围"。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch11: Fluid Statics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

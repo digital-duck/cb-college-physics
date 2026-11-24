@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vector Components | College Physics Ch03</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="vector-components">Vector Components</h2>
+<p><strong>定义</strong></p>
+<p>在二维平面中，任意向量 $\vec{A}$ 都可以唯一地分解为两个相互垂直的分量：沿 $x$ 轴方向的分量 $A_x$ 和沿 $y$ 轴方向的分量 $A_y$。若向量的模长为 $|\vec{A}|$，与 $x$ 轴正方向的夹角为 $\theta$，则分解公式为：</p>
+$$A_x = |\vec{A}|\cos\theta, \qquad A_y = |\vec{A}|\sin\theta$$
+<p>这两个分量彼此独立——沿 $x$ 方向的变化不会影响 $y$ 方向的物理过程，反之亦然。这一独立性正是分量法能够简化向量运算的根本原因：矢量加法、投影、力的合成等问题，一旦拆分为分量，就退化为普通的代数加减法。</p>
+<p>由勾股定理，分量与原向量的模长满足：</p>
+$$|\vec{A}| = \sqrt{A_x^2 + A_y^2}, \qquad \theta = \arctan\left(\frac{A_y}{A_x}\right)$$
+<p>这组关系构成了"合成"与"分解"互为逆运算的基础。</p>
+<p><strong>范例</strong></p>
+<p>设一根绳以 $30^\circ$ 角斜向上拉动一个物体，张力大小为 $20\ \text{N}$。求水平和竖直方向的分力。</p>
+$$F_x = 20\cos 30^\circ = 20 \times 0.866 \approx 17.3\ \text{N}$$
+$$F_y = 20\sin 30^\circ = 20 \times 0.5 = 10\ \text{N}$$
+<p>即该张力等效于水平方向 $17.3\ \text{N}$ 与竖直方向 $10\ \text{N}$ 两个独立作用力的叠加。</p>
+<p><strong>应用与解题</strong></p>
+<p>分量法的核心价值在于处理多个向量的合成。设有两个力 $\vec{F_1}(3, 4)$ 与 $\vec{F_2}(5, -2)$（单位：N），其合力可直接对分量逐一相加：</p>
+$$F_x = 3 + 5 = 8, \qquad F_y = 4 + (-2) = 2$$
+<p>于是合力大小为：</p>
+$$|\vec{F}| = \sqrt{8^2 + 2^2} = \sqrt{68} \approx 8.25\ \text{N}$$
+<p>方向为 $\theta = \arctan(2/8) \approx 14^\circ$。</p>
+<p>这种"先分解、再逐轴相加、最后合成"的策略，避免了直接用平行四边形法则作图带来的误差，也是斜面运动、抛体运动、力学平衡等一切二维矢量问题的标准求解路径。掌握分量分解，是从定性理解矢量过渡到定量计算的关键一步。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch3: Two-Dimensional Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

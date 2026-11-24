@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="pet">Pet</h2>
+<p><strong>定义</strong></p>
+<p>正电子发射断层成像(Positron Emission Tomography, PET)是一种核医学功能成像技术,其物理基础是正电子湮灭。放射性药物中标记的核素(如 $^{18}\text{F}$)通过 $\beta^+$ 衰变发射正电子 $e^+$。正电子在组织中运动约 1–2 mm 后与周围电子发生湮灭,依据质能等价关系</p>
+$$
+e^+ + e^- \rightarrow 2\gamma, \qquad E_\gamma = \frac{m_e c^2}{1} = 0.511\ \text{MeV}
+$$
+<p>由于湮灭前系统动量近似为零,两个 $\gamma$ 光子必须严格沿相反方向(180°)发射,以满足动量守恒。这一"背靠背"几何关系正是 PET 定位精度的核心:探测器环同时(在纳秒级符合时间窗内)接收到两个能量均为 0.511 MeV 的光子,即可确定湮灭事件发生在连接两探测器的直线(称为"响应线",line of response, LOR)上。</p>
+<p><strong>工作实例</strong></p>
+<p>假设探测器环直径为 80 cm,某次湮灭事件被环上相隔 170° 的两个探测器同时记录,能量窗设定为 0.511 MeV ± 15%。系统排除单光子事件(可能来自散射或本底噪声),仅保留满足"符合条件"(coincidence)的事件对。收集数百万条 LOR 后,通过滤波反投影或迭代重建算法(如 OSEM),即可重建出放射性药物浓度的三维分布图——这正是肿瘤显像中 $^{18}\text{F}$-FDG(氟代脱氧葡萄糖)高摄取区对应恶性肿瘤高代谢的成像基础。</p>
+<p><strong>问题解决应用</strong></p>
+<p>工程上需要权衡两个关键参数。其一是符合时间窗 $\Delta t$:若两探测器接收光子的时间差超过窗口(通常几纳秒),则判定为随机符合(random coincidence)而剔除,这直接影响信噪比。其二是空间分辨率的物理下限,由正电子射程和光子对不完全共线性(约 0.25°偏差)共同决定,而非仅由探测器像素尺寸决定——即使电子学无限精细,分辨率也存在物理天花板,约 4–5 mm。</p>
+<p>在实际诊断规划中,还需计算灵敏度与剂量的权衡:探测效率 $\epsilon$ 与符合事件计数率 $\propto \epsilon^2$(因需两个光子同时被探测),这解释了为何 PET 探测器材料(如 LSO、BGO)的选择及环覆盖立体角的设计,对图像质量和患者辐射剂量的优化至关重要。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

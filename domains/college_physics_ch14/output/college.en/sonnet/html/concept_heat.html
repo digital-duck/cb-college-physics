@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heat | College Physics Ch14</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="heat">Heat</h2>
+<p><strong>Heat</strong> is the spontaneous transfer of thermal energy between two objects (or between an object and its surroundings) caused by a temperature difference. Energy flows from the hotter object to the colder one until they reach the same temperature (thermal equilibrium). Heat is a <em>process quantity</em>: an object does not "contain" heat. It contains internal energy, and heat is the energy in transit. We write $Q$ for heat, measured in joules (J), with $Q>0$ when energy enters the object.</p>
+<p><strong>Key relation.</strong> For an object that stays in one phase (no melting or boiling),</p>
+$$Q = mc\,\Delta T,$$
+<p>where $m$ is mass, $\Delta T = T_f - T_i$, and $c$ is the <strong>specific heat capacity</strong>. This is the energy needed to change 1 kg of the material by 1 K. A material with a large $c$, such as water, changes temperature slowly when energy is added or removed.</p>
+<p><strong>Conservation of energy.</strong> If no energy escapes, the heat lost by the hot object equals the heat gained by the cold one:</p>
+$$\sum Q_i = 0.$$
+<h3 id="worked-example">Worked example</h3>
+<p>A $0.200\ \text{kg}$ aluminum block at $100\,^\circ\text{C}$ is dropped into $0.500\ \text{kg}$ of water at $20\,^\circ\text{C}$. Find the final temperature $T_f$. Use $c_{\text{Al}} = 900\ \text{J/(kg·K)}$ and $c_{\text{w}} = 4186\ \text{J/(kg·K)}$, and assume no energy escapes.</p>
+<p>Both objects end at $T_f$, and $Q_{\text{Al}} + Q_{\text{w}} = 0$:</p>
+$$(0.200)(900)(T_f - 100) + (0.500)(4186)(T_f - 20) = 0$$
+$$180\,T_f - 18000 + 2093\,T_f - 41860 = 0$$
+$$2273\,T_f = 59860 \;\Rightarrow\; T_f \approx 26.3\,^\circ\text{C}.$$
+<p>The result is close to the water's starting temperature. The water's $mc = 2093$ J/K is far larger than the metal's $180$ J/K, so the water's temperature changes much less.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem.</strong> A $0.150\ \text{kg}$ sample of an unknown metal is heated to $95.0\,^\circ\text{C}$ and dropped into $0.400\ \text{kg}$ of water at $20.0\,^\circ\text{C}$. The system settles at $23.0\,^\circ\text{C}$. Identify the metal's specific heat capacity, assuming no energy escapes.</p>
+<p><strong>Strategy.</strong> Compute the heat the water gains, which is fully known. Then use conservation of energy to find the unknown $c$.</p>
+<li>Water gains: $Q_{\text{w}} = (0.400)(4186)(23.0 - 20.0) = 5023\ \text{J}$.</li>
+<li>The metal must lose the same amount: $Q_{\text{m}} = -5023\ \text{J}$.</li>
+<li>Write the metal's heat in terms of $c$:</li>
+$$Q_{\text{m}} = (0.150)\,c\,(23.0 - 95.0) = -10.8\,c.$$
+<li>Solve:</li>
+$$-10.8\,c = -5023 \;\Rightarrow\; c \approx 465\ \text{J/(kg·K)}.$$
+<p>This is close to the value for iron ($\approx 450$ J/(kg·K)), so iron or steel is a likely candidate. The difference could come from small heat losses to the container.</p>
+<p><strong>Checklist for heat problems:</strong></p>
+<li>List every object with its mass, specific heat, and initial temperature.</li>
+<li>Write $Q = mc\,\Delta T$ for each object, always using $T_f - T_i$.</li>
+<li>Apply $\sum Q = 0$ for an isolated system and solve for the unknown.</li>
+<li>Check the signs. The hotter object must have $Q<0$ and the colder object $Q>0$. The final temperature must lie between the two starting temperatures.</li>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch14: Heat and Heat Transfer Methods (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

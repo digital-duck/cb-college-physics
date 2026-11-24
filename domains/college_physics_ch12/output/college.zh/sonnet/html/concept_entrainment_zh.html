@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entrainment | College Physics Ch12</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="entrainment-卷吸效应">Entrainment（卷吸效应）</h2>
+<p><strong>定义</strong>：卷吸效应是指高速流体（通常是气体或液体射流）通过局部压强降低，从周围环境中"拖曳"并混入另一种流体的现象。其物理基础是伯努利原理：在不可压缩、无粘性流动中，沿流线满足</p>
+$$
+p + \frac{1}{2}\rho v^2 + \rho g h = \text{常数}
+$$
+<p>当流体经过喷嘴收缩截面时，由连续性方程 $A_1 v_1 = A_2 v_2$ 可知截面积 $A$ 减小会使流速 $v$ 增大；伯努利方程随即表明流速增大导致局部静压 $p$ 下降。若这一低压区与外部大气或另一流体源相连，压强差 $\Delta p = p_{\text{外}} - p_{\text{喷口}} > 0$ 会驱动外部流体被"吸入"高速流中，二者随后混合。</p>
+<p><strong>工作实例</strong>：本生灯（Bunsen burner）是最经典的应用。燃气从底部小孔以高速喷出，经过颈部收缩截面时流速骤增、静压骤降，灯管侧壁的空气孔便在压差作用下被卷吸进入气流，与燃气在到达灯口前充分预混。设燃气孔径为 $d_1$，喷出速度为 $v_1$；颈部截面积缩小为原来的 $A_2/A_1$。可估算颈部速度 $v_2 = v_1 (A_1/A_2)$，代入伯努利方程得压降</p>
+$$
+\Delta p = \frac{1}{2}\rho\left(v_2^2 - v_1^2\right)
+$$
+<p>该压降越大，卷吸的空气量越多，火焰燃烧越充分（蓝色火焰而非黄色）。雾化器（atomizer）原理相同：高速气流掠过细管口产生低压，将容器中的液体吸出并雾化成细小液滴。</p>
+<p><strong>问题求解应用</strong>：工程设计中常需要反向求解——已知所需的空气卷吸流量，确定喷嘴几何尺寸。设目标是使空气体积流量达到 $Q_{\text{air}}$，而空气孔的有效通流面积为 $A_{\text{hole}}$，则所需压差为</p>
+$$
+\Delta p = \frac{1}{2}\rho_{\text{air}} \left(\frac{Q_{\text{air}}}{A_{\text{hole}}}\right)^2
+$$
+<p>再利用伯努利方程反推所需的喷口收缩比 $A_1/A_2$，即可确定喷嘴设计参数。这种"先定压差、后定几何"的思路是喷射泵、真空发生器等工业设备设计的标准方法。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch12: Fluid Dynamics and Its Biological and Medical Applications (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

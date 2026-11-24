@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pion | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="介子-π-介子">介子（π 介子）</h2>
+<p><strong>定义</strong></p>
+<p>介子（pion，符号 $\pi$）是汤川秀树（Hideki Yukawa）于 1935 年提出的一种亚原子粒子，用以解释核子（质子、中子）之间强相互作用的短程特性。介子属于强子中的"介子"类（由一个夸克和一个反夸克构成），存在三种荷电态：$\pi^+$、$\pi^-$、$\pi^0$，质量分别约为 139.6 MeV/$c^2$（带电）和 135.0 MeV/$c^2$（中性）。汤川的核心洞见是：力程与传播粒子质量成反比关系，由不确定性原理导出</p>
+$$
+\Delta E \cdot \Delta t \sim \hbar, \qquad \Delta t \sim \frac{r}{c}, \qquad \Delta E \sim m_\pi c^2
+$$
+<p>联立可得力程估计式</p>
+$$
+r \sim \frac{\hbar}{m_\pi c}
+$$
+<p>代入 $m_\pi \approx 140\ \text{MeV}/c^2$，得 $r \sim 1.4\ \text{fm}$，恰好与核力的实测作用范围吻合。</p>
+<p><strong>推导示例：由力程反推交换粒子质量</strong></p>
+<p>已知核力有效力程约为 $1.4\times10^{-15}\ \text{m}$，代入上式反解 $m_\pi c^2$：</p>
+$$
+m_\pi c^2 \sim \frac{\hbar c}{r} = \frac{197.3\ \text{MeV·fm}}{1.4\ \text{fm}} \approx 141\ \text{MeV}
+$$
+<p>这与实验测得的带电介子质量 139.6 MeV 高度吻合，说明"虚粒子交换程"这一图像不仅是定性类比，而是可以做出定量、可检验预测的物理模型。对比之下，电磁力由无质量光子传递，故 $r \to \infty$（长程力）；而强核力因交换有质量的介子而被限制在费米（fm）尺度内——这正是核力"短程"本质的根源。</p>
+<p><strong>解题应用</strong></p>
+<p>这一关系式常用于估算不同交换粒子对应的力程量级。例如，弱相互作用由 $W^\pm$、$Z^0$ 玻色子传递，其质量约 80–91 GeV/$c^2$，代入同一公式可得力程 $r \sim 10^{-18}\ \text{m}$，远小于核力力程，解释了弱力为何在原子核尺度上显得"极弱且极短程"。学生在处理粒子物理估算题时，应掌握此不确定性原理估算法作为通用工具：已知交换粒子质量求力程，或已知力程反推所需交换粒子的最小质量。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

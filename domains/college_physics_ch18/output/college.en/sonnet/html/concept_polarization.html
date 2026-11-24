@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polarization | College Physics Ch18</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="polarization">Polarization</h2>
+<p><strong>Definition.</strong> Polarization is the separation of positive and negative charge within a neutral object, so that one region becomes slightly positive and another slightly negative, even though the net charge stays zero. There are two sources:</p>
+<li><strong>Induced polarization:</strong> a nearby charged object pushes or pulls charges. In a conductor, free electrons move across the object. In an insulator, charges only shift slightly within each atom or molecule.</li>
+<li><strong>Permanent polarization:</strong> polar molecules such as water have an asymmetric shape, so each molecule already has a separated positive and negative end.</li>
+<p>The strength of a charge separation is measured by the <strong>dipole moment</strong>:</p>
+$$\vec{p} = q\,\vec{d}$$
+<p>where $q$ is the magnitude of the separated charge and $\vec{d}$ points from the negative charge to the positive charge, with length equal to their separation.</p>
+<p><strong>Why a neutral object is attracted.</strong> Suppose a negatively charged rod approaches a neutral insulator. The rod repels electrons in the insulator slightly away and attracts the positive nuclei slightly closer. The near side of the insulator becomes positive and the far side negative. Coulomb's force falls off as $1/r^2$, so the nearer positive charge feels a stronger attraction than the farther negative charge feels repulsion. The net force is attractive. This is why a charged comb picks up small bits of paper.</p>
+<p><strong>Worked example.</strong> A water molecule has a dipole moment of $p = 6.2\times10^{-30}\ \text{C·m}$. It sits in a uniform electric field $E = 1.0\times10^{5}\ \text{N/C}$, perpendicular to its dipole axis. Find the torque on it.</p>
+<p>The torque on a dipole is</p>
+$$\tau = pE\sin\theta$$
+<p>With $\theta = 90^\circ$, $\sin\theta = 1$:</p>
+$$\tau = (6.2\times10^{-30})(1.0\times10^{5}) = 6.2\times10^{-25}\ \text{N·m}$$
+<p>The torque rotates the molecule until $\vec{p}$ lines up with $\vec{E}$ ($\theta = 0$), where the torque is zero. This alignment is why water responds strongly to electric fields.</p>
+<p><strong>Problem-solving application.</strong> A positively charged sphere is brought near a neutral aluminum can lying on a table. Predict the motion.</p>
+<li><em>Step 1:</em> The sphere's positive charge attracts free electrons toward the near side. The near side becomes negative and the far side positive.</li>
+<li><em>Step 2:</em> The near, negative charge is closer to the sphere, so the attraction exceeds the repulsion on the far, positive side.</li>
+<li><em>Step 3:</em> The can has net attraction toward the sphere and rolls toward it.</li>
+<p>If the sphere touches the can, some electrons transfer to the sphere. The can is now left with a net positive charge, and the force changes from attraction through polarization to repulsion between like charges.</p>
+<p><strong>Key checks for any problem:</strong></p>
+<li>Is the object a conductor (charges move freely) or an insulator (charges only shift)?</li>
+<li>Is the object's net charge zero? Polarization redistributes charge but never changes the total.</li>
+<li>Does the field vary in space? In a uniform field, a dipole feels torque but no net force. A net force requires a non-uniform field, like the one near a point charge.</li>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch18: Electric Charge and Electric Field (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

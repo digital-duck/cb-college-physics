@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Numerical Aperture | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="numerical-aperture">Numerical Aperture</h2>
+<p><strong>定义</strong></p>
+<p>数值孔径（Numerical Aperture，简称 NA）用来量化光学系统（透镜、光纤或显微镜物镜）收集光线的能力，其定义为</p>
+$$
+NA = n \sin\alpha
+$$
+<p>其中 $n$ 是透镜前方介质（如空气、油或水）的折射率，$\alpha$ 是光轴与透镜能够接收的最大光锥半角之间的夹角。$NA$ 越大，透镜能收集的光锥就越宽，成像也就越亮、分辨率越高。由于 $\sin\alpha \le 1$，空气中（$n=1$）的 $NA$ 理论上限为 $1$；实际显微物镜常用浸没介质（如油，$n \approx 1.5$）来突破这一限制，获得更高的 $NA$。</p>
+<p>$NA$ 之所以重要，是因为它直接决定了系统的<strong>分辨率极限</strong>。根据阿贝衍射极限公式，能分辨的最小间距 $d$ 满足</p>
+$$
+d = \frac{\lambda}{2\,NA}
+$$
+<p>其中 $\lambda$ 是所用光的波长。这个关系表明：分辨率不是由放大倍数决定的，而是由 $NA$ 和波长共同决定——放大倍数只是把已经存在的分辨率细节放大，无法凭空创造更多细节。</p>
+<p><strong>例题</strong></p>
+<p>某显微镜物镜的半锥角 $\alpha = 60^\circ$，工作介质为空气（$n=1$）。求其数值孔径，并估算在波长 $\lambda = 550\,\text{nm}$（绿光）下能分辨的最小结构间距。</p>
+<p>解：</p>
+$$
+NA = 1 \times \sin 60^\circ = 0.866
+$$
+$$
+d = \frac{550\,\text{nm}}{2 \times 0.866} \approx 318\,\text{nm}
+$$
+<p>即该物镜理论上能分辨约 318 nm 的细节，远小于人眼可见的尺度，这正是光学显微镜能够观察细胞内部结构的原因。</p>
+<p><strong>问题求解应用</strong></p>
+<p>若将上述物镜换成油浸物镜（$n = 1.518$），且保持相同的半锥角 $\alpha = 60^\circ$，新的 $NA$ 为：</p>
+$$
+NA' = 1.518 \times \sin 60^\circ \approx 1.315
+$$
+<p>代入分辨率公式，最小可分辨间距降为约 $209\,\text{nm}$，分辨率提升近 34%。这说明在设计高分辨率光学系统时，提高 $NA$（通过增大孔径角或使用高折射率介质）比单纯增加放大倍数更有效——这正是电子显微镜和油浸显微技术得以突破传统光学分辨率极限的核心原理。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

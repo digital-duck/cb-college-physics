@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conservation Of Energy | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="conservation-of-energy">Conservation Of Energy</h2>
+<p><strong>Definition.</strong> In a closed system, with no energy entering or leaving, the total energy stays constant:</p>
+$$E_{\text{total}} = K + U + E_{\text{other}} = \text{constant}.$$
+<p>Energy changes form (kinetic $K$, potential $U$, thermal, and so on) but is never created or destroyed. When non-conservative forces such as friction act, the energy lost from the mechanical terms appears as thermal energy. If external work $W_{\text{ext}}$ is done on the system, the statement becomes</p>
+$$\Delta K + \Delta U + \Delta E_{\text{thermal}} = W_{\text{ext}}.$$
+<p>If $W_{\text{ext}}=0$ and no thermal energy is produced, mechanical energy $K+U$ is conserved by itself.</p>
+<p><strong>Worked example.</strong> A 2.0 kg ball is dropped from rest at height $h = 5.0\ \text{m}$. Find its speed just before impact, taking $g = 9.8\ \text{m/s}^2$ and ignoring air resistance.</p>
+<p>Take the ground as $U=0$. At the top, $K_i = 0$ and $U_i = mgh$. At the bottom, $U_f = 0$ and $K_f = \tfrac12 mv^2$. Conservation gives</p>
+$$mgh = \tfrac12 m v^2 \quad\Rightarrow\quad v = \sqrt{2gh} = \sqrt{2(9.8)(5.0)} \approx 9.9\ \text{m/s}.$$
+<p>The mass cancels, so any object falls with the same speed. The energy method needs no knowledge of the time of fall or the forces along the way, which is why it is so efficient.</p>
+<p><strong>Problem-solving application.</strong> A block of mass $m = 1.5\ \text{kg}$ slides down a frictionless ramp from height $1.2\ \text{m}$, then crosses a rough horizontal patch of length $d = 2.0\ \text{m}$ with kinetic friction coefficient $\mu_k = 0.20$. What is its speed after the patch?</p>
+<li><em>Choose the system and states.</em> Initial: at rest at the top. Final: just after the patch.</li>
+<li><em>Account for non-conservative work.</em> Friction converts energy to heat: $E_{\text{thermal}} = \mu_k m g d$.</li>
+<li><em>Write the balance:</em></li>
+$$mgh = \tfrac12 m v^2 + \mu_k m g d.$$
+<li><em>Solve:</em> the mass cancels, so</li>
+$$v = \sqrt{2g(h-\mu_k d)} = \sqrt{2(9.8)(1.2-0.40)} \approx 4.0\ \text{m/s}.$$
+<p><strong>Extension: a fluid parcel.</strong> The same bookkeeping applies to flowing fluid. Consider a small parcel of incompressible fluid of density $\rho$ moving along a streamline with no thermal losses. Per unit volume its energy is kinetic, $\tfrac12\rho v^2$, plus gravitational potential, $\rho g y$. If the parcel's speed or height changes with no external work and no heat, then $\tfrac12\rho v^2 + \rho g y$ would be conserved, exactly as $K+U$ was for the ball. The one thing a flowing fluid adds is that neighboring fluid does work on the parcel through pressure, so the pressure $P$ must be included in the balance. This is the starting point for Bernoulli's equation, which you will derive in the next section.</p>
+<p><strong>Strategy summary.</strong> Define the system, pick a zero for potential energy, list all energy forms at the initial and final states, include any heat or external work, then solve the single balance equation.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

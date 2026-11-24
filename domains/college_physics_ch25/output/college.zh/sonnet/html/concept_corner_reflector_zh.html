@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corner Reflector | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="角反射器">角反射器</h2>
+<p><strong>定义</strong></p>
+<p>角反射器（corner reflector）是由两个（二维情形）或三个（三维情形）相互垂直的反射面构成的光学装置。其核心性质是：无论入射光线以何种角度射入，经过两次（或三次）反射后，出射光线都严格平行于入射光线的<strong>反方向</strong>——即出射光线与入射光线反向平行（anti-parallel），而不是像平面镜那样依赖入射角决定反射方向。这一性质完全基于反射定律（入射角等于反射角），不涉及折射或色散，因此对所有波长的光都成立。</p>
+<p><strong>几何证明（二维情形）</strong></p>
+<p>设两面镜子分别沿 $x$ 轴与 $y$ 轴放置，交线（角顶）位于原点，两镜面互相垂直。一条入射光线的方向向量为</p>
+$$\vec{d} = (d_x, d_y)$$
+<p>光线先射到与 $x$ 轴垂直的镜面（法线沿 $y$ 方向）上，反射定律给出反射向量</p>
+$$\vec{d}_1 = (d_x, -d_y)$$
+<p>（$y$ 分量取反，$x$ 分量不变）。</p>
+<p>若该光线接着射到与 $y$ 轴垂直的镜面（法线沿 $x$ 方向）上，第二次反射使 $x$ 分量取反：</p>
+$$\vec{d}_2 = (-d_x, -d_y) = -\vec{d}$$
+<p>结果证明：无论初始角度 $d_x, d_y$ 取何值，两次反射后方向向量恰好整体反号，即出射光线严格反平行于入射光线。这就是"retroreflection"（逆向反射）的数学本质——每一次反射只翻转一个坐标轴分量，两次垂直反射合起来翻转全部分量，等价于对方向向量做 $-1$ 倍的点反演。三维角反射器（三面互相垂直的镜子，如立方体的一个内角）同理可证：三次反射依次翻转 $x, y, z$ 三个分量，最终 $\vec{d} \to -\vec{d}$。</p>
+<p><strong>问题解决应用</strong></p>
+<p>角反射器广泛用于测距与定位：卫星激光测距、月球激光测距实验（阿波罗任务在月面放置的角反射器阵列）、道路交通标志与自行车反光片，都利用这一"发射光原路返回"的性质，使观测者（光源所在处）总能收到强反射信号，而无需精确对准角度。</p>
+<p><strong>练习</strong>：若入射光线方向为 $\vec{d} = (3, -4)$（未归一化），经过一个二维角反射器后，出射方向向量是多少？验证其与入射方向的夹角为 $180°$。</p>
+<p><em>解</em>：由 $\vec{d}_2 = -\vec{d}$，出射方向为 $(-3, 4)$。二者点积为 $(3)(-3)+(-4)(4) = -25$，两向量模长均为 $5$，故 $\cos\theta = -25/25 = -1$，即 $\theta = 180°$，验证成立。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

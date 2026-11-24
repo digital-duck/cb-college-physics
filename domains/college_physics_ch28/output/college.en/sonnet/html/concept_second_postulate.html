@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Second Postulate | College Physics Ch28</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="second-postulate">Second Postulate</h2>
+<p><strong>Definition.</strong> Einstein's second postulate of special relativity states that light in vacuum travels at the same speed $c = 299\,792\,458\ \text{m/s}$ in every inertial frame, regardless of the motion of the light source or the observer. Unlike a thrown ball, light does not inherit the velocity of whatever emitted it.</p>
+<p>Compare this with ordinary (Galilean) velocity addition. If a train moves at $v$ and a passenger throws a ball forward at $u'$ relative to the train, an observer on the ground measures $u = u' + v$. The second postulate says this rule fails for light: if $u' = c$, then $u = c$ as well, not $c + v$.</p>
+<p><strong>Worked example.</strong> A spaceship moves at $v = 0.6c$ relative to Earth and fires a laser pulse forward. What speed does an Earth observer measure?</p>
+<p>Galilean prediction: $u = c + 0.6c = 1.6c$. This contradicts the postulate.</p>
+<p>The relativistic velocity-addition formula, which follows from the two postulates, gives</p>
+$$u = \frac{u' + v}{1 + \dfrac{u'v}{c^2}}.$$
+<p>Substituting $u' = c$ and $v = 0.6c$:</p>
+$$u = \frac{c + 0.6c}{1 + \dfrac{(c)(0.6c)}{c^2}} = \frac{1.6c}{1.6} = c.$$
+<p>The result is $c$ for any $v$, as the postulate requires. In general, with $u' = c$:</p>
+$$u = \frac{c + v}{1 + v/c} = \frac{c(c+v)}{c+v} = c.$$
+<p><strong>Problem-solving application.</strong> The postulate has measurable consequences, and it is also the basis for time dilation. Consider a "light clock": a light pulse bounces between two mirrors a distance $L$ apart. In the clock's rest frame, one round trip takes</p>
+$$\Delta t_0 = \frac{2L}{c}.$$
+<p>Now watch this clock move horizontally at speed $v$. In our frame the pulse travels a diagonal path. Because the speed of light is still $c$ (not $\sqrt{c^2+v^2}$), the pulse covers a longer path in a longer time $\Delta t$. Each one-way leg has vertical extent $L$ and horizontal extent $v\,\Delta t/2$, so</p>
+$$\left(\frac{c\,\Delta t}{2}\right)^2 = L^2 + \left(\frac{v\,\Delta t}{2}\right)^2.$$
+<p>Solving for $\Delta t$:</p>
+$$\Delta t^2\,(c^2 - v^2) = 4L^2 \;\Rightarrow\; \Delta t = \frac{2L/c}{\sqrt{1 - v^2/c^2}} = \gamma\,\Delta t_0, \qquad \gamma = \frac{1}{\sqrt{1 - v^2/c^2}}.$$
+<p>For $v = 0.8c$, $\gamma = 1/\sqrt{1 - 0.64} = 1/0.6 \approx 1.67$. A moving clock ticking once per second in its own frame is observed to tick once every $1.67$ s.</p>
+<p><strong>Key takeaway.</strong> Because $c$ cannot change with the observer, something else must give: time intervals and lengths become frame-dependent. The second postulate is why simultaneity, time, and space are relative, while the speed of light is absolute.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch28: Special Relativity (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

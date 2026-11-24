@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ionization | College Physics Ch31</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="ionization">Ionization</h2>
+<p><strong>定义</strong></p>
+<p>电离是指原子或分子失去（或获得）一个或多个电子，从而形成带电离子的过程。中性原子的电子之所以能被束缚，是因为原子核的正电荷通过库仑力吸引电子；要把一个电子完全移出原子，必须给它提供足够的能量以克服这个束缚。这个最小能量称为电离能（ionization energy），记作 $E_i$。对大多数原子的最外层电子而言，$E_i$ 的数量级仅为几个电子伏特（eV）——例如氢原子基态电子的电离能是 $13.6\ \text{eV}$，钠原子的第一电离能约为 $5.1\ \text{eV}$。相比之下，将原子核内的核子分离所需的结合能则高达百万电子伏特（MeV）量级，两者相差近六个数量级。这说明电离是一种"廉价"的能量事件：光子、热运动或带电粒子碰撞都足以引发它。</p>
+<p><strong>量化关系</strong></p>
+<p>电离过程可以用能量守恒描述。若入射光子的能量为 $h\nu$，要使电子逃逸需要满足</p>
+$$
+h\nu \ge E_i,
+$$
+<p>多余的能量转化为逃逸电子的动能：$KE = h\nu - E_i$。这正是光电效应的核心方程，也是氢原子光谱、恒星大气电离平衡（Saha 方程的基础）等现象背后的定量关系。</p>
+<p><strong>解决问题的应用</strong></p>
+<p>假设某气体的电离能为 $E_i = 4.0\ \text{eV}$，一束紫外光子能量为 $h\nu = 6.2\ \text{eV}$ 照射该气体。</p>
+<li>判断能否发生电离：因为 $6.2\ \text{eV} > 4.0\ \text{eV}$，电离可以发生。</li>
+<li>求逃逸电子的动能：</li>
+$$
+KE = 6.2\ \text{eV} - 4.0\ \text{eV} = 2.2\ \text{eV}.
+$$
+<li>换算成焦耳（工程或实验中常需要）：利用 $1\ \text{eV} = 1.602 \times 10^{-19}\ \text{J}$，得</li>
+$$
+KE = 2.2 \times 1.602\times10^{-19}\ \text{J} \approx 3.52\times10^{-19}\ \text{J}.
+$$
+<p>这种"能量阈值 + 剩余动能"的分析方法，同样适用于分析太阳风粒子电离大气分子、质谱仪中样品的电离效率，或半导体中载流子的产生机制——只需将具体的 $E_i$ 与可用能量代入同一守恒关系即可。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch31: Radioactivity and Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

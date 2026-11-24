@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy Cost Calculation | College Physics Ch07</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="energy-cost-calculation">Energy Cost Calculation</h2>
+<p>Electricity bills are not based on power alone but on <strong>energy</strong> — power sustained over time. A device's energy consumption is measured in kilowatt-hours (kWh), and the cost of running it is found by multiplying that energy by the utility's price per kWh:</p>
+$$
+E \text{ (kWh)} = P \text{ (kW)} \times t \text{ (h)}
+$$
+$$
+\text{Cost} = E \times r
+$$
+<p>where $P$ is power in kilowatts, $t$ is time in hours, and $r$ is the utility rate in dollars per kWh. Note that 1 kWh is <em>not</em> a unit of power — it is a unit of energy, equivalent to running a 1000-watt device for one hour ($1 \text{ kWh} = 3.6 \times 10^6 \text{ J}$).</p>
+<p><strong>Worked example.</strong> Suppose a window air conditioner rated at 1200 W runs for 8 hours a day, and the utility charges \$0.15 per kWh. First convert power to kilowatts: $P = 1.2$ kW. Daily energy use is</p>
+$$
+E = 1.2 \text{ kW} \times 8 \text{ h} = 9.6 \text{ kWh}
+$$
+<p>Daily cost is then $9.6 \times 0.15 = \$1.44$. Over a 30-day month, total cost is $1.44 \times 30 = \$43.20$.</p>
+<p><strong>Problem-solving application.</strong> These calculations become powerful when comparing devices or diagnosing a high bill. Suppose a household wants to know whether replacing an old refrigerator (150 W, running continuously) with an energy-efficient model (80 W) is worthwhile, given $r = \$0.13/\text{kWh}$. The old unit costs $0.150 \times 24 \times 0.13 = \$0.468/\text{day}$, or about \$14.04/month. The new unit costs $0.080 \times 24 \times 0.13 = \$0.2496/\text{day}$, or about \$7.49/month — a savings of roughly \$6.55/month. If the new refrigerator costs \$400 more, dividing cost by monthly savings gives a payback period of about 61 months (≈5 years), letting the student weigh upfront cost against long-term savings.</p>
+<p>This same method generalizes to multi-device households: total energy cost is the sum of each appliance's $P \times t \times r$, which is why energy audits list wattage and daily usage hours for every device — it converts an abstract bill into an itemized, actionable breakdown.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch7: Work, Energy, and Energy Resources (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

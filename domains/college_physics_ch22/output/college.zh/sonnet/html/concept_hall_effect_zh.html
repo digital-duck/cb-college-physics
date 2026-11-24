@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hall Effect | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="霍尔效应">霍尔效应</h2>
+<p><strong>定义</strong></p>
+<p>将一条载流导体置于垂直于电流方向的磁场中时,导体两侧会出现一个横向电压,称为霍尔电压(Hall voltage)。其成因是磁场对运动电荷施加洛伦兹力,使正、负载流子向导体两侧偏转积累,直至产生的横向电场恰好平衡磁力,达到稳态。</p>
+<p>考虑宽度为 $w$、厚度为 $t$ 的导体薄片,沿 $x$ 方向通有电流 $I$,磁场 $B$ 沿 $z$ 方向。载流子(设电荷为 $q$,漂移速度为 $v_d$)受到的洛伦兹力为</p>
+$$
+\vec{F} = q\,\vec{v}_d \times \vec{B}
+$$
+<p>该力将载流子推向 $y$ 方向的一侧,形成电荷积累,从而产生横向电场 $E_H$。稳态时,电场力与磁力平衡:</p>
+$$
+qE_H = qv_dB \quad\Rightarrow\quad E_H = v_dB
+$$
+<p>霍尔电压 $V_H = E_H w = v_d B w$。利用电流关系 $I = nqv_dA = nqv_d(wt)$,可解出漂移速度 $v_d = \dfrac{I}{nqwt}$,代入得</p>
+$$
+V_H = \frac{IB}{nqt}
+$$
+<p>其中 $n$ 为载流子数密度。定义霍尔系数 $R_H = \dfrac{1}{nq}$,则 $V_H = \dfrac{R_H IB}{t}$。</p>
+<p><strong>核心结论</strong>:$V_H$ 的正负号直接反映载流子的电荷符号——这是霍尔效应最重要的应用之一,它使我们能够区分半导体是 n 型(电子导电)还是 p 型(空穴导电),而这一点仅凭电阻测量无法判断。</p>
+<p><strong>例题</strong></p>
+<p>一铜片厚 $t = 0.10\text{ mm}$,通有电流 $I = 5.0\text{ A}$,置于 $B = 0.60\text{ T}$ 的磁场中,测得 $V_H = 3.2\ \mu\text{V}$。求铜中自由电子的数密度 $n$。</p>
+<p>由 $V_H = \dfrac{IB}{nqt}$,解出</p>
+$$
+n = \frac{IB}{qtV_H} = \frac{(5.0)(0.60)}{(1.6\times10^{-19})(1.0\times10^{-4})(3.2\times10^{-6})}
+\approx 5.9\times10^{28}\ \text{m}^{-3}
+$$
+<p>此结果与铜的已知自由电子密度(约 $8.5\times10^{28}\ \text{m}^{-3}$)量级一致,说明模型合理。</p>
+<p><strong>应用拓展</strong>:霍尔效应是霍尔传感器的物理基础,广泛用于无接触电流测量、位置检测和磁场测绘;在凝聚态物理中,它进一步推广为量子霍尔效应,成为拓扑物态研究的核心工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

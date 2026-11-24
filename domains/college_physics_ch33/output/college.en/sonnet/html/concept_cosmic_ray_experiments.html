@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cosmic Ray Experiments | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="cosmic-ray-experiments">Cosmic Ray Experiments</h2>
+<p><strong>Definition.</strong> Cosmic rays are high-energy particles, mostly protons and atomic nuclei, that arrive from space. When a primary cosmic ray hits an atmospheric nucleus, it starts a <em>shower</em> of secondary particles: pions, muons, electrons, photons, and neutrinos. Before accelerators reached high energies, cosmic ray experiments were the main way to study particles above a few GeV. Detectors included cloud chambers, photographic emulsions, and Geiger counter arrays. These were often placed on mountains or carried by balloons.</p>
+<p><strong>Key discoveries.</strong></p>
+<li>Positron (1932, Anderson): a cloud-chamber track curved the "wrong" way in a magnetic field.</li>
+<li>Muon (1936, Anderson and Neddermeyer): a penetrating particle that was too heavy to be an electron and too penetrating to be a proton.</li>
+<li>Charged pion (1947, Powell, Lattes, and Occhialini): emulsion exposed on mountains showed the decay $\pi \to \mu + \nu$. This was the Yukawa particle, which carries the nuclear force.</li>
+<li>Kaons and hyperons followed in the late 1940s, which led to "strangeness."</li>
+<p><strong>Worked example: why muons reach the ground.</strong> Muons are produced about $h = 15\ \text{km}$ up and have a rest-frame mean lifetime $\tau = 2.2\ \mu\text{s}$. Take a muon with speed $v \approx 0.998c$.</p>
+<p><em>Without relativity</em>, the typical decay distance is</p>
+$$d = v\tau \approx (3\times10^8\ \text{m/s})(2.2\times10^{-6}\ \text{s}) \approx 660\ \text{m}.$$
+<p>The survival fraction over 15 km would then be</p>
+$$\frac{N}{N_0} = e^{-h/(v\tau)} = e^{-15000/660} \approx e^{-22.7} \approx 10^{-10}.$$
+<p>Almost none would reach sea level. In fact, many do.</p>
+<p><em>With time dilation</em>, the Lorentz factor is</p>
+$$\gamma = \frac{1}{\sqrt{1-v^2/c^2}} = \frac{1}{\sqrt{1-0.998^2}} \approx 15.8.$$
+<p>The lab-frame lifetime is $\gamma\tau \approx 35\ \mu\text{s}$, so the decay length is $\gamma v\tau \approx 10.4\ \text{km}$. Then</p>
+$$\frac{N}{N_0} = e^{-15/10.4} \approx e^{-1.44} \approx 0.24.$$
+<p>This is about 24% of such muons, which is far closer to what is observed. Muons from cosmic rays are therefore a classic test of special relativity.</p>
+<p><strong>Problem-solving application: identifying a particle.</strong> In a magnetic field $B$, a charged particle of momentum $p$ follows a path of radius</p>
+$$r = \frac{p}{qB}.$$
+<p>Combine this with a second measurement, such as ionization density or range in emulsion, to get the mass.</p>
+<p><em>Problem:</em> A track of a singly charged particle has $r = 0.50\ \text{m}$ in $B = 1.0\ \text{T}$. Find $p$ in MeV/$c$.</p>
+<p><em>Solution:</em> Use the practical form $p\ [\text{GeV}/c] = 0.3\,B\,r$, with $B$ in tesla and $r$ in meters. Then $p = 0.3(1.0)(0.50) = 0.15\ \text{GeV}/c = 150\ \text{MeV}/c$. If its range shows $\beta \approx 0.82$, then</p>
+$$m = \frac{p}{\gamma\beta c}, \quad \gamma = \frac{1}{\sqrt{1-0.82^2}} \approx 1.75,$$
+$$m c^2 \approx \frac{150}{1.75 \times 0.82} \approx 105\ \text{MeV}.$$
+<p>This matches the muon mass, 105.7 MeV/$c^2$.</p>
+<p><strong>Takeaway.</strong> Cosmic ray experiments combine curvature (momentum) with a second observable (speed or ionization) to identify particles. They also supply natural tests of relativity.</p>
+<pre class="mermaid">flowchart TD
+    A[Primary cosmic ray] --> B[Collision with atmospheric nucleus]
+    B --> C[Charged pions]
+    B --> D[Neutral pions]
+    C --> E[Muons plus neutrinos]
+    D --> F[Photons]
+    F --> G[Electron-positron pairs]
+    E --> H[Detected at ground level]
+    G --> H</pre>
+<p><em>A simplified air shower: a primary cosmic ray produces pions, which decay into the muons, photons, and electrons seen at ground level.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

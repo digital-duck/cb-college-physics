@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problem Solving Kinematics | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="problem-solving-kinematics">Problem Solving Kinematics</h2>
+<p>一维运动问题的求解不是套用公式,而是一套可迁移的推理流程。系统化方法包含六个步骤:(1) 确定适用的物理原理——匀加速运动还是自由落体;(2) 列出已知量并统一单位;(3) 明确所求的未知量;(4) 从运动学方程组中选择包含已知量和未知量、且不引入多余变量的方程;(5) 代入数值求解,并全程携带单位;(6) 检验结果是否符合物理直觉——量级、符号、单位是否合理。</p>
+<p>一维匀加速运动的核心方程组为:</p>
+$$v = v_0 + at$$
+$$x = x_0 + v_0 t + \frac{1}{2}at^2$$
+$$v^2 = v_0^2 + 2a(x - x_0)$$
+$$x = x_0 + \frac{1}{2}(v_0 + v)t$$
+<p><strong>范例</strong>:一辆车以 $20\ \text{m/s}$ 的速度行驶,司机踩下刹车,加速度为 $-4\ \text{m/s}^2$,求车辆完全停止前行驶的距离。</p>
+<p>第一步,原理:匀加速直线运动。第二步,已知量:$v_0 = 20\ \text{m/s}$,$a = -4\ \text{m/s}^2$,$v = 0$。第三步,未知量:位移 $\Delta x$。第四步,选择方程:由于时间 $t$ 未知且不需要,选用 $v^2 = v_0^2 + 2a\,\Delta x$。第五步,代入求解:</p>
+$$0 = (20)^2 + 2(-4)\Delta x \implies \Delta x = \frac{-400}{-8} = 50\ \text{m}$$
+<p>第六步,检验:单位为米,符合位移量纲;$50\ \text{m}$ 对于时速 $72\ \text{km/h}$ 的车辆刹车距离而言,数量级合理。</p>
+<p><strong>问题求解应用</strong>:该方法的价值在于第四步——方程的选择。四个运动学方程各自缺少一个变量($t$、$x$、$v$ 或 $a$),因此判断"哪个变量不出现在题目中"是选择正确方程的关键技巧,而非死记硬背。例如,若已知 $v_0$、$a$、$t$,求 $x$,应选用不含 $v$ 的方程 $x = x_0 + v_0t + \frac{1}{2}at^2$。当问题涉及两个运动物体(如追及问题)时,需对每个物体分别建立方程,并利用共同的时间或位置约束联立求解。养成"先列出已知与未知、再挑方程"的习惯,能有效避免代入错误方程导致的系统性失误。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

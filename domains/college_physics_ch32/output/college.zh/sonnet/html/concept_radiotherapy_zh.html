@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radiotherapy | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="放射治疗">放射治疗</h2>
+<p>放射治疗利用高能电离辐射（如X射线、γ射线或粒子束）对细胞DNA造成不可逆损伤，从而杀灭肿瘤细胞。其疗效根源在于一个生物学不对称：癌细胞分裂旺盛、修复亚致死损伤（sublethal damage）的能力较弱，而正常组织细胞分裂较慢、修复能力较强。通过将总剂量分成多次（分次照射，fractionation）给予，正常组织在两次照射之间得以修复，肿瘤组织因修复滞后而持续累积损伤，从而在杀灭肿瘤与保护正常组织之间拉开"治疗窗口"。</p>
+<p>这一过程的定量核心是<strong>线性二次模型</strong>（linear-quadratic model），它描述单次剂量 $D$ 下细胞的存活分数：</p>
+$$SF(D) = \exp\left(-\alpha D - \beta D^2\right)$$
+<p>其中 $\alpha$ 项对应DNA双链断裂造成的不可修复致死损伤（与剂量成正比），$\beta$ 项对应两处独立单链损伤叠加形成的致死损伤（与剂量平方成正比）。比值 $\alpha/\beta$ 反映组织对分次照射的敏感程度：肿瘤组织通常 $\alpha/\beta$ 较大（约10 Gy），对总剂量更敏感；晚反应正常组织（如脊髓）$\alpha/\beta$ 较小（约2–3 Gy），对每次分割剂量的大小更敏感。</p>
+<p><strong>举例</strong>：设某肿瘤 $\alpha/\beta = 10$，正常组织 $\alpha/\beta = 3$。若将总剂量60 Gy分成2 Gy×30次给予，与用更大分割剂量（如4 Gy×15次）给予相比，后者对正常组织造成的相对损伤显著更高——这正是临床倾向于"小剂量、多次数"方案的定量依据。</p>
+<p>在剂量方案设计中，医生使用<strong>生物等效剂量</strong>（BED）比较不同分次方案：</p>
+$$BED = nd\left(1 + \frac{d}{\alpha/\beta}\right)$$
+<p>其中 $n$ 为分次数，$d$ 为每次剂量。给定同一BED目标，可反推出改变分次数或单次剂量后所需的总剂量，这是临床剂量学（dosimetry）中调整治疗计划、评估再程放疗风险的标准计算工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medical Ultrasound | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="medical-ultrasound">Medical Ultrasound</h2>
+<p><strong>定义</strong></p>
+<p>医学超声成像利用频率高于 20 kHz（临床常用 2–15 MHz）的机械振动波，对人体组织进行无创探测。压电陶瓷换能器在交流电压驱动下发生逆压电效应，产生周期性形变并向组织发射声波脉冲；声波在不同组织界面处发生反射与散射,携带回波信息的振动又通过正压电效应转换回电信号，经处理后重建为图像。超声波在介质中的传播速度 $v$、频率 $f$ 与波长 $\lambda$ 满足</p>
+$$
+v = f\lambda
+$$
+<p>人体软组织中声速近似恒定，约为 $v \approx 1540\ \text{m/s}$，因此仪器可依据回波往返时间 $t$ 直接反推反射面深度：</p>
+$$
+d = \frac{v \cdot t}{2}
+$$
+<p>除以 2 是因为 $t$ 记录的是声波"去—回"的总时间。</p>
+<p><strong>关键物理量：声阻抗与反射</strong></p>
+<p>声波在两种介质分界面处的反射强弱由声阻抗 $Z = \rho v$（$\rho$ 为密度）决定。当声波垂直入射到阻抗为 $Z_1$、$Z_2$ 的两种介质分界面时，反射系数为</p>
+$$
+R = \left(\frac{Z_2 - Z_1}{Z_2 + Z_1}\right)^2
+$$
+<p>这解释了为什么骨骼（高 $Z$）与软组织交界处回波极强、图像明亮，而空气（极低 $Z$）几乎全反射——这正是超声检查前需在皮肤上涂抹耦合剂、排除气体的物理原因。</p>
+<p><strong>例题</strong></p>
+<p>某回波从发射到接收共用时 $t = 26\ \mu s$，求反射界面深度。</p>
+<p>代入 $d = \dfrac{1540 \times 26\times10^{-6}}{2} \approx 0.02\ \text{m} = 2\ \text{cm}$。</p>
+<p><strong>应用与权衡</strong></p>
+<p>频率越高，波长越短，空间分辨率越好，但组织对高频声波的吸收衰减也更强，穿透深度随之下降——这是成像系统设计中经典的分辨率—穿透深度权衡：浅表器官（如甲状腺、血管）选用 7–15 MHz 高频探头，腹部深部器官（如肝、肾）则用 2–5 MHz 低频探头以保证足够穿透。此外，超声不使用电离辐射，安全性高，可用于孕期监测，但对含气组织（肺、肠道）成像效果差，且图像质量高度依赖操作者手法，这也是其临床应用的现实局限。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

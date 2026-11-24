@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semipermeable Membrane | College Physics Ch12</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="semipermeable-membrane">Semipermeable Membrane</h2>
+<p><strong>定义</strong></p>
+<p>半透膜是一种薄层屏障,它根据分子的大小、电荷或化学性质选择性地允许某些物质通过,同时阻挡其他物质。这一概念广泛出现在生物学(细胞膜)、化学(渗析、渗透)与工程学(反渗透水处理膜、燃料电池质子交换膜)之中。其核心机制是<strong>渗透</strong>(osmosis)——溶剂分子(通常是水)从溶质浓度较低的一侧,通过膜净流向浓度较高的一侧,直到系统达到平衡或受到外部压力抵消。</p>
+<p>驱动渗透的定量关系由 <strong>范特霍夫渗透压公式</strong> 给出:</p>
+$$
+\Pi = iMRT
+$$
+<p>其中 $\Pi$ 为渗透压,$i$ 为范特霍夫因子(溶质解离出的粒子数),$M$ 为溶质的摩尔浓度,$R$ 为气体常数,$T$ 为绝对温度。该公式之所以是必要的理论工具,是因为渗透压不能仅凭直觉估计——它是一个可精确预测、可实验验证的热力学量,决定了细胞在不同溶液中膨胀或皱缩的方向与幅度。</p>
+<p><strong>范例求解</strong></p>
+<p>设某红细胞置于 $0.5\ \text{mol/L}$ 的非解离葡萄糖溶液中,温度为 $310\ \text{K}$(体温)。计算该溶液对细胞膜产生的渗透压。</p>
+$$
+\Pi = iMRT = (1)(0.5\ \text{mol/L})(0.0821\ \text{L·atm/(mol·K)})(310\ \text{K}) \approx 12.7\ \text{atm}
+$$
+<p>如果细胞内部渗透压低于此值,水将净流出细胞,导致细胞皱缩(高渗环境)。</p>
+<p><strong>问题解决应用</strong></p>
+<p>在工业反渗透(RO)水处理中,工程师需要施加一个<strong>大于</strong>溶液自然渗透压的外部压力,才能迫使水分子逆浓度梯度通过膜,从而将盐分与水分离。设计者必须先用上述公式计算目标盐水的渗透压,再确定驱动泵所需的最小工作压力,并留出安全余量以克服膜内部的浓差极化效应。这体现了半透膜问题的典型求解路径:识别溶质浓度与温度 → 计算理论渗透压 → 结合工程约束(能耗、膜寿命)确定实际操作参数。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch12: Fluid Dynamics and Its Biological and Medical Applications (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

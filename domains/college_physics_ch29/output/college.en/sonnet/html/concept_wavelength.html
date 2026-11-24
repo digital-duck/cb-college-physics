@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wavelength | College Physics Ch29</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="wavelength">Wavelength</h2>
+<p><strong>Definition.</strong> The wavelength $\lambda$ of a periodic wave is the distance between adjacent identical points on the wave, such as crest to crest, trough to trough, or compression to compression. It is measured parallel to the direction of propagation and is expressed in meters (or nanometers, for light). Wavelength is tied to the wave's frequency $f$ and speed $v$ by</p>
+$$v = f\lambda$$
+<p>This relation follows from the definition. In one period $T = 1/f$, the wave pattern advances exactly one wavelength, so $v = \lambda/T = \lambda f$.</p>
+<p><strong>What sets $\lambda$.</strong> The source fixes the frequency, and the medium fixes the speed. Wavelength is whatever is left over: $\lambda = v/f$. When a wave enters a new medium, $f$ stays the same because the source is unchanged. The speed $v$ changes, so $\lambda$ changes in proportion.</p>
+<p><strong>Worked example.</strong> A middle-C tuning fork vibrates at $f = 262\ \text{Hz}$. Sound travels at $v = 343\ \text{m/s}$ in air at 20 °C. Find the wavelength in air, then in water, where $v = 1480\ \text{m/s}$.</p>
+<p>In air:</p>
+$$\lambda_{\text{air}} = \frac{343\ \text{m/s}}{262\ \text{Hz}} \approx 1.31\ \text{m}$$
+<p>In water, the frequency is unchanged:</p>
+$$\lambda_{\text{water}} = \frac{1480\ \text{m/s}}{262\ \text{Hz}} \approx 5.65\ \text{m}$$
+<p>The wavelength is about 4.3 times longer in water, matching the ratio of the speeds ($1480/343 \approx 4.3$).</p>
+<p><strong>Problem-solving application.</strong> Wavelength determines how a wave interacts with its surroundings. Consider an FM radio station broadcasting at $f = 98.1\ \text{MHz}$. Electromagnetic waves in air travel at about $c = 3.00\times10^{8}\ \text{m/s}$, so</p>
+$$\lambda = \frac{c}{f} = \frac{3.00\times10^{8}}{98.1\times10^{6}} \approx 3.06\ \text{m}$$
+<p>An antenna works well when its length is a simple fraction of the wavelength. A quarter-wave antenna should therefore be about $\lambda/4 \approx 0.76\ \text{m}$ long. That is why car antennas are roughly this size.</p>
+<p>A second use is diffraction. A wave bends noticeably around an opening or obstacle only when the size of the obstacle is comparable to or smaller than $\lambda$. The 1.31 m sound wave from the tuning fork spreads easily through a doorway about 1 m wide, so you can hear around corners. Visible light has $\lambda \sim 500\ \text{nm}$, far smaller than a doorway, so you cannot see around corners.</p>
+<p><strong>Strategy for problems.</strong></p>
+<li>Identify which quantity the source fixes ($f$) and which the medium fixes ($v$).</li>
+<li>Apply $\lambda = v/f$, and convert prefixes (MHz $\to 10^6$ Hz, nm $\to 10^{-9}$ m) before computing.</li>
+<li>When the medium changes, hold $f$ constant and scale $\lambda$ with $v$.</li>
+<li>Compare $\lambda$ with the size of any opening, obstacle, or antenna to predict its behavior.</li>
+<p><strong>Check your understanding.</strong> A 440 Hz note travels from air into helium, where $v \approx 970\ \text{m/s}$. What is the new wavelength? (Answer: $970/440 \approx 2.20\ \text{m}$, compared with $343/440 \approx 0.78\ \text{m}$ in air.)</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch29: Quantum Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

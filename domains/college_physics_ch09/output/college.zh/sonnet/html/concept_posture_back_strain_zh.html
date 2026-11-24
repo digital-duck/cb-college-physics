@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Posture Back Strain | College Physics Ch09</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="posture-back-strain">Posture Back Strain</h2>
+<p><strong>定义。</strong> 人体躯干可视为绕髋关节铰接的刚性杆,处于静力平衡状态。当上半身重心 $G$ 与髋关节铰点 $P$ 在竖直方向对齐时(直立姿势),重力 $W$ 通过 $P$ 的力臂几乎为零,背部肌肉几乎无需出力即可维持平衡。然而,一旦躯干前倾角度为 $\theta$,重心相对铰点产生水平偏移 $d = L\sin\theta$(其中 $L$ 为躯干重心到髋关节的距离),重力便对髋关节产生一个使躯干继续前倒的力矩:</p>
+$$
+\tau_{gravity} = W \cdot L\sin\theta
+$$
+<p>竖脊肌(erector spinae)必须在髋关节附近产生一个方向相反、大小相等的反力矩才能维持静态平衡。由于背部肌肉的力臂 $\ell_m$ 通常远小于 $L$(约为其 1/10),肌肉所需产生的力 $F_m$ 满足力矩平衡方程:</p>
+$$
+F_m \cdot \ell_m = W \cdot L\sin\theta \quad\Rightarrow\quad F_m = \frac{W L \sin\theta}{\ell_m}
+$$
+<p>由于 $\ell_m \ll L$,$F_m$ 往往是体重的数倍,这正是弯腰负重时腰椎压力剧增、易造成劳损的力学根源。</p>
+<p><strong>例题。</strong> 设某人上半身及头部重量 $W = 400\ \text{N}$,躯干重心到髋关节的距离 $L = 0.3\ \text{m}$,前倾角 $\theta = 45^\circ$,竖脊肌在髋关节附近的力臂 $\ell_m = 0.05\ \text{m}$。求维持平衡所需的肌肉力 $F_m$。</p>
+<p>代入公式:</p>
+$$
+F_m = \frac{400 \times 0.3 \times \sin 45^\circ}{0.05} = \frac{400 \times 0.3 \times 0.707}{0.05} \approx 1697\ \text{N}
+$$
+<p>即肌肉需产生约 1700 N 的拉力,是体重的四倍以上——这也解释了为何长期弯腰工作或搬运重物时容易造成腰肌劳损甚至椎间盘损伤。</p>
+<p><strong>问题解决应用。</strong> 若再手持一个重量为 $w$、距髋关节水平距离为 $d_w$ 的物体(如箱子),则总力矩平衡方程扩展为:</p>
+$$
+F_m \cdot \ell_m = W L\sin\theta + w\, d_w
+$$
+<p>这一模型说明:降低前倾角度 $\theta$(保持背部竖直、用屈膝代替弯腰)、缩短负重物体到身体的距离 $d_w$(将物体贴近躯干搬运),都能显著减小所需的肌肉力 $F_m$,从而降低腰背损伤风险——这正是人体工程学中"正确搬举姿势"建议的力学依据。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch9: Statics and Torque (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

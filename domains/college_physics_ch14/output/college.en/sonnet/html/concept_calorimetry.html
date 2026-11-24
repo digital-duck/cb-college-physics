@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calorimetry | College Physics Ch14</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="calorimetry">Calorimetry</h2>
+<p><strong>Calorimetry</strong> is the measurement and calculation of heat transfer between bodies. Its central technique applies when two bodies at different temperatures are placed in thermal contact inside an isolated system, meaning no net heat is lost to the surroundings. Heat flows from the hotter body to the cooler one until both reach a common <strong>equilibrium temperature</strong> $T_f$.</p>
+<h3 id="definition-and-governing-relations">Definition and governing relations</h3>
+<p>For a body of mass $m$ and specific heat capacity $c$, the heat absorbed (or released) when its temperature changes by $\Delta T = T_f - T_i$ is</p>
+$$Q = mc\,\Delta T.$$
+<p>$Q$ is positive when the body warms and negative when it cools. Energy conservation in an isolated system requires</p>
+$$\sum Q_i = 0 \quad\Longrightarrow\quad Q_{\text{gained}} = -Q_{\text{lost}}.$$
+<p>For two bodies, $m_1c_1(T_f - T_1) + m_2c_2(T_f - T_2) = 0$. Solving for $T_f$ gives</p>
+$$T_f = \frac{m_1c_1T_1 + m_2c_2T_2}{m_1c_1 + m_2c_2}.$$
+<p>So $T_f$ is a weighted average of the initial temperatures, with weights equal to each body's <strong>heat capacity</strong> $C = mc$. The body with the larger $C$ pulls the result closer to its own starting temperature. This holds only if neither body changes phase.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>A $200\ \text{g}$ block of copper ($c = 0.385\ \text{J/g·°C}$) at $100\ \text{°C}$ is dropped into $300\ \text{g}$ of water ($c = 4.18\ \text{J/g·°C}$) at $20\ \text{°C}$. Find $T_f$.</p>
+<p>Heat capacities: $C_{\text{Cu}} = 200(0.385) = 77\ \text{J/°C}$ and $C_{\text{w}} = 300(4.18) = 1254\ \text{J/°C}$.</p>
+$$T_f = \frac{77(100) + 1254(20)}{77 + 1254} = \frac{7700 + 25080}{1331} \approx 24.6\ \text{°C}.$$
+<p>Check: the copper loses $77(75.4) \approx 5.8\ \text{kJ}$, and the water gains $1254(4.6) \approx 5.8\ \text{kJ}$. The water's large heat capacity keeps its temperature nearly unchanged.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p>Calorimetry also works backward. A common lab task is finding an unknown specific heat. Suppose a $50.0\ \text{g}$ metal sample at $95.0\ \text{°C}$ is placed in $100\ \text{g}$ of water at $22.0\ \text{°C}$, and the system settles at $26.0\ \text{°C}$. Setting $Q_{\text{metal}} + Q_{\text{water}} = 0$:</p>
+$$50.0\,c_m(26.0 - 95.0) + 100(4.18)(26.0 - 22.0) = 0$$
+$$c_m = \frac{1672}{50.0 \times 69.0} \approx 0.485\ \text{J/g·°C}.$$
+<p><strong>A reliable procedure:</strong></p>
+<li>Identify the isolated system and confirm there is no phase change. If there is one, add latent-heat terms such as $mL$.</li>
+<li>Write $Q = mc(T_f - T_i)$ for every body. Always use final minus initial, so the signs take care of themselves.</li>
+<li>Set the sum of all $Q$ values to zero and solve for the unknown.</li>
+<li>Sanity check: $T_f$ must lie between the initial temperatures, and the hotter body's heat loss must equal the cooler body's heat gain in magnitude.</li>
+<p>In real experiments, the calorimeter cup absorbs some heat. This is handled by adding a term $C_{\text{cal}}(T_f - T_i)$ to the sum. Ignoring it makes the measured $T_f$ come out slightly low, because the cup absorbs part of the heat.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch14: Heat and Heat Transfer Methods (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

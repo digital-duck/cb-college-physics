@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huygens Principle | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="huygens-principle">Huygens Principle</h2>
+<p><strong>Definition.</strong> Huygens' principle states that every point on a wavefront acts as a source of secondary spherical wavelets. Each wavelet expands forward at the wave speed $v$. After a time $\Delta t$, the new wavefront is the surface tangent to all of these wavelets (their envelope). Each wavelet has radius</p>
+$$r = v\,\Delta t.$$
+<p>The principle is a geometric construction. It predicts where a wave goes next, using only the current wavefront and the speed $v$ of the medium.</p>
+<p><strong>Worked example: refraction.</strong> A plane wave in air (speed $v_1$) hits a glass surface (speed $v_2 < v_1$) at incidence angle $\theta_1$, measured from the normal. Take two points on the incoming wavefront, $A$ and $B$. Point $A$ reaches the surface first. By the time $B$ arrives, a time $\Delta t$ later, the wavelet from $A$ has traveled only $v_2\,\Delta t$ in the glass. Meanwhile $B$ has traveled $v_1\,\Delta t$ in air to reach the surface.</p>
+<p>Let $d$ be the length of surface between $A$ and $B$'s landing points. Then</p>
+$$\sin\theta_1 = \frac{v_1\,\Delta t}{d}, \qquad \sin\theta_2 = \frac{v_2\,\Delta t}{d}.$$
+<p>Dividing the two equations gives Snell's law:</p>
+$$\frac{\sin\theta_1}{\sin\theta_2} = \frac{v_1}{v_2} = \frac{n_2}{n_1},$$
+<p>where $n = c/v$ is the refractive index. The wave bends toward the normal because the wavelets in glass are smaller, which tilts the tangent line.</p>
+<p><strong>Problem-solving application.</strong> Light in air ($n_1 = 1.00$) strikes water ($n_2 = 1.33$) at $\theta_1 = 40^\circ$. Find the refraction angle and the wave speed in water.</p>
+<li>Speed: $v_2 = c/n_2 = (3.00\times10^8)/1.33 \approx 2.26\times10^8\ \text{m/s}$.</li>
+<li>Angle: $\sin\theta_2 = \dfrac{n_1}{n_2}\sin\theta_1 = \dfrac{1.00}{1.33}(0.643) = 0.483$, so $\theta_2 \approx 28.9^\circ$.</li>
+<p>The same construction handles reflection. The wavelets stay in the original medium, so $v_1 = v_2$ and $\theta_{\text{reflected}} = \theta_{\text{incident}}$.</p>
+<p>It also explains diffraction. When a plane wave reaches a slit of width $a$, only the points in the opening emit wavelets. These spread into the shadow region, and the effect is strong when $a$ is comparable to the wavelength $\lambda$. For $a \gg \lambda$ the wave passes nearly straight through.</p>
+<p><strong>Check your understanding.</strong> A sound wave moves from cool air ($v_1 = 330$ m/s) into warm air ($v_2 = 350$ m/s) at $\theta_1 = 20^\circ$. Does it bend toward or away from the normal? Use $\sin\theta_2 = (v_2/v_1)\sin\theta_1$ to find $\theta_2$. The answer is $\theta_2 \approx 21.2^\circ$, which is away from the normal. The wavelets are larger in the faster medium, so the tangent line tilts the other way.</p>
+<p><strong>Limitation.</strong> The basic construction does not explain why waves do not also travel backward. Kirchhoff's later refinement, which adds an obliquity factor to each wavelet, removes this problem.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

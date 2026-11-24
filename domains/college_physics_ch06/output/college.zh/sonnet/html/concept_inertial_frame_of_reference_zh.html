@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inertial Frame Of Reference | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="inertial-frame-of-reference">Inertial Frame Of Reference</h2>
+<p><strong>定义</strong></p>
+<p>惯性参考系是指牛顿第一定律成立的参考系:在其中,一个不受外力(或所受合力为零)的物体将保持静止或做匀速直线运动。等价地说,在惯性参考系中,物体的加速度完全由可识别的物理原因产生——引力、接触力、摩擦力、张力等——而不会出现凭空产生的"虚假力"。任何相对于某一惯性系做匀速直线运动(零加速度)的参考系,本身也是惯性系;反之,任何相对于惯性系做加速运动的参考系(旋转、加速、减速)都是非惯性系。在非惯性系中,若仍要用牛顿第二定律 $\vec{F} = m\vec{a}$ 描述运动,就必须引入没有真实物理来源的<strong>惯性力</strong>(如离心力、科里奥利力),这正是判断一个参考系是否为惯性系的关键标准。</p>
+<p><strong>范例解析</strong></p>
+<p>考虑一节在水平轨道上匀速行驶的火车车厢,车厢内有一个悬挂在天花板上的小球。乘客(车厢参考系)观察到小球静止不动,受力分析为重力 $mg$ 与绳的张力 $T$,二者平衡,$T = mg$,与站台上的观察者(地面参考系)得出的结论完全一致——两个参考系都是惯性系,牛顿定律在两者中都直接适用。</p>
+<p>现在假设火车开始加速,加速度为 $a$。站在地面上的观察者会看到:小球随车厢一起加速,绳子必须提供一个水平分量的张力来产生这个加速度,即 $T\sin\theta = ma$,$T\cos\theta = mg$,所有力都能在物理上找到来源(绳的张力)。但车厢内的乘客若仍想用牛顿定律解释小球倾斜却"静止"的现象,就必须假设存在一个方向与加速度相反、大小为 $ma$ 的"惯性力"作用在小球上——这个力没有任何物理来源,只是数学上的修正项。这说明加速的车厢是非惯性系。</p>
+<p><strong>解题应用</strong></p>
+<p>在实际问题中,选择惯性系是正确应用牛顿定律的前提。例如分析旋转木马上的乘客,若在地面惯性系中分析,乘客所受的向心力来自座椅施加的真实拉力,方向指向圆心,大小为 $F = mv^2/r$；若错误地在旋转参考系中分析而不加惯性力修正,会误以为存在一个不存在的"离心力"把人向外推。解题时应始终先判断参考系是否为惯性系,再决定是否需要额外的修正项,这也是后续学习"非惯性系与惯性力"的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

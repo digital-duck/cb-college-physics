@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Suspension | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="汽车悬挂系统">汽车悬挂系统</h2>
+<p>汽车悬挂系统是阻尼谐振动的经典工程应用：弹簧提供恢复力，减震器（阻尼器）耗散能量，二者共同决定车身在颠簸后如何回归平衡。其运动方程为</p>
+$$
+m\ddot{x} + c\dot{x} + kx = 0
+$$
+<p>其中 $m$ 为车身等效质量，$k$ 为弹簧劲度系数，$c$ 为阻尼系数。定义阻尼比</p>
+$$
+\zeta = \frac{c}{2\sqrt{mk}}
+$$
+<p>系统行为由 $\zeta$ 决定：$\zeta < 1$ 为<strong>欠阻尼</strong>（震荡衰减，车身多次颠簸后才稳定）；$\zeta > 1$ 为<strong>过阻尼</strong>（无震荡，但回归缓慢，乘坐感"发沉"）；$\zeta = 1$ 为<strong>临界阻尼</strong>——系统以最快速度回到平衡位置且不发生震荡。这正是减震器设计的目标状态。</p>
+<p><strong>例题</strong>：某车悬挂等效质量 $m = 300\text{ kg}$，弹簧劲度系数 $k = 18{,}000\text{ N/m}$。求达到临界阻尼所需的阻尼系数 $c$。</p>
+<p>临界阻尼条件为 $\zeta = 1$，即 $c = 2\sqrt{mk}$：</p>
+$$
+c = 2\sqrt{300 \times 18{,}000} = 2\sqrt{5{,}400{,}000} \approx 2 \times 2324.9 \approx 4649.8\ \text{N·s/m}
+$$
+<p>若减震器磨损，$c$ 下降至设计值的一半（约 $2325\text{ N·s/m}$），此时</p>
+$$
+\zeta = \frac{2325}{4649.8} \approx 0.5
+$$
+<p>系统进入欠阻尼状态，车辆过坑后会明显"弹跳"数次才停止——这也是老旧减震器让车辆行驶不稳的物理原因。</p>
+<p><strong>问题解决应用</strong>：工程师在设计悬挂系统时面临权衡：$\zeta$ 略小于 1（轻微欠阻尼，如 $\zeta \approx 0.7$）能吸收冲击并提供一定弹性，改善舒适性；而追求纯粹的临界阻尼（$\zeta = 1$）虽然响应最快，却可能让乘客感到颠簸生硬。因此实际乘用车悬挂通常调校在 $\zeta = 0.2\text{–}0.4$ 之间，牺牲部分"最优"回复速度以换取舒适性，这体现了理论最优解与工程实际需求之间的取舍——理解临界阻尼的数学结构，正是为了知道该往哪个方向、偏离多少。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

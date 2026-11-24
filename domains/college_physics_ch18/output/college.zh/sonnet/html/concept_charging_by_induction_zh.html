@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charging By Induction | College Physics Ch18</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="charging-by-induction">Charging By Induction</h2>
+<p><strong>定义</strong></p>
+<p>感应起电（charging by induction）是一种不需要直接接触就能使中性物体带电的方法。其基本原理是：当一个带电体（感应体）靠近一个中性导体时,导体内部可自由移动的电子会在库仑力的作用下重新分布——排斥同种电荷、吸引异种电荷,使导体两端出现暂时的正负电荷分离,但整体仍保持电中性(即 $q_{总} = 0$)。若此时用导线将导体接地,自由电子可流入或流出大地,导体便获得净电荷；断开接地后再移走感应体,导体上就永久保留了与感应体<strong>符号相反</strong>的电荷。这与摩擦起电或直接接触起电不同,后两者需要电荷的实际转移或接触,而感应起电全程不需要感应体与目标物体发生接触。</p>
+<p><strong>实例分析</strong></p>
+<p>设有一个带负电的橡胶棒靠近一个中性金属球。金属球中的自由电子受到棒上负电荷的排斥,向球的远端移动,使球的近端呈现净正电荷,远端呈现净负电荷——这是极化(polarization),而非净电荷改变。此时用导线将球的远端接地:多余的自由电子沿导线流入大地,球上电子数减少。移去接地线(顺序至关重要,必须先断开接地,再移走橡胶棒),金属球此时净电子数少于质子数,呈现净<strong>正</strong>电荷,电荷符号与橡胶棒相反,这正是感应起电的标志性结果。</p>
+<p><strong>问题求解应用</strong></p>
+<p>在实际问题中,常需要判断感应起电后物体所带电荷的符号与相对大小。解题步骤可归纳为：</p>
+<li>确定感应体电荷符号,判断导体内部电子迁移方向(电子总是被推离感应体的同种电荷,靠近异种电荷)；</li>
+<li>标出导体近端与远端的暂时电荷分布；</li>
+<li>确定接地位置——电子只能通过接地点与大地交换；</li>
+<li>分析接地时电子流动方向：若近端为正(即电子被排斥远离），则电子从大地流入远端;若近端为负,电子则从近端流向大地；</li>
+<li>断开接地后,移走感应体,判断导体最终净电荷符号——恒与感应体相反。</li>
+<p>例如,若用一带正电的玻璃棒靠近导体球并从球的远端接地,由于电子被排斥后又通过接地线补充流失的部分,最终球体将带负电,数值上等于流经接地线的净电子电荷量 $\Delta q = n e$,其中 $e = 1.6\times10^{-19}\ \text{C}$ 为单位电子电荷,$n$ 为净流动电子数。这类分析常与静电计、验电器等仪器的工作原理结合考查。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch18: Electric Charge and Electric Field (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

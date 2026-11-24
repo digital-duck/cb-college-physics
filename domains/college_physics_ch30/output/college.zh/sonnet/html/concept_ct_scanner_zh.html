@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ct Scanner | College Physics Ch30</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="ct-scanner">Ct Scanner</h2>
+<p><strong>定义</strong></p>
+<p>计算机断层扫描(Computed Tomography, CT)是一种利用 X 射线从多个角度穿透人体、通过计算机重建出人体横截面图像的成像技术。与传统 X 光片只能获得一张二维投影图不同，CT 扫描仪围绕患者旋转，从数百个不同角度发射 X 射线并记录穿透后的衰减强度，再通过数学算法将这些一维投影数据反演为二维乃至三维的密度分布图像。其核心数学基础是<strong>拉东变换(Radon Transform)</strong>：物体某一截面在角度 $\theta$、位置 $s$ 处的投影值 $p(s,\theta)$ 是该截面衰减系数函数 $f(x,y)$ 沿一条直线的线积分：</p>
+$$
+p(s,\theta) = \int_{-\infty}^{\infty} f(s\cos\theta - t\sin\theta,\; s\sin\theta + t\cos\theta)\, dt
+$$
+<p>CT 重建的任务本质上是拉东变换的<strong>逆问题</strong>：已知所有角度 $\theta \in [0,\pi)$ 下的投影 $p(s,\theta)$，求出原始的 $f(x,y)$。</p>
+<p><strong>求解方法：滤波反投影</strong></p>
+<p>直接反投影（简单地将每个角度的投影"抹回"原图）会导致图像模糊，因为低频分量被过度叠加。工程上采用<strong>滤波反投影(Filtered Back-Projection, FBP)</strong>算法：先对每个角度的投影 $p(s,\theta)$ 在频域中乘以一个斜坡滤波器 $|\omega|$ 以补偿这种模糊，再反投影求和：</p>
+$$
+f(x,y) = \int_0^{\pi} \left[ \int_{-\infty}^{\infty} P(\omega,\theta)\, |\omega|\, e^{i2\pi\omega s}\, d\omega \right] d\theta
+$$
+<p>其中 $P(\omega,\theta)$ 是 $p(s,\theta)$ 关于 $s$ 的傅里叶变换。这一结果依赖于<strong>傅里叶切片定理</strong>：一维投影的傅里叶变换，等于二维图像傅里叶变换在同一角度方向上的一条切片。</p>
+<p><strong>问题求解练习</strong></p>
+<p>假设某扫描仪只采集了 180 个角度（间隔 $1°$）的投影数据，而非连续角度，试分析：(1) 角度采样不足会在重建图像中引入什么伪影？(2) 若将角度采样密度减半（间隔 $2°$，共 90 个角度），根据奈奎斯特采样的类比推理，图像边缘处会出现怎样的条纹状伪影，为何越靠近图像边缘伪影越明显？这类问题要求学生将离散采样理论与逆问题重建结合，理解临床 CT 设备在剂量（角度数量、X 射线强度）与图像质量之间的工程权衡。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch30: Atomic Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

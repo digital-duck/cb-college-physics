@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wavelength In Medium | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="wavelength-in-medium">Wavelength In Medium</h2>
+<p><strong>定义</strong></p>
+<p>光是一种电磁波，其频率 $f$ 由光源决定，在光从一种介质进入另一种介质时保持不变。然而，光在介质中的传播速度会发生变化：真空中光速为 $c$，在折射率为 $n$ 的介质中，光速降为</p>
+$$v = \frac{c}{n}$$
+<p>由于波速、频率与波长满足关系 $v = f\lambda$，且频率不变，波长必须随速度按比例变化。设真空中波长为 $\lambda$，介质中波长为 $\lambda_n$，则有</p>
+$$\lambda_n = \frac{\lambda}{n}$$
+<p>因为任何透明介质的折射率都满足 $n > 1$，所以 $\lambda_n$ 恒小于真空波长 $\lambda$——光进入介质后波长必然变短，而颜色（由频率决定）不变。</p>
+<p><strong>例题</strong></p>
+<p>一束波长 $\lambda = 589\ \text{nm}$（钠光谱黄光）的光从真空进入折射率 $n = 1.50$ 的玻璃。求光在玻璃中的波长与频率。</p>
+<p>真空中频率：</p>
+$$f = \frac{c}{\lambda} = \frac{3.00\times10^8\ \text{m/s}}{589\times10^{-9}\ \text{m}} \approx 5.09\times10^{14}\ \text{Hz}$$
+<p>玻璃中波长：</p>
+$$\lambda_n = \frac{\lambda}{n} = \frac{589\ \text{nm}}{1.50} \approx 393\ \text{nm}$$
+<p>验证频率不变：玻璃中光速 $v = c/n = 2.00\times10^8\ \text{m/s}$，故 $f = v/\lambda_n = (2.00\times10^8)/(393\times10^{-9}) \approx 5.09\times10^{14}\ \text{Hz}$，与真空中一致——正如预期。</p>
+<p><strong>解题应用</strong></p>
+<p>该关系式是分析薄膜干涉、光学相位差等问题的基础。例如，计算光在介质中传播某段光程所积累的相位时，必须使用 $\lambda_n$ 而非 $\lambda$，因为相位是由波在介质内实际经历的波长周期数决定的。定义<strong>光程长</strong>（optical path length）为 $n \times d$（其中 $d$ 为几何路径长度），可以证明它等价于"若光以真空波长传播、经过相同数量波长周期所需的真空路径长度"，即</p>
+$$\frac{d}{\lambda_n} = \frac{n\,d}{\lambda}$$
+<p>这一等价关系使得比较不同介质中光程时，可以统一换算为真空波长的"等效周期数"，是理解薄膜反射相消/相长条件的关键工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

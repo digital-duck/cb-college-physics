@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diffraction Grating | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="diffraction-grating">Diffraction Grating</h2>
+<p><strong>定义</strong></p>
+<p>衍射光栅是一种包含大量等间距平行狭缝的光学元件，典型光栅每毫米可刻有数百甚至上千条缝。当单色光垂直照射光栅时，每条狭缝都会发生衍射，向各个方向发出次波；这些次波相互叠加，产生干涉图样。与双缝干涉类似，光栅的相长干涉条件为</p>
+$$d \sin\theta = m\lambda, \qquad m = 0, \pm1, \pm2, \dots$$
+<p>其中 $d$ 是相邻狭缝间距，$\theta$ 是衍射角，$m$ 是级次。区别在于：狭缝数目 $N$ 越多，主极大越明亮，同时也越尖锐狭窄，两条主极大之间还会出现 $N-2$ 条微弱的次极大。这是因为除了满足 $d\sin\theta = m\lambda$ 的方向外，其余方向上大量狭缝发出的波几乎两两相消；只有在严格满足条件的方向上，所有 $N$ 条缝的贡献才同相叠加。狭缝数越多，"几乎相消"的容忍范围就越窄，条纹自然越锐利。这正是光栅优于双缝装置、能够精确测量波长的原因。</p>
+<p><strong>举例</strong></p>
+<p>某光栅每毫米刻有 500 条缝，即 $d = 1/500\ \text{mm} = 2.0\times10^{-6}\ \text{m}$。以波长 $\lambda = 600\ \text{nm}$ 的光垂直照射，求可观察到的最高级次。</p>
+<p>由 $d\sin\theta = m\lambda$，且 $\sin\theta \le 1$，故</p>
+$$m \le \frac{d}{\lambda} = \frac{2.0\times10^{-6}}{6.0\times10^{-7}} \approx 3.33$$
+<p>所以最高可见级次为 $m = 3$，对应角度 $\theta = \arcsin(3\lambda/d) = \arcsin(0.9) \approx 64.2^\circ$。$m=4$ 则要求 $\sin\theta > 1$，物理上不可能出现。</p>
+<p><strong>解题应用</strong></p>
+<p>利用光栅方程可反过来测定未知波长：先测出某级次条纹的衍射角 $\theta_m$，再由 $\lambda = d\sin\theta_m / m$ 求出 $\lambda$。若光源含有多种波长（如钠灯的双黄线），不同波长在同一级次会对应不同角度，从而被光栅分辨开——这正是光栅光谱仪的工作原理。解题时需注意两点：其一，先用 $d = 1/(\text{每毫米刻线数})$ 换算出缝间距；其二，先检验 $m\lambda/d \le 1$ 以确认该级次确实存在，避免得到无意义的角度。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

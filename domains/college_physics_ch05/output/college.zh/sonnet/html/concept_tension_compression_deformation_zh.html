@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tension Compression Deformation | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="tension-compression-deformation">Tension Compression Deformation</h2>
+<p><strong>定义</strong></p>
+<p>当一根杆或金属丝沿其长度方向受到外力（拉伸或压缩）作用时，其长度会发生变化。这种形变遵循胡克定律在固体材料中的表现形式：</p>
+$$\Delta L = \frac{1}{Y}\cdot\frac{F}{A}\cdot L_0$$
+<p>其中 $F$ 是施加的力，$A$ 是杆的横截面积，$L_0$ 是原始长度，$Y$ 是材料的<strong>杨氏模量</strong>（Young's modulus），单位为 $\text{Pa}$（即 $\text{N/m}^2$）。杨氏模量反映材料本身的刚性——数值越大，材料越难被拉伸或压缩，是材料的固有属性,不依赖于杆的几何尺寸。</p>
+<p>可以将该公式重新整理为应力-应变关系:</p>
+$$\frac{F}{A} = Y\cdot\frac{\Delta L}{L_0}$$
+<p>左边 $F/A$ 称为<strong>应力</strong>（stress，单位面积上的力），右边 $\Delta L / L_0$ 称为<strong>应变</strong>（strain,无量纲的相对形变量）。这说明杨氏模量本质上是应力与应变之比,只要形变在弹性范围内(未超过材料的弹性极限),该比值保持为常数。</p>
+<p><strong>范例</strong></p>
+<p>一根长度 $L_0 = 2.0\ \text{m}$、横截面积 $A = 4.0\times10^{-6}\ \text{m}^2$ 的钢丝,杨氏模量 $Y = 2.0\times10^{11}\ \text{Pa}$,悬挂重物产生拉力 $F = 400\ \text{N}$。求钢丝的伸长量。</p>
+$$\Delta L = \frac{FL_0}{YA} = \frac{400 \times 2.0}{2.0\times10^{11}\times 4.0\times10^{-6}} = \frac{800}{8.0\times10^{5}} = 1.0\times10^{-3}\ \text{m} = 1.0\ \text{mm}$$
+<p><strong>应用与解题策略</strong></p>
+<p>处理这类问题时,先确认单位统一(面积用 $\text{m}^2$,力用 $\text{N}$),再判断是拉伸(伸长,$\Delta L > 0$)还是压缩(缩短)。若已知形变量反推杨氏模量,或需要比较不同材料、不同粗细的杆件在相同载荷下的形变差异,可直接对公式变形求解未知量。例如,两根材质相同但截面积不同的杆件承受同样的力,截面积越大,应力越小,伸长量也就越小——这正是工程中选用粗钢筋而非细钢丝承重的原因。此外,该公式仅在弹性范围内成立;若外力过大导致材料超出弹性极限,实际形变将不再与力成正比,公式失效。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

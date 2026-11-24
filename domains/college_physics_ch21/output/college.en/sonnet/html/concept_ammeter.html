@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ammeter | College Physics Ch21</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="ammeter">Ammeter</h2>
+<p>An <strong>ammeter</strong> measures the current in a circuit branch. To do this, it must be connected <strong>in series</strong> with that branch, so the full branch current passes through it. An ideal ammeter has zero resistance, so inserting it does not change the current it is trying to measure. Real ammeters come close by using a small internal resistance.</p>
+<h3 id="how-it-is-built">How it is built</h3>
+<p>The sensing element is a <strong>galvanometer</strong>, a coil whose needle deflects in proportion to the current through it. A galvanometer has two limits:</p>
+<li>It has a full-scale current $I_g$, often only microamperes to milliamperes.</li>
+<li>It has an internal resistance $R_g$, often tens to hundreds of ohms.</li>
+<p>To measure larger currents, a small <strong>shunt resistor</strong> $R_s$ is connected in <strong>parallel</strong> with the galvanometer. Most of the current bypasses the coil through the shunt, and only a safe fraction flows through the galvanometer.</p>
+<p>The galvanometer and shunt have the same voltage across them:</p>
+$$I_g R_g = (I - I_g)R_s \quad\Rightarrow\quad R_s = \frac{I_g R_g}{I - I_g}$$
+<p>Here $I$ is the desired full-scale current of the ammeter. The equivalent resistance of the combination is</p>
+$$R_A = \frac{R_g R_s}{R_g + R_s} < R_s,$$
+<p>so it is smaller than either component. This is why an ammeter disturbs the circuit very little.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>A galvanometer has $I_g = 50\ \mu\text{A}$ and $R_g = 100\ \Omega$. Design an ammeter with a full-scale reading of $I = 1.0\ \text{A}$.</p>
+$$R_s = \frac{(50\times10^{-6})(100)}{1.0 - 50\times10^{-6}} \approx 5.0\times10^{-3}\ \Omega = 5.0\ \text{m}\Omega$$
+<p>The shunt carries $99.995\%$ of the current. The ammeter's resistance is</p>
+$$R_A = \frac{(100)(0.0050)}{100.005} \approx 5.0\ \text{m}\Omega.$$
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem.</strong> A $6.0\ \text{V}$ source drives a $12\ \Omega$ resistor. What does the ammeter above read, and what error does it introduce?</p>
+<li>Without the meter, $I = 6.0/12 = 0.500\ \text{A}$.</li>
+<li>With the meter in series, the total resistance is $12 + 0.005 = 12.005\ \Omega$, so $I' = 6.0/12.005 \approx 0.4998\ \text{A}$.</li>
+<li>The error is about $0.04\%$, which is negligible.</li>
+<p><strong>Common mistakes to avoid:</strong></p>
+<li><strong>Connecting an ammeter in parallel across a component.</strong> Its tiny resistance would create a near short circuit, drawing a very large current that can destroy the meter or blow a fuse.</li>
+<li><strong>Choosing a larger shunt to "protect" the meter.</strong> A larger $R_s$ diverts less current from the coil, so the galvanometer would exceed $I_g$ at a lower total current. A smaller shunt gives a larger range.</li>
+<li><strong>Forgetting the meter's resistance in low-resistance circuits.</strong> If the circuit's resistance is comparable to $R_A$, the reading will be noticeably low. Check that $R_A \ll R_{\text{circuit}}$.</li>
+<pre class="mermaid">flowchart LR
+    A[Source] --> B[Ammeter input]
+    B --> C[Galvanometer Rg]
+    B --> D[Shunt Rs]
+    C --> E[Ammeter output]
+    D --> E
+    E --> F[Load resistor]
+    F --> A</pre>
+<p><em>An ammeter in series with the load. Inside it, the current splits between the galvanometer and the much smaller shunt, which carries almost all of it.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch21: Circuits and DC Instruments (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

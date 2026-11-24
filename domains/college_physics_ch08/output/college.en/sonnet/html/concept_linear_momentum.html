@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linear Momentum | College Physics Ch08</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="linear-momentum">Linear Momentum</h2>
+<p>Linear momentum is defined as the product of an object's mass and its velocity:</p>
+$$\vec{p} = m\vec{v}$$
+<p>Because velocity is a vector, momentum is a vector too — it points in the same direction as $\vec{v}$, and its SI unit is kilogram-meters per second (kg·m/s). Momentum captures something velocity alone does not: how difficult an object is to stop or redirect. A 20,000 kg truck moving at 5 m/s and a 70 kg cyclist moving at 20 m/s can have comparable momenta, but bringing the truck to rest requires a much larger sustained force applied over the same time, since momentum is what force actually changes over time. Formally, Newton's second law in its original form states $\vec{F}_{net} = \dfrac{d\vec{p}}{dt}$, which reduces to $\vec{F} = m\vec{a}$ only when mass is constant.</p>
+<p><strong>Worked example.</strong> A 0.15 kg baseball travels at 40 m/s toward a bat. After being struck, it moves in the opposite direction at 50 m/s. Taking the initial direction as positive, the momentum change is:</p>
+$$\Delta p = m v_f - m v_i = (0.15)(-50) - (0.15)(40) = -7.5 - 6.0 = -13.5 \text{ kg·m/s}$$
+<p>The magnitude, 13.5 kg·m/s, represents the impulse delivered by the bat — a quantity you cannot obtain from speed alone, since the ball's speed only changed from 40 to 50 m/s, but its direction reversal makes the momentum change far larger than a simple speed difference would suggest.</p>
+<p><strong>Problem-solving application.</strong> Momentum's real power emerges in systems of multiple objects, where the individual momenta of interacting bodies change, but according to Newton's third law, internal forces come in equal-and-opposite pairs. This sets up the principle of conservation of momentum, central to analyzing collisions and explosions: $\sum \vec{p}_{i, initial} = \sum \vec{p}_{i, final}$ for an isolated system. When solving problems, always define a consistent positive direction first, then write momentum before and after the interaction for each object separately before summing — this prevents sign errors, which are the most common mistake students make when momentum vectors point in different directions.</p>
+<pre class="mermaid">flowchart LR
+    A["Before collision: p1_i + p2_i"] --> B["Interaction: internal forces only"]
+    B --> C["After collision: p1_f + p2_f"]
+    A -.->|"total momentum conserved"| C</pre>
+<p><em>Conservation of momentum in a two-body collision: the total momentum before equals the total momentum after, even though individual momenta change.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch8: Linear Momentum and Collisions (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

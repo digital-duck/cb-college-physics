@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diverging Lens | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="diverging-lens">Diverging Lens</h2>
+<p><strong>定义</strong></p>
+<p>凹透镜（diverging lens）是中心薄、边缘厚的透镜，其表面几何使得平行于主光轴的入射光线经折射后向外发散，仿佛都是从光轴上同侧的一点——虚焦点——发出的。由于折射光线实际上并不会聚，其焦距按惯例取负值，即 $f < 0$。这与凸透镜（converging lens，$f>0$）形成对照，是薄透镜成像理论中符号约定的关键体现。</p>
+<p>凹透镜的成像规律仍遵循薄透镜公式：</p>
+$$
+\frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{f}
+$$
+<p>其中 $d_o$ 为物距，$d_i$ 为像距，均以透镜为原点、沿光轴方向的坐标符号约定为准（物在入射侧取正，像在出射侧取正）。由于 $f<0$，只要物距 $d_o>0$，代入方程可解得 $d_i$ 恒为负值——这意味着凹透镜对任何位于其前方的实物，永远只能形成<strong>虚像</strong>，且虚像必定位于物与透镜之间（同侧）、正立、缩小。</p>
+<p><strong>例题</strong></p>
+<p>设一凹透镜焦距 $f = -20\ \text{cm}$，物体置于透镜前 $d_o = 30\ \text{cm}$ 处。求像的位置与放大率。</p>
+<p>代入公式：</p>
+$$
+\frac{1}{30} + \frac{1}{d_i} = \frac{1}{-20}
+\quad\Longrightarrow\quad
+\frac{1}{d_i} = -\frac{1}{20} - \frac{1}{30} = -\frac{5}{60} = -\frac{1}{12}
+$$
+<p>得 $d_i = -12\ \text{cm}$，负号表明像为虚像，位于物同侧、透镜前方 $12\ \text{cm}$ 处。放大率</p>
+$$
+m = -\frac{d_i}{d_o} = -\frac{-12}{30} = 0.4
+$$
+<p>$m>0$ 且 $|m|<1$，说明像正立、缩小，与凹透镜的普遍性质一致。</p>
+<p><strong>问题解决应用</strong></p>
+<p>判断透镜成像类型的通用策略是：先确定 $f$ 的符号（凹透镜恒负），代入薄透镜公式解 $d_i$，再由 $d_i$ 的符号判断像的虚实与侧位，最后用 $m=-d_i/d_o$ 求放大率与正倒。凹透镜广泛用于近视矫正眼镜、望远镜的负镀镜组以及激光扩束系统——在这些场景中，工程师正是利用其恒定产生缩小虚像的特性，来抵消其他正光学元件造成的过度会聚。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

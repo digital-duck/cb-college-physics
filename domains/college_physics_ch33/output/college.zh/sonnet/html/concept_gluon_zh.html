@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gluon | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="胶子">胶子</h2>
+<p>胶子（gluon）是强相互作用的传播粒子，一种静止质量为零、自旋为 1 的玻色子。与光子传递电磁力、只携带电荷信息不同，胶子本身携带"色荷"（color charge），因此胶子不仅传递强力，还能与其他胶子直接相互作用——这是强相互作用区别于电磁相互作用的核心特征。</p>
+<p><strong>定义与色荷结构</strong></p>
+<p>夸克带有三种色荷之一（红、绿、蓝），强相互作用的规范群是 $SU(3)_c$。胶子对应于该群的规范玻色子，数目等于 $SU(3)$ 生成元的数目 $N^2-1 = 3^2-1 = 8$，因此存在八种胶子。每个胶子携带一种"色—反色"组合（例如红—反绿），充当夸克之间色荷交换的媒介。当一个红色夸克发射一个"红—反绿"胶子时，它变为绿色夸克，而吸收该胶子的绿色夸克则变为红色——色荷在相互作用中守恒，但在夸克间转移。</p>
+<p><strong>胶子自耦合与渐近自由</strong></p>
+<p>由于胶子自身带色荷，费曼图中允许三胶子顶点和四胶子顶点，这在量子电动力学（光子不带电荷、光子间不直接耦合）中是不存在的。这种自耦合导致强耦合常数 $\alpha_s$ 随能量标度升高而减小的现象，称为渐近自由：</p>
+$$\alpha_s(Q^2) = \frac{1}{b_0 \ln(Q^2/\Lambda_{QCD}^2)}$$
+<p>其中 $Q^2$ 是相互作用的能量标度平方，$\Lambda_{QCD}$ 是量子色动力学的特征能标（约 200 MeV），$b_0$ 是与夸克味数相关的正系数。这一关系式说明：在极高能量（短距离）下夸克近似自由运动，而在低能量（长距离）下 $\alpha_s$ 增大，导致色荷无法孤立存在——即"色禁闭"，这解释了为何自由夸克和自由胶子从未在实验中被直接观测到，它们总是被禁闭在如质子、中子这样的无色强子内部。</p>
+<p><strong>解题应用</strong></p>
+<p>在计算强子反应的费曼图阶数时，需要计入胶子的自耦合顶点。例如，估算某一强作用过程的振幅阶数时，每增加一个胶子传播子对应引入一个 $\alpha_s$ 因子；由于 $\alpha_s$ 在低能标下并不像电磁精细结构常数 $\alpha \approx 1/137$ 那样小，微扰展开收敛较慢，这正是为什么强子物理常需依赖格点量子色动力学等非微扰方法来精确计算。理解胶子的八重色荷结构和自耦合性质，是掌握夸克禁闭、渐近自由乃至强子谱学的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

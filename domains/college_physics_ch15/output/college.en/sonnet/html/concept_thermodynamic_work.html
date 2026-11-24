@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamic Work | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="thermodynamic-work">Thermodynamic Work</h2>
+<p><strong>Definition.</strong> In thermodynamics, <em>work</em> is energy transferred between a system and its surroundings by a macroscopic, organized process: a force acting through a displacement. Unlike heat, which moves because of a temperature difference and involves random molecular motion, work corresponds to coordinated motion, such as a piston moving. For a gas pushing on a piston, the work done <em>by</em> the gas is</p>
+$$W = \int_{V_i}^{V_f} P \, dV$$
+<p>This follows from $dW = F\,dx = (PA)\,dx = P\,dV$. Expansion ($dV>0$) gives $W>0$, so the gas loses energy. Compression gives $W<0$. (Some chemistry texts use the opposite sign convention, so always check which one a problem uses.)</p>
+<p>Work is <strong>path dependent</strong>. It is not a property of the system's state. It depends on the process that connects the initial and final states. On a $P$–$V$ diagram, $W$ is the area under the curve, and different curves between the same two points enclose different areas.</p>
+<p><strong>Worked example.</strong> One mole of ideal gas at $T = 300\ \text{K}$ expands from $V_i = 1.0\ \text{L}$ to $V_f = 2.0\ \text{L}$. Compare two paths.</p>
+<p><em>Path A: isothermal, reversible.</em> Here $P = nRT/V$, so</p>
+$$W_A = nRT\ln\frac{V_f}{V_i} = (1)(8.314)(300)\ln 2 \approx 1729\ \text{J}.$$
+<p><em>Path B: constant pressure.</em> Suppose the gas expands against a constant $P = 1.0\times10^{5}\ \text{Pa}$:</p>
+$$W_B = P\,\Delta V = (1.0\times10^{5})(1.0\times10^{-3}) = 100\ \text{J}.$$
+<p>The gas starts and ends at the volumes given, yet $W_A \ne W_B$. The difference comes entirely from the path, since the pressure was different at each stage.</p>
+<p><strong>Problem-solving application.</strong> A gas is taken around a closed cycle: it expands at high pressure $P_1 = 4\times10^5\ \text{Pa}$ from $1\ \text{L}$ to $3\ \text{L}$, then returns to $1\ \text{L}$ at the lower pressure $P_2 = 1\times10^5\ \text{Pa}$. The constant-pressure segments contribute</p>
+$$W_{\text{out}} = P_1\Delta V = 800\ \text{J}, \qquad W_{\text{back}} = P_2(-\Delta V) = -200\ \text{J},$$
+<p>so the net work is $+600\ \text{J}$, the area enclosed by the loop. (The vertical legs at constant volume contribute zero.) Over a full cycle the gas returns to its starting state, so its internal energy is unchanged, and the energy balance gives $Q_{\text{net}} = W_{\text{net}} = 600\ \text{J}$. This is the principle behind every heat engine. If work depended only on the endpoints, the net over a cycle would be zero and no engine could run.</p>
+<p><strong>Strategy checklist.</strong></p>
+<li>Identify the process (isothermal, isobaric, isochoric, adiabatic).</li>
+<li>Write $P$ as a function of $V$ for that process.</li>
+<li>Integrate, or use the area under the curve for simple shapes.</li>
+<li>Check the sign against the direction of the volume change.</li>
+<pre class="mermaid">flowchart LR
+    S["State A: P_i, V_i"] --> P1["Path 1: isothermal"]
+    S --> P2["Path 2: isobaric"]
+    P1 --> E["State B: P_f, V_f"]
+    P2 --> E
+    P1 -.-> W1["W = 1729 J"]
+    P2 -.-> W2["W = 100 J"]</pre>
+<p><em>Two paths connect the same pair of states, but each transfers a different amount of work, so work depends on the path.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

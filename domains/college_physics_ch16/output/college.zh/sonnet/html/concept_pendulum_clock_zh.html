@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pendulum Clock | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="摆钟">摆钟</h2>
+<p><strong>定义</strong></p>
+<p>摆钟利用单摆的等时性——即在小摆角近似下，摆的周期只取决于摆长和重力加速度，与摆幅、摆锤质量无关——来实现精确计时。单摆周期公式为</p>
+$$
+T = 2\pi\sqrt{\frac{L}{g}}
+$$
+<p>其中 $L$ 为摆长（悬挂点到摆锤质心的距离），$g$ 为当地重力加速度，$T$ 为完成一次完整摆动的时间。该公式的成立依赖于小角近似 $\sin\theta \approx \theta$（弧度制），通常要求摆角不超过约 $5°$–$10°$，否则周期会随振幅增大而略微变长，破坏等时性。摆钟的机械结构（擒纵机构）每次摆动释放齿轮前进一格，从而把摆的周期转化为均匀的时间计量单位；调节摆长即可校准走时快慢。</p>
+<p><strong>范例</strong></p>
+<p>某摆钟摆长 $L = 0.9927\ \text{m}$，当地 $g = 9.8\ \text{m/s}^2$，代入公式：</p>
+$$
+T = 2\pi\sqrt{\frac{0.9927}{9.8}} \approx 2\pi\sqrt{0.10130} \approx 2\pi(0.3183) \approx 2.000\ \text{s}
+$$
+<p>设计者特意选取 $L\approx 0.9927\ \text{m}$，使周期恰为 $2\ \text{s}$，这样每次半摆恰好对应 $1$ 秒，方便与秒针机构耦合，这就是"秒摆"的由来。</p>
+<p><strong>问题求解应用</strong></p>
+<p>摆钟的核心校准问题是：如何通过调整摆长使走时误差归零。由周期公式对 $L$ 求微分，可得周期相对变化与摆长相对变化的关系：</p>
+$$
+\frac{\Delta T}{T} \approx \frac{1}{2}\frac{\Delta L}{L}
+$$
+<p>例如，若某摆钟每天慢 $10$ 秒（即 $\Delta T/T = 10/86400 \approx 1.157\times 10^{-4}$），且原摆长 $L=0.9927\ \text{m}$，则所需摆长改变量为</p>
+$$
+\Delta L \approx 2L\cdot\frac{\Delta T}{T} \approx 2(0.9927)(1.157\times10^{-4}) \approx 2.30\times10^{-4}\ \text{m} \approx 0.23\ \text{mm}
+$$
+<p>由于走时偏慢意味着周期偏长，需要缩短摆长 $0.23\ \text{mm}$（旋松摆锤下方的调节螺母，使摆锤上移）。这类线性近似计算是钟表匠日常校准的实用方法：先测量误差率，再用微分关系反推所需的物理调整量，而无需重新求解完整的非线性周期公式。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

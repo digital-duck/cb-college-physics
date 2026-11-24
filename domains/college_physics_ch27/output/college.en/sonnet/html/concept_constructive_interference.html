@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Constructive Interference | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="constructive-interference">Constructive Interference</h2>
+<h3 id="definition">Definition</h3>
+<p><strong>Constructive interference</strong> occurs when two or more waves overlap <em>in phase</em>, meaning crest meets crest and trough meets trough. By the principle of superposition, the displacements add:</p>
+$$y_{\text{total}}(x,t) = y_1(x,t) + y_2(x,t).$$
+<p>For two waves of equal frequency with amplitudes $A_1$ and $A_2$ and phase difference $\varphi$, the resultant amplitude is</p>
+$$A = \sqrt{A_1^2 + A_2^2 + 2A_1A_2\cos\varphi}.$$
+<p>Constructive interference corresponds to $\cos\varphi = 1$, that is,</p>
+$$\varphi = 2\pi m, \quad m = 0, 1, 2, \dots$$
+<p>Then $A = A_1 + A_2$, the largest amplitude the pair can produce.</p>
+<h3 id="path-difference-condition">Path-difference condition</h3>
+<p>Phase difference usually comes from a difference in path length $\Delta L$ between two sources that emit in phase. Since $\varphi = 2\pi\,\Delta L/\lambda$, the condition becomes</p>
+$$\Delta L = m\lambda, \quad m = 0, 1, 2, \dots$$
+<p>Constructive interference happens wherever the paths differ by a whole number of wavelengths.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>Two speakers, in phase, emit a 686 Hz tone. Take the speed of sound to be 343 m/s. A listener stands 4.00 m from speaker A and 5.50 m from speaker B. Is the sound loud (constructive) or quiet at that point?</p>
+<li>Wavelength: $\lambda = v/f = 343/686 = 0.500$ m.</li>
+<li>Path difference: $\Delta L = 5.50 - 4.00 = 1.50$ m.</li>
+<li>Ratio: $\Delta L/\lambda = 1.50/0.500 = 3$, a whole number.</li>
+<p>So $m = 3$ and the waves arrive in phase. If each wave alone has amplitude $A_0$, the combined amplitude is $2A_0$. Intensity scales with amplitude squared, so the intensity is $4I_0$, four times that of one speaker alone. It is not twice. The extra energy comes from regions of destructive interference, where the intensity falls below $2I_0$, so total energy is conserved.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem.</strong> Light of wavelength 600 nm passes through two narrow slits separated by $d = 0.100$ mm. Bright fringes appear on a screen $L = 2.00$ m away. Find the spacing between adjacent bright fringes.</p>
+<p><strong>Solution.</strong> For a far-away screen, the path difference to a point at angle $\theta$ is $\Delta L = d\sin\theta$. Bright fringes satisfy</p>
+$$d\sin\theta = m\lambda.$$
+<p>For small angles, $\sin\theta \approx \tan\theta = y/L$, so</p>
+$$y_m = \frac{m\lambda L}{d}, \qquad \Delta y = \frac{\lambda L}{d}.$$
+<p>Substituting:</p>
+$$\Delta y = \frac{(600\times10^{-9})(2.00)}{1.00\times10^{-4}} = 1.2\times10^{-2}\ \text{m} = 12\ \text{mm}.$$
+<p><strong>Strategy summary.</strong></p>
+<li>Find $\lambda$ from $v/f$.</li>
+<li>Express the path difference geometrically.</li>
+<li>Set $\Delta L = m\lambda$ and solve for the unknown.</li>
+<li>Check the sign and size of the answer. Here, a smaller slit spacing $d$ gives wider fringes, as expected.</li>
+<p>Remember that this condition assumes the sources are in phase. If one source has an extra phase shift, such as a $\pi$ shift on reflection, the condition changes to $\Delta L = (m + \tfrac{1}{2})\lambda$, so check the sources' phases before applying the formula.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

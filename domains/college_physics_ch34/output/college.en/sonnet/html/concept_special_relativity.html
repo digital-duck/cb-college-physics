@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Relativity | College Physics Ch34</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="special-relativity">Special Relativity</h2>
+<h3 id="definition">Definition</h3>
+<p>Special relativity rests on two postulates:</p>
+<li><strong>Relativity principle:</strong> The laws of physics take the same form in every inertial frame, meaning every frame moving at constant velocity.</li>
+<li><strong>Invariance of $c$:</strong> The speed of light in vacuum, $c \approx 3.00\times10^8\ \text{m/s}$, is the same for all inertial observers, whatever the motion of the source or observer.</li>
+<p>Together these force a revision of how we compare space and time between frames. If frame $S'$ moves at speed $v$ along $x$ relative to $S$, define</p>
+$$\gamma = \frac{1}{\sqrt{1-v^2/c^2}} \ge 1.$$
+<p>The <strong>Lorentz transformation</strong> is</p>
+$$x' = \gamma(x - vt), \qquad t' = \gamma\left(t - \frac{vx}{c^2}\right).$$
+<p>Its main consequences are:</p>
+<li><strong>Time dilation:</strong> A clock moving relative to you ticks slowly. If $\Delta t_0$ is the <em>proper time</em> (measured by a clock present at both events), then $\Delta t = \gamma\,\Delta t_0$.</li>
+<li><strong>Length contraction:</strong> A rod of proper length $L_0$ is measured along its direction of motion as $L = L_0/\gamma$.</li>
+<li><strong>Relativity of simultaneity:</strong> Events simultaneous in one frame are generally not simultaneous in another.</li>
+<li><strong>Invariant interval:</strong> $s^2 = c^2\Delta t^2 - \Delta x^2$ has the same value in every inertial frame.</li>
+<li><strong>Energy and momentum:</strong> $E = \gamma mc^2$, $p=\gamma mv$, and $E^2 = (pc)^2 + (mc^2)^2$.</li>
+<h3 id="worked-example">Worked example</h3>
+<p>Muons are created about $15\ \text{km}$ above Earth and travel at $v = 0.995c$. Their proper lifetime is $\Delta t_0 = 2.2\ \mu\text{s}$. Without relativity, the distance they travel is</p>
+$$d = v\,\Delta t_0 \approx (0.995)(3.00\times10^8)(2.2\times10^{-6}) \approx 660\ \text{m},$$
+<p>so almost none should reach the ground. Now compute $\gamma$:</p>
+$$\gamma = \frac{1}{\sqrt{1-0.995^2}} \approx 10.0.$$
+<p>In Earth's frame the lifetime is $\Delta t = 10.0 \times 2.2\ \mu\text{s} = 22\ \mu\text{s}$, so the muons travel about $6.6\ \text{km}$. That is still short of $15\ \text{km}$, but the surviving fraction rises from about $e^{-23}$ to $e^{-2.3}\approx 10\%$ (using the $15\ \text{km}$ path and the mean lifetime), which matches observation.</p>
+<p>In the muon's frame the explanation is length contraction: the $15\ \text{km}$ atmosphere shrinks to $15/10 = 1.5\ \text{km}$, which the muon crosses in about $5\ \mu\text{s}$. Both frames agree on the outcome.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem:</strong> A spaceship passes Earth at $0.80c$. Its crew measures a trip to a star as taking $9.0\ \text{years}$ on board. How long does the trip take in Earth's frame, and how far away is the star?</p>
+<p><strong>Solution:</strong></p>
+<li>Identify the proper time. Both events (departure and arrival) happen at the ship, so $\Delta t_0 = 9.0\ \text{yr}$.</li>
+<li>Compute $\gamma = 1/\sqrt{1-0.64} = 1/0.60 = 5/3$.</li>
+<li>Earth-frame time: $\Delta t = \gamma\,\Delta t_0 = 15\ \text{yr}$.</li>
+<li>Earth-frame distance: $d = v\,\Delta t = 0.80c \times 15\ \text{yr} = 12\ \text{light-years}$.</li>
+<li><strong>Check using the invariant interval:</strong> $s^2 = c^2\Delta t^2 - d^2 = (15^2 - 12^2)\ \text{ly}^2 = 81\ \text{ly}^2$, so $s = 9\ \text{ly}$, which equals $c\,\Delta t_0$ in the ship frame. ✓</li>
+<p><strong>Strategy:</strong> Before applying a formula, ask which frame holds the proper time or proper length. Use $\gamma$ only to convert from that frame to another, and confirm with the invariant interval when unsure.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch34: Frontiers of Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

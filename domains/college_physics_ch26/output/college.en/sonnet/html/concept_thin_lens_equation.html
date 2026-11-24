@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thin Lens Equation | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="thin-lens-equation">Thin Lens Equation</h2>
+<h3 id="definition">Definition</h3>
+<p>For a thin lens, the object distance $d_o$, the image distance $d_i$, and the focal length $f$ are related by</p>
+$$\frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{f}.$$
+<p>This holds in the paraxial approximation (rays close to the axis, small angles) and when the lens thickness is negligible compared with $d_o$, $d_i$, and $f$. The sign conventions are:</p>
+<li>$d_o > 0$ for a real object, which is on the side the light comes from.</li>
+<li>$d_i > 0$ for a real image, which is on the opposite side of the lens. $d_i < 0$ for a virtual image, which is on the same side as the object.</li>
+<li>$f > 0$ for a converging (convex) lens. $f < 0$ for a diverging (concave) lens.</li>
+<h3 id="worked-example">Worked example</h3>
+<p>A converging lens has $f = 10\ \text{cm}$. An object sits at $d_o = 30\ \text{cm}$. Find the image.</p>
+$$\frac{1}{d_i} = \frac{1}{f} - \frac{1}{d_o} = \frac{1}{10} - \frac{1}{30} = \frac{3-1}{30} = \frac{1}{15}$$
+<p>So $d_i = 15\ \text{cm}$. This is positive, so the image is real and forms on the opposite side of the lens from the object.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Case 1: object inside the focal length.</strong> Move the same object to $d_o = 6\ \text{cm}$ with $f = 10\ \text{cm}$:</p>
+$$\frac{1}{d_i} = \frac{1}{10} - \frac{1}{6} = \frac{3-5}{30} = -\frac{1}{15} \implies d_i = -15\ \text{cm}.$$
+<p>The negative sign means the image is virtual. It lies on the object's side of the lens. This is the situation in a magnifying glass.</p>
+<p><strong>Case 2: diverging lens.</strong> Let $f = -20\ \text{cm}$ and $d_o = 40\ \text{cm}$:</p>
+$$\frac{1}{d_i} = -\frac{1}{20} - \frac{1}{40} = -\frac{3}{40} \implies d_i \approx -13.3\ \text{cm}.$$
+<p>The image is virtual. A diverging lens always forms a virtual image of a real object.</p>
+<p><strong>Strategy for any problem:</strong></p>
+<li>Assign signs to $d_o$ and $f$ before substituting.</li>
+<li>Solve for $1/d_i$ first, then invert. Do not invert each term separately.</li>
+<li>Interpret the sign of $d_i$: positive means a real image, negative means a virtual image.</li>
+<li>Check the limits. As $d_o \to \infty$, $d_i \to f$, so a distant object focuses at the focal point. If $d_o = f$, then $1/d_i = 0$, so the image forms at infinity. This is how a collimated beam is made.</li>
+<p><strong>Quick check.</strong> A converging lens has $f = 12\ \text{cm}$ and a real object sits at $d_o = 8\ \text{cm}$. Is the image real or virtual, and where does it form?</p>
+<p>Solution: $\frac{1}{d_i} = \frac{1}{12} - \frac{1}{8} = \frac{2-3}{24} = -\frac{1}{24}$, so $d_i = -24\ \text{cm}$. The image is virtual and lies 24 cm from the lens on the object's side. This agrees with the rule that a converging lens gives a virtual image only when $d_o < f$.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

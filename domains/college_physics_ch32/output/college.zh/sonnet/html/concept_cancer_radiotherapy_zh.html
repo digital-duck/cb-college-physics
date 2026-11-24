@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cancer Radiotherapy | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="癌症放射治疗">癌症放射治疗</h2>
+<p><strong>定义</strong></p>
+<p>癌症放射治疗（radiotherapy）利用电离辐射破坏肿瘤细胞的DNA，使其失去分裂增殖的能力。核心挑战在于：辐射对健康组织和肿瘤细胞并无区别对待，因此临床设计的关键指标是<strong>治疗比</strong>（therapeutic ratio）——肿瘤控制概率与正常组织并发症概率之比。治疗比越高，方案越安全有效。三种主要技术分别从不同角度提高这一比值：</p>
+<li><strong>外照射（external beam）</strong>：多束辐射从体外不同角度精确聚焦于肿瘤，利用几何叠加原理，使肿瘤所在的交汇点累积高剂量，而射线穿过的周边健康组织因分散在多条路径上，各自只承受低剂量。</li>
+<li><strong>近距离治疗（brachytherapy）</strong>：将放射性同位素（如碘-125、铱-192）直接植入或放置在肿瘤内部或邻近处，利用辐射强度随距离平方衰减的物理规律（$I \propto 1/r^2$），使肿瘤获得高剂量而远处正常组织剂量骤降。</li>
+<li><strong>放射免疫治疗（radioimmunotherapy）</strong>：将放射性同位素标记在能特异性识别肿瘤抗原的单克隆抗体上，通过生物靶向而非几何或距离手段，实现全身性给药后的精准聚集。</li>
+<p><strong>剂量学中的定量分析</strong></p>
+<p>放射生物学中常用线性二次模型（linear-quadratic model）描述细胞存活分数 $S$ 与单次剂量 $D$ 的关系：</p>
+$$
+S(D) = e^{-\alpha D - \beta D^2}
+$$
+<p>其中 $\alpha$ 项代表不可修复的单击致死损伤，$\beta D^2$ 项代表两次亚致死损伤累积致死的概率，二者之比 $\alpha/\beta$ 反映组织对分次照射的敏感度：肿瘤组织通常 $\alpha/\beta$ 较高（约10 Gy），而晚反应正常组织（如脊髓）$\alpha/\beta$ 较低（约2-3 Gy）。这正是临床采用<strong>分次照射</strong>（fractionation，如每日2 Gy、共30次）而非单次大剂量的理论基础——分次给正常组织提供修复间隔，累积效应上拉大了肿瘤与正常组织之间的存活差距，从而提高治疗比。</p>
+<p><strong>问题解决应用</strong></p>
+<p>假设某肿瘤 $\alpha/\beta = 10$，正常组织 $\alpha/\beta = 3$。若将总剂量从每次2 Gy、共30次（总60 Gy）改为每次3 Gy、共18次（总54 Gy），可用<strong>生物等效剂量</strong>（BED）公式比较两方案对肿瘤和正常组织的实际生物效应：</p>
+$$
+\text{BED} = nd\left(1 + \frac{d}{\alpha/\beta}\right)
+$$
+<p>分别代入两组织的 $\alpha/\beta$ 值计算并比较BED，即可判断新方案是否在保持肿瘤控制效果的同时，降低了正常组织损伤——这正是临床医师制定分次方案时的核心计算工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

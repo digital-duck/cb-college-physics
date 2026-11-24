@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newtons Third Law | College Physics Ch08</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="newtons-third-law">Newtons Third Law</h2>
+<p>For every action force, there is a reaction force equal in magnitude and opposite in direction, acting on a different body. Formally, if body $A$ exerts force $\vec{F}_{A \to B}$ on body $B$, then body $B$ simultaneously exerts a force on body $A$ such that</p>
+$$\vec{F}_{A \to B} = -\vec{F}_{B \to A}$$
+<p>The two forces are equal in magnitude, opposite in direction, act along the same line, and — critically — act on <em>different</em> objects. This last point is what makes the law non-trivial: because the forces act on different bodies, they never cancel each other out when analyzing the motion of either object alone.</p>
+<p><strong>Worked example.</strong> A $60\,\text{kg}$ skater pushes off a $90\,\text{kg}$ skater on frictionless ice. The push exerts a force on the second skater; by Newton's Third Law, the second skater exerts an equal and opposite force back on the first. Since $F$ is the same magnitude for both, Newton's Second Law ($F = ma$) gives each skater a different acceleration, inversely proportional to mass. If the interaction lasts $0.2\,\text{s}$ and produces a force of $300\,\text{N}$:</p>
+$$a_1 = \frac{300\,\text{N}}{60\,\text{kg}} = 5\,\text{m/s}^2, \qquad a_2 = \frac{300\,\text{N}}{90\,\text{kg}} \approx 3.33\,\text{m/s}^2$$
+<p>The lighter skater recoils faster — same force, different response, because mass differs.</p>
+<p><strong>Problem-solving application.</strong> The law's power is in isolating one object at a time. To find the $60\,\text{kg}$ skater's motion, you only need the force acting <em>on</em> that skater — the $300\,\text{N}$ push from the other skater — and you apply $F = ma$ to that skater alone. You do not need to also track the reaction force the first skater exerts back, since that force acts on the <em>other</em> skater and belongs to a separate calculation. This is the standard technique in any multi-body problem: consider one object, list only the forces acting on it, and solve. A common student error is combining both members of an action-reaction pair into the same calculation — this always makes the forces cancel incorrectly and predicts zero net force where none exists. The fix is procedural, not conceptual: before solving, ask "which single object am I analyzing right now?" and discard every force that acts on anything else.</p>
+<pre class="mermaid">flowchart LR
+    A["Body A"] -- "Force on B (action)" --> B["Body B"]
+    B -- "Force on A (reaction)" --> A</pre>
+<p><em>The action force and its reaction force act on two different bodies simultaneously, equal in magnitude and opposite in direction.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch8: Linear Momentum and Collisions (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coriolis Weather Patterns | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="coriolis-weather-patterns">Coriolis Weather Patterns</h2>
+<p><strong>定义</strong></p>
+<p>地球是一个旋转参考系，在其上运动的物体（包括大气）会受到一个视惯性力——科里奥利力——的作用。对于在地球表面以速度 $v$ 水平运动的空气块，科里奥利力的大小为</p>
+$$
+F_c = 2m\Omega v \sin\phi
+$$
+<p>其中 $m$ 为空气块质量，$\Omega \approx 7.29\times10^{-5}\ \text{rad/s}$ 为地球自转角速度，$\phi$ 为纬度。方向由 $\mathbf{F}_c = -2m\,\boldsymbol{\Omega}\times \mathbf{v}$ 给出：在北半球，运动物体总是向其运动方向的右侧偏转；在南半球则向左偏转。赤道处 $\sin\phi=0$，科里奥利效应消失。</p>
+<p><strong>应用实例：气旋的旋转方向</strong></p>
+<p>考虑北半球一个低压中心。空气本应沿气压梯度力直接流入低压区，但科里奥利力使流入的空气不断向右偏转。结果是空气并非径直冲向中心，而是绕中心作<strong>逆时针</strong>螺旋运动，最终达到近似的地转平衡——气压梯度力与科里奥利力大小相等、方向相反：</p>
+$$
+\frac{1}{\rho}\nabla p = 2\,\boldsymbol{\Omega}\times \mathbf{v}
+$$
+<p>由此可解出地转风速 $v_g = \dfrac{1}{2\rho\Omega\sin\phi}\left|\dfrac{\partial p}{\partial n}\right|$，其中 $n$ 为垂直于等压线的方向。在南半球，$\sin\phi<0$，力的方向反转，导致气旋呈<strong>顺时针</strong>旋转。</p>
+<p><strong>解题练习</strong></p>
+<p>设某地纬度 $\phi = 30^\circ$N，空气水平流速 $v = 15\ \text{m/s}$，空气密度 $\rho = 1.2\ \text{kg/m}^3$。</p>
+<li>求单位质量空气所受科里奥利加速度 $a_c = 2\Omega v\sin\phi$。</li>
+<p>   代入：$a_c = 2(7.29\times10^{-5})(15)(0.5) \approx 1.09\times10^{-3}\ \text{m/s}^2$。</p>
+<li>若该气流处于地转平衡，求维持此风速所需的气压梯度 $\left|\partial p/\partial n\right| = \rho \cdot a_c \approx 1.31\times10^{-3}\ \text{Pa/m}$，即每公里约 $1.31\ \text{Pa}$。</li>
+<p>这一计算说明：纬度越低，$\sin\phi$ 越小，维持同样风速所需的气压梯度越弱，这正是热带气旋在低纬度地区更容易增强、组织性更强的物理原因之一。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

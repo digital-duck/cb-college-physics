@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bulk Modulus | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="bulk-modulus">Bulk Modulus</h2>
+<p>The bulk modulus $B$ measures a material's resistance to uniform compression from all sides. When a volume of material experiences a pressure increase $\Delta P$, it responds with a fractional volume decrease $-\Delta V / V$. The two are related by</p>
+$$B = -V\frac{\Delta P}{\Delta V} = \frac{\Delta P}{-\Delta V / V}$$
+<p>The negative sign keeps $B$ positive, since increasing pressure ($\Delta P > 0$) always decreases volume ($\Delta V < 0$). Units are $\mathrm{N/m^2}$ (pascals), the same as pressure, because the fractional volume change $-\Delta V/V$ is dimensionless. A large $B$ means the material is hard to compress — steel has $B \approx 160\ \text{GPa}$, water $B \approx 2.2\ \text{GPa}$, and air (at constant temperature) $B \approx 10^5\ \text{Pa}$, roughly one atmosphere. This is why steel feels rigid, water is "almost" incompressible for everyday purposes, and air compresses easily under a bicycle pump.</p>
+<p><strong>Worked example.</strong> A steel block of volume $2.0\ \text{m}^3$ is submerged at ocean depth where pressure increases by $2.0 \times 10^7\ \text{Pa}$ relative to the surface. Using $B_{\text{steel}} = 1.6 \times 10^{11}\ \text{Pa}$, find the volume change.</p>
+<p>Rearranging the definition: $\Delta V = -V \Delta P / B$.</p>
+$$\Delta V = -\frac{(2.0\ \text{m}^3)(2.0\times10^7\ \text{Pa})}{1.6\times10^{11}\ \text{Pa}} = -2.5\times10^{-4}\ \text{m}^3$$
+<p>The block shrinks by only 250 cm³ out of 2 m³ — about 0.0125%, confirming steel's near-incompressibility even under enormous pressure.</p>
+<p><strong>Problem-solving application.</strong> Bulk modulus is the key input whenever a problem involves pressure-driven volume change: hydraulic systems, deep-sea engineering, or comparing how gases versus liquids respond to compression. The general solution strategy is always the same three-step rearrangement: (1) identify which two of $B$, $\Delta P$, $\Delta V/V$ are given, (2) solve $B = -\Delta P/(\Delta V/V)$ for the unknown, (3) check the sign — compression should always yield $\Delta V < 0$. A common error is forgetting that $\Delta V/V$ is a <em>fraction</em> of the original volume, not an absolute length change, so always divide by the initial volume $V$ before applying $B$.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

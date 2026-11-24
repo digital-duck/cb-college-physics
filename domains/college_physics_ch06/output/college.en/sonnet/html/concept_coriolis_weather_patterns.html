@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coriolis Weather Patterns | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="coriolis-weather-patterns">Coriolis Weather Patterns</h2>
+<p>The Coriolis effect arises because Earth rotates while wind moves relative to its surface. An observer in the rotating reference frame of Earth sees moving air deflect sideways from its expected straight-line path — to the right in the Northern Hemisphere, to the left in the Southern Hemisphere. This is not a real force in the inertial sense; it is an artifact of tracking motion from a spinning platform, formally captured by the Coriolis acceleration:</p>
+$$
+\vec{a}_{cor} = -2\vec{\Omega} \times \vec{v}
+$$
+<p>where $\vec{\Omega}$ is Earth's angular velocity vector and $\vec{v}$ is the wind velocity relative to Earth's surface. The magnitude of the effect depends on latitude through the Coriolis parameter $f = 2\Omega\sin\phi$, which is zero at the equator and maximal at the poles — explaining why hurricanes never form near the equator: there is too little deflection to organize rotation.</p>
+<p><strong>Worked example</strong>: Consider a low-pressure system. Air rushes inward toward the center, driven by the pressure-gradient force. In the Northern Hemisphere, the Coriolis acceleration deflects this inflowing air to the right of its motion. As parcels converge from all directions and each gets deflected rightward, the net effect is a counterclockwise rotation around the low — this is exactly the swirl visible in satellite images of Northern Hemisphere storms. In the Southern Hemisphere, the same physics with $\sin\phi < 0$ flips the deflection, producing clockwise rotation.</p>
+<p><strong>Problem-solving application</strong>: Meteorologists use this relationship to diagnose pressure systems from wind data alone. If a station reports wind shifting from south to west to north over a day (Northern Hemisphere), that veering pattern indicates a counterclockwise-rotating low is passing to the north — allowing forecasters to locate storm centers without direct pressure readings. This same balance between pressure-gradient force and Coriolis deflection defines geostrophic wind, the large-scale approximation $f v = \frac{1}{\rho}\frac{\partial p}{\partial n}$, used operationally to estimate wind speed directly from pressure-map spacing.</p>
+<pre class="mermaid">flowchart LR
+    A[Pressure gradient force pulls air inward] --> B[Coriolis deflection acts on moving air]
+    B --> C{Hemisphere?}
+    C -->|Northern| D[Counterclockwise rotation around low]
+    C -->|Southern| E[Clockwise rotation around low]</pre>
+<p><em>How pressure-gradient force and hemisphere-dependent Coriolis deflection combine to determine the rotational direction of a low-pressure system.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

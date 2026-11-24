@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hall Emf | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="hall-emf">Hall Emf</h2>
+<p><strong>定义</strong></p>
+<p>当电流通过一段处于外加磁场中的导体时，导体内部的载流子（电子或空穴）会受到洛伦兹力的作用而向导体一侧偏转，这种现象称为霍尔效应。设导体宽度为 $d$，载流子以漂移速度 $v$ 沿导体运动，外加磁场 $B$ 垂直于电流方向。载流子受到的磁力为</p>
+$$F_B = qvB$$
+<p>电荷在导体一侧不断积累，会在导体两侧建立起横向电场 $E$，该电场对载流子产生一个方向相反的电场力 $F_E = qE$。当系统达到稳态（平衡）时，两个力大小相等：</p>
+$$qvB = qE \implies E = vB$$
+<p>由于横向电场沿宽度 $d$ 均匀分布，两侧之间建立的电势差，即霍尔电动势（Hall EMF），为</p>
+$$V_H = Ed = vBd$$
+<p>这个公式表明：霍尔电压正比于载流子的漂移速度、磁场强度以及导体的宽度。</p>
+<p><strong>推导要点（理论必要性）</strong></p>
+<p>之所以必须用力平衡这一理论工具来推导，而不能仅凭直觉描述，是因为霍尔电压是两种力（磁场力与电场力）达到动态平衡的结果——它并非磁场直接"产生"的电压，而是系统对磁场力的电场响应。理解 $qvB = qE$ 这一平衡条件，是正确解释霍尔效应符号（判断载流子是电子还是空穴）以及霍尔电压大小的关键。</p>
+<p><strong>例题</strong></p>
+<p>一根铜带宽 $d = 2.0\text{ cm}$，置于磁场 $B = 0.50\text{ T}$ 中，铜带内电子的平均漂移速度为 $v = 1.0\times10^{-4}\text{ m/s}$。求霍尔电压。</p>
+<p>代入公式：</p>
+$$V_H = vBd = (1.0\times10^{-4})(0.50)(0.020) = 1.0\times10^{-6}\text{ V} = 1.0\ \mu\text{V}$$
+<p><strong>问题解决应用</strong></p>
+<p>霍尔效应的实际价值在于"反向求解"：已知磁场 $B$、宽度 $d$，通过测量 $V_H$ 可以反推漂移速度 $v$，进而结合电流 $I = nqvA$（$n$ 为载流子密度，$A$ 为横截面积）求出材料的载流子浓度 $n$。这正是霍尔传感器测量磁场强度、以及半导体工艺中判定材料是 n 型还是 p 型的核心原理——通过测得的霍尔电压符号即可判断载流子的电荷类型。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

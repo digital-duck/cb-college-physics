@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fluid Density | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="流体密度">流体密度</h2>
+<p><strong>定义</strong></p>
+<p>流体密度 $\rho$ 定义为单位体积流体所含的质量：</p>
+$$
+\rho = \frac{m}{V}
+$$
+<p>其中 $m$ 为质量（单位：kg），$V$ 为体积（单位：$\text{m}^3$），$\rho$ 的国际单位为 $\text{kg/m}^3$。密度是流体的内禀属性——它不随所取样本的大小而改变，只取决于物质本身（以及温度、压强等状态参数）。密度决定了流体的两类关键行为：<strong>惯性行为</strong>（密度越大，加速同一体积的流体所需的力越大，体现在牛顿第二定律 $F = ma$ 中，其中 $m = \rho V$）；以及<strong>重力行为</strong>（密度决定了流体柱产生的静水压强，如 $P = \rho g h$，也决定了物体在流体中所受的浮力，如阿基米德原理 $F_b = \rho_{\text{流体}} g V_{\text{排开}}$）。</p>
+<p><strong>例题</strong></p>
+<p>一个水箱中装有体积为 $2.5\ \text{m}^3$ 的橄榄油，已知橄榄油密度约为 $\rho = 920\ \text{kg/m}^3$。求这部分油的质量。</p>
+<p>由定义式变形：</p>
+$$
+m = \rho V = 920\ \text{kg/m}^3 \times 2.5\ \text{m}^3 = 2300\ \text{kg}
+$$
+<p><strong>问题解决应用</strong></p>
+<p>密度概念的核心应用在于比较与预测物体在流体中的沉浮，以及计算流体系统中的压强分布。</p>
+<p><em>应用一：判断沉浮</em>。一物体密度小于所处流体密度时会上浮，大于时会下沉，相等时可悬浮于任意深度。例如，冰的密度约为 $917\ \text{kg/m}^3$，海水密度约为 $1025\ \text{kg/m}^3$，因为 $\rho_{\text{冰}} < \rho_{\text{海水}}$，所以冰山能够漂浮，且露出水面的体积比例可由</p>
+$$
+\frac{V_{\text{露出}}}{V_{\text{总}}} = 1 - \frac{\rho_{\text{冰}}}{\rho_{\text{海水}}}
+$$
+<p>估算，约为 10.5%——这正是"冰山一角"的物理来源。</p>
+<p><em>应用二：混合流体的等效密度</em>。若将质量为 $m_1, m_2$、密度为 $\rho_1, \rho_2$ 的两种互溶液体混合，总密度并非简单平均，而是：</p>
+$$
+\rho_{\text{混合}} = \frac{m_1 + m_2}{V_1 + V_2} = \frac{m_1 + m_2}{\frac{m_1}{\rho_1} + \frac{m_2}{\rho_2}}
+$$
+<p>这一关系在工程配液、地质学岩浆密度估算、乃至调配盐水浮力实验中都十分常见，是密度概念从"定义"走向"计算工具"的关键一步。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

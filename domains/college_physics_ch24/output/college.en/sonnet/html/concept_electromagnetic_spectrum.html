@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electromagnetic Spectrum | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="electromagnetic-spectrum">Electromagnetic Spectrum</h2>
+<p><strong>Definition.</strong> Light is one example of an electromagnetic (EM) wave: an oscillating electric and magnetic field that travels through empty space at the speed of light, $c = 3.00\times10^{8}\ \text{m/s}$. The <strong>electromagnetic spectrum</strong> is the full continuum of these waves, ordered by frequency $f$ or wavelength $\lambda$. All EM waves obey the same relation:</p>
+$$c = \lambda f$$
+<p>A photon, the quantum of EM radiation, carries energy</p>
+$$E = hf = \frac{hc}{\lambda}, \qquad h = 6.63\times10^{-34}\ \text{J·s}.$$
+<p>Frequency and energy rise together, while wavelength falls. The categories below are conventional labels for ranges, not sharp physical boundaries.</p>
+<p>| Region | Typical wavelength | Typical frequency (Hz) | |---|---|---| | Radio | > 1 mm to km | < $3\times10^{11}$ | | Microwave | 1 mm – 1 m (overlaps radio) | $3\times10^{8}$ – $3\times10^{11}$ | | Infrared | 700 nm – 1 mm | $3\times10^{11}$ – $4\times10^{14}$ | | Visible | 400 – 700 nm | $4\times10^{14}$ – $7.5\times10^{14}$ | | Ultraviolet | 10 – 400 nm | $7.5\times10^{14}$ – $3\times10^{16}$ | | X-ray | 0.01 – 10 nm | $3\times10^{16}$ – $3\times10^{19}$ | | Gamma ray | < 0.01 nm | > $3\times10^{19}$ |</p>
+<p>The radio and microwave ranges overlap, and so do X-rays and gamma rays. Those bands are defined partly by how the radiation is produced, not only by wavelength.</p>
+<p><em>Diagram note:</em> the spectrum is a single axis. Wavelength decreases and frequency and photon energy increase as you move from radio toward gamma rays.</p>
+<p><strong>Worked example.</strong> A Wi-Fi router transmits at $f = 2.4\ \text{GHz}$. Find its wavelength and photon energy.</p>
+$$\lambda = \frac{c}{f} = \frac{3.00\times10^{8}}{2.4\times10^{9}} = 0.125\ \text{m}$$
+$$E = hf = (6.63\times10^{-34})(2.4\times10^{9}) \approx 1.6\times10^{-24}\ \text{J} \approx 10^{-5}\ \text{eV}$$
+<p>The wavelength is about 12 cm, which is why Wi-Fi antennas are only a few centimeters long. The photon energy is far too small to break chemical bonds, which typically need a few eV.</p>
+<p><strong>Problem-solving application.</strong> Why does sunscreen block ultraviolet light but not visible light, and why can UV damage DNA?</p>
+<p>Compare photon energies. For green light, $\lambda = 550\ \text{nm}$:</p>
+$$E = \frac{hc}{\lambda} = \frac{(6.63\times10^{-34})(3.00\times10^{8})}{5.5\times10^{-7}} \approx 3.6\times10^{-19}\ \text{J} \approx 2.3\ \text{eV}$$
+<p>For UV-C at $\lambda = 250\ \text{nm}$, the same calculation gives $E \approx 5.0\ \text{eV}$. Many covalent bonds in biological molecules have energies of roughly 3–5 eV, so a UV photon can break bonds directly, while a visible photon usually cannot. Intensity matters too, but the damage comes from the energy of each individual photon. This is why a dim UV lamp can harm tissue while a bright red lamp does not.</p>
+<p>The same reasoning gives a general rule for choosing a region of the spectrum for a task:</p>
+<li><strong>Penetration and long range</strong> (radio, microwave): low photon energy and long wavelength let the waves pass through walls and diffract around obstacles, as in broadcasting and cell networks.</li>
+<li><strong>Imaging fine detail</strong> (X-ray, UV): resolution is limited by wavelength, so short wavelengths see small structures. X-rays at $\lambda\sim0.1\ \text{nm}$ are comparable to atomic spacing, which is why they reveal crystal structure.</li>
+<li><strong>Thermal sensing</strong> (infrared): objects near room temperature emit most strongly around $10\ \mu\text{m}$, so thermal cameras work in the dark.</li>
+<p><strong>Check yourself.</strong> An FM station broadcasts at 100 MHz. Show that $\lambda = 3\ \text{m}$ and that $E\approx 4\times10^{-7}\ \text{eV}$.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

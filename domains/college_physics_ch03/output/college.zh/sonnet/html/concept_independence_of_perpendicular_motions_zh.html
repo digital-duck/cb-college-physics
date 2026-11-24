@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Independence Of Perpendicular Motions | College Physics Ch03</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="independence-of-perpendicular-motions">Independence Of Perpendicular Motions</h2>
+<p><strong>定义</strong></p>
+<p>在二维运动中，水平方向和竖直方向的运动是相互独立的：一个方向上的运动不会影响另一个垂直方向上的运动。这一原理源于牛顿第二定律的矢量性质——合力可以分解为相互垂直的分量，$F_x = ma_x$ 与 $F_y = ma_y$ 是两个独立的方程，彼此互不干扰。对于平抛运动或斜抛运动，若不考虑空气阻力，水平方向不受力（$a_x = 0$），因此水平速度恒定；竖直方向只受重力作用（$a_y = -g$），其运动规律与自由落体完全相同。两个方向的时间变量 $t$ 是唯一的耦合量：两者在同一时刻同步演化，但彼此的数值互不影响。</p>
+<p><strong>范例</strong></p>
+<p>考虑一个从桌面边缘水平抛出的小球，初速度 $v_0 = 4\ \text{m/s}$，桌高 $h = 1.25\ \text{m}$，取 $g = 10\ \text{m/s}^2$。</p>
+<p>竖直方向：小球做自由落体运动，与水平速度无关：</p>
+$$h = \frac{1}{2}gt^2 \implies 1.25 = \frac{1}{2}(10)t^2 \implies t = 0.5\ \text{s}$$
+<p>水平方向：在这 $0.5\ \text{s}$ 内，小球以恒定速度 $v_0$ 前进：</p>
+$$x = v_0 t = 4 \times 0.5 = 2\ \text{m}$$
+<p>关键在于：落地所需时间完全由竖直方向的高度决定，与水平抛出速度大小无关。若将初速度改为 $8\ \text{m/s}$，落地时间仍是 $0.5\ \text{s}$，只是水平位移变为 $4\ \text{m}$。这正是"独立性"的直接体现——两个分运动像两条平行的故事线，同时进行,却互不干涉。</p>
+<p><strong>问题解决应用</strong></p>
+<p>独立性原理的实用价值在于"分而治之"：把复杂的二维轨迹问题拆解成两个简单的一维问题分别求解，再用时间 $t$ 把结果拼接起来。</p>
+<p>例题：一发炮弹以初速度 $v_0 = 50\ \text{m/s}$、仰角 $\theta = 30^\circ$ 发射，求射程。</p>
+<p>先分解初速度：</p>
+$$v_{0x} = v_0\cos\theta = 50 \times \cos 30^\circ \approx 43.3\ \text{m/s}, \qquad v_{0y} = v_0\sin\theta = 50 \times \sin 30^\circ = 25\ \text{m/s}$$
+<p>竖直方向独立求解总飞行时间（上升与下降对称）：</p>
+$$t_{\text{total}} = \frac{2v_{0y}}{g} = \frac{2 \times 25}{10} = 5\ \text{s}$$
+<p>水平方向利用该时间求射程（水平方向全程无加速度）：</p>
+$$R = v_{0x} \cdot t_{\text{total}} \approx 43.3 \times 5 \approx 216.5\ \text{m}$$
+<p>这种"先竖直求时间，再水平求位移"的策略，正是解决所有抛体运动问题的通用模板。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch3: Two-Dimensional Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

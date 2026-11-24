@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Law Of Conservation Of Energy | College Physics Ch07</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="law-of-conservation-of-energy">Law Of Conservation Of Energy</h2>
+<p><strong>定义</strong></p>
+<p>能量守恒定律指出：一个孤立系统（与外界没有物质或能量交换的系统）的总能量在任何过程中都保持不变。能量可以在系统内部从一种形式转化为另一种形式——例如从动能转化为势能，或从化学能转化为热能——也可以在子系统之间传递，但总量恒定不变。对于一个包含动能 $E_k$、势能 $E_p$ 以及其他形式能量（如热能 $Q$、弹性势能等）的孤立系统，其总能量满足：</p>
+$$
+E_{\text{total}} = E_k + E_p + \cdots = \text{常数}
+$$
+<p>这意味着在任意两个时刻 $t_1$ 和 $t_2$，系统的总能量相等：$E_{\text{total}}(t_1) = E_{\text{total}}(t_2)$，即使各分量之间发生了转化。</p>
+<p><strong>范例解析</strong></p>
+<p>考虑一个质量为 $m$ 的物体从高度 $h$ 自由下落，忽略空气阻力。在最高点，物体静止，动能为零，重力势能为 $E_p = mgh$。当物体下落到高度 $y$ 处时，势能减少为 $mgy$，动能增加为 $\frac{1}{2}mv^2$。由能量守恒：</p>
+$$
+mgh = \frac{1}{2}mv^2 + mgy
+$$
+<p>解出速度：</p>
+$$
+v = \sqrt{2g(h-y)}
+$$
+<p>这正是自由落体运动学公式，但通过能量守恒推导，无需涉及时间变量，也无需知道加速度是否恒定——这是能量方法相较于牛顿运动学方程的优势。</p>
+<p><strong>解题应用</strong></p>
+<p>能量守恒的真正威力体现在处理复杂系统时：当力的方向或大小随时间变化（如非恒力、摩擦力、弹簧力）导致运动学方程难以直接积分时，能量法通过比较始末状态即可求解，绕开了对运动过程细节的追踪。</p>
+<p>例如，一个滑块从光滑斜面顶端（高度 $h$）滑下，斜面末端连接一根劲度系数为 $k$ 的弹簧。滑块滑到底部获得速度 $v_0=\sqrt{2gh}$，随后压缩弹簧至最大压缩量 $x$。此时全部动能转化为弹性势能：</p>
+$$
+\frac{1}{2}mv_0^2 = \frac{1}{2}kx^2 \implies x = v_0\sqrt{\frac{m}{k}} = \sqrt{\frac{2mgh}{k}}
+$$
+<p>若存在摩擦，总机械能会减少，减少量等于摩擦力做的负功（即转化为热能的部分），此时应写成 $E_{\text{初}} = E_{\text{末}} + Q_{\text{摩擦}}$，而非机械能守恒——这提醒我们：守恒的是<strong>总能量</strong>，而非某一种特定形式的能量。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch7: Work, Energy, and Energy Resources (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

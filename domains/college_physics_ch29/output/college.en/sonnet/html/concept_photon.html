@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photon | College Physics Ch29</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="photon">Photon</h2>
+<p>A <strong>photon</strong> is a quantum of electromagnetic radiation: the smallest indivisible packet of energy a light wave of a given frequency can exchange with matter. It has zero rest mass, travels at $c$ in vacuum, and carries energy</p>
+$$E = hf = \frac{hc}{\lambda},$$
+<p>where $h = 6.626\times10^{-34}\ \text{J·s}$ is Planck's constant, $f$ is frequency, and $\lambda$ is wavelength. Higher frequency means more energy per photon. Intensity (brightness) changes only the <em>number</em> of photons per second, not the energy of each one.</p>
+<p><strong>Why it matters.</strong> Wave theory predicts that a bright enough light of any color should eject electrons from a metal. Experiments show the opposite: below a threshold frequency, no electrons are emitted no matter how intense the light. Einstein explained this by treating light as photons, each absorbed by a single electron in an all-or-nothing event. An electron needs a minimum energy $\phi$ (the metal's <em>work function</em>) to escape, so a photon can eject it only if $hf > \phi$.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>Green light with $\lambda = 520\ \text{nm}$ strikes a surface. Find the energy per photon and the number of photons per second in a $2.0\ \text{mW}$ beam.</p>
+<p>Energy per photon:</p>
+$$E = \frac{hc}{\lambda} = \frac{(6.626\times10^{-34})(3.00\times10^{8})}{520\times10^{-9}} \approx 3.82\times10^{-19}\ \text{J} \approx 2.39\ \text{eV}.$$
+<p>Photon rate:</p>
+$$\frac{P}{E} = \frac{2.0\times10^{-3}\ \text{W}}{3.82\times10^{-19}\ \text{J}} \approx 5.2\times10^{15}\ \text{photons/s}.$$
+<p>The number is huge, which is why everyday light looks continuous.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p>Sodium has $\phi = 2.28\ \text{eV}$. Will the 520 nm light above eject electrons? If so, how much energy can an ejected electron carry?</p>
+<li>Compare energies: $E = 2.39\ \text{eV} > \phi = 2.28\ \text{eV}$, so emission occurs.</li>
+<li>Energy left over for the electron (its maximum kinetic energy): $K_{\max} = E - \phi = 2.39 - 2.28 = 0.11\ \text{eV}$.</li>
+<p>Now try red light at $700\ \text{nm}$: $E = 1240/700 \approx 1.77\ \text{eV} < 2.28\ \text{eV}$. No electrons are emitted, even at $1000\times$ the intensity, because each photon individually lacks enough energy.</p>
+<p><strong>Useful shortcut:</strong> $E\,[\text{eV}] \approx \dfrac{1240}{\lambda\,[\text{nm}]}$.</p>
+<p><strong>Strategy.</strong> (1) Convert the wavelength to photon energy. (2) Compare it with the work function. (3) If the photon energy is larger, subtract to get the maximum kinetic energy. (4) For power problems, divide power by photon energy to count photons.</p>
+<pre class="mermaid">flowchart LR
+    A["Light of frequency f"] --> B["Photon energy E = hf"]
+    B --> C{"hf > work function?"}
+    C -- "Yes" --> D["Electron ejected with K = hf - phi"]
+    C -- "No" --> E["No emission at any intensity"]</pre>
+<p><em>Decision flow for the photoelectric effect: only the photon energy relative to the work function determines whether electrons are emitted.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch29: Quantum Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

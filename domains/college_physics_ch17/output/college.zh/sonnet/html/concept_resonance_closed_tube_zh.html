@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resonance Closed Tube | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="resonance-closed-tube">Resonance Closed Tube</h2>
+<p><strong>定义</strong></p>
+<p>一根一端封闭、一端开口的管子中,空气柱只能支持特定频率的驻波,这种现象称为闭管共振。封闭端是空气分子无法自由振动的位置,因此该处必须是位移波节(压强波腹);开口端空气可以自由振动,因此是位移波腹(压强波节)。这一边界条件组合决定了闭管只能形成<strong>奇次谐波</strong>,其共振频率为</p>
+$$
+f_n = \frac{n v_w}{4L}, \qquad n = 1, 3, 5, 7, \dots
+$$
+<p>其中 $v_w$ 为声速,$L$ 为管长。基频($n=1$)对应波长 $\lambda_1 = 4L$,即管长恰好是四分之一波长——这正是闭管与两端开口管(后者支持全部谐波、$\lambda_1 = 2L$)的本质区别。</p>
+<p><strong>推导要点</strong></p>
+<p>设封闭端为 $x=0$,开口端为 $x=L$。位移波函数需满足 $x=0$ 处为节点、$x=L$ 处为腹点。满足这两个边界条件的驻波必须使管长恰好容纳奇数个四分之一波长:</p>
+$$
+L = \frac{(2n-1)\lambda_n}{4} \;\Rightarrow\; \lambda_n = \frac{4L}{2n-1}
+$$
+<p>代入 $f_n = v_w/\lambda_n$,即得 $f_n = (2n-1)v_w/(4L)$,只允许 $n=1,3,5,\dots$ 对应的奇次谐波,偶次谐波在物理上无法同时满足两端边界条件,因此不存在。</p>
+<p><strong>例题</strong></p>
+<p>一根长 $L = 0.85\ \text{m}$ 的闭管,声速 $v_w = 343\ \text{m/s}$。求其基频及第三谐波频率。</p>
+<p>基频:</p>
+$$
+f_1 = \frac{v_w}{4L} = \frac{343}{4 \times 0.85} \approx 100.9\ \text{Hz}
+$$
+<p>第三谐波($n=3$,即 $3f_1$):</p>
+$$
+f_3 = \frac{3 v_w}{4L} \approx 302.6\ \text{Hz}
+$$
+<p>注意此处不存在 $2f_1 \approx 201.8\ \text{Hz}$ 这一频率——这是闭管乐器(如单簧管)音色与开管乐器(如长笛)明显不同的物理根源。</p>
+<p><strong>应用型问题</strong></p>
+<p>若已知某闭管乐器演奏出的相邻两个可听谐振频率分别为 $450\ \text{Hz}$ 和 $630\ \text{Hz}$,求管长。</p>
+<p>由于闭管只含奇次谐波,相邻谐波对应 $n$ 与 $n+2$,频率差为 $\Delta f = 2f_1$,故 $f_1 = 90\ \text{Hz}$。由 $f_1 = v_w/(4L)$ 解得 $L = v_w/(4f_1) = 343/360 \approx 0.953\ \text{m}$。此类"由频率差反推基频与管长"的方法,是声学测量与乐器设计中的标准问题求解思路。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

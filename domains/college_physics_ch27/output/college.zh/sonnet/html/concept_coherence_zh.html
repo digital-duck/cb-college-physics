@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coherence | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="coherence">Coherence</h2>
+<p><strong>定义</strong></p>
+<p>相干性（coherence）描述两列或多列波之间是否保持稳定、确定的相位关系。若两波源发出的波在空间中任一点的相位差 $\Delta\phi$ 不随时间变化，则称这些波是相干的（coherent）；若相位差随时间随机涨落，则称为非相干（incoherent）。相干性是产生稳定干涉图样的必要条件——只有相位差恒定，叠加后的强度分布才能在时间上保持不变，从而被观察到。</p>
+<p>对于两列频率相同、振幅分别为 $A_1, A_2$ 的波在某点叠加，合成强度为</p>
+$$
+I = I_1 + I_2 + 2\sqrt{I_1 I_2}\,\cos(\Delta\phi)
+$$
+<p>其中 $I_1, I_2 \propto A_1^2, A_2^2$。若 $\Delta\phi$ 恒定（相干），交叉项 $2\sqrt{I_1I_2}\cos(\Delta\phi)$ 会在空间中产生明暗相间的稳定条纹。若 $\Delta\phi$ 随时间随机变化（非相干），则对该交叉项取时间平均后趋于零，观察到的只是 $I_1+I_2$ 的均匀叠加，没有干涉条纹。</p>
+<p><strong>典型例子</strong></p>
+<p>杨氏双缝实验中，单一光源发出的光经过两条狭缝，两束次波来自同一波前的不同部分，因此相位差恒定——这是相干光源。相反，两个独立的普通灯泡发出的光，其原子发光过程彼此独立、相位随机变化极快（约 $10^{-8}\,\text{s}$ 量级),因此无法形成稳定干涉图样，属于非相干光。激光的产生机制（受激辐射）使得大量光子相位一致，因而激光是高相干性光源的代表。</p>
+<p><strong>应用与解题</strong></p>
+<p>判断两光源能否产生可观测干涉，关键在于检验相位差是否稳定，而不是频率是否相同。解题时常见思路：</p>
+<li>若题目描述"同一光源经分束"（如双缝、薄膜干涉），默认为相干。</li>
+<li>若为两个独立热光源（如两盏灯），默认为非相干，交叉项时间平均为零。</li>
+<li>计算条纹可见度 $V = (I_{\max}-I_{\min})/(I_{\max}+I_{\min})$ 时，相干光源理论上可达 $V=1$（完全可见），非相干光源 $V=0$。</li>
+<p>例题：两束光强均为 $I_0$ 的相干光在某点相遇，相位差为 $\pi/3$，求该点强度。代入公式：</p>
+$$
+I = I_0 + I_0 + 2I_0\cos(\pi/3) = 3I_0
+$$
+<p>若改为非相干光源，则该点强度恒为 $2I_0$，与相位差无关。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

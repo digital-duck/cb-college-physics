@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Measurement | College Physics Ch01</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="测量">测量</h2>
+<p><strong>定义</strong></p>
+<p>测量是对物理量进行定量确定的过程——可以通过直接操作（如用尺量长度），也可以通过计算其他测量值推导得出（如用速度和时间计算位移）。每一次测量都包含三个要素：数值、单位，以及不确定度。缺少任何一个，测量便不完整。</p>
+<p><strong>概念辨析</strong></p>
+<p>测量与"读数"不同。读数只是仪器显示的数字；测量则要求你理解该数字代表什么、精度如何，以及误差来源在哪里。系统误差（systematic error）是由仪器或方法本身的缺陷造成的偏差，会使结果持续偏高或偏低；随机误差（random error）则来自操作和环境波动，表现为结果的分散性。区分两者对于改进实验设计至关重要。</p>
+<p><strong>例题：间接测量密度</strong></p>
+<p>已知一块铝块的质量 $m = 27.0 \text{ g}$，通过排水法测得体积 $V = 10.0 \text{ cm}^3$。求密度 $\rho$。</p>
+$$\rho = \frac{m}{V} = \frac{27.0 \text{ g}}{10.0 \text{ cm}^3} = 2.70 \text{ g/cm}^3$$
+<p>这是一次<strong>间接测量</strong>：密度本身没有被直接读取，而是由两个直接测量值计算得出。注意有效数字：$m$ 和 $V$ 各有三位有效数字，结果同样保留三位。</p>
+<p><strong>解题应用</strong></p>
+<p>假设你需要比较两组学生对同一铝块密度的测量结果：甲组平均值为 $2.68 \text{ g/cm}^3$，乙组为 $2.71 \text{ g/cm}^3$，铝的公认值为 $2.70 \text{ g/cm}^3$。</p>
+<p>百分误差为：</p>
+$$\text{百分误差} = \frac{|\text{测量值} - \text{公认值}|}{\text{公认值}} \times 100\%$$
+<p>甲组误差约为 $0.74\%$，乙组约为 $0.37\%$。乙组更接近公认值，但若甲组的数据分散性（随机误差）更小，说明其精密度更高——这提示我们，<strong>准确度</strong>（accuracy，接近真值）与<strong>精密度</strong>（precision，结果的重现性）是两个独立的评价维度，必须分别分析。优秀的实验设计需要同时兼顾两者。</p>
+  </main>
+  <footer class="spl-credit">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></footer>
+</div>
+</body>
+</html>

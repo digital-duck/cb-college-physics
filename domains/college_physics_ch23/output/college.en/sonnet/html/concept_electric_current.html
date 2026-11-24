@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electric Current | College Physics Ch23</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="electric-current">Electric Current</h2>
+<p><strong>Definition.</strong> Electric current is the rate at which electric charge flows through a cross-sectional area of a conductor. If a net charge $\Delta Q$ passes a given cross section during a time interval $\Delta t$, the average current is</p>
+$$I = \frac{\Delta Q}{\Delta t}.$$
+<p>When the current varies in time, the instantaneous current is $I = \dfrac{dQ}{dt}$. The SI unit is the <strong>ampere</strong> (A), where $1\ \text{A} = 1\ \text{C/s}$. By convention, the direction of current is the direction positive charge would move. In metal wires the carriers are electrons, so they drift opposite to the conventional current.</p>
+<p><strong>Microscopic view.</strong> Current can also be written in terms of the charge carriers. If a conductor has $n$ carriers per unit volume, each with charge $q$, cross-sectional area $A$, and average drift speed $v_d$, then</p>
+$$I = n\,q\,v_d\,A.$$
+<p>Within a time $\Delta t$, the carriers in a length $v_d\Delta t$ cross the area. That volume holds $nAv_d\Delta t$ carriers, so $\Delta Q = nqAv_d\,\Delta t$, which gives the formula above.</p>
+<p><strong>Worked example.</strong> A flashlight bulb passes $3.0\ \text{C}$ of charge in $5.0\ \text{s}$. The average current is</p>
+$$I = \frac{3.0\ \text{C}}{5.0\ \text{s}} = 0.60\ \text{A}.$$
+<p>How many electrons cross a cross section each second? Each electron carries $e = 1.60\times10^{-19}\ \text{C}$, so</p>
+$$\frac{N}{\Delta t} = \frac{I}{e} = \frac{0.60}{1.60\times10^{-19}} \approx 3.75\times10^{18}\ \text{electrons/s}.$$
+<p><strong>Problem-solving application.</strong> A copper wire of diameter $2.0\ \text{mm}$ carries $I = 5.0\ \text{A}$. Copper has $n \approx 8.5\times10^{28}\ \text{m}^{-3}$ free electrons. Find the drift speed.</p>
+<li>The area is $A = \pi r^2 = \pi(1.0\times10^{-3}\ \text{m})^2 = 3.14\times10^{-6}\ \text{m}^2$.</li>
+<li>Solve $I = nqv_dA$ for $v_d$:</li>
+$$v_d = \frac{I}{n\,e\,A} = \frac{5.0}{(8.5\times10^{28})(1.60\times10^{-19})(3.14\times10^{-6})} \approx 1.2\times10^{-4}\ \text{m/s}.$$
+<p>The electrons drift at about $0.12\ \text{mm/s}$, which is slower than a crawling snail. A lamp still lights almost instantly because the electric field that drives the electrons propagates through the wire at nearly the speed of light. Every free electron along the wire begins to move at once.</p>
+<p><strong>Key points to remember.</strong></p>
+<li>Current measures charge per unit time. It is not the amount of charge itself.</li>
+<li>In a series circuit with no branches, the current is the same at every cross section, because charge does not accumulate along the wire. This is a consequence of charge conservation.</li>
+<li>At a junction, the current entering equals the current leaving. This is Kirchhoff's junction rule.</li>
+<p>For a time-varying current, the total charge transferred is the area under the $I$–$t$ graph:</p>
+$$\Delta Q = \int_{t_1}^{t_2} I\,dt.$$
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch23: Electromagnetic Induction, AC Circuits, and Electrical Technologies (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

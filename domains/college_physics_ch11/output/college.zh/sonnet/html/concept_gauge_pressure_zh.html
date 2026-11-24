@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gauge Pressure | College Physics Ch11</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="gauge-pressure-表压">Gauge Pressure（表压）</h2>
+<p><strong>定义</strong></p>
+<p>在实际测量中，我们很少直接测得流体的"绝对压强"（absolute pressure），而是测量它相对于当前大气压的差值——这就是<strong>表压</strong>。定义式为：</p>
+$$
+P_{gauge} = P_{abs} - P_{atm}
+$$
+<p>其中 $P_{abs}$ 是流体的绝对压强，$P_{atm}$ 是当地大气压强（标准值约为 $101.3\ \text{kPa}$）。当 $P_{abs} > P_{atm}$ 时，表压为正；当 $P_{abs} < P_{atm}$（即存在部分真空）时，表压为负。绝大多数压力表（轮胎气压表、血压计、锅炉压力表）出厂时就被校零为大气压处读数为零，因此它们直接显示的就是表压，而不是绝对压强。</p>
+<p><strong>为什么需要区分</strong></p>
+<p>绝对压强是物理定律（如理想气体状态方程 $PV = nRT$）中真正起作用的量,因为它反映了气体分子实际的碰撞频率与力度。而表压是一个"以大气为参照系"的实用量,因为工程和生理场景中,我们通常关心的是"比周围环境高出或低出多少",而不是分子层面的绝对值。混淆两者是常见错误源。</p>
+<p><strong>worked example（计算示例）</strong></p>
+<p>轮胎气压表显示 $32\ \text{psi}$。这是表压。若当地大气压为 $14.7\ \text{psi}$（标准大气压），则轮胎内空气的绝对压强为：</p>
+$$
+P_{abs} = P_{gauge} + P_{atm} = 32 + 14.7 = 46.7\ \text{psi}
+$$
+<p>若开车上高原，大气压降到 $12\ \text{psi}$，轮胎内绝对压强若不变（气体量、温度不变，视为封闭系统），则新的表压读数会变为：</p>
+$$
+P_{gauge}' = P_{abs} - P_{atm}' = 46.7 - 12 = 34.7\ \text{psi}
+$$
+<p>即气压表读数会<strong>上升</strong>，尽管轮胎内实际的绝对压强没有变化——这正是海拔升高后建议检查轮胎胎压的物理原因。</p>
+<p><strong>解题应用</strong></p>
+<p>处理涉及压强的问题时，第一步永远是明确题目给出的量究竟是 $P_{gauge}$ 还是 $P_{abs}$：凡涉及气体状态方程、流体静力学基本方程 $P = P_0 + \rho g h$ 中的绝对深度计算，必须代入绝对压强；而仪表读数、人体血压、"高出/低出环境多少"类描述，通常直接就是表压。忽略这一区分会导致计算结果偏差整整一个大气压。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch11: Fluid Statics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

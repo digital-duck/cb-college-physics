@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tides | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="tides">Tides</h2>
+<p><strong>定义</strong></p>
+<p>潮汐是地球海平面周期性涨落的现象，其根本原因是月球（以及太阳）对地球不同部位引力大小不同——即<strong>引力差</strong>（潮汐力）。潮汐力并非直接来自引力本身，而是来自引力随距离变化的<strong>梯度</strong>。设地球中心到月球中心的距离为 $d$，月球质量为 $M$，地球半径为 $R$，则地球上距月球最近点与最远点所受引力之差近似为：</p>
+$$
+\Delta F \approx \frac{2GMR}{d^3}
+$$
+<p>这个 $1/d^3$ 的关系（而非通常引力的 $1/d^2$）是理解潮汐的关键：正是因为力随距离衰减得更快，才使得地球两侧（面向月球一侧和背向月球一侧）都会被"拉长"，形成两个隆起的水丘，从而在地球自转一周内产生两次高潮、两次低潮。</p>
+<p><strong>受力分析（举例）</strong></p>
+<p>以地心为参照系，面向月球一侧的海水受到的引力大于地心平均值，因此相对地心被"拉向"月球；背向月球一侧海水受到的引力小于平均值，相当于被"甩"在后面。两侧净效应都表现为远离地心的隆起，这就是为什么潮汐每天有两个高潮而不是一个。太阳的质量远大于月球，但因为距离 $d$ 远得多，按 $1/d^3$ 衰减，太阳潮汐力约为月球的 46%——这解释了"朔望潮"（大潮）与"上下弦潮"（小潮）的成因：当日、地、月三者接近共线时（朔或望），两者引力叠加，潮差最大；当三者成直角时（上弦或下弦），两者部分抵消，潮差最小。</p>
+<p><strong>问题解决应用</strong></p>
+<p>利用 $\Delta F \propto R/d^3$ 这一比例关系，可以定量比较不同天体对地球潮汐的贡献。例如，已知月球引起的潮汐力是太阳的约 2.2 倍，可以反推：</p>
+$$
+\frac{\Delta F_{\text{月}}}{\Delta F_{\text{日}}} = \frac{M_{\text{月}}/d_{\text{月}}^3}{M_{\text{日}}/d_{\text{日}}^3} \approx 2.2
+$$
+<p>这类比例关系在实际问题中很有用：比如估算某系外行星是否会因潮汐力过大而被"潮汐锁定"（自转与公转同步，如月球对地球那样），工程师和天文学家正是通过比较 $M/d^3$ 的量级来快速判断潮汐效应的强弱，而不需要重新计算完整的引力场。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

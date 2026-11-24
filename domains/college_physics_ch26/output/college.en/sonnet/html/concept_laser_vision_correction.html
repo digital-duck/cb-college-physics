@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laser Vision Correction | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="laser-vision-correction">Laser Vision Correction</h2>
+<p><strong>Definition.</strong> Laser vision correction (LASIK, PRK) uses an excimer laser, which emits ultraviolet light at 193 nm, to reshape the cornea. The cornea supplies about two-thirds of the eye's focusing power, roughly 43 diopters (D), so changing its curvature changes where light focuses on the retina. Each pulse removes about 0.25 µm of tissue by photoablation. This process breaks molecular bonds without significant heat, so nearby tissue is left largely undamaged.</p>
+<p><strong>Optics behind it.</strong> Refractive power $P$ (in diopters) is the reciprocal of focal length $f$ in meters:</p>
+$$P = \frac{1}{f}$$
+<p>For a single refracting surface with radius of curvature $R$, separating air from a medium of refractive index $n$:</p>
+$$P = \frac{n-1}{R}$$
+<p>Using the keratometric index $n = 1.3375$, a cornea with $R = 7.8$ mm has $P = 0.3375/0.0078 \approx 43.3$ D.</p>
+<li><strong>Myopia</strong> (nearsightedness): the eye focuses too strongly, so the laser flattens the central cornea, which increases $R$.</li>
+<li><strong>Hyperopia</strong> (farsightedness): the eye focuses too weakly, so the laser steepens the cornea by ablating the periphery.</li>
+<li><strong>Astigmatism</strong>: curvature differs between meridians, so the laser removes tissue unevenly to make the surface spherical.</li>
+<p><strong>Worked example.</strong> A patient has $-4.00$ D of myopia, which means the cornea must lose 4.00 D of power. Starting from $P = 43.3$ D, the target is $39.3$ D. Solve for the new radius:</p>
+$$R_{\text{new}} = \frac{0.3375}{39.3} \approx 8.59 \text{ mm}$$
+<p>The radius increases from 7.80 mm to 8.59 mm, so the cornea is flatter.</p>
+<p><strong>Problem-solving application: how much tissue?</strong> The Munnerlyn approximation estimates the central ablation depth $t$ for an optical zone of diameter $d$ (in mm) and correction $D$ (in diopters):</p>
+$$t \approx \frac{d^{2}\,D}{3}\ \ \mu\text{m}$$
+<p>For $d = 6.0$ mm and $D = 4.00$:</p>
+$$t \approx \frac{(6.0)^2(4.00)}{3} = 48\ \mu\text{m}$$
+<p>At about 0.25 µm per pulse, this takes roughly $48/0.25 \approx 192$ pulses at the center.</p>
+<p>The formula shows that depth grows with the <strong>square</strong> of the zone diameter. Widening the zone from 6 mm to 7 mm raises the depth for the same correction to about $65\ \mu\text{m}$ (a factor of $49/36 \approx 1.36$). A larger zone reduces night-vision glare but removes more tissue.</p>
+<p>Surgeons use this relationship to check safety. A typical cornea is about 540 µm thick. Practice usually leaves at least 250–300 µm of untouched stromal bed, plus the flap thickness in LASIK, to avoid corneal ectasia, which is progressive bulging. For a patient with a 500 µm cornea, a 100 µm flap, and a 6 mm zone, the maximum allowed ablation is about $500 - 100 - 300 = 100\ \mu\text{m}$. Solving $t = d^2D/3$ for $D$ gives</p>
+$$D_{\max} = \frac{3t}{d^2} = \frac{3(100)}{36} \approx 8.3\ \text{D}$$
+<p>Corrections near or above this limit call for another option, such as an implantable lens.</p>
+<p><strong>Check your understanding.</strong> For $d = 6.5$ mm and $D = 3.00$ D, estimate $t$ and the pulse count. The answer is $t \approx 42\ \mu\text{m}$, or about 169 pulses.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

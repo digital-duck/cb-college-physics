@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conservation Of Charge | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="conservation-of-charge">Conservation Of Charge</h2>
+<p><strong>Definition.</strong> The law of conservation of charge states that the net electric charge of an isolated system never changes. Charge can move from place to place or be redistributed among objects, but it cannot be created or destroyed. For any process,</p>
+$$\sum q_{\text{before}} = \sum q_{\text{after}}.$$
+<p>Charge is also <em>quantized</em>: every observed charge is an integer multiple of the elementary charge $e = 1.602\times10^{-19}\ \text{C}$. Conservation applies at every scale, from rubbing a balloon on hair to particle collisions. In every case, the algebraic sum, counting positive and negative charges with their signs, stays fixed. Locally, the law is expressed by the continuity equation</p>
+$$\frac{\partial \rho}{\partial t} + \nabla\cdot\mathbf{J} = 0,$$
+<p>which says that charge density $\rho$ at a point can decrease only if current density $\mathbf{J}$ carries charge away from that point.</p>
+<p><strong>Worked example: touching two spheres.</strong> A metal sphere carries $+6.0\ \mu\text{C}$. An identical sphere carries $-2.0\ \mu\text{C}$. They touch and are then separated. What is the final charge on each?</p>
+<li>Total charge before: $+6.0 + (-2.0) = +4.0\ \mu\text{C}$.</li>
+<li>The spheres are identical conductors, so charge divides equally.</li>
+<li>Each sphere ends with $\dfrac{+4.0}{2} = +2.0\ \mu\text{C}$.</li>
+<p>Check: $2.0 + 2.0 = 4.0\ \mu\text{C}$, matching the initial total. Electrons moved from the negative sphere to the positive one, but none were lost.</p>
+<p><strong>Problem-solving application: nuclear and particle reactions.</strong> Conservation of charge is a tool for checking whether a reaction is possible and for identifying unknown products. Consider beta-minus decay of a neutron:</p>
+$$n \rightarrow p + e^- + \bar{\nu}_e$$
+<p>Charges: left side $0$; right side $(+e) + (-e) + 0 = 0$. The reaction passes the charge test.</p>
+<p>Now test a proposed decay, $n \rightarrow p + \gamma$. The left side has charge $0$ and the right side has $+e$. Charge is not conserved, so this decay is forbidden.</p>
+<p>To find an unknown product, use the same bookkeeping. In $^{14}_{\ 7}\text{N} + {}^4_2\text{He} \rightarrow {}^{17}_{\ 8}\text{O} + X$, the charge (atomic number $Z$) balance is $7 + 2 = 8 + Z_X$, so $Z_X = 1$. The mass-number balance is $14 + 4 = 17 + A_X$, so $A_X = 1$. Product $X$ is therefore a proton, ${}^1_1\text{H}$.</p>
+<p>For circuits, the same principle underlies Kirchhoff's current law. Charge does not accumulate at a junction in steady state, so $\sum I_{\text{in}} = \sum I_{\text{out}}$. If $3\ \text{A}$ and $2\ \text{A}$ enter a junction and one wire leaves, that wire carries $5\ \text{A}$.</p>
+<p><strong>Strategy.</strong> (1) Identify the system and confirm it is isolated, or account for charge crossing its boundary. (2) Sum signed charges before. (3) Sum signed charges after. (4) Set them equal and solve for the unknown.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

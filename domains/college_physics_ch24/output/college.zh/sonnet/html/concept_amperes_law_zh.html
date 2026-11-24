@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amperes Law | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="amperes-law">Amperes Law</h2>
+<p><strong>定义</strong></p>
+<p>安培定律（Ampère's Law）指出：磁场沿任意闭合路径的环路积分，正比于穿过该路径所围曲面的净电流。数学表达为</p>
+$$
+\oint_C \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{enc}}
+$$
+<p>其中 $C$ 是任意选取的闭合路径（称为"安培环路"），$I_{\text{enc}}$ 是穿过以 $C$ 为边界的曲面的净电流，$\mu_0 = 4\pi \times 10^{-7}\ \text{T·m/A}$ 是真空磁导率。这是一条关于磁场的基本定律，与静电学中的高斯定律地位相当：高斯定律用电荷的对称性简化电场计算，安培定律则用电流分布的对称性简化磁场计算。它对任意形状的闭合路径都成立，但只有当路径具有足够的对称性（如圆形、直线、螺线管轴线）时，才能把 $\vec{B}$ 从积分中提出来求解。</p>
+<p><strong>推导思路（为何需要环路积分）</strong></p>
+<p>单一电流元产生的磁场由毕奥-萨伐尔定律给出，但对复杂电流分布逐段积分往往极其繁琐。安培定律的价值在于：只要选取与磁场对称性匹配的闭合路径，就能将矢量场问题转化为标量代数问题——这正是"任意电流形状的总磁场是各段贡献的矢量和"这一表述在高对称情形下的简化实现。</p>
+<p><strong>求解范例</strong></p>
+<p>求载流长直导线外部距离 $r$ 处的磁场。选取以导线为轴、半径为 $r$ 的圆形安培环路，由对称性可知 $\vec{B}$ 沿环路方向大小处处相等，故</p>
+$$
+\oint_C \vec{B} \cdot d\vec{l} = B \cdot (2\pi r) = \mu_0 I
+$$
+<p>解得</p>
+$$
+B = \frac{\mu_0 I}{2\pi r}
+$$
+<p><strong>应用：螺线管内部磁场</strong></p>
+<p>对于单位长度匝数为 $n$、电流为 $I$ 的长螺线管，选取矩形安培环路，一条边在螺线管内部（长度 $L$），其余边贡献为零（外部磁场近似为零，径向边与 $\vec{B}$ 垂直）。环路内包围的电流为 $I_{\text{enc}} = nLI$，代入得</p>
+$$
+BL = \mu_0 nLI \quad\Longrightarrow\quad B = \mu_0 n I
+$$
+<p>该结果表明螺线管内部磁场均匀，且仅取决于单位长度匝数与电流，与螺线管半径无关——这正是电磁铁、MRI 磁体等设备设计的理论基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

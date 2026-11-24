@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Twin Paradox | College Physics Ch28</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="twin-paradox-双生子佯谬">Twin Paradox（双生子佯谬）</h2>
+<p><strong>定义</strong></p>
+<p>双生子佯谬是狭义相对论中最著名的思想实验之一：一对双胞胎中，一人留在地球上,另一人乘坐接近光速的飞船前往遥远星球后返回。根据时间膨胀公式</p>
+$$
+\Delta t = \gamma \, \Delta \tau, \qquad \gamma = \frac{1}{\sqrt{1 - v^2/c^2}}
+$$
+<p>地球上的双胞胎（惯性系观察者）会看到旅行者的时钟走得更慢；但若从旅行者的视角看，似乎是地球在远离自己，因此地球双胞胎的时钟才应该更慢。这看似矛盾——两人不可能互相认为对方更年轻，因为重逢时只有一个客观事实。</p>
+<p><strong>佯谬的解决</strong></p>
+<p>关键在于：地球上的双胞胎全程处于同一个惯性参考系，而旅行者必须经历加速——出发时加速、到达目的星球后掉头减速再加速返航、到家前减速。这些加速过程打破了旅行者参考系的对称性，使其不再是单一惯性系。狭义相对论的时间膨胀公式只在惯性系之间对称成立；一旦涉及加速（等效于广义相对论中的引力效应），对称性就被打破，因此结论并不矛盾：<strong>旅行的双胞胎确实更年轻</strong>。</p>
+<p><strong>计算实例</strong></p>
+<p>设飞船以 $v = 0.8c$（即 $\gamma = 1/\sqrt{1-0.64} = 5/3$）飞往 4 光年外的星球并立即返回。</p>
+<li>地球参考系中，往返所需时间为</li>
+$$
+\Delta t = \frac{2 \times 4 \text{ ly}}{0.8c} = 10 \text{ 年}
+$$
+<li>旅行者自身经历的固有时为</li>
+$$
+\Delta \tau = \frac{\Delta t}{\gamma} = \frac{10}{5/3} = 6 \text{ 年}
+$$
+<p>重逢时，地球双胞胎已老了 10 岁，而旅行双胞胎只老了 6 岁，二人相差 4 岁。</p>
+<p><strong>问题求解应用</strong></p>
+<p>处理此类题目的标准步骤是：（1）在地球（惯性）参考系中计算总路程和总时间 $\Delta t$；（2）用 $\gamma$ 因子换算出旅行者的固有时 $\Delta \tau = \Delta t/\gamma$；（3）明确指出对称性因加速过程被打破，因此答案是唯一确定的。这一分析方法同样适用于 GPS 卫星时钟修正、粒子加速器中亚原子粒子寿命延长等现实场景，是时间膨胀效应从"佯谬"转化为可计算工程问题的关键桥梁。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch28: Special Relativity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

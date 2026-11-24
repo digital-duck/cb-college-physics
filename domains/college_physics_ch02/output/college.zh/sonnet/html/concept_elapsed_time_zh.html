@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elapsed Time | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="elapsed-time">Elapsed Time</h2>
+<p><strong>定义</strong></p>
+<p>经过时间（elapsed time）是指一段运动的结束时刻与起始时刻之差，记作</p>
+$$\Delta t = t_f - t_0$$
+<p>其中 $t_f$ 为末时刻，$t_0$ 为初时刻，单位为秒（s）。经过时间是一个标量，恒为正值（假设我们按运动发生的先后顺序定义 $t_f > t_0$），它描述的是"过程持续了多久"，而不是"发生在什么时刻"。区分这两者很重要：$t_0$ 和 $t_f$ 是时间轴上的坐标点，而 $\Delta t$ 是这两点之间的间隔长度。</p>
+<p><strong>范例</strong></p>
+<p>一辆汽车在 $t_0 = 2.0\ \text{s}$ 时经过路标 A，在 $t_f = 7.5\ \text{s}$ 时经过路标 B。求经过时间。</p>
+$$\Delta t = t_f - t_0 = 7.5\ \text{s} - 2.0\ \text{s} = 5.5\ \text{s}$$
+<p>若已知路标 A、B 之间的距离为 $88\ \text{m}$，则可进一步求出平均速度：</p>
+$$\bar{v} = \frac{\Delta x}{\Delta t} = \frac{88\ \text{m}}{5.5\ \text{s}} = 16\ \text{m/s}$$
+<p>这体现了 $\Delta t$ 在运动学中的核心作用：它是连接位移、速度、加速度的桥梁——几乎所有运动学公式（如 $v = v_0 + at$，$\Delta x = v_0 t + \tfrac{1}{2}at^2$）中的时间变量，实际上指的都是经过时间，而非绝对时刻。</p>
+<p><strong>解题应用</strong></p>
+<p>在实际问题中，一个常见易错点是：题目给出的是两个"时刻"（例如"下午 3:00"和"下午 3:05"），而不是直接给出 $\Delta t$。此时必须先做减法求出经过时间，再代入运动学公式。另一个常见情形是分段运动：若一个过程包含多个阶段，总经过时间等于各阶段经过时间之和：</p>
+$$\Delta t_{\text{total}} = \Delta t_1 + \Delta t_2 + \cdots + \Delta t_n$$
+<p>例如，一名短跑运动员在 $0\sim 3\ \text{s}$ 内加速，在 $3\sim 10\ \text{s}$ 内匀速，求其在匀速阶段的经过时间：$\Delta t_2 = 10\ \text{s} - 3\ \text{s} = 7\ \text{s}$。掌握"先找准 $t_0$、$t_f$，再作差"这一步骤，是正确应用一切运动学方程的前提。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

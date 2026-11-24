@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>High Voltage Power Transmission | College Physics Ch20</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="high-voltage-power-transmission">High Voltage Power Transmission</h2>
+<p><strong>定义</strong></p>
+<p>输电线路在传输电能时不可避免地存在电阻，电流通过时会以热的形式耗散能量。这部分损耗功率由焦耳定律给出：</p>
+$$P_{loss} = I^2 R$$
+<p>其中 $I$ 是导线中的电流，$R$ 是导线的电阻。而输电系统实际需要传送的功率是</p>
+$$P = VI$$
+<p>即电压与电流的乘积。将 $I = P/V$ 代入损耗公式，得到</p>
+$$P_{loss} = \left(\frac{P}{V}\right)^2 R = \frac{P^2 R}{V^2}$$
+<p>这个关系式揭示了高压输电的核心原理：在传输功率 $P$ 和线路电阻 $R$ 固定的情况下，损耗功率与电压的平方成反比。也就是说，若将输电电压提高 10 倍，电流相应降低为原来的 $1/10$，而损耗功率则降低为原来的 $1/100$。这正是电力系统采用数十万伏特高压进行远距离输电，再在用户端降压至 220V 或 110V 使用的根本原因——高压意味着小电流，小电流意味着小损耗。</p>
+<p>这一策略之所以可行，关键在于交流电（AC）可以通过变压器方便地升压和降压，而变压器的工作原理依赖法拉第电磁感应定律，几乎不产生额外损耗，效率可达 98% 以上。这也是历史上"电流之战"中交流电（特斯拉、威斯汀豪斯阵营）最终战胜直流电（爱迪生阵营）的技术根源，因为早期直流电压难以高效转换。</p>
+<p><strong>例题</strong></p>
+<p>某输电线路电阻为 $R = 5\ \Omega$，需要传输功率 $P = 1{,}000{,}000\ \text{W}$（1 MW）。</p>
+<p>情形一：若以 $V_1 = 1000\ \text{V}$ 传输，电流为 $I_1 = P/V_1 = 1000\ \text{A}$，损耗为</p>
+$$P_{loss,1} = I_1^2 R = (1000)^2 \times 5 = 5{,}000{,}000\ \text{W}$$
+<p>损耗竟然超过了传输的功率本身，系统完全不可行。</p>
+<p>情形二：若升压至 $V_2 = 100{,}000\ \text{V}$，电流降为 $I_2 = 10\ \text{A}$，损耗为</p>
+$$P_{loss,2} = (10)^2 \times 5 = 500\ \text{W}$$
+<p>损耗仅为传输功率的 0.05%，效率极高。</p>
+<p><strong>应用与解题思路</strong></p>
+<p>处理此类问题时，标准步骤是：先由 $I = P/V$ 求电流，再代入 $P_{loss} = I^2 R$ 求损耗，最后计算损耗占比 $P_{loss}/P$ 评估效率。若题目要求"电压需提高多少倍才能使损耗降低到原来的 $1/n$"，则利用 $P_{loss} \propto 1/V^2$ 的反比例关系，直接得出电压应提高 $\sqrt{n}$ 倍，无需重新计算电流和损耗的具体数值，这是解决此类优化问题最快捷的方法。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch20: Electric Current, Resistance, and Ohm's Law (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

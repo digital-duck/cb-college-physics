@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greenhouse Effect | College Physics Ch14</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="温室效应">温室效应</h2>
+<p><strong>定义</strong></p>
+<p>温室效应是指大气中某些气体吸收并重新辐射地球表面发出的红外辐射，从而使地表温度升高的过程。太阳辐射以可见光为主，能够穿透大气层到达地面并被吸收，地表随后以红外辐射的形式向外释放能量。水汽（$\text{H}_2\text{O}$）、二氧化碳（$\text{CO}_2$）、甲烷（$\text{CH}_4$）等温室气体的分子结构使其能强烈吸收红外波段的辐射，并向各个方向（包括朝向地面）重新辐射，其中一部分被送回地表，形成额外的加热效应。若没有这一机制，地球平均表面温度将远低于目前的约 $15\,^\circ\text{C}$，理论上会降至约 $-18\,^\circ\text{C}$，因为这正是仅靠太阳直接加热所能维持的平衡温度。</p>
+<p><strong>能量平衡的定量分析</strong></p>
+<p>地球的辐射平衡可以用简化的能量收支方程描述。地球吸收的太阳辐射功率为</p>
+$$
+P_{\text{in}} = \frac{S}{4}(1-\alpha)\pi R^2 \cdot 4 = S(1-\alpha)\pi R^2
+$$
+<p>其中 $S$ 为太阳常数（约 $1361\ \text{W/m}^2$），$\alpha$ 为地球反照率（约 $0.3$），$R$ 为地球半径。稳态时，吸收的能量必须等于地球以黑体形式向外辐射的能量，依据斯特藩-玻尔兹曼定律：</p>
+$$
+P_{\text{out}} = 4\pi R^2 \sigma T_{\text{eff}}^4
+$$
+<p>令 $P_{\text{in}} = P_{\text{out}}$，可解出地球的"有效辐射温度"：</p>
+$$
+T_{\text{eff}} = \left[\frac{S(1-\alpha)}{4\sigma}\right]^{1/4} \approx 255\ \text{K} \approx -18\,^\circ\text{C}
+$$
+<p>这一结果远低于实测的地表平均温度（约 $288\ \text{K}$），差值约 $33\ \text{K}$ 即归因于温室效应——大气吸收并将部分红外辐射送回地面所额外贡献的加热量。</p>
+<p><strong>问题解决应用</strong></p>
+<p>这一框架可用于评估气候敏感性：若大气中 $\text{CO}_2$ 浓度倍增，辐射强迫增加约 $3.7\ \text{W/m}^2$，可代入线性化的能量平衡模型 $\Delta T = \lambda \Delta F$（$\lambda$ 为气候反馈参数，典型值约 $0.8\ \text{K/(W/m}^2)$）估算全球升温约 $3\,^\circ\text{C}$。该模型同样用于比较不同行星大气：金星因浓密 $\text{CO}_2$ 大气层，温室效应使其表面温度高达 $460\,^\circ\text{C}$，远超其有效辐射温度，说明温室气体成分与浓度是决定行星表面温度的关键变量。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch14: Heat and Heat Transfer Methods (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

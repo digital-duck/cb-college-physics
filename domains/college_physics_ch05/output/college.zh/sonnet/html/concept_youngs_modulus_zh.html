@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Youngs Modulus | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="youngs-modulus">Youngs Modulus</h2>
+<p><strong>定义</strong></p>
+<p>杨氏模量（Young's modulus，记作 $Y$ 或 $E$）是描述固体材料在弹性形变范围内"刚硬程度"的物质常数，单位为 $\text{N/m}^2$（帕斯卡，Pa）。当一根长度为 $L_0$、横截面积为 $A$ 的杆受到沿轴向的拉力 $F$ 作用时，会产生伸长量 $\Delta L$。实验表明，只要形变足够小（材料处于弹性范围内，服从胡克定律），应力（stress，单位面积上的力）与应变（strain，相对形变量）成正比：</p>
+$$
+\frac{F}{A} = Y \cdot \frac{\Delta L}{L_0}
+$$
+<p>其中 $\sigma = F/A$ 称为应力，$\epsilon = \Delta L / L_0$ 称为应变（无量纲）。于是</p>
+$$
+Y = \frac{\sigma}{\epsilon} = \frac{F / A}{\Delta L / L_0}
+$$
+<p>$Y$ 越大，说明材料越"硬"——产生相同应变所需的应力越大。它是材料本身的固有属性，与杆的具体尺寸无关，通常由实验测定并列在参考表中（如钢约为 $2.0 \times 10^{11}\ \text{Pa}$，铝约为 $7.0 \times 10^{10}\ \text{Pa}$，橡胶仅约 $10^6$–$10^7\ \text{Pa}$）。</p>
+<p><strong>例题</strong></p>
+<p>一根长 $L_0 = 2.0\ \text{m}$、横截面积 $A = 4.0 \times 10^{-6}\ \text{m}^2$ 的钢丝，悬挂一个质量 $m = 50\ \text{kg}$ 的物体。已知钢的杨氏模量 $Y = 2.0 \times 10^{11}\ \text{Pa}$，求钢丝的伸长量。</p>
+<p>拉力 $F = mg = 50 \times 9.8 = 490\ \text{N}$，应力 $\sigma = F/A = 490 / (4.0\times10^{-6}) = 1.225\times10^8\ \text{Pa}$。</p>
+<p>由 $Y = \sigma / \epsilon$ 得应变 $\epsilon = \sigma / Y = 1.225\times10^8 / 2.0\times10^{11} = 6.1\times10^{-4}$。</p>
+<p>伸长量 $\Delta L = \epsilon \cdot L_0 = 6.1\times10^{-4} \times 2.0 \approx 1.2\ \text{mm}$。</p>
+<p><strong>问题解决应用</strong></p>
+<p>在工程设计中，杨氏模量常用来反推材料在给定载荷下能否安全工作，或反过来根据允许的最大形变量确定横截面积。将公式改写为 $\Delta L = \dfrac{FL_0}{AY}$ 后，可以看出：加长构件、减小截面积或选用较"软"（$Y$ 小）的材料都会使形变增大。设计桥梁缆索或建筑钢梁时，工程师正是利用这一关系，结合材料的弹性极限，选择合适的截面尺寸，使实际形变和应力都控制在安全范围之内。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

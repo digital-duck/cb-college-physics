@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electron Charge | College Physics Ch30</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="electron-charge">Electron Charge</h2>
+<p><strong>定义</strong></p>
+<p>电子电荷 $e$ 是自然界中电荷量子化的基本单位，其数值为</p>
+$$
+e = 1.60 \times 10^{-19}\ \text{C}
+$$
+<p>密立根油滴实验（1909年）首次精确测定了这一常数：通过测量悬浮在电场中的带电油滴所受的电场力与重力平衡时的电场强度，密立根发现所有油滴携带的电荷量都是某个最小值的整数倍。这一最小值即为 $e$。换言之，任意宏观带电体的电荷 $q$ 满足</p>
+$$
+q = n e, \quad n \in \mathbb{Z}
+$$
+<p>其中 $n$ 为正负整数，表示多余或缺少的电子数目。电子本身带电荷 $-e$，质子带电荷 $+e$，而中子不带电。这种"电荷量子化"是电磁学中一个基本的实验事实，与电荷本身无法连续取任意值这一深层规律相对应。</p>
+<p><strong>范例：由已知电荷求电子数目</strong></p>
+<p>一个金属球通过摩擦带上 $q = -3.2 \times 10^{-9}\ \text{C}$ 的电荷。求该球上多余的电子数目。</p>
+<p>由 $q = ne$，解出</p>
+$$
+n = \frac{q}{e} = \frac{3.2 \times 10^{-9}\ \text{C}}{1.60 \times 10^{-19}\ \text{C}} = 2.0 \times 10^{10}
+$$
+<p>即该金属球上多出约 $2 \times 10^{10}$ 个电子（负号表示电子过剩，取绝对值计算数目）。</p>
+<p><strong>问题求解应用</strong></p>
+<p>电荷量子化原理在实际计算中常用于将宏观测得的电荷量转换为微观粒子数目，这在电容器充放电分析、静电感应问题以及半导体器件中的载流子计数中都极为常见。例如，若已知某电流 $I$ 持续时间 $t$ 内转移的电荷为 $q = It$（库仑），则通过电子的粒子数目为 $n = q/e = It/e$。这一关系将宏观可测的电流、电压等物理量与微观离散的电子数目联系起来，是理解半导体掺杂浓度、电解过程中析出物质的量（法拉第电解定律）以及量子霍尔效应等现象的基础工具。掌握 $q = ne$ 这一简单却深刻的关系式，是从经典电磁学过渡到微观电荷载流子物理的第一步。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch30: Atomic Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

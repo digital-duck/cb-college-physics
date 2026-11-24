@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Permittivity Of Free Space | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="permittivity-of-free-space">Permittivity Of Free Space</h2>
+<h3 id="definition">Definition</h3>
+<p>The <strong>permittivity of free space</strong>, $\varepsilon_0$, is the constant that sets the strength of electric interactions in a vacuum. It appears in Coulomb's law for the force between two point charges $q_1$ and $q_2$ separated by a distance $r$:</p>
+$$F = \frac{1}{4\pi\varepsilon_0}\,\frac{|q_1 q_2|}{r^2}$$
+<p>Its value is</p>
+$$\varepsilon_0 \approx 8.854\times10^{-12}\ \mathrm{C^2\,N^{-1}\,m^{-2}} = 8.854\times10^{-12}\ \mathrm{F/m}.$$
+<p>A small $\varepsilon_0$ means the vacuum "permits" little electric field to form per unit charge, so charges interact strongly. The familiar constant $k = \dfrac{1}{4\pi\varepsilon_0} \approx 8.99\times10^{9}\ \mathrm{N\,m^2/C^2}$ is just a repackaging of it.</p>
+<p>The same constant appears in Gauss's law, which is where the factor of $4\pi$ comes from. The field of a point charge $Q$ is $E = \dfrac{Q}{4\pi\varepsilon_0 r^2}$. The flux through a closed surface is then</p>
+$$\oint \vec{E}\cdot d\vec{A} = \frac{Q_{\text{enc}}}{\varepsilon_0}.$$
+<p>Because the sphere's area is $4\pi r^2$, writing Coulomb's law with $4\pi$ in the denominator removes the $4\pi$ from Gauss's law. It also connects $\varepsilon_0$ to light. With the magnetic constant $\mu_0$, Maxwell's equations give</p>
+$$c = \frac{1}{\sqrt{\mu_0\varepsilon_0}}.$$
+<h3 id="worked-example">Worked example</h3>
+<p>Find the force between a proton and an electron in hydrogen, separated by $r = 5.3\times10^{-11}$ m (the Bohr radius). Each charge has magnitude $e = 1.60\times10^{-19}$ C.</p>
+$$F = \frac{(1.60\times10^{-19})^2}{4\pi(8.854\times10^{-12})(5.3\times10^{-11})^2}$$
+<p>Numerator: $2.56\times10^{-38}$. Denominator: $4\pi(8.854\times10^{-12}) = 1.113\times10^{-10}$, and $(5.3\times10^{-11})^2 = 2.81\times10^{-21}$, so the denominator is $3.13\times10^{-31}$.</p>
+$$F \approx 8.2\times10^{-8}\ \text{N}$$
+<p>The force is tiny in everyday terms, but it acts on an electron of mass $9.11\times10^{-31}$ kg. That gives an acceleration of about $9\times10^{22}\ \mathrm{m/s^2}$.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem.</strong> Two small spheres, each carrying $+2.0\ \mu\text{C}$, repel with a force of 0.10 N. How far apart are they?</p>
+<p>Solve Coulomb's law for $r$:</p>
+$$r = \sqrt{\frac{q^2}{4\pi\varepsilon_0 F}}$$
+<p>Substitute $q = 2.0\times10^{-6}$ C, so $q^2 = 4.0\times10^{-12}$ C². The denominator is $1.113\times10^{-10}\times 0.10 = 1.113\times10^{-11}$.</p>
+$$r = \sqrt{\frac{4.0\times10^{-12}}{1.113\times10^{-11}}} = \sqrt{0.359} \approx 0.60\ \text{m}$$
+<p><strong>Strategy.</strong> Keep $\varepsilon_0$ in your formulas, because it carries over to other settings:</p>
+<li><strong>Parallel-plate capacitor.</strong> $C = \varepsilon_0 A/d$.</li>
+<li><strong>Dielectrics.</strong> In a material, replace $\varepsilon_0$ with $\varepsilon = \kappa\varepsilon_0$. The dielectric constant $\kappa$ is $\approx 80$ for water, so forces between charges in water are about 80 times weaker than in vacuum.</li>
+<li><strong>Units check.</strong> $\varepsilon_0$ in $\mathrm{F/m}$ gives capacitance directly, and in $\mathrm{C^2\,N^{-1}\,m^{-2}}$ gives force directly. The two forms are identical.</li>
+<pre class="mermaid">flowchart LR
+    E[ε₀] --> C[Coulomb's law: F = q1 q2 / 4πε₀r²]
+    E --> G[Gauss's law: flux = Q / ε₀]
+    E --> K[Capacitance: C = ε₀A/d]
+    E --> L[Speed of light: c = 1/√μ₀ε₀]</pre>
+<p><em>One constant, $\varepsilon_0$, links electrostatic force, flux, capacitance, and the speed of light.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

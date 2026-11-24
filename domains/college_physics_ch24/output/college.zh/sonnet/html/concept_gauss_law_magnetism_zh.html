@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gauss Law Magnetism | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="gauss-law-magnetism">Gauss Law Magnetism</h2>
+<p><strong>定义</strong></p>
+<p>高斯磁定律是麦克斯韦方程组之一，指出通过任意闭合曲面的磁通量恒为零：</p>
+$$
+\oint_S \vec{B} \cdot d\vec{A} = 0
+$$
+<p>这里 $\vec{B}$ 是磁场，$d\vec{A}$ 是曲面上的面积元向量，积分遍及整个闭合曲面 $S$。这一结果的物理含义十分明确：自然界中不存在磁单极子——任何磁场线都不会凭空产生或消失，它们必然形成闭合回路，或从无穷远延伸至无穷远。与之对照的是高斯电场定律 $\oint_S \vec{E} \cdot d\vec{A} = Q_{enc}/\varepsilon_0$，其右端可以非零，因为存在孤立的正、负电荷；而磁场方程的右端恒为零，因为找不到孤立的"磁荷"。用微分形式表示，该定律等价于：</p>
+$$
+\nabla \cdot \vec{B} = 0
+$$
+<p>即磁场是一个无散场，处处不存在"源头"或"汇点"。</p>
+<p><strong>范例解析</strong></p>
+<p>考虑一根长直载流导线周围的磁场，其磁场线是围绕导线的同心圆。取一个以导线为轴、半径为 $r$、高度为 $h$ 的圆柱面作为高斯面。磁场线沿圆周方向平行于圆柱侧面，因此穿过侧面的磁通量为零；而圆柱的上、下底面平行于导线，磁场线掠过底面却不穿透它，故底面通量也为零。总通量为零，与高斯磁定律吻合——这直观说明了磁场线为何必须闭合成环，而不能像电场线那样从一个点"辐射"出去。</p>
+<p><strong>问题求解应用</strong></p>
+<p>高斯磁定律常被用来检验一个给定的矢量场是否可能是真实的磁场。例如，若某习题给出候选磁场</p>
+$$
+\vec{B} = (3x)\hat{i} + (2y)\hat{j} + (kz)\hat{k}
+$$
+<p>要求确定常数 $k$ 使其满足麦克斯韦方程，可直接计算散度：</p>
+$$
+\nabla \cdot \vec{B} = 3 + 2 + k = 0 \implies k = -5
+$$
+<p>只有当 $k=-5$ 时，该场才具有物理可实现性。这类"验场"问题是电磁学考试中的常见题型：先求散度，令其为零，再解出未知参数。同理，在分析螺线管、亥姆霍兹线圈等复杂磁体结构时，工程师也依赖 $\nabla \cdot \vec{B}=0$ 来验证数值模拟或实验测量数据的自洽性——任何非零散度都意味着测量误差或计算错误，而非真实存在的磁荷。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

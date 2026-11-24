@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isothermal Process | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="isothermal-process">Isothermal Process</h2>
+<p><strong>定义</strong></p>
+<p>等温过程是理想气体在恒定温度下发生的热力学过程，即 $T = \text{常数}$，$dT = 0$。对于理想气体，内能仅是温度的函数：$U = nC_V T$。既然温度不变，内能变化为零：</p>
+$$
+\Delta U = 0
+$$
+<p>由热力学第一定律 $\Delta U = Q - W$（其中 $W$ 为系统对外做的功），可得等温过程中净热量传递恰好等于系统对外做的净功：</p>
+$$
+Q = W
+$$
+<p>这意味着气体吸收的所有热量都转化为对外做功，没有任何部分用于提高内能——这是等温过程区别于绝热、等压、等容过程的核心特征。</p>
+<p>由理想气体状态方程 $pV = nRT$，在温度不变时，$p$ 与 $V$ 成反比，其 $p$-$V$ 图上的轨迹是一条等温线（双曲线的一支）。</p>
+<p><strong>推导：等温膨胀的功</strong></p>
+<p>对于准静态可逆等温过程，系统所做的功为：</p>
+$$
+W = \int_{V_1}^{V_2} p \, dV = \int_{V_1}^{V_2} \frac{nRT}{V} \, dV = nRT \ln\!\left(\frac{V_2}{V_1}\right)
+$$
+<p>由于 $T$ 恒定，可直接提到积分号外。当气体膨胀（$V_2 > V_1$）时 $W > 0$，气体对外做正功；压缩时则 $W < 0$。</p>
+<p><strong>例题</strong></p>
+<p>1 mol 理想气体在 $T = 300\ \text{K}$ 下，从 $V_1 = 10\ \text{L}$ 等温膨胀到 $V_2 = 20\ \text{L}$。求气体吸收的热量。</p>
+$$
+W = nRT \ln\!\left(\frac{V_2}{V_1}\right) = (1)(8.314)(300)\ln(2) \approx 1729\ \text{J}
+$$
+<p>由 $Q = W$，气体从环境吸收约 $1729\ \text{J}$ 的热量，全部转化为对外做的功，内能不变。</p>
+<p><strong>问题求解应用</strong></p>
+<p>等温过程常用于分析卡诺循环中的等温吸热与放热阶段，以及压缩机、气体储罐缓慢泄压等实际工程场景。解题关键步骤：先确认过程是否足够缓慢以维持热平衡（准静态假设），再用 $pV = nRT$ 求出未知的 $p$、$V$ 或 $n$，最后用对数功公式求 $W$ 与 $Q$。需特别注意符号约定：气体膨胀对外做正功，此时须从外界吸热以维持内能不变；若为压缩过程，则气体向外界放热。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

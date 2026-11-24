@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medical Imaging | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="medical-imaging">Medical Imaging</h2>
+<p><strong>定义</strong></p>
+<p>核医学成像（Medical Imaging，此处特指核医学显像）利用放射性药物（radiopharmaceuticals）在体内的生物分布，结合辐射探测器记录其衰变产生的光子，从而生成反映器官功能与代谢状态的图像。与X光、CT等"解剖成像"不同，核医学显像是"功能成像"——它显示的不是组织的形状，而是组织的活性。放射性药物通常由两部分组成：一个能被特定器官或病灶摄取的化学载体（如葡萄糖类似物），加上一个发射伽马射线或正电子的放射性核素（如 $^{99m}\text{Tc}$、$^{18}\text{F}$）。核素衰变遵循指数规律：</p>
+$$
+N(t) = N_0 e^{-\lambda t}, \qquad \lambda = \frac{\ln 2}{T_{1/2}}
+$$
+<p>其中 $T_{1/2}$ 为半衰期，$\lambda$ 为衰变常数。半衰期必须足够短以限制患者辐射剂量，又要足够长以完成显像。</p>
+<p><strong>探测原理</strong></p>
+<p>Anger 伽马相机是核医学成像的基础设备：闪烁晶体（如碘化钠）吸收伽马光子并转化为可见光闪烁，多个光电倍增管（PMT）阵列通过比较各自接收到的光强，用加权重心法反推光子入射的二维坐标，从而重建平面图像。</p>
+<p>SPECT（单光子发射计算机断层成像）让伽马相机绕患者旋转，从多个角度采集平面投影，再用滤波反投影或迭代算法重建三维断层图像，原理与CT类似，但探测的是体内放射源而非外部X光穿透。</p>
+<p>PET（正电子发射断层成像）使用发射正电子的核素（如 $^{18}\text{F}$-FDG）。正电子在组织中very快与电子湮灭，产生一对方向相反、能量各为511 keV的伽马光子。探测器环通过"符合探测"（两个探测器在极短时间窗内同时接收到光子）确定湮灭发生在连接两探测器的直线上，从而无需机械准直即可高精度定位。</p>
+<p><strong>问题解决应用</strong></p>
+<p>假设某患者注射 $^{18}\text{F}$-FDG（半衰期 110 分钟），初始活度为 $370\ \text{MBq}$。若显像需在注射后 2 小时进行，此时体内剩余活度为：</p>
+$$
+A(t) = A_0 e^{-\lambda t}, \quad \lambda = \frac{\ln 2}{110}\approx 0.0063\ \text{min}^{-1}
+$$
+$$
+A(120) = 370 \times e^{-0.0063\times120} \approx 370\times 0.472 \approx 175\ \text{MBq}
+$$
+<p>临床医师需据此权衡：延迟显像会降低信噪比，但能让示踪剂在病灶（如肿瘤）中充分富集，减少背景干扰。这正是核医学实践中剂量、半衰期与显像时机之间典型的定量权衡问题。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rlc Series Circuit | College Physics Ch23</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="rlc-series-circuit">Rlc Series Circuit</h2>
+<p><strong>定义</strong></p>
+<p>RLC串联电路由电阻 $R$、电感 $L$、电容 $C$ 与交流电源依次串联构成。由于三个元件通过同一电流 $I$,分析的核心是各元件电压相位不同:电阻电压与电流同相,电感电压超前电流 $90°$,电容电压滞后电流 $90°$。引入复数阻抗可将这种相位关系统一处理。电阻的阻抗为 $Z_R = R$,电感的阻抗为 $Z_L = j\omega L$,电容的阻抗为 $Z_C = \dfrac{1}{j\omega C}$,其中 $\omega = 2\pi f$ 为角频率,$j = \sqrt{-1}$。串联电路总阻抗为三者之和:</p>
+$$
+Z = R + j\left(\omega L - \frac{1}{\omega C}\right)
+$$
+<p>其模长 $|Z| = \sqrt{R^2 + (\omega L - 1/\omega C)^2}$ 决定电流幅值 $I = V/|Z|$,幅角 $\varphi = \arctan\!\left(\dfrac{\omega L - 1/\omega C}{R}\right)$ 决定电流与电压的相位差,即功率因数 $\cos\varphi$。</p>
+<p>当 $\omega L = \dfrac{1}{\omega C}$ 时,虚部为零,阻抗达到最小值 $R$,电流达到最大值,此现象称为<strong>谐振</strong>,对应的谐振角频率为</p>
+$$
+\omega_0 = \frac{1}{\sqrt{LC}}
+$$
+<p><strong>例题</strong></p>
+<p>设 $R = 10\ \Omega$,$L = 0.1\ \text{H}$,$C = 100\ \mu\text{F}$,电源电压幅值 $V = 100\ \text{V}$,频率 $f = 50\ \text{Hz}$。先求 $\omega = 2\pi(50) \approx 314\ \text{rad/s}$,再算 $\omega L \approx 31.4\ \Omega$,$1/(\omega C) \approx 31.8\ \Omega$。两者几乎相消,说明电路接近谐振,$|Z| \approx \sqrt{10^2 + 0.4^2} \approx 10.01\ \Omega$,电流幅值约为 $9.99\ \text{A}$,功率因数接近 $1$。</p>
+<p><strong>问题解决应用</strong></p>
+<p>谐振现象是收音机调谐电路的核心原理:调节可变电容 $C$ 改变 $\omega_0$,使其匹配目标电台的载波频率,该频率对应的信号在电路中电流最大、增益最强,从而被选出并放大,而其他频率的信号因阻抗远大于 $R$ 而被有效抑制。工程设计中常用<strong>品质因数</strong> $Q = \dfrac{1}{R}\sqrt{L/C}$ 衡量选择性:$Q$ 越大,谐振峰越尖锐,滤波效果越好,但可用带宽越窄——这体现了选择性与带宽之间的权衡,是滤波器与通信系统设计中反复出现的核心问题。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch23: Electromagnetic Induction, AC Circuits, and Electrical Technologies (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

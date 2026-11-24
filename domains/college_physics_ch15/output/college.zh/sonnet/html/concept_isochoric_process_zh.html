@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isochoric Process | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="isochoric-process">Isochoric Process</h2>
+<p><strong>定义</strong></p>
+<p>等容过程（isochoric process）是指气体在体积保持不变（$\Delta V = 0$）的条件下发生的热力学过程。由于气体做功的定义为 $W = \int p\, dV$，当 $dV = 0$ 时，气体既不对外做功，外界也不对气体做功，即 $W = 0$。这是理解该过程的核心：容器壁固定不动，活塞被锁死或系统本身就是刚性容器，气体只能通过吸热或放热来改变内能和压强，而不能通过膨胀或压缩来交换能量。</p>
+<p>根据热力学第一定律 $\Delta U = Q - W$，在等容过程中 $W = 0$，因此</p>
+$$\Delta U = Q$$
+<p>也就是说，系统吸收的全部热量都转化为内能的增加（或者放出的热量全部来自内能的减少）。对于理想气体，内能只依赖于温度，$\Delta U = n C_V \Delta T$，其中 $C_V$ 是定容摩尔热容。于是等容过程中：</p>
+$$Q = n C_V \Delta T$$
+<p>同时，理想气体状态方程告诉我们，在 $V$ 不变时，压强与温度成正比（盖-吕萨克定律）：</p>
+$$\frac{p_1}{T_1} = \frac{p_2}{T_2}$$
+<p><strong>例题</strong></p>
+<p>一个刚性密闭容器中装有 $2\ \text{mol}$ 单原子理想气体（$C_V = \tfrac{3}{2}R$），初始温度为 $300\ \text{K}$。对气体加热，使温度升高到 $500\ \text{K}$。求气体吸收的热量、做的功以及内能变化。</p>
+<p>由于是等容过程，$W = 0$。</p>
+$$\Delta U = n C_V \Delta T = 2 \times \frac{3}{2}(8.314) \times (500 - 300) = 4988.4\ \text{J}$$
+<p>因为 $W=0$，所以 $Q = \Delta U \approx 4988\ \text{J}$。全部吸收的热量都转化成了内能，气体压强也随之升高（体积不变、温度升高）。</p>
+<p><strong>解题应用</strong></p>
+<p>在 $p$–$V$ 图上，等容过程表现为一条竖直线段，因为体积坐标不变，只有压强坐标移动。这一图像特征常被用来快速识别循环过程（如奥托循环、卡诺循环的某些支路）中哪一段是等容过程，从而判断该段 $W=0$，可以直接跳过做功积分，只需计算 $\Delta U$ 与 $Q$。解题策略：遇到刚性容器、密闭定容加热/冷却、或图上竖直线段时，立即令 $W=0$，将问题简化为纯粹的内能—热量关系，再结合 $pV=nRT$ 求解压强或温度的变化。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

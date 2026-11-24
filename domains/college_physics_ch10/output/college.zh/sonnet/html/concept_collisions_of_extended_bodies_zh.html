@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collisions Of Extended Bodies | College Physics Ch10</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="collisions-of-extended-bodies">Collisions Of Extended Bodies</h2>
+<p><strong>定义</strong></p>
+<p>当两个物体发生碰撞并且系统所受的合外力矩为零时，系统对该转轴的角动量守恒，即使碰撞过程中动能可能不守恒（非弹性碰撞）。这一原理特别适用于扩展体（extended bodies）——具有一定形状和质量分布的刚体——绕固定轴转动或绕某一支点相互作用的情形。角动量定义为 $L = I\omega$，其中 $I$ 是转动惯量，$\omega$ 是角速度。若碰撞发生在极短的时间内，外部冲量矩（如支点反作用力矩）可忽略不计，因此</p>
+$$
+L_{\text{碰前}} = L_{\text{碰后}}
+$$
+<p>即使碰撞中物体发生形变、粘连或摩擦生热，导致动能损失，角动量这一守恒律依然成立——这与线动量碰撞问题中动量守恒但动能未必守恒的逻辑完全类似，只是将"质量与速度"替换为"转动惯量与角速度"。</p>
+<p><strong>范例</strong></p>
+<p>一根长为 $L_0$、质量为 $M$ 的均匀细杆，可绕一端的固定轴自由转动，初始静止。一团质量为 $m$、速度为 $v$ 的黏土水平飞来，垂直击中杆的自由端并粘住。碰撞前，系统对转轴的角动量仅来自黏土：</p>
+$$
+L_i = m v L_0
+$$
+<p>碰撞后，杆与黏土作为一个整体绕轴转动，总转动惯量为</p>
+$$
+I_{\text{总}} = \frac{1}{3}ML_0^2 + mL_0^2
+$$
+<p>由角动量守恒 $L_i = I_{\text{总}}\,\omega_f$，解得碰后角速度：</p>
+$$
+\omega_f = \frac{m v L_0}{\frac{1}{3}ML_0^2 + mL_0^2}
+$$
+<p>可以验证，碰撞前后动能并不相等（多数动能转化为形变热能），但角动量严格守恒。</p>
+<p><strong>问题求解应用</strong></p>
+<p>处理此类问题的关键步骤是：（1）确认转轴位置及外力矩是否为零（支点反作用力通过转轴，力臂为零，故不贡献力矩）；（2）分别计算碰前、碰后系统对该轴的总角动量表达式；（3）令二者相等求解未知量（通常是末角速度或分离后的运动状态）。常见变式包括：子弹嵌入悬挂圆盘、旋转平台上人抓住旋转杆、两个不同转动惯量的圆盘对接后共同转动等。解题时务必区分"角动量守恒"（碰撞瞬间成立）与"机械能守恒"（碰撞中通常不成立），并在碰撞结束后，若无外力矩持续作用，再用能量方法分析后续运动（如摆的最大摆角）。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch10: Rotational Motion and Angular Momentum (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

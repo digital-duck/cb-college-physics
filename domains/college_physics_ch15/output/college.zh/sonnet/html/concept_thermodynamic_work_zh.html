@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamic Work | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="thermodynamic-work">Thermodynamic Work</h2>
+<p><strong>定义</strong></p>
+<p>热力学功是通过宏观、有组织的方式跨越系统边界传递的能量——例如活塞的移动、气体的膨胀或压缩——区别于以无序分子碰撞形式传递的热量 $Q$。对于一个体积可变的流体系统，最基本的形式是"压强-体积功"（$PV$ work）。当系统体积发生微小变化 $dV$ 时，系统对外界做的功为</p>
+$$
+\delta W = P \, dV
+$$
+<p>这里用 $\delta W$ 而非 $dW$，是因为功不是状态函数——它不能写成某个状态量的全微分。这一点至关重要：功的大小依赖于系统所经历的具体路径，而不仅仅是初末状态。将其对整个过程积分，得到有限体积变化下所做的总功：</p>
+$$
+W = \int_{V_1}^{V_2} P \, dV
+$$
+<p><strong>路径依赖性：为什么功不是状态函数</strong></p>
+<p>考虑气体从状态 $(P_1, V_1)$ 变化到状态 $(P_2, V_2)$。若在 $P$-$V$ 图上画出两条不同路径连接这两点，两条路径下方所围的面积（即积分 $\int P\,dV$）通常不相等。这正是"功依赖于路径"的几何体现：路径的形状（即 $P$ 如何随 $V$ 变化）决定了 $W$ 的数值，即使起点和终点相同。</p>
+<p><strong>分步计算实例</strong></p>
+<p>设 $1\ \text{mol}$ 理想气体在 $T = 300\ \text{K}$ 下等温膨胀，体积从 $V_1 = 0.010\ \text{m}^3$ 增大到 $V_2 = 0.020\ \text{m}^3$。由理想气体状态方程 $PV = nRT$，得 $P = nRT/V$，代入积分：</p>
+$$
+W = \int_{V_1}^{V_2} \frac{nRT}{V}\, dV = nRT \ln\!\left(\frac{V_2}{V_1}\right)
+$$
+<p>代入数值（$n=1$，$R = 8.314\ \text{J/(mol·K)}$）：</p>
+$$
+W = (1)(8.314)(300)\ln(2) \approx 1729\ \text{J}
+$$
+<p><strong>应用于问题求解</strong></p>
+<p>若同样的气体改走两步路径——先恒压膨胀到 $V_2$，再恒容降压——总功将等于第一步矩形面积 $P_1(V_2-V_1)$，与上述等温路径的对数结果不同。求解此类问题的关键步骤是：先确定过程类型（等温、等压、等容或绝热），代入相应的 $P(V)$ 关系式，再执行积分——这正是热力学第一定律 $\Delta U = Q - W$ 分析中计算 $W$ 项的标准方法。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

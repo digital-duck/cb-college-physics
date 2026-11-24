@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coriolis Force | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="coriolis-force">Coriolis Force</h2>
+<p>In a rotating reference frame, an object moving with velocity $\vec{v}$ relative to that frame experiences an apparent deflection described by the Coriolis acceleration:</p>
+$$\vec{a}_{\text{cor}} = -2\vec{\Omega} \times \vec{v}$$
+<p>where $\vec{\Omega}$ is the angular velocity vector of the rotating frame (for Earth, pointing along its rotation axis, magnitude $\Omega = 7.292 \times 10^{-5}\ \text{rad/s}$). This is not a real force — no physical interaction produces it — but an artifact of describing motion from within a frame that is itself accelerating (rotating). Observers in the rotating frame must include it, alongside the centrifugal term $-\vec{\Omega} \times (\vec{\Omega} \times \vec{r})$, to make Newton's second law balance correctly.</p>
+<p><strong>Worked example.</strong> Consider a projectile fired horizontally northward at latitude $\phi$ with speed $v$. The local vertical component of $\vec{\Omega}$ is $\Omega \sin\phi$, so the horizontal deflection acceleration has magnitude $2\Omega v \sin\phi$, directed eastward in the Northern Hemisphere (to the right of motion) and westward in the Southern Hemisphere (to the left). At $\phi = 45^\circ$ and $v = 300\ \text{m/s}$ (an artillery shell), the deflection acceleration is:</p>
+$$a = 2(7.292\times10^{-5})(300)\sin 45^\circ \approx 0.031\ \text{m/s}^2$$
+<p>Over a 30-second flight, the lateral displacement $\Delta x \approx \tfrac{1}{2}a t^2 \approx 14\ \text{m}$ — small per second, but enough to require ballistic corrections for long-range artillery.</p>
+<p><strong>Problem-solving application.</strong> The Coriolis force governs large-scale atmospheric and oceanic circulation: it deflects poleward-moving air to the east and equatorward-moving air to the west, producing the characteristic counterclockwise rotation of Northern Hemisphere cyclones (and clockwise in the Southern Hemisphere). To solve for the geostrophic wind — the balance between the pressure-gradient force and the Coriolis force in the free atmosphere — set $2\Omega v \sin\phi = \frac{1}{\rho}\frac{dP}{dn}$ and solve for $v$. This single balance equation lets meteorologists estimate wind speed directly from a pressure map's isobar spacing, without simulating the full fluid dynamics.</p>
+<pre class="mermaid">graph TD
+    A[Object moves with velocity v in rotating frame] --> B[Rotating frame has angular velocity Omega]
+    B --> C[Apparent force -2 Omega x v arises]
+    C --> D[Northern Hemisphere: deflects right]
+    C --> E[Southern Hemisphere: deflects left]
+    D --> F[Cyclones rotate counterclockwise]
+    E --> G[Cyclones rotate clockwise]</pre>
+<p><em>How rotational frame motion produces hemisphere-dependent deflection and observed storm rotation direction.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

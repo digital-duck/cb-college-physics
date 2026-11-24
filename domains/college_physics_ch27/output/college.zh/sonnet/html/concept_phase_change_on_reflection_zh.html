@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phase Change On Reflection | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="phase-change-on-reflection">Phase Change On Reflection</h2>
+<p><strong>定义</strong></p>
+<p>当光从光密介质（折射率较小，$n_1$）入射到光疏介质（折射率较大，$n_2 > n_1$）的界面并发生反射时，反射光会产生半波长（$\lambda/2$）的相位突变，等价于相位改变 $\pi$（180°）。这一现象称为<strong>反射相位突变</strong>（也叫"光疏到光密反射的半波损失"）。</p>
+<p>其物理根源在于电磁波在界面处必须满足边界条件（电场、磁场的切向分量连续）。对于垂直入射的情形，反射系数由菲涅尔公式给出：</p>
+$$
+r = \frac{n_1 - n_2}{n_1 + n_2}
+$$
+<p>当 $n_2 > n_1$ 时，$r < 0$，负号即代表反射波与入射波相位相差 $\pi$，等效于反射波少走（或多走）半个波长。反之，若光从光密介质射向光疏介质（$n_1 > n_2$），$r > 0$，<strong>不发生</strong>相位突变。</p>
+<p><strong>范例</strong></p>
+<p>考虑肥皂膜（$n \approx 1.33$）悬浮在空气（$n=1$）中。光线从空气射向膜的上表面时，是从光疏（$n=1$）射向光密（$n=1.33$），因此上表面反射产生 $\pi$ 相移，相当于额外光程 $\lambda/2$。而光线到达膜的下表面（从水膜射向空气）时，是从光密射向光疏，此处反射<strong>不</strong>产生相移。这一不对称性正是薄膜干涉计算中容易出错的关键点。</p>
+<p><strong>解题应用</strong></p>
+<p>在处理薄膜干涉（如增透膜、彩虹色油膜、牛顿环）问题时，正确计算两束反射光之间的光程差 $\Delta$ 是核心。设膜厚为 $t$，膜折射率为 $n$，光垂直入射，若两个反射面恰好一个有半波损失、另一个没有，则总光程差需额外加上（或减去）$\lambda/2$：</p>
+$$
+\Delta = 2nt \pm \frac{\lambda}{2}
+$$
+<p>例如，肥皂膜情形（上表面有半波损失，下表面没有）：</p>
+<li>相长干涉（亮纹）条件：$2nt = \left(m+\tfrac{1}{2}\right)\lambda$</li>
+<li>相消干涉（暗纹）条件：$2nt = m\lambda$，$m=0,1,2,\dots$</li>
+<p><strong>练习</strong>：某增透膜镀在玻璃（$n_g=1.5$）表面，膜的折射率为 $n=1.38$，两个界面（空气→膜、膜→玻璃）是否都发生半波损失？若两处都发生（或都不发生），净相移抵消，此时光程差公式中不再需要加 $\lambda/2$ 修正项——这正是设计增透膜时必须仔细核对的第一步。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

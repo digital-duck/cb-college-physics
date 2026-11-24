@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Longitudinal Wave | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="longitudinal-wave">Longitudinal Wave</h2>
+<p>A <strong>longitudinal wave</strong> is a wave in which particles of the medium oscillate <em>parallel</em> to the direction the wave travels. The disturbance appears as alternating regions of <strong>compression</strong> (particles crowded, high pressure) and <strong>rarefaction</strong> (particles spread out, low pressure). Sound in air is the standard example. Compare this with a transverse wave, where the motion is perpendicular to propagation.</p>
+<p>For a harmonic longitudinal wave moving in the $+x$ direction, the displacement of a particle from equilibrium is</p>
+$$s(x,t) = s_{\max}\cos(kx - \omega t),$$
+<p>where $k = 2\pi/\lambda$ is the wave number and $\omega = 2\pi f$ is the angular frequency. The wave speed is $v = f\lambda = \omega/k$. Pressure variation is a quarter-cycle out of phase with displacement:</p>
+$$\Delta p(x,t) = -B\,\frac{\partial s}{\partial x} = B k s_{\max}\sin(kx - \omega t),$$
+<p>where $B$ is the bulk modulus. The speed depends on the medium:</p>
+$$v = \sqrt{\frac{B}{\rho}} \quad\text{(fluids)}, \qquad v = \sqrt{\frac{Y}{\rho}} \quad\text{(thin solid rods, Young's modulus } Y).$$
+<p>Pressure is maximal where displacement is zero, because that is where neighboring particles are being squeezed together most strongly.</p>
+<pre class="mermaid">flowchart LR
+    A[Source oscillates along x] --> B[Compression forms]
+    B --> C[Rarefaction follows]
+    C --> D[Pattern travels along x]
+    D --> E[Particles shift back and forth parallel to x]</pre>
+<p><em>A longitudinal pulse: the pattern advances while each particle only oscillates about its equilibrium position.</em></p>
+<h3 id="worked-example">Worked example</h3>
+<p>A speaker emits a 440 Hz tone in air at 20 °C, where $v = 343\ \text{m/s}$. Find the wavelength and the distance between a compression and the nearest rarefaction.</p>
+$$\lambda = \frac{v}{f} = \frac{343}{440} \approx 0.78\ \text{m}.$$
+<p>A compression and the adjacent rarefaction are half a wavelength apart: $\lambda/2 \approx 0.39\ \text{m}$.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem.</strong> Sound travels through water ($B = 2.2\times10^9\ \text{Pa}$, $\rho = 1000\ \text{kg/m}^3$). A sonar pulse is sent to the seafloor and its echo returns after 0.80 s. How deep is the water?</p>
+<p><strong>Step 1: Speed.</strong></p>
+$$v = \sqrt{\frac{2.2\times10^9}{1000}} \approx 1.5\times10^3\ \text{m/s}.$$
+<p><strong>Step 2: Path length.</strong> The pulse travels down and back, so the total distance is $vt = (1.5\times10^3)(0.80) = 1.2\times10^3$ m.</p>
+<p><strong>Step 3: Depth.</strong> Divide by 2:</p>
+$$d = \frac{vt}{2} \approx 600\ \text{m}.$$
+<p><strong>Check.</strong> The speed in water (~1500 m/s) is about 4 times that in air. This is reasonable, since water's much larger $B$ outweighs its larger density $\rho$.</p>
+<p><strong>Key takeaways.</strong> Identify the wave as longitudinal when particle motion is along the travel direction. Use $v = f\lambda$ for kinematics and $v=\sqrt{\text{stiffness}/\text{density}}$ for the medium. Remember that echo problems involve a round trip.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

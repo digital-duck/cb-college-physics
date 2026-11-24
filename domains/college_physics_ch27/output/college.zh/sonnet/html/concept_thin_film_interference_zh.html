@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thin Film Interference | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="thin-film-interference">Thin Film Interference</h2>
+<p><strong>定义</strong></p>
+<p>薄膜干涉是光在薄膜（如肥皂泡、油膜或光学镀膜）的上表面和下表面分别反射后，两束反射光相遇发生叠加所产生的干涉现象。由于薄膜厚度通常与可见光波长（约 $400$–$700\,\text{nm}$）相当，两束反射光之间会产生固定的相位差，导致某些波长的光相长干涉（增强）、另一些波长相消干涉（减弱），从而使薄膜呈现出随厚度、观察角度和折射率变化的彩色条纹。</p>
+<p>两束反射光的总相位差由两部分组成：一是光程差引入的相位差，二是反射本身可能引入的相位突变。当光从折射率较小的介质入射到折射率较大的介质并发生反射时，会产生 $\pi$（半波长）的相位跃变；若从光密介质射向光疏介质反射，则无此跃变。</p>
+<p>对于垂直入射（或近似垂直入射）、厚度为 $t$、折射率为 $n_2$ 的薄膜（上方介质折射率 $n_1$，下方介质折射率 $n_3$），下表面反射光比上表面反射光多走的光程为 $2n_2t$。若考虑只有一次半波损失（例如空气—薄膜—玻璃，$n_1<n_2<n_3$），则：</p>
+<li>相长干涉（薄膜显亮，对应某波长）条件：</li>
+$$2n_2t=\left(m+\tfrac{1}{2}\right)\lambda,\quad m=0,1,2,\dots$$
+<li>相消干涉（该波长被抵消）条件：</li>
+$$2n_2t=m\lambda,\quad m=0,1,2,\dots$$
+<p>若上下表面反射均有半波损失或均无半波损失（例如空气—薄膜—空气型的肥皂膜），两个条件恰好互换。</p>
+<p><strong>例题</strong></p>
+<p>一层折射率 $n=1.33$ 的肥皂膜悬于空气中（上下均为空气，只有上表面反射有半波损失）。若某处膜厚 $t=280\,\text{nm}$，求该处在可见光范围内哪个波长发生相长干涉（反射增强）。</p>
+<p>由于上下表面反射条件不同（一次半波损失），相长干涉条件为 $2nt=(m+\tfrac12)\lambda$，即 $\lambda=\dfrac{2nt}{m+\tfrac12}$。代入 $2nt=2(1.33)(280\,\text{nm})\approx745\,\text{nm}$：</p>
+<li>$m=0$：$\lambda\approx1490\,\text{nm}$（红外，不可见）</li>
+<li>$m=1$：$\lambda\approx497\,\text{nm}$（蓝绿色，可见）</li>
+<li>$m=2$：$\lambda\approx298\,\text{nm}$（紫外，不可见）</li>
+<p>因此该处膜面主要反射波长约 $497\,\text{nm}$ 的蓝绿光，这正是肥皂泡表面呈现斑斓色彩变化的物理原因——厚度的微小差异会使不同波长满足相长条件，从而在膜面各处显现不同颜色。这一原理也被应用于设计增透膜与高反射镀膜：通过精确控制镀层厚度与折射率，可使特定波长的光相消或相长，从而减少反射损耗或提高反射效率。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

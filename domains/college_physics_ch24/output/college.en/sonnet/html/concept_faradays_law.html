@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faradays Law | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="faradays-law">Faradays Law</h2>
+<p><strong>Definition.</strong> A changing magnetic flux through a loop of wire induces an electromotive force (emf) in that loop. Magnetic flux through a flat surface of area $A$ in a uniform field $B$ is</p>
+$$\Phi = BA\cos\theta,$$
+<p>where $\theta$ is the angle between $\vec B$ and the surface normal. Faraday's law states that for a coil of $N$ turns, the induced emf is</p>
+$$\mathcal{E} = -N\,\frac{\Delta\Phi}{\Delta t}.$$
+<p>Flux is measured in webers ($1\ \text{Wb} = 1\ \text{T·m}^2$), and emf in volts. The minus sign is Lenz's law. The induced emf drives a current whose own magnetic field opposes the <em>change</em> in flux that produced it. Because the flux through each turn adds, $N$ turns multiply the emf by $N$. Flux can change in three ways: $B$ changes, $A$ changes, or $\theta$ changes. Any one of these is enough to induce an emf.</p>
+<p><strong>Worked example.</strong> A coil has $N = 200$ turns, each of area $A = 0.010\ \text{m}^2$. It sits with its normal parallel to a field ($\theta = 0$) that drops uniformly from $0.80\ \text{T}$ to $0.20\ \text{T}$ in $0.30\ \text{s}$. Find the induced emf.</p>
+<li>Initial flux per turn: $\Phi_i = (0.80)(0.010) = 8.0\times10^{-3}\ \text{Wb}$.</li>
+<li>Final flux per turn: $\Phi_f = (0.20)(0.010) = 2.0\times10^{-3}\ \text{Wb}$.</li>
+<li>Change: $\Delta\Phi = -6.0\times10^{-3}\ \text{Wb}$.</li>
+<li>Emf:</li>
+$$\mathcal{E} = -200\,\frac{-6.0\times10^{-3}}{0.30} = +4.0\ \text{V}.$$
+<p>The positive sign means the induced current produces a field in the <em>same</em> direction as the original, opposing the decrease in flux.</p>
+<p><strong>Problem-solving application.</strong> A generator is a coil rotating in a uniform field. Take a coil with $N = 50$ turns, $A = 0.020\ \text{m}^2$, in $B = 0.50\ \text{T}$, turning at $\omega$. Then $\theta = \omega t$, so $\Phi = BA\cos\omega t$. Taking the limit of small $\Delta t$ gives</p>
+$$\mathcal{E} = -N\frac{d\Phi}{dt} = NBA\omega\sin\omega t.$$
+<p>The peak emf is $\mathcal{E}_{\max} = NBA\omega$. At 60 Hz, $\omega = 2\pi(60) = 377\ \text{rad/s}$, so</p>
+$$\mathcal{E}_{\max} = (50)(0.50)(0.020)(377) \approx 189\ \text{V}.$$
+<p>The emf is largest when the loop is <em>parallel</em> to the field ($\theta = 90^\circ$). At that moment the flux is zero but changing fastest. The emf is zero when the flux is at its maximum, because the flux is momentarily not changing there.</p>
+<p><strong>Strategy for any Faraday problem:</strong></p>
+<li>Write $\Phi$ as a function of the quantities that change.</li>
+<li>Compute $\Delta\Phi$ (or differentiate) per turn.</li>
+<li>Multiply by $N$ and divide by $\Delta t$.</li>
+<li>Use the sign and Lenz's law to find the current direction.</li>
+<p>Note that the law uses the rate of change, not the flux itself. A large but constant flux induces nothing.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

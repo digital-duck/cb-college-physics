@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proper Time | College Physics Ch28</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="proper-time">Proper Time</h2>
+<p><strong>定义</strong></p>
+<p>固有时（proper time）$\Delta t_0$ 是指相对于某一事件静止的观察者所测得的时间间隔。更精确地说，如果一个时钟与某一物理过程（如粒子衰变、心跳、光信号的发射与接收）处于同一位置且相对静止，那么该时钟所记录的时间间隔就是这一过程的固有时。这是一个<strong>不变量</strong>（invariant）——无论哪个惯性参考系的观察者来描述这一事件，固有时的数值都相同，因为它是由处在事件发生地点、与事件共同运动的那一个时钟直接测得的，不涉及"从远处观察正在运动的时钟"这一相对论效应。</p>
+<p>与固有时相对的是<strong>坐标时</strong>（coordinate time）$\Delta t$，即相对于事件做相对运动的观察者所测得的时间间隔。两者由时间膨胀公式联系：</p>
+$$\Delta t = \gamma \, \Delta t_0 = \frac{\Delta t_0}{\sqrt{1 - v^2/c^2}}$$
+<p>其中 $v$ 是运动观察者相对于事件静止系的速度，$c$ 是光速，$\gamma$ 是洛伦兹因子。由于 $\gamma \geq 1$，坐标时总是大于或等于固有时——这正是"运动的时钟走得慢"这一说法的精确含义：固有时永远是所有参考系测量结果中<strong>最短</strong>的那一个。</p>
+<p><strong>例题</strong></p>
+<p>一艘宇宙飞船以 $v = 0.8c$ 的速度飞离地球，飞船上的宇航员测得航行历时 $\Delta t_0 = 3$ 年（这是固有时，因为宇航员与飞船——即"事件"发生地——保持相对静止）。地球上的观察者测得的时间是多少？</p>
+$$\gamma = \frac{1}{\sqrt{1 - 0.8^2}} = \frac{1}{\sqrt{0.36}} = \frac{1}{0.6} \approx 1.667$$
+$$\Delta t = \gamma \, \Delta t_0 = 1.667 \times 3 \text{ 年} \approx 5 \text{ 年}$$
+<p><strong>解题应用</strong></p>
+<p>判断一道题中给出的时间是固有时还是坐标时，关键在于问：测量者是否与所讨论的两个事件处于同一空间位置且保持相对静止？若是，该读数即为 $\Delta t_0$，代入公式求 $\Delta t$ 时应乘以 $\gamma$；若测量者观察的是远处正在运动的时钟，则其读数为 $\Delta t$，需除以 $\gamma$ 才能得到固有时。混淆这两者是狭义相对论计算题中最常见的错误。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch28: Special Relativity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

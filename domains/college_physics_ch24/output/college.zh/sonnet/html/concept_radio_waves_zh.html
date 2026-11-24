@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radio Waves | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="radio-waves-无线电波">Radio Waves(无线电波)</h2>
+<p><strong>定义</strong></p>
+<p>无线电波是电磁波谱中频率最低、波长最长的部分，频率范围大致从几赫兹到约 $1\text{ GHz}$，对应波长从数千千米到约 $0.3\text{ m}$。它们由导线和电路中的振荡电流产生：当电荷在天线中做加速运动（即电流随时间变化）时，根据麦克斯韦方程组，变化的电场会激发变化的磁场，二者相互耦合、自我维持地向外辐射，形成横波，以光速 $c \approx 3\times 10^8\text{ m/s}$ 在真空中传播。频率 $f$、波长 $\lambda$ 与光速满足基本关系：</p>
+$$
+c = \lambda f
+$$
+<p>无线电波是电磁波谱的一部分，与可见光、X 射线本质相同，唯一的区别是频率（能量）不同——光子能量 $E = hf$ 表明无线电光子的能量极低，因此无线电波几乎不与物质发生电离作用，这也是它对人体安全、被广泛用于通信的物理原因。</p>
+<p><strong>电路产生原理</strong></p>
+<p>一个简单的 LC 振荡电路（电感 $L$ 与电容 $C$ 并联）中，电荷在电感与电容间往复振荡，其固有振荡频率为：</p>
+$$
+f_0 = \frac{1}{2\pi\sqrt{LC}}
+$$
+<p>天线本质上是把这种电路振荡"辐射"到自由空间的装置。调整 $L$ 或 $C$ 即可改变发射频率——这正是收音机"调台"（调谐电路）的物理基础。</p>
+<p><strong>应用：AM 与 FM 广播</strong></p>
+<p>信息（如声音信号）本身频率很低（几十到几千赫兹），无法直接高效辐射，因此需要通过<strong>调制</strong>加载到高频载波上：</p>
+<li><strong>调幅（AM）</strong>：改变载波的振幅 $A(t)$ 以携带信息，载波频率固定在 $535$–$1605\text{ kHz}$；</li>
+<li><strong>调频（FM）</strong>：改变载波的瞬时频率 $f(t)$ 以携带信息，载波频率在 $88$–$108\text{ MHz}$。</li>
+<p><strong>问题求解练习</strong>：某 FM 电台工作频率为 $101.5\text{ MHz}$，求其波长，并判断该波长与教室尺寸（约 $10\text{ m}$）的关系，说明为何 FM 信号易被建筑物遮挡而 AM 信号能绕射传播更远。</p>
+<p>解：由 $\lambda = c/f = (3\times10^8)/(1.015\times10^8) \approx 2.96\text{ m}$，与教室尺度相当，衍射能力弱，遇障碍物易被阻挡；而 AM 波长可达数百米，远大于普通建筑物尺寸，衍射效应显著，因此传播距离更远、穿透力更强。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

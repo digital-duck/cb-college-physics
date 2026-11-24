@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power Factor | College Physics Ch23</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="power-factor">Power Factor</h2>
+<p><strong>定义</strong></p>
+<p>在交流电路中，电压与电流通常存在相位差 $\phi$。若电压为 $v(t) = V_m \cos(\omega t)$，电流为 $i(t) = I_m \cos(\omega t - \phi)$，则瞬时功率 $p(t) = v(t)i(t)$ 在一个周期内的平均值为：</p>
+$$
+P_{avg} = V_{rms} I_{rms} \cos\phi
+$$
+<p>其中 $V_{rms} = V_m/\sqrt{2}$，$I_{rms} = I_m/\sqrt{2}$。乘积 $V_{rms}I_{rms}$ 称为<strong>视在功率</strong>（apparent power，单位 VA），而真正被负载消耗、转化为有用功（热、光、机械功等）的功率是<strong>有功功率</strong>（active power，单位 W）。两者之比</p>
+$$
+\text{功率因数} = \cos\phi = \frac{P_{avg}}{V_{rms}I_{rms}}
+$$
+<p>就是功率因数（power factor，简写 PF），取值范围为 $[-1, 1]$，通常取绝对值讨论。$\phi>0$ 表示电流滞后电压（感性负载，如电动机、变压器），$\phi<0$ 表示电流超前电压（容性负载）。</p>
+<p><strong>推导要点</strong></p>
+<p>利用积化和差公式展开 $p(t)$：</p>
+$$
+p(t) = V_mI_m\cos(\omega t)\cos(\omega t-\phi) = V_{rms}I_{rms}\left[\cos\phi + \cos(2\omega t - \phi)\right]
+$$
+<p>第二项在一个周期内积分为零，只留下常数项 $V_{rms}I_{rms}\cos\phi$，这正是平均功率的来源。这一步说明：只有电压电流"同相"的那部分能量才转化为持续做功，相位差越大，有效功率占比越小。</p>
+<p><strong>工程应用：为什么工厂要关心功率因数</strong></p>
+<p>某工厂负载为 $V_{rms}=220\text{ V}$，$I_{rms}=50\text{ A}$，$\cos\phi=0.6$（感性负载，如大量电动机）。</p>
+<li>视在功率：$S = 220 \times 50 = 11000\text{ VA} = 11\text{ kVA}$</li>
+<li>有功功率：$P = 11000 \times 0.6 = 6600\text{ W}$</li>
+<p>供电线路和变压器必须按视在功率（11 kVA）来配置容量，但工厂实际只用到 6.6 kW 的有用功率，其余以无功功率形式在电源与负载间往返，造成线路电流偏大、线损增加。电力公司通常对 $\cos\phi$ 过低的工业用户加收费用。</p>
+<p><strong>解决方案</strong>：并联电容器进行<strong>功率因数校正</strong>。电容器提供超前的无功功率，抵消感性负载的滞后无功分量，使总电流更接近与电压同相，从而在不改变有功功率的前提下减小视在电流，降低线路损耗和设备容量需求。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch23: Electromagnetic Induction, AC Circuits, and Electrical Technologies (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

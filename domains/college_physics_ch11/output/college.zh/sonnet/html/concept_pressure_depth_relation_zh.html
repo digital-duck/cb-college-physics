@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pressure Depth Relation | College Physics Ch11</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="pressure-depth-relation">Pressure Depth Relation</h2>
+<p><strong>定义</strong></p>
+<p>流体静力学中，不可压缩流体内某点的压强随深度线性增加,这一关系由流体静压公式给出:</p>
+$$P = P_0 + \rho g h$$
+<p>其中 $P_0$ 为流体表面处的参考压强(若为敞口容器,通常取大气压 $P_{atm} \approx 1.01 \times 10^5 \ \text{Pa}$),$\rho$ 为流体密度(单位 $\text{kg/m}^3$),$g$ 为重力加速度($9.8 \ \text{m/s}^2$),$h$ 为所考察点到自由液面的垂直深度。</p>
+<p>该公式的物理来源是力学平衡:考虑液面正下方深度为 $h$、截面积为 $A$ 的一段竖直流体柱,其重量 $mg = \rho A h g$ 必须由下方流体施加的额外压力支撑,于是附加压强为 $\Delta P = \dfrac{mg}{A} = \rho g h$。因此压强的增量只取决于深度 $h$,而与容器的形状、截面积无关——这正是"帕斯卡佯谬"的核心结论。</p>
+<p><strong>推导要点(公式的必然性)</strong></p>
+<p>对流体微元沿竖直方向 $z$ 应用牛顿第二定律(静止状态下合力为零),可得微分方程:</p>
+$$\frac{dP}{dz} = \rho g$$
+<p>对不可压缩流体($\rho$ 为常数)积分,从液面($z=0$)到深度 $h$,即得 $P(h) = P_0 + \rho g h$——这是一阶线性微分方程的直接解,而非经验拟合。</p>
+<p><strong>例题</strong></p>
+<p>一个游泳池深 3 米,水的密度 $\rho = 1000 \ \text{kg/m}^3$。求池底处的绝对压强及相对于大气压的表压。</p>
+$$P_{gauge} = \rho g h = 1000 \times 9.8 \times 3 = 29400 \ \text{Pa} \approx 29.4 \ \text{kPa}$$
+$$P_{abs} = P_{atm} + P_{gauge} \approx 101000 + 29400 = 130400 \ \text{Pa}$$
+<p><strong>应用:潜水安全计算</strong></p>
+<p>海水密度约为 $1025 \ \text{kg/m}^3$。若潜水员下潜至 20 米,表压为 $1025 \times 9.8 \times 20 \approx 200900 \ \text{Pa} \approx 2 \ \text{atm}$,总绝对压强约为 3 个大气压。这解释了为何潜水手册规定每下潜 10 米,需增加约 1 atm 的减压考量——公式 $P = \rho g h$ 是潜水计算表、水坝壁厚设计、输液瓶悬挂高度等工程决策的定量基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch11: Fluid Statics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rc Timing Applications | College Physics Ch21</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="rc-timing-applications">Rc Timing Applications</h2>
+<p><strong>定义</strong></p>
+<p>RC 电路(电阻—电容电路)之所以能够计时,根源在于电容充放电过程遵循指数规律,而不是线性规律。当电容通过电阻充电或放电时,电压随时间变化满足</p>
+$$
+V(t) = V_0 \, e^{-t/\tau}, \qquad \tau = RC
+$$
+<p>其中 $\tau$(时间常数)是电压变化到初始值的 $1/e \approx 36.8\%$ 所需的时间。工程上关心的往往不是电压本身,而是"电容电压何时到达某个触发阈值 $V_{th}$"——这正是计时电路的核心问题。只要选取合适的 $R$ 与 $C$,就能把 $\tau$ 精确设计成毫秒、秒甚至分钟量级,从而控制电路"多久触发一次"。</p>
+<p><strong>问题求解应用</strong></p>
+<p>以间歇式雨刷为例:电容通过电阻充电,当电压升至比较器阈值 $V_{th}$ 时,触发一次雨刷动作,随后电容放电归零,循环重复。触发时间 $t$ 由充电公式反解得到:</p>
+$$
+V_{th} = V_0\left(1 - e^{-t/RC}\right)
+\quad\Longrightarrow\quad
+t = -RC \,\ln\!\left(1 - \dfrac{V_{th}}{V_0}\right)
+$$
+<p><strong>例题</strong>:若 $R = 470\text{ k}\Omega$,$C = 100\ \mu\text{F}$,电源电压 $V_0 = 9\text{ V}$,比较器阈值 $V_{th} = 6\text{ V}$,求雨刷间隔时间。</p>
+<p>代入 $\tau = RC = 47\text{ s}$,且 $V_{th}/V_0 = 2/3$:</p>
+$$
+t = -47 \times \ln\!\left(1 - \dfrac{2}{3}\right) = -47 \times \ln\!\left(\dfrac{1}{3}\right) \approx 47 \times 1.099 \approx 51.6\text{ s}
+$$
+<p>调节可变电阻 $R$ 即可连续改变间隔——这就是雨刷"间歇"旋钮的物理原理。</p>
+<p>这一思路可推广到多种实际系统:闪光灯的闪光管需要电容先缓慢充电储能,再瞬间通过低阻通路放电,产生高峰值电流的短脉冲,充电时间同样由 $RC$ 决定;心脏起搏器利用 RC 计时电路生成周期性电脉冲以维持心律;除颤器则反其道而行——用大电容储存高压能量,通过体表电阻在极短时间内放电,释放的能量近似为</p>
+$$
+E = \tfrac{1}{2}CV_0^2\left(1 - e^{-2t/RC}\right)
+$$
+<p>医疗设备设计者正是通过调节 $R$、$C$ 与 $V_0$,在"能量足以复律"与"时间足够短以避免组织损伤"之间取得平衡。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch21: Circuits and DC Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

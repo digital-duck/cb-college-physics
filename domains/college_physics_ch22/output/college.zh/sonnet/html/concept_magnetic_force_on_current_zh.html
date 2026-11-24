@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetic Force On Current | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="magnetic-force-on-current">Magnetic Force On Current</h2>
+<p><strong>定义</strong></p>
+<p>当一段长度为 $l$ 的直导线通有电流 $I$，置于均匀磁场 $B$ 中时，导线受到的磁场作用力大小为</p>
+$$F = I l B \sin\theta$$
+<p>其中 $\theta$ 是电流方向与磁场方向之间的夹角。这个力的方向由右手定则给出，可以简洁地写成矢量形式：</p>
+$$\vec{F} = I \vec{l} \times \vec{B}$$
+<p>这里 $\vec{l}$ 是沿电流方向的长度矢量。该公式并非独立的新定律，而是洛伦兹力 $\vec{F} = q\vec{v} \times \vec{B}$ 在导线内部大量运动电荷上的宏观叠加结果：导线中共有 $N = nAl$ 个自由电荷（$n$ 为电荷数密度，$A$ 为截面积），每个以漂移速度 $v_d$ 运动的电荷受力 $qv_dB\sin\theta$，将其对 $N$ 个电荷求和，并利用电流定义 $I = nqv_dA$，即可推出 $F = I l B \sin\theta$。这说明宏观的"导线受力"本质上仍是微观洛伦兹力的统计结果。</p>
+<p><strong>推导要点（简要证明）</strong></p>
+<p>单个电荷受力：$f = qv_dB\sin\theta$；导线中电荷总数：$N = nAl$；总力：</p>
+$$F = Nf = nAl \cdot qv_dB\sin\theta = (nqv_dA)\, l B\sin\theta = IlB\sin\theta$$
+<p>这一步替换正是电流的微观定义 $I = nqv_dA$，是整个公式成立的关键桥梁。</p>
+<p><strong>例题</strong></p>
+<p>一段长 $0.50\ \text{m}$ 的导线通有电流 $I = 3.0\ \text{A}$，置于磁场 $B = 0.20\ \text{T}$ 中，电流方向与磁场夹角为 $\theta = 90^\circ$。求受力大小。</p>
+$$F = IlB\sin\theta = 3.0 \times 0.50 \times 0.20 \times \sin 90^\circ = 0.30\ \text{N}$$
+<p><strong>问题解决应用</strong></p>
+<p>当电流方向与磁场平行（$\theta = 0^\circ$）时，$\sin\theta = 0$，导线不受力——这解释了为什么电动机中的转子导线要设计成与磁场垂直的方式以获得最大转矩。工程上常利用 $\theta = 90^\circ$ 这一最优角度来设计电磁开关、扬声器音圈和直线电机,以保证每单位电流产生最大推力。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

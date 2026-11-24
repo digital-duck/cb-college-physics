@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Millikan Oil Drop Experiment | College Physics Ch30</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="millikan-oil-drop-experiment">Millikan Oil Drop Experiment</h2>
+<h3 id="definition">Definition</h3>
+<p>The Millikan oil drop experiment (Robert Millikan and Harvey Fletcher, 1909–1913) measured the charge of a single electron. Tiny oil droplets are sprayed between two horizontal metal plates. A droplet that has picked up a few extra electrons carries charge $q = ne$, where $n$ is an integer and $e$ is the elementary charge. By adjusting the voltage $V$ across plates separated by distance $d$, the experimenter creates a uniform field $E = V/d$ that pushes the drop upward. When the electric force exactly balances gravity, the drop hangs motionless:</p>
+$$qE = mg \quad\Longrightarrow\quad q = \frac{mg}{E} = \frac{mgd}{V}.$$
+<p>The remaining difficulty is the mass $m$, since a drop is too small to weigh directly. Millikan found it indirectly. With the field off, the drop falls and quickly reaches terminal velocity $v_t$. There, gravity is balanced by Stokes drag $6\pi\eta r v_t$ (neglecting buoyancy), where $\eta$ is the air's viscosity and $r$ is the drop's radius. Using $m = \tfrac{4}{3}\pi r^3\rho$ for oil density $\rho$:</p>
+$$r = \sqrt{\frac{9\eta v_t}{2\rho g}}.$$
+<h3 id="worked-example">Worked example</h3>
+<p>Suppose $\rho = 900\ \text{kg/m}^3$, $\eta = 1.8\times10^{-5}\ \text{Pa·s}$, and a drop falls at $v_t = 1.0\times10^{-4}\ \text{m/s}$ with the field off.</p>
+<li>Radius: $r = \sqrt{\dfrac{9(1.8\times10^{-5})(1.0\times10^{-4})}{2(900)(9.8)}} \approx 9.6\times10^{-7}\ \text{m}$.</li>
+<li>Mass: $m = \tfrac43\pi r^3\rho \approx 3.3\times10^{-15}\ \text{kg}$.</li>
+<li>With the field on, the drop hangs still at $V = 500\ \text{V}$ and $d = 1.0\ \text{cm}$, so $E = 5.0\times10^{4}\ \text{V/m}$.</li>
+<li>Charge: $q = \dfrac{mg}{E} = \dfrac{(3.3\times10^{-15})(9.8)}{5.0\times10^{4}} \approx 6.5\times10^{-19}\ \text{C}$.</li>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p>One drop gives one value of $q$, which tells you little by itself. The key step is to repeat the measurement on many drops, or on one drop whose charge changes, and look for a pattern. Suppose three measurements give</p>
+$$q_1 = 3.2\times10^{-19}\ \text{C},\quad q_2 = 6.4\times10^{-19}\ \text{C},\quad q_3 = 9.6\times10^{-19}\ \text{C}.$$
+<p>Every value is a whole-number multiple of the smallest difference, so $e \approx 3.2\times10^{-19}\ \text{C}$ and the drops carry $n = 1, 2, 3$ electrons. Real data contain noise, so the practical method is to find the largest $e$ such that every measured $q$ is within error of an integer multiple of it. This is the same reasoning as finding an approximate greatest common divisor of the data.</p>
+<p>Notice that the worked-example drop above has $q \approx 6.5\times10^{-19}$ C, which corresponds to $n = 4$ when $e = 1.602\times10^{-19}$ C, since $4e = 6.41\times10^{-19}$ C.</p>
+<p><strong>Why it matters:</strong> The data show that charge is quantized. It comes in discrete units, never in arbitrary fractions of $e$. Millikan's accepted value is close to the modern one, $e = 1.602\times10^{-19}$ C. Combined with J. J. Thomson's measured ratio $e/m_e$, it yields the electron mass, $m_e \approx 9.11\times10^{-31}$ kg.</p>
+<pre class="mermaid">flowchart TD
+    A[Spray charged oil drop between plates] --> B[Field off: measure terminal velocity]
+    B --> C[Compute radius and mass from Stokes drag]
+    A --> D[Field on: tune V until drop hovers]
+    C --> E[Compute q = mgd / V]
+    D --> E
+    E --> F[Repeat for many drops]
+    F --> G[Find common divisor: e and n]</pre>
+<p><em>Workflow of the experiment: terminal velocity gives the drop's mass, the balancing voltage gives its charge, and many trials reveal the elementary charge $e$.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch30: Atomic Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

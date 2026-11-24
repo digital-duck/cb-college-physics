@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electrostatic Equilibrium | College Physics Ch18</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="electrostatic-equilibrium">Electrostatic Equilibrium</h2>
+<p><strong>Definition.</strong> A conductor is in <em>electrostatic equilibrium</em> when its free charges have stopped moving on average, so there is no net current anywhere inside it. Three consequences follow, and each can be used to solve problems:</p>
+<li>The electric field inside the conductor material is zero: $\vec{E}_{\text{inside}} = \vec{0}$.</li>
+<li>Any net charge resides entirely on the surface. Gauss's law gives this result directly. Choose a Gaussian surface just inside the conductor. Since $\vec{E}=\vec{0}$ on it, $\oint \vec{E}\cdot d\vec{A}=0$, so $Q_{\text{enc}}=0$.</li>
+<li>Just outside the surface, the field is perpendicular to the surface, with magnitude</li>
+$$E_{\perp}=\frac{\sigma}{\varepsilon_0},$$
+<p>where $\sigma$ is the local surface charge density.</p>
+<p><strong>Why these must hold.</strong> If $\vec{E}$ were nonzero inside, free charges would feel a force $q\vec{E}$ and move, which contradicts equilibrium. If the field at the surface had a component parallel to it, surface charges would slide along the surface. Only a perpendicular component can persist. It is also true that the whole conductor is an <em>equipotential</em>. For any two points $a$ and $b$ in the conductor, $V_b-V_a=-\int_a^b \vec{E}\cdot d\vec{l}=0$.</p>
+<p><strong>Worked example.</strong> A conducting spherical shell of inner radius $a = 0.10\ \text{m}$ and outer radius $b = 0.12\ \text{m}$ surrounds a point charge $q=+5.0\ \text{nC}$ at its center. The shell itself is neutral. Find the charge on each surface and the field just outside.</p>
+<li>Take a Gaussian surface inside the shell material, where $E=0$. Then $Q_{\text{enc}}=0$, so the inner surface must carry $-q=-5.0\ \text{nC}$ to cancel the point charge.</li>
+<li>The shell is neutral, so the outer surface carries $+q=+5.0\ \text{nC}$.</li>
+<li>The outer surface charge density is</li>
+$$\sigma=\frac{q}{4\pi b^2}=\frac{5.0\times10^{-9}}{4\pi(0.12)^2}\approx 2.8\times10^{-8}\ \text{C/m}^2.$$
+<li>The field just outside is</li>
+$$E=\frac{\sigma}{\varepsilon_0}=\frac{2.8\times10^{-8}}{8.85\times10^{-12}}\approx 3.1\times10^{3}\ \text{N/C},$$
+<p>directed radially outward. This matches $kq/b^2$, as it should.</p>
+<p><strong>Problem-solving application.</strong> Equilibrium conditions let you find charge distributions without solving for the field everywhere. Use this procedure:</p>
+<li>Place a Gaussian surface inside the conductor material, where $E=0$, and conclude that $Q_{\text{enc}}=0$. This gives the induced charge on any cavity wall.</li>
+<li>Use charge conservation for the total. The outer surface carries (total charge) − (cavity-wall charge).</li>
+<li>Apply $E_\perp=\sigma/\varepsilon_0$ to find the field just outside.</li>
+<p><em>Check yourself.</em> Suppose the shell above is instead given a net charge of $+3.0\ \text{nC}$. The inner surface still carries $-5.0\ \text{nC}$, because the $E=0$ condition is unchanged. The outer surface now carries $+3.0-(-5.0)=+8.0\ \text{nC}$.</p>
+<p><strong>Practical consequence.</strong> Because $\vec{E}=\vec{0}$ in a cavity with no charge inside, the cavity is shielded from external fields. This is the principle of the Faraday cage, and it is why you are safe inside a car during a lightning storm. Charge also crowds onto sharp points, where $\sigma$ is largest, which is why lightning rods work.</p>
+<pre class="mermaid">flowchart TD
+    A[Free charges move] --> B[Charges redistribute on surface]
+    B --> C[Internal field cancels to zero]
+    C --> D[Equilibrium: no net motion]
+    D --> E[E inside = 0]
+    D --> F[Conductor is equipotential]
+    D --> G[Surface E is perpendicular]</pre>
+<p><em>How free charges rearrange until the field inside vanishes, producing the three equilibrium properties.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch18: Electric Charge and Electric Field (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

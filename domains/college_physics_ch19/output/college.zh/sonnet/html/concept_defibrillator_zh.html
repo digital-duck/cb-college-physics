@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Defibrillator | College Physics Ch19</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="defibrillator-除颤器">Defibrillator（除颤器）</h2>
+<p><strong>定义</strong>：除颤器是一种医疗设备，通过电容器储存电能，并在瞬间向心脏释放一次受控的电击，使因心室颤动而紊乱的心肌细胞同时去极化，从而让心脏的自然起搏点重新夺回节律控制权。其核心物理原理是电容器储能与放电：电容器两端电压为 $V$、电容为 $C$ 时，储存的电能为</p>
+$$E = \frac{1}{2}CV^2$$
+<p>设备先用电池通过升压电路给电容充电至数千伏，再通过患者胸部（等效为电阻 $R$）在极短时间内（几毫秒）释放能量，形成脉冲电流。放电过程遵循 RC 电路的指数衰减规律：</p>
+$$V(t) = V_0 \, e^{-t/RC}$$
+<p>其中 $\tau = RC$ 为时间常数，决定电压衰减的快慢。</p>
+<p><strong>范例计算</strong>：某除颤器电容 $C = 200\ \mu F$，充电至 $V_0 = 2000\ V$。储能为</p>
+$$E = \frac{1}{2}(200\times10^{-6})(2000)^2 = 400\ \text{J}$$
+<p>这与临床常用的双相波除颤能量（约 120–200 J 实际输出，因存在波形整形与能量损耗）量级一致。若患者胸部等效电阻 $R = 50\ \Omega$，时间常数为</p>
+$$\tau = RC = 50 \times 200\times10^{-6} = 10\ \text{ms}$$
+<p>说明放电脉冲会在约十毫秒量级内迅速衰减，这也是为什么除颤器要用电容而非电池直接放电——电池内阻大、放电速率慢，无法在如此短时间内输出足够大的瞬时电流。</p>
+<p><strong>解题应用</strong>：除颤器设计中的关键工程问题是"如何在保证足够能量的同时控制放电时间与峰值电流，避免灼伤心肌组织"。给定目标能量 $E$ 和电容 $C$，可反解所需充电电压 $V=\sqrt{2E/C}$；给定患者体阻抗范围，可用 $\tau=RC$ 估算脉冲持续时间，进而设计波形整形电路（如双相截断指数波）以在安全窗口内完成有效除颤。这类计算是生物医学工程中电容储能系统设计的基本方法，也可迁移到相机闪光灯、电磁炮等同样依赖电容脉冲放电的系统分析中。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch19: Electric Potential and Electric Field (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

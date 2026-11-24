@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermal Hazard | College Physics Ch20</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="thermal-hazard-热灾害">Thermal Hazard(热灾害)</h2>
+<p><strong>定义</strong></p>
+<p>热灾害是一种电气安全隐患:当电路中某个元件或导体消耗的电功率超过其散热能力时,多余的能量以热的形式积累,导致温度持续升高,最终可能引燃周围的绝缘材料、灰尘或其他可燃物,甚至造成元件本身熔毁。其物理根源是焦耳定律:导体消耗的功率为</p>
+$$
+P = I^2 R = \frac{V^2}{R}
+$$
+<p>其中 $I$ 为通过导体的电流,$R$ 为其电阻,$V$ 为两端电压。这部分电能几乎全部转化为热能。只要散热速率(通过对流、传导、辐射)能够与产热速率 $P$ 达到平衡,元件就能维持在安全温度;一旦产热持续超过散热能力,温度将不断攀升,形成热灾害。</p>
+<p><strong>实例分析</strong></p>
+<p>考虑一根额定载流量为 2 A 的铜导线,其电阻为 $R = 0.5\ \Omega$。若电路设计不当,实际通过电流达到 5 A,则实际功耗为</p>
+$$
+P = I^2 R = (5)^2 \times 0.5 = 12.5\ \text{W}
+$$
+<p>而在额定电流下,原本设计的功耗仅为</p>
+$$
+P_{\text{rated}} = (2)^2 \times 0.5 = 2\ \text{W}
+$$
+<p>功耗骤增超过 6 倍。导线绝缘层通常只能安全耗散与额定电流对应的热量,超载电流产生的额外 10.5 W 热量若无法及时散失,绝缘皮温度会持续上升,可能软化、熔化甚至引燃周边材料——这正是保险丝和断路器依据 $I^2R$ 关系设定跳闸阈值的物理依据。</p>
+<p><strong>问题求解应用</strong></p>
+<p>工程上防范热灾害的核心是控制电流,使功耗低于元件的额定散热功率 $P_{\max}$。给定 $P_{\max}$ 和电阻 $R$,可反解出安全电流上限:</p>
+$$
+I_{\max} = \sqrt{\frac{P_{\max}}{R}}
+$$
+<p>例如,一颗额定功率 $P_{\max} = 0.25\ \text{W}$ 的电阻,阻值 $R = 100\ \Omega$,则其允许的最大电流为</p>
+$$
+I_{\max} = \sqrt{\frac{0.25}{100}} = 0.05\ \text{A} = 50\ \text{mA}
+$$
+<p>在电路设计中,工程师需据此选择合适功率等级的元件,并结合环境散热条件(如是否封闭机箱、是否有强制风冷)留出安全裕量,通常取额定值的 50%–70% 作为设计上限,以应对温度波动和长期老化带来的散热能力下降。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch20: Electric Current, Resistance, and Ohm's Law (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

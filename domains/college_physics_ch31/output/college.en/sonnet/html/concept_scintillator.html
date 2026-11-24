@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scintillator | College Physics Ch31</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="scintillator">Scintillator</h2>
+<p>A <strong>scintillator</strong> is a material that absorbs ionizing radiation (gamma rays, X-rays, charged particles, neutrons) and re-emits part of that energy as a brief flash of visible or near-visible light. A photodetector then turns the light into an electrical pulse that can be counted and measured.</p>
+<h3 id="how-it-works">How it works</h3>
+<li>Radiation deposits energy $E_{dep}$ in the material by exciting and ionizing atoms.</li>
+<li>The excited states de-excite and emit photons, usually within nanoseconds to microseconds.</li>
+<li>The number of photons produced is roughly proportional to the deposited energy:</li>
+$$N_\gamma = Y \, E_{dep}$$
+<p>Here $Y$ is the <strong>light yield</strong>, in photons per MeV. For NaI(Tl), $Y \approx 4\times10^{4}$ photons/MeV. Plastic scintillators give about $10^{4}$ photons/MeV.</p>
+<p>Because $N_\gamma \propto E_{dep}$, the total light, and so the pulse height, tells you the energy of the radiation. This is why scintillators work as spectrometers and not only as counters.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>A 662 keV gamma ray from $^{137}$Cs is fully absorbed in a NaI(Tl) crystal with $Y = 4.0\times10^{4}$ photons/MeV.</p>
+$$N_\gamma = (4.0\times10^{4}\ \text{MeV}^{-1})(0.662\ \text{MeV}) \approx 2.6\times10^{4}\ \text{photons}$$
+<p>The crystal therefore emits about 26,000 photons for this single gamma ray. Pulse height is proportional to this number, so a 1.324 MeV gamma ray fully absorbed in the same crystal would produce a pulse twice as tall.</p>
+<h3 id="problem-solving-application-choosing-a-scintillator">Problem-solving application: choosing a scintillator</h3>
+<p>Different jobs call for different materials. Compare these properties:</p>
+<p>| Property | Why it matters | |---|---| | Light yield $Y$ | Higher yield gives more photons per MeV, so a more precise energy measurement | | Decay time | Shorter time allows higher count rates and timing precision | | Density and $Z$ | Higher values stop gamma rays more efficiently | | Emission wavelength | It must match the photodetector's sensitive range |</p>
+<p><strong>Scenario 1: PET scanner.</strong> It must time two gamma rays precisely and stop 511 keV photons efficiently. That calls for a dense, fast crystal such as LYSO, even though its light yield is lower than that of NaI(Tl).</p>
+<p><strong>Scenario 2: gamma spectroscopy of an unknown source.</strong> Here the goal is to separate nearby energy peaks. A high-yield crystal such as NaI(Tl) is the better choice, because more photons per MeV means a cleaner measurement of each pulse.</p>
+<p><strong>Scenario 3: low-cost survey meter for large areas.</strong> Energy detail matters less than coverage and price. A cheap plastic scintillator, which can be made in large sheets, is the practical choice.</p>
+<p><strong>Check yourself:</strong> A 2.0 MeV gamma ray is fully absorbed in a plastic scintillator with $Y = 1.0\times10^{4}$ photons/MeV. How many photons are produced, and how does that compare with the same gamma ray in NaI(Tl)? (Answer: $2.0\times10^{4}$ photons in plastic versus $8.0\times10^{4}$ in NaI(Tl), a factor of 4 fewer.)</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch31: Radioactivity and Nuclear Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capacitive Reactance | College Physics Ch23</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="capacitive-reactance">Capacitive Reactance</h2>
+<p><strong>定义</strong></p>
+<p>电容器在直流电路中最终会阻断电流，但在交流电路中，它对电流的阻碍作用是有限且随频率变化的，这种阻碍作用称为<strong>容抗</strong>（capacitive reactance），记作 $X_C$，单位为欧姆（$\Omega$）：</p>
+$$
+X_C = \frac{1}{2\pi f C}
+$$
+<p>其中 $f$ 为交流信号的频率（Hz），$C$ 为电容值（F）。容抗与频率成反比：频率越高，电容器对电流的阻碍越小；频率趋近于零（直流）时，$X_C \to \infty$，电容器近似断路。这一关系源于电容器充放电的物理机制——电流通过对极板充放电"流过"电容器，充放电越快（频率越高），电流的有效阻碍越小。</p>
+<p>与电阻不同，容抗还带来一个相位效应：电容两端的电压相对于流过它的电流<strong>滞后 90°</strong>。原因是电流决定电荷积累的速率（$i = C\,dv/dt$），电压是电流的积分，而正弦函数的积分在相位上落后 90°。因此在电路分析中，容抗常以虚数形式表示为阻抗 $Z_C = -jX_C = \dfrac{1}{j2\pi f C}$，负号（或 $-j$）正是编码了这一相位滞后。</p>
+<p><strong>例题</strong></p>
+<p>一个 $10\ \mu F$ 的电容器接入频率为 $60\ \text{Hz}$ 的交流电源，求其容抗。</p>
+$$
+X_C = \frac{1}{2\pi (60)(10\times10^{-6})} \approx \frac{1}{0.003770} \approx 265.3\ \Omega
+$$
+<p>若将频率提高到 $6000\ \text{Hz}$（提高100倍），则 $X_C$ 减小为原来的 $1/100$，约 $2.65\ \Omega$——电容器变得几乎"透明"。</p>
+<p><strong>问题解决应用</strong></p>
+<p>容抗的频率依赖性是滤波器设计的核心。例如在 RC 低通滤波器中，截止频率 $f_c$ 定义为容抗等于电阻的点：$X_C = R$，即</p>
+$$
+f_c = \frac{1}{2\pi R C}
+$$
+<p>设计一个截止频率为 $1\ \text{kHz}$、$R = 1\ \text{k}\Omega$ 的低通滤波器时，可解出所需电容：</p>
+$$
+C = \frac{1}{2\pi f_c R} = \frac{1}{2\pi (1000)(1000)} \approx 159\ \text{nF}
+$$
+<p>这正是耦合电容、去噪滤波、音频分频器等实际电路设计中反复使用的计算方法：先确定目标截止频率，再反解出所需元件参数。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch23: Electromagnetic Induction, AC Circuits, and Electrical Technologies (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

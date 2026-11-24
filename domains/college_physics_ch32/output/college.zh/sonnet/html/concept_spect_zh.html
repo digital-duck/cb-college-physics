@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spect | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="spect">Spect</h2>
+<p><strong>定义</strong></p>
+<p>单光子发射计算机断层成像术(Single Photon Emission Computed Tomography,SPECT)是一种核医学断层成像技术。患者被注射或吸入含有单光子发射放射性核素(如 $^{99m}\text{Tc}$、$^{123}\text{I}$)的放射性药物,该药物在体内特定组织或器官中富集并发射伽马光子。围绕患者旋转的环形(或多探头旋转式)伽马相机在多个角度采集二维投影图像,再通过断层重建算法计算出放射性药物在体内的三维分布。SPECT 的核心物理原理与 CT 不同:CT 测量的是外部 X 射线穿过组织后的<strong>衰减</strong>,而 SPECT 测量的是体内<strong>自发发射</strong>的伽马光子,反映的是生理功能(如血流、代谢)而非解剖结构。</p>
+<p><strong>重建原理与信号衰减</strong></p>
+<p>设探测器在角度 $\theta$ 处采集到的投影为 $p_\theta(x)$,理想情况下它是放射性浓度分布 $f(x,y)$ 沿该方向的线积分,与 CT 中的 Radon 变换形式相同:</p>
+$$
+p_\theta(x) = \int f(x,y)\, dl
+$$
+<p>因此 SPECT 图像重建同样依赖滤波反投影(FBP)或迭代算法(如 OSEM,有序子集期望最大化)。但 SPECT 面临一个 CT 没有的关键问题:<strong>光子在体内传播时会被组织吸收</strong>,即衰减效应。发射自深部组织的光子被吸收的概率高于表层组织发出的光子,若不加校正,会使深部结构的活度被低估。因此实际投影需建模为:</p>
+$$
+p_\theta(x) = \int f(x,y)\, e^{-\int \mu(l')\,dl'}\, dl
+$$
+<p>其中 $\mu$ 为组织的线性衰减系数,后一积分沿光子出射路径计算。现代 SPECT 系统结合 CT 扫描(SPECT/CT)获取衰减图,对原始数据进行衰减校正,显著提高定量准确性。</p>
+<p><strong>问题解决应用</strong></p>
+<p>SPECT 广泛用于心肌灌注显像(评估冠状动脉狭窄导致的局部血流不足)、骨扫描(检测转移性病灶)和脑灌注显像(癫痫灶定位)。临床医生需要解决的实际问题是:在给定注射剂量和探测器灵敏度下,如何在辐射剂量、采集时间与图像信噪比之间取得平衡。例如,若某扫描方案将采集时间减半,光子计数统计量随之减少,根据泊松统计,信噪比大致按 $\sqrt{N}$ 关系下降,医生需权衡诊断可信度与患者辐射负担及舒适度,这正是核医学物理与临床决策相结合的典型问题。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermal Stress | College Physics Ch13</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="thermal-stress">Thermal Stress</h2>
+<p>当一段材料被加热或冷却，却又被完全限制、无法自由膨胀或收缩时，材料内部就会产生<strong>热应力</strong>（thermal stress）。这是热学与固体力学交叉的核心概念：温度变化本身不直接产生应力，只有当热膨胀（或收缩）受到几何约束时，材料才会被迫产生弹性形变，从而在内部积累应力。</p>
+<p><strong>定义与推导</strong></p>
+<p>设某材料的线膨胀系数为 $\alpha$，若温度变化 $\Delta T$ 时材料可以自由伸缩，其自然伸长率为</p>
+$$
+\left(\frac{\Delta L}{L_0}\right)_{\text{free}} = \alpha \, \Delta T
+$$
+<p>若材料两端被刚性固定（$\Delta L = 0$），这部分本该发生的形变必须被内部的弹性应力所"抵消"。根据胡克定律，弹性应变对应的应力为 $\sigma = E \varepsilon$，其中 $E$ 是杨氏模量。由于约束迫使有效应变恰好等于自由热应变的负值，热应力为：</p>
+$$
+\sigma_{\text{thermal}} = -E \alpha \, \Delta T
+$$
+<p>负号表示：升温受阻产生压应力，降温受阻产生张应力。</p>
+<p>若材料是各向同性地被三维约束（例如被完全密封在刚性容器中），则需用<strong>体膨胀系数</strong> $\beta \approx 3\alpha$ 和<strong>体积模量</strong> $K$ 来描述。自由体积变化率为 $\Delta V / V_0 = \beta \, \Delta T$；若体积被完全限制，产生的压强变化为：</p>
+$$
+\Delta P = -K \beta \, \Delta T
+$$
+<p>这正是体积模量定义 $K = -V_0 \, dP/dV$ 与热膨胀关系的直接结合：约束体积变化，就把本应发生的体积应变转化为压强（应力）。</p>
+<p><strong>例题</strong></p>
+<p>一根钢轨（$E = 200\ \text{GPa}$，$\alpha = 12 \times 10^{-6}\ /^\circ\text{C}$）在两端被完全固定后，温度上升 $40^\circ\text{C}$。求轨道内产生的压应力。</p>
+$$
+\sigma = E \alpha \, \Delta T = (200 \times 10^9)(12\times 10^{-6})(40) \approx 9.6\times 10^7\ \text{Pa} = 96\ \text{MPa}
+$$
+<p>这一量级足以使钢轨发生屈曲变形，这正是铁轨之间要预留伸缩缝的工程原因。</p>
+<p><strong>应用与问题求解思路</strong></p>
+<p>处理热应力问题的关键步骤是：先假设材料"自由"膨胀求出虚拟应变，再用实际的位移约束条件求出被压制的那部分应变，最后用弹性模量换算成应力。这一"虚拟自由态 + 约束反推"的两步法，同样适用于双金属片弯曲、桥梁伸缩缝设计、精密仪器封装等工程问题。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch13: Temperature, Kinetic Theory, and the Gas Laws (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

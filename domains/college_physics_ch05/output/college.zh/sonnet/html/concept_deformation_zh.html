@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deformation | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="deformation-形变">Deformation（形变）</h2>
+<p><strong>定义</strong></p>
+<p>形变是指物体在外力作用下，形状或尺寸发生的改变。当形变较小、且撤去外力后物体能完全恢复原状时，这种形变称为<strong>弹性形变</strong>；若外力过大，超过材料的弹性极限，物体则会发生<strong>塑性形变</strong>，无法恢复原状。弹性形变的核心规律由<strong>胡克定律（Hooke's Law）</strong>描述：在弹性限度内，物体所受的形变量与所施加的力成正比。对于弹簧或弹性杆，这一关系写作：</p>
+$$
+F = k \, \Delta x
+$$
+<p>其中 $F$ 为外力，$\Delta x$ 为形变量（伸长或压缩量），$k$ 为<strong>劲度系数（弹性系数）</strong>，其大小取决于材料和几何形状。这是一个线性近似，只在形变远小于材料自身尺度时成立——这正是"小形变"这一限定条件存在的原因。</p>
+<p><strong>推导与worked example</strong></p>
+<p>考虑一根劲度系数 $k = 200\ \text{N/m}$ 的弹簧，悬挂一个质量 $m = 2\ \text{kg}$ 的物体，系统达到静止平衡。此时弹簧的弹力必须与重力平衡：</p>
+$$
+F = mg = 2 \times 9.8 = 19.6\ \text{N}
+$$
+<p>代入胡克定律求形变量：</p>
+$$
+\Delta x = \frac{F}{k} = \frac{19.6}{200} = 0.098\ \text{m} \approx 9.8\ \text{cm}
+$$
+<p>这说明：只要知道外力和劲度系数，就能精确预测形变大小，这正是工程设计（如桥梁的钢索、建筑的减震结构）中应力-应变分析的基础。</p>
+<p><strong>问题求解应用</strong></p>
+<p>胡克定律的真正威力在于处理<strong>复合系统</strong>。例如两根劲度系数分别为 $k_1$ 和 $k_2$ 的弹簧串联时，总形变是各段形变之和，等效劲度系数满足：</p>
+$$
+\frac{1}{k_{\text{eq}}} = \frac{1}{k_1} + \frac{1}{k_2}
+$$
+<p>而并联时则是：</p>
+$$
+k_{\text{eq}} = k_1 + k_2
+$$
+<p>这两个公式与电路中电阻的串并联规律形式相同，体现了物理系统间深层的数学同构性。在实际问题中，工程师常需判断某一形变是否仍处于弹性范围内——一旦力超过弹性极限，胡克定律的线性关系失效，材料进入塑性区甚至断裂，这也是选材和安全系数设计时必须考虑的关键界限。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

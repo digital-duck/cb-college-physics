@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Self Inductance | College Physics Ch23</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="self-inductance">Self Inductance</h2>
+<p><strong>定义</strong></p>
+<p>自感（self-inductance）是描述一个载流元件（通常是线圈）对自身电流变化产生反抗作用能力的物理量，记作 $L$，单位为亨利（H）。当通过线圈的电流 $I$ 随时间变化时，线圈中会产生变化的磁通量 $\Phi$，根据法拉第电磁感应定律，这一变化会在线圈自身两端感应出一个电动势（emf），其方向总是反抗电流的变化（楞次定律）。这个感应电动势与电流变化率的关系为：</p>
+$$
+\varepsilon = -L \frac{\Delta I}{\Delta t}
+$$
+<p>负号表明感应电动势的方向与电流变化的方向相反——电流增大时，自感电动势阻止其增大；电流减小时，自感电动势阻止其减小。$L$ 的大小仅取决于线圈的几何形状、匝数和周围介质的磁导率，与电流本身无关，它衡量的是"单位电流变化率能产生多大反抗电动势"的能力。</p>
+<p><strong>例题</strong></p>
+<p>一个螺线管的自感为 $L = 0.5\ \text{H}$。若其中电流在 $0.1\ \text{s}$ 内从 $2\ \text{A}$ 均匀增大到 $6\ \text{A}$，求线圈两端产生的自感电动势。</p>
+<p>首先计算电流变化率：</p>
+$$
+\frac{\Delta I}{\Delta t} = \frac{6\ \text{A} - 2\ \text{A}}{0.1\ \text{s}} = 40\ \text{A/s}
+$$
+<p>代入公式：</p>
+$$
+\varepsilon = -L \frac{\Delta I}{\Delta t} = -(0.5\ \text{H})(40\ \text{A/s}) = -20\ \text{V}
+$$
+<p>负号表示该电动势的方向与外加电源驱动电流增大的方向相反，即它试图阻止电流的增长。这正是电感元件在电路中"抵抗电流突变"的物理体现。</p>
+<p><strong>解题应用</strong></p>
+<p>在实际电路问题中，自感常用于分析含电感元件的电路在开关闭合或断开瞬间的瞬态行为。例如，当电路突然断开时，电感会试图维持原有电流，从而在开关两端产生远高于电源电压的瞬时高压（这也是继电器、电机断电时产生电火花的原因）。</p>
+<p>解题步骤通常为：（1）确定电流变化的时间间隔 $\Delta t$ 和幅度 $\Delta I$；（2）代入 $\varepsilon = -L \Delta I/\Delta t$ 求感应电动势；（3）结合基尔霍夫电压定律分析电路中其余元件的响应。理解自感的核心在于：它不是"电阻"，不消耗能量，而是储存并释放磁场能量，其效应仅在电流变化时才显现。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch23: Electromagnetic Induction, AC Circuits, and Electrical Technologies (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

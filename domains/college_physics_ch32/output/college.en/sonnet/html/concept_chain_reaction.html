@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chain Reaction | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="chain-reaction">Chain Reaction</h2>
+<p>A <strong>chain reaction</strong> is a self-sustaining sequence of fission events in which neutrons released by one fission induce further fissions. Whether it grows, holds steady, or dies out depends on one number: the <strong>effective multiplication factor</strong> $k$, the average number of neutrons from one fission generation that go on to cause fission in the next.</p>
+$$k = \frac{\text{neutrons causing fission in generation } n+1}{\text{neutrons causing fission in generation } n}$$
+<p>Each fission of $^{235}\text{U}$ releases $\nu \approx 2.4$ neutrons on average, but some are absorbed without causing fission and some leak out of the material. So $k$ is lower than $\nu$. The neutron population after $n$ generations, starting from $N_0$ neutrons, is</p>
+$$N_n = N_0\,k^{\,n}.$$
+<p>This gives three regimes:</p>
+<li>$k<1$ (<strong>subcritical</strong>): the population decays geometrically and the reaction dies out.</li>
+<li>$k=1$ (<strong>critical</strong>): the population is constant. This is a steady chain reaction, as in a reactor running at constant power.</li>
+<li>$k>1$ (<strong>supercritical</strong>): the population grows exponentially.</li>
+<h3 id="worked-example">Worked example</h3>
+<p>Suppose $N_0 = 1000$ neutrons and $k = 1.02$. The generation time in a thermal reactor is about $\Lambda \approx 10^{-4}\ \text{s}$.</p>
+<p>After $n=100$ generations, which is $10^{-2}$ s:</p>
+$$N_{100} = 1000\,(1.02)^{100} \approx 1000 \times 7.24 \approx 7240.$$
+<p>The population has grown more than sevenfold in 10 ms. With $k = 1.02$ and no control, it would reach about $10^{9}$ neutrons in roughly $n = \ln(10^6)/\ln(1.02) \approx 700$ generations, or 70 ms. This is why a reactor cannot rely on prompt neutrons alone. About 0.65% of neutrons are <em>delayed</em> (emitted seconds after fission by decaying fragments). They stretch the effective generation time to a fraction of a second and make control rods fast enough to hold $k \approx 1$.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem.</strong> A bare sphere of fissile material has $\nu = 2.4$ neutrons per fission. Only a fraction $f = 0.70$ of those neutrons induce another fission, and the rest are absorbed or escape. Is the assembly critical? If the sphere is compressed so that leakage drops and $f$ rises to $0.50\times$... more precisely, to a value that makes $k = 1.1$, what is $f$?</p>
+<p><strong>Solution.</strong> Treat $f$ as the fraction of the $\nu$ emitted neutrons that cause a new fission, so $k = \nu f$.</p>
+<li>Initially, $k = 2.4 \times 0.70 \approx 1.68$ (supercritical).</li>
+<p>   This is greater than 1, so the chain reaction grows.</p>
+<li>For the required $k=1.1$, $f = k/\nu = 1.1/2.4 \approx 0.46$.</li>
+<p>   Note that the criterion for a sustained chain reaction is $k\ge 1$, which means $f \ge 1/\nu \approx 0.42$. Fewer than about 42% of the emitted neutrons can be lost before the reaction fails.</p>
+<p><strong>Key takeaway.</strong> Engineering a chain reaction means managing $k$: use moderators to slow neutrons and raise fission probability, use reflectors and geometry to reduce leakage, and use control rods to absorb neutrons and hold $k$ at 1.</p>
+<pre class="mermaid">flowchart LR
+    A[Neutron] --> B[Fission of U-235]
+    B --> C[Fission fragments + energy]
+    B --> D[2-3 new neutrons]
+    D --> E[Cause new fission]
+    D --> F[Absorbed or leak out]
+    E --> B</pre>
+<p><em>Each fission releases neutrons. Those that induce further fission continue the chain, while those absorbed or leaked are lost. Whether the chain grows depends on whether $k$ exceeds 1.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

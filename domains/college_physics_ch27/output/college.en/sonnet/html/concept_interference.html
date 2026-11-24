@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interference | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="interference">Interference</h2>
+<p><strong>Interference</strong> is the combination of two or more waves in the same region of space. By the principle of superposition, the net displacement at any point and time is the sum of the individual displacements:</p>
+$$y_{\text{net}}(x,t) = y_1(x,t) + y_2(x,t)$$
+<p>Consider two waves of the same frequency $f$ and amplitude $A$, with a phase difference $\phi$:</p>
+$$y_1 = A\sin(kx - \omega t), \qquad y_2 = A\sin(kx - \omega t + \phi)$$
+<p>Using $\sin a + \sin b = 2\sin\frac{a+b}{2}\cos\frac{a-b}{2}$, the sum is</p>
+$$y_{\text{net}} = 2A\cos\!\left(\frac{\phi}{2}\right)\sin\!\left(kx - \omega t + \frac{\phi}{2}\right)$$
+<p>The resulting wave has the same frequency, but its amplitude is $2A\left|\cos(\phi/2)\right|$. This gives two limiting cases:</p>
+<li><strong>Constructive interference:</strong> $\phi = 2\pi n$ gives amplitude $2A$, the maximum.</li>
+<li><strong>Destructive interference:</strong> $\phi = (2n+1)\pi$ gives amplitude $0$, so the waves cancel.</li>
+<p>For two sources, phase difference comes from the path difference $\Delta L = |L_1 - L_2|$:</p>
+$$\phi = \frac{2\pi\,\Delta L}{\lambda}$$
+<p>So constructive interference occurs when $\Delta L = n\lambda$, and destructive interference occurs when $\Delta L = \left(n+\tfrac{1}{2}\right)\lambda$, for $n = 0, 1, 2, \dots$</p>
+<p>| Condition | Path difference | Phase difference | Result | |---|---|---|---| | Constructive | $n\lambda$ | $2\pi n$ | Amplitude $2A$ | | Destructive | $(n+\tfrac12)\lambda$ | $(2n+1)\pi$ | Amplitude $0$ |</p>
+<h3 id="worked-example">Worked example</h3>
+<p>Two speakers, driven in phase, emit a 440 Hz tone. Take the speed of sound as $v = 343\ \text{m/s}$. A listener stands 4.00 m from one speaker and 5.75 m from the other. Is the sound loud or quiet?</p>
+<li>Wavelength: $\lambda = v/f = 343/440 = 0.780\ \text{m}$.</li>
+<li>Path difference: $\Delta L = 5.75 - 4.00 = 1.75\ \text{m}$.</li>
+<li>Ratio: $\Delta L/\lambda = 1.75/0.780 \approx 2.24$.</li>
+<p>This is neither an integer (constructive) nor a half-integer (destructive). The phase difference is $\phi = 2\pi(2.24) \approx 0.24 \cdot 2\pi \approx 1.5\ \text{rad}$ (mod $2\pi$). The amplitude factor is $|\cos(\phi/2)| = \cos(0.75) \approx 0.73$. The listener hears sound at about 73% of the maximum amplitude. Because intensity scales as amplitude squared, the intensity is about $0.73^2 \approx 53\%$ of the maximum.</p>
+<h3 id="problem-solving-application-timing-error-in-cancellation">Problem-solving application: timing error in cancellation</h3>
+<p>Noise-cancelling headphones rely on destructive interference: a speaker emits a copy of the noise shifted by $\phi = \pi$ (an inverted signal). Suppose the noise is a 200 Hz hum and the cancelling signal arrives late by a time $\tau$. The extra phase error is $\delta = 2\pi f\tau$. The inverted copy then differs from perfect cancellation by $\delta$, so the residual amplitude is</p>
+$$A_{\text{res}} = 2A\sin\!\left(\frac{\delta}{2}\right)$$
+<p>For $\tau = 1$ ms at 200 Hz: $\delta = 2\pi(200)(0.001) \approx 1.26$ rad, so $A_{\text{res}} = 2A\sin(0.63) \approx 1.18A$. This is larger than the original amplitude $A$, so the "cancellation" makes the noise worse.</p>
+<p>Now try a smaller error, $\tau = 0.1$ ms: $\delta \approx 0.126$ rad, so $A_{\text{res}} \approx 2A(0.063) \approx 0.13A$. The noise drops by about 87%.</p>
+<p>Because $\delta$ grows with $f$ for a fixed delay, these systems cancel best at low frequencies, where a small timing error causes only a small phase error.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

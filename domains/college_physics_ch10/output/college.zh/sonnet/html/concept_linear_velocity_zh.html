@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linear Velocity | College Physics Ch10</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="线速度">线速度</h2>
+<p><strong>定义</strong></p>
+<p>线速度（linear velocity）描述物体沿其运动路径的位置变化率，是一个矢量，既包含大小（即速率）也包含方向。若物体位置由 $\vec{r}(t)$ 给出，则线速度定义为位置对时间的导数：</p>
+$$\vec{v} = \frac{d\vec{r}}{dt}$$
+<p>对于沿直线运动的物体，线速度的方向恒定，其大小 $v = |\vec{v}|$ 就是我们在一维运动学中熟悉的"速度"。但当物体沿曲线路径运动时——例如做圆周运动——线速度的方向会随时间不断变化，即使速率保持不变。这一点是理解圆周运动、角速度与线速度关系的关键：物体的速度矢量始终与路径相切（tangent to the path）。</p>
+<p>对于做匀速圆周运动的物体，线速度大小与角速度 $\omega$ 及半径 $r$ 的关系为：</p>
+$$v = \omega r$$
+<p>这个关系式源于弧长公式 $s = r\theta$ 对时间求导：$\dfrac{ds}{dt} = r\dfrac{d\theta}{dt}$，即 $v = r\omega$。</p>
+<p><strong>例题</strong></p>
+<p>一个半径 $r = 0.5\ \text{m}$ 的转盘以角速度 $\omega = 4\ \text{rad/s}$ 匀速旋转。求转盘边缘一点的线速度大小。</p>
+<p>代入公式：</p>
+$$v = \omega r = 4 \times 0.5 = 2\ \text{m/s}$$
+<p>该点的速度方向始终垂直于半径，即沿圆周切线方向，随转动不断改变，但速率恒为 $2\ \text{m/s}$。</p>
+<p><strong>应用与解题技巧</strong></p>
+<p>处理线速度问题的核心是区分"速率是否恒定"与"方向是否恒定"。当题目给出角速度和半径时，先用 $v = \omega r$ 求出线速度大小；若还需要瞬时速度矢量，须结合几何关系确定切线方向。常见陷阱是把圆周运动中恒定的角速度误认为线速度也恒定不变——实际上线速度矢量在不断转向，因此存在向心加速度。做题时，建议先画出位置矢量与速度矢量的图示，明确二者的垂直关系，再代入数值求解，这样可以避免混淆大小与方向两个独立要素。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch10: Rotational Motion and Angular Momentum (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

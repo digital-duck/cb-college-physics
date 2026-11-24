@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnification | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="magnification">Magnification</h2>
+<p><strong>Magnification</strong> $m$ measures how an optical system scales an image relative to its object. It is the ratio of image height $h_i$ to object height $h_o$, and for thin lenses and mirrors it equals the negative ratio of image distance $d_i$ to object distance $d_o$:</p>
+$$m = \frac{h_i}{h_o} = -\frac{d_i}{d_o}$$
+<p>The magnitude $|m|$ gives the size change: $|m| > 1$ means enlarged, $|m| < 1$ means reduced, and $|m| = 1$ means the same size. The sign gives orientation: $m < 0$ means the image is inverted relative to the object, and $m > 0$ means it is upright. (Sign convention: $d_o > 0$ for a real object; $d_i > 0$ for a real image, which forms on the opposite side of a lens from the object, and $d_i < 0$ for a virtual image.)</p>
+<p>The relation $m = -d_i/d_o$ follows from similar triangles. A ray through the center of a thin lens passes undeflected, so it forms two similar triangles, one on each side of the lens. Their heights are $h_o$ and $h_i$ (with $h_i$ measured downward as negative), and their bases are $d_o$ and $d_i$.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>A converging lens has focal length $f = 10\ \text{cm}$. A candle $h_o = 4.0\ \text{cm}$ tall stands $d_o = 30\ \text{cm}$ from the lens. Find the image position, magnification, and image height.</p>
+<li>Use the thin-lens equation to find $d_i$:</li>
+$$\frac{1}{d_i} = \frac{1}{f} - \frac{1}{d_o} = \frac{1}{10} - \frac{1}{30} = \frac{2}{30} \;\Rightarrow\; d_i = 15\ \text{cm}$$
+<li>Compute the magnification:</li>
+$$m = -\frac{d_i}{d_o} = -\frac{15}{30} = -0.50$$
+<li>Find the image height:</li>
+$$h_i = m\,h_o = (-0.50)(4.0\ \text{cm}) = -2.0\ \text{cm}$$
+<p>The image is real, inverted, and half the object's size, located 15 cm from the lens.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p>Magnification lets you work backward from a desired image size. Suppose a projector must produce an image 40 times as large as a slide, with the screen $d_i = 4.0\ \text{m}$ from the lens. Because a projector image is real and inverted, $m = -40$.</p>
+<li>Solve for the object distance: $d_o = -d_i/m = 4.0\ \text{m}/40 = 0.10\ \text{m}$.</li>
+<li>Find the required focal length:</li>
+$$\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{0.10} + \frac{1}{4.0} = 10.25\ \text{m}^{-1} \;\Rightarrow\; f \approx 0.098\ \text{m}$$
+<p>So the slide sits just beyond the focal point, and the lens has $f \approx 9.8\ \text{cm}$.</p>
+<p><strong>Checking your answer.</strong> Two quick tests catch most errors:</p>
+<li>A real image from a single lens or mirror is always inverted ($m < 0$). A virtual image is upright ($m > 0$).</li>
+<li>A magnifying glass has $d_o < f$. In that case $d_i < 0$, so $m = -d_i/d_o > 0$: the image is virtual, upright, and enlarged.</li>
+<p>Always keep the sign. Reporting only $|m|$ discards the information about whether the image is inverted.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

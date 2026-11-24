@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electromagnetic Wave | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="electromagnetic-wave">Electromagnetic Wave</h2>
+<p><strong>定义</strong></p>
+<p>电磁波是由振荡的电场 $\vec{E}$ 与磁场 $\vec{B}$ 相互耦合、在空间中传播的波动现象。二者振动方向互相垂直，且都垂直于波的传播方向，因此电磁波是横波。与机械波不同，电磁波的传播不依赖任何介质，可在真空中传播，速度恒为光速 $c \approx 3.00 \times 10^8 \text{ m/s}$。</p>
+<p>这一现象的理论根基是麦克斯韦方程组。麦克斯韦指出：变化的电场会产生磁场，变化的磁场也会产生电场——二者相互激发、自我维持，从而形成向外传播的波动。将麦克斯韦方程组在真空中联立，可以导出电场分量满足波动方程：</p>
+$$
+\frac{\partial^2 E}{\partial x^2} = \mu_0 \varepsilon_0 \frac{\partial^2 E}{\partial t^2}
+$$
+<p>将其与标准波动方程 $\dfrac{\partial^2 E}{\partial x^2} = \dfrac{1}{v^2}\dfrac{\partial^2 E}{\partial t^2}$ 比较，可得传播速度：</p>
+$$
+c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}}
+$$
+<p>其中 $\mu_0$ 为真空磁导率，$\varepsilon_0$ 为真空介电常数。这一结果的历史意义极大：麦克斯韦仅由电磁学常数推算出的速度，恰好与实验测得的光速吻合，从而首次揭示光本身就是一种电磁波。</p>
+<p><strong>例题</strong></p>
+<p>已知某电磁波在真空中传播，电场振幅为 $E_0 = 100\ \text{V/m}$，频率为 $f = 6.0 \times 10^{14}\ \text{Hz}$（属可见光范围）。求其波长，并判断其对应的磁场振幅 $B_0$。</p>
+<p>由 $c = f\lambda$，得：</p>
+$$
+\lambda = \frac{c}{f} = \frac{3.00\times10^8}{6.0\times10^{14}} \approx 5.0\times10^{-7}\ \text{m} = 500\ \text{nm}
+$$
+<p>电场与磁场振幅之间满足关系 $E_0 = cB_0$，故：</p>
+$$
+B_0 = \frac{E_0}{c} = \frac{100}{3.00\times10^8} \approx 3.3\times10^{-7}\ \text{T}
+$$
+<p><strong>问题解决应用</strong></p>
+<p>电磁波谱按频率（或波长）从低到高依次为：无线电波、微波、红外线、可见光、紫外线、X 射线、伽马射线——它们本质相同，仅频率不同。在实际问题中，常需要在频率、波长、能量三者间换算，除波速关系式外，光子能量满足 $E = hf$（$h$ 为普朗克常数）。例如，判断某医学成像设备使用的是 X 射线还是可见光，只需比较其光子能量或波长量级，即可确定其穿透能力与生物效应，这是电磁波谱分析在工程与医学中的典型应用。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

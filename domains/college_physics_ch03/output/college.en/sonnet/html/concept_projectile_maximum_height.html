@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projectile Maximum Height | College Physics Ch03</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="projectile-maximum-height">Projectile Maximum Height</h2>
+<p>When a projectile is launched with an initial velocity that has a vertical component $v_{0y}$, gravity decelerates that vertical motion at rate $g$ until, at the peak of the trajectory, the vertical velocity momentarily equals zero. Beyond that instant, gravity accelerates the projectile back downward. The height at which this turning point occurs — the maximum height $H$ — depends only on $v_{0y}$, not on the horizontal velocity component or on time directly.</p>
+<p>This result follows from the kinematic equation $v_y^2 = v_{0y}^2 - 2gH$. Setting $v_y = 0$ at the peak and solving for $H$ gives:</p>
+$$H = \frac{v_{0y}^2}{2g}$$
+<p>Note that $H$ scales with the <em>square</em> of $v_{0y}$: doubling the vertical launch speed quadruples the maximum height, not doubles it. This is because kinetic energy associated with vertical motion, $\tfrac{1}{2}mv_{0y}^2$, converts entirely into gravitational potential energy $mgH$ at the peak — an energy-conservation view that yields the same formula.</p>
+<p><strong>Worked example.</strong> A ball is launched at $30\text{ m/s}$ at an angle of $40°$ above the horizontal. The vertical component is $v_{0y} = 30\sin(40°) \approx 19.28\text{ m/s}$. Using $g = 9.8\text{ m/s}^2$:</p>
+$$H = \frac{(19.28)^2}{2(9.8)} \approx \frac{371.7}{19.6} \approx 18.96\text{ m}$$
+<p>The ball rises to roughly 19 meters, regardless of its horizontal speed component, $30\cos(40°) \approx 22.98\text{ m/s}$, which affects only how far it travels, not how high.</p>
+<p><strong>Problem-solving application.</strong> This formula is most useful when working backward from a measured or target height to recover launch conditions, or when comparing two launches. For instance, if a design requirement specifies a projectile must clear a 12 m wall, rearranging gives the minimum vertical velocity needed: $v_{0y} = \sqrt{2gH} = \sqrt{2(9.8)(12)} \approx 15.3\text{ m/s}$. Any launch angle and total speed combination satisfying $v_0\sin\theta \geq 15.3\text{ m/s}$ will clear the wall. This decoupling of vertical and horizontal motion — a direct consequence of treating projectile motion as two independent one-dimensional problems — is the core problem-solving strategy for the entire topic: solve the vertical motion for height and time-of-flight, then use that time in the horizontal equation for range.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch3: Two-Dimensional Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

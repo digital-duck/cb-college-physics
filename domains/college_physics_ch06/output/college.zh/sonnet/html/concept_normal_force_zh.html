@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Normal Force | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="normal-force">Normal Force</h2>
+<p><strong>定义</strong></p>
+<p>法向力（normal force），记作 $N$ 或 $F_N$，是当两个物体表面相互接触时，接触面对物体施加的、垂直于接触面的支持力。它本质上是接触面材料发生微小形变后产生的弹性恢复力，方向总是"推开"物体，即垂直指向接触面并指离支撑面。法向力属于约束力（constraint force）：它的大小并非固定不变，而是由物体所处的运动状态（是否有加速度）和其他作用力共同决定，其取值使得物体不会穿透或陷入支撑面——这是求解法向力的核心原则。</p>
+<p><strong>受力分析的基本步骤</strong></p>
+<p>求解法向力问题的标准方法是对物体沿垂直于接触面的方向应用牛顿第二定律：</p>
+$$\sum F_{\perp} = ma_{\perp}$$
+<p>其中 $a_{\perp}$ 是物体在该方向上的加速度分量（静止或匀速时为零）。</p>
+<p><strong>范例：水平面上的物体</strong></p>
+<p>一个质量为 $m$ 的箱子静止放在水平地面上，只受重力 $mg$（向下）和法向力 $N$（向上）作用。由于箱子沿竖直方向没有加速度：</p>
+$$N - mg = 0 \implies N = mg$$
+<p><strong>范例：倾斜表面</strong></p>
+<p>若箱子放在倾角为 $\theta$ 的光滑斜面上，重力需分解为垂直于斜面的分量 $mg\cos\theta$ 和沿斜面方向的分量 $mg\sin\theta$。垂直方向上箱子仍无加速度，因此：</p>
+$$N = mg\cos\theta$$
+<p>这个结果表明，法向力并不总等于重力的大小，而是依赖于几何关系。</p>
+<p><strong>范例：电梯中的体重计</strong></p>
+<p>站在电梯里的人（质量 $m$）踩着体重计，体重计读数等于地面对人的法向力 $N$。若电梯以加速度 $a$ 向上加速：</p>
+$$N - mg = ma \implies N = m(g+a)$$
+<p>此时 $N > mg$，人会感到"变重"；若电梯加速下降，则 $N < mg$，人感到"失重"。这说明法向力会随参考系的加速度动态调整，而不是一个固定的常数力。</p>
+<p><strong>问题求解要点</strong>：遇到法向力问题时，务必先明确接触面的方向，将所有力投影到垂直于接触面的坐标轴上，再结合该方向上物体的实际加速度（可能为零、正、负，甚至由外部约束如轨道曲率决定）求解 $N$。法向力永远是"结果"而非"原因"——它由系统的运动约束反向解出，这也是它在摩擦力（$f = \mu N$）、圆周运动、电梯问题等场景中反复出现的原因。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

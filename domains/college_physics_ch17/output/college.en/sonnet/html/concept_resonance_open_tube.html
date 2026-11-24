@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resonance Open Tube | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="resonance-open-tube">Resonance Open Tube</h2>
+<p><strong>Definition.</strong> A tube open at both ends has a pressure <em>node</em> (displacement <em>antinode</em>) at each end, because the air there is free to move and stays at atmospheric pressure. A standing wave fits only if an integer number of half-wavelengths spans the tube:</p>
+$$L = n\frac{\lambda_n}{2}, \qquad n = 1, 2, 3, \dots$$
+<p>Using $v_w = f\lambda$ for the speed of sound, the resonant frequencies are</p>
+$$f_n = \frac{n\,v_w}{2L} = n f_1, \qquad f_1 = \frac{v_w}{2L}.$$
+<p>Every integer multiple of the fundamental $f_1$ is allowed, so an open tube produces <em>all</em> harmonics. This is why open pipes such as flutes and organ pipes sound bright and full.</p>
+<p><strong>Worked example.</strong> A flute-like tube is $L = 0.600\ \text{m}$ long and open at both ends. Air temperature is $20^\circ\text{C}$, so $v_w = 343\ \text{m/s}$. Find the first three resonances.</p>
+$$f_1 = \frac{343}{2(0.600)} = 286\ \text{Hz}$$
+$$f_2 = 2f_1 = 572\ \text{Hz}, \qquad f_3 = 3f_1 = 858\ \text{Hz}$$
+<p>The matching wavelengths are $\lambda_n = 2L/n$: $1.20\ \text{m}$, $0.600\ \text{m}$, and $0.400\ \text{m}$.</p>
+<p><strong>Problem-solving application.</strong> <em>A tube open at both ends must resonate at 440 Hz (concert A) as its fundamental when the air is at $20^\circ\text{C}$, so $v_w = 343\ \text{m/s}$. How long must it be?</em></p>
+<li>Solve $f_1 = v_w/(2L)$ for length:</li>
+$$L = \frac{v_w}{2f_1} = \frac{343}{2(440)} = 0.390\ \text{m}.$$
+<li>Check by finding the second resonance: $f_2 = 2(440) = 880\ \text{Hz}$, one octave above the fundamental.</li>
+<p><strong>Useful strategies.</strong></p>
+<li>Draw the standing wave first: displacement antinodes at both ends, with $n$ half-wavelengths between them.</li>
+<li>Use ratios. If you know one resonance, the others follow from $f_n = nf_1$, and two adjacent resonances differ by exactly $f_1$.</li>
+<li>To find $n$ from two measured adjacent resonances $f_n$ and $f_{n+1}$, compute $f_1 = f_{n+1} - f_n$, then $n = f_n/f_1$.</li>
+<p><strong>Check yourself.</strong> A tube open at both ends resonates at 510 Hz and 612 Hz with no resonance between them. Then $f_1 = 612 - 510 = 102\ \text{Hz}$ and $n = 510/102 = 5$. The two resonances are the 5th and 6th harmonics. The tube length is $L = v_w/(2f_1) = 343/204 \approx 1.68\ \text{m}$ at $20^\circ\text{C}$.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ionization | College Physics Ch31</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="ionization">Ionization</h2>
+<p><strong>Ionization</strong> is the removal of an electron from an atom, which leaves a positively charged ion. For a neutral atom $X$, the first ionization is</p>
+$$X + E_i \;\to\; X^{+} + e^{-}$$
+<p>where $E_i$ is the <strong>ionization energy</strong>. This is the minimum energy needed to remove the most loosely bound electron from an atom in its ground state. Ionization energies are measured in electron-volts (1 eV $= 1.602\times10^{-19}$ J), and typical values are a few eV to a few tens of eV. Cesium needs about 3.9 eV, hydrogen 13.6 eV, and helium 24.6 eV.</p>
+<p>Two facts follow from this definition:</p>
+<li>If the energy supplied is less than $E_i$, the electron stays bound. Extra energy does not "add up" over several weak pushes from a single photon.</li>
+<li>If the energy supplied is greater than $E_i$, the surplus becomes the kinetic energy of the freed electron:</li>
+$$K_e = E_{\text{supplied}} - E_i.$$
+<p>For a photon, the supplied energy is $E = h\nu = hc/\lambda$, and it is convenient to use $hc = 1240\ \text{eV·nm}$.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>What is the longest-wavelength photon that can ionize ground-state hydrogen?</p>
+<p>The longest wavelength corresponds to the lowest usable energy, which is exactly $E_i$:</p>
+$$\lambda_{\max} = \frac{hc}{E_i} = \frac{1240\ \text{eV·nm}}{13.6\ \text{eV}} \approx 91.2\ \text{nm}.$$
+<p>This is ultraviolet. Visible light (400–700 nm, about 1.8–3.1 eV) carries far less than 13.6 eV per photon, so it cannot ionize hydrogen, no matter how intense the beam is.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem.</strong> Ground-state helium ($E_i = 24.6$ eV) is exposed to ultraviolet light. (a) Does a 30 nm photon ionize it? If so, what is the electron's kinetic energy? (b) Does a 100 nm photon?</p>
+<p><strong>Solution.</strong></p>
+<p>(a) The photon energy is</p>
+$$E = \frac{1240\ \text{eV·nm}}{30\ \text{nm}} \approx 41.3\ \text{eV}.$$
+<p>Since $41.3 > 24.6$, ionization occurs, and</p>
+$$K_e = 41.3 - 24.6 \approx 16.7\ \text{eV}.$$
+<p>(b) At 100 nm, $E = 12.4$ eV, which is less than 24.6 eV. No ionization occurs.</p>
+<p><strong>Strategy for ionization problems:</strong></p>
+<li>Convert the energy source to eV. For a photon, use $E = 1240/\lambda$ with $\lambda$ in nm.</li>
+<li>Compare $E$ with $E_i$. If $E < E_i$, stop: the atom is not ionized.</li>
+<li>If $E \ge E_i$, subtract to find the electron's kinetic energy, $K_e = E - E_i$.</li>
+<li>To find a threshold, set $E = E_i$ and solve for $\lambda$.</li>
+<p><strong>Check your understanding.</strong> What is the longest wavelength of light that can ionize cesium? Is it visible, ultraviolet, or infrared?</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch31: Radioactivity and Nuclear Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

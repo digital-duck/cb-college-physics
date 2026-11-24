@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photomultiplier | College Physics Ch31</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="photomultiplier">Photomultiplier</h2>
+<p><strong>定义</strong></p>
+<p>光电倍增管（Photomultiplier Tube，PMT）是一种将闪烁体产生的微弱光信号转换并放大为可测量电信号的真空电子器件。其核心工作原理基于两个连续的物理过程：光电效应与二次电子发射。入射光子首先撞击光阴极（photocathode），通过光电效应释放出光电子，其数量正比于入射光强。这些光电子随后被电场加速，依次撞击一系列被称为"倍增极"（dynode）的电极。每次撞击都会从倍增极表面激发出多个二次电子，从而实现电流的逐级放大。</p>
+<p>设单个倍增极的二次电子发射系数（增益因子）为 $\delta$，倍增管共有 $n$ 级倍增极，则总增益 $G$ 近似为：</p>
+$$
+G = \delta^{n}
+$$
+<p>典型情况下 $\delta \approx 3\text{–}6$，$n \approx 8\text{–}12$，因此总增益可达 $10^{6}$ 至 $10^{7}$ 量级——这意味着一个光电子最终可产生上百万个电子，形成可被电子学系统直接采集的电流脉冲。</p>
+<p><strong>实例分析</strong></p>
+<p>考虑一个具有 10 级倍增极、每级增益 $\delta = 4$ 的光电倍增管。总增益为：</p>
+$$
+G = 4^{10} \approx 1.05 \times 10^{6}
+$$
+<p>若闪烁体在一次粒子事件中产生 100 个光电子（即光阴极释放 100 个电子），则阳极输出的电子总数约为：</p>
+$$
+N_{\text{out}} = 100 \times 1.05 \times 10^{6} \approx 1.05 \times 10^{8}
+$$
+<p>对应的电荷量为 $Q = N_{\text{out}} \cdot e \approx 1.05 \times 10^{8} \times 1.6 \times 10^{-19}\ \text{C} \approx 1.68 \times 10^{-11}\ \text{C}$，这已是纳安培级别的可测信号。</p>
+<p><strong>问题求解应用</strong></p>
+<p>在实验设计中，一个常见问题是：给定探测器所需的信噪比与最小可探测光电子数，如何选择倍增极级数与外加高压（高压决定 $\delta$）？由于 $G$ 对 $\delta$ 呈指数依赖，微小的高压波动会导致增益的显著漂移，这正是 PMT 需要稳定高压电源与逐管刻度（calibration）的根本原因。此外，由于增益服从统计涨落（光电子发射与二次发射均为泊松过程），单光电子分辨率和能量分辨率的计算都依赖于对 $G$ 及其方差的定量分析，这是核物理实验中能谱刻度与阈值设定的基础工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch31: Radioactivity and Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

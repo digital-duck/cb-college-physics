@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grand Unified Theory | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="grand-unified-theory">Grand Unified Theory</h2>
+<p><strong>定义</strong></p>
+<p>大统一理论（Grand Unified Theory，GUT）是一类理论框架，主张在极高能量尺度下，强相互作用、弱相互作用与电磁相互作用会统一为单一的规范力，对应于一个更大的对称群（如 $SU(5)$ 或 $SO(10)$），标准模型的 $SU(3)_C \times SU(2)_L \times U(1)_Y$ 结构在低能下则是这一大群自发破缺后的残余对称。三种耦合常数 $\alpha_1, \alpha_2, \alpha_3$（分别对应 $U(1)_Y$、$SU(2)_L$、$SU(3)_C$）并非常数，而是依赖于能量标度 $\mu$，其演化由重整化群方程（RGE）描述：</p>
+$$\frac{d\alpha_i^{-1}}{d\ln\mu} = -\frac{b_i}{2\pi}$$
+<p>其中 $b_i$ 是各群的一圈 β 函数系数，由粒子谱决定。GUT 的核心预言是：外推到某个统一能标 $M_X \approx 10^{14}\text{–}10^{16}\ \text{GeV}$ 时，三条曲线 $\alpha_1^{-1}(\mu), \alpha_2^{-1}(\mu), \alpha_3^{-1}(\mu)$ 应相交于一点。</p>
+<p><strong>推导示例</strong></p>
+<p>在一圈近似下，上式可积分为线性关系：</p>
+$$\alpha_i^{-1}(\mu) = \alpha_i^{-1}(M_Z) - \frac{b_i}{2\pi}\ln\frac{\mu}{M_Z}$$
+<p>标准模型中 $b_i = (\tfrac{41}{10}, -\tfrac{19}{6}, -7)$。将三条直线的斜率代入并求解两两交点，会发现纯标准模型下三线并不精确汇于一点——这正是历史上支持超对称大统一（MSSM 中 $b_i$ 因超伴子贡献而改变）的关键定量证据之一。</p>
+<p><strong>问题求解应用</strong></p>
+<p>给定 $\mu = M_Z \approx 91.2\ \text{GeV}$ 处的实验值 $\alpha_1^{-1} \approx 59.0$、$\alpha_2^{-1} \approx 29.6$，以及各自的 $b_1, b_2$，可令两条直线相等：</p>
+$$\alpha_1^{-1}(M_Z) - \frac{b_1}{2\pi}\ln\frac{M_X}{M_Z} = \alpha_2^{-1}(M_Z) - \frac{b_2}{2\pi}\ln\frac{M_X}{M_Z}$$
+<p>解出 $\ln(M_X/M_Z)$，即可估算统一能标 $M_X$。这类计算训练的是"用线性外推检验一个高能物理假说"的方法论：先建立可测的低能观测量与理论参数的函数关系，再反推理论在无法直接实验触及的能区是否自洽。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metabolic Rate | College Physics Ch07</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="metabolic-rate">Metabolic Rate</h2>
+<p><strong>定义</strong></p>
+<p>代谢率（metabolic rate）是人体将食物中储存的化学能转化为功、热能及其他能量形式以维持生命活动的速率。人体细胞通过有氧呼吸分解葡萄糖、脂肪酸等燃料分子，消耗氧气并产生二氧化碳与水，同时释放能量：</p>
+$$
+\text{C}_6\text{H}_{12}\text{O}_6 + 6\text{O}_2 \rightarrow 6\text{CO}_2 + 6\text{H}_2\text{O} + \text{能量}
+$$
+<p>由于这一反应中氧气消耗量与释放的能量近似成固定比例（每消耗 1 升 $\text{O}_2$ 约释放 20.1 kJ 能量，具体系数取决于燃料成分），代谢率可通过测量单位时间内的氧气消耗量 $\dot{V}_{\text{O}_2}$（单位：L/min）间接求得：</p>
+$$
+\text{代谢率} \approx \dot{V}_{\text{O}_2} \times 20.1 \ \text{kJ/L}
+$$
+<p>在完全静息、清醒、空腹状态下测得的最低代谢率称为<strong>基础代谢率</strong>（BMR），它维持心跳、呼吸、体温调节等基本生理功能。</p>
+<p><strong>应用示例</strong></p>
+<p>某成年人静息时测得 $\dot{V}_{\text{O}_2} = 0.25$ L/min。代入上式：</p>
+$$
+\text{代谢率} = 0.25 \times 20.1 = 5.03 \ \text{kJ/min}
+$$
+<p>换算为每日能量消耗（假设该速率维持全天）：</p>
+$$
+5.03 \ \text{kJ/min} \times 1440 \ \text{min/day} \approx 7243 \ \text{kJ/day} \approx 1731 \ \text{kcal/day}
+$$
+<p>这与典型成年人 BMR 的实测范围（约 1400–1800 kcal/day）相符，说明该间接测热法（indirect calorimetry）具有实际应用价值。</p>
+<p><strong>问题求解应用</strong></p>
+<p>代谢率的意义不止于静息状态。总日能量消耗（TDEE）可分解为：</p>
+$$
+\text{TDEE} = \text{BMR} + \text{活动消耗} + \text{食物热效应}
+$$
+<p>例如，若某人 BMR 为 1700 kcal/day，日常活动（步行、家务等）额外消耗 500 kcal，中等强度运动 1 小时消耗 400 kcal，食物消化热效应约占摄入热量的 10%（若摄入 2200 kcal，则为 220 kcal），则：</p>
+$$
+\text{TDEE} = 1700 + 500 + 400 + 220 = 2820 \ \text{kcal/day}
+$$
+<p>此类计算是制定饮食与训练方案的基础：若目标是减重，摄入应低于 TDEE 形成能量缺口；若目标是增肌，则需摄入略高于 TDEE 并保证蛋白质供给。理解代谢率与氧耗之间的定量关系，也是运动生理学中评估最大摄氧量（$\dot{V}_{\text{O}_2\max}$）、设计有氧训练强度的核心工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch7: Work, Energy, and Energy Resources (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

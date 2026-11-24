@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resistance | College Physics Ch21</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="resistance">Resistance</h2>
+<p><strong>Definition.</strong> Resistance is a measure of how strongly a component opposes the flow of electric charge. It is the ratio of the voltage across the component to the current through it:</p>
+$$R = \frac{V}{I}$$
+<p>The SI unit is the <strong>ohm</strong> ($\Omega$), where $1\,\Omega = 1\,\text{V/A}$. For many materials, called <em>ohmic</em>, $R$ stays constant as $V$ changes. This gives <strong>Ohm's law</strong>, $V = IR$. A conductor's resistance also depends on its geometry and material:</p>
+$$R = \frac{\rho L}{A}$$
+<p>Here $\rho$ is the resistivity of the material (in $\Omega\cdot\text{m}$), $L$ is the length, and $A$ is the cross-sectional area. Longer wires resist more. Thicker wires resist less.</p>
+<p><strong>Worked example.</strong> A copper wire is 2.0 m long with a cross-sectional area of $1.0\times10^{-6}\,\text{m}^2$ (1 mm²). Copper has $\rho = 1.7\times10^{-8}\,\Omega\cdot\text{m}$. Find its resistance.</p>
+$$R = \frac{(1.7\times10^{-8})(2.0)}{1.0\times10^{-6}} = 0.034\,\Omega$$
+<p>The resistance is tiny, which is why copper is used for wiring. Now connect a 12 V battery across a $24\,\Omega$ resistor. The current is</p>
+$$I = \frac{V}{R} = \frac{12}{24} = 0.50\,\text{A}$$
+<p><strong>Problem-solving application.</strong> A 12 V battery is connected across a $24\,\Omega$ resistor and a $12\,\Omega$ resistor, each wired directly to the battery terminals. Find the current through each resistor and the total current drawn from the battery.</p>
+<p><em>Step 1: Apply Ohm's law to each resistor.</em> Each resistor has the full 12 V across it, so</p>
+$$I_1 = \frac{12}{24} = 0.50\,\text{A}, \qquad I_2 = \frac{12}{12} = 1.0\,\text{A}$$
+<p><em>Step 2: Add the currents.</em> The battery supplies both currents, so</p>
+$$I_{total} = 0.50 + 1.0 = 1.5\,\text{A}$$
+<p><em>Step 3: Find the effective resistance the battery "sees."</em></p>
+$$R_{eff} = \frac{V}{I_{total}} = \frac{12}{1.5} = 8\,\Omega$$
+<p><em>Check:</em> The result, $8\,\Omega$, is smaller than either resistor ($12\,\Omega$ and $24\,\Omega$). This makes sense. Adding a second path for charge to flow makes it easier for current to pass, so the total current rises and the effective resistance falls.</p>
+<p><strong>Key habits.</strong> Write down the voltage across each component before you apply $V = IR$. Use the same component's $V$, $I$, and $R$ in each equation, and keep units visible so mistakes show up as mismatched units. Finally, test whether your answer is physically reasonable. A thicker or shorter wire should give a smaller resistance, and a second path for current should never increase the total resistance.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch21: Circuits and DC Instruments (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gravitational Constant | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="gravitational-constant-万有引力常数">Gravitational Constant（万有引力常数）</h2>
+<p><strong>定义</strong></p>
+<p>牛顿万有引力定律指出，任意两个质点之间存在相互吸引力，其大小为</p>
+$$F = G\frac{m_1 m_2}{r^2}$$
+<p>其中 $m_1, m_2$ 为两物体的质量，$r$ 为它们质心间的距离，$G$ 是<strong>万有引力常数</strong>，其实验测定值为</p>
+$$G \approx 6.674 \times 10^{-11}\ \text{N·m}^2/\text{kg}^2$$
+<p>$G$ 是一个普适常数——不依赖于物体的材质、位置或所处环境，在宇宙任何地方都取同一数值。这一点与地表重力加速度 $g \approx 9.8\ \text{m/s}^2$ 不同：$g$ 是 $G$、地球质量与地球半径共同作用的结果，会随高度、纬度而略有变化，而 $G$ 本身是恒定的。</p>
+<p>由于 $G$ 的数值极其微小，万有引力在日常尺度上极弱，只有当至少一个物体质量巨大（如行星、恒星）时，引力效应才变得显著。这也是 $G$ 难以精确测量的根本原因：卡文迪什实验（1798年）通过一个精密的扭秤装置——两个小球被细丝悬挂，靠近两个大球时因引力发生微小扭转——首次在实验室中测出了 $G$ 的数值，从而"称出了地球的质量"。</p>
+<p><strong>例题</strong></p>
+<p>已知地球质量 $M = 5.97\times10^{24}\ \text{kg}$，半径 $R = 6.37\times10^{6}\ \text{m}$，求地表重力加速度 $g$。</p>
+<p>在地表，一个质量为 $m$ 的物体所受引力为 $F = G\dfrac{Mm}{R^2}$，由牛顿第二定律 $F = mg$，得</p>
+$$g = \frac{GM}{R^2} = \frac{(6.674\times10^{-11})(5.97\times10^{24})}{(6.37\times10^6)^2} \approx 9.8\ \text{m/s}^2$$
+<p>这与实测值高度吻合，验证了 $G$ 的测量精度。</p>
+<p><strong>问题解决应用</strong></p>
+<p>利用 $G$，可以反过来通过测量天体表面的 $g$ 和半径 $R$，推算其质量：$M = gR^2/G$。这正是天文学中估算行星、卫星乃至系外行星质量的核心方法——我们无法直接称量一颗行星，却可以通过引力效应间接求解。掌握 $F=Gm_1m_2/r^2$ 与 $g=GM/R^2$ 之间的换算，是解决轨道力学、卫星发射能量计算等问题的基础工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

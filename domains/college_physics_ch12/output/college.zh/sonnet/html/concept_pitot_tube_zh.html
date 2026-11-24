@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pitot Tube | College Physics Ch12</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="皮托管">皮托管</h2>
+<p><strong>定义</strong></p>
+<p>皮托管（Pitot tube）是一种利用伯努利原理测量流体（气体或液体）速度的装置。它通常由一根弯曲的细管组成，管口正对来流方向。管内测得的是<strong>总压</strong>（也称滞止压，stagnation pressure）$p_0$，即流体在管口处被迫完全减速为零时所达到的压强；而管壁侧面开孔测得的是<strong>静压</strong>$p$，即流体正常流动时的压强。根据伯努利方程，沿同一流线、忽略高度变化时：</p>
+$$
+p + \frac{1}{2}\rho v^2 = p_0
+$$
+<p>其中 $\rho$ 是流体密度，$v$ 是待测流速。整理后得到皮托管的核心公式：</p>
+$$
+v = \sqrt{\frac{2(p_0 - p)}{\rho}}
+$$
+<p>这里 $p_0 - p$ 称为<strong>动压</strong>（dynamic pressure），是流体因运动而具有的额外压强；它必须通过压差传感器或液柱压差计直接测出。</p>
+<p><strong>推导要点</strong></p>
+<p>该公式的关键假设是：来流在管口处被完全阻滞（速度降为零），能量没有损失，且測压点位于同一水平流线上，因此可以直接应用伯努利方程而不需要重力项。这正是"驻点"（dead spot，即管口正对流处，流速为零）与"流动区"（管壁侧压孔处，流速为 $v$）之间压差与速度平方成正比这一关系的数学来源。</p>
+<p><strong>工程应用与解题</strong></p>
+<p>例：某飞机在飞行中,皮托管测得总压与静压之差为 $\Delta p = 2500\ \text{Pa}$，此高度空气密度 $\rho = 1.0\ \text{kg/m}^3$。求飞行速度。</p>
+<p>代入公式：</p>
+$$
+v = \sqrt{\frac{2 \times 2500}{1.0}} = \sqrt{5000} \approx 70.7\ \text{m/s}
+$$
+<p>这大约相当于 254 km/h，与商用飞机巡航速度量级相符。</p>
+<p>在实际工程中，皮托管广泛用于飞机空速指示、风洞测速和管道流量监测。需要注意的是，公式假设流体不可压缩；当速度接近或超过声速时，需引入可压缩流修正（涉及马赫数），否则测量值会系统性偏低。这也是解题时判断"是否需要修正项"的关键依据：先估算马赫数 $M = v/a$（$a$ 为声速），若 $M < 0.3$，不可压缩假设通常足够精确。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch12: Fluid Dynamics and Its Biological and Medical Applications (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

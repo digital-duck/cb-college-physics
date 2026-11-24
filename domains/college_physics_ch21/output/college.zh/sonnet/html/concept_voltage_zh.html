@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voltage | College Physics Ch21</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="voltage">Voltage</h2>
+<p><strong>定义</strong></p>
+<p>电压（voltage），又称电位差（potential difference），描述的是电路中两点之间单位电荷所具有的电势能之差。设电荷 $q$ 在两点之间移动时，电场力（或电源）对其做的功为 $W$，则电压定义为</p>
+$$
+V = \frac{W}{q}
+$$
+<p>单位为伏特（V），$1\text{ V} = 1\text{ J/C}$，即将 $1$ 库仑电荷从一点移动到另一点需要（或释放）$1$ 焦耳的能量。电压本质上是一个<strong>相对量</strong>——我们谈论的永远是两点之间的电位差，而非某一点的"绝对电压"，这与重力势能需要参考高度类似：山顶的势能高低取决于你以哪里为基准面。</p>
+<p><strong>性质与决定因素</strong></p>
+<p>电压的高低取决于电源（如电池）内部化学能转化为电能的效率，与外部电路的电阻或电流大小无直接因果关系——电压是"因"，电流是"果"。在串联电路中，电源提供的总电压等于各元件上电压降之和（基尔霍夫电压定律）：</p>
+$$
+V_{\text{总}} = V_1 + V_2 + \cdots + V_n
+$$
+<p><strong>例题</strong></p>
+<p>一节电池标注为 $9\text{ V}$，将 $2\text{ C}$ 的电荷从负极推向正极，电池做了多少功？</p>
+<p>由 $V = W/q$ 得 $W = Vq = 9 \times 2 = 18\text{ J}$。</p>
+<p><strong>问题解决应用</strong></p>
+<p>结合欧姆定律 $V = IR$，电压是连接电流与电阻的桥梁。例如，一个 $12\text{ V}$ 的电源接入 $4\ \Omega$ 的电阻，回路电流为 $I = V/R = 3\text{ A}$。若该电路中还串联了一个 $2\ \Omega$ 的电阻，则可先求总电阻 $R_{\text{总}} = 6\ \Omega$，再得电流 $I = 2\text{ A}$，随后用 $V = IR$ 分别求出两电阻上的电压降（$4\text{ V}$ 和 $8\text{ V}$），并验证其和等于电源电压 $12\text{ V}$——这正是基尔霍夫电压定律在实际问题中的直接应用。掌握电压概念，是分析任何电路能量分配问题的起点。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch21: Circuits and DC Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

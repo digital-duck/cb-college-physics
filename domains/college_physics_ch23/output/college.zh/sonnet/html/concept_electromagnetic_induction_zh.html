@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electromagnetic Induction | College Physics Ch23</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="电磁感应">电磁感应</h2>
+<p><strong>定义</strong></p>
+<p>电磁感应是指导体或线圈中磁通量发生变化时，会在其中产生电动势（electromotive force, emf）的现象，这一规律由法拉第（Faraday）通过实验总结，并由楞次（Lenz）确定了感应电动势的方向。磁通量 $\Phi_B$ 定义为磁场穿过某一面积的通量：</p>
+$$
+\Phi_B = \int \vec{B} \cdot d\vec{A}
+$$
+<p>对于均匀磁场垂直穿过面积为 $A$ 的平面线圈，可简化为 $\Phi_B = BA\cos\theta$，其中 $\theta$ 是磁场方向与线圈法线方向的夹角。法拉第电磁感应定律指出，感应电动势等于磁通量变化率的负值：</p>
+$$
+\varepsilon = -N\frac{d\Phi_B}{dt}
+$$
+<p>其中 $N$ 为线圈匝数。负号体现楞次定律：感应电流产生的磁场总是阻碍原磁通量的变化，这本质上是能量守恒的体现——系统会"抵抗"外部对它做的改变。</p>
+<p><strong>推导的必要性</strong>：这个负号不是数学装饰，而是物理定律本身。若没有负号（即感应电流反而增强磁通量变化），能量将无限自我增殖，违反热力学第一定律。因此楞次定律是法拉第定律不可分割的一部分。</p>
+<p><strong>例题</strong></p>
+<p>一个边长 $10\text{ cm}$ 的正方形线圈，匝数 $N=50$，放置在磁场中，磁场垂直穿过线圈平面并均匀地从 $B_1 = 0.20\text{ T}$ 在 $\Delta t = 0.5\text{ s}$ 内增大到 $B_2 = 0.80\text{ T}$。求感应电动势。</p>
+<p>面积 $A = (0.10\text{ m})^2 = 0.01\text{ m}^2$。磁通量变化：</p>
+$$
+\Delta\Phi_B = A(B_2 - B_1) = 0.01 \times 0.60 = 6.0\times10^{-3}\text{ Wb}
+$$
+<p>代入法拉第定律：</p>
+$$
+|\varepsilon| = N\frac{\Delta\Phi_B}{\Delta t} = 50 \times \frac{6.0\times10^{-3}}{0.5} = 0.60\text{ V}
+$$
+<p>由楞次定律可判断，感应电流方向将产生与原磁场方向相反的磁场，以阻碍磁通量的增大——即感应电流沿逆时针方向流动（若原磁场方向指向观察者）。</p>
+<p><strong>解题应用</strong></p>
+<p>处理电磁感应问题时，核心步骤是：(1) 写出 $\Phi_B(t)$ 的表达式；(2) 对时间求导得到 $|\varepsilon|$；(3) 用楞次定律确定电流方向而非依赖公式符号。当磁通量变化源于线圈运动（而非磁场本身变化）时，问题常转化为动生电动势 $\varepsilon = BLv$，这是同一定律在不同几何条件下的等价表述，本质仍是 $d\Phi_B/dt$ 的计算。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch23: Electromagnetic Induction, AC Circuits, and Electrical Technologies (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

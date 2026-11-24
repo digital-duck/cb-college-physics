@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liquid Crystal Display | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="液晶显示器">液晶显示器</h2>
+<p><strong>定义</strong></p>
+<p>液晶显示器（Liquid Crystal Display，LCD）是一种利用液晶分子对光偏振方向的可控旋转，配合偏振滤光片来调节每个像素透光量的显示技术。液晶是一种介于固态与液态之间的物质相：它像液体一样可以流动，但内部分子又像固体晶体一样保持某种有序排列。在最常见的扭曲向列型（Twisted Nematic，TN）液晶结构中，液晶分子被夹在两片相互垂直的偏振片之间，未通电时分子呈螺旋状排列，能将穿过第一片偏振片的偏振光旋转 $90°$，使其恰好能通过第二片偏振片，像素呈现"亮"态；一旦施加电压，液晶分子沿电场方向重新排列，失去旋转光偏振的能力，光线被第二片偏振片阻挡，像素呈现"暗"态。</p>
+<p><strong>工作实例</strong></p>
+<p>考虑一个单色 LCD 像素：光源发出自然光，经第一片偏振片后只剩沿竖直方向振动的偏振光。若该像素电极未加电压，液晶层将偏振方向逐渐旋转 $90°$，光到达第二片（水平方向）偏振片时方向恰好吻合，几乎全部透过，像素呈亮。若在电极上施加约 $2$–$5\text{ V}$ 的驱动电压，电场使液晶分子转向与电场平行的方向，不再具备旋转偏振的能力，光线仍沿竖直方向振动，被水平偏振片挡住，像素呈暗。彩色 LCD 则在此基础上为每个像素叠加红、绿、蓝三个滤色子像素，通过分别控制三者的透光强度实现全彩显示。</p>
+<p><strong>问题解决应用</strong></p>
+<p>工程上的核心问题是：如何用连续变化的电压实现灰度（而非只是"全亮/全暗"）？答案在于液晶分子的旋转角度并非非黑即白，而是随外加电压强度连续变化——电压越高，分子偏离螺旋结构越多，透光旋转角偏离 $90°$ 越远，透过第二片偏振片的光强按 Malus 定律近似衰减：</p>
+$$
+I = I_0 \cos^2(\theta)
+$$
+<p>其中 $\theta$ 是光偏振方向与第二片偏振片透光轴之间的夹角，由该像素所加电压决定。因此，要让某个子像素显示 50% 灰度，只需计算并施加使 $\theta \approx 45°$ 的中间电压，即可让 $I = 0.5\,I_0$。这正是显示器驱动电路（TFT，薄膜晶体管阵列）逐像素独立调节电压、生成 8 位或更高精度灰度值的物理基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

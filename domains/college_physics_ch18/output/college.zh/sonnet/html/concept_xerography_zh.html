@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xerography | College Physics Ch18</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="xerography">Xerography</h2>
+<p><strong>定义</strong></p>
+<p>静电复印术（xerography，源自希腊语 "xeros"，意为"干燥"）是一种不使用液体显影剂的干式静电复印工艺。其核心部件是一个涂有光导材料（如硒或有机光导体）的圆柱形鼓。光导体有一个关键性质：在黑暗中它是电绝缘体，能保持表面电荷；一旦受光照射，光子激发出自由电子—空穴对，该区域便瞬间导电，电荷随之泄放。整个过程分五步：（1）充电——电晕丝使鼓面均匀带上正电荷；（2）曝光——原稿反射的光通过透镜投射到鼓面，被照亮区域（对应原稿的白色背景）电荷泄放，未被照亮区域（对应原稿的黑色文字）保留电荷，从而在鼓面形成一幅与原稿明暗对应的"静电潜像"；（3）显影——带负电的墨粉颗粒被鼓面残留正电荷区域静电吸附，潜像转变为可见的墨粉像；（4）转印——纸张背面施加更强的正电荷，将墨粉从鼓面吸引到纸上；（5）定影——加热熔融墨粉中的树脂成分，使其永久粘附于纸张纤维之上。</p>
+<p><strong>应用实例</strong></p>
+<p>考虑一份包含黑色文字和白色底色的原稿。曝光阶段，白色区域反射大量光线，照亮鼓面对应位置，导致该处电荷迅速泄放至地；而黑色文字区域几乎不反射光，对应鼓面位置仍保留初始正电荷。因此，静电潜像精确地"记录"了原稿的明暗信息——这与胶片摄影中卤化银感光原理类似，都是把光信息转换为化学或电荷分布信息。带负电的墨粉只会附着在仍带正电的区域，即文字区域，从而复现原稿图案。</p>
+<p><strong>问题求解应用</strong></p>
+<p>工程上常需分析电晕充电的均匀性与曝光时间的关系。设鼓面初始电荷密度为 $\sigma_0$，光导体在光强 $I$ 下的电荷泄放速率近似满足指数衰减：</p>
+$$\sigma(t) = \sigma_0 \, e^{-kIt}$$
+<p>其中 $k$ 为材料相关常数。若曝光时间 $t_{\text{exp}}$ 过短，白色区域电荷泄放不充分，导致背景灰雾（未清除的背景墨粉）；若过长，则可能使文字边缘细节因散射光而部分泄放，造成图像模糊。工程师需要求解使得白色区域电荷降至阈值 $\sigma_{\text{th}}$ 以下所需的最小曝光时间：</p>
+$$t_{\text{exp}} \geq \frac{1}{kI}\ln\!\left(\frac{\sigma_0}{\sigma_{\text{th}}}\right)$$
+<p>这类最优化问题在实际打印机设计中直接决定了鼓转速与灯光强度的匹配，是理解复印质量与速度之间工程权衡的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch18: Electric Charge and Electric Field (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

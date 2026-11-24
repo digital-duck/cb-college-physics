@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thin Lens Equations | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="thin-lens-equations">Thin Lens Equations</h2>
+<p><strong>定义</strong></p>
+<p>薄透镜方程将物距 $d_o$、像距 $d_i$ 与焦距 $f$ 联系起来：</p>
+$$\frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{f}$$
+<p>配套的放大率方程给出像的大小与取向：</p>
+$$m = -\frac{d_i}{d_o}$$
+<p>符号约定（以薄透镜为例）：光从左侧入射，物距 $d_o$ 恒为正；实像位于透镜右侧，$d_i > 0$，虚像位于左侧，$d_i < 0$；凸透镜 $f>0$，凹透镜 $f<0$。$|m|>1$ 表示放大，$|m|<1$ 表示缩小；$m>0$ 表示正立，$m<0$ 表示倒立。这套约定同样适用于球面镜，只需将 $f = R/2$（$R$ 为曲率半径）代入即可，方程形式完全一致，这正是该方程被称为"薄透镜/镜方程"的原因——它统一描述了折射与反射成像。</p>
+<p><strong>例题</strong></p>
+<p>一个焦距 $f = 10\ \text{cm}$ 的凸透镜前方 $15\ \text{cm}$ 处放置一物体，求像的位置与放大率。</p>
+<p>由 $\dfrac{1}{d_o}+\dfrac{1}{d_i}=\dfrac{1}{f}$：</p>
+$$\frac{1}{d_i} = \frac{1}{10} - \frac{1}{15} = \frac{3-2}{30} = \frac{1}{30}$$
+<p>得 $d_i = 30\ \text{cm}$，为正值，说明成实像，位于透镜右侧 $30\ \text{cm}$ 处。</p>
+<p>放大率：</p>
+$$m = -\frac{d_i}{d_o} = -\frac{30}{15} = -2$$
+<p>即像是倒立的，且是物体的两倍大。</p>
+<p><strong>问题求解应用</strong></p>
+<p>这两个方程本质上是两个未知数（$d_i$、$m$，或反过来求 $d_o$、$f$）的联立代数问题，关键在于先确定符号，再代入求解，最后依据符号解释物理意义（实/虚、正立/倒立、放大/缩小）。典型的应用套路是：已知任意三个量（$d_o, d_i, f$ 中的两个，加上是否已知 $m$），求第四个。例如，若已知某透镜使物体放大 3 倍成实像，且物距 $12\ \text{cm}$，可先由 $m=-d_i/d_o=-3$ 解出 $d_i=36\ \text{cm}$，再代入透镜方程求出 $f = \left(\frac{1}{12}+\frac{1}{36}\right)^{-1} = 9\ \text{cm}$。掌握符号约定并系统代入，是解决几乎所有几何光学成像问题的核心技巧。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

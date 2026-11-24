@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ohms Law | College Physics Ch21</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="ohms-law">Ohms Law</h2>
+<p><strong>定义</strong></p>
+<p>欧姆定律描述了电阻元件两端电压与流过其中电流之间的定量关系：</p>
+$$V = IR$$
+<p>其中 $V$ 为电阻两端的电压降（单位：伏特，V），$I$ 为通过该电阻的电流（单位：安培，A），$R$ 为电阻的阻值（单位：欧姆，$\Omega$）。这个关系式表明，对于给定的电阻，电压与电流成正比，比例系数就是电阻值。需要注意的是，欧姆定律并非对所有材料都成立——它只适用于"欧姆性"元件，即 $R$ 在一定条件下（如温度不变）保持恒定的元件；而像二极管这样的非线性元件，其 $V$-$I$ 关系并不满足这个简单的线性式。</p>
+<p><strong>范例演算</strong></p>
+<p>考虑一个电路，电源提供 $V = 12\text{ V}$ 的电压，串联一个 $R = 4\ \Omega$ 的电阻。求通过电阻的电流。</p>
+<p>将欧姆定律变形求解电流：</p>
+$$I = \frac{V}{R} = \frac{12\text{ V}}{4\ \Omega} = 3\text{ A}$$
+<p>若将电阻换成 $R = 6\ \Omega$，在同样的电压下，电流将变为 $I = 12/6 = 2\text{ A}$。可以看出，电阻越大，在电压不变的情况下电流越小——这正是欧姆定律所刻画的反比关系。</p>
+<p><strong>问题求解应用</strong></p>
+<p>欧姆定律的三种变形——$V = IR$、$I = V/R$、$R = V/I$——是分析电路的基本工具。例如，已知某元件两端电压为 $9\text{ V}$，通过电流为 $0.5\text{ A}$，可求得其电阻：</p>
+$$R = \frac{V}{I} = \frac{9}{0.5} = 18\ \Omega$$
+<p>在更复杂的电路中，欧姆定律常与基尔霍夫电压定律（KVL）和电流定律（KCL）联合使用：先用 KVL/KCL 列出电路方程，再用欧姆定律将电压、电流用电阻表示，从而求解未知量。例如，在串联电路中，总电阻 $R_{\text{total}} = R_1 + R_2 + \cdots$，总电流由 $I = V_{\text{total}} / R_{\text{total}}$ 求得，再对每个电阻应用 $V_i = IR_i$ 求出各自的电压降。掌握欧姆定律，是理解功率公式 $P = IV = I^2R$ 以及后续学习交流电路、阻抗等更复杂概念的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch21: Circuits and DC Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

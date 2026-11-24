@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polarizing Filter | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="polarizing-filter">Polarizing Filter</h2>
+<p><strong>定义</strong></p>
+<p>偏振片（polarizing filter）是由长链分子沿单一方向排列制成的光学材料，其内部结构使电场分量平行于分子链轴的光被吸收（若为吸收型偏振片,分子链本身导电,沿链方向的电场驱动电子振荡而耗散能量），而垂直于该方向的电场分量则几乎无损通过。这个允许透射的方向称为<strong>透射轴</strong>（transmission axis）。由于自然光或大多数光源发出的光是非偏振的——电场方向在垂直于传播方向的平面内随机快速变化——偏振片的作用是从这种杂乱的电场中"筛选"出单一固定方向的分量，从而产生<strong>线偏振光</strong>（linearly polarized light）。</p>
+<p><strong>马吕斯定律与定量分析</strong></p>
+<p>当一束线偏振光（电场振幅 $E_0$，光强 $I_0 \propto E_0^2$）入射到透射轴与其偏振方向成夹角 $\theta$ 的偏振片上时，只有平行于透射轴的电场分量 $E_0\cos\theta$ 能够通过。由于光强与电场幅值的平方成正比，透射光强满足<strong>马吕斯定律</strong>：</p>
+$$I(\theta) = I_0 \cos^2\theta$$
+<p>这是本节中唯一必须引入的数学关系，因为它精确刻画了偏振片对光强的量化衰减，是解释诸如液晶显示器（LCD）像素调光、偏光太阳镜消除反射眩光、摄影偏振镜控制天空对比度等应用的理论基础。</p>
+<p><strong>解题应用</strong></p>
+<p><em>例题</em>：一束非偏振光通过第一块偏振片后光强减半（非偏振光通过任意单个偏振片，平均透射率恒为 $I_0/2$，因为各方向分量均匀分布，$\langle\cos^2\theta\rangle = 1/2$）。若紧接着放置第二块偏振片，其透射轴与第一块夹角为 $60°$，求最终透射光强占原始入射光强的比例。</p>
+<p>解：第一块偏振片后，光强为 $I_1 = I_0/2$，且光已线偏振，方向与第一块透射轴一致。第二块偏振片应用马吕斯定律：</p>
+$$I_2 = I_1 \cos^2(60°) = \frac{I_0}{2}\times\frac{1}{4} = \frac{I_0}{8}$$
+<p>因此最终透射比例为 $12.5\%$。此类"级联偏振片"问题是理解偏振调制器、摄影曝光控制乃至量子力学中态叠加坍缩类比的基础训练。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

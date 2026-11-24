@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polarization | College Physics Ch18</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="polarization-极化">Polarization（极化）</h2>
+<p><strong>定义</strong></p>
+<p>极化是指中性物体内部正负电荷在外部带电体的影响下发生微小分离的现象。物体本身不带净电荷，但电荷分布不再均匀：一侧略带正电，另一侧略带负电。极化分两种机制。第一种是<strong>分子极化</strong>：某些分子（如水分子 $H_2O$）本身就是极性分子，正负电荷中心天然不重合，形成固有偶极矩；施加外电场后，这些偶极子会转向与电场对齐。第二种是<strong>感应极化</strong>：对于非极性分子或导体，外电场会使电子云相对于原子核发生微小位移，从而临时产生偶极矩。无论哪种机制，其结果都可以用偶极矩 $\vec{p} = q\vec{d}$ 描述，其中 $q$ 是分离的电荷量，$\vec{d}$ 是正负电荷中心之间的位移矢量。</p>
+<p><strong>举例说明</strong></p>
+<p>将一根带正电的塑料棒靠近一小片中性纸屑。纸屑中的电子云会向棒的方向偏移，使纸屑靠近棒的一侧带负电，远离的一侧带正电。由于近端负电荷与棒之间的距离小于远端正电荷,库仑引力 $F \propto \dfrac{1}{r^2}$ 大于排斥力，纸屑被净吸引，即便它整体呈电中性。这正是气球摩擦后能吸附头发、纸屑的原理。</p>
+<p><strong>问题求解应用</strong></p>
+<p>极化解释了为什么中性物体也会被带电体吸引，这是判断静电现象方向性的关键工具。求解此类问题时，遵循三步法：</p>
+<li>判断外部电荷的正负；</li>
+<li>确定中性物体内部电荷重新分布的方向（近端电荷与外部电荷符号相反）；</li>
+<li>比较两端与外部电荷的距离，利用 $F \propto 1/r^2$ 判断净力方向恒为吸引。</li>
+<p>极化还解释了<strong>电介质</strong>在电容器中的作用：电介质中每个分子被极化后产生的感应电场会部分抵消外加电场，使电容器在相同电荷下电压降低，从而使电容 $C = Q/V$ 增大，介电常数 $\kappa$ 正是这种极化效应强弱的量度。理解极化,有助于区分"接触带电"(电荷真实转移)与"感应带电"(仅电荷重新分布,物体整体仍中性)这两类常见的静电实验现象。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch18: Electric Charge and Electric Field (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

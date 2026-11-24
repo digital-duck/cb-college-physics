@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Myopia | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="myopia">Myopia</h2>
+<p><strong>Definition.</strong> Myopia (nearsightedness) is a refractive defect in which the eye focuses parallel light rays from distant objects at a point <em>in front of</em> the retina. The cause is either an eyeball that is too long (axial myopia) or a cornea and lens whose combined optical power is too strong (refractive myopia). Rays from far objects are overconverged, so they cross and diverge again before reaching the retina, producing a blurred image. Near objects are still seen clearly because their rays diverge more, pushing the focal point back toward the retina.</p>
+<p><strong>Optics.</strong> For a thin lens system, the lens equation is</p>
+$$\frac{1}{f}=\frac{1}{d_o}+\frac{1}{d_i}$$
+<p>where $f$ is the focal length, $d_o$ is the object distance, and $d_i$ is the image distance. Optical power is $P = 1/f$, measured in diopters (D) when $f$ is in meters. A normal eye has $d_i \approx 2.0$ cm, the lens-to-retina distance. Light from a far object ($d_o\to\infty$) is then focused on the retina. A myopic eye has too much power for its retinal distance, so the image forms at $d_i < $ retina position.</p>
+<p><strong>Far point.</strong> The <em>far point</em> is the farthest distance at which the myopic eye can focus an object on its retina. A normal eye's far point is at infinity. A myopic eye's far point is finite, and this is what the corrective lens must fix.</p>
+<p><strong>Worked example.</strong> A person can see clearly only out to $d_{fp}=50$ cm. What lens corrects their vision?</p>
+<p>The lens must take an object at infinity and form a virtual image at the far point, on the same side as the object. The image distance is therefore negative: $d_i=-0.50$ m, with $d_o=\infty$.</p>
+$$\frac{1}{f}=\frac{1}{\infty}+\frac{1}{-0.50\ \text{m}}=-2.0\ \text{m}^{-1}$$
+<p>So $P=-2.0$ D, a diverging (concave) lens with $f=-50$ cm. The lens spreads the incoming rays just enough that the eye's overconverging optics bring them to a focus on the retina.</p>
+<p><strong>Problem-solving application.</strong> Suppose a contact lens sits on the cornea and the person's prescription must be found from their far point. The general rule is</p>
+$$P_{\text{correction}}=-\frac{1}{d_{fp}}$$
+<p>(with $d_{fp}$ in meters). Use it as follows:</p>
+<li>Find the far point $d_{fp}$ from the problem statement.</li>
+<li>Treat the lens as forming a virtual image at $d_{fp}$ of an object at infinity.</li>
+<li>Compute $P=-1/d_{fp}$. A negative sign always indicates a diverging lens.</li>
+<li>Check the sign: myopia is always corrected with $P<0$.</li>
+<p><em>Check:</em> a far point of 25 cm gives $P=-4.0$ D, which is a stronger prescription than the 50 cm case. This makes sense, because a closer far point means a more severe defect. If the lens is worn 2 cm in front of the eye, as with eyeglasses, use $d_{fp}-0.02$ m in the formula instead.</p>
+<p><strong>Other treatments.</strong> Refractive surgery such as LASIK reshapes the cornea to reduce its power. Orthokeratology lenses do the same temporarily. All of these methods reduce the eye's net optical power so that the focal point moves back onto the retina.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

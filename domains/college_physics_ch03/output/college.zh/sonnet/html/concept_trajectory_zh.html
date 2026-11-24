@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trajectory | College Physics Ch03</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="轨迹">轨迹</h2>
+<p><strong>定义</strong></p>
+<p>抛体运动的轨迹（trajectory）是物体在只受重力作用下，因水平方向匀速运动与竖直方向匀加速运动叠加而形成的空间路径。设物体以初速度 $v_0$、与水平方向成角 $\theta$ 抛出，忽略空气阻力，取抛出点为原点，水平方向为 $x$ 轴，竖直向上为 $y$ 轴，重力加速度为 $g$。两个方向的运动相互独立（伽利略的独立性原理）：</p>
+$$
+x(t) = v_0 \cos\theta \cdot t, \qquad y(t) = v_0 \sin\theta \cdot t - \frac{1}{2} g t^2
+$$
+<p>由第一式解出 $t = \dfrac{x}{v_0 \cos\theta}$，代入第二式消去参数 $t$，得到轨迹方程：</p>
+$$
+y = x \tan\theta - \frac{g}{2 v_0^2 \cos^2\theta} \, x^2
+$$
+<p>这是一个关于 $x$ 的二次函数，因此轨迹在数学上必然是一条<strong>抛物线</strong>——这不是近似，而是运动学方程直接推导的结果。</p>
+<p><strong>例题</strong></p>
+<p>一枚小球以 $v_0 = 20\ \text{m/s}$、$\theta = 30^\circ$ 抛出，取 $g = 10\ \text{m/s}^2$。求其最大高度和水平射程。</p>
+<p>竖直分速度 $v_{0y} = v_0 \sin\theta = 10\ \text{m/s}$，到达最高点时竖直速度为零，用 $v_{0y}^2 = 2 g h_{\max}$ 得</p>
+$$
+h_{\max} = \frac{v_{0y}^2}{2g} = \frac{100}{20} = 5\ \text{m}
+$$
+<p>水平射程可由 $y=0$（回到地面）代入轨迹方程求非零解 $x$，等价于经典公式：</p>
+$$
+R = \frac{v_0^2 \sin(2\theta)}{g} = \frac{400 \times \sin 60^\circ}{10} \approx 34.6\ \text{m}
+$$
+<p><strong>解题应用</strong></p>
+<p>面对抛体问题的关键技巧是：<strong>将矢量运动分解为两个独立的标量问题</strong>，分别用匀速直线运动公式（水平）和匀加速直线运动公式（竖直）求解，只有时间 $t$ 是连接两者的公共变量。轨迹方程本身则用于回答"给定水平位置，物体高度是多少"或"物体是否能越过某高度的障碍"这类几何约束问题——只需将已知的 $x$（或 $y$）代入方程即可，无需重新分解运动过程。注意射程公式在 $\theta = 45^\circ$ 时取得最大值，这一结论也可直接由 $\sin(2\theta)$ 的最大值条件得出。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch3: Two-Dimensional Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

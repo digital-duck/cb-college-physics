@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resonance Open Tube | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="resonance-open-tube">Resonance Open Tube</h2>
+<p><strong>定义</strong></p>
+<p>两端开口的管中,空气柱会在特定频率下发生共振,形成驻波。由于管的两端都是开口(与外界大气相通),空气分子在两端可以自由运动,因此两端都必须是<strong>位移波腹</strong>(displacement antinode)——即空气振动幅度最大的位置。这一边界条件决定了哪些波长能够在管内形成稳定的驻波。</p>
+<p>设管长为 $L$,声速为 $v_w$。两端都是波腹的驻波,其半波长的整数倍必须恰好等于管长,即：</p>
+$$L = n\frac{\lambda_n}{2}, \quad n = 1, 2, 3, \dots$$
+<p>由此解出波长 $\lambda_n = \dfrac{2L}{n}$,再利用 $v_w = f\lambda$ 关系,得到共振频率：</p>
+$$f_n = \frac{n v_w}{2L}, \quad n = 1, 2, 3, \dots$$
+<p>这意味着开管支持<strong>全部谐波</strong>（基频及其所有整数倍频率),这与一端封闭的管（只支持奇次谐波)形成鲜明对比。</p>
+<p><strong>例题</strong></p>
+<p>一根长笛可近似看作两端开口的管,长度为 $L = 0.66\text{ m}$。已知室温下声速 $v_w = 343\text{ m/s}$,求其基频及前两个泛音的频率。</p>
+<p>基频（$n=1$）：</p>
+$$f_1 = \frac{(1)(343)}{2(0.66)} \approx 260\text{ Hz}$$
+<p>第一泛音（$n=2$）：</p>
+$$f_2 = 2f_1 \approx 520\text{ Hz}$$
+<p>第二泛音（$n=3$）：</p>
+$$f_3 = 3f_1 \approx 780\text{ Hz}$$
+<p>可见谐波之间是基频的简单整数倍关系。</p>
+<p><strong>解题应用</strong></p>
+<p>在实际问题中,常需要反向求解:已知某乐器或实验装置测得的共振频率,求管长,或判断某频率对应第几阶谐波。方法是:先由相邻共振频率之差 $\Delta f = f_{n+1} - f_n = v_w/(2L)$ 求出 $\Delta f$（等于基频 $f_1$),再用 $L = v_w/(2f_1)$ 求管长;若已知某测得频率 $f$,则阶数 $n = f/f_1$,应为整数,以此验证该频率确属该管的共振模式。这种"频率间隔恒定"的特征,是区分开管与闭管系统的关键判据。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

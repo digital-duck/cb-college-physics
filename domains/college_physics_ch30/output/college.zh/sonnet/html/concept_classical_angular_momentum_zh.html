@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classical Angular Momentum | College Physics Ch30</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="classical-angular-momentum">Classical Angular Momentum</h2>
+<p><strong>定义</strong></p>
+<p>角动量是线动量的旋转对应量,描述一个物体绕某一点转动时所携带的"转动惯性"。对于质量为 $m$、以速度 $v$ 绕某中心点作圆周运动、轨道半径为 $r$ 的质点,其角动量大小为</p>
+$$L = mvr$$
+<p>更一般地,角动量是一个矢量,定义为位置矢量与线动量的叉积:</p>
+$$\vec{L} = \vec{r} \times \vec{p} = \vec{r} \times m\vec{v}$$
+<p>其方向由右手定则给出,垂直于 $\vec{r}$ 与 $\vec{v}$ 所在的平面。当速度方向与位置矢量垂直时(如圆周运动),$|\vec{L}| = mvr$ 恰好成立;若两者不垂直,则需引入夹角 $\theta$,即 $L = mvr\sin\theta$。</p>
+<p>角动量的重要性在于其<strong>守恒性</strong>:当作用在物体上的合外力矩为零时,角动量保持不变。这一规律直接来自牛顿第二定律的旋转形式,是分析行星轨道、花样滑冰运动员旋转、陀螺仪等现象的核心工具。</p>
+<p><strong>例题</strong></p>
+<p>一颗质量 $m = 5.0 \times 10^{24}\ \text{kg}$ 的行星,在距恒星 $r = 2.0 \times 10^{11}\ \text{m}$ 处以速度 $v = 3.0 \times 10^4\ \text{m/s}$ 沿近似圆形轨道运动(速度与半径矢量垂直)。求其角动量。</p>
+<p>代入公式:</p>
+$$L = mvr = (5.0\times10^{24})(3.0\times10^4)(2.0\times10^{11}) = 3.0\times10^{40}\ \text{kg·m}^2/\text{s}$$
+<p><strong>问题解决应用</strong></p>
+<p>角动量守恒最常用于解决"半径变化时速度如何变化"的问题。例如,行星沿椭圆轨道运动,近日点半径 $r_1$、速度 $v_1$,远日点半径 $r_2$、速度 $v_2$。由于引力沿径向,对轨道中心的力矩为零,角动量守恒给出:</p>
+$$m v_1 r_1 = m v_2 r_2 \quad\Rightarrow\quad v_1 r_1 = v_2 r_2$$
+<p>若已知 $r_1 = 1.0\times10^{11}\ \text{m}$、$v_1 = 6.0\times10^4\ \text{m/s}$,而远日点 $r_2 = 3.0\times10^{11}\ \text{m}$,则</p>
+$$v_2 = \frac{v_1 r_1}{r_2} = \frac{(6.0\times10^4)(1.0\times10^{11})}{3.0\times10^{11}} = 2.0\times10^4\ \text{m/s}$$
+<p>可见,半径增大三倍,速度相应减小为原来的三分之一——这正是开普勒第二定律(等面积定律)背后的物理本质,也是分析卫星变轨、彗星轨道等真实问题的标准方法。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch30: Atomic Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetic Field Circular Loop | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="magnetic-field-circular-loop">Magnetic Field Circular Loop</h2>
+<p><strong>定义</strong></p>
+<p>载流圆环会在其周围空间产生磁场，这一现象可由毕奥-萨伐尔定律（Biot-Savart Law）推导得出。对于半径为 $R$、载有电流 $I$ 的圆形导线环，其<strong>中心点</strong>处的磁场大小为：</p>
+$$B = \frac{\mu_0 I}{2R}$$
+<p>其中 $\mu_0 = 4\pi \times 10^{-7}\ \text{T·m/A}$ 是真空磁导率。磁场方向垂直于环平面，遵循右手定则：四指沿电流方向弯曲，拇指指向即为磁场方向。这一公式之所以简洁，是因为在圆心处，环上每一段电流元产生的磁场方向完全一致（都沿轴线方向），且每一段到圆心的距离都相等，都等于 $R$——这正是圆形几何带来的对称性优势，使得毕奥-萨伐尔定律的积分可以直接化简为上述闭式解。</p>
+<p>值得注意的是，这个场分布在环轴线上远离环面处，会逐渐近似于一个磁偶极子（即微型条形磁铁）的场型，这也是标题中"形状类似条形磁铁"的由来。</p>
+<p><strong>例题</strong></p>
+<p>一个半径 $R = 5.0\ \text{cm} = 0.05\ \text{m}$ 的圆形线圈，通有电流 $I = 2.0\ \text{A}$。求其中心处的磁场大小。</p>
+<p>代入公式：</p>
+$$B = \frac{(4\pi \times 10^{-7})(2.0)}{2 \times 0.05} = \frac{8\pi \times 10^{-7}}{0.10} = 2.51 \times 10^{-5}\ \text{T}$$
+<p>约为地球磁场量级的一半左右，说明单匝小电流线圈产生的场并不算强。</p>
+<p><strong>解题应用</strong></p>
+<p>实际问题中常需要"反推"：已知目标磁场强度，求所需电流或匝数。若线圈有 $N$ 匝紧密缠绕（视为共面同心环），则中心磁场变为：</p>
+$$B = \frac{\mu_0 N I}{2R}$$
+<p><strong>练习</strong>：某实验要求线圈中心磁场达到 $1.0 \times 10^{-3}\ \text{T}$，若线圈半径固定为 $2.0\ \text{cm}$，且电源电流限制在 $I = 1.5\ \text{A}$ 以内，问至少需要绕多少匝？</p>
+<p>解：由 $N = \dfrac{2RB}{\mu_0 I}$，代入数值：</p>
+$$N = \frac{2(0.02)(1.0\times10^{-3})}{(4\pi\times10^{-7})(1.5)} \approx 21.2$$
+<p>因此至少需要 <strong>22 匝</strong>（匝数必须取整，且需向上取整以满足或超过目标磁场）。这类计算在设计电磁铁、螺线管探头或磁传感器线圈时非常常见。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

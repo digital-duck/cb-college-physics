@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Force Constant | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="力常数">力常数</h2>
+<p>在胡克定律 $F = -kx$ 中，力常数 $k$（也称劲度系数）描述了一个弹性系统抵抗形变的能力：位移 $x$ 越大，恢复力 $F$ 就越大，而 $k$ 正是这种比例关系的量化系数，单位是牛顿每米（$\mathrm{N/m}$）。$k$ 越大，系统越"硬"，产生单位位移所需的力就越大；$k$ 越小，系统越"软"，容易发生形变。需要注意的是，$k$ 并非材料的固有属性，而是<strong>特定弹簧或系统</strong>的属性——同种材料做成粗细、长短不同的弹簧，$k$ 值也会不同。</p>
+<p><strong>定义与推导</strong></p>
+<p>对于理想弹簧，$k$ 可由实验测定：给弹簧施加已知力 $F$，测量其伸长量 $x$，则</p>
+$$k = \frac{F}{x}$$
+<p>若在弹性极限内多次测量并作 $F$–$x$ 图，图像应为过原点的直线，其斜率即为 $k$。这也是胡克定律成立的判据：只要图像保持线性，系统就处于"弹性区"；一旦偏离直线，说明材料已发生塑性形变，胡克定律不再适用。</p>
+<p><strong>例题</strong></p>
+<p>一根弹簧在悬挂 $2.0\,\text{kg}$ 砝码后伸长了 $0.050\,\text{m}$。求该弹簧的力常数。</p>
+<p>取 $g = 9.8\,\text{m/s}^2$，恢复力等于重力：</p>
+$$F = mg = (2.0)(9.8) = 19.6\,\text{N}$$
+$$k = \frac{F}{x} = \frac{19.6}{0.050} = 392\,\text{N/m}$$
+<p><strong>应用：弹簧组合</strong></p>
+<p>工程中常需将多个弹簧组合使用。若两弹簧<strong>并联</strong>（共同承担同一位移），等效力常数为</p>
+$$k_{\text{eq}} = k_1 + k_2$$
+<p>若两弹簧<strong>串联</strong>（力相同，位移叠加），则</p>
+$$\frac{1}{k_{\text{eq}}} = \frac{1}{k_1} + \frac{1}{k_2}$$
+<p>例如，两根 $k_1 = 200\,\text{N/m}$ 与 $k_2 = 300\,\text{N/m}$ 的弹簧并联，$k_{\text{eq}} = 500\,\text{N/m}$；若串联，则 $k_{\text{eq}} = 120\,\text{N/m}$。这类计算在悬架系统、减震器设计等实际问题中十分常见，也是理解简谐振动周期 $T = 2\pi\sqrt{m/k}$ 的基础——$k$ 越大，系统振动越快，恢复能力越强。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

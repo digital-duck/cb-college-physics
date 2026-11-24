@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galvanometer | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="检流计">检流计</h2>
+<p><strong>定义</strong>：检流计（galvanometer）是一种模拟测量装置，其核心是悬挂或轴支在永久磁铁磁场中的一个线圈。当电流通过线圈时，线圈受到安培力矩作用而发生偏转，指针的偏转角 $\theta$ 与通过线圈的电流 $I$ 成正比：</p>
+$$
+\theta = k \, I
+$$
+<p>其中 $k$ 是与线圈匝数、面积、磁场强度以及悬丝（或游丝）恢复力矩系数有关的常数。检流计有两个关键参数：<strong>内阻</strong> $R_g$（线圈本身的电阻）和<strong>电流灵敏度</strong> $I_g$（使指针满偏所需的最小电流，通常在微安级）。这两个参数共同决定了检流计能否被改装为更实用的电表。</p>
+<p><strong>工作原理的物理基础</strong>：线圈处于磁场 $B$ 中时，受到的力矩为 $\tau_{磁} = NBIA\cos\phi$（$N$为匝数，$A$为线圈面积，$\phi$为线圈平面与磁场的夹角）。径向磁场设计使 $\phi$ 恒为零，从而 $\tau_{磁} \propto I$。指针偏转由游丝提供的恢复力矩 $\tau_{弹} = \kappa\theta$ 平衡，达到稳态时 $\tau_{磁} = \tau_{弹}$，即：</p>
+$$
+NBIA = \kappa \theta \quad\Rightarrow\quad \theta = \frac{NBA}{\kappa} I
+$$
+<p>这正是偏转与电流成正比这一结论的来源。</p>
+<p><strong>问题解决应用——电表改装</strong>：检流计本身量程极小，实际测量中常需将其改装为电流表或电压表。</p>
+<p><em>改装为电流表</em>：需要在线圈两端并联一个低阻分流电阻 $R_s$，使大部分电流绕过线圈。设目标量程为 $I$（$I \gg I_g$），由并联电路电压相等条件：</p>
+$$
+I_g R_g = (I - I_g) R_s \quad\Rightarrow\quad R_s = \frac{I_g R_g}{I - I_g}
+$$
+<p><em>改装为电压表</em>：需要串联一个高阻扩程电阻 $R_m$，限制流经线圈的电流不超过 $I_g$。设目标量程为电压 $V$：</p>
+$$
+V = I_g (R_g + R_m) \quad\Rightarrow\quad R_m = \frac{V}{I_g} - R_g
+$$
+<p><strong>例题</strong>：某检流计 $R_g = 50\ \Omega$，$I_g = 1\ \text{mA}$。若要改装成量程为 $10\ \text{A}$ 的电流表，求所需分流电阻。代入公式：</p>
+$$
+R_s = \frac{(0.001)(50)}{10 - 0.001} \approx 0.005\ \Omega
+$$
+<p>这说明分流电阻极小，实际制作时需用低阻锰铜丝精确绕制，这也是检流计在电表设计中精度控制的关键工程环节。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

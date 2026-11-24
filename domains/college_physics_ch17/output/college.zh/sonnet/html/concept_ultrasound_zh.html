@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultrasound | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="超声波">超声波</h2>
+<p><strong>定义</strong></p>
+<p>超声波（ultrasound）是频率高于 $20{,}000\ \text{Hz}$（即 $20\ \text{kHz}$）的机械波，超出了人耳可感知的范围（约 $20\ \text{Hz}$–$20\ \text{kHz}$）。和可听声一样，超声波本质上是纵波，需要介质（气体、液体或固体）传播，其传播速度 $v$、频率 $f$ 与波长 $\lambda$ 满足</p>
+$$v = f\lambda$$
+<p>由于频率极高，超声波的波长很短。例如在软组织中声速约为 $v \approx 1540\ \text{m/s}$，若使用 $f = 5\ \text{MHz}$ 的探头，则</p>
+$$\lambda = \frac{v}{f} = \frac{1540}{5\times10^6} \approx 3.1\times10^{-4}\ \text{m} = 0.31\ \text{mm}$$
+<p>短波长意味着更高的空间分辨率——这正是超声波在医学成像和精密测距中被广泛使用的物理原因。</p>
+<p><strong>基本原理与计算示例</strong></p>
+<p>超声成像利用回声定位：换能器发出脉冲，遇到不同介质的界面（如组织与器官边界）时发生反射，接收回波并根据往返时间计算距离。设脉冲往返时间为 $\Delta t$，则界面深度 $d$ 为</p>
+$$d = \frac{v \cdot \Delta t}{2}$$
+<p>例如，若某组织界面的回波在发射后 $\Delta t = 26\ \mu\text{s}$ 返回，取 $v = 1540\ \text{m/s}$，则</p>
+$$d = \frac{1540 \times 26\times10^{-6}}{2} \approx 0.02\ \text{m} = 2\ \text{cm}$$
+<p>这正是超声诊断仪显示器上换算深度的基本算法。</p>
+<p><strong>问题解决应用</strong></p>
+<p>超声波的应用远不止医学影像：工业无损检测利用其穿透金属并在裂纹处反射的特性发现内部缺陷；声呐（SONAR）利用水中传播特性测量海底深度或探测潜艇；蝙蝠和海豚天然使用超声波回声定位捕食与导航。</p>
+<p>在实际问题中，你需要综合运用波速—频率—波长关系与回声测距公式。例如：一台工业探伤仪测得某钢材（$v = 5900\ \text{m/s}$）内部缺陷的回波时间为 $\Delta t = 8\ \mu\text{s}$，则缺陷深度为 $d = \dfrac{5900 \times 8\times10^{-6}}{2} \approx 2.36\ \text{cm}$。掌握这一分析框架，你就能将超声波的物理原理转化为实际工程与医学诊断中的定量测量工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

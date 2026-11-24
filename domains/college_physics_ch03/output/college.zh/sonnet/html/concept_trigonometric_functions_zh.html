@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trigonometric Functions | College Physics Ch03</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="trigonometric-functions">Trigonometric Functions</h2>
+<p><strong>定义</strong></p>
+<p>在直角三角形中，正弦、余弦、正切三个比值将一个锐角与三条边的长度联系起来。设某锐角为 $\theta$，其对边为 $a$（opposite）、邻边为 $b$（adjacent）、斜边为 $c$（hypotenuse），则</p>
+$$
+\sin\theta = \frac{a}{c}, \qquad \cos\theta = \frac{b}{c}, \qquad \tan\theta = \frac{a}{b} = \frac{\sin\theta}{\cos\theta}.
+$$
+<p>这三个比值只依赖于角度 $\theta$，与三角形的大小无关——这正是"相似三角形对应边成比例"这一几何事实的直接推论。当我们把角度扩展到单位圆上定义时，$\sin\theta$ 和 $\cos\theta$ 分别等于圆上对应点的纵坐标和横坐标，这使得三角函数可以处理任意角度，而不仅限于 $0^\circ$ 到 $90^\circ$ 之间。</p>
+<p><strong>范例</strong></p>
+<p>在向量分析中，三角函数常用于把向量分解为分量。设一个力向量 $\vec{F}$ 的大小为 $|\vec{F}| = 50\text{ N}$，与水平方向的夹角为 $\theta = 30^\circ$。则它的水平分量和竖直分量分别为</p>
+$$
+F_x = |\vec{F}|\cos\theta = 50\cos30^\circ \approx 43.3\text{ N}, \qquad F_y = |\vec{F}|\sin\theta = 50\sin30^\circ = 25\text{ N}.
+$$
+<p>反过来，如果已知分量 $F_x, F_y$，也可以用反正切求出方向角：$\theta = \arctan\left(\dfrac{F_y}{F_x}\right)$。</p>
+<p><strong>问题求解应用</strong></p>
+<p>三角函数是连接"角度—方向"描述与"坐标—分量"描述的桥梁，这在物理与工程中极为常见：分解斜面上的重力、合成多个力向量、计算电路中交流信号的相位差，都依赖同样的分解与合成逻辑。</p>
+<p>练习：一架无人机以 $60^\circ$ 仰角、速度 $20\text{ m/s}$ 起飞。求它的水平速度分量与竖直速度分量。</p>
+<p>解：$v_x = 20\cos60^\circ = 10\text{ m/s}$，$v_y = 20\sin60^\circ = 20 \times \dfrac{\sqrt{3}}{2} \approx 17.3\text{ m/s}$。</p>
+<p>掌握"角度 $\rightarrow$ 分量"与"分量 $\rightarrow$ 角度"这两个互逆过程，是后续学习向量运算、旋转变换乃至傅里叶分析的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch3: Two-Dimensional Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

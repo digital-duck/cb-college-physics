@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fluid | College Physics Ch11</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="流体">流体</h2>
+<p>流体（fluid）是能够持续变形以适应容器形状、在剪切力作用下会连续流动而不能恢复原状的物质状态，包括液体、气体和等离子体。这一性质与固体形成鲜明对比：固体受到剪切力时会产生一个有限的弹性形变并达到静态平衡，而流体只要剪切力持续存在，就会持续变形，永远不会"停下来"。这就是流体力学中最核心的定义性判据——固体抵抗剪切应变，流体抵抗的是剪切应变率（$\dot{\gamma}$，即形变速率），而不是形变本身。</p>
+<p>这一区别可以用牛顿黏性定律定量描述。对于牛顿流体，剪切应力 $\tau$ 与速度梯度成正比：</p>
+$$
+\tau = \mu \frac{du}{dy}
+$$
+<p>其中 $\mu$ 是动力黏度，$\dfrac{du}{dy}$ 是垂直于流动方向的速度梯度（即剪切应变率）。当 $\dfrac{du}{dy} = 0$ 时，$\tau = 0$——流体静止时不能承受任何剪切应力，这正是"流体会流动"的数学表达：只要存在剪切应力，流体就必然产生形变率，直到剪切消失。</p>
+<p><strong>例题</strong>：两块平行平板相距 $h = 2\ \text{mm}$，中间充满黏度 $\mu = 1.0\times10^{-3}\ \text{Pa·s}$（近似水）的流体。上板以 $U = 0.5\ \text{m/s}$ 相对下板运动，下板静止。假设流动是线性（库埃特）流动，速度梯度为常数 $\dfrac{du}{dy} = \dfrac{U}{h}$，求维持上板运动所需施加的剪切应力。</p>
+<p>代入公式：</p>
+$$
+\tau = \mu \frac{U}{h} = (1.0\times10^{-3})\times\frac{0.5}{2\times10^{-3}} = 0.25\ \text{Pa}
+$$
+<p><strong>解题应用</strong>：这一模型可以推广到判断"给定压差下，黏性流体能否顺利通过某个通道"这类工程问题。例如，在设计微流控芯片或输液管道时，工程师需要先确认流体是否可近似为牛顿流体（$\mu$ 为常数），再用上述关系估算所需压力或流速，从而决定管径、材料或泵的选型。如果测得的 $\tau$–$\dot{\gamma}$ 关系不是线性的（例如血液、油漆），则该物质仍是流体（仍会持续变形），但属于非牛顿流体，需要用更复杂的本构方程描述，这正是从"流体"这一基础状态概念通向流变学（rheology）的自然延伸。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch11: Fluid Statics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

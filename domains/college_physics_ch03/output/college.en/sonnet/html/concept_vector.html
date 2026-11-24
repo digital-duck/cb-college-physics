@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vector | College Physics Ch03</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="vector">Vector</h2>
+<p>A vector is a mathematical object that carries both magnitude (size) and direction, distinguishing it from a scalar, which carries magnitude alone. Graphically, a vector is drawn as an arrow: its length represents magnitude, and the direction it points represents direction. In two dimensions, a vector $\vec{v}$ is written in component form as $\vec{v} = \langle v_x, v_y \rangle$, and its magnitude is $|\vec{v}| = \sqrt{v_x^2 + v_y^2}$, a direct application of the Pythagorean theorem. Because two vectors placed head-to-tail combine into a single resultant vector, addition is performed component-wise: $\vec{u} + \vec{v} = \langle u_x + v_x,\ u_y + v_y \rangle$. This combination rule is what makes vectors useful — they let us track quantities like displacement, velocity, and force, where direction changes the outcome and cannot be ignored.</p>
+<p><strong>Worked example.</strong> A hiker walks 3 km east, then 4 km north. Represent each leg as a vector: $\vec{A} = \langle 3, 0 \rangle$ and $\vec{B} = \langle 0, 4 \rangle$. The total displacement is $\vec{A} + \vec{B} = \langle 3, 4 \rangle$, with magnitude $|\vec{A}+\vec{B}| = \sqrt{3^2+4^2} = 5$ km. Note that 5 km is less than the total distance walked (7 km) — the vector sum captures net displacement, not path length, which is precisely why direction matters.</p>
+<p><strong>Problem-solving application.</strong> Vector addition extends directly to problems with more than two contributing quantities, as long as each is expressed in the same component form. Suppose the hiker continues with a third leg, walking 2 km west: $\vec{C} = \langle -2, 0 \rangle$. The new total displacement is $\vec{A} + \vec{B} + \vec{C} = \langle 3-2,\ 4 \rangle = \langle 1, 4 \rangle$, with magnitude $\sqrt{1^2+4^2} \approx 4.12$ km. The same component-wise addition applies regardless of how many vectors are combined or what physical quantity they represent — three forces pulling on an object, four velocity contributions in a moving reference frame, or a sequence of displacements — because addition is defined per component, and components along the same axis simply sum. This is the general strategy for any multi-vector problem: convert each vector to components, add matching components, then compute the magnitude of the result if a single size is needed.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch3: Two-Dimensional Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

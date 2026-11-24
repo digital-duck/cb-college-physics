@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michelson Morley Experiment | College Physics Ch28</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="michelson-morley-experiment">Michelson Morley Experiment</h2>
+<p><strong>定义</strong></p>
+<p>19世纪末,物理学家普遍相信光是在一种称为"以太"(aether)的介质中传播的波,正如声波需要空气传播一样。若以太存在且相对绝对空间静止,那么地球在轨道上以约 $v \approx 30\ \text{km/s}$ 的速度穿越以太时,应当能测得"以太风"——即光速会因传播方向与地球运动方向的相对关系而产生微小差异。1887年,迈克尔逊(Albert Michelson)与莫雷(Edward Morley)设计了一套高精度干涉仪实验,试图探测这一效应。他们的仪器将一束光分成两路,分别沿相互垂直的方向传播相同距离后反射回来,再重新汇合发生干涉。若两路光因"以太风"而经历不同的有效光速,则两束光到达终点的时间会有微小差异,从而在干涉条纹上产生可观测的偏移。</p>
+<p><strong>推导与预期结果</strong></p>
+<p>设仪器两臂等长为 $L$,一臂沿地球运动方向,另一臂垂直于该方向。根据经典力学中的伽利略速度叠加,顺以太风与逆以太风方向的光往返时间为:</p>
+$$t_{\parallel} = \frac{2L}{c}\cdot\frac{1}{1-v^2/c^2}$$
+<p>垂直方向往返时间为:</p>
+$$t_{\perp} = \frac{2L}{c}\cdot\frac{1}{\sqrt{1-v^2/c^2}}$$
+<p>两者之差 $\Delta t = t_{\parallel}-t_{\perp}$ 应当导致可测量的条纹偏移,理论预期偏移量约为0.4条纹,远大于仪器的探测精度(约0.01条纹)。</p>
+<p><strong>问题解决应用</strong></p>
+<p>然而,无论迈克尔逊和莫雷将仪器旋转到何种方向,无论在一天中的何时或一年中的哪个季节重复实验,测得的条纹偏移始终为零(在实验误差范围内)。这一"零结果"意味着 $t_{\parallel}=t_{\perp}$,即光速与仪器(及地球)运动方向和速度无关。</p>
+<p>这个结果无法用经典力学解释,却直接印证了爱因斯坦狭义相对论的第二公设:真空中光速对一切惯性观察者恒为常数 $c$,与光源或观察者的运动状态无关。该实验也促使洛伦兹提出"长度收缩"假说作为过渡性解释,最终被爱因斯坦的时空理论彻底取代。练习中常要求学生代入地球公转速度 $v$ 计算预期条纹偏移量,并与实际观测值(零)对比,体会经典理论预言与实验事实之间的尖锐矛盾,从而理解为何该实验被称为"物理学史上最成功的失败实验"。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch28: Special Relativity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

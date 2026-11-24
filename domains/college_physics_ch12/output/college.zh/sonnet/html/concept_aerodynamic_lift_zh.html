@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aerodynamic Lift | College Physics Ch12</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="空气动力学升力">空气动力学升力</h2>
+<p><strong>定义</strong>：机翼产生的升力，本质上是机翼上表面与下表面之间的压强差在竖直方向上的合力。伯努利原理指出，在同一条流线上、忽略高度变化时，流体的压强与流速满足</p>
+$$p + \frac{1}{2}\rho v^2 = \text{常数}$$
+<p>也就是流速越快、压强越低。机翼的翼型被设计成上表面更弯曲，迫使气流在此处加速，压强随之下降；下表面气流较慢，压强较高。上下压强差 $\Delta p$ 乘以机翼面积 $A$，就是升力 $L = \Delta p \cdot A$。需要说明的是，"上下气流必须同时到达后缘"这一"等时间"说法是常见误解——真实原因是翼型弯度与迎角造成的环量（circulation），满足库塔条件（Kutta condition），伯努利方程只是描述压强-速度关系的工具，并非速度差的成因。</p>
+<p><strong>实例演算</strong>：设某小型飞机机翼面积 $A = 16\ \text{m}^2$，空气密度 $\rho = 1.225\ \text{kg/m}^3$，上表面气流速度 $v_{\text{上}} = 115\ \text{m/s}$，下表面 $v_{\text{下}} = 100\ \text{m/s}$。压强差为</p>
+$$\Delta p = \frac{1}{2}\rho\left(v_{\text{上}}^2 - v_{\text{下}}^2\right) = 0.6125 \times (13225 - 10000) \approx 1975\ \text{Pa}$$
+<p>升力为 $L = \Delta p \cdot A \approx 1975 \times 16 \approx 31{,}600\ \text{N}$，约合3.2吨的支撑力。</p>
+<p><strong>问题求解应用</strong>：工程上更常用升力方程 $L = \frac{1}{2}\rho v^2 A C_L$，其中 $C_L$ 为升力系数，综合体现翼型和迎角的影响。若已知某飞机起飞重量 $W = 15{,}000\ \text{N}$，机翼面积 $A = 20\ \text{m}^2$，$C_L = 1.2$，求起飞离地所需最小速度：令 $L = W$，解得</p>
+$$v = \sqrt{\dfrac{2W}{\rho A C_L}} = \sqrt{\dfrac{30000}{1.225 \times 20 \times 1.2}} \approx 32\ \text{m/s} \approx 115\ \text{km/h}$$
+<p>这正是飞行工程师计算跑道长度、襟翼设置和失速速度的核心公式。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch12: Fluid Dynamics and Its Biological and Medical Applications (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

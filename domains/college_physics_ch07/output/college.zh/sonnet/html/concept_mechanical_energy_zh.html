@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mechanical Energy | College Physics Ch07</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="mechanical-energy">Mechanical Energy</h2>
+<p><strong>定义</strong></p>
+<p>机械能（Mechanical Energy，简写为 $ME$）是物体或系统的动能与势能之和：</p>
+$$
+ME = KE + PE = \frac{1}{2}mv^2 + PE
+$$
+<p>其中 $PE$ 可以是重力势能 $mgh$、弹性势能 $\frac{1}{2}kx^2$，或两者之和，取决于系统中存在哪些保守力。<strong>机械能守恒定律</strong>指出：当系统中只有保守力（如重力、弹力）做功，没有摩擦力、空气阻力等非保守力介入时，系统的机械能保持不变：</p>
+$$
+KE_i + PE_i = KE_f + PE_f
+$$
+<p>这一结论可由功-能定理直接推出：保守力做的功等于势能的减少量（$W_{cons} = -\Delta PE$），而合力做的功又等于动能的增量（$W_{net} = \Delta KE$）。当只有保守力做功时，$W_{net} = W_{cons}$，代入得 $\Delta KE = -\Delta PE$，即 $\Delta KE + \Delta PE = 0$，也就是 $ME$ 不变。这不是一个经验规律，而是牛顿力学与功能关系的必然推论。</p>
+<p><strong>例题</strong></p>
+<p>一个质量 $m = 2\text{ kg}$ 的小球从高度 $h = 5\text{ m}$ 处由静止自由下落，忽略空气阻力，求它落地瞬间的速度。</p>
+<p>取地面为势能零点。初始时刻：$KE_i = 0$，$PE_i = mgh = 2 \times 9.8 \times 5 = 98\text{ J}$，故 $ME_i = 98\text{ J}$。落地瞬间 $h=0$，故 $PE_f = 0$，由机械能守恒 $ME_f = ME_i = 98\text{ J}$，全部转化为动能：</p>
+$$
+\frac{1}{2}mv_f^2 = 98 \implies v_f = \sqrt{\frac{2 \times 98}{2}} = 9.9\text{ m/s}
+$$
+<p><strong>解题应用</strong></p>
+<p>机械能守恒的核心价值在于：无需追踪运动的每一个中间状态，只需比较初末两个时刻的能量。这在处理曲线轨道、变力问题（如过山车、摆的运动）时尤为有效——用牛顿第二定律逐点分析加速度会非常繁琐，而能量法只需两个状态量。</p>
+<p>解题步骤通常是：(1) 明确初、末状态，选定势能零点；(2) 判断过程中是否存在非保守力做功（若有摩擦，则需用 $ME_f - ME_i = W_{friction}$ 代替严格守恒）；(3) 列出 $KE_i + PE_i = KE_f + PE_f$ 并求解未知量。判断"是否只有保守力做功"是应用此定律最关键、也最容易出错的一步。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch7: Work, Energy, and Energy Resources (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lens Power | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="lens-power">Lens Power</h2>
+<p><strong>定义</strong></p>
+<p>透镜的焦距 $f$ 描述了它使光线会聚或发散所需的距离，但在实际应用中——尤其是在设计光学系统或组合多个透镜时——直接使用焦距的倒数往往更方便。这个倒数量称为<strong>透镜度数</strong>（lens power），定义为</p>
+$$
+P = \frac{1}{f}
+$$
+<p>其中 $f$ 以米（m）为单位，$P$ 的单位是<strong>屈光度</strong>（diopter，记作 D，$1\ \text{D} = 1\ \text{m}^{-1}$）。符号约定与焦距一致：会聚透镜（凸透镜）的 $f > 0$，因此 $P > 0$；发散透镜（凹透镜）的 $f < 0$，因此 $P < 0$。$P$ 的绝对值越大，说明该透镜使光线偏折的能力越强，即“度数越高”。</p>
+<p><strong>引入度数的关键原因在于它具有可加性</strong>：当若干薄透镜紧密贴合放置（忽略透镜间距）时，组合系统的总度数等于各透镜度数之和：</p>
+$$
+P_{\text{total}} = P_1 + P_2 + \cdots + P_n
+$$
+<p>这一性质使得配镜师和光学工程师可以像做算术加法一样叠加或抵消透镜效果，而不必先求出每个焦距、通过复杂的公式合成再取倒数。</p>
+<p><strong>例题</strong></p>
+<p>某人配的眼镜片焦距为 $f = 0.50\ \text{m}$（会聚透镜），求其度数。</p>
+$$
+P = \frac{1}{f} = \frac{1}{0.50\ \text{m}} = 2.0\ \text{D}
+$$
+<p><strong>问题解决应用</strong></p>
+<p>验光师常用“度数处方”而非焦距来描述镜片。假设某人需要一副眼镜，其处方为 $-3.0\ \text{D}$（近视矫正，发散透镜），另外还需叠加一个 $+1.0\ \text{D}$ 的老花附加镜片（用于双光镜下方阅读区）。</p>
+<p>组合度数为：</p>
+$$
+P_{\text{total}} = (-3.0\ \text{D}) + (+1.0\ \text{D}) = -2.0\ \text{D}
+$$
+<p>对应的等效焦距为：</p>
+$$
+f_{\text{total}} = \frac{1}{P_{\text{total}}} = \frac{1}{-2.0\ \text{D}} = -0.50\ \text{m}
+$$
+<p>这种加法运算在焦距层面是无法直接进行的（因为 $f_1 + f_2 \neq f_{\text{total}}$），这正体现了引入“度数”这一物理量、并采用其倒数定义的实用价值：它把透镜组合问题从复杂的分式运算转化为简单的线性叠加。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

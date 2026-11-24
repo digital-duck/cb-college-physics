@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wind Chill | College Physics Ch14</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="wind-chill">Wind Chill</h2>
+<p><strong>定义</strong></p>
+<p>风寒（wind chill）描述的是移动空气通过对流增强传导散热速率，从而使人体感知到的寒冷程度超过温度计实际读数的现象。当空气静止时，皮肤表面会形成一层被体温加热的薄薄空气边界层，起到隔热作用；风一旦吹起，会不断把这层加热的空气带走，换上更冷的空气，迫使身体持续以更快速率向环境散失热量。风速越大，边界层被替换的频率越高，热量流失越快，人体感受到的"等效温度"就越低。需要强调的是，风寒只影响<strong>热量传递速率</strong>，并不会使实际气温低于温度计读数——它衡量的是人体（或暴露物体）感知到的冷却效应。</p>
+<p><strong>数学模型</strong></p>
+<p>美国国家气象局（NWS）自2001年起采用的风寒温度指数（Wind Chill Temperature, WCT）经验公式为：</p>
+$$
+T_{WC} = 35.74 + 0.6215\,T - 35.75\,V^{0.16} + 0.4275\,T\,V^{0.16}
+$$
+<p>其中 $T$ 为气温（°F），$V$ 为距地面10米处测得的风速（mph），$T_{WC}$ 为等效风寒温度（°F）。该公式由人体热传导模型结合实验数据回归得到，$V^{0.16}$ 这一非线性幂次反映了风速对热传导增强作用的<strong>边际递减</strong>特性——风速从5 mph增至10 mph带来的降温效果，远大于从30 mph增至35 mph带来的降温效果。</p>
+<p><strong>例题</strong></p>
+<p>设气温 $T = 20°F$，风速 $V = 25\text{ mph}$，求风寒温度。</p>
+<p>代入公式：$V^{0.16} = 25^{0.16} \approx 1.7013$</p>
+$$
+T_{WC} = 35.74 + 0.6215(20) - 35.75(1.7013) + 0.4275(20)(1.7013)
+$$
+$$
+T_{WC} \approx 35.74 + 12.43 - 60.82 + 14.55 \approx 1.9°F
+$$
+<p>即实际气温虽为20°F，但由于强风作用，人体感知到的寒冷程度相当于约2°F的静风气温——温差接近18°F，足以将暴露皮肤结冻时间从数小时缩短至30分钟以内，这正是气象预警系统据此发布"冻伤风险等级"的依据。</p>
+<p><strong>问题解决应用</strong></p>
+<p>该公式的实际价值在于<strong>逆向工程安全阈值</strong>：给定某地区规定"风寒低于 $-20°F$ 时须发布冻伤警报"，可固定 $T_{WC}=-20$，代入已知气温 $T$，反解出对应的临界风速 $V$（需用数值方法，因公式对 $V$ 非线性）。这类问题训练学生将经验公式转化为约束求解工具，是气象预警、极地科考装备设计、建筑保温规范制定等场景中的通用方法。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch14: Heat and Heat Transfer Methods (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

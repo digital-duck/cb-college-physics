@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wave Frequency Wavelength | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="wave-frequency-wavelength">Wave Frequency Wavelength</h2>
+<p><strong>Definition.</strong> A periodic wave repeats its pattern in both time and space. The <strong>frequency</strong> $f$ is the number of complete cycles passing a fixed point each second, measured in hertz (1 Hz = 1 cycle/s). The <strong>period</strong> is $T = 1/f$. The <strong>wavelength</strong> $\lambda$ is the distance between successive identical points, such as crest to crest. In one period the wave advances exactly one wavelength, so the wave speed is</p>
+$$v = \frac{\lambda}{T} = f\lambda .$$
+<p>At a fixed speed $v$, frequency and wavelength are inversely related:</p>
+$$f = \frac{v}{\lambda}, \qquad \lambda = \frac{v}{f}.$$
+<p>Doubling $f$ halves $\lambda$. The speed $v$ is set by the medium, not by the source. For example, $v \approx 343\ \text{m/s}$ for sound in air at $20^\circ\text{C}$, and $v = c = 3.00\times10^{8}\ \text{m/s}$ for light in vacuum. The source sets $f$, and the wavelength then follows from $\lambda = v/f$.</p>
+<p><strong>Worked example.</strong> A speaker emits a 440 Hz tone (concert A) in air. Find its wavelength.</p>
+$$\lambda = \frac{v}{f} = \frac{343\ \text{m/s}}{440\ \text{Hz}} \approx 0.78\ \text{m}.$$
+<p>Check the units: $\text{m/s} \div \text{s}^{-1} = \text{m}$. The answer is reasonable, since audible sound has wavelengths from about 2 cm (20 kHz) to 17 m (20 Hz).</p>
+<p><strong>Problem-solving application.</strong> A wave passes into a new medium, and the problem asks what changes. Consider a 500 Hz sound wave that travels from air ($v_1 = 343\ \text{m/s}$) into water ($v_2 \approx 1480\ \text{m/s}$).</p>
+<li><em>What stays fixed?</em> The frequency. Each crest arriving at the boundary produces exactly one crest leaving it, so $f = 500\ \text{Hz}$ in both media.</li>
+<li><em>What changes?</em> The speed and therefore the wavelength.</li>
+$$\lambda_1 = \frac{343}{500} = 0.686\ \text{m}, \qquad \lambda_2 = \frac{1480}{500} = 2.96\ \text{m}.$$
+<p>The wavelength grows by the same factor as the speed, $\lambda_2/\lambda_1 = v_2/v_1 \approx 4.3$.</p>
+<p>A second type of problem asks for the frequency of a signal from its wavelength. An FM radio station broadcasts at $\lambda = 3.00\ \text{m}$. Radio waves are electromagnetic, so</p>
+$$f = \frac{c}{\lambda} = \frac{3.00\times10^{8}}{3.00} = 1.00\times10^{8}\ \text{Hz} = 100\ \text{MHz}.$$
+<p>This matches the FM band (88–108 MHz).</p>
+<p><strong>Strategy summary.</strong></p>
+<li>Identify the medium and look up or compute $v$.</li>
+<li>Identify what the source fixes (always $f$) and what the medium fixes (always $v$).</li>
+<li>Solve $v = f\lambda$ for the unknown.</li>
+<li>Check units and compare against a plausible range.</li>
+<p>A common error is to say that raising the frequency makes a wave travel faster. In a given medium, $v$ is fixed. Raising $f$ only shortens $\lambda$.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Holography | College Physics Ch30</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="holography">Holography</h2>
+<p><strong>定义</strong>：全息术（holography）是利用激光的相干性，通过记录光波的振幅与相位信息（而非仅强度）来记录并重建三维图像的技术。普通照相只记录光强分布 $I(x,y)$，丢失了相位信息，因此只能还原二维投影；全息术则通过干涉将相位"编码"进强度分布，从而保留完整的波前信息。</p>
+<p>其物理基础是双光束干涉。将激光分成两路：一路直接照射感光板，称为<strong>参考光</strong> $E_R = A_R e^{i(\mathbf{k}_R \cdot \mathbf{r} - \omega t)}$；另一路照射被摄物体后反射（或透射）到感光板，称为<strong>物光</strong> $E_O = A_O(x,y)\, e^{i\phi_O(x,y)} e^{-i\omega t}$，其振幅与相位都携带物体的三维形貌信息。两束光在感光板上叠加，记录的强度为：</p>
+$$
+I(x,y) = |E_R + E_O|^2 = A_R^2 + A_O^2 + 2A_R A_O \cos\big(\phi_O(x,y) - \mathbf{k}_R\cdot\mathbf{r}\big)
+$$
+<p>最后一项交叉项正是关键——它把物光的相位 $\phi_O$ 编码进了可记录的强度条纹（即全息图）之中。</p>
+<p><strong>重建</strong>：用与参考光相同的激光重新照射显影后的全息图，光通过条纹发生衍射，其中一级衍射项恰好精确复现原始物光波前 $E_O$。观察者的眼睛接收到这个波前，会感知到一个悬浮在空间中的三维虚像——具有视差，即从不同角度观察能看到物体的不同侧面，这是普通照片无法做到的。</p>
+<p><strong>问题解决应用</strong>：全息术不仅用于艺术展示与防伪（如信用卡、纸币上的全息标签),更广泛应用于计量领域——<strong>全息干涉测量法</strong>。做法是：先记录物体变形前的全息图，再在同一板上记录变形后的全息图，两次物光波前叠加会产生新的干涉条纹，条纹间距与物体表面位移量 $\Delta z$ 直接相关，满足：</p>
+$$
+\Delta z = \frac{m\lambda}{2}
+$$
+<p>其中 $m$ 为条纹级数，$\lambda$ 为激光波长。这一方法可用于检测航空发动机叶片、桥梁结构在受力后产生的微米级形变，是无损检测工程中的重要工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch30: Atomic Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

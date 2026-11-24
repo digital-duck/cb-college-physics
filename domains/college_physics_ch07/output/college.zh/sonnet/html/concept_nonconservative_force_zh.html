@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nonconservative Force | College Physics Ch07</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="nonconservative-force">Nonconservative Force</h2>
+<p><strong>定义</strong></p>
+<p>非保守力是指做功大小依赖于运动路径而非仅依赖于起点和终点位置的力。数学上，力 $\vec{F}$ 为保守力的充要条件是其做的功满足</p>
+$$
+W = \oint \vec{F} \cdot d\vec{l} = 0
+$$
+<p>对任意闭合路径成立，等价于 $\vec{F} = -\nabla U$ 对某个标量势能函数 $U$ 成立。若这一条件不满足，即</p>
+$$
+\oint \vec{F} \cdot d\vec{l} \neq 0,
+$$
+<p>则该力为非保守力，无法定义与其对应的势能函数。常见例子包括摩擦力、空气阻力、以及其他一切将机械能转化为热能或声能等形式的力。由于非保守力做的功不能被势能的变化所抵消，系统的总机械能 $E = KE + U$ 不再守恒，而是满足</p>
+$$
+\Delta E = \Delta KE + \Delta U = W_{nc}
+$$
+<p>其中 $W_{nc}$ 是非保守力所做的功（通常为负值，表示能量耗散）。</p>
+<p><strong>例题</strong></p>
+<p>一个质量 $m = 2\,\text{kg}$ 的物块从高度 $h = 5\,\text{m}$ 的斜面顶端由静止释放，滑到底端时速度为 $v = 8\,\text{m/s}$。若无摩擦，由能量守恒可得理想末速度 $v_{ideal} = \sqrt{2gh} \approx 9.9\,\text{m/s}$。实际速度较小，说明摩擦力（非保守力）做了负功。摩擦做的功为：</p>
+$$
+W_f = \Delta KE - \Delta U = \left(\tfrac{1}{2}mv^2\right) - (-mgh) = \tfrac{1}{2}(2)(8^2) - (2)(9.8)(5) = 64 - 98 = -34\,\text{J}
+$$
+<p>即摩擦力耗散了 $34\,\text{J}$ 的机械能，转化为热能。</p>
+<p><strong>解题应用</strong></p>
+<p>处理含非保守力的问题时，不能直接套用机械能守恒公式，而应使用广义的能量方程：</p>
+$$
+KE_i + U_i + W_{nc} = KE_f + U_f
+$$
+<p>这一表达式将非保守力的效应作为“能量损失项”明确纳入计算，使我们能够在摩擦、空气阻力等实际情境中仍然利用能量方法求解速度、位移或所需外力，而不必逐点分析力的方向与路径。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch7: Work, Energy, and Energy Resources (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

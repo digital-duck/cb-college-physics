@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elasticity In Biological Structures | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="elasticity-in-biological-structures">Elasticity In Biological Structures</h2>
+<p>Biological tissues obey the same elastic framework used for engineered materials, but across a much wider strain range. Stress is $\sigma = F/A$ (force per cross-sectional area) and strain is $\epsilon = \Delta L / L_0$ (fractional deformation). Within the elastic (linear) region, the two are related by Young's modulus, $\sigma = E\epsilon$, where $E$ is the material's stiffness. Tissues differ enormously in $E$: cortical bone is roughly $E \approx 15$–$20\text{ GPa}$, while tendon is about $E \approx 1$–$2\text{ GPa}$, and elastin-rich arterial wall is under $1\text{ MPa}$ — a range of four orders of magnitude reflecting each tissue's mechanical role. Unlike steel, most tissues also show a nonlinear "toe region" at low strain, where collagen fibers straighten before bearing load, followed by a stiffer linear region until the elastic limit is exceeded.</p>
+<p><strong>Worked example.</strong> An Achilles tendon with resting length $L_0 = 25\text{ cm}$ and cross-sectional area $A = 0.6\text{ cm}^2 = 6\times10^{-5}\text{ m}^2$ is stretched during running by a force of $F = 1800\text{ N}$. Taking $E = 1.5\text{ GPa}$ for tendon in its linear region: $\sigma = F/A = 1800 / (6\times10^{-5}) = 3.0\times10^7\text{ Pa} = 30\text{ MPa}$. Strain is $\epsilon = \sigma/E = (3.0\times10^7)/(1.5\times10^9) = 0.02$, so $\Delta L = \epsilon L_0 = 0.02 \times 0.25\text{ m} = 5\text{ mm}$. This 2% strain is well within tendon's elastic limit (tendons typically rupture beyond 8–10% strain), confirming the tendon returns to its original length after the stride — the physical basis of elastic energy storage in locomotion.</p>
+<p><strong>Problem-solving application.</strong> These relations let you assess failure risk: a bone under bending load experiences stress that must stay below its yield stress (~130 MPa for cortical bone in compression) to avoid fracture, while an artery under blood pressure develops circumferential (hoop) stress $\sigma_h = Pr/t$ (pressure $P$, radius $r$, wall thickness $t$), which clinicians use to estimate rupture risk in aneurysms — a widening $r$ or thinning $t$ raises $\sigma_h$ even at constant pressure. Comparing computed stress against a tissue's known elastic limit is the core diagnostic and engineering technique in orthopedics, sports medicine, and vascular biomechanics.</p>
+<pre class="mermaid">graph LR
+    A["Applied Force F"] --> B["Stress sigma = F/A"]
+    B --> C["Strain epsilon = sigma/E"]
+    C --> D{"Within elastic limit?"}
+    D -->|Yes| E["Tissue returns to L0"]
+    D -->|No| F["Permanent damage or rupture"]</pre>
+<p><em>Flow from applied force through stress-strain analysis to the elastic-limit decision that determines tissue recovery versus injury.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

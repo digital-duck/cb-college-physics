@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bulk Modulus | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="bulk-modulus">Bulk Modulus</h2>
+<p>体积模量 $B$ 是描述材料抵抗均匀体积压缩能力的物理常数，单位为帕斯卡（$\text{N/m}^2$）。当材料承受均匀作用于其表面的压强变化 $\Delta P$ 时，其体积会发生相应的相对变化 $\Delta V / V$。二者之间的关系定义为：</p>
+$$
+B = -V \frac{\Delta P}{\Delta V} = -\frac{\Delta P}{\Delta V / V}
+$$
+<p>负号的存在是因为压强增大（$\Delta P > 0$）总会导致体积减小（$\Delta V < 0$），加上负号后 $B$ 本身为正值。$B$ 越大，说明材料越难被压缩——例如钢的体积模量约为 $1.6 \times 10^{11}\ \text{N/m}^2$，而水约为 $2.2 \times 10^9\ \text{N/m}^2$，气体的体积模量则远小于液体和固体，这也解释了为什么气体比水更容易被压缩。</p>
+<p><strong>例题</strong>：一块体积为 $0.500\ \text{m}^3$ 的花岗岩，浸入深海后承受的压强增量为 $\Delta P = 2.0 \times 10^7\ \text{N/m}^2$。已知花岗岩的体积模量 $B = 4.8 \times 10^{10}\ \text{N/m}^2$，求其体积变化量。</p>
+<p>将公式变形求解 $\Delta V$：</p>
+$$
+\Delta V = -\frac{V \cdot \Delta P}{B} = -\frac{(0.500)(2.0 \times 10^7)}{4.8 \times 10^{10}} \approx -2.08 \times 10^{-4}\ \text{m}^3
+$$
+<p>即体积减少约 $208\ \text{cm}^3$，相对变化仅为 $0.042\%$——这说明固体在常见压强范围内几乎是不可压缩的。</p>
+<p><strong>解题应用</strong>：处理涉及压强、体积变化的问题时，关键在于正确识别三个量的单位一致性（压强用帕斯卡，体积用立方米），并注意符号约定：压强升高对应体积减小。当已知材料种类时，$B$ 值需从标准参考表中查取，而非现场推导——这正是 $B$ 作为"材料特性常数"的意义所在，它把材料内部复杂的原子间作用力压缩进一个可直接查表使用的宏观数值。在工程应用中，例如设计深海探测器外壳或液压系统时，工程师正是利用 $B$ 值预估材料在高压环境下的形变量，从而判断结构是否会因压缩产生应力集中或密封失效。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

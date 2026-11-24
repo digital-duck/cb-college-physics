@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quantum Tunneling | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="quantum-tunneling-量子隧穿">Quantum Tunneling(量子隧穿)</h2>
+<p><strong>定义</strong></p>
+<p>经典力学中,若粒子能量 $E$ 小于势垒高度 $V_0$,粒子绝无可能穿越该势垒——它会被完全反弹。量子力学则给出截然不同的结论:粒子的波函数在势垒内部并不立即归零,而是按指数规律衰减,并在势垒另一侧以较小但非零的概率重新呈现为传播波。这意味着粒子有一定概率"穿透"一个经典禁区,这一现象称为<strong>量子隧穿</strong>。</p>
+<p>其根源在于薛定谔方程在势垒区域($V_0 > E$)的解不再是振荡波,而是指数衰减或增长的实函数解。设势垒宽度为 $L$,粒子质量为 $m$,定义衰减常数</p>
+$$\kappa = \frac{\sqrt{2m(V_0-E)}}{\hbar}$$
+<p>当 $\kappa L \gg 1$ 时,透射概率(隧穿系数)近似为</p>
+$$T \approx e^{-2\kappa L} = \exp\left(-\frac{2L\sqrt{2m(V_0-E)}}{\hbar}\right)$$
+<p>这个公式是理解隧穿的核心:透射概率随势垒宽度 $L$、势垒高度差 $(V_0-E)$,以及粒子质量 $m$ 呈指数敏感变化。</p>
+<p><strong>例题</strong></p>
+<p>一个电子($m = 9.11\times10^{-31}\,\text{kg}$)入射到宽度 $L = 1\,\text{nm}$、高度 $V_0-E = 1\,\text{eV} = 1.6\times10^{-19}\,\text{J}$ 的势垒。代入公式:</p>
+$$\kappa = \frac{\sqrt{2(9.11\times10^{-31})(1.6\times10^{-19})}}{1.05\times10^{-34}} \approx 5.1\times10^9\,\text{m}^{-1}$$
+$$2\kappa L \approx 2(5.1\times10^9)(10^{-9}) \approx 10.2 \quad\Rightarrow\quad T \approx e^{-10.2} \approx 3.7\times10^{-5}$$
+<p>即约每 27,000 个电子中有 1 个能够穿透该势垒——概率虽小,但绝非零。</p>
+<p><strong>问题解决的应用</strong></p>
+<p>指数依赖关系是隧穿现象工程与科研应用的关键。扫描隧道显微镜(STM)利用探针与样品间纳米尺度真空隙的隧穿电流,因 $T$ 对 $L$ 极度敏感,电流会随针尖-样品距离的微小变化(亚埃级)剧烈改变,从而实现原子级分辨率成像。同理,在半导体器件设计中,工程师需计算晶体管栅氧化层厚度的临界值,防止电子隧穿导致漏电流失控;而在核物理中,阿尔法衰变的半衰期正是通过势垒宽度与高度代入隧穿公式估算得出。掌握该指数关系,即可定量预测"势垒调整多大,概率变化多少"这一类工程与物理问题。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bremsstrahlung | College Physics Ch30</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="bremsstrahlung">Bremsstrahlung</h2>
+<p><strong>定义</strong></p>
+<p>当高速电子撞击靶material（如X光管中的钨靶）并在原子核的强电场中发生偏转时，电子会经历急剧减速。根据经典电动力学，任何带电粒子做加速运动（减速也是一种加速度）都会辐射电磁波，这种由"刹车"减速产生的辐射称为<strong>轫致辐射</strong>（德语 Bremsstrahlung，意为"刹车辐射"）。与特征X射线（由电子跃迁产生，呈现分立谱线）不同，轫致辐射产生的是<strong>连续谱</strong>：因为入射电子可以在核场中损失从零到其全部动能之间的任意一部分能量，对应发射光子的能量也连续分布。</p>
+<p>轫致辐射谱有一个明确的<strong>最短波长截止值</strong> $\lambda_{\min}$，对应电子将其全部动能一次性转化为单个光子的极限情形：</p>
+$$
+eV = h\nu_{\max} = \frac{hc}{\lambda_{\min}}
+$$
+<p>其中 $V$ 是加速电压，$e$ 是电子电荷。由此可得</p>
+$$
+\lambda_{\min} = \frac{hc}{eV}
+$$
+<p>这一关系被称为 <strong>Duane–Hunt 定律</strong>，是量子化（光子能量离散）的直接实验证据——经典电动力学无法预言存在这样的截止波长。</p>
+<p><strong>例题</strong></p>
+<p>某X光管施加 $80\ \text{kV}$ 加速电压，求连续谱的最短波长。</p>
+<p>代入常数 $h = 6.63\times10^{-34}\ \text{J·s}$，$c = 3\times10^{8}\ \text{m/s}$，$e = 1.6\times10^{-19}\ \text{C}$：</p>
+$$
+\lambda_{\min} = \frac{(6.63\times10^{-34})(3\times10^{8})}{(1.6\times10^{-19})(8\times10^{4})} \approx 1.55\times10^{-11}\ \text{m} = 15.5\ \text{pm}
+$$
+<p>这一波长远短于原子间距，是医学与晶体学成像所需的典型X射线波段。</p>
+<p><strong>问题求解应用</strong></p>
+<p>Duane–Hunt 定律的实用价值在于：只要测得连续谱的截止波长，就能反推加速电压（或反之，用于校准X光管）；同时它给出普朗克常数 $h$ 的一种独立测定方法，是历史上验证光量子假说的关键实验之一。在实际谱图分析中，需将连续的轫致辐射本底与叠加其上的分立特征谱线区分开——前者由截止波长决定的能量上限约束，后者由靶material的原子能级结构决定，两者的物理起源完全不同，混淆二者会导致材料成分或管电压的误判。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch30: Atomic Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

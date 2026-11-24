@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solid State Detector | College Physics Ch31</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="solid-state-detector">Solid State Detector</h2>
+<p><strong>定义</strong></p>
+<p>固体探测器（solid state detector）是一种利用半导体材料（通常为硅 Si 或锗 Ge）将电离辐射转换为电信号的探测装置。当带电粒子或光子穿过半导体的耗尽区（depletion region）时，会通过电离作用产生电子—空穴对（electron-hole pair）。在外加反向偏压建立的电场作用下，电子被拉向 $n$ 型一侧，空穴被拉向 $p$ 型一侧，形成可测量的瞬态电流脉冲。由于产生一对电子—空穴所需的平均能量 $w$（硅约为 $3.6\text{ eV}$，锗约为 $2.9\text{ eV}$）是材料的固有常数，产生的电荷量</p>
+$$
+Q = \frac{E_{\text{dep}}}{w}\, e
+$$
+<p>与粒子沉积在探测器中的能量 $E_{\text{dep}}$ 成正比，其中 $e$ 为电子电荷。这正是固体探测器能够实现<strong>能量分辨</strong>（而不仅是计数）的物理基础。</p>
+<p><strong>能量分辨率的关键：法诺因子</strong></p>
+<p>理想情况下，电荷产生的涨落应服从泊松统计，方差为 $N$（生成的电子—空穴对数）。但实验发现涨落远小于泊松预期，这是因为能量沉积过程中各次电离并非完全独立（能量守恒引入了负关联）。这一修正由法诺因子（Fano factor）$F$ 描述：</p>
+$$
+\sigma_N^2 = F \cdot N, \qquad N = \frac{E_{\text{dep}}}{w}
+$$
+<p>硅的 $F \approx 0.12$，远小于 1，这就是为什么高纯锗（HPGe）探测器的能量分辨率远优于闪烁体探测器——后者受限于光电倍增管中光电子转换效率低、统计涨落大的问题。</p>
+<p><strong>应用实例：计算能量分辨率</strong></p>
+<p>设一颗 $\gamma$ 射线在硅探测器中沉积能量 $E = 100\text{ keV}$，$w = 3.6\text{ eV}$，$F = 0.12$。则</p>
+$$
+N = \frac{100{,}000\text{ eV}}{3.6\text{ eV}} \approx 2.78\times 10^{4}
+$$
+$$
+\sigma_N = \sqrt{F N} = \sqrt{0.12 \times 2.78\times10^{4}} \approx 57.8
+$$
+<p>半高全宽（FWHM，$= 2.355\,\sigma$）对应的能量分辨率为</p>
+$$
+\frac{\text{FWHM}}{E} = \frac{2.355 \times 57.8 \times w}{E} \approx 0.55\%
+$$
+<p>这一计算说明：探测器的固有能量分辨率不仅取决于电子学噪声，更受限于电荷产生过程本身的统计涨落，法诺因子正是刻画这一物理极限的核心参数。在实际谱学分析中，工程师会将此项与电子学噪声项按平方和相加，得到系统的总能量分辨率。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch31: Radioactivity and Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strain | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="应变">应变</h2>
+<p><strong>定义</strong></p>
+<p>应变（strain）是描述材料在外力作用下发生形变程度的无量纲量。当一根长度为 $L_0$ 的杆件受到轴向拉力后伸长了 $\Delta L$，其<strong>正应变</strong>（normal strain，也称线应变）定义为</p>
+$$
+\varepsilon = \frac{\Delta L}{L_0}
+$$
+<p>由于分子分母单位相同（长度），$\varepsilon$ 没有量纲，通常以小数或百分比表示。正值代表拉伸（伸长），负值代表压缩（缩短）。应变的意义在于它把形变"归一化"了——同样是伸长 1 毫米,对一根 1 米长的钢筋和一根 1 厘米长的螺栓,其变形的严重程度截然不同,而应变准确反映了这种相对变化,使得不同尺寸、不同材料的构件可以在同一标准下比较。</p>
+<p>需要强调的是,应变与应力（stress，即单位面积上的内力 $\sigma = F/A$）是两个独立定义、但通过材料本构关系（如胡克定律 $\sigma = E\varepsilon$）相互关联的物理量：应力描述"受力有多大",应变描述"变形有多大"。</p>
+<p><strong>例题</strong></p>
+<p>一根原长 $L_0 = 2.000\ \text{m}$ 的铝合金拉杆,在测试中被拉伸至 $2.003\ \text{m}$。求其正应变。</p>
+$$
+\varepsilon = \frac{\Delta L}{L_0} = \frac{2.003 - 2.000}{2.000} = \frac{0.003}{2.000} = 1.5 \times 10^{-3}
+$$
+<p>即该杆件产生了 $0.15\%$ 的伸长率。这一数值远小于 1,符合工程材料在弹性范围内应变通常处于 $10^{-4}$ 到 $10^{-2}$ 量级的规律。</p>
+<p><strong>问题解决应用</strong></p>
+<p>应变测量是结构安全评估的核心手段之一。工程中常用<strong>应变片（strain gauge）</strong>贴附在构件表面,通过电阻变化间接测出局部应变,再结合已知的弹性模量 $E$ 反推内部应力,从而在不破坏结构的前提下判断其是否接近材料的屈服极限。</p>
+<p>例如,已知某钢结构测得应变 $\varepsilon = 8 \times 10^{-4}$,钢材弹性模量 $E = 200\ \text{GPa}$,则该处应力为</p>
+$$
+\sigma = E\varepsilon = 200 \times 10^{9} \times 8 \times 10^{-4} = 1.6 \times 10^{8}\ \text{Pa} = 160\ \text{MPa}
+$$
+<p>若已知该钢材屈服强度为 250 MPa,则此应力仍在安全范围内,尚未发生塑性变形。这种"测应变、算应力、判安全"的流程,正是桥梁、飞机机翼等关键结构健康监测系统的基本工作原理。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

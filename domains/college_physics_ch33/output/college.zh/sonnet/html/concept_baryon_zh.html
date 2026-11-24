@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baryon | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="baryon-重子">Baryon（重子）</h2>
+<p><strong>定义</strong></p>
+<p>重子是由三个夸克（quark）通过强相互作用束缚在一起构成的强子（hadron），其量子色动力学（QCD）色荷组合恒为色中性（color-neutral），即三种色荷（红、绿、蓝）各一，满足 $SU(3)_c$ 色对称性下的单态条件。每个重子携带重子数 $B = +1$（对应的反重子 $B = -1$），而介子（由一个夸克与一个反夸克构成）的重子数恒为 $B = 0$。重子数在所有已知的强、电磁、弱相互作用中严格守恒，这一条件解释了为什么质子（proton, $p$）作为最轻的重子是稳定的——它没有更轻的重子可以衰变到，而其衰变必须保持重子数不变。中子（neutron, $n$）虽比质子稍重，但由于夸克味（flavor）转换需通过弱相互作用完成，其衰变仍需生成另一个重子（$n \to p + e^- + \bar{\nu}_e$），重子数由始至终为 $+1$。</p>
+<p><strong>夸克模型与量子数的组合规则</strong></p>
+<p>重子的味量子数由三个价夸克（valence quark）的味决定，例如质子为 $uud$，中子为 $udd$。由于三个夸克需构成费米子（fermion，自旋 $1/2$ 或 $3/2$），泡利不相容原理（Pauli exclusion principle）要求它们的整体波函数（味 $\otimes$ 自旋 $\otimes$ 色）必须反对称。由于色部分已经是反对称的色单态，味与自旋部分的组合必须是对称的，这一约束直接决定了重子八重态（baryon octet，如 $p$, $n$, $\Lambda$, $\Sigma$, $\Xi$）与十重态（baryon decuplet，如 $\Delta$, $\Omega$）的结构，是 Gell-Mann 与 Zweig 提出夸克模型的关键证据之一。</p>
+<p><strong>问题解决应用</strong></p>
+<p>在分析强子反应或衰变链时，重子数守恒是筛选允许过程的第一约束。例如判断反应 $p + p \to p + \Sigma^+ + K^0$ 是否可能发生：初态重子数为 $1+1=2$，末态为 $1+1+0=2$（$K^0$ 是介子，$B=0$），重子数守恒成立，配合电荷、奇异数守恒可进一步验证该反应的物理可行性。这种守恒律检验方法是粒子物理实验数据分析（如对撞机末态粒子重建）中判断衰变道合理性的标准第一步。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

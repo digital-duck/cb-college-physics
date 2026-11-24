@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forced Oscillation | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="forced-oscillation">Forced Oscillation</h2>
+<p><strong>定义</strong></p>
+<p>当一个振动系统受到周期性外力驱动时，其运动称为受迫振动（forced oscillation）。与自由振动（体系仅依靠初始扰动、按自身固有频率 $\omega_0$ 振荡并因阻尼逐渐衰减）不同，受迫振动的外力以驱动频率 $\omega$ 持续注入能量，因此系统最终以驱动频率而非固有频率振荡。描述该现象的运动方程为</p>
+$$
+m\ddot{x} + b\dot{x} + kx = F_0\cos(\omega t)
+$$
+<p>其中 $m$ 为质量，$b$ 为阻尼系数，$k$ 为劲度系数，$F_0$ 为驱动力振幅。方程的通解由两部分组成：一个随时间衰减的瞬态项（由阻尼决定，最终消失），以及一个稳态项，其振幅为</p>
+$$
+A(\omega) = \frac{F_0/m}{\sqrt{(\omega_0^2 - \omega^2)^2 + (b\omega/m)^2}}
+$$
+<p>当 $\omega$ 接近 $\omega_0$ 时，若阻尼较小，$A(\omega)$ 会急剧增大，这正是共振（resonance）现象的根源。</p>
+<p><strong>范例</strong></p>
+<p>考虑一辆汽车悬挂系统，固有频率 $\omega_0 = 2\pi \times 1.2\ \text{Hz}$。若车轮以某一转速驶过等间距的减速带，驱动频率恰好等于 $\omega_0$，即使每次冲击力很小，车身也会出现明显的持续颠簸——这就是受迫振动振幅在共振点被放大的直观体现。工程师通过增加阻尼（如更换减震器）来压低共振峰值 $A(\omega_0) \approx F_0/(b\omega_0)$，避免结构疲劳或乘坐不适。</p>
+<p><strong>解题应用</strong></p>
+<p>给定 $m = 2\ \text{kg}$，$k = 800\ \text{N/m}$，$b = 4\ \text{N·s/m}$，$F_0 = 10\ \text{N}$，求驱动频率 $\omega = 20\ \text{rad/s}$ 下的稳态振幅。</p>
+<p>先算 $\omega_0 = \sqrt{k/m} = \sqrt{400} = 20\ \text{rad/s}$，恰好等于驱动频率，即处于共振条件，此时分母中的 $(\omega_0^2-\omega^2)^2$ 项为零，振幅简化为</p>
+$$
+A = \frac{F_0/m}{b\omega/m} = \frac{F_0}{b\omega} = \frac{10}{4\times 20} = 0.125\ \text{m}
+$$
+<p>这类计算是分析桥梁风振、建筑抗震、电路谐振等实际问题的基础：先确定固有频率与驱动频率的关系，再用阻尼项判断振幅是否会失控增长。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

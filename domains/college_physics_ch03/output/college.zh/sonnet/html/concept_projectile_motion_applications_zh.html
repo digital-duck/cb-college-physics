@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projectile Motion Applications | College Physics Ch03</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="projectile-motion-applications">Projectile Motion Applications</h2>
+<p><strong>定义</strong></p>
+<p>抛体运动是指物体仅在重力作用下、初速度具有水平和竖直两个分量的运动。其核心思想是将二维运动分解为两个独立的一维运动:水平方向做匀速直线运动,竖直方向做匀加速运动(加速度为 $g \approx 9.8\ \text{m/s}^2$,方向向下)。若初速度大小为 $v_0$,发射角为 $\theta$,则</p>
+$$v_{x0} = v_0\cos\theta, \qquad v_{y0} = v_0\sin\theta$$
+<p>位置随时间的变化为</p>
+$$x(t) = v_0\cos\theta \cdot t, \qquad y(t) = v_0\sin\theta \cdot t - \tfrac{1}{2}g t^2$$
+<p>这两个方向唯一的联系是时间 $t$,这正是解决所有抛体问题的关键。由此可推得三个常用结果(设发射点与落地点等高):</p>
+$$T = \dfrac{2v_0\sin\theta}{g}, \qquad H_{\max} = \dfrac{v_0^2\sin^2\theta}{2g}, \qquad R = \dfrac{v_0^2\sin 2\theta}{g}$$
+<p><strong>例题</strong></p>
+<p>一枚烟花弹以 $v_0 = 40\ \text{m/s}$、$\theta = 60^\circ$ 发射。求其最大高度、飞行时间和落地时的速度大小(忽略空气阻力)。</p>
+<li>竖直分量:$v_{y0} = 40\sin 60^\circ \approx 34.6\ \text{m/s}$</li>
+<li>最大高度:$H_{\max} = \dfrac{34.6^2}{2(9.8)} \approx 61.1\ \text{m}$</li>
+<li>飞行时间:$T = \dfrac{2(34.6)}{9.8} \approx 7.06\ \text{s}$</li>
+<li>落地速度:由能量或对称性可知,落地时竖直速度分量大小与 $v_{y0}$ 相同(方向相反),水平分量 $v_{x0} = 40\cos 60^\circ = 20\ \text{m/s}$ 保持不变,故合速度大小 $v = \sqrt{v_{x0}^2 + v_{y0}^2} = \sqrt{20^2+34.6^2} \approx 40\ \text{m/s}$,与初速度大小相等——这是等高落地情形下速度大小守恒的必然结果。</li>
+<p><strong>解题应用</strong></p>
+<p>处理火山喷出物、体育运动中的球类飞行等实际问题时,常见变体是发射点与落地点不等高(如从悬崖顶部抛出)。此时不能直接套用上述公式,而必须回到分量方程本身:先由竖直方程 $y(t)=0$(或目标高度)解出落地时间 $t$,再代入水平方程求出射程 $R = v_{x0}\,t$。这种"先竖直求时间,再水平求位移"的顺序,是所有非对称抛体问题的通用解法,也是理解抛体运动本质——两个独立运动通过时间耦合——的关键体现。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch3: Two-Dimensional Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internal Energy | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="internal-energy">Internal Energy</h2>
+<p><strong>Definition.</strong> The internal energy $U$ of a system is the total of the kinetic and potential energies of its atoms and molecules, measured in the system's own frame of reference. The kinetic part includes translation, rotation, and vibration of the particles. The potential part comes from the forces between particles, such as intermolecular attractions and chemical bonds. It does not include the energy of the system as a whole moving or sitting in a gravitational field.</p>
+<p>$U$ is a <strong>state function</strong>. Its value depends only on the current state of the system (for example, $T$, $P$, and amount of substance), not on how the system got there. Because of this, only <em>changes</em> in $U$ can be measured, and the change between two states is the same along any path:</p>
+$$\Delta U = U_f - U_i$$
+<p>For an ideal monatomic gas, the particles have only translational kinetic energy and no interaction potential energy, so</p>
+$$U = \tfrac{3}{2}nRT$$
+<p>and $U$ depends on temperature alone. Heat and work, which change $U$, are treated in the next section.</p>
+<p><strong>Worked example.</strong> One mole of a monatomic ideal gas ($R = 8.314\ \text{J/(mol·K)}$) is heated from 300 K to 400 K. Find $\Delta U$.</p>
+$$\Delta U = \tfrac{3}{2}nR\,\Delta T = \tfrac{3}{2}(1.00)(8.314)(100) \approx 1.25\times10^{3}\ \text{J}$$
+<p>The gas gains about 1250 J of internal energy.</p>
+<p><strong>Problem-solving application: path independence.</strong> Suppose the same gas is taken from 300 K to 400 K by two different processes:</p>
+<li><em>Process A:</em> the gas is heated in a rigid container, so its volume stays fixed.</li>
+<li><em>Process B:</em> the gas is heated while it expands against a piston, so its pressure stays fixed.</li>
+<p>The two processes use different amounts of heat and do different amounts of work. Does $\Delta U$ differ? No. Both start at 300 K and end at 400 K, and for an ideal monatomic gas $U$ depends only on $T$. So both give $\Delta U \approx 1250$ J, exactly the value computed above. The path never enters the calculation, only the initial and final temperatures.</p>
+<p><strong>Cyclic processes.</strong> Because $U$ is a state function, $\Delta U = 0$ over any complete cycle that returns the system to its starting state. For the ideal gas above, this means the gas has the same temperature at the end of a cycle as at the start, no matter how complicated the intermediate steps were.</p>
+<p><strong>Check your understanding.</strong> A monatomic ideal gas (2.00 mol) cools from 500 K to 350 K. Find $\Delta U$.</p>
+$$\Delta U = \tfrac{3}{2}(2.00)(8.314)(-150) \approx -3.74\times10^{3}\ \text{J}$$
+<p>The internal energy falls by about 3740 J. The sign is negative because $T$ decreased, and the answer would be the same whatever path the gas took between the two states.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

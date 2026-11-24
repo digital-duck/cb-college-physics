@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carnot Efficiency | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="carnot-efficiency">Carnot Efficiency</h2>
+<p><strong>定义</strong></p>
+<p>任何热机都通过工作物质在高温热源（温度 $T_h$）与低温热源（温度 $T_c$）之间循环,吸收热量 $Q_h$、对外做功 $W$、并向低温热源排放废热 $Q_c$。热机效率定义为</p>
+$$\eta = \frac{W}{Q_h} = 1 - \frac{Q_c}{Q_h}$$
+<p>1824 年,卡诺（Sadi Carnot）证明了一个深刻的结论：在两个给定温度之间运行的所有热机中,存在一个效率上限,只取决于两个热源的温度,与工作物质（气体、蒸汽、还是其他介质）无关。这个上限由<strong>卡诺循环</strong>（一个由两个等温过程和两个绝热过程组成的可逆循环）实现,其效率为</p>
+$$\eta_C = 1 - \frac{T_c}{T_h}$$
+<p>式中温度必须使用<strong>热力学温标</strong>（开尔文,K）。这个结果的证明依赖于热力学第二定律：如果存在效率超过 $\eta_C$ 的热机,就可以构造出一个净效果是热量自发从低温流向高温的过程,违反第二定律。因此 $\eta_C$ 不是工程上难以达到的理想值,而是自然规律设下的硬性天花板——任何实际热机的效率都严格小于 $\eta_C$。</p>
+<p><strong>范例演示</strong></p>
+<p>一座燃煤发电厂的锅炉将蒸汽加热到 $T_h = 566\ °C = 839\ \text{K}$,冷凝器将废热排放到 $T_c = 27\ °C = 300\ \text{K}$ 的冷却水中。卡诺效率为</p>
+$$\eta_C = 1 - \frac{300}{839} \approx 0.643 = 64.3\%$$
+<p>这意味着即使工程上做到极致,这座电厂理论上也无法把超过 64.3% 的燃料能量转化为电能；实际电厂受摩擦、热损失、非理想气体行为等因素影响,通常只能达到 35%–45% 的效率。</p>
+<p><strong>解题应用</strong></p>
+<p>卡诺公式常用于两类问题：（1）已知 $T_h, T_c$,求理论效率上限,以评估实际热机（比如效率 40% 的汽车引擎）还有多少提升空间；（2）反过来,已知目标效率,求所需的温度差——例如要将效率从 60% 提升到 70%,若 $T_c$ 固定在 300 K,则需要 $T_h$ 从 750 K 提高到 1000 K。这类计算揭示了工程实践中的核心权衡：提高效率的根本途径是拉大温差,而不是优化机械设计细节,这也解释了为什么现代发电和喷气发动机技术不断追求更高的燃烧温度。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

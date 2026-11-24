@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electrocardiogram | College Physics Ch20</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="心电图">心电图</h2>
+<p><strong>定义</strong></p>
+<p>心电图（electrocardiogram, ECG/EKG）记录心脏去极化与复极化波在心肌中传播时产生的体表电压信号。心脏每次搏动前，窦房结自发产生电冲动，经心房、房室结、希氏束、浦肯野纤维依次传导，引起心肌细胞膜电位由静息态（约 $-90\text{ mV}$）翻转至去极化态。这一传导波在体表可测得微弱的电位差（通常为 $0.5$–$2\text{ mV}$），通过贴附于四肢与胸壁的电极采集，即得到心电图波形。</p>
+<p>标准心电图波形由三个主要成分构成：<strong>P 波</strong>（心房去极化）、<strong>QRS 波群</strong>（心室去极化，同时掩盖心房复极化）、<strong>T 波</strong>（心室复极化）。各波段之间的时间间期具有明确的生理意义：PR 间期（约 $0.12$–$0.20\text{ s}$）反映房室结的传导延迟；QRS 时限（正常 $<0.12\text{ s}$）反映心室内传导速度；QT 间期反映心室动作电位总时长，其长短与心律失常风险（如尖端扭转型室速）密切相关。</p>
+<p><strong>应用实例</strong></p>
+<p>临床上常用 QT 间期结合心率进行校正，因为心率越快，QT 间期本身越短，需要标准化后才能比较。最常用的 Bazett 公式为：</p>
+$$
+QT_c = \frac{QT}{\sqrt{RR}}
+$$
+<p>其中 $RR$ 为相邻两次心跳的间期（单位：秒），$QT_c$ 为校正后的 QT 间期。例如，某患者实测 $QT = 0.40\text{ s}$，心率为 $100$ 次/分，则 $RR = 60/100 = 0.60\text{ s}$，代入公式得：</p>
+$$
+QT_c = \frac{0.40}{\sqrt{0.60}} \approx 0.516\text{ s}
+$$
+<p>该值明显高于正常上限（男性约 $0.44\text{ s}$，女性约 $0.46\text{ s}$），提示 QT 间期延长，需警惕药物副作用或电解质紊乱（如低钾血症）诱发的致命性心律失常。</p>
+<p><strong>解决问题的应用</strong></p>
+<p>在实际诊断中，医生需要综合多导联心电图（通常为 12 导联）来定位病变部位：例如 II、III、aVF 导联的 ST 段抬高提示下壁心肌梗死，而 $V_1$–$V_4$ 导联异常则指向前壁病变。掌握波形—间期—导联三者的对应关系，是从原始电压曲线推断心脏解剖与病理状态的核心技能，也是心电图作为诊断工具的问题解决价值所在。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch20: Electric Current, Resistance, and Ohm's Law (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

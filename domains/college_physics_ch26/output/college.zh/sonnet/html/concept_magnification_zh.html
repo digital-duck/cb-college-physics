@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnification | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="magnification">Magnification</h2>
+<p><strong>定义</strong></p>
+<p>放大率（magnification）描述了透镜或曲面镜所成的像与原物体在大小和方向上的关系，定义为像高与物高之比：</p>
+$$m = \frac{h_i}{h_o} = -\frac{d_i}{d_o}$$
+<p>其中 $h_i$、$h_o$ 分别为像高与物高，$d_i$、$d_o$ 分别为像距与物距。这个等式本身来自相似三角形的几何关系：物体、透镜（或镜面）与像所构成的两组三角形彼此相似，因此对应边成比例。$m$ 的绝对值给出像相对于物体放大或缩小的倍数：$|m|>1$ 表示放大，$|m|<1$ 表示缩小。$m$ 的正负号则携带方向信息——$m<0$ 表示像是倒立的（inverted），$m>0$ 表示像是正立的（upright）。这一符号约定与薄透镜/球面镜公式 $\frac{1}{d_o}+\frac{1}{d_i}=\frac{1}{f}$ 配套使用，二者结合可以完全确定像的位置、大小和朝向，是几何光学中不可缺少的定量工具。</p>
+<p><strong>例题</strong></p>
+<p>一个物体放在凸透镜前 $d_o = 30\text{ cm}$ 处，透镜焦距 $f = 10\text{ cm}$。求像距和放大率，并判断像的性质。</p>
+<p>由薄透镜公式：</p>
+$$\frac{1}{d_i} = \frac{1}{f} - \frac{1}{d_o} = \frac{1}{10} - \frac{1}{30} = \frac{2}{30}$$
+<p>得 $d_i = 15\text{ cm}$。代入放大率公式：</p>
+$$m = -\frac{d_i}{d_o} = -\frac{15}{30} = -0.5$$
+<p>$|m| = 0.5 < 1$，说明像比物体缩小一半；$m$ 为负，说明像是倒立、实像（因为 $d_i>0$）。</p>
+<p><strong>问题解决应用</strong></p>
+<p>放大率公式的实际价值在于反向求解未知量。例如显微镜设计中，已知目标放大率 $m$ 与物距 $d_o$（通常受限于载物台结构），可先求出所需像距 $d_i = -m\,d_o$，再代入透镜公式反推所需焦距 $f$。摄影镀膜镜头设计、投影仪成像比例计算，都遵循同样的思路：先确定所需的 $m$（如投影仪需要 $|m|\gg1$ 才能把小胶片投射成大画面），再联立两个方程求解物理参数。掌握符号约定（正负、实虚像对应关系）是避免设计错误的关键，因为符号错误会直接导致像位置或朝向的误判。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

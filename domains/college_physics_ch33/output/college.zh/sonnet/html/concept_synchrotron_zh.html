@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synchrotron | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="同步加速器">同步加速器</h2>
+<p><strong>定义</strong></p>
+<p>同步加速器（synchrotron）是一种粒子加速器，粒子在<strong>固定半径</strong>的环形轨道上运行，通过交变电压不断加速。与回旋加速器不同，同步加速器的磁场强度和加速电压的频率会随粒子速度增加而<strong>同步调整</strong>，以保证粒子始终沿同一半径的轨道运行——这也是其名称的由来。</p>
+<p>粒子在磁场中做圆周运动时，洛伦兹力提供向心力：</p>
+$$
+qvB = \frac{\gamma m v^2}{r}
+$$
+<p>解出动量 $p = \gamma m v$，得到轨道半径与磁场、动量的关系：</p>
+$$
+r = \frac{p}{qB}
+$$
+<p>要保持 $r$ 不变，当粒子动量 $p$ 随加速过程增大时，磁场 $B$ 必须按比例增强。同时，粒子的回旋频率</p>
+$$
+f = \frac{qB}{2\pi \gamma m}
+$$
+<p>也随 $\gamma$（相对论因子）变化，因此加速腔的交变电压频率必须随之调整，才能保证每次粒子经过加速腔时电场方向恰好加速而非减速。这正是"同步"二字的物理含义：磁场强度与电压频率两者同步演化，锁定轨道半径不变。</p>
+<p><strong>实例分析</strong></p>
+<p>以大型强子对撞机（LHC）为例：质子束流从注入能量（约 450 GeV）加速到 6.5 TeV，动量增加约 14 倍。由于轨道半径固定在 4.3 km，磁场必须从约 0.54 T 提升到 7.7 T，由超导二极磁铁精确控制；同时腔体的射频频率也随粒子接近光速而趋于恒定（约 400 MHz），因为在极端相对论区，速度变化很小而动量仍在增大。</p>
+<p><strong>问题解决应用</strong></p>
+<p>设计同步加速器时，工程师需要联立求解 $B(t)$ 与 $f(t)$ 的时间演化曲线，确保二者与粒子的能量增长曲线严格匹配；若磁场爬升速度跟不上电压加速的动量增长，粒子轨道半径会漂移，撞上真空管壁而损失。这类"匹配问题"是加速器物理中的核心计算任务：给定加速腔提供的能量增益速率 $dE/dt$，反推所需的 $B(t)$ 曲线，并验证磁铁的爬升速率（T/s）是否在工程可实现范围内。这也解释了为何大型同步加速器（如 LHC）往往需要多级预加速——直接从静止加速到极高能量所需的磁场变化速率会超出磁铁材料的物理极限。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

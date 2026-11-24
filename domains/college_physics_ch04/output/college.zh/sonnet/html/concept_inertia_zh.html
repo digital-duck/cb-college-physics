@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inertia | College Physics Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="inertia-惯性">Inertia（惯性）</h2>
+<p><strong>定义</strong></p>
+<p>惯性是物体保持原有运动状态的固有属性:静止的物体倾向于保持静止,做匀速直线运动的物体倾向于保持匀速直线运动,除非受到外力的作用而改变。这一性质由牛顿第一定律(惯性定律)给出严格表述:若物体所受合外力为零,则其速度矢量 $\vec{v}$ 保持不变,即</p>
+$$
+\sum \vec{F} = 0 \quad \Longrightarrow \quad \vec{a} = \frac{d\vec{v}}{dt} = 0
+$$
+<p>惯性的大小由质量 $m$ 度量——质量越大,物体改变运动状态所需的外力就越大。这一关系由牛顿第二定律精确给出:</p>
+$$
+\vec{F} = m\vec{a}
+$$
+<p>由此可见,质量并非"重量"的同义词,而是物体抵抗加速度变化的量度,是惯性的定量表达。</p>
+<p><strong>例题</strong></p>
+<p>一个质量 $m = 2\ \text{kg}$ 的物体静止在光滑水平面上,受到水平方向的合力 $F = 6\ \text{N}$ 作用 3 秒,求其获得的速度。</p>
+<p>由牛顿第二定律:</p>
+$$
+a = \frac{F}{m} = \frac{6}{2} = 3\ \text{m/s}^2
+$$
+<p>由运动学关系 $v = v_0 + at$,且 $v_0 = 0$:</p>
+$$
+v = 0 + 3 \times 3 = 9\ \text{m/s}
+$$
+<p>若撤去外力,由惯性定律,该物体将以 $9\ \text{m/s}$ 的速度做匀速直线运动,不再需要任何力来"维持"这一速度——这正是惯性区别于日常直觉("运动需要力来维持")的关键。</p>
+<p><strong>问题解决应用</strong></p>
+<p>惯性概念是分析力学问题的第一步:遇到任何动力学问题,首先应判断合外力是否为零。若为零,物体保持原状态(静止或匀速),无需进一步计算加速度;若不为零,再用 $\vec{F} = m\vec{a}$ 求解运动变化。</p>
+<p>例如,汽车急刹车时乘客身体前倾,并非受到"向前的力",而是因为乘客身体依惯性倾向于保持原速度,而车身已减速——安全带的作用正是提供必要的外力,使乘客的运动状态与车身同步改变。理解这一点,才能正确区分"物体受到的力"与"物体相对参考系表现出的运动倾向",这是解决碰撞、加速度、圆周运动等一系列问题的基础思维框架。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch4: Dynamics: Force and Newton's Laws of Motion (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

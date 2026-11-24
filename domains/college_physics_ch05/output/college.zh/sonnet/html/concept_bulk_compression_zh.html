@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bulk Compression | College Physics Ch05</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="bulk-compression-体积压缩">Bulk Compression（体积压缩）</h2>
+<p><strong>定义</strong></p>
+<p>当均匀的内向压力作用在物体的所有表面上时，物体的体积会均匀减小，这种现象称为体积压缩。描述这种形变的物理量是<strong>体积模量</strong>（bulk modulus）$B$，它衡量材料抵抗体积压缩的能力。体积模量定义为压强变化与体积应变（体积相对变化）之比：</p>
+$$
+B = -\frac{\Delta P}{\Delta V / V_0}
+$$
+<p>其中 $V_0$ 是初始体积，$\Delta V$ 是体积变化量，$\Delta P$ 是施加的压强变化。负号的存在是因为压强增加（$\Delta P > 0$）总是导致体积减小（$\Delta V < 0$），负号使得 $B$ 本身为正值，符合"模量越大、材料越难压缩"的直觉。</p>
+<p>若压强变化由均匀分布在面积 $A$ 上的力 $F$ 产生，即 $\Delta P = F/A$，代入上式并整理，得到体积应变的表达式：</p>
+$$
+\frac{\Delta V}{V_0} = -\frac{F}{B \cdot A}
+$$
+<p>这正是本节要应用的核心公式：体积的相对压缩量与作用力成正比，与体积模量和受力面积成反比。</p>
+<p><strong>例题</strong></p>
+<p>一个边长为 $0.20\,\text{m}$ 的实心钢立方体被浸入深海，均匀承受的总内向力为 $F = 4.8 \times 10^6\,\text{N}$，作用在其表面上（可近似取有效面积 $A = 0.24\,\text{m}^2$）。已知钢的体积模量 $B = 1.6 \times 10^{11}\,\text{Pa}$，求该立方体体积的相对变化量。</p>
+<p>代入公式：</p>
+$$
+\frac{\Delta V}{V_0} = -\frac{4.8 \times 10^6}{(1.6 \times 10^{11})(0.24)} = -1.25 \times 10^{-4}
+$$
+<p>即体积减少约 $0.0125\%$，说明钢材在如此巨大的力作用下形变仍极其微小——这正体现了金属材料体积模量极高、几乎不可压缩的特性。</p>
+<p><strong>解题应用</strong></p>
+<p>面对此类问题时，第一步应明确三个已知量中的哪两个已给出（$F$、$A$、$B$），求解第三个或求 $\Delta V/V_0$。常见变式包括：已知体积应变和 $B$，反推所需压强或力；或已知深海压强随深度变化的规律，先算出 $\Delta P = \rho g h$，再代入体积模量公式求形变。处理时务必统一单位（压强用 $\text{Pa}$，力用 $\text{N}$，面积用 $\text{m}^2$），并检查所得应变值是否为负且数量级合理——固体材料的体积应变通常远小于 $1\%$。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch5: Further Applications of Newton's Laws: Friction, Drag, and Elasticity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

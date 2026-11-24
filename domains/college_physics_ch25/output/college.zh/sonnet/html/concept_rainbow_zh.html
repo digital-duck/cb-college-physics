@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rainbow | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="彩虹">彩虹</h2>
+<p><strong>定义</strong></p>
+<p>彩虹是阳光进入球形水滴后，经历"折射—反射—折射"三步光路而形成的弧形光谱。光线在水滴表面第一次折射时发生<strong>色散</strong>：由于水对不同波长光的折射率略有差异（红光折射率约 $n_{red} \approx 1.331$，紫光约 $n_{violet} \approx 1.343$），白光被分解为按波长排列的彩色光带。光线随后在水滴内壁发生一次全反射，再从水滴射出时发生第二次折射，使色散效果进一步放大。观察者最终看到的，是无数水滴共同呈现、按角度排列成弧的连续光谱。</p>
+<p><strong>偏向角与最小偏向角</strong></p>
+<p>描述这一现象的核心变量是<strong>偏向角</strong> $D$：光线经过折射—反射—折射后，相对于入射方向偏转的总角度。设入射角为 $\theta_i$，折射角为 $\theta_r$（满足斯涅尔定律 $\sin\theta_i = n\sin\theta_r$），则单次内反射的偏向角为：</p>
+$$
+D(\theta_i) = 2(\theta_i - \theta_r) + (\pi - 2\theta_r) = \pi + 2\theta_i - 4\theta_r
+$$
+<p>$D$ 并非随 $\theta_i$ 单调变化，而是存在一个<strong>极小值</strong>——这正是彩虹可见的数学根源。对 $D$ 关于 $\theta_i$ 求导并令其为零，可解出使偏向角最小的临界入射角 $\theta_i^<em>$。以红光（$n=1.331$）代入计算，得 $\theta_i^</em> \approx 59.4°$，对应最小偏向角 $D_{min} \approx 138°$，即从观察者视角看，彩虹主虹的张角约为 $180° - 138° = 42°$。紫光折射率更大，最小偏向角略小，张角约 $40°$——这就是为什么主虹外侧是红色、内侧是紫色。</p>
+<p><strong>为什么彩虹是"弧"而非"点"</strong></p>
+<p>由于最小偏向角只依赖于入射角与折射率，与水滴在空间中的具体位置无关，所有满足该临界角条件的水滴都会把对应颜色的光送到观察者眼中。这些水滴的集合，相对于太阳—观察者连线，恰好构成一个半径对应 $42°$（红）到 $40°$（紫）张角的圆锥面，投影到天空即为一段圆弧。</p>
+<p><strong>问题解决应用</strong></p>
+<p>利用最小偏向角公式，可以计算副虹（光线在水滴内反射两次）的张角约为 $51°$，且颜色顺序与主虹相反；还可以据此推算观察者需在怎样的太阳高度角下才能看到完整半圆彩虹（太阳高度角需低于 $42°$，日落前后最佳）。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

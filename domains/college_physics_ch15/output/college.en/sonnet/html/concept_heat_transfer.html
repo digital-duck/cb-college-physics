@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heat Transfer | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="heat-transfer">Heat Transfer</h2>
+<p><strong>Heat</strong> is energy transferred between systems because of a temperature difference. It is a <em>process</em>, not a property: a body does not "contain" heat, it contains internal energy. Heat appears only while energy crosses a boundary. Because it arises from random molecular motion and depends on the path taken, $Q$ is not a state function. Heat flows spontaneously from hot to cold.</p>
+<p>By the first law of thermodynamics, $\Delta U = Q - W$, where $Q$ is heat added to the system and $W$ is work done by it.</p>
+<p><strong>Three mechanisms</strong></p>
+<li><strong>Conduction:</strong> energy passes through direct molecular collisions, with no bulk motion of material. For a slab of area $A$, thickness $L$, and faces at temperatures $T_h > T_c$:</li>
+$$\frac{Q}{t} = \frac{kA\,(T_h - T_c)}{L}$$
+<p>Here $k$ is the thermal conductivity.</p>
+<li><strong>Convection:</strong> energy is carried by moving fluid. Newton's law of cooling gives $\dfrac{Q}{t} = hA\,(T_s - T_\infty)$.</li>
+<li><strong>Radiation:</strong> energy is carried by electromagnetic waves and needs no medium. The Stefan–Boltzmann law gives $\dfrac{Q}{t} = \varepsilon\sigma A T^4$, with $\sigma = 5.67\times10^{-8}\ \text{W/(m}^2\text{K}^4)$.</li>
+<p><strong>Heating a substance</strong></p>
+<p>Within a single phase, $Q = mc\,\Delta T$, where $c$ is specific heat capacity. During a phase change, $Q = mL$, and the temperature stays constant.</p>
+<p><strong>Worked example (conduction)</strong></p>
+<p>A glass window has $A = 1.5\ \text{m}^2$ and $L = 5.0\ \text{mm}$, with $k = 0.80\ \text{W/(m·K)}$. The inside surface is $20^\circ\text{C}$ and the outside is $0^\circ\text{C}$. The heat flow rate is</p>
+$$\frac{Q}{t} = \frac{(0.80)(1.5)(20)}{0.0050} = 4800\ \text{W}.$$
+<p>This is large. In practice, still air films on both surfaces add resistance, which is why double-pane windows with a gas gap, a poor conductor, cut losses sharply.</p>
+<p><strong>Problem-solving application (calorimetry)</strong></p>
+<p>A $0.200\ \text{kg}$ block of copper at $150^\circ\text{C}$ ($c = 390\ \text{J/(kg·K)}$) is dropped into $0.500\ \text{kg}$ of water at $20^\circ\text{C}$ ($c = 4186\ \text{J/(kg·K)}$) in an insulated container. Find the final temperature $T_f$.</p>
+<p>With no heat lost to the surroundings, the heat the copper loses equals the heat the water gains:</p>
+$$m_{\text{Cu}}c_{\text{Cu}}(150 - T_f) = m_w c_w (T_f - 20)$$
+$$(0.200)(390)(150 - T_f) = (0.500)(4186)(T_f - 20)$$
+$$78(150 - T_f) = 2093(T_f - 20)$$
+$$11700 - 78T_f = 2093T_f - 41860$$
+$$53560 = 2171\,T_f \;\Rightarrow\; T_f \approx 24.7^\circ\text{C}.$$
+<p>The result is plausible. Water has a much larger heat capacity, so its temperature barely rises.</p>
+<p><strong>Path dependence</strong></p>
+<p>Suppose a gas goes from state A to state B. Along one path it absorbs $500\ \text{J}$ of heat while doing $200\ \text{J}$ of work, so $\Delta U = 300\ \text{J}$. Along another path with the same endpoints, $\Delta U$ must still be $300\ \text{J}$, but $Q$ and $W$ can each take different values. For example, $Q = 400\ \text{J}$ and $W = 100\ \text{J}$. Only the difference $Q - W$ is fixed. This is why heat is described as path-dependent.</p>
+<p><strong>Check your understanding:</strong> How long does it take the window above to lose $1.0\ \text{MJ}$ of heat?</p>
+<p>(Answer: $t = 10^6/4800 \approx 208\ \text{s}$.)</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

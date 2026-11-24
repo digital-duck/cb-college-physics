@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flow Rate | College Physics Ch12</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="flow-rate">Flow Rate</h2>
+<p><strong>定义</strong></p>
+<p>流速（Flow Rate，也称体积流量）描述单位时间内通过某一截面的流体体积，记作 $Q$。其基本定义为</p>
+$$
+Q = \frac{V}{t}
+$$
+<p>其中 $V$ 为通过的流体体积，$t$ 为所用时间，单位常用 $\mathrm{m^3/s}$ 或 $\mathrm{L/s}$。</p>
+<p>在实际问题中，我们很少直接测量体积，而是知道流体的速度 $v$ 和管道的横截面积 $A$。设想流体以速度 $v$ 均匀流动，在时间 $t$ 内，流体前进的距离为 $vt$，因此扫过的体积为一个"柱体"：</p>
+$$
+V = A \cdot (vt)
+$$
+<p>代入 $Q = V/t$，立即得到流速与速度的关系式：</p>
+$$
+Q = Av
+$$
+<p>这个公式是流体力学中"连续性方程"的基础：若管道不可压缩流体在不同截面处流速不同，则必有 $A_1 v_1 = A_2 v_2$，因为流量 $Q$ 在管道内处处相等（质量守恒）。这正是水管变细处水流变快的物理原因。</p>
+<p><strong>例题</strong></p>
+<p>一根水管半径为 $0.02\ \mathrm{m}$，水以速度 $v = 3\ \mathrm{m/s}$ 流动。求流速 $Q$。</p>
+<p>先计算横截面积：</p>
+$$
+A = \pi r^2 = \pi (0.02)^2 \approx 1.26 \times 10^{-3}\ \mathrm{m^2}
+$$
+<p>代入 $Q = Av$：</p>
+$$
+Q = (1.26\times 10^{-3})(3) \approx 3.77\times 10^{-3}\ \mathrm{m^3/s}
+$$
+<p>即约每秒 $3.77$ 升水通过该截面。</p>
+<p><strong>应用与解题练习</strong></p>
+<p>利用连续性方程 $A_1 v_1 = A_2 v_2$，可以解决管道变径问题。例如，若上述水管连接到一段半径缩小为 $0.01\ \mathrm{m}$ 的细管，求细管内的流速 $v_2$：</p>
+<p>由 $A_1 v_1 = A_2 v_2$，且 $A \propto r^2$，故</p>
+$$
+v_2 = v_1 \left(\frac{r_1}{r_2}\right)^2 = 3 \times \left(\frac{0.02}{0.01}\right)^2 = 3 \times 4 = 12\ \mathrm{m/s}
+$$
+<p>可见半径减半，流速提高到原来的 4 倍——这是喷嘴、血管狭窄、灌溉系统设计中普遍利用的原理：通过改变截面积，在保持流量不变的前提下调节流体速度。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch12: Fluid Dynamics and Its Biological and Medical Applications (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velocity | College Physics Ch12</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="速度">速度</h2>
+<p><strong>定义</strong></p>
+<p>速度（velocity）是描述物体运动快慢与方向的矢量，定义为位移对时间的变化率：</p>
+$$
+\vec{v} = \frac{\Delta \vec{x}}{\Delta t}
+$$
+<p>当时间间隔趋于零时，得到瞬时速度：</p>
+$$
+\vec{v}(t) = \lim_{\Delta t \to 0} \frac{\Delta \vec{x}}{\Delta t} = \frac{d\vec{x}}{dt}
+$$
+<p>需要区分速度与速率（speed）：速率是速度大小 $|\vec{v}|$，是标量，不含方向信息；而速度既有大小又有方向。例如物体沿闭合路径运动一圈后返回原点，位移为零，故平均速度为零，但由于经过的路径长度不为零，平均速率不为零。这一区别是理解后续加速度、动量等矢量概念的基础。</p>
+<p><strong>例题</strong></p>
+<p>一辆车沿直线道路行驶，前 $2\,\text{s}$ 内位移为 $+40\,\text{m}$（向东为正），随后 $3\,\text{s}$ 内位移为 $-15\,\text{m}$（即向西移动 $15\,\text{m}$）。求整个过程的平均速度。</p>
+<p>总位移：</p>
+$$
+\Delta x = 40 + (-15) = 25\,\text{m}
+$$
+<p>总时间：</p>
+$$
+\Delta t = 2 + 3 = 5\,\text{s}
+$$
+<p>平均速度：</p>
+$$
+\bar{v} = \frac{\Delta x}{\Delta t} = \frac{25}{5} = 5\,\text{m/s}\ (\text{向东})
+$$
+<p>注意：平均速度由<strong>净位移</strong>决定，而非路径总长。若题目问平均速率，则需用总路程 $40+15=55\,\text{m}$ 除以 $5\,\text{s}$，得到 $11\,\text{m/s}$——两者数值不同，这正体现了矢量与标量运算规则的差异。</p>
+<p><strong>解题应用</strong></p>
+<p>在处理运动学问题时，速度常以位置函数 $x(t)$ 给出，此时需通过求导获得瞬时速度：</p>
+$$
+v(t) = \frac{dx}{dt}
+$$
+<p>例如,若 $x(t) = 3t^2 - 2t + 1$（单位：米，$t$ 单位：秒），则</p>
+$$
+v(t) = \frac{dx}{dt} = 6t - 2
+$$
+<p>在 $t = 3\,\text{s}$ 时，$v(3) = 16\,\text{m/s}$。这种"由位置到速度"的求导思路，是后续学习加速度（速度对时间的导数）以及运动方程积分反问题的核心工具，务必熟练掌握位移—速度—加速度之间的微分关系。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch12: Fluid Dynamics and Its Biological and Medical Applications (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

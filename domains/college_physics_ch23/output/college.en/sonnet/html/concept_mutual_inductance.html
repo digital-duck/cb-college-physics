@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mutual Inductance | College Physics Ch23</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="mutual-inductance">Mutual Inductance</h2>
+<p><strong>Definition.</strong> When two coils are placed near each other, a changing current in coil 1 produces a changing magnetic flux through coil 2. By Faraday's law, this induces an emf in coil 2. The <strong>mutual inductance</strong> $M$ measures how effectively the coils are coupled:</p>
+$$\mathcal{E}_2 = -M\,\frac{\Delta I_1}{\Delta t}$$
+<p>The unit is the <strong>henry</strong> (H), where $1\ \text{H} = 1\ \text{V·s/A}$. The coupling can also be written in terms of flux. If coil 2 has $N_2$ turns and the flux through each turn is $\Phi_{21}$ (produced by coil 1), then</p>
+$$M = \frac{N_2\,\Phi_{21}}{I_1}.$$
+<p>$M$ depends only on geometry and materials: the number of turns, the coil shapes, their separation and orientation, and any iron core. It does not depend on the current. It is symmetric: $M_{12} = M_{21} = M$. A current change in coil 2 induces an emf in coil 1 with the same $M$, so you can calculate whichever direction is easier.</p>
+<p>The minus sign is Lenz's law. The induced emf opposes the change in flux that causes it.</p>
+<p><strong>Worked example.</strong> Two coils have $M = 25\ \text{mH}$. The current in coil 1 rises uniformly from 0 to 4.0 A in 50 ms. Find the magnitude of the emf induced in coil 2.</p>
+$$\left|\mathcal{E}_2\right| = M\,\frac{\Delta I_1}{\Delta t} = (0.025\ \text{H})\,\frac{4.0\ \text{A}}{0.050\ \text{s}} = 2.0\ \text{V}$$
+<p>Because the current ramps at a constant rate, the emf is constant at 2.0 V for the whole 50 ms. Its sign is opposite to what the changing flux would "want" to build up. If the current then holds steady at 4.0 A, $\Delta I_1/\Delta t = 0$ and the induced emf drops to zero. Only a <em>changing</em> current induces an emf.</p>
+<p><strong>Problem-solving application.</strong> Suppose a wireless charging pad uses a primary coil driven by a sinusoidal current of amplitude $I_0 = 2.0\ \text{A}$ at $f = 100\ \text{kHz}$, and the receiving coil has $M = 4.0\ \mu\text{H}$. Estimate the peak emf in the receiver.</p>
+<p>For $I_1 = I_0\sin(2\pi f t)$, the maximum rate of change is $\left|\dfrac{dI_1}{dt}\right|_{\max} = 2\pi f I_0$. Then</p>
+$$\mathcal{E}_{2,\max} = M\,(2\pi f I_0) = (4.0\times10^{-6})(2\pi)(1.0\times10^{5})(2.0) \approx 5.0\ \text{V}.$$
+<p>This shows the design trade-offs. To raise the received voltage you can increase $f$, increase $I_0$, or increase $M$ by moving the coils closer and aligning them. Misalignment lowers $\Phi_{21}$, so $M$ falls and the emf falls in proportion.</p>
+<p><strong>Strategy for problems.</strong></p>
+<li>Identify which coil is the source and which is the receiver.</li>
+<li>Find $\Delta I/\Delta t$ (or $dI/dt$ for a sinusoid, which has peak $2\pi f I_0$).</li>
+<li>Multiply by $M$, using the flux definition $M = N_2\Phi_{21}/I_1$ if $M$ is not given.</li>
+<li>Use Lenz's law for the sign or direction. Check the units: H × A/s = V.</li>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch23: Electromagnetic Induction, AC Circuits, and Electrical Technologies (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

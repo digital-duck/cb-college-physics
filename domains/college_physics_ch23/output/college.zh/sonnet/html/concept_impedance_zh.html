@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impedance | College Physics Ch23</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="阻抗">阻抗</h2>
+<p><strong>定义</strong></p>
+<p>在含有电阻 $R$、电感 $L$、电容 $C$ 的串联交流电路中，电压与电流之间的关系不能再用直流电路中简单的 $V = IR$ 来描述，因为电感和电容对交流信号的阻碍作用会随频率变化，并且会使电流与电压产生相位差。为统一处理这三种元件的阻碍效应，我们引入<strong>阻抗</strong> $Z$，它是电路对交流电流的总体反抗能力。</p>
+<p>电阻 $R$ 的阻碍作用与频率无关；电感的<strong>感抗</strong> $X_L = \omega L$ 随角频率 $\omega = 2\pi f$ 增大而增大；电容的<strong>容抗</strong> $X_C = \dfrac{1}{\omega C}$ 则随频率增大而减小。由于电感上电压超前电流 $90°$，而电容上电压滞后电流 $90°$，两者的效应方向相反，不能直接相加，而应看作矢量（相量）在垂直方向上相消。于是串联 RLC 电路的总阻抗为：</p>
+$$
+Z = \sqrt{R^2 + (X_L - X_C)^2}
+$$
+<p>这正是交流形式的欧姆定律：$V_{\text{peak}} = I_{\text{peak}} \, Z$，其中 $Z$ 取代了直流电路中的 $R$。</p>
+<p><strong>推导要点</strong></p>
+<p>把 $R$、$X_L$、$X_C$ 看作复平面上的量：电阻沿实轴，感抗沿正虚轴（$+j\omega L$），容抗沿负虚轴（$-j/\omega C$）。阻抗的复数形式为</p>
+$$
+Z = R + j(X_L - X_C)
+$$
+<p>其模长 $|Z| = \sqrt{R^2 + (X_L-X_C)^2}$ 即为上式，辐角 $\theta = \arctan\!\dfrac{X_L - X_C}{R}$ 给出电压超前电流的相位差。</p>
+<p><strong>例题</strong></p>
+<p>设 $R = 30\ \Omega$，$L = 0.1\ \text{H}$，$C = 100\ \mu\text{F}$，电源角频率 $\omega = 100\ \text{rad/s}$。</p>
+$$
+X_L = \omega L = 10\ \Omega, \qquad X_C = \frac{1}{\omega C} = 100\ \Omega
+$$
+$$
+Z = \sqrt{30^2 + (10-100)^2} = \sqrt{900 + 8100} = \sqrt{9000} \approx 94.9\ \Omega
+$$
+<p>若峰值电压 $V_{\text{peak}} = 120\ \text{V}$，则峰值电流 $I_{\text{peak}} = V_{\text{peak}}/Z \approx 1.26\ \text{A}$，且电流滞后电压 $\theta = \arctan\!\dfrac{-90}{30} \approx -71.6°$（即容抗占主导，电路呈容性）。</p>
+<p><strong>应用</strong></p>
+<p>调节 $\omega$ 使 $X_L = X_C$ 时，$Z = R$ 达到最小值，此即<strong>谐振</strong>条件，是滤波器和调谐电路设计的核心问题。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch23: Electromagnetic Induction, AC Circuits, and Electrical Technologies (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

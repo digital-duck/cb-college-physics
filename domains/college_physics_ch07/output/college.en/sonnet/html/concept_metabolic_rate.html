@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metabolic Rate | College Physics Ch07</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="metabolic-rate">Metabolic Rate</h2>
+<p>Metabolic rate is the speed at which the body converts chemical energy from food into usable work, heat, and biosynthesis to keep cells alive and support activity. Because nearly all of this energy release depends on aerobic respiration, metabolic rate can be measured indirectly by tracking oxygen consumption: the body burns roughly 20.1 kJ (about 4.8 kcal) of energy for every liter of $O_2$ consumed, a conversion factor derived from the average energy yield of oxidizing carbohydrates, fats, and proteins. This technique, indirect calorimetry, lets physiologists estimate energy expenditure without measuring heat directly, which is difficult in a moving, insulated body.</p>
+<p><strong>Worked example.</strong> Suppose a person at rest consumes oxygen at a rate of 0.25 L/min. Their metabolic rate is:</p>
+$$
+\text{Metabolic rate} = 0.25\ \frac{\text{L } O_2}{\text{min}} \times 20.1\ \frac{\text{kJ}}{\text{L } O_2} \approx 5.0\ \text{kJ/min}
+$$
+<p>Scaling to a day: $5.0 \times 60 \times 24 \approx 7{,}250$ kJ/day, or about 1,730 kcal/day — a realistic resting metabolic rate (RMR) for an average adult.</p>
+<p><strong>Problem-solving application.</strong> A useful predictive relationship is Kleiber's law, an empirical scaling law describing how basal metabolic rate (BMR) relates to body mass $M$ across animals:</p>
+$$
+\text{BMR} \propto M^{3/4}
+$$
+<p>This $\tfrac{3}{4}$-power scaling (rather than a naive $M^1$, which would assume metabolism scales linearly with mass) reflects constraints from nutrient-transport networks — larger animals are more energy-efficient per unit mass because surface-area-to-volume ratios and vascular branching limit how fast energy can be delivered to tissue. For example, doubling an animal's mass increases BMR by a factor of $2^{0.75} \approx 1.68$, not 2. This lets physiologists estimate the caloric needs of a 70 kg human from data on a 10 kg dog: if the dog's BMR is 500 kJ/day, the human's predicted BMR is $500 \times (70/10)^{0.75} \approx 2{,}640$ kJ/day — remarkably close to measured values. Understanding this scaling helps clinicians set calorie targets, athletes calibrate training loads, and researchers compare energy efficiency across species using a single mathematical framework.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch7: Work, Energy, and Energy Resources (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

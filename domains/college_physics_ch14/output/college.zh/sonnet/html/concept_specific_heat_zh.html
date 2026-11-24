@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Specific Heat | College Physics Ch14</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="specific-heat-比热容">Specific Heat（比热容）</h2>
+<p><strong>定义</strong></p>
+<p>比热容 $c$ 描述了某种物质吸收或释放热量后温度变化的难易程度，定义为使 $1.00\text{ kg}$ 该物质温度升高 $1.00\ ^\circ\text{C}$（或 $1\text{ K}$）所需的热量。它是材料的固有属性，与质量和温度变化量无关，单位通常为 $\text{J/(kg}\cdot\text{K)}$。热量、质量、比热容与温度变化之间的关系由下式给出：</p>
+$$
+Q = mc\Delta T
+$$
+<p>其中 $Q$ 为吸收或放出的热量（J），$m$ 为质量（kg），$c$ 为比热容，$\Delta T = T_f - T_i$ 为末温与初温之差。若物质吸热，$\Delta T > 0$，$Q$ 为正；若放热，$\Delta T < 0$，$Q$ 为负。</p>
+<p>比热容的物理意义在于反映物质微观结构储存热能的能力：水的比热容高达 $4186\ \text{J/(kg}\cdot\text{K)}$，远高于金属（如铁约为 $450\ \text{J/(kg}\cdot\text{K)}$），这是因为水分子间存在大量氢键，吸收的能量除了增加分子平动动能外，还要克服分子间作用力，因而升温所需能量更多。</p>
+<p><strong>例题</strong></p>
+<p>将 $2.0\text{ kg}$ 的水从 $20\,^\circ\text{C}$ 加热到 $80\,^\circ\text{C}$，需要多少热量？</p>
+$$
+Q = mc\Delta T = (2.0\text{ kg})(4186\ \text{J/(kg}\cdot\text{K)})(60\text{ K}) \approx 5.02\times10^{5}\text{ J}
+$$
+<p>若用同样的热量加热 $2.0\text{ kg}$ 的铁块，其温升为：</p>
+$$
+\Delta T = \frac{Q}{mc} = \frac{5.02\times10^{5}\text{ J}}{(2.0\text{ kg})(450\ \text{J/(kg}\cdot\text{K)})} \approx 558\text{ K}
+$$
+<p>同样的能量，铁的升温幅度是水的约 $9$ 倍，直观展现了比热容对温度响应的决定性作用。</p>
+<p><strong>应用与解题思路</strong></p>
+<p>处理比热容问题时，关键是明确研究对象的质量、初末温度以及是否发生相变（相变时公式 $Q=mc\Delta T$ 不适用，需改用潜热公式）。在混合体系（如量热法）中，通常利用能量守恒 $\sum Q = 0$，令高温物体放出的热量等于低温物体吸收的热量，从而求解未知的比热容或平衡温度。这类问题训练的核心能力，是把"能量守恒"这一物理原理转化为可求解的代数方程。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch14: Heat and Heat Transfer Methods (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

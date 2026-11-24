@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amplitude Modulation | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="amplitude-modulation">Amplitude Modulation</h2>
+<p><strong>定义</strong></p>
+<p>调幅（Amplitude Modulation, AM）是一种将音频信息编码到无线电载波上的方法：保持载波频率 $f_c$ 不变,让载波的振幅随音频信号（消息信号）的瞬时值而变化。设载波为 $c(t) = A_c \cos(2\pi f_c t)$,消息信号为 $m(t)$,则调幅信号可写为</p>
+$$
+s(t) = A_c\big[1 + \mu\, m(t)\big]\cos(2\pi f_c t)
+$$
+<p>其中 $\mu$ 为调制指数（modulation index）,控制调制深度。当 $|\mu\, m(t)| \le 1$ 时,包络不会发生失真,信号可以被简单的包络检波电路正确还原;若 $\mu > 1$,则出现"过调制"（overmodulation）,导致包络交叠、信息丢失。</p>
+<p>从频域角度看,若 $m(t) = \cos(2\pi f_m t)$,利用积化和差公式展开 $s(t)$,可得</p>
+$$
+s(t) = A_c\cos(2\pi f_c t) + \frac{A_c \mu}{2}\cos\big(2\pi (f_c+f_m)t\big) + \frac{A_c \mu}{2}\cos\big(2\pi (f_c-f_m)t\big)
+$$
+<p>这说明一个单频调幅信号在频谱上分裂为三根谱线：载波本身，以及位于 $f_c \pm f_m$ 处的上、下边带（sidebands）。这正是 AM 的核心数学结构——信息完全包含在边带之中，而载波本身不携带任何信息，却占据了绝大部分发射功率。</p>
+<p><strong>问题求解应用</strong></p>
+<p>例：某广播电台载波频率 $f_c = 1000\text{ kHz}$,音频信号最高频率为 $f_m = 5\text{ kHz}$,调制指数 $\mu = 0.8$。求：(1) 该信号占据的总带宽；(2) 若载波振幅 $A_c = 10\text{ V}$,边带的振幅各是多少。</p>
+<p>解：(1) 上边带位于 $1000+5 = 1005\text{ kHz}$,下边带位于 $1000-5 = 995\text{ kHz}$,故总带宽 $B = 2f_m = 10\text{ kHz}$。(2) 每个边带振幅为 $\dfrac{A_c\mu}{2} = \dfrac{10 \times 0.8}{2} = 4\text{ V}$。</p>
+<p>这类计算直接决定了电台频道间隔的设计：AM 广播频段中相邻电台通常间隔 $9$–$10\text{ kHz}$,恰好对应典型语音/音乐带宽产生的边带宽度,这也是为什么调幅广播的音质受限于带宽而非载波本身。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

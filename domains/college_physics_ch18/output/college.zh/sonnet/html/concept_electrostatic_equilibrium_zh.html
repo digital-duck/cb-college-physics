@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electrostatic Equilibrium | College Physics Ch18</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="electrostatic-equilibrium">Electrostatic Equilibrium</h2>
+<p><strong>定义</strong></p>
+<p>当导体内部的自由电荷分布不再随时间变化时，导体便处于静电平衡状态。此时必然满足三个等价条件：</p>
+<li>导体内部电场处处为零，$\vec{E}_{\text{内}} = 0$；</li>
+<li>导体是等势体，表面及内部电势处处相等；</li>
+<li>净电荷只能分布在导体表面，且表面处电场必须垂直于表面。</li>
+<p>这些条件并非独立假设，而是彼此的逻辑推论。若内部 $\vec{E} \neq 0$，自由电子会在力 $\vec{F} = q\vec{E}$ 的作用下继续移动，破坏"平衡"这一前提；因此平衡态下电场必为零。既然 $\vec{E} = -\nabla V = 0$，电势 $V$ 在导体内部必为常数。又因高斯定律 $\oint \vec{E} \cdot d\vec{A} = Q_{\text{enc}}/\varepsilon_0$，在导体内部任取一高斯面，因 $\vec{E} = 0$，故 $Q_{\text{enc}} = 0$——内部无净电荷，电荷只能堆积在表面。最后，若表面电场存在切向分量，自由电子会沿表面移动，同样违反平衡假设，因此表面电场必须沿法线方向。</p>
+<p><strong>推导：表面附近的电场</strong></p>
+<p>对导体表面取一个跨越表面的小型高斯柱面（一面在导体内，一面在导体外），侧面可忽略。设表面电荷面密度为 $\sigma$，由高斯定律可得：</p>
+$$
+E = \frac{\sigma}{\varepsilon_0}
+$$
+<p>这是一个重要结果：导体外部紧邻表面处的电场大小仅由局部电荷密度决定，方向垂直于表面（与平行板电容器内部场强 $E = \sigma/\varepsilon_0$ 形式一致，但这里只计入导体一侧的贡献，无需除以 2，因为柱面内侧电场为零）。</p>
+<p><strong>问题解决应用</strong></p>
+<p><em>例题</em>：一个不规则形状的孤立带电导体，其表面某处曲率半径较小（尖端），另一处曲率半径较大（平坦区域）。为什么尖端处电荷密度更高，进而场强更强？</p>
+<p>由于整个导体是等势体，表面电荷分布必须自洽地维持这一条件。可以将导体近似看作由多个不同半径的带电球面局部拼接而成：对于孤立带电球，$V = kQ/R$，即在相同电势下，半径越小，所需电荷量越小，但表面积按 $R^2$ 缩小得更快，故 $\sigma = Q/(4\pi R^2)$ 与 $1/R$ 成正比。因此曲率半径小（尖锐）的区域电荷密度 $\sigma$ 更大，由 $E = \sigma/\varepsilon_0$ 可知场强也更强——这正是避雷针工作原理的物理基础：尖端处强场会使周围空气电离，提前引发放电，从而保护建筑物。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch18: Electric Charge and Electric Field (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

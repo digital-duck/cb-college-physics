@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyclotron | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="回旋加速器">回旋加速器</h2>
+<p><strong>定义</strong>：回旋加速器（cyclotron）是一种利用固定磁场和固定频率交变电场，使带电粒子沿半径不断增大的螺旋轨迹反复加速的粒子加速器。装置核心是两个半圆形金属盒（称为"D形盒"），置于均匀磁场 $\vec{B}$ 中，两盒间的窄缝施加交变电压。带电粒子每次穿过窄缝都被电场加速，随后在磁场中做圆周运动，动能增加使轨道半径增大，最终形成螺旋路径。</p>
+<p>其物理基础是洛伦兹力提供向心力：</p>
+$$qvB = \frac{mv^2}{r} \implies r = \frac{mv}{qB}$$
+<p>由此可得粒子做圆周运动的角频率（回旋频率）：</p>
+$$\omega = \frac{v}{r} = \frac{qB}{m}$$
+<p>关键结果是：$\omega$ 与速度 $v$ 或半径 $r$ 无关，只取决于粒子的荷质比 $q/m$ 和磁场强度 $B$。这意味着交变电场只需保持<strong>固定频率</strong> $f = \dfrac{qB}{2\pi m}$，就能持续与粒子的回旋周期同步，实现共振加速——这正是"固定频率"设计的理论依据。</p>
+<p><strong>应用实例</strong>：设计一台加速质子（$q = 1.6\times10^{-19}\,\text{C}$，$m = 1.67\times10^{-27}\,\text{kg}$）的回旋加速器，磁场 $B = 1.5\,\text{T}$。所需交变电场频率为</p>
+$$f = \frac{qB}{2\pi m} = \frac{(1.6\times10^{-19})(1.5)}{2\pi(1.67\times10^{-27})} \approx 2.29\times10^7\,\text{Hz} = 22.9\,\text{MHz}$$
+<p>若最大轨道半径 $R = 0.5\,\text{m}$，则出射速度为 $v = \dfrac{qBR}{m} \approx 7.18\times10^7\,\text{m/s}$，对应动能 $E_k = \frac12 mv^2 \approx 4.3\times10^{-12}\,\text{J} \approx 27\,\text{MeV}$。</p>
+<p><strong>问题解决要点</strong>：当粒子速度接近光速时，相对论质量增大 $m \to \gamma m$，使回旋频率 $\omega = qB/(\gamma m)$ 随速度增加而减小，导致粒子逐渐与固定频率电场失步——这是经典回旋加速器的能量上限所在，也是同步回旋加速器（synchrocyclotron）和同步加速器（synchrotron）改进设计的出发点。求解此类问题时，应先用非相对论公式估算数量级，再检验 $v/c$ 是否显著，判断是否需引入相对论修正。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

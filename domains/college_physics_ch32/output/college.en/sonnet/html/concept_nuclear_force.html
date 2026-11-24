@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuclear Force | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="nuclear-force">Nuclear Force</h2>
+<h3 id="definition">Definition</h3>
+<p>The <strong>nuclear force</strong> (strong nuclear force between nucleons) is the attractive interaction between protons and neutrons that holds a nucleus together. It is needed because protons in a nucleus repel one another electrically, and gravity is far too weak to offset that repulsion. Its key properties are:</p>
+<li><strong>Strongly attractive</strong> at separations of about $1\text{–}2\ \text{fm}$ ($1\ \text{fm}=10^{-15}\ \text{m}$).</li>
+<li><strong>Short-ranged.</strong> It falls off roughly exponentially and is negligible beyond about $3\ \text{fm}$.</li>
+<li><strong>Charge-independent.</strong> The $p$–$p$, $n$–$n$ and $p$–$n$ forces are nearly equal once the Coulomb force is removed.</li>
+<li><strong>Saturating.</strong> Each nucleon interacts mainly with its nearest neighbors, so binding energy grows roughly in proportion to $A$, not $A^2$.</li>
+<li><strong>Repulsive at very short range</strong> ($\lesssim 0.7\ \text{fm}$), which keeps nuclei from collapsing.</li>
+<p>Yukawa modeled the attraction as the exchange of a massive particle (the pion). The resulting potential is</p>
+$$V(r) \propto -\frac{e^{-r/R}}{r}, \qquad R=\frac{\hbar}{m_\pi c}\approx 1.4\ \text{fm}.$$
+<p>The range $R$ is set by the exchanged particle's mass: a heavier mediator gives a shorter range.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>Compare the electric repulsion of two protons with the nuclear attraction between them. At $r = 1.5\ \text{fm}$, the Coulomb potential energy is</p>
+$$U_C=\frac{e^2}{4\pi\varepsilon_0 r}=\frac{1.44\ \text{MeV·fm}}{1.5\ \text{fm}}\approx 0.96\ \text{MeV}.$$
+<p>The nuclear potential between nucleons at this separation is tens of MeV deep. The attraction therefore beats the repulsion by more than an order of magnitude. At $r=10\ \text{fm}$ the Coulomb energy is still $0.144\ \text{MeV}$, but the nuclear term has dropped to essentially zero. This is why only small separations bind.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Why do large nuclei need extra neutrons?</strong> Coulomb repulsion is long-ranged. Every proton repels all the others, so the total Coulomb energy grows like $Z^2$. The nuclear force saturates, so each nucleon feels only its neighbors. Past a certain size, the repulsion outgrows the attraction unless neutrons are added. Neutrons supply attraction and no repulsion, and this is why stable heavy nuclei have $N>Z$. For example, $^{208}\text{Pb}$ has $Z=82$ and $N=126$.</p>
+<p><strong>Estimating the range from a mediator mass.</strong> Using $m_\pi c^2\approx 140\ \text{MeV}$ and $\hbar c\approx 197\ \text{MeV·fm}$:</p>
+$$R=\frac{\hbar c}{m_\pi c^2}=\frac{197}{140}\approx 1.4\ \text{fm}.$$
+<p>This matches the observed range of the force.</p>
+<p><strong>Check yourself:</strong> If the exchanged particle were twice as massive, would the range double or halve? (It would halve, since $R\propto 1/m$.)</p>
+<h3 id="diagram">Diagram</h3>
+<pre class="mermaid">graph LR
+A["r < 0.7 fm: repulsive core"] --> B["1-2 fm: strong attraction"]
+B --> C["> 3 fm: nuclear force negligible"]
+C --> D["Long range: only Coulomb repulsion acts"]</pre>
+<p><em>The nuclear force changes with nucleon separation. It is repulsive at very small distances, strongly attractive near 1–2 fm, and negligible beyond a few fm, where only Coulomb repulsion remains.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Far Point | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="far-point">Far Point</h2>
+<h3 id="definition">Definition</h3>
+<p>The <strong>far point</strong> of the eye is the greatest distance at which an object can be seen sharply when the eye's focusing muscles are fully relaxed. A normal (emmetropic) eye has its far point at infinity: parallel rays from distant objects converge exactly on the retina with no accommodation. Because accommodation can only <em>increase</em> the eye's optical power, the far point marks the eye's lowest-power state.</p>
+<p>In optics terms, the far point is the object distance $d_{\text{far}}$ whose image the relaxed eye places on the retina. Using the thin-lens equation for the eye's combined optics,</p>
+$$\frac{1}{d_{\text{far}}} + \frac{1}{d_i} = \frac{1}{f_{\text{relaxed}}},$$
+<p>where $d_i$ is the lens-to-retina distance (about 2.0 cm in an adult). For a normal eye, $f_{\text{relaxed}} = d_i$, so $1/d_{\text{far}} = 0$ and $d_{\text{far}} = \infty$.</p>
+<p><strong>Myopia</strong> (nearsightedness) occurs when the relaxed eye is too powerful for its length. Rays from infinity focus in front of the retina, and the far point moves to a finite distance.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>A myopic person can see clearly only out to $d_{\text{far}} = 80\ \text{cm}$. What power of corrective lens, worn close to the eye, lets them see distant objects clearly?</p>
+<p>The lens must take parallel rays (object at infinity) and form a virtual image at the far point, so the eye sees them as coming from 80 cm away. Use $d_o = \infty$ and $d_i = -0.80\ \text{m}$ (negative because the image is virtual, on the object side):</p>
+$$\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i} = 0 + \frac{1}{-0.80\ \text{m}} = -1.25\ \text{m}^{-1}.$$
+<p>The power is $P = 1/f = -1.25\ \text{D}$ (diopters). The negative sign means a diverging lens, which is what nearsightedness requires.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>General rule:</strong> for a distant object, the corrective lens must have focal length $f = -d_{\text{far}}$, so $P = -1/d_{\text{far}}$ (with $d_{\text{far}}$ in meters).</p>
+<p><em>Problem.</em> A student's prescription is $-2.50\ \text{D}$. Without the glasses, how far can they see sharply?</p>
+<p><em>Solution.</em> Rearrange the rule:</p>
+$$d_{\text{far}} = -\frac{1}{P} = \frac{1}{2.50\ \text{D}} = 0.40\ \text{m}.$$
+<p>Their uncorrected far point is 40 cm. Anything beyond that is blurred.</p>
+<p><strong>Checking your answer.</strong></p>
+<li>A myopic far point must be finite and positive. A negative result means a sign error.</li>
+<li>A stronger (more negative) prescription means a <em>closer</em> far point.</li>
+<li>If the lens is worn some distance $s$ from the eye (as with glasses, typically about 1.5 to 2 cm), the lens-to-far-point distance is $d_{\text{far}} - s$, so $f = -(d_{\text{far}} - s)$. For weak prescriptions the correction is negligible. For strong ones, such as $-10\ \text{D}$, it changes the required power by roughly 20%. Contact lenses sit on the eye, so $s \approx 0$.</li>
+<p>The far point is half of the eye's range of clear vision. The other half is the near point, the closest distance the eye can focus using full accommodation. Together they define the span over which the eye sees sharply.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refraction | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="refraction">Refraction</h2>
+<p><strong>Definition.</strong> Refraction is the bending of a light ray as it crosses the boundary between two transparent media. It happens because light travels at different speeds in different media. The speed in a vacuum is $c \approx 3.00\times10^{8}\ \text{m/s}$. In a medium it is $v$, and the medium's <strong>index of refraction</strong> is</p>
+$$n = \frac{c}{v} \ge 1.$$
+<p>A larger $n$ means slower light. Angles are measured from the <strong>normal</strong>, the line perpendicular to the surface. <strong>Snell's law</strong> relates the angle of incidence $\theta_1$ and the angle of refraction $\theta_2$:</p>
+$$n_1 \sin\theta_1 = n_2 \sin\theta_2.$$
+<p>Entering a slower medium ($n_2 > n_1$), the ray bends toward the normal. Entering a faster medium, it bends away. A ray along the normal ($\theta_1 = 0$) does not bend. Its speed and wavelength change, but its frequency stays the same.</p>
+<p><strong>Why it bends.</strong> Picture a wavefront hitting the surface at an angle. The part of the front that enters the slow medium first slows down, while the rest is still moving quickly. The front pivots, and the ray, which is perpendicular to the front, changes direction. Snell's law follows from this geometry. It also follows from Fermat's principle, which says light takes the path of least time between two points.</p>
+<pre class="mermaid">flowchart LR
+    A["Incident ray in medium 1 (n1)"] --> B["Boundary: speed changes from v1 to v2"]
+    B --> C{"Is n2 greater than n1?"}
+    C -->|Yes| D["Slower medium: ray bends toward normal"]
+    C -->|No| E["Faster medium: ray bends away from normal"]</pre>
+<p><em>How the change in speed at a boundary determines the direction of bending.</em></p>
+<p><strong>Worked example.</strong> A laser beam in air ($n_1 = 1.00$) strikes water ($n_2 = 1.33$) at $\theta_1 = 40^\circ$. Find $\theta_2$ and the speed of light in water.</p>
+$$\sin\theta_2 = \frac{n_1\sin\theta_1}{n_2} = \frac{(1.00)(0.643)}{1.33} = 0.483 \;\Rightarrow\; \theta_2 \approx 28.9^\circ.$$
+<p>The ray bends toward the normal, as expected. The speed in water is</p>
+$$v = \frac{c}{n} = \frac{3.00\times10^{8}}{1.33} \approx 2.26\times10^{8}\ \text{m/s}.$$
+<p><strong>Problem-solving application: total internal reflection.</strong> Now reverse the direction. Light goes from water ($n_1 = 1.33$) into air ($n_2 = 1.00$). Here the ray bends away from the normal. As $\theta_1$ increases, $\theta_2$ reaches $90^\circ$ at the <strong>critical angle</strong>:</p>
+$$\sin\theta_c = \frac{n_2}{n_1} \;\Rightarrow\; \theta_c = \sin^{-1}\!\left(\frac{1.00}{1.33}\right) \approx 48.8^\circ.$$
+<p>For $\theta_1 > \theta_c$ there is no refracted ray. All the light reflects back into the water. This is <strong>total internal reflection</strong>, and it requires $n_1 > n_2$. Optical fibers use it. A glass core ($n \approx 1.50$) is surrounded by cladding ($n \approx 1.46$), which gives $\theta_c = \sin^{-1}(1.46/1.50) \approx 77^\circ$. Light striking the wall at a larger angle stays trapped and travels along the fiber.</p>
+<p><strong>Strategy for any refraction problem:</strong></p>
+<li>Sketch the boundary and the normal.</li>
+<li>Identify $n_1$ and $n_2$, and measure angles from the normal, not the surface.</li>
+<li>Apply Snell's law.</li>
+<li>Check that the direction of bending matches whether $n_2 > n_1$.</li>
+<li>If $n_1 > n_2$, test whether $\sin\theta_2$ would exceed 1. If it would, the light is totally reflected.</li>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equivalence Principle | College Physics Ch34</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="equivalence-principle">Equivalence Principle</h2>
+<p><strong>Definition.</strong> The (weak) equivalence principle states that inertial mass $m_i$, which resists acceleration in $\vec F = m_i \vec a$, equals gravitational mass $m_g$, which couples an object to a gravitational field in $\vec F_g = m_g \vec g$. Because $m_i = m_g$ (verified to about one part in $10^{13}$), all objects fall with the same acceleration $\vec g$ in a given gravitational field. Einstein's stronger version says that, in a small enough region of space and time, <em>no local experiment can distinguish a uniform gravitational field $\vec g$ from a frame accelerating at $\vec a = -\vec g$ in free space</em>. Equivalently, a freely falling frame is locally indistinguishable from an inertial frame with no gravity.</p>
+<p>The words "small enough" matter. Real gravitational fields vary from place to place (tidal effects), so the equivalence holds only locally.</p>
+<p><strong>Worked example: the elevator.</strong> A sealed elevator sits at rest on Earth. A ball is released and falls with acceleration $g = 9.8\ \text{m/s}^2$. Now put the same elevator in deep space, far from any mass, and pull it upward with acceleration $a = 9.8\ \text{m/s}^2$. A released ball is no longer pushed by anything. It keeps its velocity while the floor accelerates up to meet it. Relative to the floor, the ball accelerates downward at $9.8\ \text{m/s}^2$. An observer inside sees the same ball behavior, the same scale reading ($N = mg$), and the same pendulum period $T = 2\pi\sqrt{L/g}$ in both cases.</p>
+<p><strong>Problem-solving application: light bends.</strong> An elevator of width $w = 3.0\ \text{m}$ accelerates upward at $a = 9.8\ \text{m/s}^2$. A horizontal light beam enters one wall. How far does it drop relative to the floor by the time it crosses?</p>
+<li>Crossing time: $t = w/c = \dfrac{3.0}{3.0\times10^{8}} = 1.0\times10^{-8}\ \text{s}$.</li>
+<li>The elevator rises by $\Delta y = \tfrac12 a t^2 = \tfrac12 (9.8)(10^{-8})^2 \approx 4.9\times10^{-16}\ \text{m}$.</li>
+<li>So, relative to the elevator, the beam follows a downward-curving parabola, dropping by $\approx 5\times10^{-16}\ \text{m}$.</li>
+<p>By the equivalence principle, the same must hold for an elevator at rest in Earth's gravity. Light bends in a gravitational field, a conclusion reached without any new field equations. (The bend is tiny here, but starlight grazing the Sun is deflected measurably, confirmed in the 1919 eclipse expedition. Einstein's full theory predicts twice the simple equivalence-based value.)</p>
+<p>The same reasoning predicts gravitational time dilation. A clock at the top of an accelerating rocket receives signals from the bottom with a Doppler shift, so clocks at different heights in a gravitational field must tick at different rates: $\Delta f / f \approx g h / c^2$.</p>
+<p><strong>Key takeaway.</strong> Gravity and acceleration are locally the same phenomenon. This led Einstein to treat gravity not as a force but as the curvature of spacetime, the foundation of general relativity.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch34: Frontiers of Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

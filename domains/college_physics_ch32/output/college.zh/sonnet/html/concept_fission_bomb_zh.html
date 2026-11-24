@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fission Bomb | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="fission-bomb">Fission Bomb</h2>
+<p><strong>定义</strong>：裂变弹（原子弹）是利用铀-235或钚-239等易裂变材料，在极短时间内组装成超临界质量，从而引发不可控链式反应的核武器。核心设计难题是：材料在临界前就已开始自发裂变，若组装过慢，反应会在达到最大功率前就把弹芯炸散（"提前引爆"，predetonation）。两种主流方案针对此问题：<strong>枪式</strong>（gun-type）用常规炸药将一块亚临界铀-235弹丸射入另一亚临界套筒，适用于铀-235（自发裂变率低）；<strong>内爆式</strong>（implosion）用环形排列的炸药产生向心冲击波，把钚球压缩至数倍密度，将组装时间从毫秒级压缩到微秒级，这是钚弹（自发裂变率高）必须采用的方案。</p>
+<p><strong>链式反应的定量模型</strong>：设中子倍增因子为 $k$（一代裂变产生的中子数与消耗中子数之比）。当 $k>1$（超临界）时，第 $n$ 代中子数为</p>
+$$N_n = N_0\, k^n$$
+<p>若相邻两代之间的平均时间间隔（代时）为 $\tau \approx 10^{-8}\,\text{s}$，则总能量释放随时间近似指数增长：</p>
+$$N(t) = N_0 \exp\!\left(\frac{k-1}{\tau}\,t\right)$$
+<p><strong>问题解决应用</strong>：估算需要多少代裂变才能释放相当于广岛级（约 $10^{24}$ 次裂变）的能量。取 $k=1.5$，初始一次自发裂变 $N_0=1$，令 $N_n=10^{24}$：</p>
+$$n = \frac{\ln(10^{24})}{\ln(1.5)} \approx \frac{55.3}{0.405} \approx 137 \text{ 代}$$
+<p>以 $\tau\approx 10^{-8}\,\text{s}$ 计，总耗时约 $137\tau \approx 1.4\,\mu\text{s}$——这正是内爆装置必须在微秒级内完成压缩组装的物理原因：任何组装延迟都会使弹芯在达到设计代数之前因热膨胀降为亚临界（$k\to1$），导致"哑弹"效应（fizzle），大幅降低实际当量。这一指数增长模型也解释了为何裂变弹的当量对几何压缩精度极其敏感：$k$ 每提高 $0.1$，达到同一能量所需代数与时间都会显著缩短。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

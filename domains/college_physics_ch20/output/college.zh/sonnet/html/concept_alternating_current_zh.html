@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alternating Current | College Physics Ch20</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="alternating-current">Alternating Current</h2>
+<p><strong>定义</strong></p>
+<p>交流电（Alternating Current, AC）是指周期性改变方向的电荷流动，其电流强度随时间按正弦规律变化：</p>
+$$I(t) = I_0 \sin(2\pi f t + \varphi)$$
+<p>其中 $I_0$ 为电流振幅（最大值），$f$ 为频率（单位：赫兹，Hz），$\varphi$ 为初相位。角频率 $\omega = 2\pi f$，因此也可写作 $I(t) = I_0 \sin(\omega t + \varphi)$。与直流电（DC）不同，AC 的电流方向和电压极性以固定周期 $T = 1/f$ 往复交替，这正是"交流"之名的来源。</p>
+<p>由于正弦波在一个周期内正负对称，其算术平均值为零，无法反映其做功能力。因此工程上用<strong>均方根值</strong>（root-mean-square, RMS）描述交流电的有效强度：</p>
+$$I_{\text{rms}} = \sqrt{\frac{1}{T}\int_0^T I(t)^2\,dt} = \frac{I_0}{\sqrt{2}}$$
+<p>同理，电压的有效值 $V_{\text{rms}} = V_0/\sqrt{2}$。家用市电标称的"220V"或"120V"正是指 RMS 值，而非瞬时峰值。</p>
+<p><strong>例题</strong></p>
+<p>某交流电源电压瞬时表达式为 $V(t) = 311\sin(2\pi \times 50\, t)$ V。求：(1) 频率 $f$；(2) 电压有效值 $V_{\text{rms}}$；(3) 若接入一个 $R = 220\,\Omega$ 的电阻负载，求平均功率。</p>
+<p>解：</p>
+<li>由 $\omega = 2\pi \times 50$，得 $f = 50$ Hz（对应中国大陆市电标准）。</li>
+<li>$V_{\text{rms}} = 311/\sqrt{2} \approx 220$ V，与标称电压一致。</li>
+<li>对纯电阻负载，平均功率等于用 RMS 值代入直流功率公式：</li>
+$$P_{\text{avg}} = \frac{V_{\text{rms}}^2}{R} = \frac{220^2}{220} = 220 \text{ W}$$
+<p><strong>应用要点</strong></p>
+<p>判断交流电路问题时，第一步永远是明确题目给的是峰值 $I_0$（或 $V_0$）还是 RMS 值——这是最常见的失分点。凡涉及功率、发热、电表读数的计算，必须用 RMS 值；凡涉及瞬时波形、相位关系、峰值耐压的计算，才用瞬时表达式 $I_0\sin(\omega t)$。频率 $f$ 决定了电感、电容元件的阻抗（$X_L = 2\pi f L$，$X_C = 1/(2\pi f C)$），这是后续学习交流电路阻抗分析的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch20: Electric Current, Resistance, and Ohm's Law (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

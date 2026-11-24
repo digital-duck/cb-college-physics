@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wave Intensity | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="wave-intensity-波强度">Wave Intensity（波强度）</h2>
+<p><strong>定义</strong></p>
+<p>波强度 $I$ 定义为波在垂直于传播方向的单位面积上、单位时间内所传递的功率，单位为瓦特每平方米（$\text{W/m}^2$）：</p>
+$$
+I = \frac{P}{A}
+$$
+<p>其中 $P$ 是功率，$A$ 是波前经过的横截面积。对于简谐振动的机械波（如声波或弦上的波），强度与振幅的平方成正比，也与频率的平方成正比：</p>
+$$
+I = \tfrac{1}{2}\rho v \omega^2 A^2
+$$
+<p>这里 $\rho$ 是介质密度，$v$ 是波速，$\omega = 2\pi f$ 是角频率，$A$ 是振幅（注意此处 $A$ 表示振幅，与上式中的面积符号不同，需根据上下文区分）。这个平方关系的物理来源是：波所携带的能量正比于振幅的平方（简谐振子的能量 $E \propto A^2$），而强度只是单位面积、单位时间内传递的能量。</p>
+<p>对于电磁波（如光波），强度同样正比于电场振幅的平方：$I \propto E_0^2$。</p>
+<p><strong>例题</strong></p>
+<p>一个扬声器在距其 $2\,\text{m}$ 处产生强度为 $I_1 = 0.5\,\text{W/m}^2$ 的声波。若将振幅增大为原来的 $3$ 倍，求新的强度。</p>
+<p>由于 $I \propto A^2$，振幅增大 $3$ 倍，强度增大 $3^2 = 9$ 倍：</p>
+$$
+I_2 = 9 \times 0.5 = 4.5\ \text{W/m}^2
+$$
+<p><strong>问题求解应用</strong></p>
+<p>点声源向四周均匀辐射功率 $P$，由于波前是以声源为中心的球面，面积为 $4\pi r^2$，因此强度随距离按平方反比规律衰减：</p>
+$$
+I(r) = \frac{P}{4\pi r^2}
+$$
+<p><strong>练习</strong>：某声源功率 $P = 100\,\text{W}$，求距其 $r_1 = 5\,\text{m}$ 和 $r_2 = 10\,\text{m}$ 处的强度之比。</p>
+<p>解：由平方反比关系，</p>
+$$
+\frac{I_1}{I_2} = \left(\frac{r_2}{r_1}\right)^2 = \left(\frac{10}{5}\right)^2 = 4
+$$
+<p>即距离加倍，强度降为原来的四分之一。这一关系在设计音响系统、评估激光安全距离、计算天线辐射覆盖范围等实际问题中都至关重要——工程师必须依据平方反比定律来估算在给定距离处能否达到所需的能量密度或安全阈值。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

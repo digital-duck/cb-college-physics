@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sound Intensity | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="sound-intensity">Sound Intensity</h2>
+<p><strong>定义</strong></p>
+<p>声强(sound intensity)描述声波传播时单位面积上传递的功率,单位为 $\mathrm{W/m^2}$。设声波在介质中传播时引起的压强扰动(声压)振幅为 $\Delta p_{max}$,介质密度为 $\rho$,声速为 $v$,则声强为:</p>
+$$
+I = \frac{(\Delta p_{max})^2}{2\rho v}
+$$
+<p>这个关系式的物理来源并不神秘:声强本质上是能量流密度,而声波中储存的能量正比于压强扰动的平方(类似弹簧势能 $\propto x^2$,或电磁波光强 $\propto E^2$)。因此声强与声压振幅的平方成正比,而不是线性关系——这是本节需要重点掌握的核心规律。</p>
+<p>由于人耳能感知的声强范围极大(从 $10^{-12}\,\mathrm{W/m^2}$ 的听觉阈限到 $1\,\mathrm{W/m^2}$ 的痛阈,跨越 12 个数量级),实践中常用对数尺度——分贝(decibel, dB)来表示:</p>
+$$
+\beta = 10\log_{10}\left(\frac{I}{I_0}\right), \qquad I_0 = 10^{-12}\,\mathrm{W/m^2}
+$$
+<p><strong>例题</strong></p>
+<p>某扬声器在距离 2 m 处测得声强为 $4\times10^{-4}\,\mathrm{W/m^2}$。求:(a) 该处声压振幅(设 $\rho v \approx 415\,\mathrm{kg/(m^2\cdot s)}$,即空气在常温下的特性阻抗);(b) 该处分贝级。</p>
+<p>(a) 由 $I = \dfrac{(\Delta p_{max})^2}{2\rho v}$ 解出:</p>
+$$
+\Delta p_{max} = \sqrt{2\rho v \cdot I} = \sqrt{2 \times 415 \times 4\times10^{-4}} \approx 0.577\,\mathrm{Pa}
+$$
+<p>(b) </p>
+$$
+\beta = 10\log_{10}\left(\frac{4\times10^{-4}}{10^{-12}}\right) = 10\log_{10}(4\times10^{8}) \approx 86\,\mathrm{dB}
+$$
+<p><strong>问题求解应用</strong></p>
+<p>若已知声源功率 $P$ 各向均匀辐射,声强会随距离按 $I = \dfrac{P}{4\pi r^2}$ 衰减(能量守恒在球面上的自然结果)。这意味着距离加倍,声强降为原来的 $1/4$,分贝级则下降 $10\log_{10}4 \approx 6\,\mathrm{dB}$。解题时把握两条主线:一是声强与压强振幅的平方关系(用于换算物理量),二是声强与分贝的对数关系(用于比较感知响度),两者结合即可处理绝大多数声学强度相关问题。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

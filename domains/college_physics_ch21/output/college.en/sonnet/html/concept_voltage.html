@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voltage | College Physics Ch21</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="voltage">Voltage</h2>
+<p><strong>Voltage</strong> (electric potential difference) is the electrical potential energy per unit charge between two points. If moving a charge $q$ between two points changes its potential energy by $\Delta U$, the voltage between them is</p>
+$$V = \frac{\Delta U}{q}, \qquad 1\ \text{volt} = 1\ \frac{\text{joule}}{\text{coulomb}}.$$
+<p>A 9 V battery therefore gives each coulomb of charge 9 J of energy as it moves from the negative to the positive terminal. Voltage is always measured <em>between</em> two points, much as height difference matters for a falling object, not absolute height. The battery acts as the "pump" that raises charges to higher potential. The rest of the circuit lets them "fall" back down, converting that energy into light, heat, or motion.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>A 12 V car battery drives $2.0\ \text{C}$ of charge through a headlight. How much energy is delivered?</p>
+$$\Delta U = qV = (2.0\ \text{C})(12\ \text{V}) = 24\ \text{J}.$$
+<p>If this takes 0.50 s, the power is $P = \Delta U / t = 48\ \text{W}$. Equivalently, the current is $I = q/t = 4.0\ \text{A}$, and $P = IV = (4.0)(12) = 48\ \text{W}$, which gives the same result.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p>Voltage, current, and resistance are linked by <strong>Ohm's law</strong>, $V = IR$, and voltages around a circuit obey <strong>Kirchhoff's voltage law</strong>: around any closed loop, the voltage rises equal the voltage drops,</p>
+$$\sum V_{\text{rise}} = \sum V_{\text{drop}}.$$
+<p><em>Problem:</em> A 9 V battery is connected in series with resistors $R_1 = 100\ \Omega$ and $R_2 = 200\ \Omega$. Find the voltage across each resistor.</p>
+<li>Total resistance in series: $R = 100 + 200 = 300\ \Omega$.</li>
+<li>Current: $I = V/R = 9/300 = 0.030\ \text{A}$.</li>
+<li>Drops: $V_1 = IR_1 = (0.030)(100) = 3.0\ \text{V}$ and $V_2 = IR_2 = (0.030)(200) = 6.0\ \text{V}$.</li>
+<li>Check with Kirchhoff: $3.0 + 6.0 = 9.0\ \text{V}$, which equals the battery's rise. ✓</li>
+<p>This is the <strong>voltage divider</strong> idea. In series, each resistor takes a share of the voltage proportional to its resistance: $V_k = V\,\dfrac{R_k}{R_{\text{total}}}$. Here $R_2$ is two-thirds of the total resistance, so it takes two-thirds of the 9 V.</p>
+<pre class="mermaid">flowchart LR
+    B["Battery 9 V"] --> R1["R1 = 100 Ω, drop 3 V"]
+    R1 --> R2["R2 = 200 Ω, drop 6 V"]
+    R2 --> B</pre>
+<p><em>A series loop: the battery's 9 V rise is split into a 3 V drop across R1 and a 6 V drop across R2, in proportion to resistance.</em></p>
+<p><strong>Key takeaways:</strong> voltage is energy per charge ($V = \Delta U/q$). It is measured between two points. Around any closed loop the rises and drops balance. To solve circuit problems, find the current with Ohm's law, then compute each drop and check the loop sum.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch21: Circuits and DC Instruments (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

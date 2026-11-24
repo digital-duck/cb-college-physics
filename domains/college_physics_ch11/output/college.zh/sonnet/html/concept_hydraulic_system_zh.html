@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hydraulic System | College Physics Ch11</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="hydraulic-system">Hydraulic System</h2>
+<p><strong>定义</strong></p>
+<p>液压系统是一种密闭流体装置,利用帕斯卡原理(Pascal's principle)传递并放大力。帕斯卡原理指出:施加在密闭流体某处的压强,会毫无衰减地传递到流体内部及容器壁的每一点。由于压强定义为 $P = F/A$,若系统两端横截面积不同,则有:</p>
+$$
+\frac{F_1}{A_1} = \frac{F_2}{A_2}
+$$
+<p>其中 $F_1, A_1$ 为输入活塞所受力及其面积,$F_2, A_2$ 为输出活塞所受力及其面积。由此可得力的放大倍数:</p>
+$$
+F_2 = F_1 \cdot \frac{A_2}{A_1}
+$$
+<p>需要注意的是,这种"以小力换大力"并不违反能量守恒——输出活塞移动的距离会按相同比例缩小,即 $F_1 d_1 = F_2 d_2$(做功相等)。</p>
+<p><strong>例题</strong></p>
+<p>某液压千斤顶的输入活塞半径为 $1\ \text{cm}$,输出活塞半径为 $10\ \text{cm}$。若在输入端施加 $50\ \text{N}$ 的力,输出端能产生多大的力?</p>
+<p>由于面积与半径平方成正比:</p>
+$$
+\frac{A_2}{A_1} = \left(\frac{r_2}{r_1}\right)^2 = \left(\frac{10}{1}\right)^2 = 100
+$$
+<p>因此:</p>
+$$
+F_2 = 50\ \text{N} \times 100 = 5000\ \text{N}
+$$
+<p>即输入端 50 N 的力,可在输出端产生 5000 N 的力——这正是液压千斤顶能顶起汽车的原理。</p>
+<p><strong>问题求解应用</strong></p>
+<p>液压系统设计的核心权衡在于"力"与"位移"的此消彼长。假设千斤顶需要将汽车顶起 $10\ \text{cm}$,而输出活塞面积是输入活塞面积的 100 倍,那么根据体积守恒 $A_1 d_1 = A_2 d_2$,操作者必须将输入活塞压下:</p>
+$$
+d_1 = d_2 \times \frac{A_2}{A_1} = 10\ \text{cm} \times 100 = 1000\ \text{cm} = 10\ \text{m}
+$$
+<p>这解释了为何实际千斤顶需要反复压杆(多次冲程)才能完成一次顶升——单次活塞行程远远不够。工程师在设计液压系统时,必须在"所需力的放大倍数"与"操作者可接受的冲程次数与行程长度"之间做出权衡,这也是刹车系统、挖掘机液压臂等实际装置面积比选择的关键依据。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch11: Fluid Statics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

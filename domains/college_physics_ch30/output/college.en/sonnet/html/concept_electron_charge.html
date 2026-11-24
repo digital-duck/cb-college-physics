@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electron Charge | College Physics Ch30</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="electron-charge">Electron Charge</h2>
+<h3 id="definition">Definition</h3>
+<p>The <strong>elementary charge</strong>, $e$, is the smallest unit of free electric charge observed in nature:</p>
+$$e = 1.602 \times 10^{-19}\ \text{C}$$
+<p>An electron carries charge $-e$ and a proton carries $+e$. Every isolated charge ever measured is an integer multiple of this value, a property called <strong>charge quantization</strong>:</p>
+$$q = ne, \qquad n \in \{0, \pm 1, \pm 2, \dots\}$$
+<p>Charge is also conserved. In any closed system the net charge does not change, so charge can be moved or exchanged but not created or destroyed on its own.</p>
+<p>(Quarks carry $\pm\tfrac13 e$ and $\pm\tfrac23 e$, but they are never found in isolation. Every observable particle still has a charge that is a whole multiple of $e$.)</p>
+<h3 id="worked-example-counting-electrons">Worked example: counting electrons</h3>
+<p>A plastic rod is rubbed with fur and acquires a charge of $-4.8\times10^{-9}\ \text{C}$. How many excess electrons does it carry?</p>
+<p>Since $q = ne$, solve for $n$ by dividing the total charge by the charge of one electron:</p>
+$$n = \frac{|q|}{e} = \frac{4.8\times10^{-9}\ \text{C}}{1.602\times10^{-19}\ \text{C}} \approx 3.0\times10^{10}$$
+<p>The rod holds about 30 billion extra electrons. The number looks large, but it is a tiny fraction of the roughly $10^{23}$ or more electrons in the rod. This is why everyday charges look continuous even though they are discrete.</p>
+<h3 id="problem-solving-application-millikan-s-oil-drop">Problem-solving application: Millikan's oil drop</h3>
+<p>Millikan found $e$ by suspending charged oil droplets between two plates. A droplet hangs motionless when the electric force balances gravity:</p>
+$$qE = mg \quad\Rightarrow\quad q = \frac{mg}{E}$$
+<p>Suppose measurements on three droplets give the charges below.</p>
+<p>| Drop | $q$ (C) | |------|---------| | A | $3.2\times10^{-19}$ | | B | $4.8\times10^{-19}$ | | C | $8.0\times10^{-19}$ |</p>
+<p><strong>Step 1.</strong> Look for a common factor. The differences are $B-A = 1.6\times10^{-19}$ and $C-B = 3.2\times10^{-19}$, so the spacing is about $1.6\times10^{-19}\ \text{C}$.</p>
+<p><strong>Step 2.</strong> Test whether each charge is a whole multiple of this spacing:</p>
+$$\frac{3.2}{1.6}=2,\qquad \frac{4.8}{1.6}=3,\qquad \frac{8.0}{1.6}=5$$
+<p>All three are integers. The droplets carry 2, 3, and 5 elementary charges.</p>
+<p><strong>Step 3.</strong> Conclude. Because every measured $q$ fits $ne$ with integer $n$, the data point to a fundamental unit. The best estimate is the greatest common divisor of the measurements, $e \approx 1.6\times10^{-19}\ \text{C}$. If the charge were continuous, the measured values would have no common spacing.</p>
+<p><strong>Check yourself:</strong> A current of $1\ \text{A}$ is $1\ \text{C/s}$. How many elementary charges pass a point each second? Dividing gives $1/(1.602\times10^{-19}) \approx 6.24\times10^{18}$ charges per second.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch30: Atomic Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

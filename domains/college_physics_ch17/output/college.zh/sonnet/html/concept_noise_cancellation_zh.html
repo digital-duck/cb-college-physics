@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noise Cancellation | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="noise-cancellation-噪声消除">Noise Cancellation（噪声消除）</h2>
+<p><strong>定义</strong></p>
+<p>噪声消除（主动降噪，Active Noise Cancellation, ANC）利用波的叠加原理：当两列振幅相近、频率相同、相位相反的声波在空间中相遇时，会发生<strong>相消干涉</strong>，使合成波的振幅大幅减小。设环境噪声在某点的声压随时间变化为</p>
+$$
+p_{\text{noise}}(t) = A\cos(\omega t + \varphi)
+$$
+<p>若系统能实时生成一个反相波</p>
+$$
+p_{\text{anti}}(t) = A\cos(\omega t + \varphi + \pi) = -A\cos(\omega t + \varphi)
+$$
+<p>则叠加后的总声压为</p>
+$$
+p_{\text{total}}(t) = p_{\text{noise}}(t) + p_{\text{anti}}(t) = 0
+$$
+<p>理论上完全抵消。这正是波动方程线性叠加原理的直接应用：两波的位移（或声压）可以直接相加，而不会相互干扰对方的传播。</p>
+<p><strong>工作原理与实现</strong></p>
+<p>实际系统（如降噪耳机）通过麦克风采集外部噪声，经处理器施加约 $180^\circ$ 相移后，由内置扬声器播放。设计的核心挑战在于<strong>时延</strong>：从麦克风采样到扬声器发声，整个电路存在处理延迟 $\Delta t$。若噪声频率为 $f$，要使反相波保持有效抵消，需满足</p>
+$$
+\Delta t \ll \frac{1}{2f}
+$$
+<p>否则相位误差会导致抵消不完全，甚至在某些频率上产生相长干涉（噪声被放大）。这也解释了为什么主动降噪对低频噪声（如飞机引擎的轰鸣，几十到几百赫兹）效果最好——低频波周期长，容许的电路延迟窗口更宽；而高频噪声（如刹车尖啸）周期短，相位匹配困难，因此耳机通常依赖被动隔音（物理隔绝）来处理高频部分。</p>
+<p><strong>问题求解应用</strong></p>
+<p>设某型号降噪耳机的处理延迟为 $\Delta t = 0.5\ \text{ms}$。求其能够有效抵消（相位误差控制在 $10\%$ 周期以内）的最高频率。</p>
+<p>由条件 $\Delta t \le 0.1 \times \dfrac{1}{f}$，得</p>
+$$
+f \le \frac{0.1}{\Delta t} = \frac{0.1}{0.5\times10^{-3}\ \text{s}} = 200\ \text{Hz}
+$$
+<p>因此该耳机主动降噪的有效频段上限约为 200 Hz，这与实际产品说明书中"主动降噪对低频效果显著"的描述一致。这个计算展示了如何将干涉的相位条件转化为具体的工程性能指标。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

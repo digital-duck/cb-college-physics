@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyclical Process | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="cyclical-process">Cyclical Process</h2>
+<p><strong>定义</strong></p>
+<p>循环过程（cyclical process）是指系统经过一系列状态变化后，最终又回到初始状态的热力学过程。由于内能 $U$ 是状态函数，只依赖于系统当前的状态（如温度、压强、体积），而与系统如何达到该状态的路径无关，因此只要系统回到初始状态，其内能变化必为零：</p>
+$$\Delta U_{\text{cycle}} = U_{\text{final}} - U_{\text{initial}} = 0$$
+<p>将此结论代入热力学第一定律 $\Delta U = Q - W$（其中 $Q$ 为系统吸收的净热量，$W$ 为系统对外做的净功），可得循环过程的核心关系式：</p>
+$$Q_{\text{net}} = W_{\text{net}}$$
+<p>也就是说，一个循环过程中系统净吸收的热量，恰好全部转化为对外输出的净功。这正是热机（heat engine）能够持续做功的理论基础。</p>
+<p><strong>工作实例</strong></p>
+<p>考虑一个理想气体经历如下四步循环：等温膨胀 → 绝热膨胀 → 等温压缩 → 绝热压缩，最终回到起始的 $(P_1, V_1, T_1)$ 状态——这正是卡诺循环（Carnot cycle）。在 $P$-$V$ 图上，这一循环表现为一条闭合曲线，曲线所围成的面积即为该循环净做的功 $W_{\text{net}}$。若在某次循环中，气体在高温热源吸热 $Q_h = 800\ \text{J}$，向低温热源放热 $Q_c = 500\ \text{J}$，则：</p>
+$$W_{\text{net}} = Q_h - Q_c = 800 - 500 = 300\ \text{J}$$
+<p>由于是循环过程，可直接验证 $\Delta U = Q_{\text{net}} - W_{\text{net}} = (800-500) - 300 = 0$，与理论预期一致。</p>
+<p><strong>解题应用</strong></p>
+<p>在处理循环过程问题时，关键策略是：<strong>不必逐段计算内能变化，只需分析净热量和净功</strong>。例如，若题目给出循环中某几个阶段的 $Q$ 与 $W$，缺失的一项总可以通过 $\Delta U_{\text{cycle}} = 0$ 反推得出。这一简化技巧在计算热机效率 $\eta = W_{\text{net}}/Q_h$ 时尤为常用，也是理解卡诺定理与热力学第二定律的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

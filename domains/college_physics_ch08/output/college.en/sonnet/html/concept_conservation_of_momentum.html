@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conservation Of Momentum | College Physics Ch08</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="conservation-of-momentum">Conservation Of Momentum</h2>
+<p>For an isolated system — one with no net external force acting on it — the total momentum is conserved: it stays constant in time, even as momentum is exchanged among the system's parts. This follows directly from Newton's third law. If two objects interact only with each other, the force object 1 exerts on object 2 is equal and opposite to the force object 2 exerts on object 1. Since force is the rate of change of momentum, $\vec{F}_{12} = -\vec{F}_{21}$ implies</p>
+$$\frac{d\vec{p}_1}{dt} = -\frac{d\vec{p}_2}{dt} \quad \Rightarrow \quad \frac{d(\vec{p}_1 + \vec{p}_2)}{dt} = 0$$
+<p>so $\vec{p}_{\text{total}} = \vec{p}_1 + \vec{p}_2$ is constant. More generally, for $n$ interacting bodies with no external force, $\vec{p}_{\text{initial}} = \vec{p}_{\text{final}}$.</p>
+<p><strong>Worked example.</strong> A 0.50 kg cart moving at $2.0\ \text{m/s}$ collides with a stationary 1.5 kg cart, and the two stick together and move as one. Momentum before the collision:</p>
+$$p_i = m_1 v_1 + m_2 v_2 = (0.50)(2.0) + (1.5)(0) = 1.0\ \text{kg·m/s}$$
+<p>Since no external horizontal force acts on the two-cart system, $p_f = p_i = 1.0\ \text{kg·m/s}$. After the collision, the combined mass is $2.0$ kg, so</p>
+$$v_f = \frac{p_f}{m_1+m_2} = \frac{1.0}{2.0} = 0.50\ \text{m/s}$$
+<p>Momentum is conserved here even though the carts end up moving together rather than bouncing apart — the conservation law does not depend on the specific way the objects interact during the collision, which is precisely what makes it such a powerful problem-solving tool.</p>
+<p><strong>Problem-solving application.</strong> Momentum conservation lets you solve collision problems without knowing the details of the interaction forces — useful because collision forces are often complex, brief, and hard to measure directly. The general strategy: (1) define the system so that external forces are negligible or act along a direction you can ignore (e.g., ignore vertical gravity/normal forces that cancel during a horizontal collision); (2) write $\sum \vec{p}_i = \sum \vec{p}_f$ component-wise, one equation per direction; (3) solve for the unknown velocity or mass. Because this is a vector equation, momentum can be conserved in one direction (say, horizontal) even while forces act in another (say, vertical) — a distinction worth checking carefully before setting up the equation.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch8: Linear Momentum and Collisions (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

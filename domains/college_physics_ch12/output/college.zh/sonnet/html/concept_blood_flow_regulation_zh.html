@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blood Flow Regulation | College Physics Ch12</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="blood-flow-regulation">Blood Flow Regulation</h2>
+<p><strong>定义</strong></p>
+<p>血流调节是指心血管系统通过改变血管半径来控制流向各器官的血流量的机制。其物理基础是泊肃叶定律(Poiseuille's Law):</p>
+$$Q = \frac{\pi \Delta P r^4}{8 \eta L}$$
+<p>其中 $Q$ 为体积流量,$\Delta P$ 为血管两端的压强差,$r$ 为血管半径,$\eta$ 为血液黏度,$L$ 为血管长度。关键在于 $Q \propto r^4$ —— 半径的四次方依赖关系意味着血管平滑肌只需做出很小幅度的收缩或舒张,就能引起流量的巨大变化。这种放大效应正是身体用来精细分配血流(而非依赖大幅度的压强波动)的核心策略。</p>
+<p><strong>范例演算</strong></p>
+<p>假设某小动脉半径为 $r_0$,其他条件($\Delta P, \eta, L$)不变。若血管平滑肌收缩使半径减小到 $0.84\,r_0$(减小 16%),流量变化为:</p>
+$$\frac{Q_1}{Q_0} = \left(\frac{r_1}{r_0}\right)^4 = (0.84)^4 \approx 0.497$$
+<p>也就是说,半径仅减小 16%,流量却下降了约 50%。反过来,若半径增大 19%(即 $r_1 = 1.19\,r_0$):</p>
+$$(1.19)^4 \approx 2.00$$
+<p>流量翻倍。这正是运动时骨骼肌血管舒张(vasodilation)能让血流量在几秒内成倍增加的原因——身体不需要改变心脏泵出的总压力,只需局部调节血管半径。</p>
+<p><strong>问题解决应用</strong></p>
+<p>利用四次方关系,我们可以反向计算:若某器官需要将血流量提高至原来的 3 倍(例如剧烈运动时的骨骼肌),血管半径需扩大多少倍?</p>
+$$\left(\frac{r_1}{r_0}\right)^4 = 3 \;\Rightarrow\; \frac{r_1}{r_0} = 3^{1/4} \approx 1.316$$
+<p>即半径只需增大约 31.6%,即可实现流量三倍的提升。这解释了为什么血管平滑肌的微小、局部、快速的舒缩活动(由血管内皮释放的一氧化氮、局部代谢产物如 $\text{CO}_2$ 和 $H^+$ 浓度变化所触发)足以完成器官间血流的动态再分配——例如消化时增加胃肠血流,运动时增加肌肉血流,同时减少非必需器官的供血。这种"小半径变化、大流量效应"的杠杆机制,使循环系统能耗更低、响应更快地满足全身组织不断变化的代谢需求。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch12: Fluid Dynamics and Its Biological and Medical Applications (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

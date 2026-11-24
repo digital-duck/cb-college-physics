@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kirchhoffs Loop Rule | College Physics Ch21</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="kirchhoffs-loop-rule">Kirchhoffs Loop Rule</h2>
+<p><strong>定义</strong></p>
+<p>基尔霍夫电压定律（KVL）指出：沿电路中任意一个闭合回路循行一周，电势变化的代数和恒等于零：</p>
+$$\sum_{k=1}^{n} \Delta V_k = 0$$
+<p>这一定律并非独立的物理假设，而是能量守恒在电路中的必然体现。电势是单位电荷的电势能，若沿闭合路径绕行一周后电势不归零，就意味着电荷每绕行一圈都能凭空获得或损失能量——这违背了能量守恒。因此，无论回路中包含多少个电阻、电池或其他元件，只要路径闭合，电势变化的总和必为零。</p>
+<p>应用该定律时需遵循符号约定：沿设定的循行方向，若经过电阻且电流方向与循行方向一致，电势下降（$-IR$）；若逆着电流方向经过电阻，电势上升（$+IR$）。经过电源时，从负极到正极电势上升（$+\varepsilon$），从正极到负极电势下降（$-\varepsilon$）。</p>
+<p><strong>范例</strong></p>
+<p>考虑一个单回路电路：电动势为 $\varepsilon = 12\text{ V}$ 的电池，内阻 $r = 1\ \Omega$，串联两个电阻 $R_1 = 3\ \Omega$、$R_2 = 2\ \Omega$。设回路电流为 $I$，沿电流方向循行一周，应用 KVL：</p>
+$$\varepsilon - Ir - IR_1 - IR_2 = 0$$
+<p>代入数值：</p>
+$$12 - I(1) - I(3) - I(2) = 0 \implies 12 = 6I \implies I = 2\text{ A}$$
+<p>验证：电池两端提供 12 V，内阻消耗 $2\times1=2$ V，$R_1$ 消耗 $2\times3=6$ V，$R_2$ 消耗 $2\times2=4$ V，总计 $2+6+4=12$ V，恰好与电动势相等，闭合回路电势变化和为零。</p>
+<p><strong>解题应用</strong></p>
+<p>在含多个回路的复杂电路中，KVL 与基尔霍夫电流定律（KCL）联立，为每个独立回路和每个节点分别列方程，构成线性方程组，从而求解所有未知支路电流。解题步骤为：（1）为每条支路假设电流方向；（2）选取足够数量的独立回路，按统一循行方向逐一列出电势方程；（3）结合节点电流方程求解方程组。若某支路电流解出为负值，说明其实际方向与假设相反，数值大小仍然正确。这种系统化方法是分析任意复杂直流电路（包括含多个电源和多个回路的网络）的通用工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch21: Circuits and DC Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

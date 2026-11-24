@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinetic Energy | College Physics Ch07</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="kinetic-energy">Kinetic Energy</h2>
+<p>Kinetic energy is the energy an object possesses because it is moving. For an object of mass $m$ translating at speed $v$ (with $v \ll c$, so relativistic effects are negligible), the kinetic energy is</p>
+$$KE = \frac{1}{2}mv^2$$
+<p>This expression follows directly from the work-energy theorem: the net work done on an object equals its change in kinetic energy, $W_{net} = \Delta KE$. Starting from Newton's second law, $F = ma$, and integrating force over displacement,</p>
+$$W = \int F\,dx = \int ma\,dx = \int m\frac{dv}{dt}\,dx = \int mv\,dv = \frac{1}{2}mv^2 - \frac{1}{2}mv_0^2$$
+<p>using the substitution $dx/dt = v$. This derivation shows that $KE = \frac{1}{2}mv^2$ is not an arbitrary definition — it is the quantity whose change exactly tracks the work done by a net force, which is why kinetic energy is so useful for solving motion problems without tracking time explicitly.</p>
+<p><strong>Worked example.</strong> A 1200 kg car accelerates from rest to 25 m/s. Its kinetic energy at that speed is</p>
+$$KE = \frac{1}{2}(1200\text{ kg})(25\text{ m/s})^2 = \frac{1}{2}(1200)(625) = 375{,}000\text{ J} = 375\text{ kJ}$$
+<p>By the work-energy theorem, this is exactly the net work the engine (net of friction and drag) must have delivered to reach that speed, regardless of how long the acceleration took or whether it was uniform.</p>
+<p><strong>Problem-solving application.</strong> Kinetic energy's real power is in problems where forces are known but time is not. Suppose the same 1200 kg car, moving at 25 m/s, brakes to a stop under a constant friction force of 6000 N. Rather than solving for acceleration and time separately, apply the work-energy theorem directly: the net work done by friction over stopping distance $d$ must equal the negative of the car's kinetic energy, $-Fd = 0 - KE_i$. Solving,</p>
+$$d = \frac{KE_i}{F} = \frac{375{,}000\text{ J}}{6000\text{ N}} = 62.5\text{ m}$$
+<p>This illustrates a key problem-solving strategy: whenever a force and a change in speed are known but the time of interaction is not, relate them through work and kinetic energy rather than through kinematics. Also note the quadratic dependence on $v$: doubling the initial speed would quadruple $KE_i$, and therefore quadruple the stopping distance for the same braking force — a fact central to vehicle safety engineering, since it explains why small increases in speed produce disproportionately larger stopping distances and collision severity.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch7: Work, Energy, and Energy Resources (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

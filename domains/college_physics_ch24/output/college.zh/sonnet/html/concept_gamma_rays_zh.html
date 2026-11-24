@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gamma Rays | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="gamma-rays">Gamma Rays</h2>
+<p><strong>定义</strong></p>
+<p>γ射线（gamma rays）是电磁波谱中频率最高、能量最高的辐射，通常由原子核在放射性衰变或受激核过程中发射。当不稳定原子核经过α衰变或β衰变后，子核往往仍处于能量激发态，随后通过跃迁到较低能级释放多余能量，以光子形式辐射出去，这就是γ射线。其本质与X射线完全相同——都是电磁波——两者的区别不在于物理性质，而在于<strong>产生机制</strong>：X射线源于原子核外电子的能级跃迁或电子减速（制动辐射），γ射线源于原子核内部的能级跃迁。若二者频率相同，则性质（穿透力、波长、光子能量）完全一致，因此频谱上二者存在重叠。</p>
+<p>γ射线的光子能量由普朗克关系给出：</p>
+$$
+E = h\nu = \frac{hc}{\lambda}
+$$
+<p>其中 $h = 6.626\times10^{-34}\ \text{J·s}$ 为普朗克常数，$\nu$ 为频率，$\lambda$ 为波长，$c$ 为光速。典型γ射线光子能量在 $10\ \text{keV}$ 到数 $\text{MeV}$ 量级，对应波长短于 $10^{-11}\ \text{m}$。</p>
+<p><strong>核衰变示例</strong></p>
+<p>以钴-60（$^{60}\text{Co}$）衰变为例：其原子核先经β衰变变为激发态的镍-60（$^{60}\text{Ni}^*$），随后依次释放两个γ光子，能量分别为 $1.17\ \text{MeV}$ 和 $1.33\ \text{MeV}$，最终回到基态。利用上式可反推对应频率：</p>
+$$
+\nu = \frac{E}{h} = \frac{1.17\times10^6 \times 1.602\times10^{-19}\ \text{J}}{6.626\times10^{-34}\ \text{J·s}} \approx 2.83\times10^{20}\ \text{Hz}
+$$
+<p><strong>问题解决应用</strong></p>
+<p>γ射线的强穿透力和高能量使其在医学（放射治疗、PET成像）、工业（材料无损检测）及天文观测（伽马射线暴）中广泛应用。求解此类问题的关键在于：先由已知波长或能量，通过 $E=hc/\lambda$ 互算另一量；再结合材料衰减规律</p>
+$$
+I = I_0\, e^{-\mu x}
+$$
+<p>（$\mu$ 为线性吸收系数，$x$ 为穿透厚度）评估屏蔽厚度或剂量安全性。这种"能量—频率—穿透深度"三者联动的计算思路，是分析γ射线实际问题的核心方法。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

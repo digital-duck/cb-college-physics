@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Lenses | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="contact-lenses">Contact Lenses</h2>
+<p><strong>定义</strong></p>
+<p>隐形眼镜（contact lenses）是直接贴附于角膜表面的屈光矫正光学元件，通过改变入射光线的会聚或发散程度，将物体的像重新聚焦到视网膜上，从而矫正近视、远视、散光乃至由角膜形状不规则（如圆锥角膜）引起的高阶像差。与框架眼镜不同，隐形眼镜与眼睛之间几乎没有间隙，这一点在处理镜片度数时具有实际的光学意义。</p>
+<p><strong>关键换算：顶点距离效应</strong></p>
+<p>框架眼镜镜片通常离角膜顶点约 $12\text{–}14\ \text{mm}$，而隐形眼镜的等效距离约为 $0\ \text{mm}$。由于镜片度数（屈光力，单位为屈光度 D）是像方焦距的倒数，镜片与眼睛的距离改变会导致"有效度数"发生变化，尤其在度数较高（一般 $|P| > 4.00\ \text{D}$）时不可忽略。换算公式为：</p>
+$$
+P_{cl} = \frac{P_{sp}}{1 - d \cdot P_{sp}}
+$$
+<p>其中 $P_{sp}$ 为框架眼镜度数（D），$P_{cl}$ 为等效隐形眼镜度数，$d$ 为顶点距离（以米为单位）。</p>
+<p><strong>例题</strong></p>
+<p>某患者框架眼镜处方为 $P_{sp} = -8.00\ \text{D}$（近视），顶点距离 $d = 12\ \text{mm} = 0.012\ \text{m}$。求其隐形眼镜的等效度数。</p>
+<p>代入公式：</p>
+$$
+P_{cl} = \frac{-8.00}{1 - (0.012)(-8.00)} = \frac{-8.00}{1 + 0.096} = \frac{-8.00}{1.096} \approx -7.30\ \text{D}
+$$
+<p>可见，近视患者改戴隐形眼镜时所需度数的绝对值会<strong>减小</strong>；而远视患者（$P_{sp} > 0$）改戴隐形眼镜时所需度数则会<strong>增大</strong>。这个方向性差异源于分母 $1 - d\cdot P_{sp}$ 在正负度数下符号变化不同，验光师若不做此换算，会导致过矫或欠矫。</p>
+<p><strong>应用与延伸</strong></p>
+<p>在处理散光时，隐形眼镜还需引入"环曲面（toric）"设计并解决旋转稳定性问题；对于圆锥角膜等不规则角膜，还常采用硬性透气性（RGP）镜片，利用镜片与角膜之间的泪液层重新建立规则的屈光界面。掌握顶点距离换算公式，是从"框架处方"正确推导"隐形眼镜处方"的核心计算步骤，也是验光配镜实践中最常见的应用题类型之一。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

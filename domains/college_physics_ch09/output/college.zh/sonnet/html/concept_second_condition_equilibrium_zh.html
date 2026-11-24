@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Second Condition Equilibrium | College Physics Ch09</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="second-condition-equilibrium">Second Condition Equilibrium</h2>
+<p><strong>定义</strong></p>
+<p>物体处于平动平衡时，所受合外力为零（第一平衡条件），但这并不能阻止物体发生转动。若几个力大小相等、方向相反,但作用线不重合，它们会形成一个力偶，使物体绕某点转动，即便合力仍为零。因此,刚体要处于完全的静态平衡,还必须满足<strong>第二平衡条件</strong>：对于任意选定的转轴（枢轴点）,所有外力产生的合力矩必须为零：</p>
+$$\sum \tau_i = 0$$
+<p>其中力矩定义为 $\tau = r F \sin\theta$，$r$ 是从枢轴到力作用点的距离，$F$ 是力的大小，$\theta$ 是 $r$ 与 $F$ 之间的夹角。力矩的正负号由旋转方向决定（通常规定逆时针为正,顺时针为负）。一个重要的定理性质是：若系统对某一枢轴的合力矩为零,且合力也为零,则对<strong>任意</strong>其他枢轴计算的合力矩同样为零——这保证了平衡条件与枢轴选择无关,可以自由选取计算最简便的点。</p>
+<p><strong>例题</strong></p>
+<p>一根长 $4\,\text{m}$、质量忽略不计的均匀跷跷板,支点在正中央。左端坐着质量 $30\,\text{kg}$ 的孩子,距支点 $2\,\text{m}$。右端需要多远处放置质量 $40\,\text{kg}$ 的孩子才能使跷跷板平衡？</p>
+<p>以支点为枢轴,设右侧距离为 $d$：</p>
+$$m_1 g r_1 = m_2 g r_2 \implies 30 \times 2 = 40 \times d \implies d = 1.5\,\text{m}$$
+<p><strong>解题应用</strong></p>
+<p>处理刚体平衡问题的标准步骤是：(1) 画出受力图,标出每个力的作用点；(2) 任意选取一个枢轴（通常选在未知力的作用点上,可使该力矩项自动为零,简化方程）；(3) 分别列出 $\sum F_x = 0$、$\sum F_y = 0$ 与 $\sum \tau = 0$ 三个独立方程；(4) 联立求解未知量。例如,分析一把靠在墙上的梯子是否会滑动时,枢轴常选在梯子与地面的接触点,这样地面的摩擦力和法向力都不产生力矩,方程立刻简化为只含墙面反作用力的表达式,便于直接求解。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch9: Statics and Torque (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

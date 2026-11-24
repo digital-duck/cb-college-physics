@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Torque | College Physics Ch10</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="力矩">力矩</h2>
+<p><strong>定义</strong></p>
+<p>力矩（torque，常用符号 $\tau$）衡量一个力使物体绕某一支点或转轴发生转动的效果。它不仅取决于力的大小，还取决于力的作用点到转轴的距离以及力的方向。严格定义为：</p>
+$$
+\tau = r F \sin\theta
+$$
+<p>其中 $r$ 是从转轴到力作用点的距离（力臂矢量的长度），$F$ 是力的大小，$\theta$ 是力矢量与力臂矢量之间的夹角。力矩的单位是牛顿·米（$\mathrm{N \cdot m}$）。更一般地，力矩是一个矢量，由叉积给出：</p>
+$$
+\vec{\tau} = \vec{r} \times \vec{F}
+$$
+<p>其方向由右手定则确定：四指从 $\vec{r}$ 转向 $\vec{F}$，拇指指向 $\vec{\tau}$ 的方向。$\sin\theta$ 项说明：只有垂直于力臂的力分量才对转动有贡献——沿力臂方向的力分量（$\theta = 0°$ 或 $180°$）完全不产生转动效果。</p>
+<p><strong>例题</strong></p>
+<p>一名工人用扳手拧紧螺栓。扳手长 $0.25\ \mathrm{m}$，工人在扳手末端施加 $80\ \mathrm{N}$ 的力，力的方向与扳手成 $60°$ 角。求此时螺栓所受的力矩大小。</p>
+<p>代入公式：</p>
+$$
+\tau = r F \sin\theta = (0.25\ \mathrm{m})(80\ \mathrm{N})(\sin 60°) = (0.25)(80)(0.866) \approx 17.3\ \mathrm{N \cdot m}
+$$
+<p>若工人调整握持方式，使力垂直作用于扳手（$\theta = 90°$），力矩将增大到 $20\ \mathrm{N \cdot m}$——这说明垂直施力最省力，是拧螺栓时应尽量保持扳手与力方向垂直的原因。</p>
+<p><strong>解题应用</strong></p>
+<p>处理力矩问题的关键步骤：（1）明确转轴位置；（2）画出从转轴到力作用点的矢量 $\vec{r}$；（3）确定力矢量与 $\vec{r}$ 的夹角 $\theta$；（4）代入 $\tau = rF\sin\theta$ 计算大小，并用右手定则判断方向（顺时针或逆时针）。</p>
+<p>在多力系统中（如刚体静力学问题），需要对每个力分别计算力矩，并按转动方向赋予正负号（通常规定逆时针为正），再求代数和，令其等于零以求解平衡条件：</p>
+$$
+\sum \tau_i = 0
+$$
+<p>这一原理广泛应用于杠杆、门轴、扳手、以及天平配重等实际问题的分析中。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch10: Rotational Motion and Angular Momentum (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

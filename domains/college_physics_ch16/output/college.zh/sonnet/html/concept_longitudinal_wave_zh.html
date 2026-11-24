@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Longitudinal Wave | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="longitudinal-wave-纵波">Longitudinal Wave（纵波）</h2>
+<p><strong>定义</strong></p>
+<p>纵波是一种扰动方向与传播方向相互平行的波。当波沿某一方向传播时，介质中的质点沿同一方向做往复振动，从而在介质中形成交替出现的"压缩区"（compression，质点密集、压强偏高）与"稀疏区"（rarefaction，质点稀疏、压强偏低）。声波是最典型的纵波：空气分子在声源振动方向上前后振荡，将能量以压强扰动的形式传递出去，而分子本身并不随波"远行"。纵波与横波（transverse wave，扰动方向垂直于传播方向）的根本区别正在于扰动方向与传播方向的夹角：纵波为 $0°$，横波为 $90°$。</p>
+<p>描述纵波的位移场可以写成</p>
+$$
+s(x,t) = s_{\max}\cos(kx - \omega t)
+$$
+<p>其中 $s(x,t)$ 是位于平衡位置 $x$ 处质点在时刻 $t$ 的位移（沿传播方向为正），$s_{\max}$ 为最大位移振幅，$k = 2\pi/\lambda$ 为波数，$\omega = 2\pi f$ 为角频率。与位移对应的压强扰动 $\Delta p(x,t)$ 与位移的空间导数成正比，且相位相差 $90°$：</p>
+$$
+\Delta p(x,t) = \Delta p_{\max}\sin(kx - \omega t)
+$$
+<p>这说明位移最大处（质点静止的瞬间）恰好对应压强变化为零，而位移为零处对应压强极值——这正是压缩区与稀疏区交替出现的数学根源。</p>
+<p><strong>例题</strong></p>
+<p>某声波在空气中传播，频率 $f = 500\ \text{Hz}$，声速 $v = 340\ \text{m/s}$。求其波长，并判断相邻两个压缩区之间的距离。</p>
+<p>解：由 $v = f\lambda$，得</p>
+$$
+\lambda = \frac{v}{f} = \frac{340}{500} = 0.68\ \text{m}
+$$
+<p>由于压缩区每隔一个完整波长重复出现一次，相邻压缩区间距即为 $\lambda = 0.68\ \text{m}$。</p>
+<p><strong>问题解决应用</strong></p>
+<p>纵波模型不仅用于声学，也是理解地震 P 波（primary wave，一种纵波，在固体、液体、气体中均可传播）的基础。已知某地震 P 波速度 $v_P \approx 6\ \text{km/s}$，若测得某台站记录到的主频约为 $2\ \text{Hz}$，可估算其波长 $\lambda = v_P/f = 3\ \text{km}$，这一尺度信息可用来分析地下介质的不均匀性，是地震学中反演地下结构的基本思路之一。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

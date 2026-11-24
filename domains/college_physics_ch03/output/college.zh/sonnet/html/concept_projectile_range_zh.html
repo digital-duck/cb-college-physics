@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projectile Range | College Physics Ch03</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="projectile-range">Projectile Range</h2>
+<p><strong>定义</strong></p>
+<p>当抛射体从地面射出、最终又落回同一水平面时，其水平飞行距离称为<strong>射程</strong>（range），记作 $R$。设初速度大小为 $v_0$，发射角为 $\theta_0$（与水平方向的夹角），重力加速度为 $g$，忽略空气阻力，则射程满足</p>
+$$
+R = \frac{v_0^2 \sin(2\theta_0)}{g}
+$$
+<p>这一结果由运动学分解推导而来：水平方向做匀速运动，竖直方向做匀减速运动。飞行时间由竖直方向的对称性给出 $t = \dfrac{2v_0\sin\theta_0}{g}$，代入水平位移公式 $R = v_0\cos\theta_0 \cdot t$，并利用倍角恒等式 $2\sin\theta_0\cos\theta_0 = \sin(2\theta_0)$，即得上式。由于正弦函数在 $2\theta_0 = 90°$ 时取最大值 $1$，射程在 $\theta_0 = 45°$ 时达到最大，且任意两个互余角（如 $30°$ 与 $60°$）对应相同的射程——因为 $\sin(2\theta_0)$ 关于 $\theta_0=45°$ 对称。</p>
+<p><strong>例题</strong></p>
+<p>一名足球运动员以 $v_0 = 20\ \text{m/s}$ 的速度将球踢出，发射角为 $\theta_0 = 37°$，取 $g = 9.8\ \text{m/s}^2$。求球的射程。</p>
+<p>代入公式：</p>
+$$
+R = \frac{(20)^2 \sin(74°)}{9.8} = \frac{400 \times 0.9613}{9.8} \approx 39.2\ \text{m}
+$$
+<p>若将角度改为互余角 $53°$，由对称性可知 $R$ 值不变，仍约为 $39.2\ \text{m}$，因为 $\sin(2\times53°) = \sin(106°) = \sin(74°)$。</p>
+<p><strong>问题求解应用</strong></p>
+<p>工程与体育训练中常需反解发射角或初速度。例如，已知某投掷器材要求射程恰为 $R = 50\ \text{m}$，初速度固定为 $v_0 = 25\ \text{m/s}$，求所需发射角：</p>
+$$
+\sin(2\theta_0) = \frac{Rg}{v_0^2} = \frac{50 \times 9.8}{625} = 0.784
+$$
+<p>解得 $2\theta_0 = 51.6°$ 或 $128.4°$，对应 $\theta_0 = 25.8°$ 或 $64.2°$——两个互余解再次印证对称性质。此类反解在弹道设计、投掷类运动训练及抛体轨迹优化问题中十分常见，是本节公式实际应用的核心场景。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch3: Two-Dimensional Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

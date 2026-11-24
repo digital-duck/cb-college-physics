@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Four Basic Forces | College Physics Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="four-basic-forces">Four Basic Forces</h2>
+<p><strong>定义</strong></p>
+<p>自然界中所有观测到的力，无论是苹果落地、磁铁相吸、还是太阳持续发光，最终都可以归结为四种基本相互作用：</p>
+<li><strong>引力（gravitational force）</strong>：作用于一切具有质量或能量的物体之间，强度最弱，但作用距离无限远，且只有吸引没有排斥。牛顿万有引力定律给出其近似形式：</li>
+$$F = G\frac{m_1 m_2}{r^2}$$
+<p>其中 $G \approx 6.674 \times 10^{-11}\,\text{N·m}^2/\text{kg}^2$。</p>
+<li><strong>电磁力（electromagnetic force）</strong>：作用于带电粒子之间，既有吸引也有排斥，作用距离也是无限远。库仑定律的形式与万有引力定律高度相似：</li>
+$$F = k_e\frac{q_1 q_2}{r^2}$$
+<li><strong>弱核力（weak nuclear force）</strong>：负责放射性衰变（如中子衰变为质子），作用距离极短（约 $10^{-18}\,\text{m}$），强度介于电磁力和引力之间。</li>
+<li><strong>强核力（strong nuclear force）</strong>：将质子和中子束缚在原子核内，克服质子间的电磁排斥，是四种力中最强的一种，但作用距离仅约 $10^{-15}\,\text{m}$。</li>
+<p><strong>典型例题</strong></p>
+<p>比较氢原子中电子与质子之间的引力和电磁力大小。已知电子质量 $m_e = 9.11\times10^{-31}\,\text{kg}$，质子质量 $m_p = 1.67\times10^{-27}\,\text{kg}$，电荷量 $q = 1.6\times10^{-19}\,\text{C}$，玻尔半径 $r = 5.3\times10^{-11}\,\text{m}$。</p>
+<p>代入公式计算两个力的比值 $F_{\text{电磁}}/F_{\text{引力}}$，结果约为 $2\times10^{39}$——这说明在原子尺度上，引力完全可以忽略，电磁力才是决定原子结构的主导力量。这也解释了为何化学和材料性质由电磁力支配，而引力只在天体尺度（大质量、大距离）才显现其重要性。</p>
+<p><strong>解题应用</strong></p>
+<p>判断某一现象由哪种力主导，关键在于识别相互作用的对象和距离尺度：</p>
+<li>涉及带电粒子且距离在原子到宏观尺度 → 电磁力；</li>
+<li>涉及天体或宏观质量、无限距离 → 引力；</li>
+<li>涉及原子核内部结构（质子中子束缚）→ 强核力；</li>
+<li>涉及粒子衰变、核反应中粒子种类改变 → 弱核力。</li>
+<p>例如，太阳能维持发光靠强核力驱动的核聚变，而弱核力则参与聚变中质子转变为中子的过程——两种力协同作用，缺一不可。掌握这四种力的适用尺度和相对强度，是理解从原子结构到宇宙演化的核心工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch4: Dynamics: Force and Newton's Laws of Motion (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

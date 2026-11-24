@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fluid | College Physics Ch11</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="fluid">Fluid</h2>
+<p>A <strong>fluid</strong> is a liquid or a gas that cannot sustain a static shear stress. Push sideways on a block of steel and it resists with a restoring force. Push sideways on water and it keeps deforming, which is to say it <em>flows</em>. Because a fluid cannot hold a sideways force, the only force it exerts on a surface at rest is perpendicular to that surface. This is why the key quantity for fluids at rest is <strong>pressure</strong>, the normal force per unit area:</p>
+$$P = \frac{F}{A}$$
+<p>Pressure is measured in pascals ($1\ \text{Pa} = 1\ \text{N/m}^2$). At a given point in a fluid at rest, pressure acts equally in all directions.</p>
+<h3 id="pressure-in-a-static-fluid">Pressure in a static fluid</h3>
+<p>Take a fluid of constant density $\rho$ at rest. Pressure increases linearly with depth $h$:</p>
+$$P = P_0 + \rho g h$$
+<p>Here $P_0$ is the pressure at the surface. The result comes from balancing forces on a column of fluid. The extra pressure at depth $h$ must support the weight of the fluid above it, $\rho g h$ per unit area.</p>
+<p>Two consequences matter in practice:</p>
+<li>Pressure depends only on depth, not on the container's shape or width. A narrow tube and a wide lake give the same pressure at the same depth.</li>
+<li>The term $\rho g h$ is the <strong>gauge pressure</strong>, the pressure above what the surface already supplies.</li>
+<p>Liquids are nearly incompressible, so treating $\rho$ as constant works well. This is not true over large depth ranges in a gas.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>A diver is at depth $h = 10.0\ \text{m}$ in fresh water ($\rho = 1000\ \text{kg/m}^3$) under atmospheric pressure $P_0 = 1.01\times10^5\ \text{Pa}$. What is the absolute pressure?</p>
+$$P = 1.01\times10^5 + (1000)(9.8)(10.0) = 1.99\times10^5\ \text{Pa}$$
+<p>This is nearly twice atmospheric pressure. Every 10 m of water adds about one atmosphere.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p>A submarine hatch has area $A = 0.50\ \text{m}^2$ and sits at depth $h = 50\ \text{m}$ in seawater ($\rho = 1025\ \text{kg/m}^3$). The cabin is held at atmospheric pressure. What net force does the water exert on the hatch?</p>
+<p><strong>Step 1: Choose the right pressure.</strong> Atmospheric pressure acts on both sides of the hatch (the surface pushes down on the water, and the cabin air pushes outward), so those contributions cancel. Only the gauge pressure produces a net force:</p>
+$$P_{\text{gauge}} = \rho g h = (1025)(9.8)(50) = 5.0\times10^5\ \text{Pa}$$
+<p><strong>Step 2: Convert pressure to force.</strong></p>
+$$F = P_{\text{gauge}}\,A = (5.0\times10^5)(0.50) = 2.5\times10^5\ \text{N}$$
+<p>This is about 25 tonnes of force, roughly the weight of 25,000 kg. It explains why submarine hatches are sealed by pressing inward, so the water pressure itself helps hold them shut. The same method applies to dam walls, diving windows, and any submerged surface: find the gauge pressure at the right depth, then multiply by area.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch11: Fluid Statics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

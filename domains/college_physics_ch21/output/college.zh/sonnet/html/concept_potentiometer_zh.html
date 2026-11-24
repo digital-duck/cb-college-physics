@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Potentiometer | College Physics Ch21</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="电位差计">电位差计</h2>
+<p>电位差计（potentiometer）是一种利用<strong>零位测量法</strong>（null measurement）确定未知电动势的精密仪器。其核心思想是：让待测电源在测量瞬间不输出任何电流，从而完全消除内阻带来的误差——这是它与普通伏特计相比的根本优势，因为伏特计测量时电路中总有电流流过，读数会因内阻分压而失真。</p>
+<p><strong>工作原理</strong>：电位差计的主体是一根均匀电阻丝（或分段电阻箱），两端接一个稳定的工作电池，在电阻丝上建立一个已知的、随长度线性变化的电势降。将待测电动势 $\varepsilon_x$ 通过检流计（galvanometer）接入电路的某一点，滑动接触点直到检流计读数为零。此时该点到电阻丝一端的电势降恰好等于 $\varepsilon_x$，且因为检流计支路无电流，$\varepsilon_x$ 的内阻不产生压降，测得的就是真实的电动势而非端电压。</p>
+<p><strong>比较标准</strong>：实际操作中通常采用比较法。先用已知标准电动势 $\varepsilon_s$（如标准电池）平衡，记录平衡点对应的电阻丝长度 $L_s$；再换上待测电源，重新平衡，得到长度 $L_x$。由于电阻丝上电流恒定，电势降与长度成正比，于是</p>
+$$
+\frac{\varepsilon_x}{\varepsilon_s} = \frac{L_x}{L_s} \quad\Longrightarrow\quad \varepsilon_x = \varepsilon_s \cdot \frac{L_x}{L_s}
+$$
+<p><strong>问题解决应用</strong>：设标准电池 $\varepsilon_s = 1.0186\ \text{V}$，平衡长度 $L_s = 68.4\ \text{cm}$；换上未知电源后平衡长度变为 $L_x = 75.2\ \text{cm}$。代入上式：</p>
+$$
+\varepsilon_x = 1.0186 \times \frac{75.2}{68.4} \approx 1.120\ \text{V}
+$$
+<p>这种设计思路——通过调节使某一物理量归零，再借助比例关系反推未知量——是许多精密测量仪器（惠斯通电桥、天平）的共同范式。掌握电位差计有助于理解"零位法"相较于"直读法"在消除系统误差方面的优越性，这也是实验物理中提高测量精度的核心策略之一。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch21: Circuits and DC Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

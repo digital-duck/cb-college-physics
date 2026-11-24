@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planetary Model | College Physics Ch30</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="planetary-model">Planetary Model</h2>
+<p><strong>定义</strong></p>
+<p>卢瑟福行星模型（1911年）是在金箔散射实验之后提出的原子结构模型：原子的绝大部分质量和全部正电荷集中在一个极小的中心区域——原子核，而带负电的电子则在核外空间中环绕运动，其几何图像类似于行星绕太阳公转。这一类比之所以成立，是因为两种情形背后遵循相同的数学结构：太阳与行星之间的万有引力和原子核与电子之间的库仑引力都是平方反比的有心力，二者都能提供维持圆周运动所需的向心力。</p>
+<p><strong>推导与算例</strong></p>
+<p>设电子质量为 $m_e$，电荷为 $-e$，绕电荷为 $+Ze$ 的原子核做半径为 $r$ 的圆周运动。库仑引力提供向心力：</p>
+$$
+\frac{1}{4\pi\varepsilon_0}\frac{Ze^2}{r^2} = \frac{m_e v^2}{r}
+$$
+<p>由此可解出电子动能：</p>
+$$
+KE = \frac{1}{2}m_e v^2 = \frac{Ze^2}{8\pi\varepsilon_0 r}
+$$
+<p>以氢原子（$Z=1$）、取 $r = 5.3\times10^{-11}\,\text{m}$（后来玻尔模型给出的第一轨道半径）代入，可算得电子速度约为 $2.2\times10^{6}\,\text{m/s}$，约为光速的 $0.7\%$，说明非相对论力学在此近似成立，这也是该模型能够沿用经典力学公式的原因。</p>
+<p><strong>问题与局限：为什么"行星"类比会失效</strong></p>
+<p>行星模型虽然直观且数学上与万有引力问题同构，但它引出了一个经典电磁理论无法回避的矛盾：根据麦克斯韦方程组，任何做加速运动（包括圆周运动）的带电粒子都会以拉莫尔公式（Larmor formula）描述的功率向外辐射电磁波：</p>
+$$
+P = \frac{e^2 a^2}{6\pi\varepsilon_0 c^3}
+$$
+<p>电子因此应持续损失能量，轨道半径 $r$ 应连续减小，理论计算表明电子将在约 $10^{-11}$ 秒内螺旋坠入原子核——但实验事实是原子稳定存在。这正是行星模型无法自洽解决的问题：它成功解释了原子核的存在与散射数据，却无法解释原子的稳定性与线状光谱。这一失败直接促使玻尔在 1913 年引入角动量量子化假设，用 $L = n\hbar$ 限定允许的轨道，从而修正了行星模型，开启了旧量子论。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch30: Atomic Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

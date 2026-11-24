@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Periodic Motion | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="periodic-motion">Periodic Motion</h2>
+<p><strong>Definition.</strong> Motion is <em>periodic</em> if the system returns to the same state, meaning the same position and the same velocity, after a fixed time. The shortest such time is the <strong>period</strong> $T$, measured in seconds. Mathematically, a position function is periodic if</p>
+$$x(t+T)=x(t)\quad\text{for all } t.$$
+<p>Planets in orbit, rotating wheels, pendulums, and masses on springs are all periodic. The number of cycles per second is $1/T$, so a period of $0.25\ \text{s}$ means 4 cycles each second.</p>
+<p><strong>A period you can compute.</strong> For a mass $m$ on an ideal spring of stiffness $k$, the period is</p>
+$$T = 2\pi\sqrt{\frac{m}{k}}.$$
+<p>We use this result as a given. Its derivation is a separate topic. Two features matter here. The period depends on $m$ and $k$ only, so pulling the block farther does not change $T$. And $T$ grows as the square root of $m$.</p>
+<p><strong>Worked example.</strong> A $0.50\ \text{kg}$ block sits on a spring with $k = 200\ \text{N/m}$. Find the period, then find how many cycles occur in $10\ \text{s}$.</p>
+<li>$T = 2\pi\sqrt{0.50/200} = 2\pi\sqrt{0.0025} = 2\pi(0.05)\approx 0.314\ \text{s}$.</li>
+<li>Number of cycles $= 10/T \approx 31.8$.</li>
+<li>Check the units: $\sqrt{\text{kg}/(\text{N/m})}=\sqrt{\text{kg}\cdot\text{m}/(\text{kg}\cdot\text{m/s}^2)}=\sqrt{\text{s}^2}=\text{s}$. ✓</li>
+<p>Pulling the block $0.05\ \text{m}$ or $0.20\ \text{m}$ gives the same $T$. A larger pull only makes each cycle cover more distance.</p>
+<p><strong>Problem-solving application.</strong> Suppose you want a spring-mass timekeeper that completes one cycle per second, so $T=1.00\ \text{s}$, using the same $k=200\ \text{N/m}$ spring. What mass is needed?</p>
+<p>Solve $T=2\pi\sqrt{m/k}$ for $m$:</p>
+$$m=\frac{kT^2}{4\pi^2}=\frac{(200)(1.00)^2}{4\pi^2}\approx 5.07\ \text{kg}.$$
+<p>Now suppose the mass drifts $1\%$ heavy. Since $T\propto\sqrt{m}$, the period grows by about $0.5\%$. Each cycle then takes slightly longer than the clock assumes, so over one day ($86{,}400\ \text{s}$) the clock falls behind by about</p>
+$$0.005\times 86{,}400\approx 432\ \text{s}\approx 7.2\ \text{min}.$$
+<p>A small change in a parameter produces a small, predictable change in the period. This is why periodic systems make good timekeepers.</p>
+<p><strong>Strategy summary.</strong></p>
+<li>Confirm that the motion repeats, then identify its period $T$.</li>
+<li>Find $T$ from the system's parameters, or measure it by timing many cycles and dividing by the count.</li>
+<li>Use proportionality such as $T\propto\sqrt{m}$ to estimate how small parameter changes shift the period.</li>
+<li>Check units to catch algebra errors.</li>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

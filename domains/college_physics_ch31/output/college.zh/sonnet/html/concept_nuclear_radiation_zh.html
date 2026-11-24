@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuclear Radiation | College Physics Ch31</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="nuclear-radiation">Nuclear Radiation</h2>
+<p><strong>定义</strong></p>
+<p>原子核在从不稳定态跃迁到更稳定态的过程中，会释放出携带能量的粒子或光子，统称为核辐射。三种最基本的类型是 $\alpha$ 衰变、$\beta$ 衰变和 $\gamma$ 衰变。</p>
+<p>$\alpha$ 粒子本质上是一个氦-4 原子核（2 个质子 + 2 个中子），衰变方程为</p>
+$$
+{}^{A}_{Z}X \rightarrow {}^{A-4}_{Z-2}Y + {}^{4}_{2}\text{He}
+$$
+<p>$\beta$ 衰变中，核内一个中子转变为质子并放出一个电子和一个反中微子（$\beta^-$ 衰变）：</p>
+$$
+{}^{A}_{Z}X \rightarrow {}^{A}_{Z+1}Y + e^{-} + \bar{\nu}_e
+$$
+<p>$\gamma$ 辐射则不改变原子核的质子数或中子数，只是处于激发态的原子核释放高能光子回到基态，能量通常在 $0.1\text{–}10\ \text{MeV}$ 量级——比化学反应（电子伏特量级）高出百万倍，这正是"核"能量的标志。</p>
+<p><strong>核衰变的定量规律</strong></p>
+<p>放射性衰变遵循一阶动力学规律，任意时刻的原子核数目满足</p>
+$$
+N(t) = N_0 e^{-\lambda t}
+$$
+<p>其中 $\lambda$ 为衰变常数。半衰期 $T_{1/2}$ 定义为核数目减半所需时间，二者关系为</p>
+$$
+T_{1/2} = \frac{\ln 2}{\lambda}
+$$
+<p><strong>例题</strong></p>
+<p>某放射性同位素半衰期为 $8$ 天（如碘-131），初始样本含 $N_0 = 1.0\times10^{20}$ 个原子核。求 $24$ 天后剩余原子核数目。</p>
+<p>解：$24$ 天 $= 3 \times T_{1/2}$，即经过 3 个半衰期，</p>
+$$
+N = N_0 \left(\frac{1}{2}\right)^3 = 1.0\times10^{20} \times \frac{1}{8} = 1.25\times10^{19}
+$$
+<p>也可用衰变常数验证：$\lambda = \ln 2 / 8 \approx 0.0866\ \text{天}^{-1}$，代入 $N(24) = N_0 e^{-0.0866 \times 24} \approx 1.25\times10^{19}$，结果一致。</p>
+<p><strong>应用与安全考量</strong></p>
+<p>在实际问题中，衰变规律用于计算放射性废料的储存年限、医学示踪剂的给药时机，以及考古测年（如碳-14 定年）。三种辐射的穿透能力差异巨大：$\alpha$ 粒子被一张纸即可阻挡，$\beta$ 粒子需要几毫米铝板，而 $\gamma$ 射线则需厚铅层或混凝土屏蔽——这一穿透性差异直接决定了辐射防护设计和剂量估算中屏蔽材料的选择。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch31: Radioactivity and Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

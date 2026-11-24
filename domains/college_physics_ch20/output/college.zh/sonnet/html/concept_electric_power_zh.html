@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electric Power | College Physics Ch20</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="electric-power">Electric Power</h2>
+<p><strong>定义</strong></p>
+<p>电功率描述电能被传输或耗散的<strong>速率</strong>，单位为瓦特（W），即每秒消耗或转化的焦耳数：$1\ \text{W} = 1\ \text{J/s}$。当电荷 $q$ 在电势差（电压）$V$ 下移动时，电场对其做功 $W = qV$；对时间求导即得功率：</p>
+$$
+P = \frac{dW}{dt} = \frac{dq}{dt}V = IV
+$$
+<p>这是电功率的基本定义式，适用于任何电路元件——电阻、电动机、电池，无论是耗散能量还是提供能量。</p>
+<p>对于遵循欧姆定律（$V = IR$）的电阻性元件，可以将 $I$ 或 $V$ 消去，得到两个等价形式：</p>
+$$
+P = IV = I(IR) = I^2R \qquad\qquad P = IV = \left(\frac{V}{R}\right)V = \frac{V^2}{R}
+$$
+<p>这三个公式并非三个独立定律，而是同一物理量在不同已知条件下的代数变形：知道 $I,V$ 用 $P=IV$；只知道 $I,R$ 用 $P=I^2R$；只知道 $V,R$ 用 $P=V^2/R$。</p>
+<p><strong>例题</strong></p>
+<p>一个标称"$100\ \Omega,\ 12\ \text{V}$"的电阻接入电路。</p>
+<p>第一步，求电流：$I = V/R = 12/100 = 0.12\ \text{A}$。</p>
+<p>第二步，求功率，用三种公式验证一致性：</p>
+$$
+P = IV = 0.12 \times 12 = 1.44\ \text{W}
+$$
+$$
+P = I^2R = (0.12)^2 \times 100 = 1.44\ \text{W}
+$$
+$$
+P = \frac{V^2}{R} = \frac{144}{100} = 1.44\ \text{W}
+$$
+<p>三者结果一致，说明选用哪个公式仅取决于题目给出哪两个已知量，而非物理本质不同。</p>
+<p><strong>解题应用</strong></p>
+<p>电功率公式在实际电路设计中最关键的用途是<strong>在电压恒定时选择合适的电阻功率等级</strong>。家用电路电压固定为 220 V（或 110 V），此时 $P = V^2/R$ 表明：电阻越小，功耗越大——这正是短路（$R \to 0$）会导致电流剧增、瞬间释放巨大功率并引发过热或起火的原因。</p>
+<p>反过来，在电流恒定的电路（如串联电路）中，$P=I^2R$ 表明功率随电阻线性增长，因此设计者常通过增大导线截面积（降低导线电阻）来减少输电线路上不必要的能量耗散，这也是高压输电（降低 $I$ 以减小 $I^2R$ 损耗）背后的核心工程逻辑。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch20: Electric Current, Resistance, and Ohm's Law (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

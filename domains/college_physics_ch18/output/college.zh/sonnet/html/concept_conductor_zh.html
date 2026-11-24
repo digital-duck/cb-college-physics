@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conductor | College Physics Ch18</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="conductor">Conductor</h2>
+<p>导体是一种含有大量自由电荷（通常是自由电子）的材料，这些电荷可以在材料内部相对自由地移动，而不像绝缘体中的电荷被原子核紧紧束缚。典型的导体包括金属（铜、银、铝）以及电解质溶液和等离子体。导体的核心物理特性由静电平衡条件决定：当导体处于静电平衡（电荷不再宏观移动）时，其内部电场必须处处为零，否则自由电荷会继续受力运动，与"平衡"矛盾。由此可以推出三个关键结论：（1）导体内部电场 $\vec{E}_{\text{内}} = 0$；（2）导体是一个等势体，即整个导体表面及内部电势相同；（3）任何净电荷只能分布在导体的外表面上。</p>
+<p><strong>推导过程</strong>：考虑一个带净电荷 $Q$ 的孤立导体。应用高斯定律，取一个完全位于导体内部的高斯面。由于该面上电场为零，根据 $\oint \vec{E} \cdot d\vec{A} = \dfrac{Q_{\text{enc}}}{\varepsilon_0}$，封闭电荷 $Q_{\text{enc}} = 0$。这意味着导体内部（哪怕存在空腔）任何区域都不能有净电荷积累，所有多余电荷必须迁移到最外层表面。</p>
+<p><strong>应用实例</strong>：考虑一个半径为 $R$ 的实心导体球，带电荷 $Q$。由对称性和上述结论，电荷均匀分布在球面上。利用高斯定律，球外（$r > R$）的电场与将 $Q$ 集中在球心的点电荷等效：</p>
+$$
+E(r) = \frac{1}{4\pi\varepsilon_0}\frac{Q}{r^2}, \quad r > R
+$$
+<p>而球内（$r < R$），由于 $Q_{\text{enc}} = 0$，故 $E(r) = 0$。表面电势为</p>
+$$
+V(R) = \frac{1}{4\pi\varepsilon_0}\frac{Q}{R}
+$$
+<p>且由于导体是等势体，球内所有点的电势都等于 $V(R)$，而非随 $r$ 变化。</p>
+<p><strong>解题应用</strong>：这一性质常用于分析"法拉第笼"屏蔽效应——外部电场无法穿透导体空腔内部，因为空腔壁上感应电荷会重新分布，使空腔内电场恰好抵消外部电场。在电容器、静电屏蔽装置和高压设备设计中，理解导体表面电荷分布与曲率的关系（尖端处电荷密度更高、电场更强）是解决实际工程问题的关键，例如避雷针利用尖端放电原理保护建筑物。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch18: Electric Charge and Electric Field (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

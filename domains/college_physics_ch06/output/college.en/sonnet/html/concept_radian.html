@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radian | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="radian">Radian</h2>
+<p>A radian is the angle subtended at the center of a circle by an arc whose length equals the circle's radius. Formally, if an arc of length $s$ lies on a circle of radius $r$, the angle $\theta$ it subtends (in radians) is defined by the ratio</p>
+$$\theta = \frac{s}{r}.$$
+<p>Because both $s$ and $r$ carry units of length, $\theta$ is dimensionless — it is a pure number, not a unit tied to an arbitrary convention like the degree. Since the circumference of a full circle is $2\pi r$, one complete revolution corresponds to $\theta = \frac{2\pi r}{r} = 2\pi$ radians. This gives the standard conversion between degrees and radians:</p>
+$$\theta_{\text{rad}} = \theta_{\text{deg}} \cdot \frac{\pi}{180}, \qquad \theta_{\text{deg}} = \theta_{\text{rad}} \cdot \frac{180}{\pi}.$$
+<p><strong>Worked example.</strong> Convert $135^\circ$ to radians: $135 \cdot \frac{\pi}{180} = \frac{3\pi}{4}$ rad. Conversely, an angle of $\frac{\pi}{6}$ rad equals $\frac{\pi}{6} \cdot \frac{180}{\pi} = 30^\circ$. Notice how the $\pi$ cancels cleanly — this is precisely why radians are the natural unit in calculus and physics: derivatives of trigonometric functions, such as $\frac{d}{d\theta}\sin\theta = \cos\theta$, hold only when $\theta$ is measured in radians. Using degrees would force an extra conversion factor into every derivative and integral.</p>
+<p><strong>Problem-solving application.</strong> Radians make arc-length and angular-motion problems direct algebra rather than unit-juggling. Suppose a wheel of radius $0.3$ m rotates through an angle of $2.5$ rad. The arc length traveled by a point on the rim is simply $s = r\theta = 0.3 \times 2.5 = 0.75$ m — no conversion factor needed. Similarly, if the wheel spins at an angular velocity $\omega = 4$ rad/s, the linear speed of a point on the rim is $v = r\omega = 0.3 \times 4 = 1.2$ m/s. This formula $v = r\omega$ is valid <em>only</em> when $\omega$ is in radians per unit time, because the radian's definition as $s/r$ is what makes the radius factor out correctly. Whenever a problem involves circular motion, rotational velocity, or trigonometric calculus, converting to radians first — rather than working in degrees — eliminates unnecessary scaling errors and keeps the underlying geometry transparent.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gps Relativistic Corrections | College Physics Ch28</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="gps-relativistic-corrections">Gps Relativistic Corrections</h2>
+<p><strong>定义</strong></p>
+<p>全球定位系统(GPS)依靠卫星与地面接收器之间的精确时间同步来确定位置:信号从卫星传播到接收器所需的时间乘以光速 $c$,即得到距离。由于 $c$ 极大,时间误差会被急剧放大——仅 $1\ \mu s$($10^{-6}$ 秒)的时钟误差即对应约 $300\ m$ 的定位误差。因此 GPS 卫星必须考虑爱因斯坦相对论中的两种时间畸变效应:</p>
+<li><strong>狭义相对论(速度效应)</strong>:卫星以约 $3.9\ \text{km/s}$ 的速度绕地运行,根据时间膨胀公式</li>
+$$\Delta t' = \Delta t \sqrt{1 - \frac{v^2}{c^2}}$$
+<p>运动中的卫星时钟相对地面观测者<strong>变慢</strong>,每天约慢 $7\ \mu s$。</p>
+<li><strong>广义相对论(引力效应)</strong>:卫星处于比地面更弱的引力势中,根据引力时间膨胀近似式</li>
+$$\Delta t' \approx \Delta t \left(1 + \frac{\Delta \Phi}{c^2}\right), \quad \Delta \Phi = \frac{GM}{r_{\text{卫星}}} - \frac{GM}{r_{\text{地面}}}$$
+<p>处于较弱引力场的卫星时钟相对地面观测者<strong>变快</strong>,每天约快 $45\ \mu s$。</p>
+<p>两者净效应为卫星时钟每天比地面时钟快约 $45 - 7 = 38\ \mu s$。</p>
+<p><strong>实例演算</strong></p>
+<p>若不加校正,每天 $38\ \mu s$ 的时钟超前经过光速换算,累积定位误差为</p>
+$$\Delta x = c \cdot \Delta t = (3\times10^8\ \text{m/s})(38\times10^{-6}\ \text{s}) \approx 11.4\ \text{km/天}$$
+<p>这意味着仅数分钟后,定位误差已达到数百米——远超导航系统可接受的范围,这正是题干所述"数分钟内失效"的量化依据。</p>
+<p><strong>问题求解应用</strong></p>
+<p>工程解决方案并非在接收端实时修正,而是在卫星发射前<strong>预先将其原子钟频率调低</strong>约 $\Delta f/f \approx -4.465\times10^{-10}$,使其在轨道上运行时的固有频率恰好匹配地面标准频率。设计该偏移量的过程即是一个应用题:给定卫星轨道半径 $r \approx 26{,}600\ \text{km}$、地球质量 $M$、光速 $c$,分别计算速度项与引力势项对 $\Delta t/t$ 的贡献,再求其代数和,即可反推所需的频率预调整量——这正是相对论修正从理论走向工程实践的关键计算步骤。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch28: Special Relativity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

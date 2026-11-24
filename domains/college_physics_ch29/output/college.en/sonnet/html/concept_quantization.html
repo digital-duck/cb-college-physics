@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quantization | College Physics Ch29</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="quantization">Quantization</h2>
+<p><strong>Quantization</strong> is the principle that a confined particle can have only certain discrete energies, not any value in a continuous range. The allowed values are called <em>levels</em>. The particle changes its energy only by jumping between levels.</p>
+<p><strong>Definition.</strong> Consider a particle of mass $m$ in a one-dimensional box of length $L$. The particle behaves as a wave, and the wave must fit the box, so only certain wavelengths are allowed. This gives the energy levels</p>
+$$E_n = \frac{n^2 h^2}{8 m L^2}, \qquad n = 1, 2, 3, \dots$$
+<p>Here $h = 6.626\times10^{-34}\ \text{J·s}$ is Planck's constant. Because $h$ is so small, the gaps between levels are far too fine to notice for everyday objects, which is why a ball's energy seems continuous. For an electron in a nanometer-scale box, the gaps are large. When the particle drops between levels, it emits a photon with $\Delta E = hf = hc/\lambda$.</p>
+<p><strong>Worked example.</strong> An electron ($m = 9.11\times10^{-31}$ kg) is in a box of length $L = 1.0$ nm. Find the ground-state energy and the wavelength emitted in the $n=2\to n=1$ transition.</p>
+<p>Ground state:</p>
+$$E_1 = \frac{(6.626\times10^{-34})^2}{8(9.11\times10^{-31})(1.0\times10^{-9})^2} \approx 6.0\times10^{-20}\ \text{J} \approx 0.38\ \text{eV}$$
+<p>Since $E_n = n^2E_1$, we get $E_2 = 4E_1$. The gap is $\Delta E = 3E_1 \approx 1.8\times10^{-19}$ J. The photon wavelength is</p>
+$$\lambda = \frac{hc}{\Delta E} = \frac{(6.626\times10^{-34})(3.00\times10^{8})}{1.8\times10^{-19}} \approx 1.1\times10^{-6}\ \text{m},$$
+<p>which is about 1100 nm, in the infrared.</p>
+<p><strong>Problem-solving application.</strong> Suppose we want the same $n=2\to n=1$ transition to emit green light at 550 nm. What box length is needed?</p>
+<p>The required gap is $\Delta E = \dfrac{1240\ \text{eV·nm}}{550\ \text{nm}} \approx 2.25$ eV. Since $\Delta E = 3E_1$, we need $E_1 \approx 0.75$ eV. This is about twice the 0.38 eV found for $L = 1.0$ nm. Because $E_1 \propto 1/L^2$, doubling the energy means dividing $L^2$ by 2:</p>
+$$L = \frac{1.0\ \text{nm}}{\sqrt{2}} \approx 0.71\ \text{nm}.$$
+<p>Shrinking the box raises every level and shifts the emitted light toward shorter wavelengths. This is the principle behind tuning the color of quantum dots by their size.</p>
+<p><strong>Strategy for problems:</strong></p>
+<li>Write the level formula for the given box.</li>
+<li>Compute the energies of the two levels involved.</li>
+<li>Take the difference, $\Delta E$.</li>
+<li>Convert with $\lambda = hc/\Delta E$, or use scaling ($E \propto 1/L^2$) to compare boxes.</li>
+<p><strong>Check:</strong> Levels grow as $n^2$, so the spacing widens at higher $n$. A smaller $L$ must always give a larger $\Delta E$ and a shorter $\lambda$. If your answer violates either, recheck the arithmetic.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch29: Quantum Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

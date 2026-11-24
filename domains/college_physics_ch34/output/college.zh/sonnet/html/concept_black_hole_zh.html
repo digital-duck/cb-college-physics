@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Black Hole | College Physics Ch34</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="黑洞">黑洞</h2>
+<p>黑洞是一种引力场极端强大的天体，其周围存在一个称为<strong>事件视界</strong>（event horizon）的边界——一旦任何物质或光进入这一边界，就再也无法逃脱。黑洞的存在是广义相对论最引人注目的预言之一：爱因斯坦场方程 $G_{\mu\nu} = \dfrac{8\pi G}{c^4} T_{\mu\nu}$ 描述了物质与能量如何弯曲时空，而当质量高度集中于极小体积时，时空弯曲会剧烈到连光都无法沿直线逃离。</p>
+<p><strong>定义与逃逸速度</strong>。理解黑洞的关键在于逃逸速度的概念：从天体表面逃离引力束缚所需的最小速度为</p>
+$$v_{esc} = \sqrt{\frac{2GM}{r}}$$
+<p>其中 $G$ 为引力常数，$M$ 为天体质量，$r$ 为距质心的距离。当 $v_{esc}$ 恰好等于光速 $c$ 时，对应的半径称为<strong>史瓦西半径</strong>（Schwarzschild radius）：</p>
+$$r_s = \frac{2GM}{c^2}$$
+<p>若一个天体的全部质量被压缩到小于 $r_s$ 的范围内，其表面便成为事件视界——即使光子也无法逃逸，因为所需逃逸速度超过了光速上限。</p>
+<p><strong>举例说明</strong>。以太阳质量（$M_\odot \approx 1.99\times10^{30}\text{ kg}$）代入公式，可得史瓦西半径约为 3 千米。这意味着，若能将太阳压缩到一个半径仅 3 公里的球体内（而非其实际的约 70 万公里），它就会变成一个黑洞。这也说明为什么恒星级黑洞通常由大质量恒星（约 20 倍太阳质量以上）在超新星爆发后核心坍缩形成：只有极端的密度才能满足这一条件。</p>
+<p><strong>问题求解应用</strong>。史瓦西半径公式不仅是理论工具，也是实际估算的基础。例如，天文学家通过观测恒星围绕不可见天体的轨道运动，利用开普勒定律反推中心天体质量 $M$，再代入 $r_s = 2GM/c^2$ 估算其视界大小，从而判断该天体是否为黑洞（如银河系中心的人马座A*，质量约为 400 万倍太阳质量，史瓦西半径约 1200 万公里）。此外，事件视界望远镜（EHT）团队正是通过测量黑洞投影阴影的角直径，结合已知距离反推出与理论预测相符的视界尺寸，验证了广义相对论在极端引力条件下的正确性。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch34: Frontiers of Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

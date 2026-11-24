@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fermion | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="fermion-费米子">Fermion（费米子）</h2>
+<p><strong>定义</strong></p>
+<p>费米子是一类自旋为半整数（$s = \frac{1}{2}, \frac{3}{2}, \dots$，以约化普朗克常数 $\hbar$ 为单位）的基本或复合粒子。所有夸克与轻子（如电子、中微子）都是费米子，质子、中子等由三个夸克组成的复合粒子同样是费米子。费米子的核心性质由<strong>泡利不相容原理</strong>给出：两个全同费米子不能占据同一个量子态。数学上，这一原理源自多费米子系统的波函数必须是<strong>反对称</strong>的——交换任意两个粒子的坐标，波函数变号：</p>
+$$
+\Psi(\dots, \mathbf{r}_i, \dots, \mathbf{r}_j, \dots) = -\Psi(\dots, \mathbf{r}_j, \dots, \mathbf{r}_i, \dots)
+$$
+<p>若两个粒子处于完全相同的单粒子态，令 $\mathbf{r}_i = \mathbf{r}_j$，则上式给出 $\Psi = -\Psi$，即 $\Psi = 0$——该构型概率为零，禁戒。这与玻色子（自旋为整数，波函数对称、可任意重叠占据同一态）形成本质区别，也是"自旋-统计定理"所刻画的深层联系。</p>
+<p><strong>范例</strong></p>
+<p>多电子原子的电子排布是最直接的体现。氦原子的两个电子若都处于最低能量的 $1s$ 轨道，必须自旋相反（一个 $m_s = +\frac{1}{2}$，一个 $m_s = -\frac{1}{2}$），从而两者的完整量子态（空间×自旋部分）不同，波函数依旧反对称。这正是元素周期表电子壳层结构（$1s, 2s, 2p, \dots$）逐层填充规律的根源：每个能级只能容纳有限数目的电子，多余电子必须占据更高能级。</p>
+<p><strong>问题解决应用</strong></p>
+<p>利用泡利原理可定量分析简单系统。考虑一维无限深势阱中的 $N$ 个自旋$\frac{1}{2}$无相互作用费米子，单粒子能级为</p>
+$$
+E_n = \frac{n^2 \pi^2 \hbar^2}{2mL^2}, \quad n = 1, 2, 3, \dots
+$$
+<p>由于每个空间能级最多容纳 2 个电子（自旋向上、向下各一个），基态时电子从 $n=1$ 依次填充至 $n = N/2$（设 $N$ 为偶数）。体系总基态能量为</p>
+$$
+E_{\text{总}} = 2\sum_{n=1}^{N/2} \frac{n^2 \pi^2 \hbar^2}{2mL^2}
+$$
+<p>这一"填充到费米能级"的思路正是理解金属自由电子模型、白矮星电子简并压支撑引力坍缩等现象的关键：费米子无法"堆叠"在同一态,必然产生抵抗压缩的简并压力，这正是泡利不相容原理在宏观天体物理尺度上的直接推论。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

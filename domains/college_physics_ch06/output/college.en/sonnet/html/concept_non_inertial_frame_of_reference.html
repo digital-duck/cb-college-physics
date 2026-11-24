@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Non Inertial Frame Of Reference | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="non-inertial-frame-of-reference">Non Inertial Frame Of Reference</h2>
+<p>A reference frame is <strong>inertial</strong> if Newton's first law holds unmodified: an object with no net real force on it moves at constant velocity. A <strong>non-inertial frame</strong> is any frame that is accelerating or rotating relative to an inertial frame — a braking car, a spinning carousel, or the surface of the rotating Earth. Inside such a frame, objects appear to accelerate even when no real force acts on them. To make Newton's second law, $\vec{F} = m\vec{a}$, still work in these frames, physicists introduce <strong>fictitious (pseudo) forces</strong> — mathematical corrections, not interactions between bodies, that account for the frame's own acceleration.</p>
+<p>For a frame accelerating linearly with acceleration $\vec{A}$, an observer inside must add a pseudo-force $\vec{F}_{\text{fict}} = -m\vec{A}$ to make the equations balance. For a frame rotating at constant angular velocity $\vec{\omega}$, two pseudo-forces appear: the <strong>centrifugal force</strong>, $\vec{F}_{cf} = -m\,\vec{\omega} \times (\vec{\omega} \times \vec{r})$, pointing outward from the rotation axis, and the <strong>Coriolis force</strong>, $\vec{F}_{cor} = -2m\,\vec{\omega} \times \vec{v}'$, acting on anything moving within the rotating frame (here $\vec{v}'$ is the object's velocity as measured in that rotating frame).</p>
+<p><strong>Worked example:</strong> A ball sits on a merry-go-round rotating at $\omega = 2\ \text{rad/s}$, at radius $r = 1.5\ \text{m}$, held in place by friction. In the inertial (ground) frame, the ball undergoes real centripetal acceleration $a_c = \omega^2 r = 6\ \text{m/s}^2$, produced by friction pointing inward. In the rotating frame co-moving with the ball, the ball is at rest — so to satisfy $\vec{F}=m\vec{a}=0$, an observer riding the merry-go-round must invoke a centrifugal force of $m\omega^2 r$ outward, exactly balancing friction.</p>
+<p><strong>Problem-solving application:</strong> To analyze motion in a rotating frame, first write Newton's second law using only real forces in the inertial frame, solve for the physical acceleration, then transform to the rotating frame by adding $-m\vec{A}$ (translational) and/or the centrifugal and Coriolis terms (rotational). This method is essential for predicting weather-system rotation (Coriolis effect), spacecraft docking maneuvers, and apparent weight variations at Earth's equator versus poles.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

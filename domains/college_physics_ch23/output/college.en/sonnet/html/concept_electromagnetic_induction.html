@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electromagnetic Induction | College Physics Ch23</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="electromagnetic-induction">Electromagnetic Induction</h2>
+<p><strong>Definition.</strong> Electromagnetic induction is the production of an electromotive force (emf) in a conductor or coil whenever the magnetic flux through it changes. The magnetic flux through a surface is</p>
+$$\Phi_B = \int \vec{B}\cdot d\vec{A},$$
+<p>which for a uniform field and a flat loop becomes $\Phi_B = BA\cos\theta$, where $\theta$ is the angle between $\vec{B}$ and the loop's normal. <strong>Faraday's law</strong> gives the induced emf in a coil of $N$ turns:</p>
+$$\varepsilon = -N\,\frac{d\Phi_B}{dt}.$$
+<p>The minus sign is <strong>Lenz's law</strong>: the induced current flows in the direction that opposes the change in flux that produced it. This is energy conservation at work. If the induced current reinforced the change, the effect would feed on itself and create energy from nothing.</p>
+<p>Flux can change in three ways: the field strength $B$ changes, the loop's area $A$ changes, or the angle $\theta$ changes. Any one of these is enough to induce an emf.</p>
+<p><strong>Worked example.</strong> A circular coil with $N = 200$ turns and radius $r = 5.0\ \text{cm}$ sits with its plane perpendicular to a uniform field. The field rises from $0.20\ \text{T}$ to $0.80\ \text{T}$ in $0.30\ \text{s}$. Find the average emf.</p>
+<p>The area is $A = \pi r^2 = \pi(0.050)^2 = 7.85\times10^{-3}\ \text{m}^2$. With $\theta = 0$, the change in flux per turn is</p>
+$$\Delta\Phi_B = A\,\Delta B = (7.85\times10^{-3})(0.60) = 4.71\times10^{-3}\ \text{Wb}.$$
+<p>Then</p>
+$$|\varepsilon| = N\frac{\Delta\Phi_B}{\Delta t} = 200\cdot\frac{4.71\times10^{-3}}{0.30} \approx 3.1\ \text{V}.$$
+<p>By Lenz's law, the induced current creates a field opposite to the increasing external field, so its direction is the one that opposes the increase.</p>
+<p><strong>Problem-solving application: the AC generator.</strong> Rotate a coil of area $A$ at angular speed $\omega$ in a uniform field. The angle is $\theta = \omega t$, so</p>
+$$\Phi_B = BA\cos\omega t \quad\Longrightarrow\quad \varepsilon = -N\frac{d\Phi_B}{dt} = NBA\omega\sin\omega t.$$
+<p>The emf is sinusoidal with peak value $\varepsilon_{\max} = NBA\omega$. This is why power plants produce alternating current.</p>
+<p><em>Example:</em> A 100-turn coil of area $0.020\ \text{m}^2$ rotates at $60\ \text{Hz}$ in a $0.50\ \text{T}$ field. Here $\omega = 2\pi(60) = 377\ \text{rad/s}$, so</p>
+$$\varepsilon_{\max} = (100)(0.50)(0.020)(377) \approx 3.8\times10^{2}\ \text{V}.$$
+<p><strong>Strategy for any induction problem:</strong></p>
+<li>Write $\Phi_B$ as a function of time, or find $\Delta\Phi_B$.</li>
+<li>Identify which quantity ($B$, $A$, or $\theta$) is changing.</li>
+<li>Differentiate, or divide by $\Delta t$, and multiply by $N$.</li>
+<li>Use Lenz's law to find the current direction: it opposes the <em>change</em> in flux.</li>
+<p>The same law explains transformers, induction cooktops, and eddy-current brakes. In each, a changing flux drives currents that either transfer energy or resist motion.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch23: Electromagnetic Induction, AC Circuits, and Electrical Technologies (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

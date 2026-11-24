@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gravitational Potential Energy | College Physics Ch12</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="gravitational-potential-energy">Gravitational Potential Energy</h2>
+<p><strong>Definition.</strong> Gravitational potential energy (GPE) is the energy a system stores because of the position of a mass in a gravitational field. Near Earth's surface, where the gravitational field strength $g \approx 9.8\ \text{m/s}^2$ is nearly constant, an object of mass $m$ at height $h$ above a chosen reference level has</p>
+$$U_g = mgh$$
+<p>The units are joules (J). The formula follows from work: lifting an object at constant speed requires an upward force $F = mg$ through a distance $h$, so the work done against gravity is $W = Fh = mgh$. That work is stored as $U_g$.</p>
+<p>Two features matter in practice:</p>
+<li><strong>Only changes matter.</strong> The zero of height is a free choice (floor, table, sea level). Physical results depend on $\Delta U_g = mg\,\Delta h$, which is the same whichever reference you pick.</li>
+<li><strong>Path independence.</strong> Gravity is a conservative force. $\Delta U_g$ depends only on the vertical change in height, not on the route taken. Carrying a box up a ramp or straight up a ladder to the same height stores the same energy.</li>
+<p>For large distances, where $g$ is no longer constant, the general form is $U_g = -\dfrac{GMm}{r}$, with zero energy at infinite separation. Near the surface, $mgh$ is an excellent approximation of its changes.</p>
+<p><strong>Worked example.</strong> A $2.0\ \text{kg}$ book is lifted from the floor to a shelf $1.5\ \text{m}$ high. Taking the floor as $h = 0$:</p>
+$$\Delta U_g = (2.0)(9.8)(1.5) = 29.4\ \text{J}$$
+<p>If the origin were instead the table at $0.75\ \text{m}$, the book's energy on the shelf would be $(2.0)(9.8)(0.75) = 14.7\ \text{J}$. But its change in energy from the floor is still $29.4\ \text{J}$, because the book's starting energy relative to the table is $-14.7\ \text{J}$.</p>
+<p><strong>Problem-solving application.</strong> Combine GPE with conservation of mechanical energy. A $0.50\ \text{kg}$ ball is dropped from rest at $h = 20\ \text{m}$. Find its speed just before it hits the ground, ignoring air resistance.</p>
+<p>Energy is conserved, so $U_i + K_i = U_f + K_f$:</p>
+$$mgh + 0 = 0 + \tfrac{1}{2}mv^2$$
+<p>The mass cancels:</p>
+$$v = \sqrt{2gh} = \sqrt{2(9.8)(20)} \approx 19.8\ \text{m/s}$$
+<p>Notice the strategy: choose the reference level at the lowest point so $U_f = 0$, write energy at two moments, and solve for the unknown. The same method handles roller coasters, pendulums, and ramps. Only the vertical drop matters, not the shape of the track. If friction acts, subtract the energy it dissipates: $mgh = \tfrac{1}{2}mv^2 + W_{\text{friction}}$.</p>
+<p><strong>Check yourself.</strong> If the ball were dropped from $40\ \text{m}$, would its speed double? No. Since $v \propto \sqrt{h}$, it increases by a factor of $\sqrt{2} \approx 1.41$.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch12: Fluid Dynamics and Its Biological and Medical Applications (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

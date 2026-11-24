@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuclear Power Reactor | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="nuclear-power-reactor-核动力反应堆">Nuclear Power Reactor（核动力反应堆）</h2>
+<p><strong>定义</strong></p>
+<p>核动力反应堆是一种利用受控核裂变链式反应产生热能、进而转化为电能的装置。其核心部件包括：浓缩铀燃料（通常将铀-235 的丰度从天然的 0.7% 提高到 3%–5%）、慢化剂（如水或石墨，用于将裂变产生的快中子减速为热中子，以提高继续引发裂变的概率）、以及控制棒（由硼、镉等强中子吸收材料制成，用于调节反应速率）。反应堆能否维持稳定运行，取决于中子增殖系数 $k$——即每一代裂变产生的中子数与上一代的比值：</p>
+$$
+k = \frac{\text{下一代中子数}}{\text{当前代中子数}}
+$$
+<p>当 $k=1$ 时，系统处于<strong>临界</strong>状态，链式反应以恒定速率持续进行，这正是发电厂正常运行所要求的状态；$k<1$ 为次临界，反应逐渐熄灭；$k>1$ 为超临界，功率将呈指数增长。</p>
+<p><strong>运行原理与计算实例</strong></p>
+<p>假设某反应堆某一代有 $N_0 = 10^{10}$ 个中子引发裂变，若 $k = 1.002$（轻微超临界，用于缓慢提升功率），经过 $n$ 代后中子数为：</p>
+$$
+N_n = N_0 \cdot k^n
+$$
+<p>代入 $n=100$，得 $N_{100} = 10^{10} \times 1.002^{100} \approx 1.22 \times 10^{10}$，即中子数增长约 22%。工程师正是通过插入或抽出控制棒来精细调节 $k$，使其尽可能贴近 1，避免功率失控或反应堆停堆。</p>
+<p><strong>问题解决应用</strong></p>
+<p>反应堆设计中的一个关键工程问题是：如何在保证安全裕度的同时最大化发电效率？这需要综合考虑三个耦合因素——燃料浓缩度（提供足够裂变材料）、慢化剂几何布置（优化中子能谱以提高裂变概率）、控制棒插入深度（实时反馈调节 $k$）。实际反应堆还配备负反应性温度系数的安全设计：温度升高时，慢化剂密度下降，中子减速效率降低，$k$ 自动减小，形成负反馈，这是反应堆固有安全性的数学基础，也是压水堆（PWR）等主流商用堆型设计的核心原则之一。掌握 $k$ 与反应堆动力学的关系，是理解核电站功率调控、事故响应乃至福岛、切尔诺贝利等历史事件根本原因的关键。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

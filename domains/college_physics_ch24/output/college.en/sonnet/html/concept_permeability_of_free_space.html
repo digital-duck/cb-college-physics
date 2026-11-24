@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Permeability Of Free Space | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="permeability-of-free-space">Permeability Of Free Space</h2>
+<p><strong>Definition.</strong> The permeability of free space, $\mu_0$, is the constant that links electric current to the magnetic field it produces in a vacuum. It appears in the Biot–Savart law and Ampère's law, and it sets the scale of every magnetic interaction in free space. Its value is</p>
+$$\mu_0 \approx 4\pi \times 10^{-7}\ \text{T·m/A} = 1.2566 \times 10^{-6}\ \text{N/A}^2.$$
+<p>Before 2019, $\mu_0$ was defined to be exactly $4\pi\times10^{-7}$ N/A², and this definition fixed the ampere. Since the 2019 SI revision, $\mu_0$ is measured, and it differs from that value by about one part in $10^{10}$. It is also tied to the electric constant $\varepsilon_0$ and the speed of light by</p>
+$$c = \frac{1}{\sqrt{\mu_0\,\varepsilon_0}}.$$
+<p><strong>Two key results.</strong> For a long straight wire carrying current $I$, Ampère's law gives the field at distance $r$:</p>
+$$B = \frac{\mu_0 I}{2\pi r}.$$
+<p>Two parallel wires carrying currents $I_1$ and $I_2$, separated by $d$, exert a force per unit length on each other:</p>
+$$\frac{F}{L} = \frac{\mu_0 I_1 I_2}{2\pi d}.$$
+<p>The force is attractive when the currents flow in the same direction and repulsive when they flow in opposite directions.</p>
+<p><strong>Worked example.</strong> Find the field 5.0 cm from a wire carrying 20 A.</p>
+$$B = \frac{(4\pi\times10^{-7})(20)}{2\pi(0.050)} = \frac{2\times10^{-7}\cdot 20}{0.050} = 8.0\times10^{-5}\ \text{T}.$$
+<p>This is about 80 µT, which is comparable to Earth's field of roughly 50 µT. Note that $\mu_0/2\pi = 2\times10^{-7}$ T·m/A, so you can often skip the $\pi$ arithmetic.</p>
+<p><strong>Problem-solving application.</strong> Two parallel conductors 1.0 m apart each carry 1.0 A in the same direction. What is the force on a 1.0 m length of one wire?</p>
+$$\frac{F}{L} = \frac{(4\pi\times10^{-7})(1.0)(1.0)}{2\pi(1.0)} = 2\times10^{-7}\ \text{N/m}.$$
+<p>This is the force that defined the ampere before 2019. It is tiny, which shows why everyday magnetic effects usually need large currents or ferromagnetic cores. Inside a material, $\mu_0$ is replaced by $\mu = \mu_r\mu_0$. For iron, $\mu_r$ can reach the thousands, and this is why electromagnets and transformers use iron cores.</p>
+<p><strong>Checking your work.</strong></p>
+<li>Use units: T·m/A times A divided by m gives tesla.</li>
+<li>Field strength falls as $1/r$, so doubling the distance halves $B$.</li>
+<li>Use the right-hand rule for direction. With your thumb along the current, your fingers curl in the direction of $\mathbf{B}$.</li>
+<p><strong>Why it matters.</strong> Because $\mu_0\varepsilon_0 = 1/c^2$, this constant links magnetism, electricity, and light. Maxwell's prediction that electromagnetic waves travel at $c$ follows directly from it.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

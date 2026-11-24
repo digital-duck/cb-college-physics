@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Far Point | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="far-point-远点">Far Point（远点）</h2>
+<p><strong>定义</strong></p>
+<p>远点（far point，记作 $P_f$）是眼睛在完全放松、不做任何调节（accommodation）时所能清晰聚焦的最远物点。对于正常眼（正视眼，emmetropic eye），远点位于无穷远处，即平行光线经过角膜和晶状体折射后恰好聚焦在视网膜上,不需要睫状肌收缩来增加晶状体的屈光度。远点与近点（near point）共同界定了眼睛的调节范围：近点是眼睛最大限度调节时能看清的最近距离,而远点是完全不调节时能看清的最远距离。二者之间的区间就是眼睛正常的清晰视觉范围。</p>
+<p>远点的位置由眼睛在放松状态下的总屈光度 $P$（单位：屈光度,diopter,$D$）决定,其中 $P = 1/f$，$f$ 为等效焦距（以米为单位）。对正视眼，$P$ 恰好使焦点落在视网膜上，物距为无穷大。但若眼球屈光系统与眼轴长度不匹配，远点就会偏离无穷远,这正是近视和远视的成因。</p>
+<p><strong>病理情形与计算</strong></p>
+<p>近视眼（myopia）由于眼球过长或角膜/晶状体屈光力过强,即使完全放松,光线仍聚焦在视网膜前方，导致远点被拉近到某个有限距离 $d_f$（单位:米），而不是无穷远。这类眼睛看远处物体模糊,但能看清近处物体。</p>
+<p>矫正近视需要一个发散透镜（凹透镜),使无穷远处的物体经透镜折射后,形成一个恰好落在患者远点处的虚像,这样眼睛就能舒适地聚焦它。所需透镜的焦距 $f$ 满足薪镜片公式(物在无穷远,像距等于 $-d_f$，按左手坐标符号约定):</p>
+$$\frac{1}{v} - \frac{1}{u} = \frac{1}{f} \quad\Rightarrow\quad \frac{1}{-d_f} - \frac{1}{\infty} = \frac{1}{f}$$
+<p>即所需透镜的屈光度为 $P = -1/d_f$（单位:屈光度,$d_f$ 以米为单位）。</p>
+<p><strong>问题解决应用</strong></p>
+<p>例:某近视患者的远点为 $0.5\text{ m}$。求矫正透镜的屈光度。</p>
+<p>代入 $d_f = 0.5\text{ m}$：$P = -1/0.5 = -2.0\ D$。</p>
+<p>即需佩戴 $-2.0\ D$（凹透镜）眼镜,使远处物体的光线经镜片后形成位于 $0.5\text{ m}$ 处的虚像,眼睛便可无需调节地看清该虚像,从而间接看清无穷远处的实际物体。这类计算是配镜处方中最基本的定量步骤。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

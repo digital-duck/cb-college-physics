@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aberration | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="像差">像差</h2>
+<p><strong>定义</strong></p>
+<p>理想的光学系统应当把物空间中每一个点精确地成像为像空间中的一个点，这一理想模型称为<strong>高斯光学（近轴光学）</strong>近似，它假设所有光线与光轴的夹角都足够小，使 $\sin\theta \approx \theta$。然而真实的透镜是有限孔径、有限厚度的折射面，当光线偏离近轴条件时，这一近似不再成立，成像出现系统性偏差——这就是<strong>像差（aberration）</strong>。像差不是加工误差或污染造成的随机瑕疵，而是几何光学本身在非近轴情形下的必然结果。常见的单色像差包括球差（球面上不同高度的光线聚焦在不同位置）、彗差（离轴点源成像为拖尾的彗星状光斑）、像散、场曲和畸变；此外，由于折射率 $n(\lambda)$ 随波长变化，还存在<strong>色差</strong>，即不同颜色的光被透镜聚焦在不同位置。</p>
+<p><strong>推导：球差的定量刻画</strong></p>
+<p>考虑一条与光轴成高度 $h$ 平行入射的光线，经单个球面（曲率半径 $R$，折射率由 $n_1$ 变为 $n_2$）折射后与光轴的交点位置 $s'$，精确的折射定律给出的成像位置依赖于 $h$，而不是近轴公式</p>
+$$
+\frac{n_2}{s'} - \frac{n_1}{s} = \frac{n_2 - n_1}{R}
+$$
+<p>所预测的单一固定值。将精确解按 $h$ 展开为泰勒级数，零阶项即为近轴成像位置，而最低阶的非零修正项正比于 $h^2$：</p>
+$$
+\Delta s'(h) \approx C \cdot h^2
+$$
+<p>其中 $C$ 由 $R$、$n_1$、$n_2$ 及物距共同决定。这表明球差不能通过简单的位置修正消除，而是随孔径高度的平方增长——这正是光学设计中"减小光阑"能显著改善成像质量的数学根源，因为减小 $h$ 会以平方关系压低误差。</p>
+<p><strong>问题求解应用</strong></p>
+<p>设计一个 $f=50\text{ mm}$、边缘孔径 $h=10\text{ mm}$ 的单透镜相机镜头。若测得该孔径下的球差修正量为 $\Delta s' = 0.4\text{ mm}$，欲将球差控制在 $0.1\text{ mm}$ 以内，应把光阑孔径缩小到多少？由 $\Delta s' \propto h^2$，有</p>
+$$
+\frac{\Delta s'_2}{\Delta s'_1} = \left(\frac{h_2}{h_1}\right)^2 \implies h_2 = h_1\sqrt{\frac{0.1}{0.4}} = 10 \times 0.5 = 5\text{ mm}
+$$
+<p>即需将孔径减半，代价是进光量（与 $h^2$ 成正比）降为原来的 $1/4$——这正是光学系统设计中像质与通光量之间的经典权衡，实践中常通过多片透镜组合（消球差组）而非单纯缩光阑来兼顾两者。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

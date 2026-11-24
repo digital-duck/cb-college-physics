@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vapor | College Physics Ch13</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="vapor-蒸气">Vapor（蒸气）</h2>
+<p><strong>定义</strong></p>
+<p>蒸气是指处于其在当前压强下的沸点温度以下、但仍以气态形式存在的物质。这一点常被误解：很多人以为"蒸气"和"气体"只是同一个词的两种说法,其实两者的区别在于该物质相对于自身相变条件所处的状态。以水为例,在标准大气压（$101.3\text{ kPa}$）下,水的沸点是 $100^\circ\text{C}$。如果空气中含有温度为 $25^\circ\text{C}$ 的气态水分子,这些水分子就是"水蒸气"（water vapor）,因为 $25^\circ\text{C}$ 远低于水在该压强下的沸点。相比之下,像氧气、氮气这类物质,在地球表面常见的温度和压强下,其沸点都远低于环境温度（氮气沸点约 $-196^\circ\text{C}$）,所以我们称它们为"气体"而不是"蒸气"。</p>
+<p>蒸气之所以能够存在,是因为分子的动能分布并不均匀——即便平均温度低于沸点,总有一部分分子的能量足以克服液体表面的分子间作用力而逃逸进入气相,这个过程叫做<strong>蒸发</strong>。蒸气与液态之间存在动态平衡,由此产生的压强称为<strong>饱和蒸气压</strong>（saturation vapor pressure）,记作 $P_{sat}(T)$,它只依赖于温度,随温度升高而增大。</p>
+<p><strong>实例分析</strong></p>
+<p>考虑一杯 $20^\circ\text{C}$ 的水放在敞开的房间里。房间温度和压强都远低于水的沸点条件,但杯子表面仍会持续产生水蒸气逐渐扩散到空气中,这就是"蒸发"现象,而非"沸腾"。当水温升高到 $100^\circ\text{C}$（即饱和蒸气压 $P_{sat}(T)$ 等于外界大气压时）,气化过程会在液体内部全面发生,这才是"沸腾"，此时生成的气态水就不再称为"蒸气",而是普通意义上的"水汽/气体"，因为它已达到或超过沸点。</p>
+<p><strong>解题应用</strong></p>
+<p>判断某气态物质应称为"蒸气"还是"气体",关键是比较：给定压强 $P$ 下,该物质的实际温度 $T$ 与其沸点 $T_b(P)$ 的大小关系。若 $T < T_b(P)$,该气态物质为蒸气；若 $T \ge T_b(P)$,则为气体（此时已完全气化，不再依赖表面蒸发机制）。例如,判断高压锅（内部压强约 $2\,\text{atm}$，对应沸点约 $120^\circ\text{C}$）中 $110^\circ\text{C}$ 的水蒸气应称为何种状态：因为 $110^\circ\text{C} < 120^\circ\text{C}$，故仍属于蒸气范畴，这解释了为何高压锅能在低于常压沸点对应温度时依然维持高效的蒸汽压力烹饪效果。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch13: Temperature, Kinetic Theory, and the Gas Laws (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

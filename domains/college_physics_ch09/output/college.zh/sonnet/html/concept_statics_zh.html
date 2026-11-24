@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statics | College Physics Ch09</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="静力学">静力学</h2>
+<p>静力学是力学的一个分支，研究处于平衡状态的物体所受的力与力矩。所谓平衡，指物体既没有线性加速度，也没有角加速度——它可能静止，也可能以恒定速度做匀速直线运动或匀速转动，但其运动状态不会改变。静力学的核心是<strong>平衡条件</strong>：作用在物体上的合力为零，合力矩也为零，即</p>
+$$
+\sum \vec{F} = 0, \qquad \sum \vec{\tau} = 0
+$$
+<p>第一个方程保证物体不会发生平动加速；第二个方程保证物体不会发生转动加速。二者缺一不可——一个物体可以合力为零却仍在转动加速（例如受到一对大小相等、方向相反但不共线的力，即力偶），因此必须同时满足两个条件才能称为真正的静力平衡。</p>
+<p><strong>范例：搭在两个支点上的均匀横梁</strong></p>
+<p>设一根长 $L=4\,\text{m}$、重 $W=200\,\text{N}$ 的均匀横梁水平搭在两个支点 $A$（左端）和 $B$（距左端 $3\,\text{m}$ 处）上。梁的重心在其几何中心，即距 $A$ 点 $2\,\text{m}$ 处。求两支点的支持力 $N_A$、$N_B$。</p>
+<p>先用力的平衡：$N_A + N_B = W = 200\,\text{N}$。</p>
+<p>再以 $A$ 点为轴取力矩平衡（力矩 = 力 $\times$ 力臂，逆时针为正）：</p>
+$$
+N_B \times 3 - W \times 2 = 0 \;\Rightarrow\; N_B = \frac{200 \times 2}{3} \approx 133.3\,\text{N}
+$$
+<p>代回第一式得 $N_A \approx 66.7\,\text{N}$。这里的关键技巧是<strong>选择合适的转轴</strong>：以 $A$ 为轴可以让 $N_A$ 的力臂为零，直接从方程中消去这个未知量，一步求出 $N_B$。</p>
+<p><strong>解题应用</strong></p>
+<p>处理静力学问题的标准流程是：(1) 画出受力图，标出所有外力（重力、支持力、张力、摩擦力等）；(2) 建立坐标系，将所有力分解为水平与竖直分量；(3) 列出 $\sum F_x=0$、$\sum F_y=0$ 两个平动方程；(4) 选取一个便于消元的转轴（通常选在某个未知力的作用点上），列出 $\sum \tau = 0$ 方程；(5) 联立求解。对于三维或多支点结构（如桁架、悬臂），未知数增多时，可灵活选取多个转轴分别列力矩方程，将问题化为线性方程组求解，这正是结构工程分析承重构件的基本方法。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch9: Statics and Torque (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

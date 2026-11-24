@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electric Potential Energy | College Physics Ch19</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="electric-potential-energy">Electric Potential Energy</h2>
+<p><strong>定义</strong></p>
+<p>电势能（Electric Potential Energy，记作 $U$）是电荷因其在电场中的位置而具有的能量。当电荷 $q$ 在电场力作用下从位置 A 移动到位置 B 时，电场力做的功 $W_{A\to B}$ 与电势能的变化满足</p>
+$$
+\Delta U = U_B - U_A = -W_{A\to B}
+$$
+<p>这一关系来自静电力是保守力这一事实：保守力做的功只取决于始末位置，与路径无关，因此可以定义一个只依赖于位置的标量函数 $U$。负号的物理含义是：电场力做正功（即电荷沿力的方向运动）时，系统失去等量的电势能，这与重力势能的定义方式完全类似。</p>
+<p>对于两个点电荷 $q_1$、$q_2$ 相距 $r$，由库仑定律积分可得其电势能为</p>
+$$
+U(r) = k\frac{q_1 q_2}{r}, \qquad k = 8.99\times10^{9}\ \text{N·m}^2/\text{C}^2
+$$
+<p>同号电荷（$q_1 q_2 > 0$）的 $U$ 为正，异号电荷（$q_1 q_2 < 0$）的 $U$ 为负，这与直觉一致：同性相斥时把电荷推近需要外力做正功，储存的能量增大；异性相吸时电荷自然靠近，系统释放能量。</p>
+<p><strong>例题</strong></p>
+<p>一个电荷 $q_1 = +3.0\ \mu\text{C}$ 固定在原点，另一个电荷 $q_2 = +2.0\ \mu\text{C}$ 从距原点 $r_A = 0.50\ \text{m}$ 处，被外力缓慢移动到 $r_B = 0.20\ \text{m}$ 处（忽略动能变化）。求电场力对 $q_2$ 做的功。</p>
+<p>先分别计算两个位置的电势能：</p>
+$$
+U_A = k\frac{q_1 q_2}{r_A} = (8.99\times10^9)\frac{(3.0\times10^{-6})(2.0\times10^{-6})}{0.50} \approx 0.108\ \text{J}
+$$
+$$
+U_B = k\frac{q_1 q_2}{r_B} \approx 0.270\ \text{J}
+$$
+<p>于是 $\Delta U = U_B - U_A \approx 0.162\ \text{J}$，电场力做的功为</p>
+$$
+W_{A\to B} = -\Delta U \approx -0.162\ \text{J}
+$$
+<p>负功说明：由于两电荷同号相斥，电场力方向与位移方向相反，外力必须克服电场力做正功才能把 $q_2$ 推近，这部分外力做的功恰好转化为增加的电势能，与能量守恒一致。</p>
+<p><strong>应用要点</strong></p>
+<p>解题时应把 $U(r)$ 当作位置的函数，先分别求出始末态的电势能，再用 $W = -\Delta U$ 求功，而不是试图直接对变化的库仑力沿路径积分——这正是保守力概念带来的计算便利，也是后续引入电势 $V = U/q$ 这一更普适概念的基础。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch19: Electric Potential and Electric Field (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

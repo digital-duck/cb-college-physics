@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Machine | College Physics Ch09</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="simple-machine">Simple Machine</h2>
+<p><strong>定义</strong></p>
+<p>简单机械是一种能够改变施加力的大小或方向的装置，其核心原理是"以距离换力"：通过增大力作用点移动的距离，来换取输出端所需力的减小（反之亦然）。杠杆、滑轮、斜面、轮轴、楔子和螺旋是六种经典的简单机械，它们都遵循同一个物理量——<strong>机械效益</strong>（mechanical advantage, MA）——来量化这种力的放大效果：</p>
+$$
+MA = \frac{F_{\text{out}}}{F_{\text{in}}}
+$$
+<p>对于杠杆而言，机械效益由支点两侧的力臂长度之比决定，这是由力矩平衡条件推导而来的：</p>
+$$
+F_{\text{in}} \cdot d_{\text{in}} = F_{\text{out}} \cdot d_{\text{out}}
+\quad\Longrightarrow\quad
+MA = \frac{d_{\text{in}}}{d_{\text{out}}}
+$$
+<p>由于理想情况下不考虑摩擦损耗，输入功等于输出功，这正是能量守恒定律的直接体现——机械并不能"凭空创造"能量，只能重新分配力与距离的乘积。</p>
+<p><strong>例题</strong></p>
+<p>一根撬棍长 $2\text{ m}$，支点距离施力端 $1.5\text{ m}$（即 $d_{\text{in}} = 1.5\text{ m}$），距离负载端 $0.5\text{ m}$（即 $d_{\text{out}} = 0.5\text{ m}$）。若在施力端施加 $200\text{ N}$ 的力，求可撬动的最大负载力。</p>
+$$
+MA = \frac{d_{\text{in}}}{d_{\text{out}}} = \frac{1.5}{0.5} = 3
+$$
+$$
+F_{\text{out}} = MA \times F_{\text{in}} = 3 \times 200\text{ N} = 600\text{ N}
+$$
+<p>即该撬棍能以 $200\text{ N}$ 的力撬动重达 $600\text{ N}$ 的物体，但施力端需要移动的距离是负载端移动距离的 3 倍。</p>
+<p><strong>问题解决应用</strong></p>
+<p>在实际工程设计中，简单机械常以组合形式出现（如轮轴与滑轮组联用），此时总机械效益等于各级机械效益的连乘积：</p>
+$$
+MA_{\text{total}} = MA_1 \times MA_2 \times \cdots \times MA_n
+$$
+<p>例如设计一个千斤顶，若单级螺旋机构的 $MA = 20$，再串联一个 $MA = 4$ 的杠杆手柄，则总机械效益为 $80$——这意味着施加 $50\text{ N}$ 的手部力量即可顶起 $4000\text{ N}$ 的车辆重量。这种分级放大的设计思路，正是解决"人力有限、负载庞大"这类工程问题的关键方法。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch9: Statics and Torque (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

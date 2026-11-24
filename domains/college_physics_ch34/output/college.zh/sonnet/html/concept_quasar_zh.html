@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quasar | College Physics Ch34</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="quasar">Quasar</h2>
+<p><strong>定义</strong></p>
+<p>类星体（quasar，即"quasi-stellar radio source"）是遥远星系中心区域所展现出的一种极端活跃现象：星系核心的超大质量黑洞正处于快速吸积物质的阶段,周围形成一个高温、高速旋转的吸积盘。物质在落入黑洞前因摩擦和引力势能释放而被加热到数百万度,辐射出的能量可以超过整个星系中全部恒星光度的总和。由于类星体距离极其遥远,在早期观测中它们的光学影像与恒星几乎无法区分,因此才有了"类星体"（"类似恒星"）这个名称,但其光谱却显示出巨大的红移,表明它们实际上是宇宙早期、距离数十亿光年的活动星系核。</p>
+<p>类星体的能量来源可以用吸积过程的效率来描述。设黑洞每单位时间吸积的质量为 $\dot{M}$,吸积盘将部分静止质量能转化为辐射,其光度近似为</p>
+$$
+L = \eta \, \dot{M} c^2
+$$
+<p>其中 $\eta$ 是吸积效率(对于旋转黑洞的吸积盘,理论值可达 $\eta \approx 0.1$–$0.3$,远高于恒星核聚变的效率约 $0.007$)。这也解释了为何黑洞吸积能在远小于恒星集合的体积内产生远超星系恒星总光度的能量输出。</p>
+<p><strong>计算实例</strong></p>
+<p>假设一个类星体的黑洞每年吸积 $1\,M_\odot$(太阳质量,约 $2\times10^{30}\,\text{kg}$)的物质,吸积效率 $\eta = 0.1$。求其光度,并与太阳光度 $L_\odot \approx 3.8\times10^{26}\,\text{W}$ 比较。</p>
+<p>$\dot{M} = \dfrac{2\times10^{30}\,\text{kg}}{3.15\times10^{7}\,\text{s}} \approx 6.3\times10^{22}\,\text{kg/s}$</p>
+<p>$L = 0.1 \times (6.3\times10^{22}) \times (3\times10^{8})^2 \approx 5.7\times10^{38}\,\text{W}$</p>
+<p>对比 $L_\odot$,该光度约为太阳的 $1.5\times10^{12}$ 倍——大致相当于一个拥有千亿颗恒星的正常星系总光度,却产生于黑洞周围体积不到一光年的区域内。</p>
+<p><strong>应用与思考</strong></p>
+<p>天文学家通过测量类星体谱线的红移 $z$ 来估算其距离和所处的宇宙年代,并利用其光变时标反推吸积盘及黑洞的尺度上限(光变时标 $\Delta t$ 意味着辐射区尺度不超过 $c \, \Delta t$)。这类推理正是研究早期宇宙中超大质量黑洞如何快速形成的关键工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch34: Frontiers of Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

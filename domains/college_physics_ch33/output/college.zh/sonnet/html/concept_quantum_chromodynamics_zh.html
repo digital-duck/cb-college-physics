@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quantum Chromodynamics | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="quantum-chromodynamics">Quantum Chromodynamics</h2>
+<p><strong>定义</strong></p>
+<p>量子色动力学（QCD）是描述强相互作用的规范场论，其基本自由度是夸克与胶子。夸克携带一种被称为"色荷"（color charge）的量子数，取值为红、绿、蓝三种（及对应反色），类比于电动力学中的电荷，但色荷有三种而非一种，且传播强力的媒介粒子——胶子——本身也携带色荷。这一点是 QCD 与量子电动力学（QED）最根本的区别：光子不带电荷，胶子却带色荷，因此胶子之间可以直接相互作用。QCD 的拉格朗日量为</p>
+$$
+\mathcal{L}_{QCD} = \bar{\psi}_i (i\gamma^\mu D_\mu - m)_{ij}\psi_j - \frac{1}{4}G^a_{\mu\nu}G^{a\mu\nu}
+$$
+<p>其中协变导数 $D_\mu = \partial_\mu - ig_s A_\mu^a T^a$ 引入了 SU(3) 规范对称性，$T^a$ 是 SU(3) 群的生成元（共 8 个，对应 8 种胶子）。场强张量</p>
+$$
+G^a_{\mu\nu} = \partial_\mu A_\nu^a - \partial_\nu A_\mu^a + g_s f^{abc}A_\mu^b A_\nu^c
+$$
+<p>中的非阿贝尔项 $f^{abc}A_\mu^b A_\nu^c$ 正是胶子自耦合的来源，它导致了 QCD 最具标志性的两个现象：<strong>渐近自由</strong>（耦合常数 $\alpha_s(Q^2)$ 随能标 $Q^2$ 增大而减小，高能下夸克近似自由）与<strong>色禁闭</strong>（低能下色荷无法单独分离存在，只能以无色的强子形式出现）。</p>
+<p><strong>渐近自由的定量描述</strong></p>
+<p>单圈重整化群方程给出</p>
+$$
+\alpha_s(Q^2) = \frac{\alpha_s(\mu^2)}{1 + \dfrac{\alpha_s(\mu^2)}{12\pi}(11N_c - 2N_f)\ln(Q^2/\mu^2)}
+$$
+<p>其中 $N_c=3$ 为色的数目，$N_f$ 为参与运行的夸克味数。系数 $11N_c - 2N_f > 0$（对已知夸克数目而言恒成立）是渐近自由成立的数学根源——这与 QED 中耦合常数随能标增大而增大的行为恰好相反。</p>
+<p><strong>问题求解应用</strong></p>
+<p>给定 $\alpha_s(M_Z^2)\approx 0.118$（$M_Z\approx 91.2\text{ GeV}$），取 $N_f=5$，估算强子对撞机中 $Q=10\text{ TeV}$ 处的 $\alpha_s$：代入上式，$\ln(Q^2/M_Z^2) = 2\ln(10^4/91.2)\approx 9.4$，分母修正项 $(11\times3-2\times5)/(12\pi)\times 0.118\times 9.4 \approx 0.68$，得 $\alpha_s(Q^2)\approx 0.118/1.68\approx 0.070$。此计算说明为何在大型强子对撞机（LHC）的高能过程中，微扰 QCD 计算（如喷注截面预测）可靠，而在强子内部低能标度（$Q\sim\Lambda_{QCD}\approx 200\text{ MeV}$）附近，$\alpha_s$ 发散，微扰方法失效，必须依赖格点 QCD 数值模拟。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

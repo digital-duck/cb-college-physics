@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scintillator | College Physics Ch31</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="闪烁体">闪烁体</h2>
+<p>闪烁体（scintillator）是一类特殊材料，当高能辐射（如 $\gamma$ 光子、$\alpha$ 粒子、$\beta$ 粒子或中子）穿过其中并沉积能量时，材料中的原子或分子被激发到较高能级，随后在极短时间内退激发并发射出可见光或近紫外光的短暂闪光。这一过程本质上是辐射能量到光能的转换：入射粒子先使闪烁体中的电子跃迁至激发态或产生电子-空穴对，退激发时以荧光形式释放能量，光子数目与沉积能量近似成正比。闪烁体是几乎所有辐射探测系统（如 PET 扫描仪、边境安检仪、核物理实验中的量能器）的核心元件，因为它把不可见的辐射转化成了可以用光电倍增管或光电二极管测量的电信号。</p>
+<p>闪烁体主要分为两类。无机闪烁体（如碘化钠掺铊 NaI(Tl)、锗酸铋 BGO）由晶体点阵中的杂质能级（激活中心）产生发光，光输出高、能量分辨率好，但响应时间较慢（微秒量级），常用于精确能谱测量。有机闪烁体（如蒽晶体、塑料闪烁体）依赖分子的 $\pi$ 电子跃迁发光，响应时间极快（纳秒量级），适合计时和高计数率场合，但能量分辨率较差。</p>
+<p>工作实例：假设一个 662 keV 的 $\gamma$ 光子（来自铯-137 源）完全被 NaI(Tl) 晶体吸收。已知该晶体的光产额约为每 1 MeV 沉积能量产生 38000 个光子，则</p>
+$$
+N_{\text{光子}} = 0.662~\text{MeV} \times 38000~\text{光子/MeV} \approx 25156~\text{光子}
+$$
+<p>这些光子中只有一部分能到达光电倍增管的光阴极并转化为光电子，实际探测到的电子数还需乘以光收集效率与量子效率，最终决定了电子学脉冲的高度，即能谱上对应的道数。</p>
+<p>问题解决应用：在设计辐射探测器时，需要在光输出（决定能量分辨率）与响应速度（决定计时精度和抗堆积能力）之间权衡。例如,在正电子发射断层扫描（PET）中，需要同时判断两个 511 keV 湮灭光子是否"符合"（同时到达），这就要求闪烁体（如 LYSO）兼具较高光产额与快速衰减时间（约 40 ns），因此实际选材往往是多个性能指标之间的工程折中，而非单纯追求某一项参数的极致。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch31: Radioactivity and Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

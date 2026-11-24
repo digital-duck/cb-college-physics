@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetic Field | College Physics Ch23</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="magnetic-field">Magnetic Field</h2>
+<p><strong>定义</strong></p>
+<p>磁场 $\vec{B}$ 是一个矢量场，用来描述空间中磁力的分布。它不能像电场那样通过静止电荷直接测量，而是通过它对运动电荷施加的力来定义。对于电荷 $q$，以速度 $\vec{v}$ 运动于磁场 $\vec{B}$ 中，其所受的磁力由洛伦兹力公式给出：</p>
+$$\vec{F} = q\,\vec{v} \times \vec{B}$$
+<p>这里的关键是叉乘运算：$\vec{F}$ 的方向同时垂直于 $\vec{v}$ 和 $\vec{B}$，其大小为</p>
+$$F = qvB\sin\theta$$
+<p>其中 $\theta$ 是 $\vec{v}$ 与 $\vec{B}$ 之间的夹角。这个定义本身就说明了磁场的两个核心性质：静止电荷（$v=0$）不受磁力；沿场方向运动的电荷（$\theta=0$）也不受磁力。磁场的单位是特斯拉（T），$1\text{ T} = 1\,\text{kg}/(\text{A}\cdot\text{s}^2)$。</p>
+<p><strong>例题</strong></p>
+<p>一个电荷 $q = 2\times10^{-6}\,\text{C}$ 以速度 $v = 3\times10^{5}\,\text{m/s}$ 沿 $x$ 轴正方向运动，进入沿 $z$ 轴正方向、大小为 $B = 0.5\,\text{T}$ 的匀强磁场。求该电荷所受磁力。</p>
+<p>由于 $\vec{v} \perp \vec{B}$（$\theta = 90°$），力的大小为：</p>
+$$F = qvB = (2\times10^{-6})(3\times10^5)(0.5) = 0.3\,\text{N}$$
+<p>方向由右手定则确定：$\hat{x} \times \hat{z} = -\hat{y}$，所以力指向 $y$ 轴负方向（若 $q$ 为负，则方向相反）。</p>
+<p><strong>解决问题的应用</strong></p>
+<p>洛伦兹力公式不仅是定义，更是分析带电粒子运动的工具。因为磁力始终垂直于速度，它不改变粒子的速率，只改变运动方向——这正是粒子在匀强磁场中做圆周运动的原因。设圆周运动的半径为 $r$，由牛顿第二定律 $qvB = mv^2/r$，可解得：</p>
+$$r = \frac{mv}{qB}$$
+<p>这个关系式是质谱仪、粒子加速器和磁约束装置设计的基础：已知粒子质量、速度和磁场强度，即可预测其运动轨迹半径，反之也可通过测量轨迹半径反推粒子的荷质比 $q/m$。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch23: Electromagnetic Induction, AC Circuits, and Electrical Technologies (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

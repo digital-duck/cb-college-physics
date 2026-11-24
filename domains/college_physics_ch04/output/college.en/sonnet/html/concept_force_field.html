@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Force Field | College Physics Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="force-field">Force Field</h2>
+<p>A force field is a region of space in which every point is assigned a force vector that would act on a test object placed there. The key idea is that the field exists independently of the test object — it is a property of the <em>source</em> (a mass, a charge, a current) that fills space whether or not anything is there to feel it. Formally, a force field is a vector-valued function $\vec{F}(\vec{r})$ defined over a region of space, where $\vec{r}$ is the position vector of a point in that region.</p>
+<p>The two most important examples are the gravitational field and the electric field. A point mass $M$ produces a gravitational field</p>
+$$\vec{g}(\vec{r}) = -\frac{GM}{r^2}\hat{r}$$
+<p>where $\hat{r}$ points from the source outward and $r = |\vec{r}|$. This is the force <em>per unit mass</em> — plug in a test mass $m$ and the actual force is $\vec{F} = m\vec{g}$. Similarly, a point charge $Q$ produces an electric field $\vec{E}(\vec{r}) = kQ\hat{r}/r^2$, and the force on a test charge $q$ is $\vec{F} = q\vec{E}$. In both cases, notice the field is defined before any test object enters the picture; the test object only reveals the field's effect.</p>
+<p><strong>Worked example.</strong> A point mass $M = 5.0\times10^{24}\,\text{kg}$ sits at the origin. Find the gravitational field at $r = 6.4\times10^{6}\,\text{m}$. Using $G = 6.67\times10^{-11}\,\text{N·m}^2/\text{kg}^2$:</p>
+$$g = \frac{GM}{r^2} = \frac{(6.67\times10^{-11})(5.0\times10^{24})}{(6.4\times10^6)^2} \approx 8.1\,\text{m/s}^2$$
+<p>This value, $8.1\,\text{m/s}^2$, is the field strength at that point — it exists regardless of whether a satellite, a feather, or nothing at all occupies that location. Only when a test mass $m$ is placed there does the field produce an actual force $F = mg$.</p>
+<p><strong>Problem-solving application.</strong> To find the force on any object in a field, decouple the two steps: (1) compute or look up the field $\vec{F}(\vec{r})$ from the source alone, treating position as the only variable; (2) multiply by the test object's mass or charge to get the actual force. This separation is what allows superposition — fields from multiple sources add vectorially at a point <em>before</em> any test object is introduced, which is far simpler than summing forces on the object from each source separately after the fact.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch4: Dynamics: Force and Newton's Laws of Motion (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

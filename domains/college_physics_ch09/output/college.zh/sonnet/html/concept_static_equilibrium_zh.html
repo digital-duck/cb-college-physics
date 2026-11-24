@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Static Equilibrium | College Physics Ch09</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="静力平衡">静力平衡</h2>
+<p><strong>定义</strong></p>
+<p>静力平衡（static equilibrium）指系统处于静止状态,且所受合外力与合外力矩均为零的力学状态。这是刚体平衡的特殊情形——不仅动量不变(平衡的一般条件),还要求系统速度恒为零。用数学语言表述,对于刚体所受的一组外力 $\vec{F}_i$ 和对应力矩 $\vec{\tau}_i$（相对任意参考点），静力平衡要求同时满足两个矢量方程:</p>
+$$
+\sum_i \vec{F}_i = 0, \qquad \sum_i \vec{\tau}_i = \sum_i \vec{r}_i \times \vec{F}_i = 0
+$$
+<p>第一式保证系统不产生平动加速度,第二式保证系统不产生转动加速度。二者缺一不可:合力为零只能排除平动,若合力矩不为零,系统仍会发生转动。</p>
+<p><strong>例题</strong></p>
+<p>一根均匀横梁长 $L=4\,\text{m}$,质量 $m=20\,\text{kg}$,两端分别搁在支座 A 和 B 上,横梁中点处又挂了一个质量 $M=10\,\text{kg}$ 的物体。求两支座提供的支持力 $N_A$、$N_B$。</p>
+<p>设重力加速度 $g=9.8\,\text{m/s}^2$。先列力的平衡方程(竖直方向):</p>
+$$
+N_A + N_B = (m+M)g = 30 \times 9.8 = 294\,\text{N}
+$$
+<p>再以支座 A 为转轴,列力矩平衡方程(横梁重力作用在中点 $L/2$,悬挂物也在中点):</p>
+$$
+N_B \cdot L - mg\cdot\frac{L}{2} - Mg\cdot\frac{L}{2} = 0
+$$
+<p>代入数值解得 $N_B = 147\,\text{N}$,再代回力平衡方程得 $N_A = 147\,\text{N}$。由对称性(重力都作用在中点)结果相等,符合直觉。</p>
+<p><strong>解题应用</strong></p>
+<p>处理静力平衡问题的标准步骤是:(1) 画受力图,标出所有外力及其作用点;(2) 选取合适的转轴(通常选在未知力的作用点,以消去该力对力矩方程的贡献,简化计算);(3) 分别列出 $x$、$y$ 方向的力平衡方程以及绕所选轴的力矩平衡方程;(4) 联立求解未知量。对于二维平面问题,共有三个独立方程(两个力方程、一个力矩方程),因此最多能求解三个未知量。这一分析框架广泛应用于桥梁、脚手架、悬臂梁等结构工程问题,是判断结构是否安全、力是否合理分布的基础工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch9: Statics and Torque (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

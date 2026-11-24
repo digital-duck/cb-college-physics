@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Binding Energy Per Nucleon | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="binding-energy-per-nucleon">Binding Energy Per Nucleon</h2>
+<p><strong>Definition.</strong> The <em>binding energy</em> $B$ of a nucleus is the energy required to separate it completely into free protons and neutrons. It equals the "missing" mass (the mass defect) converted to energy:</p>
+$$B = \left[Z\,m_p + N\,m_n - m_{\text{nucleus}}\right]c^2$$
+<p>where $Z$ is the number of protons, $N$ the number of neutrons, and $A = Z + N$. The <strong>binding energy per nucleon</strong> is</p>
+$$\frac{B}{A},$$
+<p>the average energy needed to remove one nucleon. A higher $B/A$ means a more tightly bound, more stable nucleus. Useful conversion: $1\ \text{u} = 931.5\ \text{MeV}/c^2$.</p>
+<p><strong>Worked example: helium-4.</strong> Use masses $m_p = 1.007276$ u, $m_n = 1.008665$ u, and $m_{\text{He-4}} = 4.001506$ u (nuclear mass).</p>
+<p>Mass of separated nucleons:</p>
+$$2(1.007276) + 2(1.008665) = 4.031882\ \text{u}$$
+<p>Mass defect:</p>
+$$\Delta m = 4.031882 - 4.001506 = 0.030376\ \text{u}$$
+<p>Binding energy:</p>
+$$B = 0.030376 \times 931.5 \approx 28.3\ \text{MeV}$$
+<p>Per nucleon:</p>
+$$\frac{B}{A} = \frac{28.3}{4} \approx 7.07\ \text{MeV/nucleon}$$
+<p><strong>The shape of the curve.</strong> Plotting $B/A$ against $A$ gives a characteristic curve. It rises steeply for light nuclei (deuterium is only about 1.1 MeV/nucleon), reaches a broad maximum near $A \approx 56$ (iron-56 and nickel-62, about 8.8 MeV/nucleon), then declines slowly for heavy nuclei (uranium-238 is about 7.6 MeV/nucleon). The rise comes from the short-range strong force, because each added nucleon gains more neighbors. The decline comes from the growing Coulomb repulsion among protons, which acts over the whole nucleus.</p>
+<p><strong>Problem-solving application: fusion versus fission.</strong> Energy is released when a reaction moves nucleons toward higher $B/A$. The energy released is the <em>total</em> binding energy after minus before:</p>
+$$Q = B_{\text{products}} - B_{\text{reactants}}$$
+<p><em>Fission of uranium.</em> Suppose $^{235}$U ($B/A \approx 7.6$) splits into two fragments near $A \approx 118$ each with $B/A \approx 8.5$. The gain per nucleon is about $0.9$ MeV, so for 235 nucleons:</p>
+$$Q \approx 235 \times 0.9 \approx 210\ \text{MeV}$$
+<p>This matches the roughly 200 MeV measured per fission event.</p>
+<p><em>Fusion of hydrogen isotopes.</em> In D + T $\rightarrow$ He-4 + n, the reactants have $B \approx 2.2 + 8.5 = 10.7$ MeV, and He-4 has $B = 28.3$ MeV (the free neutron has zero). So $Q \approx 28.3 - 10.7 \approx 17.6$ MeV, about 3.5 MeV per nucleon, which is much larger per unit mass than fission.</p>
+<p><strong>Rule of thumb:</strong> Nuclei with $A < 56$ release energy by fusing. Nuclei with $A > 56$ release energy by splitting. Iron-group nuclei sit at the peak, so neither process releases energy from them.</p>
+<pre class="mermaid">flowchart LR
+A["Light nuclei<br/>low B/A"] -->|fusion| B["Iron-group peak<br/>A about 56, B/A about 8.8 MeV"]
+C["Heavy nuclei<br/>B/A about 7.6 MeV"] -->|fission| B
+B --> D["Most tightly bound<br/>no energy release"]</pre>
+<p><em>Both fusion of light nuclei and fission of heavy nuclei move matter toward the iron-group peak in binding energy per nucleon, releasing the difference as energy.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

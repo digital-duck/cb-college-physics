@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy | College Physics Ch29</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="energy">Energy</h2>
+<p><strong>Energy</strong> is the capacity of a system to do work. Work is done when a force $F$ moves an object through a displacement $d$ along the force's direction: $W = Fd\cos\theta$. Energy and work share the SI unit, the joule ($1\ \text{J} = 1\ \text{N·m}$).</p>
+<p><strong>Kinetic energy</strong> is energy of motion:</p>
+$$K = \tfrac{1}{2}mv^2$$
+<p><strong>Gravitational potential energy</strong> is energy stored by position in a gravitational field (near Earth's surface):</p>
+$$U_g = mgh$$
+<p>Other forms, such as thermal, chemical, electrical, and nuclear energy, can be understood as microscopic kinetic and potential energy.</p>
+<h3 id="conservation-of-energy">Conservation of energy</h3>
+<p>Energy is never created or destroyed. It is only transferred or converted. If only conservative forces (such as gravity) act, the total mechanical energy is constant:</p>
+$$K_i + U_i = K_f + U_f$$
+<p>With non-conservative forces such as friction, the work–energy relation applies:</p>
+$$K_i + U_i + W_{\text{nc}} = K_f + U_f$$
+<p>Here $W_{\text{nc}}$ is the work done by non-conservative forces. Friction makes it negative, and the "lost" mechanical energy becomes thermal energy.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>A 2.0 kg ball is dropped from rest at a height of 20 m. How fast is it moving just before it hits the ground? Ignore air resistance.</p>
+<p>Take the ground as $h = 0$. At the start, $K_i = 0$ and $U_i = mgh = (2.0)(9.8)(20) = 392\ \text{J}$. Just before impact, $U_f = 0$, so:</p>
+$$392 = \tfrac{1}{2}(2.0)v^2 \Rightarrow v = \sqrt{392} \approx 19.8\ \text{m/s}$$
+<p>The mass cancels in general ($v = \sqrt{2gh}$), so any dropped object reaches the same speed.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p>A 0.50 kg block slides from rest down a frictionless ramp 3.0 m high. At the bottom it crosses a rough horizontal surface and stops after 6.0 m. Find the coefficient of kinetic friction $\mu_k$.</p>
+<p><strong>Strategy:</strong> Treat the whole motion as one system, from the top (at rest) to the final stop (at rest). Then $K_i = K_f = 0$ and $U_f = 0$, so:</p>
+$$U_i + W_{\text{nc}} = 0$$
+<p>Friction does work $W_{\text{nc}} = -\mu_k mg\,d$ over the distance $d = 6.0$ m. Then:</p>
+$$mgh = \mu_k mg\,d \Rightarrow \mu_k = \frac{h}{d} = \frac{3.0}{6.0} = 0.50$$
+<p>Check: the mass cancels again, and $\mu_k$ is dimensionless, as it should be.</p>
+<p><strong>General method:</strong></p>
+<li>Choose a system and define the initial and final states.</li>
+<li>Set a reference height where $U = 0$.</li>
+<li>List the energy terms at each state. Include non-conservative work if friction or drag is present.</li>
+<li>Apply energy conservation and solve.</li>
+<p>Energy methods avoid tracking forces and time. They only need the beginning and end states. This often makes them much simpler than Newton's second law for problems involving curved paths or changing forces.</p>
+<pre class="mermaid">flowchart LR
+    A["Top of ramp: potential energy mgh"] --> B["Bottom of ramp: kinetic energy"]
+    B --> C["Rough surface: friction does work"]
+    C --> D["Thermal energy and rest"]</pre>
+<p><em>Energy is converted from potential to kinetic, then dissipated as thermal energy by friction. The total remains constant.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch29: Quantum Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

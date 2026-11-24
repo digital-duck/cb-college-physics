@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceleration Due To Gravity | College Physics Ch03</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="acceleration-due-to-gravity">Acceleration Due To Gravity</h2>
+<p><strong>定义</strong></p>
+<p>重力加速度是指物体在地球表面附近自由下落时所获得的恒定加速度，记作 $g$。在忽略空气阻力的理想情况下，地球表面附近的 $g \approx 9.80 \, \text{m/s}^2$，方向竖直向下。这一数值与物体的质量无关——这是牛顿第二定律与万有引力定律相结合的必然结果。</p>
+<p>由牛顿万有引力定律，地球对质量为 $m$ 的物体的引力为</p>
+$$F = \frac{GMm}{R^2}$$
+<p>其中 $G$ 为万有引力常数，$M$ 为地球质量，$R$ 为物体到地心的距离（近似为地球半径）。根据牛顿第二定律 $F = ma$，令两式相等：</p>
+$$ma = \frac{GMm}{R^2} \implies a = g = \frac{GM}{R^2}$$
+<p>质量 $m$ 在等式两边约去，这正是伽利略"轻重物体同时落地"实验的理论解释：加速度只取决于地球的质量与半径，不取决于下落物体自身的质量。</p>
+<p><strong>典型例题</strong></p>
+<p>一颗石子从静止开始自由下落，经过 3 秒后落地，求下落高度与落地速度。</p>
+<p>利用运动学公式（初速度为零）：</p>
+$$v = gt = 9.80 \times 3 = 29.4 \, \text{m/s}$$
+$$h = \frac{1}{2}gt^2 = \frac{1}{2} \times 9.80 \times 9 = 44.1 \, \text{m}$$
+<p><strong>问题解决应用</strong></p>
+<p>在实际问题中，$g$ 常作为已知常数代入运动学三大公式：</p>
+$$v = v_0 + gt, \quad h = v_0 t + \frac{1}{2}gt^2, \quad v^2 = v_0^2 + 2gh$$
+<p>例如，已知某跳伞运动员在开伞前自由下落了 5 秒，可先用第一式求出末速度 $v = 49 \, \text{m/s}$，再用第三式验证下落高度是否与第二式结果一致，从而交叉检验计算无误。需要注意的是，$g$ 的数值会随海拔和纬度略有变化（因为 $R$ 随地理位置改变），在精密工程计算（如卫星轨道设计）中不能简单套用 $9.80 \, \text{m/s}^2$，而应结合具体高度重新计算。这体现了公式背后物理原理的普适性与数值近似的局限性之间的区别。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch3: Two-Dimensional Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

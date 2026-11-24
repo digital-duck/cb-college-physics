@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fictitious Force | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="fictitious-force">Fictitious Force</h2>
+<p><strong>定义</strong></p>
+<p>牛顿第二定律 $\vec{F} = m\vec{a}$ 只在惯性参考系中成立。当我们选择一个非惯性参考系——即相对惯性系做加速或旋转运动的参考系——来描述物体运动时,若仍想让 $\vec{F} = m\vec{a}$ 的形式保持成立,就必须人为引入一个额外的"力"项来补偿参考系本身的加速度。这个补偿项被称为<strong>惯性力</strong>(fictitious force,又译"假想力"或"惯性力"),它没有真实的物理来源(既不是接触力,也不是场力),纯粹是坐标变换的数学产物。其一般表达式为:</p>
+$$\vec{F}_{\text{fict}} = -m\vec{a}_{\text{frame}}$$
+<p>其中 $\vec{a}_{\text{frame}}$ 是非惯性系相对惯性系的加速度,负号表示惯性力方向与参考系加速度方向相反。</p>
+<p>对于旋转参考系,情况更复杂,需要引入两类惯性力:<strong>离心力</strong> $\vec{F}_{\text{cf}} = -m\vec{\omega} \times (\vec{\omega} \times \vec{r})$,方向沿半径向外;以及<strong>科里奥利力</strong> $\vec{F}_{\text{Cor}} = -2m\vec{\omega} \times \vec{v}_{\text{rel}}$,只作用于在旋转系中运动的物体。</p>
+<p><strong>范例演算</strong></p>
+<p>设想一辆汽车以加速度 $a = 3\ \text{m/s}^2$ 向前加速,车内悬挂的一个质量 $m = 0.5\ \text{kg}$ 的挂件偏离竖直方向一个角度 $\theta$。在地面惯性系看来,挂件受重力 $mg$ 和绳张力 $T$,合力提供水平加速度:$T\sin\theta = ma$,$T\cos\theta = mg$,故 $\tan\theta = a/g$。</p>
+<p>若改用车内的非惯性系分析,挂件是静止的,必须额外加入一个大小为 $ma$、方向指向车后方的惯性力,才能使受力平衡:$T\sin\theta = F_{\text{fict}} = ma$,与惯性系结果完全一致。两种分析给出相同的 $\theta$,说明惯性力只是记账方式的转换,不改变物理结果。</p>
+<p><strong>应用于问题求解</strong></p>
+<p>判断某"力"是否为惯性力的关键测试:能否找到施力物体?若找不到反作用力的来源(不满足牛顿第三定律),它就是惯性力,例如旋转木马上感受到的"离心力"、地球自转导致的科里奥利效应(影响信风与洋流方向)、电梯加速时脚下的超重/失重感。解题策略上,面对旋转或加速系统时,学生可选择:(1)留在惯性系,只用真实力分析;或(2)转入非惯性系,加入惯性力项使 $\vec{F}=m\vec{a}$ 依旧成立——两条路径应给出一致的运动学结果,这也是检验解答正确性的有效手段。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

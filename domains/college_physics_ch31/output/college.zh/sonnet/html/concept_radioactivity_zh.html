@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radioactivity | College Physics Ch31</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="radioactivity">Radioactivity</h2>
+<p><strong>定义</strong></p>
+<p>放射性是指某些原子核由于结构不稳定，自发地放出射线并转变为另一种核素的过程。不稳定的根源在于核内质子与中子的比例失衡，或者核的总能量高于更稳定构型的能量。核衰变遵循质能关系 $E = mc^2$：衰变前后母核与子核（及放出粒子）的静止质量之和减小，损失的质量转化为射线的动能与电磁辐射能量，这部分能量差称为衰变能 $Q$：</p>
+$$
+Q = \left[m_{\text{母核}} - \left(m_{\text{子核}} + m_{\text{放出粒子}}\right)\right]c^2
+$$
+<p>放射性衰变是概率过程，其规律不是"何时衰变"而是"衰变的统计速率"。设某时刻原子核数目为 $N$，衰变速率与 $N$ 成正比：</p>
+$$
+\frac{dN}{dt} = -\lambda N
+$$
+<p>其中 $\lambda$ 为衰变常数，反映该核素的固有不稳定程度。求解此微分方程得指数衰减规律：</p>
+$$
+N(t) = N_0 e^{-\lambda t}
+$$
+<p>由此定义半衰期 $T_{1/2}$（原子核数目衰减到初始值一半所需的时间），令 $N(T_{1/2}) = N_0/2$，可得：</p>
+$$
+T_{1/2} = \frac{\ln 2}{\lambda}
+$$
+<p><strong>例题</strong></p>
+<p>某放射性同位素的半衰期为 8 天，初始样品含 $N_0 = 1.0 \times 10^{20}$ 个原子核。求 24 天后剩余的原子核数目。</p>
+<p>解：24 天恰好是 3 个半衰期（$24/8=3$），故</p>
+$$
+N(t) = N_0 \left(\tfrac{1}{2}\right)^{t/T_{1/2}} = 1.0\times10^{20} \times \left(\tfrac{1}{2}\right)^3 = 1.25\times10^{19}
+$$
+<p><strong>问题解决应用</strong></p>
+<p>半衰期公式广泛用于放射性年代测定，例如碳-14 测年法。已知活体生物体内 $^{14}\text{C}$ 与 $^{12}\text{C}$ 比例恒定，生物死亡后 $^{14}\text{C}$ 不再补充，只按 $\lambda$ 衰减（$T_{1/2}=5730$ 年）。若测得样品中 $^{14}\text{C}$ 残余比例为初始值的 $12.5\%$（即 $1/8$），可反推年代：</p>
+$$
+\frac{1}{8} = \left(\frac{1}{2}\right)^{t/5730} \Rightarrow \frac{t}{5730} = 3 \Rightarrow t = 17190 \text{ 年}
+$$
+<p>这种"指数衰减—反解时间"的思路同样适用于核医学剂量计算、核废料安全存储年限估算等实际问题：只要知道 $\lambda$（或 $T_{1/2}$）与当前测量值，就能反推经过的时间或预测未来某时刻的放射性水平。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch31: Radioactivity and Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

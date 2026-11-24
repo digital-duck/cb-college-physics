@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centripetal Acceleration | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="向心加速度">向心加速度</h2>
+<p><strong>定义</strong></p>
+<p>当物体沿圆周做匀速率运动时，其速度大小不变，但速度方向在不断改变——而这本身就意味着物体存在加速度。这个加速度的方向始终指向圆心，称为<strong>向心加速度</strong>，记作 $a_c$。它的大小可以用两种等价的方式表示：</p>
+$$
+a_c = \frac{v^2}{r} = r\omega^2
+$$
+<p>其中 $v$ 是线速度大小，$r$ 是圆周运动半径，$\omega$ 是角速度。这两个公式之间通过 $v = r\omega$ 相互转换，选择哪个取决于题目给出的是线速度还是角速度。</p>
+<p>需要强调的是：向心加速度不改变速率，只改变速度方向。它与产生它的合力（向心力 $F_c = ma_c$）方向相同，都指向圆心，但这并不是一种"新的力"，而是牛顿第二定律在圆周运动这一特定几何约束下的自然结果——可能由绳的张力、重力、摩擦力或电磁力等实际的力来提供。</p>
+<p><strong>推导要点</strong></p>
+<p>考虑位置矢量 $\vec{r}(t)$ 大小不变、方向以角速度 $\omega$ 旋转。对速度矢量 $\vec{v}(t)$（其大小恒为 $v = r\omega$，方向始终垂直于 $\vec{r}$）再求一次时间导数，可以证明加速度矢量的大小为 $r\omega^2$，方向与 $\vec{r}$ 相反（即指向圆心）。这正是公式 $a_c = r\omega^2 = v^2/r$ 的来源，也说明了为什么"匀速率"不等于"零加速度"。</p>
+<p><strong>例题</strong></p>
+<p>一辆车以 $v = 20\ \text{m/s}$ 的速度通过半径 $r = 50\ \text{m}$ 的弯道。求向心加速度，并判断轮胎与路面之间所需的最小摩擦系数（取 $g = 9.8\ \text{m/s}^2$）。</p>
+$$
+a_c = \frac{v^2}{r} = \frac{(20)^2}{50} = 8\ \text{m/s}^2
+$$
+<p>要提供这一加速度，摩擦力须满足 $f = ma_c$，而摩擦力上限为 $f_{\max} = \mu m g$。因此：</p>
+$$
+\mu \geq \frac{a_c}{g} = \frac{8}{9.8} \approx 0.82
+$$
+<p>若实际路面摩擦系数小于 0.82（例如结冰路面），车辆将无法维持该弯道半径，会发生侧滑。</p>
+<p><strong>应用要点</strong>：解题时先判断题目给出的是 $v$ 还是 $\omega$，选用对应公式；再结合具体情境（绳的张力、轨道摩擦、卫星引力等）写出 $F_c = ma_c$ 的力方程，即可求解未知量。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

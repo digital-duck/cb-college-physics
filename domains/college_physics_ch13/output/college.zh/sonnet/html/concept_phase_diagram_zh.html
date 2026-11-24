@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phase Diagram | College Physics Ch13</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="相图">相图</h2>
+<p><strong>定义</strong></p>
+<p>相图（Phase Diagram）是以压强 $p$ 为纵轴、温度 $T$ 为横轴绘制的图像，用来表示一种物质在不同 $p$-$T$ 条件下所处的稳定相态（固、液、气），以及各相之间发生转变的边界。图中每一条曲线代表两相共存的条件，即在该曲线上的任意一点，两种相可以同时稳定存在、处于热力学平衡。三条曲线的交点称为<strong>三相点</strong>（triple point），此处固、液、气三相同时共存；液相与气相边界曲线的终点称为<strong>临界点</strong>（critical point），超过该点后液态与气态不再有明确区别，物质进入超临界流体状态。</p>
+<p>相图中的每一条边界曲线都对应克拉珀龙方程（Clausius–Clapeyron equation）所描述的关系：</p>
+$$
+\frac{dp}{dT} = \frac{L}{T\,\Delta V}
+$$
+<p>其中 $L$ 是相变潜热，$\Delta V$ 是相变前后摩尔体积之差。这个方程解释了为什么固液边界的斜率对大多数物质为正（熔化时体积增大），而对水这样的反常物质则为负（结冰时体积增大，冰比水轻）。</p>
+<p><strong>实例分析</strong></p>
+<p>以水的相图为例：在标准大气压（$1\ \text{atm}$）下，固液边界对应 $T = 0^\circ\text{C}$，液气边界对应 $T = 100^\circ\text{C}$。水的三相点位于 $T = 0.01^\circ\text{C}$，$p = 611.7\ \text{Pa}$，这是固、液、气三相唯一共存的精确坐标，也是开尔文温标定义的基准点之一。临界点位于 $T = 374^\circ\text{C}$，$p \approx 22.1\ \text{MPa}$。</p>
+<p><strong>问题求解应用</strong></p>
+<p>利用相图可以预测物质在给定条件下的相态变化路径。例如，登山者在海拔 5000 米处（气压约为 $0.54\ \text{atm}$）会发现水的沸点降至约 $83^\circ\text{C}$——这可以直接从液气边界曲线在该压强下对应的温度读出，从而解释为何高海拔地区煮饭需要更长时间。又如，通过 Clausius–Clapeyron 方程，已知某压强 $p_1$ 下的沸点 $T_1$，可以估算另一压强 $p_2$ 下的沸点 $T_2$：</p>
+$$
+\ln\frac{p_2}{p_1} = -\frac{L}{R}\left(\frac{1}{T_2}-\frac{1}{T_1}\right)
+$$
+<p>这类计算广泛应用于压力锅设计、真空冷冻干燥工艺以及地质学中矿物相变条件的推断。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch13: Temperature, Kinetic Theory, and the Gas Laws (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X Rays | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="x-rays">X Rays</h2>
+<p><strong>定义</strong></p>
+<p>X 射线是波长极短（通常小于约 10 nm，能量范围约 100 eV 至 100 keV）的高频电磁辐射。它主要通过两种物理机制产生：一是<strong>特征辐射</strong>——高速电子撞击靶材原子，将内层电子（如 K 层）击出，外层电子跃迁填补空位时释放出能量确定的光子；二是<strong>轫致辐射</strong>（Bremsstrahlung，"制动辐射"）——高速电子在靶材原子核的强电场中减速时,损失的动能转化为连续谱的光子。特征辐射的光子能量由跃迁前后能级差决定：</p>
+$$E_{\gamma} = h\nu = E_i - E_f$$
+<p>其中 $h$ 为普朗克常数，$\nu$ 为频率。由于波长与能量成反比（$\lambda = hc/E$），X 射线能量越高，穿透物质的能力越强，这正是其成像与治疗应用的物理基础。</p>
+<p><strong>举例说明</strong></p>
+<p>医用 X 光机中，电子在真空管内被加速到约 30–150 kV 的电压差，撞击钨靶。多数电子动能通过轫致辐射转化为连续谱光子,少量电子恰好击出钨原子的 K 层电子，产生尖锐的特征谱线（钨的 $K_\alpha$ 线约在 59 keV）。这两种谱叠加,形成医学影像设备实际使用的复合能谱。</p>
+<p><strong>问题解决应用</strong></p>
+<p>X 射线成像的核心原理是<strong>差异吸收</strong>：不同组织对 X 射线的吸收系数 $\mu$ 不同,光强按指数衰减：</p>
+$$I = I_0 e^{-\mu x}$$
+<p>其中 $I_0$ 为入射光强，$x$ 为穿透厚度。骨骼（高钙、高密度）的 $\mu$ 远大于软组织,因此在探测器上形成明暗对比,构成影像。</p>
+<p><strong>实践问题</strong>：某束 X 射线穿过 2 cm 厚的软组织后强度衰减为初始值的 80%，求该组织的线性吸收系数 $\mu$。</p>
+<p>由 $I/I_0 = e^{-\mu x} = 0.80$，两边取自然对数：</p>
+$$\mu = -\frac{\ln(0.80)}{x} = -\frac{-0.223}{2\text{ cm}} \approx 0.112\ \text{cm}^{-1}$$
+<p>这类计算是放射诊断剂量设计与影像对比度优化的基础。在肿瘤放疗中，工程师需要反向利用这一原理：选择合适能量的 X 射线，使其在到达体表下特定深度（肿瘤位置）时释放最大能量，同时最小化对周围健康组织的损伤，这依赖于对吸收系数随深度和能量变化规律的精确建模。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

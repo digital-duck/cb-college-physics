@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laser Vision Correction | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="laser-vision-correction-激光矫正视力">Laser Vision Correction（激光矫正视力）</h2>
+<p><strong>定义</strong></p>
+<p>激光矫正视力是一种利用准分子激光（excimer laser）脉冲对角膜进行精确切削、从而改变角膜屈光力的外科手术。角膜和晶状体共同决定了眼睛的总屈光力，理想情况下，光线经过角膜和晶状体折射后应精确聚焦在视网膜上。当角膜曲率过陡或过平、或呈不规则形状时，会分别导致近视（myopia）、远视（hyperopia）或散光（astigmatism）。准分子激光发射波长约 193 nm 的紫外光，其光子能量足以直接打断角膜组织中的分子键（称为"光致分解"，photoablation），而非通过加热汽化组织，因此能以微米级精度去除角膜表层，几乎不损伤周围组织。医生根据患者的屈光度数（以屈光度 D 表示，$D = 1/f$，其中 $f$ 为等效焦距，单位为米）计算出所需切削的角膜形状，由计算机控制激光逐层重塑角膜曲率。</p>
+<p><strong>实例分析</strong></p>
+<p>以近视矫正为例：近视眼的角膜过陡，使光线在视网膜前方聚焦。假设某患者近视度数为 $-5.00\,D$，医生会用激光将角膜中央区域削薄、变平，从而降低角膜的屈光力约 5 个屈光度，使焦点后移，恰好落在视网膜上。远视矫正则相反——激光切削角膜周边、使中央相对变陡，增强屈光力。散光矫正则需要针对角膜某一特定子午线方向进行不对称切削，消除角膜两个主曲率方向屈光力不一致的问题。整个手术通常分两步：先用另一种方式（如制作角膜瓣，LASIK技术）掀开角膜表层，暴露基质层，再用激光切削，最后将角膜瓣复位愈合。</p>
+<p><strong>应用与问题解决</strong></p>
+<p>从工程角度看，激光矫正视力体现了"用光子能量精确控制物质去除量"这一思路：193 nm 紫外光子能量约为 6.4 eV，恰好高于角膜胶原分子中碳-碳、碳-氮键的键能（约 3–4 eV），因此每个光子可直接断键气化极薄一层组织（约 0.25 微米/脉冲），而不会像红外激光那样因热扩散损伤周围区域。理解这一点有助于分析：为什么该技术必须用紫外准分子激光而非普通激光——关键在于光子能量与化学键能的匹配，这是该手术精度与安全性的根本来源，也是许多精密材料加工（如芯片光刻）共享的物理原理。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

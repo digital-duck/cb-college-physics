@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charging By Contact | College Physics Ch18</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="charging-by-contact">Charging By Contact</h2>
+<p><strong>定义</strong></p>
+<p>接触起电（Charging by Contact）是指将一个带电体直接接触一个中性（或带电）导体，使电荷从带电体转移到该导体上的过程。转移后，两者带上<strong>同种电荷</strong>——这是接触起电区别于感应起电的关键特征。其物理基础是<strong>电荷守恒定律</strong>：电荷既不能被创造也不能被消灭，只能从一个物体转移到另一个物体。当两个导体接触时，自由电子（或多余电荷）会重新分布，直到两者达到相同的电势。</p>
+<p><strong>定量关系（导体球模型）</strong></p>
+<p>若两个完全相同（半径相同、材质相同）的导体球分别带电荷 $q_1$ 和 $q_2$，接触后由于对称性，电荷会均分：</p>
+$$
+q_1' = q_2' = \frac{q_1 + q_2}{2}
+$$
+<p>若两球半径不同（$r_1 \neq r_2$），则接触后电荷按半径比例分配，因为接触后两球电势必须相等：</p>
+$$
+V_1 = V_2 \;\Rightarrow\; \frac{k q_1'}{r_1} = \frac{k q_2'}{r_2}
+$$
+<p>结合电荷守恒 $q_1' + q_2' = q_1 + q_2$，可解得：</p>
+$$
+q_1' = (q_1+q_2)\frac{r_1}{r_1+r_2}, \qquad q_2' = (q_1+q_2)\frac{r_2}{r_1+r_2}
+$$
+<p><strong>例题</strong></p>
+<p>一个半径 $r_1 = 2\,\text{cm}$、带电荷 $+6\,\mu C$ 的导体球，接触另一个半径 $r_2 = 4\,\text{cm}$、带电荷 $-2\,\mu C$ 的中性大小不同的导体球。求接触后两球各带电荷。</p>
+<p>先算总电荷：$q_1+q_2 = 6 + (-2) = 4\,\mu C$。</p>
+<p>按半径比例分配：</p>
+$$
+q_1' = 4 \times \frac{2}{2+4} = 1.33\,\mu C, \qquad q_2' = 4 \times \frac{4}{6} = 2.67\,\mu C
+$$
+<p>两球最终都带正电，且电荷之比等于半径之比，符合等势条件。</p>
+<p><strong>解题应用</strong></p>
+<p>处理接触起电问题时，第一步永远是先用电荷守恒算出总电荷，再根据两导体是否全等决定是均分还是按半径（更一般地按电容 $C \propto r$）分配。若题目涉及多个物体依次接触，应按顺序逐次应用同一原理，前一步的结果作为下一步的初始电荷。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch18: Electric Charge and Electric Field (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

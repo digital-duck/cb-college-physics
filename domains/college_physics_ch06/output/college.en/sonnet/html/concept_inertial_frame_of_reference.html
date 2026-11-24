@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inertial Frame Of Reference | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="inertial-frame-of-reference">Inertial Frame Of Reference</h2>
+<p>An inertial frame of reference is a coordinate system in which a body subject to zero net force moves at constant velocity — Newton's first law holds exactly, with no unexplained accelerations. Equivalently, in an inertial frame every force acting on an object can be traced to an identifiable physical source (gravity, tension, friction, electromagnetic interaction). Any frame moving at constant velocity relative to an inertial frame is also inertial, since accelerations transform identically between them: $\vec{a}' = \vec{a}$ when $\vec{v}_{\text{frame}} = \text{constant}$. A frame that is accelerating or rotating relative to an inertial frame is <em>non-inertial</em>, and in it, objects appear to accelerate with no real force causing them to — for example, passengers lurch forward when a bus brakes, even though no physical force pushed them forward. To make Newton's second law $F = ma$ balance in a non-inertial frame, physicists introduce a <em>fictitious force</em> ($-m\vec{a}_{\text{frame}}$, or the centrifugal/Coriolis terms for rotation) — a mathematical correction, not a real interaction.</p>
+<p><strong>Worked example:</strong> A ball rests on a frictionless table inside a train. In the ground frame (inertial), if the train accelerates forward at $a = 2\ \text{m/s}^2$, the ball — with no horizontal force acting on it — stays at rest relative to the ground, so it appears to slide backward relative to the train. A passenger inside the train (non-inertial frame) sees the ball accelerate backward at $2\ \text{m/s}^2$ and, to apply $F=ma$, must invoke a fictitious force $F_{\text{fict}} = -ma$ acting on the ball, even though nothing physically touched it.</p>
+<p><strong>Problem-solving application:</strong> When analyzing motion, first ask whether your reference frame is inertial. If it is rotating or accelerating (a car turning, a spinning space station, Earth's surface over large timescales), either (1) switch to an inertial frame and solve there, then transform results back, or (2) stay in the non-inertial frame but add the correct fictitious force term. Misidentifying the frame is a common source of error — e.g., forgetting the Coriolis force when modeling projectile motion over long distances on Earth's rotating surface leads to systematic prediction errors.</p>
+<pre class="mermaid">graph TD
+    A[Inertial Frame] -->|Newton's laws hold directly| B[Object with F=0 moves at constant velocity]
+    C[Non-Inertial Frame] -->|accelerating or rotating| D[Apparent acceleration with no real force]
+    D --> E[Add fictitious force to restore F=ma]</pre>
+<p><em>Comparison of inertial and non-inertial frames: only the non-inertial case requires a fictitious force correction.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

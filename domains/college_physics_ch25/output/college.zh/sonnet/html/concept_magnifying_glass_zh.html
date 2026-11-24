@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnifying Glass | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="magnifying-glass">Magnifying Glass</h2>
+<p><strong>定义</strong></p>
+<p>放大镜（magnifying glass）是一个凸透镜（会聚透镜），使用时将物体放置在透镜的焦点以内（即物距 $u < f$）。此时透镜无法形成实像，而是产生一个正立、放大的虚像，位于透镜与物体同侧。这正是薄透镜成像的"情形二"：物在焦点之内。</p>
+<p>成像规律仍由薄透镜公式描述：</p>
+$$\frac{1}{v} - \frac{1}{u} = \frac{1}{f}$$
+<p>（采用笛卡尔符号约定：物距 $u$ 取负值，因为物在入射光一侧）当 $|u| < f$ 时，计算得到的像距 $v$ 与物同侧，且为负值，表明这是一个虚像。放大率为：</p>
+$$m = \frac{v}{u} = 1 + \frac{d}{f}$$
+<p>其中 $d$ 是像与眼睛之间的清晰视距（通常取明视距离 25 cm）。由此可见，焦距 $f$ 越短，放大倍数越大。</p>
+<p><strong>范例</strong></p>
+<p>设一枚焦距 $f = 5\ \text{cm}$ 的凸透镜作放大镜使用，将邮票放在距透镜 $4\ \text{cm}$ 处观察。</p>
+<p>取 $u = -4\ \text{cm}$，代入透镜公式：</p>
+$$\frac{1}{v} = \frac{1}{f} + \frac{1}{u} = \frac{1}{5} + \frac{1}{-4} = \frac{4-5}{20} = -\frac{1}{20}$$
+<p>得 $v = -20\ \text{cm}$，即虚像位于透镜同侧、距透镜 20 cm 处。放大率：</p>
+$$m = \frac{v}{u} = \frac{-20}{-4} = 5$$
+<p>图像被放大 5 倍，且方向正立——这正是放大镜"看起来更大"的原因。</p>
+<p><strong>解题应用</strong></p>
+<p>放大镜的核心设计问题是：<strong>给定所需放大率，如何选择透镜焦距，并确定物体的合理放置范围？</strong></p>
+<p>若要求以明视距离 $d = 25\ \text{cm}$ 观察时获得放大率 $m$，可用公式反推所需焦距：</p>
+$$f = \frac{d}{m-1}$$
+<p>例如，若需要放大 10 倍的放大镜，则 $f = 25/9 \approx 2.8\ \text{cm}$，说明高放大率必须配合极短焦距的透镜，这也解释了为何强力放大镜或显微镜物镜的透镜都非常"厚"且曲率很大。</p>
+<p>此外，为保证成像为虚像（而非实像），必须始终满足 $u < f$；若物距恰好等于焦距，光线经透镜后平行射出，人眼将无法聚焦成像。这一约束是设计任何目视光学仪器（如显微镜目镜、望远镜目镜）时必须遵守的基本条件。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

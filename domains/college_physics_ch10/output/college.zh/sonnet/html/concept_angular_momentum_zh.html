@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angular Momentum | College Physics Ch10</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="angular-momentum">Angular Momentum</h2>
+<p><strong>定义</strong></p>
+<p>角动量是线动量在转动系统中的对应量，用于描述物体绕轴旋转所包含的"转动惯性"。对于绕固定轴转动的刚体，角动量定义为</p>
+$$L = I\omega$$
+<p>其中 $I$ 为转动惯量（$\mathrm{kg \cdot m^2}$），$\omega$ 为角速度（$\mathrm{rad/s}$）。因此角动量的单位为 $\mathrm{kg \cdot m^2/s}$。对于绕原点运动的质点，角动量也可等价地写成矢量形式</p>
+$$\vec{L} = \vec{r} \times \vec{p} = m(\vec{r} \times \vec{v})$$
+<p>这两种表达式在描述同一物理量：前者适用于已知转动惯量的刚体系统，后者适用于任意运动质点相对某参考点的角动量。角动量的核心地位来自<strong>角动量守恒定律</strong>：当系统所受合外力矩为零时，总角动量保持不变，</p>
+$$\tau_{\text{net}} = \frac{dL}{dt} = 0 \implies L = \text{常量}$$
+<p>这一守恒律是牛顿第二定律转动形式的直接推论，也是分析旋转系统最强有力的工具之一。</p>
+<p><strong>例题</strong></p>
+<p>一名花样滑冰运动员双臂伸展旋转，转动惯量为 $I_1 = 4.0\ \mathrm{kg \cdot m^2}$，角速度 $\omega_1 = 2.0\ \mathrm{rad/s}$。当她收拢双臂时，转动惯量减小为 $I_2 = 1.0\ \mathrm{kg \cdot m^2}$。求收拢后的角速度。</p>
+<p>由于外力矩（近似）为零，角动量守恒：</p>
+$$I_1 \omega_1 = I_2 \omega_2$$
+$$\omega_2 = \frac{I_1 \omega_1}{I_2} = \frac{(4.0)(2.0)}{1.0} = 8.0\ \mathrm{rad/s}$$
+<p>收拢双臂使转动惯量减小为原来的四分之一，角速度相应增大四倍——这正是花样滑冰运动员加速旋转的物理原理。</p>
+<p><strong>问题求解应用</strong></p>
+<p>角动量守恒常用于处理"内部结构变化但外力矩为零"的系统：坍缩恒星自转加速、猫从空中翻转落地、行星椭圆轨道中近日点速度更快（开普勒第二定律的本质）。解题步骤通常为：(1) 确认系统合外力矩是否为零（若转轴通过质心且无外部扭矩，则成立）；(2) 分别计算变化前后的转动惯量 $I$；(3) 应用 $I_1\omega_1 = I_2\omega_2$ 求解未知量。需注意，动能 $\frac{1}{2}I\omega^2$ 在此类过程中通常<strong>不守恒</strong>——收拢双臂做的内部功会转化为额外的动能，这是与线动量碰撞问题的重要区别。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch10: Rotational Motion and Angular Momentum (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

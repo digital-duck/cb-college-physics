@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mechanical Advantage | College Physics Ch09</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="mechanical-advantage">Mechanical Advantage</h2>
+<p>A simple machine — a lever, pulley, inclined plane, wedge, or screw — does not create energy; it trades force for distance so that a smaller input force can move a larger load. <strong>Mechanical advantage (MA)</strong> quantifies that trade-off as the ratio of output (load) force to input (effort) force:</p>
+$$
+MA = \frac{F_{\text{out}}}{F_{\text{in}}}
+$$
+<p>For an <em>ideal</em> machine (frictionless, massless components), energy conservation requires that input work equal output work: $F_{\text{in}} d_{\text{in}} = F_{\text{out}} d_{\text{out}}$, where $d$ denotes the distance each force acts through. Rearranging gives the <strong>ideal mechanical advantage (IMA)</strong>:</p>
+$$
+IMA = \frac{F_{\text{out}}}{F_{\text{in}}} = \frac{d_{\text{in}}}{d_{\text{out}}}
+$$
+<p>This form is powerful because $d_{\text{in}}/d_{\text{out}}$ is a purely geometric ratio — you can compute it from the machine's dimensions without ever measuring force.</p>
+<p><strong>Worked example.</strong> A lever has its fulcrum 0.2 m from the load and 1.0 m from the effort. If you push down with 50 N, what load can you lift? First, $IMA = d_{\text{in}}/d_{\text{out}} = 1.0\ \text{m} / 0.2\ \text{m} = 5$. Then $F_{\text{out}} = IMA \times F_{\text{in}} = 5 \times 50\ \text{N} = 250\ \text{N}$. The lever multiplies your effort fivefold, at the cost of pushing through five times the distance the load moves.</p>
+<p><strong>Problem-solving application.</strong> Real machines suffer friction, so the <em>actual</em> mechanical advantage (AMA), measured directly as $F_{\text{out}}/F_{\text{in}}$ from real force data, is always less than or equal to the IMA. The ratio between them defines <strong>efficiency</strong>:</p>
+$$
+\eta = \frac{AMA}{IMA} \times 100\%
+$$
+<p>Suppose the lever above actually requires 60 N to lift the same 250 N load (friction at the fulcrum). Then $AMA = 250/60 \approx 4.17$, and $\eta = 4.17/5 \times 100\% \approx 83\%$. This two-step method — compute IMA from geometry, compare to measured AMA — is the standard approach engineers use to diagnose energy losses in gear trains, pulley systems, and hydraulic jacks, and it generalizes directly to compound machines, where the overall mechanical advantage is the product of the MAs of each stage.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch9: Statics and Torque (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

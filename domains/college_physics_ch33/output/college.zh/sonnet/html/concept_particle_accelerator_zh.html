@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Particle Accelerator | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="粒子加速器">粒子加速器</h2>
+<p><strong>定义</strong></p>
+<p>粒子加速器是利用电场对带电粒子（如电子、质子）反复做功，使其获得极高动能的装置。根据洛伦兹力，静电场或射频交变电场推动粒子加速，磁场则用于弯转和聚焦束流,使其沿闭合轨道（如同步加速器）或直线路径（如直线加速器）运行。当两束高能粒子对撞时,碰撞点的能量密度足以通过 $E = mc^2$ 将动能转化为新粒子的静止质量,从而创造出自然界中罕见甚至从未观测过的粒子——这正是发现希格斯玻色子等新粒子的核心原理。</p>
+<p><strong>能量与质量的关系</strong></p>
+<p>设粒子经过电势差 $V$ 加速,获得能量 $E = qV$。当粒子速度接近光速时,必须用相对论能量关系:</p>
+$$
+E^2 = (pc)^2 + (mc^2)^2
+$$
+<p>其中 $p$ 为动量,$m$ 为静止质量。对撞机的关键指标是<strong>质心系能量</strong> $\sqrt{s}$,它决定了可能产生的最重新粒子的质量上限:若两束能量为 $E_1, E_2$ 的粒子正面对撞,则 $\sqrt{s} \approx 2\sqrt{E_1 E_2}$(高能极限下)。这就是为什么发现更重的粒子(如顶夸克、希格斯玻色子)需要不断提高加速器能量——必须有足够的能量"预算"来转化为质量。</p>
+<p><strong>问题解决应用</strong></p>
+<p>例如,大型强子对撞机(LHC)将质子加速到每束 6.5 TeV,对撞产生 $\sqrt{s} = 13\text{ TeV}$ 的质心能量。已知希格斯玻色子质量约为 125 GeV/$c^2$,对应静能 $mc^2 = 125$ GeV。由于 13 TeV $\gg$ 125 GeV,能量绰绰有余,但产生希格斯玻色子仍需满足动量守恒、量子数守恒等约束,且需要大量对撞事件才能在背景噪声中"筛选"出信号——这也是加速器设计中"亮度"(单位时间碰撞次数)与能量同等重要的原因。</p>
+<p>工程上,加速器设计需要权衡:半径越大,磁场把粒子弯转所需的力越小,可达能量越高,但建造成本和造价随半径急剧上升;直线加速器无需强磁场弯转,但长度需按能量线性增长。这类权衡正是加速器物理学中"能量-成本-规模"问题求解的核心。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

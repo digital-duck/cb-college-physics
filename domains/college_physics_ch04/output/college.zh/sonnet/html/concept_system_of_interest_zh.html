@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>System Of Interest | College Physics Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="system-of-interest">System Of Interest</h2>
+<p><strong>定义</strong></p>
+<p>在力学分析中，"研究对象"（system of interest）指分析者主动划定的一个边界，用以圈定哪些物体或物体集合被纳入分析范围。这条边界一旦确定，作用力就被明确分为两类：<strong>外力</strong>（由边界之外的物体施加于研究对象上的力）和<strong>内力</strong>（研究对象内部各部分之间相互施加的力）。牛顿第二定律 $\sum \vec{F}_{ext} = m\vec{a}$ 只对外力求和——内力由于牛顿第三定律成对抵消，不会改变系统整体的运动状态，但如果错误地将某个内力当作外力计入，或者遗漏了应计入的外力，整个受力分析和后续计算就会出错。因此，选取研究对象并非可有可无的准备步骤，而是解题正确性的前提。</p>
+<p><strong>举例说明</strong></p>
+<p>考虑一个质量为 $m_1$ 的木块通过绳子拉动地面上另一个质量为 $m_2$ 的木块，外力 $F$ 施加在前一木块上，忽略摩擦。</p>
+<li>若将<strong>两木块整体</strong>设为研究对象：绳的张力是内力，不出现在方程中；边界外的力只有 $F$、重力与地面法向力。此时 $F = (m_1+m_2)a$，一步求出加速度。</li>
+<li>若将<strong>木块2单独</strong>设为研究对象：此时绳的张力 $T$ 成为外力（因为绳子对木块2而言来自边界之外），方程为 $T = m_2 a$。</li>
+<p>两种选择都合法，但服务于不同目的：整体分析求加速度最快；单独分析木块2则能求出张力 $T$ 这一"内部"量。这说明研究对象的选取本身就是一种求解策略。</p>
+<p><strong>解题应用</strong></p>
+<p>处理多物体问题的标准做法是：</p>
+<li>明确要求什么未知量（加速度、张力、法向力等）；</li>
+<li>选择一个使目标未知量恰好以外力形式出现的研究对象；</li>
+<li>画出该对象的自由体图，只标出边界外部施加的力；</li>
+<li>对每个方向应用 $\sum F = ma$。</li>
+<p>常见错误是把整体的受力图和单个物体的受力图混用——例如在分析木块2时错误地画上了 $F$（作用在木块1上，与木块2无关）。训练自己反复问："这个力的来源在边界内还是边界外？"是掌握多物体动力学问题的核心技能。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch4: Dynamics: Force and Newton's Laws of Motion (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amplitude | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="amplitude">Amplitude</h2>
+<p><strong>Definition.</strong> The <em>amplitude</em> of a wave is the maximum displacement (or pressure variation) of the wave from its equilibrium value. For a sinusoidal wave, the displacement at position $x$ and time $t$ is</p>
+$$y(x,t) = A\sin(kx - \omega t + \phi),$$
+<p>where $A \ge 0$ is the amplitude, $k$ is the wave number, $\omega$ the angular frequency, and $\phi$ the phase constant. Because $|\sin| \le 1$, the wave oscillates between $+A$ and $-A$. Amplitude is <em>not</em> the peak-to-peak value, which is $2A$. Its units match the quantity that oscillates: meters for a string, pascals for a sound wave, volts per meter for an electromagnetic wave.</p>
+<p><strong>Why it matters.</strong> Amplitude sets a wave's energy and intensity. For a mechanical wave in a given medium, with frequency and speed fixed, the energy carried is proportional to $A^2$. Intensity (power per unit area) therefore scales as</p>
+$$I \propto A^2.$$
+<p>Doubling the amplitude quadruples the intensity.</p>
+<p><strong>Worked example.</strong> A sound wave in air has the pressure variation</p>
+$$\Delta p(t) = 0.40\sin(2\pi \cdot 440\, t)\ \text{Pa}.$$
+<p>Reading off the coefficient, the pressure amplitude is $A = 0.40$ Pa, the frequency is $440$ Hz, and the pressure swings between $-0.40$ and $+0.40$ Pa, a peak-to-peak range of $0.80$ Pa. Now suppose the speaker volume is raised so the amplitude becomes $1.20$ Pa. The amplitude ratio is $1.20/0.40 = 3$, so the intensity increases by a factor of $3^2 = 9$.</p>
+<p><strong>Problem-solving application.</strong> Because intensity scales as $A^2$, we can compare two waves directly from their amplitudes. For the speaker above, the intensity ratio is</p>
+$$\frac{I_2}{I_1} = \left(\frac{A_2}{A_1}\right)^2 = 3^2 = 9.$$
+<p>The same reasoning applies to energy. Suppose a second wave on a string has amplitude $0.05$ m, and a first wave on the same string (same frequency and speed) has amplitude $0.02$ m. The energy ratio is</p>
+$$\frac{E_2}{E_1} = \left(\frac{0.05}{0.02}\right)^2 = 2.5^2 = 6.25.$$
+<p>So the larger wave carries 6.25 times as much energy, even though its amplitude is only 2.5 times larger. To solve problems of this type:</p>
+<li>Identify $A$ for each wave, reading it from the coefficient of the sine.</li>
+<li>Form the ratio $A_2/A_1$.</li>
+<li>Square the ratio to get the energy or intensity ratio.</li>
+<p>If a problem gives peak-to-peak values instead, halve them first, or note that the factor of 2 cancels in the ratio.</p>
+<p><strong>Common pitfalls.</strong></p>
+<li>Confusing amplitude with peak-to-peak value, which is $2A$.</li>
+<li>Forgetting the square when relating amplitude to energy or intensity. Doubling $A$ quadruples $E$ and $I$.</li>
+<li>Treating amplitude as a measure of pitch. For sound, pitch depends on frequency and loudness on amplitude. For light, color depends on frequency and brightness on amplitude.</li>
+<p><strong>Check yourself.</strong> A water wave's amplitude drops from $0.50$ m to $0.25$ m as it spreads out. By what factor does its energy per unit length change? Since $E\propto A^2$, the energy falls by a factor of $(0.25/0.50)^2 = 1/4$.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

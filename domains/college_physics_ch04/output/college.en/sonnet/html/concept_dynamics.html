@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamics | College Physics Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="dynamics">Dynamics</h2>
+<p>Dynamics is the branch of mechanics that explains <em>why</em> objects move the way they do — it connects motion (kinematics) to its cause: force. Where kinematics asks "how fast, how far," dynamics asks "what pushed or pulled it, and how much." The single governing relationship is Newton's second law: $\vec{F}_{net} = m\vec{a}$ — the net force acting on an object equals its mass times its acceleration. The first law (an object's motion doesn't change unless a net force acts on it) and the third law (forces come in equal-and-opposite pairs) simply describe <em>when</em> and <em>why</em> a net force arises; the second law is the equation you actually solve. Everything in dynamics comes down to identifying the forces on an object and applying $\vec{F}_{net} = m\vec{a}$.</p>
+<p><strong>Worked example.</strong> A 1200 kg car accelerates from rest to 20 m/s in 8 seconds on a flat road. What net force did the engine's drive system need to supply, and how does this change if a constant 400 N air-resistance force is also present?</p>
+<p>First find acceleration: $a = \dfrac{\Delta v}{\Delta t} = \dfrac{20 - 0}{8} = 2.5\ \text{m/s}^2$.</p>
+<p>Without resistance, $F_{net} = ma = 1200 \times 2.5 = 3000\ \text{N}$.</p>
+<p>With air resistance, the net force must still equal 3000 N, but now $F_{net} = F_{engine} - F_{drag}$, so the engine must supply $F_{engine} = 3000 + 400 = 3400\ \text{N}$.</p>
+<p><strong>Problem-solving application.</strong> Every dynamics problem follows the same recipe: (1) isolate the object, (2) list every force acting on it, (3) sum those forces along a convenient axis, (4) set the sum equal to $ma$, (5) solve algebraically before plugging in numbers. The car example above shows this recipe on a single axis with two opposing forces (engine thrust, drag); the identical equation and the identical recipe apply no matter how many forces are present or how the object is oriented in space — you are always just totaling forces and dividing by mass. Mastering this one move — reducing any physical scenario to a force list and applying $F_{net} = ma$ — is the central skill dynamics builds, and it is the same skill that later lets you analyze inclines, orbits, and structural loads once you learn to resolve forces into components.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch4: Dynamics: Force and Newton's Laws of Motion (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

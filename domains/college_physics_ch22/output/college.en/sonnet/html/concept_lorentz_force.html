@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lorentz Force | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="lorentz-force">Lorentz Force</h2>
+<p>A charged particle moving through a magnetic field feels a force that depends on its charge, its speed, and the field's strength and direction. This is the <strong>magnetic part of the Lorentz force</strong>. For a charge $q$ moving with velocity $\vec v$ in a field $\vec B$:</p>
+$$\vec F = q\,\vec v \times \vec B, \qquad F = |q|\,v\,B\sin\theta$$
+<p>Here $\theta$ is the angle between $\vec v$ and $\vec B$. The force vanishes when the charge moves parallel to the field ($\theta = 0^\circ$) and is largest when it moves perpendicular to it ($\theta = 90^\circ$).</p>
+<p><strong>Direction.</strong> The force is perpendicular to both $\vec v$ and $\vec B$. Use the right-hand rule: point your fingers along $\vec v$, curl them toward $\vec B$, and your thumb gives the direction of $\vec F$ for a positive charge. For a negative charge, reverse it.</p>
+<p><strong>Consequence: no work is done.</strong> Since $\vec F \perp \vec v$, the power is $\vec F\cdot\vec v = 0$. A magnetic force changes the particle's direction but never its speed or kinetic energy.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>A proton ($q = 1.60\times10^{-19}$ C) moves at $v = 3.0\times10^{6}$ m/s at $30^\circ$ to a field of $B = 0.50$ T. Find the force magnitude.</p>
+$$F = qvB\sin\theta = (1.60\times10^{-19})(3.0\times10^{6})(0.50)\sin 30^\circ = 1.2\times10^{-13}\ \text{N}$$
+<p>Although tiny in newtons, this is huge for a proton, whose mass is only $1.67\times10^{-27}$ kg. Its acceleration is about $7\times10^{13}\ \text{m/s}^2$.</p>
+<h3 id="problem-solving-application-circular-motion">Problem-solving application: circular motion</h3>
+<p>When $\vec v \perp \vec B$, the force has constant magnitude $qvB$ and always points sideways to the motion. This is exactly the condition for uniform circular motion, with the magnetic force supplying the centripetal force:</p>
+$$qvB = \frac{mv^2}{r} \quad\Longrightarrow\quad r = \frac{mv}{qB}$$
+<p>The period is</p>
+$$T = \frac{2\pi r}{v} = \frac{2\pi m}{qB},$$
+<p>which is independent of speed. This is the principle behind the cyclotron and the mass spectrometer.</p>
+<p><strong>Problem.</strong> An electron ($m = 9.11\times10^{-31}$ kg) enters a $2.0\times10^{-3}$ T field perpendicular to it at $4.0\times10^{7}$ m/s. Find the radius of its path.</p>
+$$r = \frac{mv}{qB} = \frac{(9.11\times10^{-31})(4.0\times10^{7})}{(1.60\times10^{-19})(2.0\times10^{-3})} \approx 0.11\ \text{m}$$
+<p><strong>Strategy summary.</strong></p>
+<li>Identify $q$, $v$, $B$, and the angle between $\vec v$ and $\vec B$.</li>
+<li>Compute the magnitude with $F = |q|vB\sin\theta$.</li>
+<li>Find the direction with the right-hand rule, and flip it for negative charges.</li>
+<li>If $\vec v\perp\vec B$, set $F = ma_c$ to get the radius and period.</li>
+<li>If $\vec v$ has a component parallel to $\vec B$, that component is unaffected, so the path is a helix.</li>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

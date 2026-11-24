@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tangential Speed | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="tangential-speed">Tangential Speed</h2>
+<p><strong>定义</strong></p>
+<p>刚体绕固定轴旋转时，物体上每一点都沿圆周运动，其瞬时速度方向始终垂直于半径、沿圆周的切线方向，这就是<strong>切向速度</strong>（tangential speed），也称线速度。设某点到旋转轴的距离为 $r$，物体的角速度为 $\omega$，则该点的切向速度大小为</p>
+$$
+v = r\omega
+$$
+<p>这个关系式的物理含义十分直接：角速度 $\omega$ 描述的是转过的角度随时间的变化率（单位通常为 $\mathrm{rad/s}$），对刚体上所有点都相同；但切向速度 $v$ 依赖于该点到轴的距离 $r$——离轴越远，扫过的弧长越大，因而线速度越大。二者的比例关系可以从弧长公式 $s = r\theta$ 两边对时间求导直接得到：$\dfrac{ds}{dt} = r\dfrac{d\theta}{dt}$，即 $v = r\omega$。</p>
+<p><strong>例题</strong></p>
+<p>一台离心机的转子以角速度 $\omega = 300\ \mathrm{rad/s}$ 匀速旋转。求距转轴 $r_1 = 0.05\ \mathrm{m}$ 处试管底部的切向速度，以及距转轴 $r_2 = 0.15\ \mathrm{m}$ 处试管口的切向速度。</p>
+<li>底部：$v_1 = r_1\omega = 0.05 \times 300 = 15\ \mathrm{m/s}$</li>
+<li>管口：$v_2 = r_2\omega = 0.15 \times 300 = 45\ \mathrm{m/s}$</li>
+<p>可以看到，同一根试管上两点的角速度完全相同，但线速度相差三倍——这正是离心机能在管口产生远高于管底的离心效应的原因之一（离心加速度 $a_c = v^2/r = r\omega^2$ 同样随 $r$ 增大）。</p>
+<p><strong>解题应用</strong></p>
+<p>在实际问题中，$v = r\omega$ 常用于连接旋转与平动两种描述：例如车轮以角速度 $\omega$ 滚动时，轮缘一点的切向速度即等于车辆的行驶速度 $v = R\omega$（$R$ 为车轮半径）；又如皮带传动系统中，两个滑轮通过皮带相连，皮带上各点速度相同，因此 $r_1\omega_1 = r_2\omega_2$，由此可求出从动轮的角速度。求解此类问题的关键步骤是：先确认题目给出的是角量（$\omega$、$\theta$）还是线量（$v$、$s$），再利用 $v=r\omega$（及其导出的 $a_c=r\omega^2$）在两者之间转换，并始终注意角速度必须以弧度制表示，才能保证公式量纲一致。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

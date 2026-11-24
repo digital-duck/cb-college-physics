@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vision Correction Spectacles | College Physics Ch26</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="vision-correction-spectacles">Vision Correction Spectacles</h2>
+<p><strong>定义</strong></p>
+<p>人眼在放松状态下能将远处物体清晰成像于视网膜上，这一状态称为正视眼。若眼球的屈光系统（角膜与晶状体）与眼轴长度不匹配，物像会落在视网膜前方（近视）或后方（远视），造成视网膜上的像模糊。矫正眼镜的原理是在眼睛前方放置一片凹透镜或凸透镜，人为改变进入眼睛的光线的会聚程度，从而把总光焦度调整回正常范围，使像重新落在视网膜上。</p>
+<p>眼睛可以看清的最远点称为远点（far point），最近点称为近点（near point）。正视眼的远点在无穷远处。近视眼由于眼球屈光力过强（或眼轴过长），远点被拉近到眼前有限距离 $d$ 处——来自无穷远的平行光线会聚在视网膜之前。此时需要一片凹透镜（负光焦度），先使平行光发散，让它看起来像是从远点 $d$ 发出的，这样眼睛本身的屈光系统就能把它重新会聚到视网膜上。</p>
+<p>矫正透镜所需的光焦度由薄透镜公式决定：</p>
+$$P = \frac{1}{f} = \frac{1}{d_i} - \frac{1}{d_o}$$
+<p>其中光焦度单位为屈光度（diopter, D），焦距 $f$ 以米为单位。对近视矫正，目标是让来自无穷远（$d_o \to \infty$）的光经透镜后，其像恰好落在眼睛的远点处，即 $d_i = -d$（虚像，取负号表示与物同侧）。于是所需透镜光焦度为：</p>
+$$P = -\frac{1}{d}$$
+<p><strong>例题</strong></p>
+<p>某近视患者远点为 $0.5\ \text{m}$。求所需矫正眼镜的光焦度。</p>
+<p>代入 $d = 0.5\ \text{m}$：</p>
+$$P = -\frac{1}{0.5} = -2.00\ \text{D}$$
+<p>即需佩戴光焦度为 $-2.00\ \text{D}$（凹透镜）的眼镜，对应焦距 $f = -0.5\ \text{m}$。</p>
+<p><strong>应用与拓展</strong></p>
+<p>远视矫正采用相反逻辑：眼睛近点远于正常值 $25\ \text{cm}$，需用凸透镜（正光焦度）帮助眼睛聚焦近物，使物体经透镜成的虚像落在患者实际近点之外。若患者近点为 $D_p$（单位 m），欲看清 $25\ \text{cm}$ 处物体，取 $d_o = 0.25\ \text{m}$，$d_i = -D_p$，代入公式即可求出所需光焦度。这类计算是配镜处方中"度数"（$1\ \text{D} \times 100$ 即为常见的"度"）的物理基础，也说明了为何近视镜片中央薄、边缘厚，而远视镜片相反。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch26: Vision and Optical Instruments (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

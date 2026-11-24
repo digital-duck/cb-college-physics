@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ray Tracing | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="ray-tracing-光线追迹法">Ray Tracing（光线追迹法）</h2>
+<p><strong>定义</strong></p>
+<p>光线追迹法是一种利用几何规则确定光学系统成像位置与大小的图解方法。对于任意一个物点，只需选取从该点发出的<strong>若干条特殊光线</strong>——它们各自服从简单、可预测的传播规则——追踪它们经过透镜或反射镜后的路径，其交点即为对应的像点。三条最常用的规则是：</p>
+<li><strong>平行光线</strong>：与主光轴平行的入射光线，经透镜折射后必过焦点 $F$（或其反向延长线过焦点，视透镜类型而定）。</li>
+<li><strong>中心光线</strong>：过透镜光心的光线不发生偏折，沿原方向直线传播。</li>
+<li><strong>焦点光线</strong>：经过物方焦点 $F$ 的光线，经透镜折射后变为与主光轴平行的光线。</li>
+<p>只要作出其中任意两条，其交点便唯一确定像的位置、大小和取向（正立或倒立）。这一方法本质上是薄透镜成像公式</p>
+$$\frac{1}{d_o}+\frac{1}{d_i}=\frac{1}{f}$$
+<p>的几何等价表述——两者应给出一致的结果，可互相验证。</p>
+<p><strong>范例</strong></p>
+<p>设一薄凸透镜焦距 $f = 10\text{ cm}$，物体高 $h_o = 2\text{ cm}$，置于透镜前 $d_o = 15\text{ cm}$ 处，物体顶端位于主光轴上方。</p>
+<li>平行光线：从物体顶端发出，平行于主光轴射向透镜，折射后过像方焦点。</li>
+<li>中心光线：从物体顶端发出，穿过光心，不偏折。</li>
+<p>两条线在透镜右侧相交，得到一个<strong>倒立、放大</strong>的实像。用公式验证：</p>
+$$\frac{1}{15}+\frac{1}{d_i}=\frac{1}{10} \implies d_i = 30\text{ cm}$$
+<p>放大率 $m = -d_i/d_o = -2$，即像高为 $-4\text{ cm}$（倒立，放大两倍）——与图解结果吻合。</p>
+<p><strong>解题应用</strong></p>
+<p>光线追迹的价值在于处理<strong>复合光学系统</strong>（如多透镜望远镜、显微镜）时，代数公式需要逐级迭代运算，而几何作图能直观展示每一级的物像关系，帮助判断像的<strong>正倒、虚实、放大或缩小</strong>，尤其在系统中出现虚物（前一透镜的像成为下一透镜的物，但位于其后方）时，作图法能避免符号混淆导致的错误，是核对代数解是否合理的直观检验手段。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

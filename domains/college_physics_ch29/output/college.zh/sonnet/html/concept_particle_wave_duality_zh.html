@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Particle Wave Duality | College Physics Ch29</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="particle-wave-duality">Particle Wave Duality</h2>
+<p><strong>定义</strong></p>
+<p>波粒二象性指出,包括光子和实物粒子（如电子、质子）在内的所有微观客体,同时具有波动性和粒子性,具体表现为何种性质取决于所采用的观测方式。这并非"有时是波、有时是粒子"的简单切换,而是量子客体的本质——它由一个概率波函数 $\psi$ 描述,该波函数控制粒子在空间中被探测到的概率分布,但每次测量得到的结果始终是一个不可分割的、具有确定能量和动量的粒子。</p>
+<p>这一性质由德布罗意关系精确量化：任何具有动量 $p$ 的粒子都对应一个波长</p>
+$$
+\lambda = \frac{h}{p}
+$$
+<p>其中 $h$ 为普朗克常数。该式将粒子性（动量 $p$，一种局域化的力学量）与波动性（波长 $\lambda$，一种延展的空间周期性）通过普朗克常数直接联系起来，说明二者并非对立,而是同一实体的两种数学描述。</p>
+<p><strong>例题</strong></p>
+<p>求一个动能为 $54\ \text{eV}$ 的电子的德布罗意波长,并说明该结果如何解释戴维孙-革末实验中观测到的电子衍射现象。</p>
+<p>解：电子的动量可由动能关系 $p = \sqrt{2mE_k}$ 求得，其中 $m = 9.11\times10^{-31}\ \text{kg}$，$E_k = 54\ \text{eV} = 8.65\times10^{-18}\ \text{J}$。代入得</p>
+$$
+p = \sqrt{2 \times 9.11\times10^{-31} \times 8.65\times10^{-18}} \approx 1.26\times10^{-24}\ \text{kg·m/s}
+$$
+<p>于是</p>
+$$
+\lambda = \frac{h}{p} = \frac{6.63\times10^{-34}}{1.26\times10^{-24}} \approx 1.67\ \text{Å}
+$$
+<p>这一波长与晶体原子间距（约几埃）同量级,因此电子束打在镍晶体表面时会像 X 射线一样发生衍射,产生干涉条纹——这正是戴维孙-革末实验的实验结果，直接证实了实物粒子的波动性。</p>
+<p><strong>解题应用</strong></p>
+<p>处理波粒二象性问题的核心步骤是：先判断题目关心的是粒子的"定位"行为（碰撞、径迹、光电效应）还是"传播"行为（衍射、干涉、隧穿），再决定用粒子图像（动量、能量守恒）还是波动图像（$\lambda$、相位、波函数叠加）建模。对于双缝实验一类问题，正确做法是用波动图像计算路径差与干涉条纹位置</p>
+$$
+d\sin\theta = m\lambda
+$$
+<p>而对光电效应等能量转移问题，则应使用粒子图像 $E = hf$ 求解。掌握何时切换图像,是解决量子力学入门问题的关键技能。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch29: Quantum Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

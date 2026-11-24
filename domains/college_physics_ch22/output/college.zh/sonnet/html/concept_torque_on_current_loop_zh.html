@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Torque On Current Loop | College Physics Ch22</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="torque-on-current-loop">Torque On Current Loop</h2>
+<p><strong>定义</strong></p>
+<p>当一个通有电流的平面线圈置于均匀磁场中时，磁场会对线圈施加一个转动力矩（力矩），使其绕固定轴转动，直至线圈平面与磁场垂直（即线圈的磁矩与磁场方向对齐）。设线圈匝数为 $N$，面积为 $A$，电流为 $I$，磁场磁感应强度为 $B$，$\theta$ 为线圈法线方向与磁场方向之间的夹角，则线圈所受的力矩大小为：</p>
+$$
+\tau = NIAB\sin\theta
+$$
+<p>这一结果可以由安培力 $\vec{F} = I\vec{L}\times\vec{B}$ 对线圈两条平行边分别求力、再对转轴取力矩之和推导得到——力臂的有效分量正比于 $\sin\theta$，因此力矩表达式中出现正弦因子。定义线圈的磁矩 $\vec{\mu} = NIA\,\hat{n}$（$\hat{n}$ 为线圈法线方向的单位矢量），上式可写成更紧凑的矢量形式：</p>
+$$
+\vec{\tau} = \vec{\mu}\times\vec{B}
+$$
+<p><strong>例题</strong></p>
+<p>一个矩形线圈有 $N=50$ 匝，面积 $A = 0.02\ \text{m}^2$，通有电流 $I = 3\ \text{A}$，置于磁感应强度 $B = 0.4\ \text{T}$ 的均匀磁场中，线圈法线与磁场方向夹角 $\theta = 30^\circ$。求线圈所受力矩。</p>
+<p>代入公式：</p>
+$$
+\tau = NIAB\sin\theta = 50 \times 3 \times 0.02 \times 0.4 \times \sin 30^\circ = 1.2 \times 0.5 = 0.6\ \text{N·m}
+$$
+<p><strong>问题求解应用</strong></p>
+<p>注意力矩随 $\theta$ 变化：当 $\theta = 90^\circ$（线圈平面与磁场平行）时力矩最大，为 $\tau_{\max} = NIAB$；当 $\theta = 0^\circ$（线圈平面与磁场垂直，磁矩与磁场对齐）时力矩为零，此时线圈处于稳定平衡位置。这一原理正是直流电动机的工作基础：通过换向器周期性反转电流方向，使线圈在经过 $\theta=0$ 的平衡点后仍能继续受到驱动力矩，从而维持连续转动，而不是振荡后静止。理解 $\sin\theta$ 因子的物理意义，有助于分析电动机转速与负载力矩之间的关系，也是电流计、扬声器等器件设计中的核心计算工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch22: Magnetism (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

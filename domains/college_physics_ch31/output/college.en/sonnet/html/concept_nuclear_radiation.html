@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuclear Radiation | College Physics Ch31</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="nuclear-radiation">Nuclear Radiation</h2>
+<p><strong>Definition.</strong> Nuclear radiation is the energetic emission from unstable atomic nuclei as they move toward a more stable configuration. Typical energies are on the order of MeV (1 MeV $= 1.602\times10^{-13}$ J), roughly a million times larger than chemical-bond energies. Three types are classical:</p>
+<p>| Type | Particle | Change in nucleus | Penetration | |---|---|---|---| | $\alpha$ | $^4_2\text{He}$ nucleus | $Z\to Z-2,\ A\to A-4$ | Stopped by paper or skin | | $\beta^-$ | electron (plus antineutrino) | $Z\to Z+1,\ A$ unchanged | Stopped by a few mm of aluminum | | $\gamma$ | high-energy photon | none (nucleus de-excites) | Reduced by dense shielding such as lead |</p>
+<p>Every decay conserves charge, nucleon number $A$, energy, and momentum. A radioactive sample's decay rate (activity) depends on the number of nuclei $N$ remaining:</p>
+$$\frac{dN}{dt} = -\lambda N \quad\Rightarrow\quad N(t)=N_0 e^{-\lambda t},\qquad t_{1/2}=\frac{\ln 2}{\lambda}.$$
+<p>This exponential law is a probability result: each nucleus has the same chance per unit time of decaying, regardless of its age.</p>
+<p><strong>Worked example.</strong> Write the alpha decay of $^{238}_{92}\text{U}$.</p>
+$$^{238}_{92}\text{U}\;\to\;^{234}_{90}\text{Th}+\,^4_2\text{He}.$$
+<p>Check conservation: $A$: $238 = 234+4$; $Z$: $92 = 90+2$. The energy released is the mass defect times $c^2$ (the $Q$-value), here about 4.27 MeV.</p>
+<p>Because the products are two bodies, momentum conservation gives nearly all of this energy to the light alpha particle (about 4.2 MeV), so alpha energies from a given decay are sharply defined. Beta decay differs: the energy is shared with an antineutrino, so electron energies form a continuous spectrum.</p>
+<p><strong>Problem-solving application.</strong> A sample of an isotope has $t_{1/2}=8.0$ days and initial activity $A_0 = 4.0\times10^{6}$ Bq. When does the activity fall to a safe level of $2.5\times10^{5}$ Bq?</p>
+<p>Activity is proportional to $N$, so $A(t)=A_0e^{-\lambda t}$. Here $A_0/A = 16 = 2^4$, meaning four half-lives:</p>
+$$t = 4\,t_{1/2} = 32\ \text{days}.$$
+<p>Check with the formula: $\lambda=\ln 2/8 = 0.0866\ \text{day}^{-1}$, and $t=\ln(16)/\lambda = 2.773/0.0866 = 32$ days. ✓</p>
+<p><strong>Key takeaways.</strong> Identify the decay type by tracking $A$ and $Z$; the energy released comes from the mass defect; use the exponential law to find the time for activity to fall. Alpha is the most ionizing but least penetrating, so it is hazardous mainly if ingested. Gamma is the most penetrating.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch31: Radioactivity and Nuclear Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

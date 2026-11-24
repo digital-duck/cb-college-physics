@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shock Hazard | College Physics Ch20</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="触电危险-shock-hazard">触电危险（Shock Hazard）</h2>
+<p><strong>定义</strong>：触电危险指电流通过人体所造成的伤害。人体组织并非理想绝缘体，其电阻通常在 $1{,}000\ \Omega$ 到 $100{,}000\ \Omega$ 之间，具体取决于皮肤湿度、接触面积和接触压力。当人体接触到两个存在电位差的导体时，电流会依据欧姆定律流经人体：</p>
+$$I = \frac{V}{R_{body}}$$
+<p>其中 $I$ 为通过人体的电流（安培），$V$ 为接触点间的电压差（伏特），$R_{body}$ 为人体总电阻（欧姆）。伤害的严重程度取决于四个因素：电流大小、电流路径（是否穿过心脏）、持续时间，以及交流电的频率（工频 50–60 Hz 对心脏最为危险，因其接近心肌细胞的固有节律敏感区）。</p>
+<p><strong>电流强度与生理效应的对应关系</strong>：</p>
+<li>$1\text{–}5\ \text{mA}$：可感知的刺痛感，一般无害；</li>
+<li>$10\text{–}20\ \text{mA}$：肌肉不自主收缩，可能导致"无法松手"（let-go）现象；</li>
+<li>$50\text{–}100\ \text{mA}$：可能引发心室颤动（ventricular fibrillation），是致命的主要原因；</li>
+<li>$>2\ \text{A}$：造成严重烧伤及心脏骤停。</li>
+<p><strong>例题</strong>：一名工人手部（潮湿状态，$R_{body} = 1{,}000\ \Omega$）意外接触到 $120\ \text{V}$ 的插座导线，另一手接地。求通过其身体的电流，并判断危险等级。</p>
+<p>由欧姆定律：</p>
+$$I = \frac{120\ \text{V}}{1{,}000\ \Omega} = 0.12\ \text{A} = 120\ \text{mA}$$
+<p>该电流已超过引发心室颤动的阈值（约 $50\text{–}100\ \text{mA}$），属于<strong>致命级危险</strong>。若皮肤干燥，电阻升高至 $100{,}000\ \Omega$，则电流仅为 $1.2\ \text{mA}$，仅为轻微可感知刺激——这说明皮肤电阻是决定伤害等级的关键变量。</p>
+<p><strong>解决问题的应用</strong>：电气安全设计正是围绕上述公式展开。接地故障断路器（GFCI）通过检测流出与流回导线中电流的微小差异（通常设定阈值为 $5\ \text{mA}$），在毫秒级时间内切断电路，防止电流达到致颤水平。工程师在评估设备安全性时，需计算最坏情况下（潮湿环境、低电阻路径经过心脏）的预期电流值，并据此选择绝缘等级、接地方式与保护装置的动作阈值。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch20: Electric Current, Resistance, and Ohm's Law (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

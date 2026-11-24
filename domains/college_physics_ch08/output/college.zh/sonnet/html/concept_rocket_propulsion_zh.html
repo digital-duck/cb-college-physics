@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rocket Propulsion | College Physics Ch08</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="rocket-propulsion">Rocket Propulsion</h2>
+<p><strong>定义</strong></p>
+<p>火箭推进是牛顿第三定律与动量守恒在变质量系统中的直接应用。与汽车靠地面摩擦力前进不同,火箭在真空中没有外部介质可以"蹬"——它依靠向后喷出高速气体(工质),通过反作用力获得向前的推力。关键的物理特点是:火箭的质量并非恒定,而是随燃料燃烧不断减小,因此不能简单套用 $F=ma$,必须从动量守恒出发重新推导运动方程。</p>
+<p>设火箭在时刻 $t$ 的质量为 $m$、速度为 $v$;经过 $dt$ 后,喷出质量为 $-dm$(即 $dm<0$)的气体,气体相对火箭的喷出速度为 $u$(恒定,由发动机设计决定)。对整个系统(火箭+喷出气体)应用动量守恒,可得到齐奥尔科夫斯基火箭方程:</p>
+$$
+dv = -u\,\frac{dm}{m}
+$$
+<p>积分后:</p>
+$$
+\Delta v = u\ln\!\left(\frac{m_0}{m_f}\right)
+$$
+<p>其中 $m_0$ 为初始总质量(含燃料),$m_f$ 为燃料耗尽后的质量,$u$ 为喷气相对火箭的排气速度(常以比冲 $I_{sp}$ 表示,$u=I_{sp}\,g_0$)。这是理解火箭性能的核心公式——它揭示了火箭的速度增量只取决于质量比的对数,而与燃烧过程的快慢无关。</p>
+<p><strong>例题</strong></p>
+<p>一枚火箭初始质量 $m_0=50{,}000\ \text{kg}$(含燃料),燃料燃烧后剩余质量 $m_f=10{,}000\ \text{kg}$,发动机排气速度 $u=3{,}000\ \text{m/s}$。求火箭获得的速度增量 $\Delta v$。</p>
+$$
+\Delta v = 3000 \times \ln\!\left(\frac{50000}{10000}\right) = 3000 \times \ln 5 \approx 3000 \times 1.609 \approx 4828\ \text{m/s}
+$$
+<p><strong>应用与解题要点</strong></p>
+<p>齐奥尔科夫斯基方程解释了为何火箭要采用多级设计:每级燃烧完后抛弃空壳,减小后续阶段需要加速的"死重",从而使总质量比 $m_0/m_f$ 更有利,叠加各级 $\Delta v$ 可达到远超单级火箭的总速度增量。解题时要注意区分"质量比"是相对于该级点火前的总质量,而不是全箭初始质量;同时,提高比冲(选用更高能燃料,如液氢液氧)与增大质量比是提升 $\Delta v$ 的两条独立途径,工程上常需权衡两者的成本与结构复杂度。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch8: Linear Momentum and Collisions (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

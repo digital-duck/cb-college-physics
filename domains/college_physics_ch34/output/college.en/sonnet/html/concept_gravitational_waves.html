@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gravitational Waves | College Physics Ch34</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="gravitational-waves">Gravitational Waves</h2>
+<p><strong>Definition.</strong> A gravitational wave is a ripple in the geometry of spacetime that travels outward from accelerating masses at the speed of light, $c$. General relativity describes gravity as curvature of spacetime. When massive objects accelerate in a way that is not spherically symmetric, the curvature changes propagate outward as waves. Far from the source, spacetime is nearly flat, and the metric is</p>
+$$g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}, \qquad |h_{\mu\nu}| \ll 1,$$
+<p>where $\eta_{\mu\nu}$ is the flat Minkowski metric and $h_{\mu\nu}$ is a small perturbation. In a suitable gauge, each component of $h_{\mu\nu}$ obeys the wave equation</p>
+$$\Box\, h_{\mu\nu} = \left(-\frac{1}{c^2}\frac{\partial^2}{\partial t^2} + \nabla^2\right)h_{\mu\nu} = 0,$$
+<p>so disturbances travel at speed $c$. The dimensionless <strong>strain</strong> $h = \Delta L / L$ measures the fractional change in the distance between two free test masses. The waves are transverse and have two polarizations, "plus" ($+$) and "cross" ($\times$). A passing wave stretches space along one transverse axis while squeezing it along the perpendicular axis, then reverses.</p>
+<p><strong>Why quadrupoles?</strong> Mass conservation rules out monopole radiation, and momentum conservation rules out dipole radiation. The leading source is therefore the time-varying mass quadrupole moment $Q_{ij}$. The far-field strain is</p>
+$$h \sim \frac{2G}{c^4 r}\,\ddot{Q},$$
+<p>where $r$ is the distance to the source. The factor $G/c^4 \approx 8\times10^{-45}\ \text{s}^2\,\text{kg}^{-1}\,\text{m}^{-1}$ is tiny, which is why the waves are so hard to detect.</p>
+<p><strong>Worked example.</strong> Estimate the strain from two black holes of mass $M = 30\,M_\odot$ each, orbiting at separation $d = 350$ km, at distance $r = 400$ Mpc. This is roughly the situation of GW150914. Here $\ddot Q \sim M v^2$ with orbital speed $v \approx 0.5c$, so</p>
+$$\ddot{Q}\sim Mv^2 \approx (6\times10^{31}\ \text{kg})(1.5\times10^8\ \text{m/s})^2 \approx 1.3\times10^{48}\ \text{J}.$$
+<p>With $r = 400\ \text{Mpc} \approx 1.2\times10^{25}$ m,</p>
+$$h \sim \frac{2(6.7\times10^{-11})(1.3\times10^{48})}{(3\times10^8)^4(1.2\times10^{25})} \approx 1.8\times10^{-21}.$$
+<p>Allowing for the order-of-magnitude approximations, this is consistent with the observed $h \sim 10^{-21}$.</p>
+<p><strong>Problem-solving application.</strong> LIGO's arms are $L = 4$ km long. A strain of $10^{-21}$ changes each arm's length by</p>
+$$\Delta L = hL = 10^{-21}(4000\ \text{m}) = 4\times10^{-18}\ \text{m},$$
+<p>about $1/200$ of a proton's diameter. A Michelson interferometer detects this by comparing the two arms' lengths using laser interference. A wave stretches one arm while compressing the other, which shifts the interference pattern.</p>
+<p>Two further results are used often in problems:</p>
+<li><strong>Inspiral frequency.</strong> For a circular binary, the gravitational-wave frequency is twice the orbital frequency, $f_{\text{GW}} = 2f_{\text{orb}}$. As the orbit loses energy to radiation, it shrinks and $f_{\text{GW}}$ rises, which produces the characteristic "chirp."</li>
+<li><strong>Distance.</strong> The chirp's frequency evolution gives the <em>chirp mass</em> $\mathcal{M}$, which fixes the intrinsic amplitude. Comparing it to the measured $h$ then gives the distance, so a gravitational-wave event acts as a "standard siren."</li>
+<p><strong>Check yourself.</strong> If the distance to a source doubles and all else is equal, how does $h$ change? From $h\propto 1/r$, it halves. Since $h$ falls off as $1/r$ rather than $1/r^2$, a detector that is twice as sensitive sees $8$ times the volume of space.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch34: Frontiers of Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Non Inertial Frame Of Reference | College Physics Ch06</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="non-inertial-frame-of-reference">Non Inertial Frame Of Reference</h2>
+<p><strong>定义</strong></p>
+<p>非惯性参考系是指相对于惯性系做加速运动（包括直线加速或旋转）的参考系。牛顿第一、第二定律 $\vec{F} = m\vec{a}$ 只在惯性系中直接成立。若坚持在非惯性系中使用牛顿第二定律，就必须引入<strong>惯性力</strong>（也称虚拟力）来补偿参考系本身的加速度，使方程形式上依然平衡。惯性力不是真实的相互作用力（找不到施力物体，也不满足牛顿第三定律），而是坐标变换引入的数学修正项。</p>
+<p>对于线加速参考系（加速度为 $\vec{a}_0$），惯性力为：</p>
+$$\vec{F}_{fict} = -m\vec{a}_0$$
+<p>对于旋转参考系（角速度 $\vec{\omega}$），还需加入<strong>离心力</strong>与<strong>科里奥利力</strong>：</p>
+$$\vec{F}_{fict} = -m\vec{\omega}\times(\vec{\omega}\times\vec{r}) - 2m\vec{\omega}\times\vec{v}_{rel}$$
+<p>其中第一项是离心力（方向指向外侧），第二项是科里奥利力（依赖物体在旋转系中的相对速度 $\vec{v}_{rel}$）。</p>
+<p><strong>范例分析</strong></p>
+<p>设想一辆以 $a_0 = 3\ \text{m/s}^2$ 加速前进的公交车内，一个质量 $m=1\ \text{kg}$ 的球悬挂在天花板上。在地面惯性系观察者看来，球之所以偏离竖直方向，是因为绳的水平分力提供了球的加速度，完全无需虚拟力。但在车厢内（非惯性系）的乘客看来，球是"静止"悬挂但绳倾斜的——为解释这一"平衡"，乘客必须假设存在一个大小为 $F_{fict}=ma_0=3\ \text{N}$、方向指向车尾的惯性力，与绳的水平张力分量抵消。两种描述对最终倾角的预测完全一致，只是解释路径不同。</p>
+<p><strong>解题应用</strong></p>
+<p>处理旋转系统（如地球自转、离心机、转盘）时，工程师和物理学家常选择在旋转系中列力平衡方程，因为这样能将复杂的曲线运动转化为静止或简单直线问题。例如，分析赤道上物体所受的表观重力时，需要将万有引力与离心力 $m\omega^2 R$ 叠加，才能得到测量到的"视重力"。解题步骤通常为：(1) 明确选择的参考系是否惯性；(2) 若非惯性，计算参考系加速度 $\vec{a}_0$ 或角速度 $\vec{\omega}$；(3) 加入对应虚拟力项；(4) 按牛顿第二定律列方程求解。掌握何时引入惯性力，是判断参考系选择是否正确、避免物理概念混淆的关键技能。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch6: Uniform Circular Motion and Gravitation (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

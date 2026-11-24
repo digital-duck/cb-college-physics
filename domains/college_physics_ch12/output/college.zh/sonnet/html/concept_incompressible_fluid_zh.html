@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Incompressible Fluid | College Physics Ch12</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="incompressible-fluid">Incompressible Fluid</h2>
+<p><strong>定义</strong></p>
+<p>不可压缩流体是指密度 $\rho$ 在流动过程中保持恒定，不随压强变化而改变的流体。液体（如水、油）在常见工程条件下都可以很好地近似为不可压缩流体；气体在流速远低于声速（马赫数 $Ma < 0.3$）时，其密度变化也小到可以忽略，同样可按不可压缩处理。这一假设的核心数学表达是<strong>连续性方程</strong>：对于稳定流动中截面积为 $A_1, A_2$、流速为 $v_1, v_2$ 的两处截面，质量守恒要求</p>
+$$
+\rho_1 A_1 v_1 = \rho_2 A_2 v_2
+$$
+<p>当 $\rho_1 = \rho_2$（不可压缩）时，方程简化为体积流量守恒：</p>
+$$
+A_1 v_1 = A_2 v_2
+$$
+<p>即同一时间内流过任意截面的体积相同——这正是该概念名称的由来。</p>
+<p><strong>推导的物理意义</strong></p>
+<p>这个方程告诉我们：当管道变窄（$A$ 减小）时，流速 $v$ 必须增大以保持体积流量不变；管道变宽则流速减小。这不是经验规律，而是质量守恒定律在恒定密度条件下的直接推论。</p>
+<p><strong>应用实例</strong></p>
+<p>考虑一根花园水管，入口处半径 $r_1 = 1.0\text{ cm}$，水流速度 $v_1 = 2.0\text{ m/s}$。若在出口处将喷嘴收窄至半径 $r_2 = 0.25\text{ cm}$，求出口流速。</p>
+<p>由 $A_1 v_1 = A_2 v_2$，且 $A = \pi r^2$，代入化简：</p>
+$$
+v_2 = v_1 \left(\frac{r_1}{r_2}\right)^2 = 2.0 \times \left(\frac{1.0}{0.25}\right)^2 = 2.0 \times 16 = 32\text{ m/s}
+$$
+<p>半径缩小为原来的 $1/4$，流速却提升了 $16$ 倍——这也解释了为什么用拇指按住水管出口能显著增大水流速度。</p>
+<p><strong>解题要点</strong></p>
+<p>处理这类问题时，先确认流体确实可视为不可压缩（液体几乎总是满足），再列出连续性方程 $A_1 v_1 = A_2 v_2$，代入已知的面积或半径比例求解未知流速。这一关系也是推导伯努利方程（能量守恒）的前提条件之一：只有在密度恒定的假设下，压强、流速与高度之间的能量关系式才能写成简洁的代数形式，而无需处理密度随位置变化的复杂积分。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch12: Fluid Dynamics and Its Biological and Medical Applications (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

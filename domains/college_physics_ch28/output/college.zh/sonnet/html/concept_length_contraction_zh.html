@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Length Contraction | College Physics Ch28</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="length-contraction">Length Contraction</h2>
+<p><strong>定义</strong></p>
+<p>狭义相对论指出,物体的长度并非绝对不变,而是依赖于测量者所处的参考系。设某物体在其自身静止的参考系中测得的长度为 $L_0$(称为<strong>固有长度</strong>,proper length),当该物体以速度 $v$ 相对于观测者运动时,观测者测得的长度 $L$ 会小于 $L_0$,关系式为</p>
+$$
+L = \frac{L_0}{\gamma}, \qquad \gamma = \frac{1}{\sqrt{1 - v^2/c^2}}
+$$
+<p>其中 $c$ 为真空中光速,$\gamma$ 为洛伦兹因子(Lorentz factor)。由于 $\gamma \ge 1$ 恒成立,故 $L \le L_0$——运动物体沿运动方向的长度总是被"压缩"。需要强调的是,这种收缩<strong>只发生在运动方向上</strong>,垂直于运动方向的尺寸不受影响,且这不是材料形变,而是时空测量本身的相对性结果,与洛伦兹变换中"同时性的相对性"直接相关。</p>
+<p><strong>推导要点</strong></p>
+<p>长度收缩可由时间膨胀公式 $\Delta t = \gamma \Delta t_0$ 推出。设飞船以速度 $v$ 飞过静止观测者测得长度为 $L$ 的跑道,飞船上的乘客测得穿越所需的固有时间为 $\Delta t_0$,而地面观测者测得的时间为 $\Delta t = L/v$。乘客视角下,跑道以速度 $v$ 掠过飞船,乘客测得的跑道长度为 $L_0' = v\Delta t_0$。结合 $\Delta t = \gamma \Delta t_0$,可得地面测得的跑道长度与乘客测得的固有长度满足 $L = L_0'/\gamma$,即长度收缩公式。</p>
+<p><strong>例题</strong></p>
+<p>一艘飞船固有长度为 $L_0 = 100\text{ m}$,以 $v = 0.8c$ 相对地面飞行。求地面观测者测得的飞船长度。</p>
+<p>计算:$\gamma = \dfrac{1}{\sqrt{1-0.8^2}} = \dfrac{1}{\sqrt{0.36}} = \dfrac{1}{0.6} \approx 1.667$</p>
+$$
+L = \frac{L_0}{\gamma} = \frac{100}{1.667} \approx 60 \text{ m}
+$$
+<p>地面观测者测得飞船长度仅为其固有长度的 60%。</p>
+<p><strong>解题应用</strong></p>
+<p>处理长度收缩问题时,关键是先判断哪个参考系测得的是"固有长度"(物体静止的那一系),再用 $\gamma$ 进行换算,切勿把方向搞反。常见陷阱:若题目给出的是"运动系测得的长度",需先用 $L_0 = \gamma L$ 反解出固有长度,再代入其他计算(如结合固有时间求解相对论性动力学问题)。此外,由于长度收缩仅沿运动方向,涉及体积或密度变化的题目,应只对运动方向上的尺度乘以 $1/\gamma$,其余维度保持不变。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch28: Special Relativity (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

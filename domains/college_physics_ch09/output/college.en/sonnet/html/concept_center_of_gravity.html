@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Center Of Gravity | College Physics Ch09</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="center-of-gravity">Center of Gravity</h2>
+<p>The center of gravity (CG) is the single point where a body's total weight can be treated as concentrated when analyzing torques and equilibrium. For a body made of point masses $m_i$ located at positions $x_i$ along a line, the CG is the weighted average position:</p>
+$$
+x_{cg} = \frac{\sum_i m_i x_i}{\sum_i m_i}
+$$
+<p>The same formula extends directly to two or three dimensions by applying it separately to each coordinate. Under Earth's essentially uniform gravitational field, this point coincides with the center of mass, so the two terms are used interchangeably in everyday problems.</p>
+<p>The CG matters because it lets you replace a distributed weight with one equivalent force. If you compute the torque produced by gravity on every mass element about a pivot and add them up, the total equals exactly the torque produced by a single force $Mg$ applied at $x_{cg}$. This is why balancing, tipping, and lifting problems can be solved by treating the whole object as if all its mass sat at one point.</p>
+<p><strong>Worked example.</strong> A uniform 4 kg rod of length 2 m lies along the x-axis with one end at the origin. Its CG is at the geometric center, $x_{cg}=1$ m, since the mass is evenly distributed. Now attach a 2 kg point mass at $x=2$ m. The combined CG shifts toward the added mass:</p>
+$$
+x_{cg} = \frac{(4)(1) + (2)(2)}{4+2} = \frac{4+4}{6} = 1.33\text{ m}
+$$
+<p><strong>Problem-solving application.</strong> To check whether a table with legs at $x=0$ and $x=3$ m stays upright when a 10 kg object is placed at $x=2.8$ m, find the combined CG of the table (mass 20 kg, CG at $x=1.5$ m) and the object:</p>
+$$
+x_{cg} = \frac{(20)(1.5)+(10)(2.8)}{30} = \frac{30+28}{30} = 1.93\text{ m}
+$$
+<p>Since 1.93 m falls between the two legs, gravity's torque is balanced by the legs' upward normal forces on both sides, and the table stays put. If the combined CG had fallen outside the 0–3 m span, all the torque would act on one side, and the table would tip — the same weighted-average calculation, just checked against the object's physical boundaries.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch9: Statics and Torque (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

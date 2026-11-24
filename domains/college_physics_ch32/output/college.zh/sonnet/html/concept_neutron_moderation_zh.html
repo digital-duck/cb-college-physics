@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neutron Moderation | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="neutron-moderation-中子慢化">Neutron Moderation（中子慢化）</h2>
+<p><strong>定义</strong></p>
+<p>核裂变释放的中子初始动能约为 2 MeV（"快中子"），但 U-235 等易裂变核素的裂变截面在热能区（约 0.025 eV）远大于快能区——两者相差约 3 个数量级。中子慢化（neutron moderation）就是利用慢化剂（moderator，如轻水、重水或石墨）使快中子经过多次弹性散射，逐步损失动能,最终降至与慢化剂原子热运动能量相当的"热中子"，从而大幅提高被燃料吸收并引发下一次裂变的概率。</p>
+<p>单次弹性碰撞后中子能量的变化由动量与能量守恒决定。设入射中子能量为 $E_0$，碰撞后能量为 $E$，慢化剂原子质量数为 $A$，则散射角为 $180°$（正碰）时能量降至最低：</p>
+$$
+\alpha = \left(\frac{A-1}{A+1}\right)^2
+$$
+<p>$E$ 的取值范围是 $\alpha E_0 \le E \le E_0$。定义<strong>对数能量衰减量</strong>（平均每次碰撞能量对数的减少量）：</p>
+$$
+\xi = 1 + \frac{\alpha}{1-\alpha}\ln\alpha
+$$
+<p>$\xi$ 只与 $A$ 有关，与初始能量无关，这是它作为慢化能力指标的关键性质。</p>
+<p><strong>工作实例</strong></p>
+<p>比较氢（$A=1$）与碳（$A=12$）：</p>
+<li>氢：$\alpha = 0$，$\xi \approx 1$（一次碰撞平均可损失约 63% 的对数能量，效率极高）</li>
+<li>碳：$\alpha = (11/13)^2 \approx 0.716$，$\xi \approx 0.158$</li>
+<p>将中子从 2 MeV 慢化到 0.025 eV，对数能量总变化为 $\ln(2\times10^6/0.025) \approx 18.2$。所需平均碰撞次数 $n = 18.2/\xi$：</p>
+<li>水中（主要由氢慢化）：约 18–20 次</li>
+<li>石墨中：约 115 次</li>
+<p>这解释了为何轻水反应堆的堆芯尺寸远小于石墨慢化堆——氢原子质量与中子接近，动量传递效率最高。</p>
+<p><strong>问题求解应用</strong></p>
+<p>工程上评估慢化剂优劣不能只看 $\xi$，还需综合<strong>慢化比</strong>（moderating ratio）：</p>
+$$
+\text{MR} = \frac{\xi \Sigma_s}{\Sigma_a}
+$$
+<p>其中 $\Sigma_s$、$\Sigma_a$ 分别是宏观散射截面与吸收截面。重水虽然 $\xi$ 略低于轻水（氘 $A=2$），但吸收截面极小（$\Sigma_a$ 比氢小两个数量级），故 MR 远高于轻水，这正是重水堆（如 CANDU）能使用天然铀（无需浓缩）的物理根源。</p>
+<p>解题时的典型步骤：给定 $A$，先求 $\alpha$、$\xi$，再由总对数能量降幅除以 $\xi$ 估算平均碰撞次数，最后结合 $\Sigma_a$ 判断该慢化剂是否适合特定堆型的燃料浓缩需求。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

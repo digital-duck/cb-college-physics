@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gauss Law Magnetism | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="gauss-s-law-for-magnetism">Gauss's Law for Magnetism</h2>
+<p><strong>Definition.</strong> Gauss's law for magnetism states that the net magnetic flux through any closed surface is zero:</p>
+$$\oint_S \vec{B}\cdot d\vec{A} = 0 \qquad\Longleftrightarrow\qquad \nabla\cdot\vec{B}=0 .$$
+<p>The magnetic flux through a surface is $\Phi_B=\int \vec{B}\cdot d\vec{A}$. For a closed surface, $d\vec{A}$ points outward. Flux leaving the surface counts as positive, and flux entering counts as negative. The law says these always cancel exactly: every field line that enters a closed region must also leave it. Equivalently, magnetic field lines form closed loops or extend to infinity, and they never start or stop. Electric charge produces diverging field lines, so the electric version of Gauss's law gives $Q_{\text{enc}}/\varepsilon_0$. The magnetic version gives zero because no isolated magnetic charge (monopole) has ever been observed. Cutting a bar magnet in half gives two smaller magnets, each with its own north and south pole.</p>
+<p><strong>Worked example.</strong> A uniform field $\vec{B}=B_0\hat{z}$ passes through a cylinder of radius $R$ and length $L$ whose axis lies along $z$. Find the net flux through the closed surface.</p>
+<li>Right end cap, outward normal $+\hat{z}$: $\Phi_1 = B_0\pi R^2$.</li>
+<li>Left end cap, outward normal $-\hat{z}$: $\Phi_2 = -B_0\pi R^2$.</li>
+<li>Curved side: $\vec{B}\perp d\vec{A}$ everywhere, so $\Phi_3=0$.</li>
+<p>The total is $\Phi_1+\Phi_2+\Phi_3=0$, as the law requires.</p>
+<p><strong>Problem-solving application.</strong> Suppose a field has the form $\vec{B}=(ax,\,by,\,0)$, where $a$ and $b$ are constants. Can it be a real magnetic field? Apply the law in its differential form, which requires the divergence of $\vec{B}$ (the sum of its partial derivatives) to vanish:</p>
+$$\nabla\cdot\vec{B}=\frac{\partial (ax)}{\partial x}+\frac{\partial (by)}{\partial y}=a+b .$$
+<p>A physical field requires $a+b=0$, so $b=-a$. The field $\vec{B}=(ax,-ay,0)$ is allowed. Near the origin, field lines move in along one axis and out along the other, which looks like a saddle. The field $(ax, ay, 0)$ with $a\neq 0$ is not allowed. It would radiate outward from a point, which would be a north monopole at the origin.</p>
+<p>This divergence test is a quick consistency check on any proposed field. It also describes the field of a magnet: outside a bar magnet, lines run from the north pole to the south pole, and inside, they continue from south back to north, completing the loop.</p>
+<pre class="mermaid">flowchart LR
+    A[North pole] -->|outside magnet| B[South pole]
+    B -->|inside magnet| A</pre>
+<p><em>Magnetic field lines of a bar magnet form closed loops: outside the magnet they run north to south, and inside they return south to north. They have no starting or ending point.</em></p>
+<p><strong>Key takeaway.</strong> Zero divergence means magnetic field lines have no sources or sinks. If a magnetic monopole were discovered, the law would have to be modified, with the zero replaced by a term proportional to the enclosed magnetic charge.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

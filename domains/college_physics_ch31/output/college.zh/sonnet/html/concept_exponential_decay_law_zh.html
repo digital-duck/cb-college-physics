@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exponential Decay Law | College Physics Ch31</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="exponential-decay-law">Exponential Decay Law</h2>
+<p><strong>定义</strong></p>
+<p>放射性核素的衰变是一个随机过程：任意一个原子核在下一瞬间是否衰变，完全不依赖于它已经存在了多久，也不依赖于周围其他核的状态。这种"无记忆性"意味着，在任意短时间间隔 $dt$ 内，核发生衰变的概率与 $dt$ 成正比，比例常数 $\lambda$ 称为<strong>衰变常数</strong>（decay constant），单位是 $\text{s}^{-1}$。</p>
+<p>设 $N(t)$ 为 $t$ 时刻尚未衰变的核数目。在时间 $dt$ 内衰变掉的核数为</p>
+$$dN = -\lambda N\, dt$$
+<p>负号表示 $N$ 随时间减少。这是一个一阶线性微分方程，分离变量后积分：</p>
+$$\int_{N_0}^{N} \frac{dN}{N} = -\lambda \int_0^t dt$$
+<p>得到</p>
+$$N(t) = N_0 e^{-\lambda t}$$
+<p>其中 $N_0$ 是 $t=0$ 时的初始核数目。这就是<strong>指数衰变定律</strong>。由此可定义<strong>半衰期</strong> $T_{1/2}$：使 $N=N_0/2$ 所需的时间，代入求解得</p>
+$$T_{1/2} = \frac{\ln 2}{\lambda} \approx \frac{0.693}{\lambda}$$
+<p><strong>例题</strong></p>
+<p>某放射源初始含有 $N_0 = 8.0\times 10^{10}$ 个核，半衰期为 $5.0$ 天。求 $12$ 天后剩余核数目。</p>
+<p>先由半衰期求衰变常数：$\lambda = \dfrac{\ln 2}{5.0\ \text{天}} = 0.1386\ \text{天}^{-1}$。</p>
+<p>代入衰变公式：</p>
+$$N(12) = 8.0\times 10^{10} \times e^{-0.1386 \times 12} = 8.0\times 10^{10} \times e^{-1.663} \approx 1.53\times 10^{10}$$
+<p>即约剩余 $1.53\times 10^{10}$ 个核，占初始量的 $19\%$。</p>
+<p><strong>解题应用</strong></p>
+<p>在实际问题中，常需要把"半衰期"与"衰变常数"互相换算，或者反过来由测得的 $N(t)/N_0$ 求经过的时间：</p>
+$$t = \frac{1}{\lambda}\ln\!\left(\frac{N_0}{N}\right) = \frac{T_{1/2}}{\ln 2}\ln\!\left(\frac{N_0}{N}\right)$$
+<p>这一关系是碳-14 测年、核医学剂量计算、反应堆燃耗分析等应用的数学基础。解题的关键步骤始终是三步：确定已知量（$N_0$、$N$ 或 $N/N_0$、$t$ 或 $T_{1/2}$）、通过 $\lambda = \ln 2 / T_{1/2}$ 统一常数，再代入指数关系求解未知量。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch31: Radioactivity and Nuclear Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

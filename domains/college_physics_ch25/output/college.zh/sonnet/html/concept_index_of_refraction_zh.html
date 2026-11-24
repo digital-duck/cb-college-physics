@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Index Of Refraction | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="index-of-refraction">Index Of Refraction</h2>
+<p><strong>定义</strong></p>
+<p>光在真空中的传播速度恒定为 $c \approx 3.00 \times 10^8~\text{m/s}$，但在其他介质（如水、玻璃、空气）中传播时速度会减小。折射率 $n$ 定义为这两者之比：</p>
+$$
+n = \frac{c}{v}
+$$
+<p>其中 $v$ 是光在该介质中的传播速度。由于介质中光速 $v \le c$，折射率是一个无量纲量，且恒有 $n \ge 1$。真空的折射率精确为 $1$；空气的折射率约为 $1.0003$，常近似取 $1$；水约为 $1.33$；普通玻璃约为 $1.5$；钻石高达 $2.42$。折射率越大，说明光在该介质中被"减速"得越厉害。</p>
+<p><strong>范例讲解</strong></p>
+<p>已知水的折射率 $n_{\text{water}} = 1.33$，求光在水中的传播速度。</p>
+<p>由定义式变形：</p>
+$$
+v = \frac{c}{n} = \frac{3.00 \times 10^8~\text{m/s}}{1.33} \approx 2.26 \times 10^8~\text{m/s}
+$$
+<p>可见光在水中的速度约为真空中的 75%。</p>
+<p><strong>解题应用</strong></p>
+<p>折射率的核心价值在于连接两种介质时光传播方向的改变，这正是斯涅尔定律（Snell's Law）的基础：</p>
+$$
+n_1 \sin\theta_1 = n_2 \sin\theta_2
+$$
+<p>其中 $\theta_1, \theta_2$ 分别是光线在介质 1、介质 2 中相对于法线的入射角与折射角。</p>
+<p><strong>例题</strong>：光从空气（$n_1 = 1.00$）以 $30^\circ$ 入射角射入玻璃（$n_2 = 1.50$），求折射角。</p>
+$$
+\sin\theta_2 = \frac{n_1 \sin\theta_1}{n_2} = \frac{1.00 \times \sin 30^\circ}{1.50} = \frac{0.5}{1.5} = 0.333
+$$
+$$
+\theta_2 = \arcsin(0.333) \approx 19.5^\circ
+$$
+<p>由于玻璃折射率更大（光速更慢），光线会向法线方向偏折，折射角小于入射角，这与实验观测一致。</p>
+<p>折射率还决定了全反射的临界角（当光从光密介质射向光疏介质时）以及棱镜、光纤、透镜等光学器件的设计参数，是几何光学定量分析不可或缺的基础量。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

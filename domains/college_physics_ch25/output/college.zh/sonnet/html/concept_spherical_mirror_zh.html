@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spherical Mirror | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="球面镜">球面镜</h2>
+<p><strong>定义</strong></p>
+<p>球面镜是反射面取自球面一部分的镜子。若反射面的凹面朝向入射光，称为凹面镜（会聚镜，焦距 $f>0$）；若凸面朝向入射光，称为凸面镜（发散镜，焦距 $f<0$）。设球面的曲率半径为 $R$，则焦距满足</p>
+$$f = \frac{R}{2}$$
+<p>这一关系源于近轴光线（paraxial rays，即与主光轴夹角很小的光线）在球面上反射时，反射光线近似都通过一点——焦点 $F$。球面镜成像遵循镜面方程：</p>
+$$\frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{f}$$
+<p>其中 $d_o$ 为物距，$d_i$ 为像距。放大率为</p>
+$$m = -\frac{d_i}{d_o}$$
+<p>符号约定：凹面镜 $f>0$；凸面镜 $f<0$；实像 $d_i>0$，虚像 $d_i<0$；正立像 $m>0$，倒立像 $m<0$。</p>
+<p><strong>推导要点（为何 $f=R/2$）</strong></p>
+<p>考虑一条平行于主光轴的入射光线，打在球面上偏离主轴高度为 $h$ 处，入射角与法线（沿半径方向）夹角为 $\theta$，满足 $\sin\theta \approx \theta = h/R$（近轴近似）。反射后光线与主轴的交点到镜面顶点的距离即为焦距。利用几何关系可证明该交点处的距离恰为 $R/2$，且在近轴条件下与 $h$ 无关——这正是"近轴光线聚焦于同一点"的数学基础，也是镜面方程成立的前提。</p>
+<p><strong>例题</strong></p>
+<p>一个凹面镜曲率半径 $R = 40\text{ cm}$，故 $f = 20\text{ cm}$。物体置于 $d_o = 30\text{ cm}$ 处。求像的位置与放大率。</p>
+<p>代入镜面方程：</p>
+$$\frac{1}{30} + \frac{1}{d_i} = \frac{1}{20}$$
+$$\frac{1}{d_i} = \frac{1}{20} - \frac{1}{30} = \frac{3-2}{60} = \frac{1}{60}$$
+$$d_i = 60\text{ cm}, \quad m = -\frac{60}{30} = -2$$
+<p>像为实像（$d_i>0$，在镜前形成，可用屏幕接住），倒立且放大 2 倍。</p>
+<p><strong>问题求解应用</strong></p>
+<p>处理球面镜问题的通用步骤：(1) 依据凹凸性确定 $f$ 的符号；(2) 代入镜面方程求 $d_i$；(3) 用 $m=-d_i/d_o$ 判断像的正倒与大小；(4) 检验极限情形——例如凸面镜（$f<0$）对任意 $d_o>0$ 总得到 $d_i<0$ 的虚像，这解释了为何汽车后视镜（凸面镜）始终成正立缩小的虚像，视野更广但距离感被压缩。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

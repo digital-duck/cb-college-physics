@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Average Velocity | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="average-velocity">Average Velocity</h2>
+<p><strong>定义</strong></p>
+<p>平均速度是位移与所用时间之比，记作</p>
+$$\bar{v} = \frac{\Delta x}{\Delta t} = \frac{x_2 - x_1}{t_2 - t_1}$$
+<p>其中 $\Delta x$ 是位移（末位置减初位置），$\Delta t$ 是经过的时间。注意平均速度是<strong>矢量</strong>，其符号（正或负）表示方向；这与"平均速率"不同，后者是标量，等于路程除以时间，恒为非负。在国际单位制中，平均速度的单位是 $\text{m/s}$。</p>
+<p><strong>例题</strong></p>
+<p>一辆车在 $t_1 = 2\,\text{s}$ 时位于 $x_1 = 10\,\text{m}$，在 $t_2 = 6\,\text{s}$ 时位于 $x_2 = -2\,\text{m}$。求这段时间内的平均速度。</p>
+$$\bar{v} = \frac{x_2 - x_1}{t_2 - t_1} = \frac{-2\,\text{m} - 10\,\text{m}}{6\,\text{s} - 2\,\text{s}} = \frac{-12\,\text{m}}{4\,\text{s}} = -3\,\text{m/s}$$
+<p>负号说明车沿负方向运动，平均速度大小为 $3\,\text{m/s}$，方向为 $x$ 轴负方向。</p>
+<p><strong>解题应用</strong></p>
+<p>在位置-时间图中，平均速度等于连接两个数据点的<strong>弦（chord）的斜率</strong>。这是理解平均速度与瞬时速度关系的关键：瞬时速度是位置-时间曲线在某一点处<strong>切线</strong>的斜率，可以看作当 $\Delta t \to 0$ 时弦的斜率的极限。因此，解题时若题目给出位置随时间变化的表格或图像，只需选取起止两点，计算斜率即可得到该时间段内的平均速度；若要求某一时刻的瞬时速度，则需取越来越短的时间间隔，观察弦的斜率是否趋于某个稳定值。这种"弦逼近切线"的思路也是后续学习导数概念的物理直觉基础。</p>
+<pre class="mermaid">graph TD
+    A["位置-时间图：点1 (t₁, x₁)"] --- C["弦：连接点1与点2"]
+    B["位置-时间图：点2 (t₂, x₂)"] --- C
+    C --> D["弦的斜率 = Δx/Δt = 平均速度"]
+    D --> E["当Δt→0：弦斜率 → 切线斜率"]
+    E --> F["切线斜率 = 瞬时速度（更陡）"]</pre>
+<p><em>位置-时间图上两点间的弦斜率表示平均速度，其极限即为某一点处更陡的切线斜率——瞬时速度。</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

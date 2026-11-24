@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velocity | College Physics Ch04</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="velocity">Velocity</h2>
+<p>Velocity is a vector quantity describing both the rate of change of an object's position and the direction of that change. This distinguishes it from speed, which captures only magnitude. For motion along a straight line, average velocity over a time interval is defined as</p>
+$$\bar{v} = \frac{\Delta x}{\Delta t} = \frac{x_2 - x_1}{t_2 - t_1}$$
+<p>where $x_1$ and $x_2$ are positions at times $t_1$ and $t_2$. As $\Delta t$ shrinks toward zero, this ratio converges to the instantaneous velocity, defined as the time derivative of position:</p>
+$$v(t) = \frac{dx}{dt} = \lim_{\Delta t \to 0} \frac{x(t + \Delta t) - x(t)}{\Delta t}$$
+<p>This limit definition is essential — velocity is not merely "distance over time," but the <em>slope of the position-time curve at a single instant</em>, which is why calculus, not arithmetic, is the correct tool for describing motion that changes continuously.</p>
+<p><strong>Worked example.</strong> Suppose a particle's position is given by $x(t) = 3t^2 - 2t + 1$ meters, with $t$ in seconds. To find the velocity at $t = 4\text{ s}$, differentiate: $v(t) = \frac{dx}{dt} = 6t - 2$. At $t = 4$, $v(4) = 6(4) - 2 = 22\ \text{m/s}$. This is the instantaneous velocity — the reading a speedometer-with-direction would show at that exact moment, distinct from the average velocity over, say, the interval $[0, 4]$, which would be $\bar{v} = \frac{x(4)-x(0)}{4-0} = \frac{41 - 1}{4} = 10\ \text{m/s}$. The discrepancy between 22 and 10 m/s illustrates why instantaneous and average velocity must never be conflated when motion is non-uniform.</p>
+<p><strong>Problem-solving application.</strong> Velocity graphs let you extract or verify motion information geometrically: the slope of a position-time graph gives velocity, and the <em>area</em> under a velocity-time graph gives displacement, since $\Delta x = \int_{t_1}^{t_2} v(t)\,dt$. This inverse relationship — differentiation to go from position to velocity, integration to go back — is the core toolkit for solving kinematics problems where you're given one function (position, velocity, or acceleration) and asked to reconstruct another, such as finding total displacement from a velocity function that changes sign (indicating a reversal in direction).</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch4: Dynamics: Force and Newton's Laws of Motion (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changing Electric Field Creates Magnetic Field | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="changing-electric-field-creates-magnetic-field">Changing Electric Field Creates Magnetic Field</h2>
+<h3 id="definition">Definition</h3>
+<p>Ampère's original law states that a magnetic field circulates around any electric current:</p>
+$$\oint \vec B\cdot d\vec l = \mu_0 I_{\text{enc}}$$
+<p>This law fails when current is not continuous. Consider a capacitor being charged. Current flows in the wires, but no charge crosses the gap between the plates. Choose a surface bounded by a loop around the wire. If the surface is flat, $I_{\text{enc}} = I$. If the surface is bulged out to pass through the gap, $I_{\text{enc}} = 0$. The same loop gives two different answers, which is a contradiction.</p>
+<p>Maxwell resolved this by adding a term. A changing electric flux acts like a current, called the <strong>displacement current</strong>:</p>
+$$I_d = \varepsilon_0 \frac{d\Phi_E}{dt}$$
+<p>The corrected law, the <strong>Ampère–Maxwell law</strong>, is</p>
+$$\oint \vec B\cdot d\vec l = \mu_0\left(I_{\text{enc}} + \varepsilon_0 \frac{d\Phi_E}{dt}\right)$$
+<p><strong>A changing electric field creates a magnetic field</strong>, even where no charge moves. This mirrors Faraday's law, in which a changing magnetic field creates an electric field. Together the two laws make the theory symmetric, and they make electromagnetic waves possible.</p>
+<h3 id="worked-example">Worked Example</h3>
+<p>A parallel-plate capacitor has circular plates of radius $R = 5.0\ \text{cm}$. It is charged with a current $I = 2.0\ \text{A}$. Find $B$ at $r = 3.0\ \text{cm}$ from the axis, inside the gap.</p>
+<p><strong>Step 1: Electric flux through a circle of radius $r$.</strong> The field between the plates is uniform, with $E = \dfrac{Q}{\varepsilon_0 \pi R^2}$. The flux is</p>
+$$\Phi_E = E\,\pi r^2 = \frac{Q\,r^2}{\varepsilon_0 R^2}$$
+<p><strong>Step 2: Rate of change.</strong> Since $dQ/dt = I$,</p>
+$$\varepsilon_0\frac{d\Phi_E}{dt} = I\,\frac{r^2}{R^2}$$
+<p><strong>Step 3: Apply the law.</strong> There is no real current in the gap, so symmetry gives $B(2\pi r) = \mu_0 I \dfrac{r^2}{R^2}$. Therefore</p>
+$$B = \frac{\mu_0 I r}{2\pi R^2}$$
+$$B = \frac{(4\pi\times10^{-7})(2.0)(0.030)}{2\pi(0.050)^2} = 4.8\times10^{-6}\ \text{T}$$
+<p>Check consistency: at $r=R$, $B = \mu_0 I/(2\pi R)$. This is exactly the field of the wire just outside the plates, so the field is continuous across the boundary. The contradiction is resolved.</p>
+<h3 id="problem-solving-application">Problem-Solving Application</h3>
+<p><strong>Problem.</strong> An electric field in a region is $E(t) = E_0 \sin(\omega t)$ over a circular area of radius $R$, with $E_0 = 1.0\times10^{3}\ \text{V/m}$ and $\omega = 2\pi\times10^{6}\ \text{s}^{-1}$. Find the peak magnetic field at $r = R = 1.0\ \text{cm}$.</p>
+<p><strong>Strategy.</strong></p>
+<li>Identify the loop and surface. Use a circle of radius $r$ with $E$ perpendicular to the surface.</li>
+<li>Compute $\Phi_E = E\,\pi r^2$ and differentiate. Here $\dfrac{d\Phi_E}{dt} = \pi r^2 E_0\omega\cos\omega t$.</li>
+<li>Set $I_{\text{enc}} = 0$ and use symmetry: $B(2\pi r) = \mu_0\varepsilon_0 \pi r^2 E_0\omega\cos\omega t$.</li>
+<p><strong>Solution.</strong></p>
+$$B_{\max} = \frac{\mu_0\varepsilon_0\, r\,E_0\,\omega}{2} = \frac{r\,E_0\,\omega}{2c^2}$$
+$$B_{\max} = \frac{(0.010)(1.0\times10^{3})(6.28\times10^{6})}{2(9.0\times10^{16})} \approx 3.5\times10^{-13}\ \text{T}$$
+<p>The result is tiny because $1/c^2$ is so small. Magnetic fields from changing $\vec E$ are hard to detect in everyday settings. They become important at high frequencies, as in radio waves and light. There the two induction laws feed each other: a changing $\vec E$ creates $\vec B$, and a changing $\vec B$ creates $\vec E$. Together they sustain a wave traveling at $c = 1/\sqrt{\mu_0\varepsilon_0}$.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gauss Law Electricity | College Physics Ch24</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="gauss-law-electricity">Gauss Law Electricity</h2>
+<h3 id="definition">Definition</h3>
+<p><strong>Gauss's law</strong> relates the electric field on a closed surface to the charge inside it. For any closed surface $S$:</p>
+$$\oint_S \vec{E}\cdot d\vec{A} = \frac{Q_{\text{enc}}}{\varepsilon_0}$$
+<p>The left side adds up, over the whole surface, the component of $\vec{E}$ perpendicular to the surface. It counts how many field lines pass outward through $S$. $Q_{\text{enc}}$ is the net charge inside $S$, and $\varepsilon_0 \approx 8.85\times10^{-12}\ \text{C}^2/(\text{N·m}^2)$ is a constant of nature. Charges outside $S$ add nothing, because every line that enters also leaves. For static charges the law is equivalent to Coulomb's law. It is much faster when the charge distribution is symmetric.</p>
+<h3 id="worked-example-point-charge">Worked example: point charge</h3>
+<p>Take a sphere of radius $r$ centered on a charge $q$. By symmetry, $\vec{E}$ is radial and has the same magnitude everywhere on the sphere. It is parallel to $d\vec{A}$, so $E$ comes out of the integral:</p>
+$$E\,(4\pi r^2) = \frac{q}{\varepsilon_0}\quad\Longrightarrow\quad E = \frac{1}{4\pi\varepsilon_0}\frac{q}{r^2}.$$
+<p>This recovers Coulomb's law, with $k = 1/(4\pi\varepsilon_0)$. The inverse-square dependence comes from geometry: the sphere's area grows as $r^2$, so the same number of field lines is spread more thinly.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem:</strong> An infinite line of charge has linear density $\lambda$ (charge per unit length). Find $E$ at distance $r$ from the line.</p>
+<p><strong>Strategy:</strong> Gauss's law only helps when symmetry lets you pull $E$ out of the integral. Follow these steps:</p>
+<li>Identify the symmetry. $\vec{E}$ points radially away from the line, and its magnitude depends only on $r$.</li>
+<li>Choose a closed surface on which $E$ is constant and perpendicular to the surface. Use a coaxial cylinder of radius $r$ and length $L$.</li>
+<li>Compute the flux. The end caps contribute zero, because $\vec{E}$ is parallel to their surfaces. Only the curved side contributes: $E(2\pi r L)$.</li>
+<li>Find the enclosed charge: $Q_{\text{enc}} = \lambda L$.</li>
+<li>Apply the law:</li>
+$$E(2\pi r L) = \frac{\lambda L}{\varepsilon_0}\quad\Longrightarrow\quad E = \frac{\lambda}{2\pi\varepsilon_0 r}.$$
+<p>The field falls off as $1/r$, not $1/r^2$, because the cylinder's area grows only in proportion to $r$. The length $L$ cancels, as it should for an infinite line.</p>
+<p><strong>Check yourself:</strong> Suppose you doubled $r$. By what factor does $E$ change for a point charge? For the line? (Answers: $1/4$ and $1/2$.)</p>
+<h3 id="key-takeaways">Key takeaways</h3>
+<li>The net outward flux through a closed surface equals $Q_{\text{enc}}/\varepsilon_0$.</li>
+<li>The law yields $E$ directly only when symmetry makes $E$ constant and perpendicular on the chosen surface.</li>
+<li>The distance dependence follows from how that surface's area grows: $1/r^2$ for a sphere and $1/r$ for a cylinder.</li>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Superposition | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="superposition">Superposition</h2>
+<p><strong>Definition.</strong> Superposition is the principle that when two or more waves occupy the same point in a linear medium, the net disturbance is the sum of the individual disturbances at that point:</p>
+$$y_{\text{net}}(x,t) = y_1(x,t) + y_2(x,t) + \cdots + y_n(x,t)$$
+<p>The waves do not alter one another. Each continues as if the others were absent, and after passing through the overlap region each emerges unchanged. The principle holds when the medium responds linearly, meaning the restoring force is proportional to displacement. Small-amplitude sound, light in vacuum, and waves on a string all satisfy this. Very large amplitudes, such as shock waves, do not.</p>
+<p><strong>Worked example.</strong> Two pulses travel toward each other along a string. Pulse A has a peak height of $+3\ \text{cm}$ and pulse B has a peak height of $+2\ \text{cm}$. When the peaks coincide, the string's displacement is</p>
+$$y_{\text{net}} = 3 + 2 = 5\ \text{cm}$$
+<p>This is <em>constructive interference</em>. If B were inverted ($-2\ \text{cm}$), the peaks would give $3 + (-2) = 1\ \text{cm}$, which is <em>destructive interference</em>. In both cases the pulses separate afterward with their original shapes.</p>
+<pre class="mermaid">flowchart LR
+    A["Wave 1: y1(x,t)"] --> S["Add displacements point by point"]
+    B["Wave 2: y2(x,t)"] --> S
+    S --> R["Net wave: y1 + y2"]
+    R --> C["Same sign: constructive"]
+    R --> D["Opposite sign: destructive"]</pre>
+<p><em>Superposition adds waves point by point. The sign of the two disturbances decides whether the result is larger or smaller.</em></p>
+<p><strong>Problem-solving application.</strong> Two sinusoidal waves of equal amplitude $A$ and frequency, differing only by a phase $\phi$, are</p>
+$$y_1 = A\sin(kx - \omega t), \qquad y_2 = A\sin(kx - \omega t + \phi)$$
+<p>Apply the identity $\sin a + \sin b = 2\sin\!\left(\tfrac{a+b}{2}\right)\cos\!\left(\tfrac{a-b}{2}\right)$:</p>
+$$y_{\text{net}} = 2A\cos\!\left(\frac{\phi}{2}\right)\sin\!\left(kx - \omega t + \frac{\phi}{2}\right)$$
+<p>The result is a wave of the same frequency with amplitude $2A\cos(\phi/2)$.</p>
+<li>If $\phi = 0$, the amplitude is $2A$ (fully constructive).</li>
+<li>If $\phi = \pi$, the amplitude is $0$ (fully destructive).</li>
+<li>If $\phi = \pi/2$, the amplitude is $2A\cos(\pi/4) = \sqrt{2}\,A$.</li>
+<p>Intensity is proportional to amplitude squared, so for $\phi = 0$ the intensity is four times that of one wave, not two. This is the key to many interference problems.</p>
+<p><em>Check yourself:</em> two speakers emit the same tone in phase, and you stand $\lambda/2$ farther from one than the other. The path difference $\Delta r = \lambda/2$ gives a phase difference $\phi = 2\pi\,\Delta r/\lambda = \pi$. The amplitude is $2A\cos(\pi/2) = 0$, so you hear silence. Noise-cancelling headphones use this effect. They generate a wave that is the inverse of the ambient noise so that the sum is close to zero.</p>
+<p><strong>Why it matters.</strong> Superposition also underlies Fourier analysis. Any complicated periodic wave can be written as a sum of sinusoids, so you can analyze each sinusoid separately and add the results.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

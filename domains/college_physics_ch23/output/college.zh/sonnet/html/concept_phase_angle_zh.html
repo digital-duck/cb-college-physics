@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phase Angle | College Physics Ch23</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="相位角">相位角</h2>
+<p><strong>定义</strong></p>
+<p>在交流电路中，电源电压与电路中电流之间存在时间上的错位，这种错位用相位角 $\varphi$ 描述。若电路的总阻抗（复阻抗）为 $Z = R + jX$，其中 $R$ 为电阻，$X = X_L - X_C$ 为净电抗（感抗与容抗之差），则阻抗的模为</p>
+$$
+|Z| = \sqrt{R^2 + X^2}
+$$
+<p>相位角满足</p>
+$$
+\cos\varphi = \frac{R}{|Z|}, \qquad \tan\varphi = \frac{X}{R}
+$$
+<p>当电路呈感性（$X_L > X_C$）时，$\varphi > 0$，电流滞后于电压；当电路呈容性（$X_L < X_C$）时，$\varphi < 0$，电流超前于电压；纯电阻电路中 $X=0$，$\varphi = 0$，电压与电流同相。$\cos\varphi$ 本身称为<strong>功率因数</strong>，它直接决定了电路中有功功率与视在功率之比：$P = VI\cos\varphi$。</p>
+<p><strong>实例分析</strong></p>
+<p>设某 RLC 串联电路中 $R = 30\ \Omega$，$X_L = 60\ \Omega$，$X_C = 20\ \Omega$。首先求净电抗：</p>
+$$
+X = X_L - X_C = 60 - 20 = 40\ \Omega
+$$
+<p>阻抗模为</p>
+$$
+|Z| = \sqrt{30^2 + 40^2} = \sqrt{900+1600} = 50\ \Omega
+$$
+<p>相位角为</p>
+$$
+\varphi = \arccos\left(\frac{30}{50}\right) = \arccos(0.6) \approx 53.1^\circ
+$$
+<p>由于 $X>0$，该电路呈感性，电流滞后电压约 $53.1^\circ$。</p>
+<p><strong>问题求解应用</strong></p>
+<p>若已知电源电压有效值 $V = 120\ \mathrm{V}$，求该电路消耗的有功功率。先求电流有效值：</p>
+$$
+I = \frac{V}{|Z|} = \frac{120}{50} = 2.4\ \mathrm{A}
+$$
+<p>再代入功率公式：</p>
+$$
+P = VI\cos\varphi = 120 \times 2.4 \times 0.6 = 172.8\ \mathrm{W}
+$$
+<p>对比视在功率 $S = VI = 288\ \mathrm{VA}$，可见由于相位角的存在，只有 $60\%$ 的视在功率转化为实际做功的有功功率，其余部分以无功功率形式在电源与电抗元件间往返交换。这正是工业用电中要求安装补偿电容以减小相位角、提高功率因数的根本原因。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch23: Electromagnetic Induction, AC Circuits, and Electrical Technologies (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

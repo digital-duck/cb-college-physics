@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projectile Motion | College Physics Ch03</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="projectile-motion">Projectile Motion</h2>
+<p>Projectile motion describes the path of an object launched into the air and acted on by gravity alone (air resistance neglected). The key insight is decomposition: horizontal and vertical motion are independent and can be analyzed separately, then recombined.</p>
+<p>If a projectile launches with initial speed $v_0$ at angle $\theta$ above the horizontal, its initial velocity components are:</p>
+$$v_{0x} = v_0\cos\theta, \qquad v_{0y} = v_0\sin\theta$$
+<p>Horizontal motion has zero acceleration (constant velocity):</p>
+$$x(t) = v_{0x}\,t$$
+<p>Vertical motion is free fall under constant acceleration $-g$ (with $g \approx 9.8\ \text{m/s}^2$):</p>
+$$y(t) = v_{0y}\,t - \tfrac{1}{2}g t^2, \qquad v_y(t) = v_{0y} - g t$$
+<p><strong>Worked example.</strong> A ball is launched at $v_0 = 20\ \text{m/s}$ at $\theta = 30°$. Then $v_{0x} = 20\cos30° \approx 17.3\ \text{m/s}$ and $v_{0y} = 20\sin30° = 10\ \text{m/s}$. Time to reach maximum height occurs when $v_y = 0$: $t_{\text{up}} = v_{0y}/g \approx 1.02\ \text{s}$. By symmetry, total flight time (returning to launch height) is $T = 2v_{0y}/g \approx 2.04\ \text{s}$. Horizontal range is $R = v_{0x} T \approx 35.3\ \text{m}$.</p>
+<p><strong>Problem-solving application.</strong> Combining $T = 2v_{0y}/g$ with $R = v_{0x}T$ yields the range formula:</p>
+$$R = \frac{v_0^2 \sin(2\theta)}{g}$$
+<p>This shows range is maximized at $\theta = 45°$, since $\sin(2\theta)$ peaks at $2\theta = 90°$. For a projectile landing at a different height than launch (e.g., a ball kicked off a cliff), don't reuse the symmetric-time shortcut — instead solve the quadratic $y(t) = y_0 + v_{0y}t - \tfrac{1}{2}gt^2 = y_{\text{final}}$ for $t$, then substitute into $x(t)$. This decomposition strategy — separate the axes, use kinematics independently, recombine via shared time $t$ — generalizes to any two-dimensional constant-acceleration problem, including motion on inclined planes or with wind resistance modeled as an added horizontal acceleration term.</p>
+<pre><code>graph TD
+    A["Initial velocity v0 at angle θ"] --&gt; B["Horizontal: v0x = v0 cos θ"]
+    A --&gt; C["Vertical: v0y = v0 sin θ"]
+    B --&gt; D["x(t) = v0x · t (constant velocity)"]
+    C --&gt; E["y(t) = v0y·t − ½gt² (free fall)"]
+    D --&gt; F["Combine via shared time t"]
+    E --&gt; F
+    F --&gt; G["Trajectory, range, max height"]</code></pre>
+<p><em>The independence of horizontal and vertical motion components, joined only by the shared time variable, to produce the full trajectory.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch3: Two-Dimensional Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

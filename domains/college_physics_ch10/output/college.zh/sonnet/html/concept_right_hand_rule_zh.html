@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Right Hand Rule | College Physics Ch10</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="right-hand-rule">Right Hand Rule</h2>
+<p><strong>定义</strong></p>
+<p>右手定则是一种几何约定,用于确定由叉乘(cross product)定义的矢量的方向,尤其是角速度 $\vec{\omega}$、角动量 $\vec{L}$ 和力矩 $\vec{\tau}$ 这类"轴矢量"(axial vector)的方向。对于旋转运动,规则如下:让右手的四指沿旋转方向弯曲,大拇指伸直所指的方向,就是该旋转对应矢量的方向。这不是物理定律本身,而是人为选定的坐标系约定——它使得叉乘公式</p>
+$$
+\vec{\tau} = \vec{r} \times \vec{F}, \qquad \vec{L} = \vec{r} \times \vec{p}
+$$
+<p>在数值和方向上与实验观测一致。若采用左手定则,所有矢量方向都会反转,但由此导出的物理规律(如角动量守恒)不会改变——这说明"右手"只是全人类共同采用的记号约定,而非自然界的强制要求。</p>
+<p><strong>理论要点:叉乘的方向判定</strong></p>
+<p>对任意两个矢量 $\vec{A}$ 和 $\vec{B}$,其叉乘 $\vec{A} \times \vec{B}$ 的方向由右手定则给出:四指从 $\vec{A}$ 转向 $\vec{B}$(转角小于 $180^\circ$ 的方向),大拇指所指即为结果方向,大小为 $|\vec{A}||\vec{B}|\sin\theta$。这与行列式表达式</p>
+$$
+\vec{A} \times \vec{B} =
+\begin{vmatrix}
+\hat{i} & \hat{j} & \hat{k} \\
+A_x & A_y & A_z \\
+B_x & B_y & B_z
+\end{vmatrix}
+$$
+<p>完全等价,右手定则只是给出该代数结果的几何直觉。</p>
+<p><strong>应用示例</strong></p>
+<p>一个圆盘绕竖直轴逆时针旋转(从上方俯视)。将右手四指按逆时针方向弯曲(顺着旋转方向),大拇指竖直向上——因此角速度矢量 $\vec{\omega}$ 指向正上方。</p>
+<p>再考虑力矩:扳手在扳手头处施加力 $\vec{F}$,力臂矢量为 $\vec{r}$(从螺栓指向施力点)。若 $\vec{r}$ 指向东、$\vec{F}$ 指向北,四指从东转向北,大拇指指向正上方,故 $\vec{\tau} = \vec{r} \times \vec{F}$ 指向天顶方向——这意味着螺栓将被"拧出"(逆时针拧松,若螺纹为标准右旋)。</p>
+<p><strong>解题应用</strong></p>
+<p>在解决三维力矩或角动量问题时,右手定则常用于快速判断矢量方向,再代入分量公式求大小。例如已知 $\vec{r} = (2, 0, 0)\ \text{m}$,$\vec{F} = (0, 3, 0)\ \text{N}$,先用右手定则判断 $\vec{\tau}$ 沿 $+\hat{k}$ 方向,再计算 $|\vec{\tau}| = rF\sin 90^\circ = 6\ \text{N·m}$,从而得到 $\vec{\tau} = (0, 0, 6)\ \text{N·m}$,与代数公式结果一致。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch10: Rotational Motion and Angular Momentum (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

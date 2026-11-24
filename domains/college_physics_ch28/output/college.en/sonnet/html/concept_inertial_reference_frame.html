@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inertial Reference Frame | College Physics Ch28</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="inertial-reference-frame">Inertial Reference Frame</h2>
+<p>An <strong>inertial reference frame</strong> is a frame of reference in which Newton's first law holds: a body at rest stays at rest, and a body in motion keeps moving at constant velocity (constant speed along a straight line), unless a net external force acts on it. Equivalently, a frame is inertial if a body with zero net force has zero acceleration:</p>
+$$\sum \vec F = 0 \;\Longrightarrow\; \vec a = 0.$$
+<p><strong>Key fact: frames moving at constant velocity relative to an inertial frame are also inertial.</strong> If frame $S'$ moves at constant velocity $\vec v$ relative to inertial frame $S$, positions and velocities transform (Galilean transformation) as</p>
+$$\vec r' = \vec r - \vec v\,t, \qquad \vec u' = \vec u - \vec v .$$
+<p>Differentiating again, $\vec a' = \vec a$ because $\vec v$ is constant. Since acceleration is the same in both frames, $\sum\vec F = m\vec a$ takes the same form in both. This is why no mechanical experiment can tell you whether you are "at rest" or moving uniformly.</p>
+<p>A frame that accelerates relative to an inertial frame is <strong>non-inertial</strong>. In it, free objects appear to accelerate, so one must add fictitious forces (such as the "force" pushing you back in an accelerating car) for Newton's laws to work.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>A train moves at $v = 20\ \text{m/s}$ east on straight, level track at constant velocity. A passenger drops a ball. Describe its motion in (a) the train frame and (b) the ground frame.</p>
+<p>(a) Train frame (inertial): the ball starts with zero horizontal velocity and only gravity acts, so it falls straight down.</p>
+<p>(b) Ground frame (also inertial): the ball starts with horizontal velocity $u = 20\ \text{m/s}$ east. No horizontal force acts, so this stays constant, and the ball follows a parabola. If the fall takes $t = 0.5\ \text{s}$, the ball lands $x = 20(0.5) = 10\ \text{m}$ east of its release point, as measured from the ground. The train has also moved 10 m, so the ball lands directly below the release point <em>in the train</em>.</p>
+<p>Both observers use the same law, $a_y = -g$, $a_x = 0$. They disagree on the path, not on the physics.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p>The same train now brakes with $a = -2\ \text{m/s}^2$ (the train frame is non-inertial). A ball rests on a frictionless table in the train. Describe its motion.</p>
+<p><em>Ground frame (inertial):</em> no horizontal force acts, so the ball keeps its velocity of 20 m/s east, while the table slows underneath it.</p>
+<p><em>Train frame (non-inertial):</em> the ball accelerates forward at $2\ \text{m/s}^2$ with no real force acting. To use $F = ma$ here, we add a fictitious force $F_{\text{fict}} = -m a_{\text{frame}} = +2m$ (forward, in newtons when $m$ is in kg).</p>
+<p><strong>Strategy:</strong> for any problem, first choose a frame. If you can pick an inertial frame (usually the ground), apply Newton's laws directly with only real forces. Use a non-inertial frame only when it simplifies the problem, and then include fictitious forces.</p>
+<p><strong>Practical note:</strong> Earth rotates and orbits the Sun, so it is not exactly inertial. For most lab-scale problems the corrections (about $0.03\ \text{m/s}^2$ at the equator from rotation) are negligible, and Earth's surface is treated as inertial.</p>
+<pre class="mermaid">flowchart TD
+    A[Choose a reference frame] --> B{Is the frame accelerating?}
+    B -- No --> C[Inertial frame]
+    B -- Yes --> D[Non-inertial frame]
+    C --> E[Use only real forces: F = ma]
+    D --> F[Add fictitious forces: F = ma + m a_frame]</pre>
+<p><em>Decision flow for choosing how to apply Newton's second law depending on whether the frame accelerates.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch28: Special Relativity (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

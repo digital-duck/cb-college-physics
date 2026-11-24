@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Fall | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="自由落体">自由落体</h2>
+<p><strong>定义</strong></p>
+<p>自由落体是指物体仅在重力作用下运动、不受空气阻力或摩擦力影响的理想化运动状态。在这种条件下，物体的加速度恒定，大小等于重力加速度 $g \approx 9.8\ \text{m/s}^2$，方向竖直向下。若取竖直向上为正方向，则加速度可写为</p>
+$$a = -g$$
+<p>由于加速度恒定，自由落体运动可以直接套用匀加速直线运动的运动学方程：</p>
+$$v(t) = v_0 - gt$$
+$$y(t) = y_0 + v_0 t - \frac{1}{2}g t^2$$
+$$v^2 = v_0^2 - 2g(y - y_0)$$
+<p>其中 $y_0$、$v_0$ 分别为初始位置和初速度。这些方程对"上抛"、"下落"、"从高处静止释放"等所有自由落体情形都适用——区别仅在于 $v_0$ 和 $y_0$ 的取值。</p>
+<p><strong>范例</strong></p>
+<p>一颗石子从 $45\ \text{m}$ 高的楼顶由静止释放，求落地所需时间及落地速度。</p>
+<p>取释放点为 $y_0 = 45\ \text{m}$，地面为 $y=0$，初速度 $v_0 = 0$。由</p>
+$$0 = 45 - \frac{1}{2}(9.8)t^2$$
+<p>解得 $t^2 = \dfrac{2 \times 45}{9.8} \approx 9.18$，即 $t \approx 3.03\ \text{s}$。</p>
+<p>落地速度：$v = -gt = -9.8 \times 3.03 \approx -29.7\ \text{m/s}$，即约 $29.7\ \text{m/s}$，方向向下。</p>
+<p><strong>问题求解应用</strong></p>
+<p>处理自由落体问题的关键是明确三步：①设定正方向与坐标原点；②列出已知量（$v_0$、$y_0$、$t$、$v$ 中的已知项）；③选择包含未知量的那一个运动学方程求解。</p>
+<p>例如，若一个球以 $v_0 = 20\ \text{m/s}$ 竖直上抛，问它能达到的最大高度是多少？在最高点速度为零，代入 $v^2 = v_0^2 - 2g(y-y_0)$：</p>
+$$0 = 20^2 - 2(9.8)(y - y_0) \implies y - y_0 = \frac{400}{19.6} \approx 20.4\ \text{m}$$
+<p>值得注意的是，自由落体的对称性意味着上升时间等于下降时间，且经过同一高度时速度大小相同、方向相反——这一性质在解决"上抛后何时与下落物体相遇"一类综合问题时尤为有用。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

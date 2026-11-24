@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ohms Law | College Physics Ch21</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="ohm-s-law">Ohm's Law</h2>
+<p><strong>Definition.</strong> Ohm's law states that for many conductors, especially metal resistors at constant temperature, the voltage drop across the conductor is proportional to the current through it:</p>
+$$V = IR$$
+<p>Here $V$ is the voltage in volts (V), $I$ is the current in amperes (A), and $R$ is the resistance in ohms ($\Omega$). One ohm is one volt per ampere: $1\,\Omega = 1\,\text{V/A}$. Resistance measures how strongly a component opposes current. A larger $R$ means less current for the same voltage.</p>
+<p>Rearranging gives two more forms, each useful for a different unknown:</p>
+$$I = \frac{V}{R}, \qquad R = \frac{V}{I}$$
+<p>Materials that obey this linear relationship are called <em>ohmic</em>. A plot of $V$ against $I$ is a straight line through the origin, and its slope is $R$. Diodes, filament bulbs, and thermistors are <em>non-ohmic</em>. Their $V$–$I$ curves bend, so $V/I$ is not constant. The law is a model of material behavior, not a universal law like conservation of charge.</p>
+<p><strong>Worked example.</strong> A $12\,\text{V}$ battery is connected across a $240\,\Omega$ resistor. Find the current.</p>
+$$I = \frac{V}{R} = \frac{12\,\text{V}}{240\,\Omega} = 0.050\,\text{A} = 50\,\text{mA}$$
+<p>Check the units: volts divided by ohms gives amperes, as expected. Doubling the battery voltage to $24\,\text{V}$ would double the current to $100\,\text{mA}$, which is what proportionality predicts.</p>
+<p><strong>Problem-solving application.</strong> Ohm's law applies to the whole circuit or to any single component. Apply it to one component at a time, using that component's own $V$, $I$, and $R$.</p>
+<p><em>Problem:</em> A $5.0\,\text{V}$ supply powers a series circuit containing a $150\,\Omega$ resistor and a small lamp that drops $2.0\,\text{V}$. What current flows?</p>
+<li>The resistor and lamp are in series, so they carry the same current.</li>
+<li>The resistor must absorb the remaining voltage: $V_R = 5.0 - 2.0 = 3.0\,\text{V}$.</li>
+<li>Apply Ohm's law to the resistor alone:</li>
+$$I = \frac{V_R}{R} = \frac{3.0\,\text{V}}{150\,\Omega} = 0.020\,\text{A} = 20\,\text{mA}$$
+<li>Check: this is the current through the lamp as well, and the drops add up, $3.0 + 2.0 = 5.0\,\text{V}$.</li>
+<p>The general method is: (1) identify which component you are analyzing, (2) find its voltage drop, using the fact that series elements share current, (3) apply $V = IR$ to that component, and (4) check units and that the voltage drops sum to the supply.</p>
+<pre class="mermaid">flowchart LR
+    A["Battery 5 V"] --> B["Resistor: drops 3 V"]
+    B --> C["Lamp: drops 2 V"]
+    C --> D["Return to battery"]</pre>
+<p><em>Series circuit for the problem. The same 20 mA flows through every element, and the voltage drops (3 V + 2 V) add up to the 5 V supplied.</em></p>
+<p><strong>Check your understanding.</strong> If the supply is raised to $9.0\,\text{V}$ while the lamp still drops $2.0\,\text{V}$ and the resistor stays $150\,\Omega$, the resistor must drop $7.0\,\text{V}$. The current becomes $I = 7.0/150 \approx 47\,\text{mA}$. A higher supply voltage across the same resistance produces a larger current.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch21: Circuits and DC Instruments (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

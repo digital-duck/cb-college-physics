@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adiabatic Process | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="adiabatic-process">Adiabatic Process</h2>
+<p>An <strong>adiabatic process</strong> is a thermodynamic process in which no heat is exchanged with the surroundings:</p>
+$$Q = 0.$$
+<p>The First Law, $\Delta U = Q - W$ (with $W$ the work done <em>by</em> the system), then reduces to</p>
+$$\Delta U = -W.$$
+<p>When a gas expands adiabatically, it does work only by spending its internal energy, so it cools. When it is compressed adiabatically, the work done on it raises its internal energy, so it warms. Adiabatic behavior occurs when a system is thermally insulated, or when the process is so fast that heat has no time to flow, as in a sound wave or a bicycle pump stroke.</p>
+<h3 id="governing-relation">Governing relation</h3>
+<p>For a quasi-static (reversible) adiabatic process of an ideal gas, with $\gamma = C_p/C_V$ (about $1.40$ for air), the temperature and volume obey</p>
+$$TV^{\gamma-1} = \text{constant}.$$
+<p><em>Derivation sketch.</em> With $dQ=0$, $nC_V\,dT = -P\,dV$. Using $PV = nRT$ gives $C_V\,dT = -\dfrac{RT}{V}\,dV$. Since $R = C_p - C_V$, separating variables gives $\dfrac{dT}{T} = -(\gamma-1)\dfrac{dV}{V}$. Integrating gives $TV^{\gamma-1}=\text{const}$.</p>
+<p>Because the gas cools as it expands, its pressure falls faster than along an isotherm, so on a $P$–$V$ diagram the adiabat is steeper. The work done by the gas follows directly from the First Law:</p>
+$$W = -\Delta U = nC_V(T_1 - T_2).$$
+<h3 id="worked-example">Worked example</h3>
+<p>Air ($\gamma = 1.40$) at $T_1 = 300\ \text{K}$ is compressed adiabatically and reversibly to $\tfrac{1}{10}$ of its original volume, as in a diesel engine cylinder. Find $T_2$.</p>
+$$T_2 = T_1\left(\frac{V_1}{V_2}\right)^{\gamma-1} = 300 \,(10)^{0.40} \approx 300(2.51) \approx 754\ \text{K}.$$
+<p>That is about $480^\circ\text{C}$, hot enough to ignite diesel fuel without a spark.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem.</strong> One mole of a monatomic ideal gas ($\gamma = 5/3$, $C_V = \tfrac32 R$) at $400\ \text{K}$ expands adiabatically and reversibly until its volume doubles. Find the final temperature and the work done.</p>
+<li>Final temperature:</li>
+$$T_2 = 400\left(\tfrac12\right)^{2/3} \approx 400(0.630) \approx 252\ \text{K}.$$
+<li>Work done by the gas:</li>
+$$W = nC_V(T_1 - T_2) = (1)(1.5)(8.314)(400-252) \approx 1.8\times10^3\ \text{J}.$$
+<li>Check: $\Delta U = nC_V(T_2-T_1) \approx -1.8\times10^3$ J, so $\Delta U = -W$, as required for $Q=0$.</li>
+<p><strong>Strategy.</strong> To solve an adiabatic problem:</p>
+<li>Confirm that $Q=0$ and that the process is reversible. The $TV^{\gamma-1}$ relation fails for sudden free expansions.</li>
+<li>Relate the two states with $TV^{\gamma-1}=\text{const}$.</li>
+<li>Get the work from the temperature change, $W = nC_V(T_1-T_2)$.</li>
+<li>Verify that the sign of $\Delta T$ matches expansion (cooling) or compression (heating).</li>
+<p><strong>Common pitfall.</strong> Adiabatic does not mean constant temperature. That describes an isothermal process, in which heat flows to keep $T$ fixed. In an adiabatic process the temperature changes, and the energy accounting happens entirely through work.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

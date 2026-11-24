@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Earthquake Wave Detection | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="earthquake-wave-detection">Earthquake Wave Detection</h2>
+<h3 id="definition">Definition</h3>
+<p>An earthquake releases energy as seismic waves. Two body waves matter most for locating the source:</p>
+<li><strong>P-waves</strong> (primary) are compressional and travel fastest, typically $v_P \approx 6\ \text{km/s}$ in the crust.</li>
+<li><strong>S-waves</strong> (secondary) are shear waves and travel more slowly, typically $v_S \approx 3.5\ \text{km/s}$.</li>
+<p>The point underground where rupture begins is the <strong>focus</strong> (hypocenter). The point on the surface directly above it is the <strong>epicenter</strong>. A seismometer records both arrivals. The delay between them, the <strong>S–P interval</strong> $\Delta t = t_S - t_P$, grows with distance $d$ from the source:</p>
+$$
+\Delta t = \frac{d}{v_S} - \frac{d}{v_P} \quad\Longrightarrow\quad d = \Delta t\,\frac{v_P v_S}{v_P - v_S}.
+$$
+<p>This works because both waves leave the source at the same instant. The origin time is not needed, only the gap between arrivals.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>A station records the P-wave at 10:00:12 and the S-wave at 10:00:30. Take $v_P = 6.0$ km/s and $v_S = 3.5$ km/s.</p>
+$$
+\Delta t = 18\ \text{s}, \qquad d = 18\cdot\frac{6.0\times 3.5}{6.0-3.5} = 18\cdot 8.4 \approx 151\ \text{km}.
+$$
+<p>The earthquake lies 151 km from this station, but the direction is unknown. The epicenter could be anywhere on a circle of that radius.</p>
+<h3 id="problem-solving-application-triangulation">Problem-solving application: triangulation</h3>
+<p>One station gives a circle. Two give two intersection points. A <strong>third</strong> station picks out one point, which is the epicenter. (Strictly this is trilateration, since it uses distances rather than angles.)</p>
+<p>Suppose stations are at $A=(0,0)$, $B=(200,0)$ and $C=(0,200)$ km, with computed distances $d_A=100$, $d_B=141$ and $d_C=224$ km. Each station gives a circle equation $(x-x_i)^2+(y-y_i)^2=d_i^2$. Subtracting the equation for $A$ from the one for $B$ cancels the quadratic terms:</p>
+$$
+-400x + 40000 = d_B^2 - d_A^2 = 19881 - 10000 \;\Rightarrow\; x \approx 75.3\ \text{km}.
+$$
+<p>Subtracting $A$ from $C$ in the same way gives $-400y + 40000 = 50176 - 10000$, so $y \approx -0.4 \approx 0$ km. The epicenter is near $(75, 0)$ km. Check against $A$: $\sqrt{75^2+0^2}=75$ km, not 100 km. The three circles do not quite meet at one point, because the distances were rounded and the real crust is not uniform. In practice, analysts find the point that minimizes the total mismatch, such as a least-squares fit, and report an uncertainty region.</p>
+<h3 id="interference-and-structure">Interference and structure</h3>
+<p>Waves reflect and refract at boundaries between rock layers. Where waves overlap, they interfere, and the combined signal is the superposition $u = u_1 + u_2$. Reflected arrivals appear as extra pulses after the direct P-wave. Their timing gives layer depths. A sudden jump in wave speed at the <strong>Mohorovičić discontinuity</strong> (about 30–50 km deep under continents) was found this way. S-waves cannot travel through liquid, so their absence on the far side of Earth showed that the outer core is liquid.</p>
+<h3 id="check-your-understanding">Check your understanding</h3>
+<li>If $\Delta t = 40$ s, what is $d$? (Answer: about 336 km.)</li>
+<li>Why can't one station find the epicenter?</li>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

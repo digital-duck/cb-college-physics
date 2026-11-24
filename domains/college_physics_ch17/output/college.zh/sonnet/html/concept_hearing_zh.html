@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hearing | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="hearing-听觉">Hearing（听觉）</h2>
+<p><strong>定义</strong>：听觉是人耳将空气中传播的压力波（声波）转换为神经电信号、并由大脑皮层解读为"声音"的感知过程。声波经外耳汇聚、鼓膜振动、中耳听小骨放大后传入内耳耳蜗，耳蜗基底膜上不同位置对不同频率产生共振，将机械振动转化为听觉神经冲动。人类可感知的频率范围约为 $20\,\text{Hz}$ 至 $20{,}000\,\text{Hz}$（即 $20\,\text{kHz}$），低于此范围的声波称为次声波，高于此范围的称为超声波。由于人耳对声压幅度的感知近似遵循对数规律而非线性规律，声音强度习惯用分贝（dB，声压级 SPL）尺度衡量：</p>
+$$L_p = 20\log_{10}\left(\frac{p}{p_0}\right)\ \text{dB}$$
+<p>其中 $p$ 为待测声压，$p_0 = 20\,\mu\text{Pa}$ 为人耳听觉阈值的参考声压。</p>
+<p><strong>范例演算</strong>：若某声音的声压是参考阈值的 $1000$ 倍（即 $p/p_0 = 1000$），则其声压级为</p>
+$$L_p = 20\log_{10}(1000) = 20 \times 3 = 60\ \text{dB}$$
+<p>这大致相当于日常交谈的响度。可见声压每增大 $10$ 倍，分贝值仅增加 $20$，这正是对数尺度"压缩"巨大动态范围的作用——人耳能应对的声压比可达百万倍以上。</p>
+<p><strong>问题解决应用</strong>：分贝尺度的对数性质带来一个常见误区——两个声源同时发声时，分贝值不能直接相加。若两台机器各自产生 $70\,\text{dB}$ 的噪声，合成声压级并非 $140\,\text{dB}$。正确做法是先将 dB 转换回强度（$I \propto p^2$，故强度比为 $10^{L_p/10}$），把强度相加后再取对数换回 dB：</p>
+$$L_{\text{合}} = 10\log_{10}\left(10^{L_1/10} + 10^{L_2/10}\right)$$
+<p>代入 $L_1 = L_2 = 70$，得 $L_{\text{合}} = 10\log_{10}(2 \times 10^7) \approx 73\ \text{dB}$，仅增加约 $3\,\text{dB}$。掌握这一换算，才能正确解答噪声叠加、听力保护阈值评估等工程与公共卫生问题。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

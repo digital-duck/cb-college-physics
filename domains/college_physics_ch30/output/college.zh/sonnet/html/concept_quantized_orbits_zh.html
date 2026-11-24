@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quantized Orbits | College Physics Ch30</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="quantized-orbits-量子化轨道">Quantized Orbits(量子化轨道)</h2>
+<p><strong>定义</strong></p>
+<p>在玻尔的氢原子模型中，电子只能沿着一组分立的圆形轨道绕原子核运动，每条轨道对应一个确定的能量值，而不是任意连续的能量。这一限制来自角动量量子化条件：电子轨道角动量必须是约化普朗克常数 $\hbar = h/2\pi$ 的整数倍，即</p>
+$$
+m_e v r = n\hbar, \qquad n = 1, 2, 3, \dots
+$$
+<p>其中 $n$ 称为主量子数。结合库仑引力提供向心力的条件</p>
+$$
+\frac{k e^2}{r^2} = \frac{m_e v^2}{r},
+$$
+<p>可以联立求解出允许的轨道半径与能量，二者均只能取离散值：</p>
+$$
+r_n = n^2 a_0, \qquad E_n = -\frac{13.6\ \text{eV}}{n^2}.
+$$
+<p>这里 $a_0 \approx 0.529\ \text{Å}$ 是玻尔半径。当电子处于某一轨道 $n$ 时，系统能量恒定，不辐射能量；只有当电子在不同轨道间跃迁时，才会以光子形式吸收或释放能量，且光子能量恰好等于两轨道能量之差：</p>
+$$
+hf = E_{n_i} - E_{n_f}.
+$$
+<p><strong>范例演算</strong></p>
+<p>计算电子从 $n=3$ 跃迁到 $n=2$ 时发射光子的频率。</p>
+<p>先求能量差：</p>
+$$
+E_3 = -\frac{13.6}{9} = -1.51\ \text{eV}, \qquad E_2 = -\frac{13.6}{4} = -3.40\ \text{eV}
+$$
+$$
+\Delta E = E_3 - E_2 = 1.89\ \text{eV} = 3.03\times10^{-19}\ \text{J}.
+$$
+<p>再由 $hf = \Delta E$ 解出频率：</p>
+$$
+f = \frac{\Delta E}{h} = \frac{3.03\times10^{-19}}{6.626\times10^{-34}} \approx 4.57\times10^{14}\ \text{Hz},
+$$
+<p>对应波长约 $656\ \text{nm}$，正是氢原子巴尔末系中著名的 $H_\alpha$ 红色谱线，与实验观测精确吻合。</p>
+<p><strong>解题应用</strong></p>
+<p>处理跃迁问题的标准步骤：(1) 用 $E_n = -13.6/n^2\ \text{eV}$ 分别算出初态与末态能量；(2) 取差值 $\Delta E = E_{n_i} - E_{n_f}$，吸收时 $\Delta E>0$ 需外部光子提供能量，发射时电子从高能级落向低能级释放光子；(3) 由 $f = \Delta E/h$ 或 $\lambda = hc/\Delta E$ 求出对应频率或波长。这一框架不仅解释了氢原子分立发射谱线的成因，也是后续学习原子光谱、激光原理及量子力学能级结构的基础工具。</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch30: Atomic Physics (Level: College &middot; Language: ZH &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elapsed Time | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="elapsed-time">Elapsed Time</h2>
+<p>Elapsed time is the duration over which motion or a process occurs — the interval between a starting instant and an ending instant. It is defined as</p>
+$$
+\Delta t = t_f - t_0
+$$
+<p>where $t_f$ is the final (ending) time, $t_0$ is the initial (beginning) time, and $\Delta t$ is measured in seconds (SI unit), though minutes, hours, or years are common depending on context. Because $\Delta t$ is a <em>difference</em> between two clock readings, it is a scalar quantity — it has magnitude but no direction — and by convention $\Delta t \ge 0$ for any motion actually observed, since $t_f$ occurs after $t_0$.</p>
+<p>It is important to distinguish elapsed time from the time coordinates themselves. A time coordinate like $t_0 = 2\ \text{s}$ tells you <em>when</em> something happened relative to a chosen origin (often when a stopwatch starts, $t_0 = 0$). Elapsed time tells you <em>how long</em> something took, independent of where the clock happened to start. This distinction matters in kinematics: velocity and acceleration are defined using $\Delta t$, not raw clock readings, precisely because motion shouldn't depend on an arbitrary choice of when the stopwatch was zeroed.</p>
+<p><strong>Worked example.</strong> A sprinter crosses the start line at $t_0 = 12.40\ \text{s}$ on the stadium clock and the finish line at $t_f = 22.83\ \text{s}$. The elapsed time for the race is</p>
+$$
+\Delta t = 22.83\ \text{s} - 12.40\ \text{s} = 10.43\ \text{s}.
+$$
+<p>Note that the individual readings ($12.40\ \text{s}$, $22.83\ \text{s}$) are irrelevant to judging the sprinter's performance — only $\Delta t$ matters.</p>
+<p><strong>Problem-solving application.</strong> Elapsed time becomes the denominator in every rate calculation you'll use throughout kinematics: average velocity $\bar{v} = \Delta x / \Delta t$, average acceleration $\bar{a} = \Delta v / \Delta t$, and later, instantaneous rates via limits as $\Delta t \to 0$. A common pitfall in multi-step problems is subtracting times in the wrong order or mixing units (e.g., minutes with seconds) before computing $\Delta t$ — always convert to consistent units first, then subtract, then use the result in any rate formula. When a problem gives you two clock readings rather than a duration directly, computing $\Delta t$ correctly is often the first and most error-prone step before any physics begins.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch2: Kinematics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

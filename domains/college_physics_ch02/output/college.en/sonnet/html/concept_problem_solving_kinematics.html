@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problem Solving Kinematics | College Physics Ch02</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="problem-solving-kinematics">Problem Solving Kinematics</h2>
+<p>One-dimensional kinematics involves only five variables—position (or displacement, $\Delta x$), initial velocity ($v_0$), final velocity ($v$), acceleration ($a$), and time ($t$)—linked by a small set of equations. The challenge students face is rarely the physics itself; it is deciding which equation to use and keeping track of what is actually known. A systematic six-step method removes that guesswork.</p>
+<p><strong>Step 1 — Identify the governing principle.</strong> Confirm the motion is one-dimensional with constant acceleration, which justifies using the standard kinematic equations rather than calculus-based variable-acceleration methods.</p>
+<p><strong>Step 2 — List the knowns.</strong> Extract every numerical value given, assigning consistent signs based on a chosen positive direction.</p>
+<p><strong>Step 3 — Identify the unknown.</strong> State exactly what the problem asks for.</p>
+<p><strong>Step 4 — Select the equation</strong> that contains the unknown and only known quantities—avoiding unnecessary multi-step chains.</p>
+<p><strong>Step 5 — Substitute values with units</strong> and solve algebraically before plugging in numbers, then compute.</p>
+<p><strong>Step 6 — Verify reasonableness</strong>, checking units, sign, and order of magnitude.</p>
+<p><strong>Worked example.</strong> A car accelerates from rest at $2.5\ \text{m/s}^2$ for $6\ \text{s}$. Find the distance traveled.</p>
+<li><em>Knowns</em>: $v_0 = 0$, $a = 2.5\ \text{m/s}^2$, $t = 6\ \text{s}$</li>
+<li><em>Unknown</em>: $\Delta x$</li>
+<li><em>Equation</em>: $\Delta x = v_0 t + \tfrac{1}{2}at^2$</li>
+<li><em>Substitute</em>: $\Delta x = 0 + \tfrac{1}{2}(2.5)(6)^2 = 45\ \text{m}$</li>
+<li><em>Check</em>: 45 m in 6 s from rest under modest acceleration is physically sensible—neither absurdly small nor unreasonably large.</li>
+<p><strong>Problem-solving application.</strong> The real payoff of this method appears in multi-part or multi-object problems, such as two cars starting at different times or a ball thrown upward that later falls back down. By re-running the six steps for each phase of motion—resetting knowns and unknowns at each transition (e.g., velocity at the top of a throw is zero, but time continues accumulating)—students avoid the most common error: reusing a variable's value from one phase in the equation for another. Treating each stage as a fresh six-step problem, connected only by shared boundary conditions (final velocity of phase one becomes initial velocity of phase two), turns seemingly complex kinematics problems into a sequence of manageable, verifiable calculations.</p>
+  </main>
+  <footer class="spl-credit">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></footer>
+</div>
+</body>
+</html>
