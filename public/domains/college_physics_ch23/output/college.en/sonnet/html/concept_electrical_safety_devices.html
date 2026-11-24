@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electrical Safety Devices | College Physics Ch23</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="electrical-safety-devices">Electrical Safety Devices</h2>
+<p><strong>Definition.</strong> An electrical shock occurs when current passes through the body. Current of about 1 mA is perceptible, about 10 mA can prevent a person from letting go of a conductor, and about 100 mA through the chest can cause ventricular fibrillation. Safety devices limit or interrupt such currents. Three common ones are the <strong>three-wire grounding scheme</strong>, the <strong>ground fault interrupter (GFI)</strong>, and the <strong>isolation transformer</strong>.</p>
+<li><strong>Three-wire grounding.</strong> Besides the hot and neutral wires, a third wire connects the metal case of an appliance to earth. If the hot wire touches the case, current flows through the low-resistance ground wire instead of through a person. The resulting large current trips the breaker or fuse.</li>
+<li><strong>GFI.</strong> A GFI uses electromagnetic induction. The hot and neutral wires pass through one iron ring, and a sensing coil is wound on the ring. In normal operation the current out equals the current back, $I_{hot} = I_{neutral}$. The two magnetic fluxes cancel, so the net flux is zero and the sensing coil has no induced emf. If current leaks to ground, for example through a person, the currents differ by $I_{leak} = I_{hot} - I_{neutral}$. The net flux $\Phi_B$ changes with the alternating current, and Faraday's law gives an emf in the coil:</li>
+$$\mathcal{E} = -N\frac{d\Phi_B}{dt}$$
+<p>This emf triggers a relay that opens the circuit within about 25 ms. Household GFIs typically trip at a leakage of about 5 mA.</p>
+<li><strong>Isolation transformer.</strong> A 1:1 transformer couples the load to the line only through a shared magnetic flux, with no conducting path. The secondary circuit is therefore not referenced to ground. Touching one secondary wire and ground completes no circuit, so no current flows.</li>
+<p><strong>Worked example.</strong> A faulty hair dryer sends current through a person standing on a wet floor. The hot wire carries $I_{hot}=8.000$ A, and $I_{neutral}=7.990$ A returns through the neutral wire. Find the leakage and decide whether a 5 mA GFI trips.</p>
+$$I_{leak}=8.000-7.990=0.010\ \text{A}=10\ \text{mA}$$
+<p>Since $10\ \text{mA} > 5\ \text{mA}$, the GFI trips. Note that a 15 A breaker would not trip, because the total current is far below 15 A. This is why a GFI protects people while a breaker protects wiring.</p>
+<p><strong>Problem-solving application.</strong> A person has a body resistance of $R = 1500\ \Omega$ (wet skin) and touches a 120 V hot wire while standing on the ground.</p>
+<li>The current is $I = V/R = 120/1500 = 0.080$ A $= 80$ mA. This is dangerous, but it is far too small to trip a 15 A breaker.</li>
+<li>The leakage is well above 5 mA, so a GFI opens the circuit in about 25 ms. The charge delivered is roughly $Q \approx It = (0.080)(0.025) = 2\ \text{mC}$, which is brief enough to avoid fibrillation in most cases.</li>
+<li>With an isolation transformer, the secondary has no path to ground. The body then completes no circuit with the isolated secondary, and ideally $I \approx 0$.</li>
+<p><strong>Choosing a device.</strong> A grounded case handles a case-to-hot fault. A GFI handles any leakage path, including through a person. An isolation transformer prevents a ground path from existing. Real systems often combine them. For example, a bathroom outlet has both a ground pin and a GFI.</p>
+<pre class="mermaid">flowchart LR
+    A[Hot and neutral wires] --> B[Iron ring with sensing coil]
+    B --> C{Currents equal?}
+    C -->|Yes| D[Net flux zero, no emf, circuit stays closed]
+    C -->|No, leakage| E[Net flux changes, emf induced]
+    E --> F[Relay opens circuit]</pre>
+<p><em>A GFI compares hot and neutral currents through a shared iron ring. Any imbalance induces an emf that trips the relay.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch23: Electromagnetic Induction, AC Circuits, and Electrical Technologies (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

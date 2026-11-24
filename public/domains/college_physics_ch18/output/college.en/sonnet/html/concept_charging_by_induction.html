@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charging By Induction | College Physics Ch18</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="charging-by-induction">Charging By Induction</h2>
+<p><strong>Definition.</strong> Charging by induction gives a neutral conductor a net charge <em>without touching it with a charged object</em>. A nearby charge rearranges the conductor's mobile electrons. Grounding the conductor then lets charge enter or leave, and removing the ground traps a net charge whose sign is <strong>opposite</strong> to that of the inducing object. Total charge is conserved throughout:</p>
+$$Q_{\text{total}} = \sum q_i = \text{constant}.$$
+<p><strong>The procedure.</strong> Take two neutral metal spheres on insulating stands. Let a negatively charged rod be the inducer.</p>
+<li><strong>Polarize.</strong> Bring the rod near the sphere without touching it. Electrons in the sphere are repelled to the far side. The near side becomes positive and the far side negative. The net charge is still zero.</li>
+<li><strong>Ground.</strong> Connect the sphere to the earth with a wire. Repelled electrons flow into the earth, so the sphere now has a net deficit of electrons.</li>
+<li><strong>Disconnect the ground first.</strong> Remove the wire while the rod is still nearby. The sphere keeps its electron deficit.</li>
+<li><strong>Remove the rod.</strong> The remaining charge spreads uniformly over the sphere. It is <strong>positive</strong>, opposite to the rod.</li>
+<pre class="mermaid">flowchart LR
+    A["Neutral sphere"] --> B["Bring negative rod near: charges separate"]
+    B --> C["Ground sphere: electrons flow to earth"]
+    C --> D["Remove ground, rod still near"]
+    D --> E["Remove rod: sphere is uniformly positive"]</pre>
+<p><em>The order of steps determines the sign: ground, then disconnect the ground, then remove the rod.</em></p>
+<p><strong>Worked example.</strong> A negative rod induces charge on a neutral sphere. While the sphere is grounded, $3.0\times10^{9}$ electrons flow to the earth. What is the sphere's final charge?</p>
+<p>Each electron carries $e = 1.60\times10^{-19}\ \text{C}$, and the sphere lost electrons, so</p>
+$$Q = +Ne = (3.0\times10^{9})(1.60\times10^{-19}\ \text{C}) = +4.8\times10^{-10}\ \text{C}.$$
+<p>The sphere is positive, as expected for a negative inducer.</p>
+<p><strong>Problem-solving application.</strong> Two identical neutral spheres, $A$ and $B$, touch each other. A positive rod is brought near $A$. The spheres are then separated while the rod is still present, and the rod is removed.</p>
+<p><em>Reasoning.</em> The positive rod attracts electrons toward $A$, the side nearer the rod. Sphere $A$ therefore gains electrons, and $B$ is left short of electrons. Separating the spheres traps these charges, so $A$ is negative and $B$ is positive. If $A$ gained $N$ electrons, then</p>
+$$q_A = -Ne, \qquad q_B = +Ne, \qquad q_A + q_B = 0.$$
+<p>This confirms charge conservation. The inducer sets the sign pattern, and the nearer sphere always gets the sign opposite to the inducer.</p>
+<p><strong>Common pitfalls.</strong></p>
+<li><em>Touching the rod to the sphere</em> is charging by <strong>conduction</strong>. The sphere then gets the <em>same</em> sign as the rod.</li>
+<li><em>Removing the rod before the ground</em> lets the electrons flow back, and the sphere ends up neutral.</li>
+<li><em>In every case, only electrons move.</em> Positive charge "appears" because electrons leave.</li>
+<p><strong>Check yourself.</strong> Using a positive rod and a single grounded sphere, predict the direction of electron flow and the final sign. Electrons flow from the earth into the sphere, and the sphere ends up <strong>negative</strong>.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch18: Electric Charge and Electric Field (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

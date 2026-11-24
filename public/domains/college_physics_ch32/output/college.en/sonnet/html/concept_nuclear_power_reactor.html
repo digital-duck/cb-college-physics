@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuclear Power Reactor | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="nuclear-power-reactor">Nuclear Power Reactor</h2>
+<h3 id="definition">Definition</h3>
+<p>A <strong>nuclear power reactor</strong> is a device that sustains a <em>controlled</em> fission chain reaction and converts the released heat into electricity. Its key components are:</p>
+<li><strong>Fuel:</strong> uranium enriched to about 3–5% $^{235}\text{U}$ (natural uranium is only 0.72%).</li>
+<li><strong>Moderator:</strong> water, heavy water, or graphite. It slows fast fission neutrons (about 2 MeV) to thermal energies (about 0.025 eV), where $^{235}\text{U}$ fissions far more readily.</li>
+<li><strong>Control rods:</strong> neutron absorbers such as boron or cadmium. Inserting or withdrawing them adjusts the reaction rate.</li>
+<li><strong>Coolant:</strong> carries heat to a steam generator or turbine.</li>
+<p>The central quantity is the <strong>effective multiplication factor</strong></p>
+$$k = \frac{\text{neutrons produced in one generation}}{\text{neutrons lost (absorbed or escaped) in the previous generation}}$$
+<li>$k<1$: subcritical, and the reaction dies out.</li>
+<li>$k=1$: <strong>critical</strong>, with a steady power level (normal operation).</li>
+<li>$k>1$: supercritical, and power grows exponentially.</li>
+<p>Each fission of $^{235}\text{U}$ releases about 200 MeV and, on average, $\nu \approx 2.4$ neutrons. Only about one of these must go on to cause another fission for the reaction to be steady.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>A reactor operates at thermal power $P_{th}=3000\ \text{MW}$. How many fissions occur each second?</p>
+$$E = 200\ \text{MeV}\times 1.602\times10^{-13}\ \tfrac{\text{J}}{\text{MeV}} = 3.2\times10^{-11}\ \text{J per fission}$$
+$$R = \frac{P_{th}}{E} = \frac{3.0\times10^{9}\ \text{W}}{3.2\times10^{-11}\ \text{J}} \approx 9.4\times10^{19}\ \text{fissions/s}$$
+<p>Mass of $^{235}\text{U}$ consumed per day:</p>
+$$m = \frac{R\,(86400\ \text{s})}{N_A}\times 235\ \text{g/mol} = \frac{8.1\times10^{24}}{6.02\times10^{23}}\times 235 \approx 3.2\ \text{kg}$$
+<p>About 3 kg of fissioned uranium per day gives 3 GW of heat. A coal plant of the same power burns roughly 7000 tonnes of coal per day.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem:</strong> The reactor has $k=1.000$. Control rods are withdrawn slightly so that $k=1.001$. The mean generation time (the average time between one neutron generation and the next) is $\Lambda = 0.1\ \text{ms}$. The delayed-neutron effect is ignored. How fast does power grow?</p>
+<p>With $k$ constant, the neutron population after $n$ generations is $N_n = N_0 k^n$. In time $t$ there are $n=t/\Lambda$ generations:</p>
+$$N(t)=N_0\,k^{t/\Lambda}=N_0\exp\!\left[\frac{t\ln k}{\Lambda}\right]\approx N_0\exp\!\left[\frac{(k-1)\,t}{\Lambda}\right]$$
+<p>Here $(k-1)/\Lambda = 0.001/10^{-4}\ \text{s}=10\ \text{s}^{-1}$. Power therefore grows by a factor of $e^{10}\approx 2\times10^{4}$ in one second. This is far too fast for mechanical rods to catch.</p>
+<p>Real reactors are controllable because about 0.65% of fission neutrons are <strong>delayed neutrons</strong>, emitted seconds after fission by decaying fission products. They raise the effective generation time to roughly 0.1 s. The same calculation then gives $(k-1)/\Lambda \approx 0.01\ \text{s}^{-1}$, a time constant of about 100 s, which is slow enough for rods and feedback to manage. Operators and safety systems must therefore keep $k-1$ below the delayed-neutron fraction. Beyond that point the reactor is <em>prompt critical</em>, as at Chernobyl.</p>
+<p><strong>Takeaway:</strong> a reactor is a feedback system balancing neutron production against neutron loss. Enrichment and moderation make $k=1$ achievable, control rods hold it there, and delayed neutrons make the control practical.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

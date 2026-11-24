@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linear Thermal Expansion | College Physics Ch13</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="linear-thermal-expansion">Linear Thermal Expansion</h2>
+<p><strong>Definition.</strong> When a solid is heated, its atoms vibrate with larger amplitude and, because the interatomic force is asymmetric, their average spacing increases. For a small temperature change, the resulting change in length is proportional to both the original length and the temperature change:</p>
+$$\Delta L = \alpha L_0 \,\Delta T$$
+<p>Here $L_0$ is the original length, $\Delta T = T_f - T_i$ is the temperature change, and $\alpha$ is the <strong>coefficient of linear expansion</strong>. Its units are $\text{K}^{-1}$ (equivalently $^\circ\text{C}^{-1}$), and its value depends on the material. Typical values are about $12\times10^{-6}\ \text{K}^{-1}$ for steel, $23\times10^{-6}\ \text{K}^{-1}$ for aluminum, and $3\times10^{-6}\ \text{K}^{-1}$ for Pyrex glass. The final length is $L = L_0(1+\alpha\Delta T)$. If $\Delta T<0$, the object contracts. The linear relation holds well only when $\alpha\Delta T \ll 1$, which is true for ordinary temperature ranges.</p>
+<p><strong>Worked example.</strong> A steel bridge girder is $L_0 = 40.0\ \text{m}$ long at $-10^\circ\text{C}$. How much longer is it at $35^\circ\text{C}$?</p>
+$$\Delta T = 35-(-10) = 45\ \text{K}$$
+$$\Delta L = (12\times10^{-6}\ \text{K}^{-1})(40.0\ \text{m})(45\ \text{K}) = 2.16\times10^{-2}\ \text{m} \approx 2.2\ \text{cm}$$
+<p>The girder grows by about 2 cm, which is only 0.05% of its length. That is small, but it is large enough to buckle a rigid structure.</p>
+<p><strong>Problem-solving application: constrained expansion.</strong> Engineers leave expansion gaps in bridges and railway tracks. Suppose a steel rail of length $L_0$ is clamped so it cannot expand. The thermal strain it would have had is</p>
+$$\frac{\Delta L}{L_0} = \alpha\,\Delta T,$$
+<p>and the wall must compress the rail by that same fractional amount. Using Young's modulus $Y$, the stress is</p>
+$$\frac{F}{A} = Y\,\alpha\,\Delta T.$$
+<p>For steel, $Y \approx 2.0\times10^{11}\ \text{Pa}$. With $\Delta T = 45\ \text{K}$:</p>
+$$\frac{F}{A} = (2.0\times10^{11})(12\times10^{-6})(45) \approx 1.1\times10^{8}\ \text{Pa}.$$
+<p>That is about 108 MPa, a large fraction of steel's yield strength. This is why rails buckle on hot days if they are not pre-stressed or given gaps.</p>
+<p><strong>Strategy for any problem:</strong></p>
+<li>Identify $L_0$ and compute $\Delta T$ with its sign.</li>
+<li>Look up $\alpha$ for the material.</li>
+<li>Compute $\Delta L=\alpha L_0\Delta T$, or the final length $L=L_0+\Delta L$.</li>
+<li>If the object is constrained, convert the blocked expansion into stress with $Y\alpha\Delta T$.</li>
+<li>Check the answer. $\Delta L$ should be tiny compared with $L_0$.</li>
+<p><strong>Related case: two materials.</strong> When two materials with different $\alpha$ are bonded, as in a bimetallic strip, heating makes the higher-$\alpha$ side lengthen more, so the strip bends toward the lower-$\alpha$ side. This is the principle behind mechanical thermostats.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch13: Temperature, Kinetic Theory, and the Gas Laws (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Twin Paradox | College Physics Ch28</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="twin-paradox">Twin Paradox</h2>
+<h3 id="definition">Definition</h3>
+<p>The <strong>twin paradox</strong> is a thought experiment in special relativity. One twin stays on Earth, which we treat as an inertial frame. The other twin travels to a distant star and returns at relativistic speed. When they reunite, the traveler has aged less. This is not a contradiction, and it is not an illusion. It is a measurable consequence of time dilation.</p>
+<p>The quantity that matters is <strong>proper time</strong>, which is the time read by a clock along its own path through spacetime. For a clock moving at constant speed $v$, the proper time $\tau$ is related to the Earth-frame time $t$ by</p>
+$$\tau = \frac{t}{\gamma}, \qquad \gamma = \frac{1}{\sqrt{1 - v^2/c^2}}.$$
+<p>For a trip with changing speed, $\tau = \int \sqrt{1 - v(t)^2/c^2}\,dt$.</p>
+<h3 id="why-it-looks-paradoxical">Why it looks paradoxical</h3>
+<p>From the traveler's frame, Earth moves away and then returns. Each twin seems to see the other's clock run slow, so it appears each should be younger. The symmetry is only apparent. The Earth twin stays in one inertial frame for the whole trip. The traveler must <strong>accelerate</strong> to turn around, so the traveler changes inertial frames. The two situations are not equivalent, and only the Earth twin can use a single frame to compare the clocks.</p>
+<p>Acceleration is not what slows the traveler's clock. The turnaround breaks the symmetry. In spacetime, the straight inertial path between two events has the <em>longest</em> proper time, and any path with a turnaround has less.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>The traveler flies to a star 4 light-years away (in Earth's frame) at $v = 0.8c$ and returns at the same speed. Then $\gamma = 1/\sqrt{1-0.64} = 1/0.6 = 5/3$.</p>
+<li>Earth twin's elapsed time: $t = \dfrac{2(4\ \text{ly})}{0.8c} = 10$ years.</li>
+<li>Traveler's elapsed time: $\tau = \dfrac{t}{\gamma} = 10 \times 0.6 = 6$ years.</li>
+<p>The traveler returns 4 years younger than the twin.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem.</strong> A traveler goes out and back at $v = 0.6c$, and the Earth twin ages 20 years. How much does the traveler age?</p>
+<li>Compute $\gamma$: $\sqrt{1 - 0.36} = 0.8$, so $\gamma = 1.25$.</li>
+<li>Apply $\tau = t/\gamma = 20/1.25 = 16$ years.</li>
+<p>The age gap is 4 years.</p>
+<p><strong>Check from the traveler's view.</strong> The one-way distance is $0.6c \times 10\ \text{yr} = 6$ ly in Earth's frame. Length contraction shortens it to $6 \times 0.8 = 4.8$ ly for the traveler. Then the round trip takes $\dfrac{2(4.8)}{0.6} = 16$ years, which matches the result above. The traveler can explain the answer without any acceleration effects, using only contracted distances.</p>
+<p><strong>Strategy.</strong> To solve any twin-paradox problem:</p>
+<li>Choose the inertial frame the stay-at-home twin occupies.</li>
+<li>Compute the coordinate time $t$ for each leg.</li>
+<li>Convert to proper time with $\tau = t/\gamma$ for each leg, and add the legs.</li>
+<p>Never apply time dilation from the traveler's frame across the turnaround. That frame changes at the turnaround, and doing so is the usual source of wrong answers.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch28: Special Relativity (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

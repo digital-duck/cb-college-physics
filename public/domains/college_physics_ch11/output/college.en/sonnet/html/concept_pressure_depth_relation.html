@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pressure Depth Relation | College Physics Ch11</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="pressure-depth-relation">Pressure Depth Relation</h2>
+<p><strong>Definition.</strong> A fluid at rest pushes on every surface it touches. Because the fluid below must support the weight of the fluid above, pressure increases with depth. For a fluid of uniform density $\rho$ in a gravitational field $g$, the pressure due to the fluid at depth $h$ is</p>
+$$P = \rho g h$$
+<p>where $\rho$ is in kg/m³, $g \approx 9.8\ \text{m/s}^2$, $h$ is in meters, and $P$ is in pascals (1 Pa = 1 N/m²). The relation is linear in $h$ only when $\rho$ is constant. This is a good model for liquids, which are nearly incompressible, but not for gases over large height changes.</p>
+<p><strong>Why it holds.</strong> Imagine a vertical column of fluid with cross-sectional area $A$ and height $h$. Its volume is $Ah$, its mass is $\rho A h$, and its weight is $\rho A h g$. In equilibrium, the fluid beneath must push up with a force equal to this weight. Pressure is force per area:</p>
+$$P = \frac{\rho A h g}{A} = \rho g h$$
+<p>The area cancels, so pressure depends only on depth, not on the width or shape of the container.</p>
+<p><strong>Worked example.</strong> A scuba diver descends to 20 m in seawater ($\rho = 1025\ \text{kg/m}^3$). Find the pressure due to the water alone.</p>
+$$P = (1025)(9.8)(20) \approx 2.01\times 10^{5}\ \text{Pa}$$
+<p>This is about 2 atm, taking 1 atm $\approx 1.01\times10^5$ Pa. Every 10 m or so of water adds about one atmosphere, a useful rule of thumb.</p>
+<p><strong>Problem-solving application.</strong> A gate in a reservoir wall is 4.0 m below the surface and has area $0.50\ \text{m}^2$. Atmospheric pressure acts on both sides of the gate, so it cancels and we use only the water's pressure. Estimate the force on the gate.</p>
+<li>Pressure at the gate: $P = (1000)(9.8)(4.0) = 3.92\times10^{4}\ \text{Pa}$.</li>
+<li>Force: $F = PA = (3.92\times10^{4})(0.50) \approx 1.96\times10^{4}\ \text{N}$.</li>
+<p>That is roughly the weight of a 2000 kg object, which is why dams are built thicker at the base. For a gate that spans a range of depths, pressure varies across it, so the exact force requires integrating $\rho g h\,dA$ over the surface. For a vertical rectangle, using the pressure at the gate's center gives the correct total force.</p>
+<p><strong>Common pitfalls.</strong></p>
+<li>Use <em>vertical</em> depth below the surface, not distance along a slanted pipe.</li>
+<li>Do not add atmospheric pressure when it acts equally on both sides of a surface.</li>
+<li>Convert units before computing (e.g., cm to m, g/cm³ to kg/m³).</li>
+<li>Pressure acts in all directions at a point, so the force on a surface is always perpendicular to it.</li>
+<p><strong>Check your understanding.</strong> At what depth in fresh water is the pressure due to the water equal to 1 atm ($1.01\times10^5$ Pa)? Solving $h = P/(\rho g)$ gives $h \approx 10.3$ m, which matches the rule of thumb above.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch11: Fluid Statics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

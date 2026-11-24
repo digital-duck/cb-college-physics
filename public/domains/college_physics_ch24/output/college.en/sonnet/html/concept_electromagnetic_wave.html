@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🍃 Electromagnetic Wave — College Physics Ch24</title>
+<title>Electromagnetic Wave | College Physics Ch24</title>
 <script>
 MathJax = {
   tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
@@ -11,6 +11,8 @@ MathJax = {
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
@@ -19,100 +21,67 @@ h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
 h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
 p{margin-bottom:16px;font-size:1rem}
 li{margin-bottom:6px;margin-left:24px;font-size:1rem}
-table{border-collapse:collapse;margin:16px 0;font-size:.95rem;width:auto}
-th,td{border:1px solid #d8d8d0;padding:8px 12px;text-align:left}
-th{background:#eef1f5;font-weight:600;color:#1e3a5f}
-tr:nth-child(even){background:#f8f8f5}
 pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
     padding:16px 20px;overflow-x:auto;margin:16px 0}
 code{font-family:Menlo,Consolas,monospace;font-size:.87em}
 p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
-.back{display:inline-block;font-family:system-ui,sans-serif;font-size:.85rem;
-      color:#2563eb;text-decoration:none;margin-bottom:24px}
-.back:hover{text-decoration:underline}
-.page{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
-nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;
-        background:#1e3a5f;color:#e8f0fe;padding:24px 16px;
-        display:flex;flex-direction:column}
-nav.toc .back{color:#a8c8f0;margin-bottom:20px}
-nav.toc .back:hover{color:#fff}
-nav.toc h2{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;
-           color:#90b4e8;margin-bottom:14px;font-family:system-ui,sans-serif}
-nav.toc ol{list-style:decimal inside;padding:0;flex:1}
-nav.toc li{margin-bottom:7px;font-size:.85rem;line-height:1.4;font-family:system-ui,sans-serif}
-nav.toc a{color:#a8c8f0;text-decoration:none}
-nav.toc a:hover{color:#fff}
-nav.toc li.toc-target{font-weight:700}
-nav.toc li.toc-target a{color:#fff}
-nav.toc .spl-credit{margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,0.15);
-                    font-size:11px;color:#90b4e8;font-family:system-ui,sans-serif}
-nav.toc .spl-credit a{color:#a8c8f0;text-decoration:none}
-nav.toc .spl-credit a:hover{color:#fff;text-decoration:underline}
-main{padding:48px 64px;max-width:860px}
-h1.book-title{font-size:2rem;color:#1e3a5f;margin-bottom:32px}
-section{margin-bottom:56px;border-top:1px solid #e0e0d8;padding-top:40px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
 section:first-of-type{border-top:none;padding-top:0}
-html{scroll-behavior:smooth}
-@media(max-width:768px){.page{grid-template-columns:1fr}
-nav.toc{position:relative;height:auto}}
 </style>
 </head>
 <body>
 <div class="page">
-  <nav class="toc">
-    <a href="../../../../#/domain/college_physics_ch24" class="back">← College Physics Ch24</a>
-    <h2>Contents</h2>
-    <ol>
-<li><a href="concept_amperes_law.html">🌱 Amperes Law</a></li>
-<li><a href="concept_electric_field.html">🌱 Electric Field</a></li>
-<li><a href="concept_magnetic_field.html">🌱 Magnetic Field</a></li>
-<li><a href="concept_permeability_of_free_space.html">🌱 Permeability Of Free Space</a></li>
-<li><a href="concept_permittivity_of_free_space.html">🌱 Permittivity Of Free Space</a></li>
-<li><a href="concept_changing_electric_field_creates_magnetic_field.html">🍃 Changing Electric Field Creates Magnetic Field</a></li>
-<li><a href="concept_faradays_law.html">🌱 Faradays Law</a></li>
-<li><a href="concept_gauss_law_electricity.html">🌱 Gauss Law Electricity</a></li>
-<li><a href="concept_gauss_law_magnetism.html">🌱 Gauss Law Magnetism</a></li>
-<li><a href="concept_speed_of_light.html">🍃 Speed Of Light</a></li>
-<li><a href="concept_maxwells_equations.html">🍃 Maxwells Equations</a></li>
-<li><a href="concept_wave_frequency_wavelength.html">🌱 Wave Frequency Wavelength</a></li>
-<li class="toc-target"><a href="concept_electromagnetic_wave.html">🍃 Electromagnetic Wave</a></li>
-<li><a href="concept_wave_equation_em.html">🍃 Wave Equation Em</a></li>
-<li><a href="concept_electromagnetic_spectrum.html">🍃 Electromagnetic Spectrum</a></li>
-<li><a href="concept_radio_waves.html">🌸 Radio Waves</a></li>
-</ol>
-    <div class="spl-credit">Generated by <a href="https://github.com/digital-duck/SPL.py" target="_blank">SPL</a></div>
-  </nav>
   <main>
-    <h1 class="book-title">🍃 Electromagnetic Wave</h1>
-    <section>
-<h2>🍃 Electromagnetic Wave</h2>
-<p><strong>Definition.</strong> An electromagnetic wave is a self-propagating disturbance in the electromagnetic field, consisting of mutually perpendicular, oscillating electric field $\mathbf{E}$ and magnetic field $\mathbf{B}$ vectors, both perpendicular to the direction of propagation. These waves require no medium and travel through vacuum at the speed of light $c \approx 3.00 \times 10^8$ m/s, which Maxwell showed follows directly from the known constants $\mu_0$ and $\varepsilon_0$:</p>
-$$
-c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}}.
-$$
-<p>In a plane wave propagating in the $+x$ direction, the fields take the form</p>
-$$
-E_y = E_0 \sin(kx - \omega t), \qquad B_z = B_0 \sin(kx - \omega t),
-$$
-<p>with the amplitude constraint $E_0 = cB_0$, arising directly from Faraday's law and the Ampère–Maxwell law.</p>
-<p><strong>Worked Example.</strong> A radio station broadcasts at $f = 100$ MHz. Determine the wavelength and the peak magnetic field amplitude given a peak electric field amplitude $E_0 = 0.50$ V/m.</p>
-<p>The wavelength follows from $c = f\lambda$:</p>
-$$
-\lambda = \frac{c}{f} = \frac{3.00 \times 10^8 \text{ m/s}}{1.00 \times 10^8 \text{ Hz}} = 3.00 \text{ m}.
-$$
-<p>The peak magnetic field amplitude is</p>
-$$
-B_0 = \frac{E_0}{c} = \frac{0.50 \text{ V/m}}{3.00 \times 10^8 \text{ m/s}} \approx 1.67 \times 10^{-9} \text{ T}.
-$$
-<p>Although $B_0$ is many orders of magnitude smaller than $E_0$ in SI units, both fields carry equal energy density.</p>
-<p><strong>Key Theorem (Intensity).</strong> The time-averaged intensity (power per unit area) transported by an electromagnetic wave is</p>
-$$
-I = \frac{1}{2} c \varepsilon_0 E_0^2 = \frac{E_0 B_0}{2\mu_0}.
-$$
-<p>This result is the time average of the Poynting vector $\mathbf{S} = \frac{1}{\mu_0}(\mathbf{E} \times \mathbf{B})$, which quantifies the directional energy flux. Because $I \propto E_0^2$ and a point source spreads energy over a sphere of area $4\pi r^2$, intensity falls as $r^{-2}$.</p>
-<p><strong>Lab Exercise.</strong> Using a calibrated dipole antenna and oscilloscope, measure the peak electric field amplitude of a 2.45 GHz microwave signal at distances $r = 0.5, 1.0, 1.5$ m from a point source. Plot $I$ versus $r^{-2}$ and verify the inverse-square law. From your measured $E_0$ at each distance, calculate $B_0$ and estimate the total radiated power of the source.</p>
-</section>
+    <h2 id="electromagnetic-wave">Electromagnetic Wave</h2>
+<h3 id="definition">Definition</h3>
+<p>An <strong>electromagnetic (EM) wave</strong> is a self-sustaining disturbance in which an electric field $\vec{E}$ and a magnetic field $\vec{B}$ oscillate together, each perpendicular to the other and to the direction of propagation. The wave is transverse, and it needs no medium. A changing $\vec{B}$ induces an $\vec{E}$ (Faraday's law), and a changing $\vec{E}$ induces a $\vec{B}$ (Maxwell's addition to Ampère's law). Each field regenerates the other as the wave moves through empty space.</p>
+<p>Maxwell's equations in vacuum give a wave equation for each field:</p>
+$$\nabla^2 \vec{E} = \mu_0 \varepsilon_0 \,\frac{\partial^2 \vec{E}}{\partial t^2}$$
+<p>The wave speed is therefore</p>
+$$c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}} \approx 3.00\times 10^8\ \text{m/s}.$$
+<p>A plane wave traveling along $+x$ with $\vec{E}$ along $y$ and $\vec{B}$ along $z$ is</p>
+$$E_y = E_0 \cos(kx - \omega t), \qquad B_z = B_0 \cos(kx - \omega t),$$
+<p>where $k = 2\pi/\lambda$ and $\omega = 2\pi f$. Three relations follow:</p>
+<li>$c = f\lambda$</li>
+<li>$E_0 = c\,B_0$, so the two fields rise and fall in phase</li>
+<li>$\vec{E}\times\vec{B}$ points along the direction of travel</li>
+<p>The wave carries energy at an intensity</p>
+$$I = \tfrac{1}{2}\,c\,\varepsilon_0 E_0^2 .$$
+<h3 id="worked-example">Worked example</h3>
+<p>A radio station broadcasts at $f = 98.0\ \text{MHz}$. Find the wavelength, and find $B_0$ if $E_0 = 0.150\ \text{V/m}$ at your receiver.</p>
+<p><strong>Wavelength:</strong></p>
+$$\lambda = \frac{c}{f} = \frac{3.00\times10^{8}}{98.0\times10^{6}} \approx 3.06\ \text{m}$$
+<p><strong>Magnetic amplitude:</strong></p>
+$$B_0 = \frac{E_0}{c} = \frac{0.150}{3.00\times10^{8}} = 5.00\times10^{-10}\ \text{T}$$
+<p>The magnetic field is tiny in SI units. This is normal, because $c$ is so large.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem.</strong> A laser pointer emits 5.00 mW in a beam 2.00 mm in diameter. Find the intensity, $E_0$, and $B_0$.</p>
+<p><em>Step 1: intensity.</em> The beam area is $A = \pi r^2 = \pi(1.00\times10^{-3})^2 = 3.14\times10^{-6}\ \text{m}^2$, so</p>
+$$I = \frac{P}{A} = \frac{5.00\times10^{-3}}{3.14\times10^{-6}} \approx 1.59\times10^{3}\ \text{W/m}^2 .$$
+<p><em>Step 2: electric amplitude.</em> Solve $I = \tfrac12 c\varepsilon_0 E_0^2$ for $E_0$:</p>
+$$E_0 = \sqrt{\frac{2I}{c\,\varepsilon_0}} = \sqrt{\frac{2(1.59\times10^{3})}{(3.00\times10^{8})(8.85\times10^{-12})}} \approx 1.09\times10^{3}\ \text{V/m}.$$
+<p><em>Step 3: magnetic amplitude.</em></p>
+$$B_0 = \frac{E_0}{c} \approx 3.6\times10^{-6}\ \text{T}.$$
+<p><strong>Check.</strong> The intensity is about that of sunlight, roughly $10^3\ \text{W/m}^2$, but it is squeezed into a pencil-thin beam. The field amplitudes are therefore large. For a given power, a narrower beam gives a larger $E_0$.</p>
+<p><strong>Strategy.</strong> In EM wave problems, first find $\lambda$ or $f$ from $c = f\lambda$. For field strengths, use $E_0 = cB_0$. For power or brightness, use $I = \tfrac12 c\varepsilon_0E_0^2$. Intensity falls as $1/r^2$ from a point source. Doubling the distance cuts $E_0$ by half and $I$ by a factor of four.</p>
+<pre class="mermaid">flowchart LR
+  A["Changing B field"] -->|"induces (Faraday)"| B["Changing E field"]
+  B -->|"induces (Maxwell-Ampère)"| A
+  B --> C["Wave travels at c"]
+  A --> C</pre>
+<p><em>Each changing field induces the other, so the wave keeps propagating through vacuum without a medium.</em></p>
   </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
 </div>
 </body>
 </html>

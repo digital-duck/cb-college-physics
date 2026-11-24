@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interference Order | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="interference-order">Interference Order</h2>
+<p><strong>Definition.</strong> In wave interference, two or more coherent waves combine, and the path difference $\Delta L$ between them determines whether they reinforce or cancel. The <strong>interference order</strong> is the integer $m = 0, \pm 1, \pm 2, \dots$ that counts how many whole wavelengths (or half-wavelengths) fit into that path difference. It labels each maximum or minimum in the pattern in sequence outward from the center.</p>
+<p>For a double slit with spacing $d$, observed at angle $\theta$ from the central axis:</p>
+<li><strong>Bright fringes (constructive):</strong> $d\sin\theta = m\lambda$, with $m = 0, \pm1, \pm2, \dots$</li>
+<li><strong>Dark fringes (destructive):</strong> $d\sin\theta = \left(m+\tfrac12\right)\lambda$, with $m = 0, \pm1, \pm2, \dots$</li>
+<p>The case $m=0$ is the central maximum, where the path difference is zero. The case $m=\pm1$ is the first-order maximum, where one wave travels exactly one wavelength farther than the other, and so on. Always check which convention your source uses. Some texts instead write dark fringes as $d\sin\theta = m'\lambda$ with $m' = \tfrac12, \tfrac32, \dots$, or count dark fringes starting from $m=1$.</p>
+<p><strong>Worked example.</strong> Light of wavelength $\lambda = 600\ \text{nm}$ passes through slits separated by $d = 2.40\ \mu\text{m}$. Find the angle of the second-order bright fringe.</p>
+$$\sin\theta_2 = \frac{m\lambda}{d} = \frac{2(600\times10^{-9})}{2.40\times10^{-6}} = 0.500 \quad\Rightarrow\quad \theta_2 = 30.0^\circ$$
+<p>On a screen a distance $L$ away, and for small angles, the fringe position is $y_m \approx \dfrac{m\lambda L}{d}$. Adjacent fringes are therefore evenly spaced by $\Delta y = \lambda L/d$.</p>
+<p><strong>Problem-solving application: the highest observable order.</strong> Since $|\sin\theta|\le 1$, the order is bounded:</p>
+$$|m| \le \frac{d}{\lambda}$$
+<p>For the setup above, $d/\lambda = 2400/600 = 4.0$, so $m$ can be at most 4. At $m=4$, $\sin\theta = 1$, meaning the fringe lies at $90^\circ$ and is not observable on a flat screen. The visible bright fringes are therefore $m = 0, \pm1, \pm2, \pm3$, a total of 7 maxima.</p>
+<p><em>Strategy for any problem:</em></p>
+<li>Decide whether you need a maximum or a minimum, which determines the equation.</li>
+<li>Substitute the integer $m$ (or $m+\tfrac12$) to get the path difference.</li>
+<li>Solve for the unknown ($\theta$, $\lambda$, $d$, or $y$).</li>
+<li>Check that $|\sin\theta|\le1$. If it is not, that order does not exist.</li>
+<p><strong>Diffraction gratings and wavelength identification.</strong> A grating uses the same equation, $d\sin\theta = m\lambda$, but with very many slits. This makes the maxima sharp and bright. Different wavelengths have different angles at the same $m$, so white light spreads into a spectrum in each order. Higher orders spread more widely. Orders can also overlap. For example, the second-order blue light at $400\ \text{nm}$ appears at the same angle as the first-order light at $800\ \text{nm}$, because both have $m\lambda = 800\ \text{nm}$. When identifying an unknown spectral line, always record the order $m$ along with the angle.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

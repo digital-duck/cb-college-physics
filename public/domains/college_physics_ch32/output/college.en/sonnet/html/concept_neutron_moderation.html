@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neutron Moderation | College Physics Ch32</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="neutron-moderation">Neutron Moderation</h2>
+<p><strong>Definition.</strong> Neutrons born in fission carry a mean kinetic energy of about 2 MeV, but U-235 fissions most readily when it captures <em>thermal</em> neutrons, which have energies near $E_{th} = kT \approx 0.025$ eV at room temperature. The fission cross section differs by a factor of roughly 1000 between these energies. <strong>Neutron moderation</strong> is the process of slowing fast neutrons to thermal energies through repeated elastic scattering in a light material, the <em>moderator</em>, such as water, heavy water, or graphite. A good moderator has light nuclei, because a neutron loses the most energy when it collides with a particle of similar mass. It must also scatter often and absorb few neutrons.</p>
+<p><strong>Energy loss per collision.</strong> In an elastic collision with a nucleus of mass number $A$, the neutron's energy after the collision lies between $\alpha E$ and $E$, where</p>
+$$\alpha = \left(\frac{A-1}{A+1}\right)^2 .$$
+<p>The average logarithmic energy loss per collision, which does not depend on the neutron's energy, is</p>
+$$\xi = 1 + \frac{\alpha}{1-\alpha}\ln\alpha .$$
+<p>For hydrogen ($A=1$), $\alpha = 0$ and $\xi = 1$. For carbon-12, $\xi \approx 0.158$.</p>
+<p>The mean number of collisions needed to slow neutrons from $E_0$ to $E_f$ is</p>
+$$N = \frac{1}{\xi}\ln\frac{E_0}{E_f}.$$
+<p><strong>Worked example.</strong> Find the number of collisions needed to moderate a 2 MeV neutron to 0.025 eV in graphite and in hydrogen.</p>
+<p>The energy ratio is $E_0/E_f = \dfrac{2\times10^{6}}{0.025} = 8\times10^{7}$, so $\ln(E_0/E_f) \approx 18.2$.</p>
+<li>Graphite: $N = 18.2/0.158 \approx 115$ collisions.</li>
+<li>Hydrogen: $N = 18.2/1 \approx 18$ collisions.</li>
+<p>Hydrogen is far more efficient per collision. In practice, thermalization in the hydrogen of water takes about 18–20 collisions. Because $\xi$ is defined as an average over the collisions, these counts are estimates, not exact numbers.</p>
+<p><strong>Problem-solving application.</strong> Collisions alone do not make a good moderator. We must also account for how often scattering happens compared with absorption. The <strong>moderating ratio</strong> is</p>
+$$\text{MR} = \frac{\xi\,\Sigma_s}{\Sigma_a},$$
+<p>where $\Sigma_s$ and $\Sigma_a$ are the macroscopic scattering and absorption cross sections. Ordinary water has a large $\xi\Sigma_s$ (about 1.35 cm$^{-1}$), but hydrogen absorbs neutrons noticeably, so MR $\approx 70$. Heavy water has a smaller $\xi\Sigma_s$ but very low absorption, giving MR $\approx 5000$. This is why $\text{D}_2\text{O}$ reactors (CANDU) can run on <em>natural</em> uranium, while light-water reactors need uranium enriched to 3–5% U-235 to make up for the neutrons water absorbs.</p>
+<p>To compare two candidate moderators:</p>
+<li>Compute $\xi$ from $A$.</li>
+<li>Compute $N$ for the required energy drop.</li>
+<li>Check MR against the fuel's enrichment constraints.</li>
+<p>Moderation also gives reactors a safety feature. If the water boils or is lost, fewer neutrons are thermalized, the chain reaction weakens, and the power falls.</p>
+<pre class="mermaid">flowchart LR
+    A["Fission: ~2 MeV neutron"] --> B["Scatter off moderator nuclei"]
+    B --> C{"Energy near 0.025 eV?"}
+    C -- No --> B
+    C -- Yes --> D["Thermal neutron"]
+    D --> E["Absorbed by U-235"]
+    E --> F["New fission"]</pre>
+<p><em>A fission neutron loses energy over repeated scattering collisions until it is thermal, then is likely to cause another U-235 fission.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch32: Medical Applications of Nuclear Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

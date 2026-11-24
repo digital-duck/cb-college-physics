@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🍃 Wave Equation Em — College Physics Ch24</title>
+<title>Wave Equation Em | College Physics Ch24</title>
 <script>
 MathJax = {
   tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
@@ -11,6 +11,8 @@ MathJax = {
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
@@ -19,99 +21,56 @@ h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
 h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
 p{margin-bottom:16px;font-size:1rem}
 li{margin-bottom:6px;margin-left:24px;font-size:1rem}
-table{border-collapse:collapse;margin:16px 0;font-size:.95rem;width:auto}
-th,td{border:1px solid #d8d8d0;padding:8px 12px;text-align:left}
-th{background:#eef1f5;font-weight:600;color:#1e3a5f}
-tr:nth-child(even){background:#f8f8f5}
 pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
     padding:16px 20px;overflow-x:auto;margin:16px 0}
 code{font-family:Menlo,Consolas,monospace;font-size:.87em}
 p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
-.back{display:inline-block;font-family:system-ui,sans-serif;font-size:.85rem;
-      color:#2563eb;text-decoration:none;margin-bottom:24px}
-.back:hover{text-decoration:underline}
-.page{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
-nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;
-        background:#1e3a5f;color:#e8f0fe;padding:24px 16px;
-        display:flex;flex-direction:column}
-nav.toc .back{color:#a8c8f0;margin-bottom:20px}
-nav.toc .back:hover{color:#fff}
-nav.toc h2{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;
-           color:#90b4e8;margin-bottom:14px;font-family:system-ui,sans-serif}
-nav.toc ol{list-style:decimal inside;padding:0;flex:1}
-nav.toc li{margin-bottom:7px;font-size:.85rem;line-height:1.4;font-family:system-ui,sans-serif}
-nav.toc a{color:#a8c8f0;text-decoration:none}
-nav.toc a:hover{color:#fff}
-nav.toc li.toc-target{font-weight:700}
-nav.toc li.toc-target a{color:#fff}
-nav.toc .spl-credit{margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,0.15);
-                    font-size:11px;color:#90b4e8;font-family:system-ui,sans-serif}
-nav.toc .spl-credit a{color:#a8c8f0;text-decoration:none}
-nav.toc .spl-credit a:hover{color:#fff;text-decoration:underline}
-main{padding:48px 64px;max-width:860px}
-h1.book-title{font-size:2rem;color:#1e3a5f;margin-bottom:32px}
-section{margin-bottom:56px;border-top:1px solid #e0e0d8;padding-top:40px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
 section:first-of-type{border-top:none;padding-top:0}
-html{scroll-behavior:smooth}
-@media(max-width:768px){.page{grid-template-columns:1fr}
-nav.toc{position:relative;height:auto}}
 </style>
 </head>
 <body>
 <div class="page">
-  <nav class="toc">
-    <a href="../../../../#/domain/college_physics_ch24" class="back">← College Physics Ch24</a>
-    <h2>Contents</h2>
-    <ol>
-<li><a href="concept_amperes_law.html">🌱 Amperes Law</a></li>
-<li><a href="concept_electric_field.html">🌱 Electric Field</a></li>
-<li><a href="concept_magnetic_field.html">🌱 Magnetic Field</a></li>
-<li><a href="concept_permeability_of_free_space.html">🌱 Permeability Of Free Space</a></li>
-<li><a href="concept_permittivity_of_free_space.html">🌱 Permittivity Of Free Space</a></li>
-<li><a href="concept_changing_electric_field_creates_magnetic_field.html">🍃 Changing Electric Field Creates Magnetic Field</a></li>
-<li><a href="concept_faradays_law.html">🌱 Faradays Law</a></li>
-<li><a href="concept_gauss_law_electricity.html">🌱 Gauss Law Electricity</a></li>
-<li><a href="concept_gauss_law_magnetism.html">🌱 Gauss Law Magnetism</a></li>
-<li><a href="concept_speed_of_light.html">🍃 Speed Of Light</a></li>
-<li><a href="concept_maxwells_equations.html">🍃 Maxwells Equations</a></li>
-<li><a href="concept_wave_frequency_wavelength.html">🌱 Wave Frequency Wavelength</a></li>
-<li><a href="concept_electromagnetic_wave.html">🍃 Electromagnetic Wave</a></li>
-<li class="toc-target"><a href="concept_wave_equation_em.html">🍃 Wave Equation Em</a></li>
-<li><a href="concept_electromagnetic_spectrum.html">🍃 Electromagnetic Spectrum</a></li>
-<li><a href="concept_radio_waves.html">🌸 Radio Waves</a></li>
-</ol>
-    <div class="spl-credit">Generated by <a href="https://github.com/digital-duck/SPL.py" target="_blank">SPL</a></div>
-  </nav>
   <main>
-    <h1 class="book-title">🍃 Wave Equation Em</h1>
-    <section>
-<h2>🍃 Wave Equation Em</h2>
-<p><strong>Definition.</strong> Electromagnetic waves arise as solutions to a coupled system of partial differential equations derived directly from Maxwell's equations in vacuum. Eliminating either <strong>E</strong> or <strong>B</strong> from the four Maxwell equations yields the electromagnetic wave equation. For the electric field:</p>
-$$
-\nabla^2 \mathbf{E} = \mu_0 \varepsilon_0 \frac{\partial^2 \mathbf{E}}{\partial t^2}
-$$
-<p>and identically for the magnetic field:</p>
-$$
-\nabla^2 \mathbf{B} = \mu_0 \varepsilon_0 \frac{\partial^2 \mathbf{B}}{\partial t^2}
-$$
-<p>These are three-dimensional vector wave equations of the form $\nabla^2 f = \frac{1}{v^2}\frac{\partial^2 f}{\partial t^2}$, where the wave propagation speed is $v = \frac{1}{\sqrt{\mu_0 \varepsilon_0}}$. Substituting $\mu_0 = 4\pi \times 10^{-7}\ \text{T·m/A}$ and $\varepsilon_0 = 8.854 \times 10^{-12}\ \text{C}^2/\text{N·m}^2$ yields $v = c \approx 3.00 \times 10^8\ \text{m/s}$, the speed of light — Maxwell's profound identification of light as an electromagnetic wave.</p>
-<p><strong>Worked Example.</strong> Consider a plane wave propagating in the $+x$ direction with electric field polarized along $\hat{z}$:</p>
-$$
-E_z(x,t) = E_0 \cos(kx - \omega t)
-$$
-<p>Verify this satisfies the wave equation. Computing:</p>
-$$
-\frac{\partial^2 E_z}{\partial x^2} = -k^2 E_0 \cos(kx - \omega t), \qquad \frac{\partial^2 E_z}{\partial t^2} = -\omega^2 E_0 \cos(kx - \omega t)
-$$
-<p>Substituting into $\frac{\partial^2 E_z}{\partial x^2} = \mu_0\varepsilon_0 \frac{\partial^2 E_z}{\partial t^2}$ requires $k^2 = \mu_0\varepsilon_0\,\omega^2$, giving the dispersion relation $\omega = ck$, consistent with $v = \omega/k = c$.</p>
-<p><strong>Key Theorem.</strong> For any electromagnetic plane wave in vacuum, the electric and magnetic fields are mutually perpendicular, both perpendicular to the direction of propagation, and related in magnitude by:</p>
-$$
-\frac{E_0}{B_0} = c
-$$
-<p>This follows from applying Faraday's law to the plane-wave solution, which forces $\mathbf{B} = \frac{1}{c}\hat{k} \times \mathbf{E}$.</p>
-<p><strong>Lab Exercise.</strong> A laser emits light at $\lambda = 632\ \text{nm}$. (a) Calculate the angular frequency $\omega$ and wave number $k$. (b) Write explicit expressions for $E_z(x,t)$ and $B_y(x,t)$ for a wave propagating in the $+x$ direction with peak electric field amplitude $E_0 = 1.5\ \text{kV/m}$. (c) Verify that your expressions satisfy both the wave equation and the relation $E_0/B_0 = c$.</p>
-</section>
+    <h2 id="wave-equation-em">Wave Equation Em</h2>
+<h3 id="definition">Definition</h3>
+<p>An electromagnetic wave is a self-sustaining oscillation of coupled electric and magnetic fields. In vacuum, Maxwell's equations imply that each Cartesian component of $\mathbf{E}$ and $\mathbf{B}$ satisfies the <strong>wave equation</strong>:</p>
+$$\frac{\partial^2 E}{\partial x^2} = \frac{1}{c^2}\frac{\partial^2 E}{\partial t^2}, \qquad c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}} \approx 3.00\times10^8\ \text{m/s}.$$
+<p>The speed $c$ comes entirely from two measured constants: the vacuum permeability $\mu_0$ and permittivity $\varepsilon_0$. Any function of the form $E(x,t)=f(x-ct)$ solves this equation. The most important case is the sinusoidal traveling wave:</p>
+$$E(x,t)=E_0\cos(kx-\omega t),\qquad k=\frac{2\pi}{\lambda},\ \ \omega=2\pi f.$$
+<p>Substituting into the wave equation gives $k^2 = \omega^2/c^2$, so $\omega/k = c$. Rewriting this with $f$ and $\lambda$:</p>
+$$c = f\lambda.$$
+<p>Because $c$ is fixed in vacuum, <strong>higher frequency means shorter wavelength</strong>, and the two are inversely proportional.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>An FM radio station broadcasts at $f = 100\ \text{MHz}$. Find its wavelength.</p>
+$$\lambda=\frac{c}{f}=\frac{3.00\times10^8}{1.00\times10^8}=3.00\ \text{m}.$$
+<p>Now compare green light with $\lambda = 550\ \text{nm}$:</p>
+$$f=\frac{c}{\lambda}=\frac{3.00\times10^8}{5.50\times10^{-7}}\approx 5.45\times10^{14}\ \text{Hz}.$$
+<p>The light's frequency is about $5\times10^6$ times that of the radio wave, and its wavelength is about $5\times10^6$ times shorter.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem.</strong> A microwave oven operates at $2.45\ \text{GHz}$. (a) Find the wavelength. (b) A standing wave forms between the oven's walls, with nodes at each wall. If the walls are $30.6\ \text{cm}$ apart, how many half-wavelengths fit across?</p>
+<p><strong>Solution.</strong></p>
+<p>(a) $\lambda = \dfrac{3.00\times10^8}{2.45\times10^9}\approx 0.122\ \text{m}=12.2\ \text{cm}$.</p>
+<p>(b) Standing waves with nodes at both walls require $L = n\,\dfrac{\lambda}{2}$, so</p>
+$$n=\frac{2L}{\lambda}=\frac{2(0.306)}{0.122}\approx 5.$$
+<p>Exactly five half-wavelengths fit. Between the nodes lie hot and cold spots spaced $\lambda/2\approx 6.1$ cm apart. This is why ovens use rotating turntables: they move food through the pattern so it heats evenly.</p>
+<p><strong>Strategy to remember.</strong></p>
+<li>Convert units first: MHz to $10^6$ Hz, GHz to $10^9$ Hz, nm to $10^{-9}$ m.</li>
+<li>Use $c=f\lambda$ to move between $f$ and $\lambda$.</li>
+<li>Check plausibility: radio waves are meters long, visible light is hundreds of nanometers, and X-rays are shorter still.</li>
+<p><strong>Caution.</strong> In a medium such as glass, the speed becomes $v=c/n$, where $n$ is the refractive index. The frequency stays fixed at the boundary, so the wavelength shrinks to $\lambda/n$. Frequency is the invariant property of the wave. Wavelength depends on the medium.</p>
   </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
 </div>
 </body>
 </html>

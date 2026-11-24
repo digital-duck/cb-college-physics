@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnifying Glass | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="magnifying-glass">Magnifying Glass</h2>
+<p>A <strong>magnifying glass</strong> is a converging lens used with the object placed <em>inside</em> the focal length, $d_o < f$. Rays from the object leave the lens still diverging, so they never meet on the far side. Your eye traces them backward to a point where they appear to originate. That point is an <strong>upright, enlarged, virtual image</strong> on the same side of the lens as the object.</p>
+<h3 id="governing-equations">Governing equations</h3>
+<p>Using the thin-lens equation and magnification with the real-is-positive sign convention:</p>
+$$\frac{1}{f}=\frac{1}{d_o}+\frac{1}{d_i},\qquad m=-\frac{d_i}{d_o}$$
+<p>When $d_o<f$, solving for $d_i$ gives a <strong>negative</strong> value. A negative $d_i$ means the image is virtual. Then $m=-d_i/d_o>0$ means the image is upright, and $|m|>1$ means it is enlarged. Combining the two equations gives</p>
+$$m=\frac{f}{f-d_o}$$
+<p>As $d_o\to f^-$, $m$ grows without bound. The image also moves farther away, so in practice it becomes hard to view comfortably.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>A lens has $f=10.0\ \text{cm}$. A coin is placed $d_o=6.0\ \text{cm}$ from it. Find the image location and the magnification.</p>
+$$\frac{1}{d_i}=\frac{1}{f}-\frac{1}{d_o}=\frac{1}{10}-\frac{1}{6}=-\frac{1}{15}\ \Rightarrow\ d_i=-15\ \text{cm}$$
+$$m=-\frac{-15}{6}=+2.5$$
+<p>The image is virtual, 15 cm from the lens on the same side as the coin, upright, and 2.5 times as large.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Angular magnification.</strong> For a viewer, what matters is how large the image appears. The unaided eye sees an object best at the near point $N\approx 25\ \text{cm}$. If the lens forms the image at the near point ($d_i=-N$), then</p>
+$$M = 1+\frac{N}{f}$$
+<p>If the eye relaxes and the image is at infinity ($d_o=f$), then</p>
+$$M=\frac{N}{f}$$
+<p><em>Problem.</em> A jeweler wants $M=5$ with the image at the near point. What focal length is needed, and where must the gem be placed?</p>
+<li>$5 = 1+\dfrac{25}{f}\Rightarrow f=\dfrac{25}{4}=6.25\ \text{cm}$.</li>
+<li>Place the image at $d_i=-25$ cm: $\dfrac{1}{d_o}=\dfrac{1}{6.25}+\dfrac{1}{25}=\dfrac{5}{25}$, so $d_o=5.0\ \text{cm}$.</li>
+<p>The gem sits 5.0 cm from the lens, which is inside $f=6.25$ cm as required.</p>
+<p><strong>Checklist for any magnifier problem:</strong></p>
+<li>Confirm $d_o<f$. If not, the image is real and the lens is not acting as a magnifier.</li>
+<li>Treat $d_i<0$ as a virtual image.</li>
+<li>Check that $m>1$.</li>
+<li>Stronger magnification needs a shorter focal length, which means a more sharply curved lens.</li>
+<pre class="mermaid">flowchart LR
+    A["Object at d_o < f"] --> B["Rays diverge after lens"]
+    B --> C["Eye traces rays backward"]
+    C --> D["Virtual image, d_i < 0"]
+    D --> E["Upright and enlarged, m > 1"]</pre>
+<p><em>The chain of reasoning from object placement inside the focal length to an upright, enlarged virtual image.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

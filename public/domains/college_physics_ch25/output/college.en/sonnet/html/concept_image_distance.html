@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Distance | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="image-distance">Image Distance</h2>
+<p><strong>Definition.</strong> The image distance $d_i$ is the distance measured along the optical axis from the center of a lens or mirror to the image it forms. Its sign tells you what kind of image you have:</p>
+<li>$d_i > 0$: a <strong>real image</strong>. Light rays actually converge at the image point, so a screen placed there shows the image. For a lens this is on the side opposite the object. For a mirror it is on the same side as the object.</li>
+<li>$d_i < 0$: a <strong>virtual image</strong>. Rays only appear to diverge from the image point, so no screen can capture it. You see it by looking into the lens or mirror.</li>
+<p>The image distance is linked to the object distance $d_o$ and focal length $f$ by the thin-lens/mirror equation:</p>
+$$\frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{f}$$
+<p>Solving for the image distance gives</p>
+$$d_i = \frac{f\,d_o}{d_o - f}$$
+<p>The magnification is $m = -\dfrac{d_i}{d_o}$. A negative $m$ means the image is inverted, and $|m|$ is the size ratio.</p>
+<p><strong>Sign conventions.</strong> Take $f>0$ for converging elements (convex lenses, concave mirrors) and $f<0$ for diverging ones (concave lenses, convex mirrors). Take $d_o>0$ for a real object.</p>
+<p><strong>Worked example.</strong> A converging lens has $f = 10$ cm. An object sits at $d_o = 30$ cm.</p>
+$$d_i = \frac{(10)(30)}{30-10} = \frac{300}{20} = 15 \text{ cm}$$
+<p>Because $d_i>0$, the image is real. The magnification is $m = -15/30 = -0.5$. The image is inverted and half the object's size.</p>
+<p>Now move the object inside the focal length, to $d_o = 5$ cm:</p>
+$$d_i = \frac{(10)(5)}{5-10} = \frac{50}{-5} = -10 \text{ cm}$$
+<p>Because $d_i<0$, the image is virtual. The magnification is $m = -(-10)/5 = +2$. The image is upright and twice as large. This is how a magnifying glass works.</p>
+<p><strong>Problem-solving application.</strong> A concave mirror must project a real image onto a wall $d_i = 200$ cm away from an object at $d_o = 25$ cm. What focal length should the mirror have?</p>
+<p>Rearrange the equation for $f$:</p>
+$$\frac{1}{f} = \frac{1}{25} + \frac{1}{200} = \frac{8}{200} + \frac{1}{200} = \frac{9}{200}$$
+<p>So $f = 200/9 \approx 22.2$ cm. The result is positive, which is consistent with a concave (converging) mirror. The magnification is $m = -200/25 = -8$, so the image is inverted and eight times larger.</p>
+<p><strong>Strategy checklist.</strong></p>
+<li>Assign signs first: $f$ by element type, and $d_o>0$ for a real object.</li>
+<li>Solve for $d_i$ with the equation. Do not guess the sign.</li>
+<li>Read the sign of $d_i$ to classify the image (real or virtual). Use the sign of $m$ to classify its orientation.</li>
+<li>Check the result. A diverging element ($f<0$) with a real object always gives $d_i<0$, a virtual image. A converging element gives a virtual image only when $d_o<f$.</li>
+<p><strong>Limiting case.</strong> As $d_o \to f^{+}$, the denominator $d_o - f \to 0^{+}$, so $d_i \to +\infty$. The image is pushed infinitely far away. This is the principle behind collimated beams from a source placed at the focal point.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

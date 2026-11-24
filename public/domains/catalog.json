@@ -3528,6 +3528,12 @@
         "file": "output/college.zh/sonnet/html/book_blood_pressure_measurement.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "barometer",
+        "file": "output/college.en/sonnet/html/book_barometer.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -3535,7 +3541,8 @@
         "name": "area",
         "label": "Area",
         "file": "output/college.en/sonnet/html/concept_area.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "area_zh",
@@ -3545,11 +3552,25 @@
         "language": "zh"
       },
       {
+        "name": "atmospheric_pressure",
+        "label": "Atmospheric Pressure",
+        "file": "output/college.en/sonnet/html/concept_atmospheric_pressure.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "atmospheric_pressure_zh",
         "label": "Atmospheric Pressure Zh",
         "file": "output/college.zh/sonnet/html/concept_atmospheric_pressure_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "barometer",
+        "label": "Barometer",
+        "file": "output/college.en/sonnet/html/concept_barometer.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "barometer_zh",
@@ -3573,6 +3594,13 @@
         "language": "zh"
       },
       {
+        "name": "density",
+        "label": "Density",
+        "file": "output/college.en/sonnet/html/concept_density.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "density_zh",
         "label": "Density Zh",
         "file": "output/college.zh/sonnet/html/concept_density_zh.html",
@@ -3583,7 +3611,8 @@
         "name": "fluid",
         "label": "Fluid",
         "file": "output/college.en/sonnet/html/concept_fluid.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "fluid_zh",
@@ -3596,7 +3625,8 @@
         "name": "force",
         "label": "Force",
         "file": "output/college.en/sonnet/html/concept_force.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "force_zh",
@@ -3613,6 +3643,13 @@
         "language": "zh"
       },
       {
+        "name": "gravitational_acceleration",
+        "label": "Gravitational Acceleration",
+        "file": "output/college.en/sonnet/html/concept_gravitational_acceleration.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "gravitational_acceleration_zh",
         "label": "Gravitational Acceleration Zh",
         "file": "output/college.zh/sonnet/html/concept_gravitational_acceleration_zh.html",
@@ -3623,7 +3660,8 @@
         "name": "hydraulic_system",
         "label": "Hydraulic System",
         "file": "output/college.en/sonnet/html/concept_hydraulic_system.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "hydraulic_system_zh",
@@ -3640,6 +3678,13 @@
         "language": "zh"
       },
       {
+        "name": "mass",
+        "label": "Mass",
+        "file": "output/college.en/sonnet/html/concept_mass.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "mass_zh",
         "label": "Mass Zh",
         "file": "output/college.zh/sonnet/html/concept_mass_zh.html",
@@ -3650,7 +3695,8 @@
         "name": "pascals_principle",
         "label": "Pascals Principle",
         "file": "output/college.en/sonnet/html/concept_pascals_principle.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "pascals_principle_zh",
@@ -3663,7 +3709,15 @@
         "name": "pressure",
         "label": "Pressure",
         "file": "output/college.en/sonnet/html/concept_pressure.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "pressure_depth_relation",
+        "label": "Pressure Depth Relation",
+        "file": "output/college.en/sonnet/html/concept_pressure_depth_relation.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "pressure_depth_relation_zh",
@@ -3678,6 +3732,13 @@
         "file": "output/college.zh/sonnet/html/concept_pressure_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "volume",
+        "label": "Volume",
+        "file": "output/college.en/sonnet/html/concept_volume.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "volume_zh",
@@ -3746,9 +3807,22 @@
         "file": "output/college.zh/sonnet/html/book_reverse_osmosis.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "aerodynamic_lift",
+        "file": "output/college.en/sonnet/html/book_aerodynamic_lift.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
+      {
+        "name": "aerodynamic_lift",
+        "label": "Aerodynamic Lift",
+        "file": "output/college.en/sonnet/html/concept_aerodynamic_lift.html",
+        "model": "sonnet",
+        "language": "en"
+      },
       {
         "name": "aerodynamic_lift_zh",
         "label": "Aerodynamic Lift Zh",
@@ -3760,7 +3834,8 @@
         "name": "bernoullis_equation",
         "label": "Bernoullis Equation",
         "file": "output/college.en/sonnet/html/concept_bernoullis_equation.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "bernoullis_equation_zh",
@@ -3773,7 +3848,8 @@
         "name": "bernoullis_principle",
         "label": "Bernoullis Principle",
         "file": "output/college.en/sonnet/html/concept_bernoullis_principle.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "bernoullis_principle_zh",
@@ -3793,7 +3869,8 @@
         "name": "conservation_of_energy",
         "label": "Conservation Of Energy",
         "file": "output/college.en/sonnet/html/concept_conservation_of_energy.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "conservation_of_energy_zh",
@@ -3820,7 +3897,8 @@
         "name": "entrainment",
         "label": "Entrainment",
         "file": "output/college.en/sonnet/html/concept_entrainment.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "entrainment_zh",
@@ -3847,7 +3925,8 @@
         "name": "fluid_density",
         "label": "Fluid Density",
         "file": "output/college.en/sonnet/html/concept_fluid_density.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "fluid_density_zh",
@@ -3867,7 +3946,8 @@
         "name": "gravitational_potential_energy",
         "label": "Gravitational Potential Energy",
         "file": "output/college.en/sonnet/html/concept_gravitational_potential_energy.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "gravitational_potential_energy_zh",
@@ -3880,7 +3960,8 @@
         "name": "incompressible_fluid",
         "label": "Incompressible Fluid",
         "file": "output/college.en/sonnet/html/concept_incompressible_fluid.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "incompressible_fluid_zh",
@@ -3893,7 +3974,8 @@
         "name": "kinetic_energy",
         "label": "Kinetic Energy",
         "file": "output/college.en/sonnet/html/concept_kinetic_energy.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "kinetic_energy_zh",
@@ -3941,7 +4023,8 @@
         "name": "pressure",
         "label": "Pressure",
         "file": "output/college.en/sonnet/html/concept_pressure.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "pressure_zh",
@@ -4032,6 +4115,12 @@
         "file": "output/college.zh/sonnet/html/book_freeze_drying.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "expansion_joints",
+        "file": "output/college.en/sonnet/html/book_expansion_joints.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -4041,6 +4130,13 @@
         "file": "output/college.zh/sonnet/html/concept_boiling_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "expansion_joints",
+        "label": "Expansion Joints",
+        "file": "output/college.en/sonnet/html/concept_expansion_joints.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "expansion_joints_zh",
@@ -4060,7 +4156,8 @@
         "name": "kinetic_energy",
         "label": "Kinetic Energy",
         "file": "output/college.en/sonnet/html/concept_kinetic_energy.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "kinetic_energy_zh",
@@ -4068,6 +4165,13 @@
         "file": "output/college.zh/sonnet/html/concept_kinetic_energy_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "linear_thermal_expansion",
+        "label": "Linear Thermal Expansion",
+        "file": "output/college.en/sonnet/html/concept_linear_thermal_expansion.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "linear_thermal_expansion_zh",
@@ -4089,6 +4193,13 @@
         "file": "output/college.zh/sonnet/html/concept_phase_diagram_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "pressure",
+        "label": "Pressure",
+        "file": "output/college.en/sonnet/html/concept_pressure.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "pressure_cooker_zh",
@@ -4115,7 +4226,8 @@
         "name": "temperature",
         "label": "Temperature",
         "file": "output/college.en/sonnet/html/concept_temperature.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "temperature_zh",
@@ -4128,7 +4240,8 @@
         "name": "thermal_expansion",
         "label": "Thermal Expansion",
         "file": "output/college.en/sonnet/html/concept_thermal_expansion.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "thermal_expansion_zh",
@@ -4136,6 +4249,13 @@
         "file": "output/college.zh/sonnet/html/concept_thermal_expansion_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "thermal_stress",
+        "label": "Thermal Stress",
+        "file": "output/college.en/sonnet/html/concept_thermal_stress.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "thermal_stress_zh",
@@ -4148,7 +4268,8 @@
         "name": "thermometer",
         "label": "Thermometer",
         "file": "output/college.en/sonnet/html/concept_thermometer.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "thermometer_zh",
@@ -4182,7 +4303,8 @@
         "name": "volume",
         "label": "Volume",
         "file": "output/college.en/sonnet/html/concept_volume.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "volume_zh",
@@ -4245,9 +4367,22 @@
         "file": "output/college.zh/sonnet/html/book_evaporative_cooling.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "calorimetry",
+        "file": "output/college.en/sonnet/html/book_calorimetry.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
+      {
+        "name": "calorimetry",
+        "label": "Calorimetry",
+        "file": "output/college.en/sonnet/html/concept_calorimetry.html",
+        "model": "sonnet",
+        "language": "en"
+      },
       {
         "name": "calorimetry_zh",
         "label": "Calorimetry Zh",
@@ -4259,7 +4394,8 @@
         "name": "conduction",
         "label": "Conduction",
         "file": "output/college.en/sonnet/html/concept_conduction.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "conduction_zh",
@@ -4272,7 +4408,8 @@
         "name": "convection",
         "label": "Convection",
         "file": "output/college.en/sonnet/html/concept_convection.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "convection_zh",
@@ -4306,7 +4443,15 @@
         "name": "heat",
         "label": "Heat",
         "file": "output/college.en/sonnet/html/concept_heat.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "heat_capacity_equation",
+        "label": "Heat Capacity Equation",
+        "file": "output/college.en/sonnet/html/concept_heat_capacity_equation.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "heat_capacity_equation_zh",
@@ -4326,7 +4471,8 @@
         "name": "kinetic_energy",
         "label": "Kinetic Energy",
         "file": "output/college.en/sonnet/html/concept_kinetic_energy.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "kinetic_energy_zh",
@@ -4364,6 +4510,13 @@
         "language": "zh"
       },
       {
+        "name": "specific_heat",
+        "label": "Specific Heat",
+        "file": "output/college.en/sonnet/html/concept_specific_heat.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "specific_heat_zh",
         "label": "Specific Heat Zh",
         "file": "output/college.zh/sonnet/html/concept_specific_heat_zh.html",
@@ -4374,7 +4527,8 @@
         "name": "temperature",
         "label": "Temperature",
         "file": "output/college.en/sonnet/html/concept_temperature.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "temperature_zh",
@@ -4382,6 +4536,13 @@
         "file": "output/college.zh/sonnet/html/concept_temperature_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "thermal_equilibrium",
+        "label": "Thermal Equilibrium",
+        "file": "output/college.en/sonnet/html/concept_thermal_equilibrium.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "thermal_equilibrium_zh",
@@ -4394,7 +4555,8 @@
         "name": "wind_chill",
         "label": "Wind Chill",
         "file": "output/college.en/sonnet/html/concept_wind_chill.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "wind_chill_zh",
@@ -4457,9 +4619,22 @@
         "file": "output/college.zh/sonnet/html/book_heat_death_of_universe.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "otto_cycle",
+        "file": "output/college.en/sonnet/html/book_otto_cycle.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
+      {
+        "name": "adiabatic_process",
+        "label": "Adiabatic Process",
+        "file": "output/college.en/sonnet/html/concept_adiabatic_process.html",
+        "model": "sonnet",
+        "language": "en"
+      },
       {
         "name": "adiabatic_process_zh",
         "label": "Adiabatic Process Zh",
@@ -4485,7 +4660,8 @@
         "name": "conservation_of_energy",
         "label": "Conservation Of Energy",
         "file": "output/college.en/sonnet/html/concept_conservation_of_energy.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "conservation_of_energy_zh",
@@ -4493,6 +4669,13 @@
         "file": "output/college.zh/sonnet/html/concept_conservation_of_energy_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "cyclical_process",
+        "label": "Cyclical Process",
+        "file": "output/college.en/sonnet/html/concept_cyclical_process.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "cyclical_process_zh",
@@ -4512,7 +4695,8 @@
         "name": "first_law_of_thermodynamics",
         "label": "First Law Of Thermodynamics",
         "file": "output/college.en/sonnet/html/concept_first_law_of_thermodynamics.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "first_law_of_thermodynamics_zh",
@@ -4529,6 +4713,13 @@
         "language": "zh"
       },
       {
+        "name": "heat_engine",
+        "label": "Heat Engine",
+        "file": "output/college.en/sonnet/html/concept_heat_engine.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "heat_engine_zh",
         "label": "Heat Engine Zh",
         "file": "output/college.zh/sonnet/html/concept_heat_engine_zh.html",
@@ -4539,7 +4730,8 @@
         "name": "heat_transfer",
         "label": "Heat Transfer",
         "file": "output/college.en/sonnet/html/concept_heat_transfer.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "heat_transfer_zh",
@@ -4552,7 +4744,8 @@
         "name": "human_metabolism",
         "label": "Human Metabolism",
         "file": "output/college.en/sonnet/html/concept_human_metabolism.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "human_metabolism_zh",
@@ -4572,7 +4765,8 @@
         "name": "internal_energy",
         "label": "Internal Energy",
         "file": "output/college.en/sonnet/html/concept_internal_energy.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "internal_energy_zh",
@@ -4587,6 +4781,13 @@
         "file": "output/college.zh/sonnet/html/concept_irreversible_process_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "isochoric_process",
+        "label": "Isochoric Process",
+        "file": "output/college.en/sonnet/html/concept_isochoric_process.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "isochoric_process_zh",
@@ -4606,7 +4807,8 @@
         "name": "kinetic_energy",
         "label": "Kinetic Energy",
         "file": "output/college.en/sonnet/html/concept_kinetic_energy.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "kinetic_energy_zh",
@@ -4614,6 +4816,13 @@
         "file": "output/college.zh/sonnet/html/concept_kinetic_energy_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "otto_cycle",
+        "label": "Otto Cycle",
+        "file": "output/college.en/sonnet/html/concept_otto_cycle.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "otto_cycle_zh",
@@ -4626,7 +4835,8 @@
         "name": "potential_energy",
         "label": "Potential Energy",
         "file": "output/college.en/sonnet/html/concept_potential_energy.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "potential_energy_zh",
@@ -4646,7 +4856,8 @@
         "name": "pressure",
         "label": "Pressure",
         "file": "output/college.en/sonnet/html/concept_pressure.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "pressure_zh",
@@ -4654,6 +4865,13 @@
         "file": "output/college.zh/sonnet/html/concept_pressure_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "pv_diagram",
+        "label": "Pv Diagram",
+        "file": "output/college.en/sonnet/html/concept_pv_diagram.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "pv_diagram_zh",
@@ -4680,7 +4898,8 @@
         "name": "temperature",
         "label": "Temperature",
         "file": "output/college.en/sonnet/html/concept_temperature.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "temperature_zh",
@@ -4700,7 +4919,8 @@
         "name": "thermodynamic_work",
         "label": "Thermodynamic Work",
         "file": "output/college.en/sonnet/html/concept_thermodynamic_work.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "thermodynamic_work_zh",
@@ -4713,7 +4933,8 @@
         "name": "volume",
         "label": "Volume",
         "file": "output/college.en/sonnet/html/concept_volume.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "volume_zh",
@@ -4791,6 +5012,12 @@
         "file": "output/college.zh/sonnet/html/book_musical_instrument_resonance.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "earthquake_wave_detection",
+        "file": "output/college.en/sonnet/html/book_earthquake_wave_detection.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -4798,7 +5025,8 @@
         "name": "amplitude",
         "label": "Amplitude",
         "file": "output/college.en/sonnet/html/concept_amplitude.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "amplitude_zh",
@@ -4832,7 +5060,8 @@
         "name": "displacement",
         "label": "Displacement",
         "file": "output/college.en/sonnet/html/concept_displacement.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "displacement_zh",
@@ -4840,6 +5069,13 @@
         "file": "output/college.zh/sonnet/html/concept_displacement_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "earthquake_wave_detection",
+        "label": "Earthquake Wave Detection",
+        "file": "output/college.en/sonnet/html/concept_earthquake_wave_detection.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "earthquake_wave_detection_zh",
@@ -4852,7 +5088,8 @@
         "name": "energy",
         "label": "Energy",
         "file": "output/college.en/sonnet/html/concept_energy.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "energy_zh",
@@ -4865,7 +5102,8 @@
         "name": "equilibrium",
         "label": "Equilibrium",
         "file": "output/college.en/sonnet/html/concept_equilibrium.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "equilibrium_zh",
@@ -4899,7 +5137,8 @@
         "name": "frequency",
         "label": "Frequency",
         "file": "output/college.en/sonnet/html/concept_frequency.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "frequency_zh",
@@ -4926,7 +5165,8 @@
         "name": "longitudinal_wave",
         "label": "Longitudinal Wave",
         "file": "output/college.en/sonnet/html/concept_longitudinal_wave.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "longitudinal_wave_zh",
@@ -4939,7 +5179,8 @@
         "name": "medical_ultrasound",
         "label": "Medical Ultrasound",
         "file": "output/college.en/sonnet/html/concept_medical_ultrasound.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "medical_ultrasound_zh",
@@ -4980,7 +5221,8 @@
         "name": "periodic_motion",
         "label": "Periodic Motion",
         "file": "output/college.en/sonnet/html/concept_periodic_motion.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "periodic_motion_zh",
@@ -5025,11 +5267,25 @@
         "language": "zh"
       },
       {
+        "name": "superposition",
+        "label": "Superposition",
+        "file": "output/college.en/sonnet/html/concept_superposition.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "superposition_zh",
         "label": "Superposition Zh",
         "file": "output/college.zh/sonnet/html/concept_superposition_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "transverse_wave",
+        "label": "Transverse Wave",
+        "file": "output/college.en/sonnet/html/concept_transverse_wave.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "transverse_wave_zh",
@@ -5042,13 +5298,15 @@
         "name": "wave",
         "label": "Wave",
         "file": "output/college.en/sonnet/html/concept_wave.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "wave_intensity",
         "label": "Wave Intensity",
         "file": "output/college.en/sonnet/html/concept_wave_intensity.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "wave_intensity_zh",
@@ -5056,6 +5314,13 @@
         "file": "output/college.zh/sonnet/html/concept_wave_intensity_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "wave_velocity",
+        "label": "Wave Velocity",
+        "file": "output/college.en/sonnet/html/concept_wave_velocity.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "wave_velocity_zh",
@@ -5070,6 +5335,13 @@
         "file": "output/college.zh/sonnet/html/concept_wave_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "wavelength",
+        "label": "Wavelength",
+        "file": "output/college.en/sonnet/html/concept_wavelength.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "wavelength_zh",
@@ -5138,6 +5410,12 @@
         "file": "output/college.zh/sonnet/html/book_ultrasound_medical_imaging.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "musical_instrument_resonance",
+        "file": "output/college.en/sonnet/html/book_musical_instrument_resonance.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -5152,7 +5430,8 @@
         "name": "amplitude",
         "label": "Amplitude",
         "file": "output/college.en/sonnet/html/concept_amplitude.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "amplitude_zh",
@@ -5160,6 +5439,13 @@
         "file": "output/college.zh/sonnet/html/concept_amplitude_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "density",
+        "label": "Density",
+        "file": "output/college.en/sonnet/html/concept_density.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "density_zh",
@@ -5183,11 +5469,25 @@
         "language": "zh"
       },
       {
+        "name": "frequency",
+        "label": "Frequency",
+        "file": "output/college.en/sonnet/html/concept_frequency.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "frequency_zh",
         "label": "Frequency Zh",
         "file": "output/college.zh/sonnet/html/concept_frequency_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "fundamental_frequency",
+        "label": "Fundamental Frequency",
+        "file": "output/college.en/sonnet/html/concept_fundamental_frequency.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "fundamental_frequency_zh",
@@ -5214,7 +5514,8 @@
         "name": "interference",
         "label": "Interference",
         "file": "output/college.en/sonnet/html/concept_interference.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "interference_zh",
@@ -5222,6 +5523,13 @@
         "file": "output/college.zh/sonnet/html/concept_interference_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "musical_instrument_resonance",
+        "label": "Musical Instrument Resonance",
+        "file": "output/college.en/sonnet/html/concept_musical_instrument_resonance.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "musical_instrument_resonance_zh",
@@ -5234,7 +5542,8 @@
         "name": "noise_cancellation",
         "label": "Noise Cancellation",
         "file": "output/college.en/sonnet/html/concept_noise_cancellation.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "noise_cancellation_zh",
@@ -5242,6 +5551,13 @@
         "file": "output/college.zh/sonnet/html/concept_noise_cancellation_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "overtones_and_harmonics",
+        "label": "Overtones And Harmonics",
+        "file": "output/college.en/sonnet/html/concept_overtones_and_harmonics.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "overtones_and_harmonics_zh",
@@ -5261,7 +5577,8 @@
         "name": "pressure",
         "label": "Pressure",
         "file": "output/college.en/sonnet/html/concept_pressure.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "pressure_zh",
@@ -5271,11 +5588,25 @@
         "language": "zh"
       },
       {
+        "name": "resonance_closed_tube",
+        "label": "Resonance Closed Tube",
+        "file": "output/college.en/sonnet/html/concept_resonance_closed_tube.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "resonance_closed_tube_zh",
         "label": "Resonance Closed Tube Zh",
         "file": "output/college.zh/sonnet/html/concept_resonance_closed_tube_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "resonance_open_tube",
+        "label": "Resonance Open Tube",
+        "file": "output/college.en/sonnet/html/concept_resonance_open_tube.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "resonance_open_tube_zh",
@@ -5288,7 +5619,8 @@
         "name": "simple_harmonic_motion",
         "label": "Simple Harmonic Motion",
         "file": "output/college.en/sonnet/html/concept_simple_harmonic_motion.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "simple_harmonic_motion_zh",
@@ -5301,7 +5633,8 @@
         "name": "sound",
         "label": "Sound",
         "file": "output/college.en/sonnet/html/concept_sound.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "sound_intensity_zh",
@@ -5318,6 +5651,13 @@
         "language": "zh"
       },
       {
+        "name": "speed_of_sound",
+        "label": "Speed Of Sound",
+        "file": "output/college.en/sonnet/html/concept_speed_of_sound.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "speed_of_sound_zh",
         "label": "Speed Of Sound Zh",
         "file": "output/college.zh/sonnet/html/concept_speed_of_sound_zh.html",
@@ -5325,11 +5665,25 @@
         "language": "zh"
       },
       {
+        "name": "standing_wave",
+        "label": "Standing Wave",
+        "file": "output/college.en/sonnet/html/concept_standing_wave.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "standing_wave_zh",
         "label": "Standing Wave Zh",
         "file": "output/college.zh/sonnet/html/concept_standing_wave_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "temperature",
+        "label": "Temperature",
+        "file": "output/college.en/sonnet/html/concept_temperature.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "temperature_zh",
@@ -5363,7 +5717,8 @@
         "name": "wave",
         "label": "Wave",
         "file": "output/college.en/sonnet/html/concept_wave.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "wave_zh",
@@ -5371,6 +5726,13 @@
         "file": "output/college.zh/sonnet/html/concept_wave_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "wavelength",
+        "label": "Wavelength",
+        "file": "output/college.en/sonnet/html/concept_wavelength.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "wavelength_zh",
@@ -5439,6 +5801,12 @@
         "file": "output/college.zh/sonnet/html/book_electrostatic_precipitator.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "lightning_rod",
+        "file": "output/college.en/sonnet/html/book_lightning_rod.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -5448,6 +5816,13 @@
         "file": "output/college.zh/sonnet/html/concept_charging_by_contact_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "charging_by_induction",
+        "label": "Charging By Induction",
+        "file": "output/college.en/sonnet/html/concept_charging_by_induction.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "charging_by_induction_zh",
@@ -5460,7 +5835,8 @@
         "name": "conductor",
         "label": "Conductor",
         "file": "output/college.en/sonnet/html/concept_conductor.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "conductor_zh",
@@ -5473,7 +5849,8 @@
         "name": "coulombs_law",
         "label": "Coulombs Law",
         "file": "output/college.en/sonnet/html/concept_coulombs_law.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "coulombs_law_zh",
@@ -5486,7 +5863,8 @@
         "name": "electric_charge",
         "label": "Electric Charge",
         "file": "output/college.en/sonnet/html/concept_electric_charge.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electric_charge_zh",
@@ -5499,7 +5877,8 @@
         "name": "electric_field",
         "label": "Electric Field",
         "file": "output/college.en/sonnet/html/concept_electric_field.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electric_field_zh",
@@ -5512,7 +5891,8 @@
         "name": "electron",
         "label": "Electron",
         "file": "output/college.en/sonnet/html/concept_electron.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electron_zh",
@@ -5525,7 +5905,8 @@
         "name": "electrostatic_equilibrium",
         "label": "Electrostatic Equilibrium",
         "file": "output/college.en/sonnet/html/concept_electrostatic_equilibrium.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electrostatic_equilibrium_zh",
@@ -5545,7 +5926,8 @@
         "name": "faraday_cage",
         "label": "Faraday Cage",
         "file": "output/college.en/sonnet/html/concept_faraday_cage.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "faraday_cage_zh",
@@ -5562,11 +5944,25 @@
         "language": "zh"
       },
       {
+        "name": "lightning_rod",
+        "label": "Lightning Rod",
+        "file": "output/college.en/sonnet/html/concept_lightning_rod.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "lightning_rod_zh",
         "label": "Lightning Rod Zh",
         "file": "output/college.zh/sonnet/html/concept_lightning_rod_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "polarization",
+        "label": "Polarization",
+        "file": "output/college.en/sonnet/html/concept_polarization.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "polarization_zh",
@@ -5818,6 +6214,12 @@
         "file": "output/college.zh/sonnet/html/book_fuses_and_circuit_breakers.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "shock_hazard",
+        "file": "output/college.en/sonnet/html/book_shock_hazard.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -5827,6 +6229,13 @@
         "file": "output/college.zh/sonnet/html/concept_action_potential_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "alternating_current",
+        "label": "Alternating Current",
+        "file": "output/college.en/sonnet/html/concept_alternating_current.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "alternating_current_zh",
@@ -5853,7 +6262,8 @@
         "name": "electric_charge",
         "label": "Electric Charge",
         "file": "output/college.en/sonnet/html/concept_electric_charge.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electric_charge_zh",
@@ -5866,7 +6276,8 @@
         "name": "electric_current",
         "label": "Electric Current",
         "file": "output/college.en/sonnet/html/concept_electric_current.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electric_current_zh",
@@ -5879,7 +6290,8 @@
         "name": "electric_power",
         "label": "Electric Power",
         "file": "output/college.en/sonnet/html/concept_electric_power.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electric_power_zh",
@@ -5913,7 +6325,8 @@
         "name": "potential_difference",
         "label": "Potential Difference",
         "file": "output/college.en/sonnet/html/concept_potential_difference.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "potential_difference_zh",
@@ -5937,6 +6350,13 @@
         "language": "zh"
       },
       {
+        "name": "shock_hazard",
+        "label": "Shock Hazard",
+        "file": "output/college.en/sonnet/html/concept_shock_hazard.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "shock_hazard_zh",
         "label": "Shock Hazard Zh",
         "file": "output/college.zh/sonnet/html/concept_shock_hazard_zh.html",
@@ -5947,7 +6367,8 @@
         "name": "thermal_hazard",
         "label": "Thermal Hazard",
         "file": "output/college.en/sonnet/html/concept_thermal_hazard.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "thermal_hazard_zh",
@@ -6016,9 +6437,22 @@
         "file": "output/college.zh/sonnet/html/book_rc_timing_applications.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "ammeter",
+        "file": "output/college.en/sonnet/html/book_ammeter.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
+      {
+        "name": "ammeter",
+        "label": "Ammeter",
+        "file": "output/college.en/sonnet/html/concept_ammeter.html",
+        "model": "sonnet",
+        "language": "en"
+      },
       {
         "name": "ammeter_zh",
         "label": "Ammeter Zh",
@@ -6065,7 +6499,8 @@
         "name": "electric_current",
         "label": "Electric Current",
         "file": "output/college.en/sonnet/html/concept_electric_current.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electric_current_zh",
@@ -6085,7 +6520,8 @@
         "name": "galvanometer",
         "label": "Galvanometer",
         "file": "output/college.en/sonnet/html/concept_galvanometer.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "galvanometer_zh",
@@ -6126,7 +6562,8 @@
         "name": "ohms_law",
         "label": "Ohms Law",
         "file": "output/college.en/sonnet/html/concept_ohms_law.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "ohms_law_zh",
@@ -6167,7 +6604,8 @@
         "name": "resistance",
         "label": "Resistance",
         "file": "output/college.en/sonnet/html/concept_resistance.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "resistance_zh",
@@ -6180,7 +6618,8 @@
         "name": "voltage",
         "label": "Voltage",
         "file": "output/college.en/sonnet/html/concept_voltage.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "voltage_zh",
@@ -6193,7 +6632,8 @@
         "name": "voltmeter",
         "label": "Voltmeter",
         "file": "output/college.en/sonnet/html/concept_voltmeter.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "voltmeter_zh",
@@ -6299,6 +6739,12 @@
         "file": "output/college.zh/sonnet/html/book_magnetic_resonance_imaging.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "cathode_ray_tube",
+        "file": "output/college.en/sonnet/html/book_cathode_ray_tube.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -6315,6 +6761,13 @@
         "file": "output/college.zh/sonnet/html/concept_aurora_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "cathode_ray_tube",
+        "label": "Cathode Ray Tube",
+        "file": "output/college.en/sonnet/html/concept_cathode_ray_tube.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "cathode_ray_tube_zh",
@@ -6341,7 +6794,8 @@
         "name": "electric_charge",
         "label": "Electric Charge",
         "file": "output/college.en/sonnet/html/concept_electric_charge.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electric_charge_zh",
@@ -6361,7 +6815,8 @@
         "name": "electric_field",
         "label": "Electric Field",
         "file": "output/college.en/sonnet/html/concept_electric_field.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electric_field_zh",
@@ -6409,7 +6864,8 @@
         "name": "lorentz_force",
         "label": "Lorentz Force",
         "file": "output/college.en/sonnet/html/concept_lorentz_force.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "lorentz_force_zh",
@@ -6422,7 +6878,8 @@
         "name": "magnetic_field",
         "label": "Magnetic Field",
         "file": "output/college.en/sonnet/html/concept_magnetic_field.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "magnetic_field_circular_loop_zh",
@@ -6526,13 +6983,15 @@
         "name": "velocity",
         "label": "Velocity",
         "file": "output/college.en/sonnet/html/concept_velocity.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "velocity_selector",
         "label": "Velocity Selector",
         "file": "output/college.en/sonnet/html/concept_velocity_selector.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "velocity_selector_zh",
@@ -6596,6 +7055,12 @@
         "file": "output/college.zh/sonnet/html/book_rlc_series_circuit.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "electrical_safety_devices",
+        "file": "output/college.en/sonnet/html/book_electrical_safety_devices.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -6617,7 +7082,8 @@
         "name": "electric_current",
         "label": "Electric Current",
         "file": "output/college.en/sonnet/html/concept_electric_current.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electric_current_zh",
@@ -6625,6 +7091,13 @@
         "file": "output/college.zh/sonnet/html/concept_electric_current_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "electrical_safety_devices",
+        "label": "Electrical Safety Devices",
+        "file": "output/college.en/sonnet/html/concept_electrical_safety_devices.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electrical_safety_devices_zh",
@@ -6637,7 +7110,8 @@
         "name": "electromagnetic_induction",
         "label": "Electromagnetic Induction",
         "file": "output/college.en/sonnet/html/concept_electromagnetic_induction.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electromagnetic_induction_zh",
@@ -6650,7 +7124,8 @@
         "name": "faradays_law",
         "label": "Faradays Law",
         "file": "output/college.en/sonnet/html/concept_faradays_law.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "faradays_law_zh",
@@ -6677,7 +7152,8 @@
         "name": "magnetic_field",
         "label": "Magnetic Field",
         "file": "output/college.en/sonnet/html/concept_magnetic_field.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "magnetic_field_zh",
@@ -6690,7 +7166,8 @@
         "name": "magnetic_flux",
         "label": "Magnetic Flux",
         "file": "output/college.en/sonnet/html/concept_magnetic_flux.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "magnetic_flux_zh",
@@ -6703,7 +7180,8 @@
         "name": "mutual_inductance",
         "label": "Mutual Inductance",
         "file": "output/college.en/sonnet/html/concept_mutual_inductance.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "mutual_inductance_zh",
@@ -6758,7 +7236,8 @@
         "name": "transformer",
         "label": "Transformer",
         "file": "output/college.en/sonnet/html/concept_transformer.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "transformer_zh",
@@ -6869,6 +7348,12 @@
         "file": "output/college.zh/sonnet/html/book_greenhouse_effect.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "microwaves",
+        "file": "output/college.en/sonnet/html/book_microwaves.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -6876,7 +7361,8 @@
         "name": "amperes_law",
         "label": "Amperes Law",
         "file": "output/college.en/sonnet/html/concept_amperes_law.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "amperes_law_zh",
@@ -6896,7 +7382,8 @@
         "name": "changing_electric_field_creates_magnetic_field",
         "label": "Changing Electric Field Creates Magnetic Field",
         "file": "output/college.en/sonnet/html/concept_changing_electric_field_creates_magnetic_field.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "changing_electric_field_creates_magnetic_field_zh",
@@ -6916,7 +7403,8 @@
         "name": "electric_field",
         "label": "Electric Field",
         "file": "output/college.en/sonnet/html/concept_electric_field.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electric_field_zh",
@@ -6929,7 +7417,8 @@
         "name": "electromagnetic_spectrum",
         "label": "Electromagnetic Spectrum",
         "file": "output/college.en/sonnet/html/concept_electromagnetic_spectrum.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electromagnetic_spectrum_zh",
@@ -6942,7 +7431,8 @@
         "name": "electromagnetic_wave",
         "label": "Electromagnetic Wave",
         "file": "output/college.en/sonnet/html/concept_electromagnetic_wave.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electromagnetic_wave_zh",
@@ -6955,7 +7445,8 @@
         "name": "faradays_law",
         "label": "Faradays Law",
         "file": "output/college.en/sonnet/html/concept_faradays_law.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "faradays_law_zh",
@@ -6982,7 +7473,8 @@
         "name": "gauss_law_electricity",
         "label": "Gauss Law Electricity",
         "file": "output/college.en/sonnet/html/concept_gauss_law_electricity.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "gauss_law_electricity_zh",
@@ -6995,7 +7487,8 @@
         "name": "gauss_law_magnetism",
         "label": "Gauss Law Magnetism",
         "file": "output/college.en/sonnet/html/concept_gauss_law_magnetism.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "gauss_law_magnetism_zh",
@@ -7022,7 +7515,8 @@
         "name": "magnetic_field",
         "label": "Magnetic Field",
         "file": "output/college.en/sonnet/html/concept_magnetic_field.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "magnetic_field_zh",
@@ -7035,7 +7529,8 @@
         "name": "maxwells_equations",
         "label": "Maxwells Equations",
         "file": "output/college.en/sonnet/html/concept_maxwells_equations.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "maxwells_equations_zh",
@@ -7043,6 +7538,13 @@
         "file": "output/college.zh/sonnet/html/concept_maxwells_equations_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "microwaves",
+        "label": "Microwaves",
+        "file": "output/college.en/sonnet/html/concept_microwaves.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "microwaves_zh",
@@ -7055,7 +7557,8 @@
         "name": "permeability_of_free_space",
         "label": "Permeability Of Free Space",
         "file": "output/college.en/sonnet/html/concept_permeability_of_free_space.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "permeability_of_free_space_zh",
@@ -7068,7 +7571,8 @@
         "name": "permittivity_of_free_space",
         "label": "Permittivity Of Free Space",
         "file": "output/college.en/sonnet/html/concept_permittivity_of_free_space.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "permittivity_of_free_space_zh",
@@ -7095,7 +7599,8 @@
         "name": "speed_of_light",
         "label": "Speed Of Light",
         "file": "output/college.en/sonnet/html/concept_speed_of_light.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "speed_of_light_zh",
@@ -7122,7 +7627,8 @@
         "name": "wave_equation_em",
         "label": "Wave Equation Em",
         "file": "output/college.en/sonnet/html/concept_wave_equation_em.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "wave_equation_em_zh",
@@ -7135,7 +7641,8 @@
         "name": "wave_frequency_wavelength",
         "label": "Wave Frequency Wavelength",
         "file": "output/college.en/sonnet/html/concept_wave_frequency_wavelength.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "wave_frequency_wavelength_zh",
@@ -7235,6 +7742,12 @@
         "file": "output/college.zh/sonnet/html/book_endoscope.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "magnifying_glass",
+        "file": "output/college.en/sonnet/html/book_magnifying_glass.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -7251,6 +7764,13 @@
         "file": "output/college.zh/sonnet/html/concept_concave_mirror_heater_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "converging_lens",
+        "label": "Converging Lens",
+        "file": "output/college.en/sonnet/html/concept_converging_lens.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "converging_lens_zh",
@@ -7291,7 +7811,8 @@
         "name": "dispersion",
         "label": "Dispersion",
         "file": "output/college.en/sonnet/html/concept_dispersion.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "dispersion_zh",
@@ -7322,11 +7843,25 @@
         "language": "zh"
       },
       {
+        "name": "focal_length",
+        "label": "Focal Length",
+        "file": "output/college.en/sonnet/html/concept_focal_length.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "focal_length_zh",
         "label": "Focal Length Zh",
         "file": "output/college.zh/sonnet/html/concept_focal_length_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "focal_point",
+        "label": "Focal Point",
+        "file": "output/college.en/sonnet/html/concept_focal_point.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "focal_point_zh",
@@ -7339,7 +7874,8 @@
         "name": "geometric_optics",
         "label": "Geometric Optics",
         "file": "output/college.en/sonnet/html/concept_geometric_optics.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "geometric_optics_zh",
@@ -7347,6 +7883,13 @@
         "file": "output/college.zh/sonnet/html/concept_geometric_optics_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "image_distance",
+        "label": "Image Distance",
+        "file": "output/college.en/sonnet/html/concept_image_distance.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "image_distance_zh",
@@ -7359,7 +7902,8 @@
         "name": "index_of_refraction",
         "label": "Index Of Refraction",
         "file": "output/college.en/sonnet/html/concept_index_of_refraction.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "index_of_refraction_zh",
@@ -7372,7 +7916,8 @@
         "name": "law_of_reflection",
         "label": "Law Of Reflection",
         "file": "output/college.en/sonnet/html/concept_law_of_reflection.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "law_of_reflection_zh",
@@ -7392,7 +7937,8 @@
         "name": "light_ray",
         "label": "Light Ray",
         "file": "output/college.en/sonnet/html/concept_light_ray.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "light_ray_zh",
@@ -7402,6 +7948,13 @@
         "language": "zh"
       },
       {
+        "name": "magnification",
+        "label": "Magnification",
+        "file": "output/college.en/sonnet/html/concept_magnification.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "magnification_zh",
         "label": "Magnification Zh",
         "file": "output/college.zh/sonnet/html/concept_magnification_zh.html",
@@ -7409,11 +7962,25 @@
         "language": "zh"
       },
       {
+        "name": "magnifying_glass",
+        "label": "Magnifying Glass",
+        "file": "output/college.en/sonnet/html/concept_magnifying_glass.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "magnifying_glass_zh",
         "label": "Magnifying Glass Zh",
         "file": "output/college.zh/sonnet/html/concept_magnifying_glass_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "object_distance",
+        "label": "Object Distance",
+        "file": "output/college.en/sonnet/html/concept_object_distance.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "object_distance_zh",
@@ -7433,7 +8000,8 @@
         "name": "rainbow",
         "label": "Rainbow",
         "file": "output/college.en/sonnet/html/concept_rainbow.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "rainbow_zh",
@@ -7441,6 +8009,13 @@
         "file": "output/college.zh/sonnet/html/concept_rainbow_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "ray_tracing",
+        "label": "Ray Tracing",
+        "file": "output/college.en/sonnet/html/concept_ray_tracing.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "ray_tracing_zh",
@@ -7460,7 +8035,8 @@
         "name": "refraction",
         "label": "Refraction",
         "file": "output/college.en/sonnet/html/concept_refraction.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "refraction_zh",
@@ -7480,7 +8056,8 @@
         "name": "speed_of_light_vacuum",
         "label": "Speed Of Light Vacuum",
         "file": "output/college.en/sonnet/html/concept_speed_of_light_vacuum.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "speed_of_light_vacuum_zh",
@@ -7497,6 +8074,13 @@
         "language": "zh"
       },
       {
+        "name": "thin_lens_equations",
+        "label": "Thin Lens Equations",
+        "file": "output/college.en/sonnet/html/concept_thin_lens_equations.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "thin_lens_equations_zh",
         "label": "Thin Lens Equations Zh",
         "file": "output/college.zh/sonnet/html/concept_thin_lens_equations_zh.html",
@@ -7511,6 +8095,13 @@
         "language": "zh"
       },
       {
+        "name": "virtual_image",
+        "label": "Virtual Image",
+        "file": "output/college.en/sonnet/html/concept_virtual_image.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "virtual_image_zh",
         "label": "Virtual Image Zh",
         "file": "output/college.zh/sonnet/html/concept_virtual_image_zh.html",
@@ -7521,7 +8112,8 @@
         "name": "wavelength",
         "label": "Wavelength",
         "file": "output/college.en/sonnet/html/concept_wavelength.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "wavelength_zh",
@@ -7602,6 +8194,12 @@
         "file": "output/college.zh/sonnet/html/book_immersion_lens.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "laser_vision_correction",
+        "file": "output/college.en/sonnet/html/book_laser_vision_correction.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -7616,7 +8214,8 @@
         "name": "accommodation",
         "label": "Accommodation",
         "file": "output/college.en/sonnet/html/concept_accommodation.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "accommodation_zh",
@@ -7631,6 +8230,13 @@
         "file": "output/college.zh/sonnet/html/concept_adaptive_optics_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "astigmatism",
+        "label": "Astigmatism",
+        "file": "output/college.en/sonnet/html/concept_astigmatism.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "astigmatism_zh",
@@ -7657,7 +8263,8 @@
         "name": "concave_lens",
         "label": "Concave Lens",
         "file": "output/college.en/sonnet/html/concept_concave_lens.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "concave_lens_zh",
@@ -7677,7 +8284,8 @@
         "name": "convex_lens",
         "label": "Convex Lens",
         "file": "output/college.en/sonnet/html/concept_convex_lens.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "convex_lens_zh",
@@ -7697,7 +8305,8 @@
         "name": "eye_as_optical_system",
         "label": "Eye As Optical System",
         "file": "output/college.en/sonnet/html/concept_eye_as_optical_system.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "eye_as_optical_system_zh",
@@ -7710,7 +8319,8 @@
         "name": "far_point",
         "label": "Far Point",
         "file": "output/college.en/sonnet/html/concept_far_point.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "far_point_zh",
@@ -7723,7 +8333,8 @@
         "name": "focal_length",
         "label": "Focal Length",
         "file": "output/college.en/sonnet/html/concept_focal_length.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "focal_length_zh",
@@ -7736,7 +8347,8 @@
         "name": "hyperopia",
         "label": "Hyperopia",
         "file": "output/college.en/sonnet/html/concept_hyperopia.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "hyperopia_zh",
@@ -7753,6 +8365,13 @@
         "language": "zh"
       },
       {
+        "name": "laser_vision_correction",
+        "label": "Laser Vision Correction",
+        "file": "output/college.en/sonnet/html/concept_laser_vision_correction.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "laser_vision_correction_zh",
         "label": "Laser Vision Correction Zh",
         "file": "output/college.zh/sonnet/html/concept_laser_vision_correction_zh.html",
@@ -7763,7 +8382,8 @@
         "name": "lens_power",
         "label": "Lens Power",
         "file": "output/college.en/sonnet/html/concept_lens_power.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "lens_power_zh",
@@ -7783,7 +8403,8 @@
         "name": "myopia",
         "label": "Myopia",
         "file": "output/college.en/sonnet/html/concept_myopia.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "myopia_zh",
@@ -7796,7 +8417,8 @@
         "name": "near_point",
         "label": "Near Point",
         "file": "output/college.en/sonnet/html/concept_near_point.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "near_point_zh",
@@ -7837,7 +8459,8 @@
         "name": "thin_lens_equation",
         "label": "Thin Lens Equation",
         "file": "output/college.en/sonnet/html/concept_thin_lens_equation.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "thin_lens_equation_zh",
@@ -7850,7 +8473,8 @@
         "name": "vision_correction_spectacles",
         "label": "Vision Correction Spectacles",
         "file": "output/college.en/sonnet/html/concept_vision_correction_spectacles.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "vision_correction_spectacles_zh",
@@ -7926,9 +8550,22 @@
         "file": "output/college.zh/sonnet/html/book_interference_microscopy.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "spectroscopic_dispersion",
+        "file": "output/college.en/sonnet/html/book_spectroscopic_dispersion.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
+      {
+        "name": "coherence",
+        "label": "Coherence",
+        "file": "output/college.en/sonnet/html/concept_coherence.html",
+        "model": "sonnet",
+        "language": "en"
+      },
       {
         "name": "coherence_zh",
         "label": "Coherence Zh",
@@ -7940,7 +8577,8 @@
         "name": "constructive_interference",
         "label": "Constructive Interference",
         "file": "output/college.en/sonnet/html/concept_constructive_interference.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "constructive_interference_zh",
@@ -7953,7 +8591,8 @@
         "name": "destructive_interference",
         "label": "Destructive Interference",
         "file": "output/college.en/sonnet/html/concept_destructive_interference.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "destructive_interference_zh",
@@ -7961,6 +8600,20 @@
         "file": "output/college.zh/sonnet/html/concept_destructive_interference_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "diffraction",
+        "label": "Diffraction",
+        "file": "output/college.en/sonnet/html/concept_diffraction.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "diffraction_grating",
+        "label": "Diffraction Grating",
+        "file": "output/college.en/sonnet/html/concept_diffraction_grating.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "diffraction_grating_zh",
@@ -7977,6 +8630,13 @@
         "language": "zh"
       },
       {
+        "name": "double_slit_interference",
+        "label": "Double Slit Interference",
+        "file": "output/college.en/sonnet/html/concept_double_slit_interference.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "double_slit_interference_zh",
         "label": "Double Slit Interference Zh",
         "file": "output/college.zh/sonnet/html/concept_double_slit_interference_zh.html",
@@ -7987,7 +8647,8 @@
         "name": "electromagnetic_wave",
         "label": "Electromagnetic Wave",
         "file": "output/college.en/sonnet/html/concept_electromagnetic_wave.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electromagnetic_wave_zh",
@@ -7997,11 +8658,25 @@
         "language": "zh"
       },
       {
+        "name": "frequency",
+        "label": "Frequency",
+        "file": "output/college.en/sonnet/html/concept_frequency.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "frequency_zh",
         "label": "Frequency Zh",
         "file": "output/college.zh/sonnet/html/concept_frequency_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "huygens_principle",
+        "label": "Huygens Principle",
+        "file": "output/college.en/sonnet/html/concept_huygens_principle.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "huygens_principle_zh",
@@ -8014,7 +8689,8 @@
         "name": "index_of_refraction",
         "label": "Index Of Refraction",
         "file": "output/college.en/sonnet/html/concept_index_of_refraction.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "index_of_refraction_zh",
@@ -8027,7 +8703,8 @@
         "name": "interference",
         "label": "Interference",
         "file": "output/college.en/sonnet/html/concept_interference.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "interference_microscopy_zh",
@@ -8035,6 +8712,13 @@
         "file": "output/college.zh/sonnet/html/concept_interference_microscopy_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "interference_order",
+        "label": "Interference Order",
+        "file": "output/college.en/sonnet/html/concept_interference_order.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "interference_order_zh",
@@ -8061,7 +8745,8 @@
         "name": "non_reflective_coatings",
         "label": "Non Reflective Coatings",
         "file": "output/college.en/sonnet/html/concept_non_reflective_coatings.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "non_reflective_coatings_zh",
@@ -8078,6 +8763,13 @@
         "language": "zh"
       },
       {
+        "name": "path_length_difference",
+        "label": "Path Length Difference",
+        "file": "output/college.en/sonnet/html/concept_path_length_difference.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "path_length_difference_zh",
         "label": "Path Length Difference Zh",
         "file": "output/college.zh/sonnet/html/concept_path_length_difference_zh.html",
@@ -8088,7 +8780,8 @@
         "name": "phase_change_on_reflection",
         "label": "Phase Change On Reflection",
         "file": "output/college.en/sonnet/html/concept_phase_change_on_reflection.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "phase_change_on_reflection_zh",
@@ -8133,6 +8826,13 @@
         "language": "zh"
       },
       {
+        "name": "spectroscopic_dispersion",
+        "label": "Spectroscopic Dispersion",
+        "file": "output/college.en/sonnet/html/concept_spectroscopic_dispersion.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "spectroscopic_dispersion_zh",
         "label": "Spectroscopic Dispersion Zh",
         "file": "output/college.zh/sonnet/html/concept_spectroscopic_dispersion_zh.html",
@@ -8143,7 +8843,8 @@
         "name": "thin_film_interference",
         "label": "Thin Film Interference",
         "file": "output/college.en/sonnet/html/concept_thin_film_interference.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "thin_film_interference_zh",
@@ -8160,6 +8861,13 @@
         "language": "zh"
       },
       {
+        "name": "wavefront",
+        "label": "Wavefront",
+        "file": "output/college.en/sonnet/html/concept_wavefront.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "wavefront_zh",
         "label": "Wavefront Zh",
         "file": "output/college.zh/sonnet/html/concept_wavefront_zh.html",
@@ -8170,13 +8878,15 @@
         "name": "wavelength",
         "label": "Wavelength",
         "file": "output/college.en/sonnet/html/concept_wavelength.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "wavelength_in_medium",
         "label": "Wavelength In Medium",
         "file": "output/college.en/sonnet/html/concept_wavelength_in_medium.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "wavelength_in_medium_zh",
@@ -8246,6 +8956,12 @@
         "file": "output/college.zh/sonnet/html/book_gps_relativistic_corrections.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "twin_paradox",
+        "file": "output/college.en/sonnet/html/book_twin_paradox.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -8255,6 +8971,13 @@
         "file": "output/college.zh/sonnet/html/concept_gps_relativistic_corrections_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "inertial_reference_frame",
+        "label": "Inertial Reference Frame",
+        "file": "output/college.en/sonnet/html/concept_inertial_reference_frame.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "inertial_reference_frame_zh",
@@ -8271,6 +8994,13 @@
         "language": "zh"
       },
       {
+        "name": "lorentz_factor",
+        "label": "Lorentz Factor",
+        "file": "output/college.en/sonnet/html/concept_lorentz_factor.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "lorentz_factor_zh",
         "label": "Lorentz Factor Zh",
         "file": "output/college.zh/sonnet/html/concept_lorentz_factor_zh.html",
@@ -8281,7 +9011,8 @@
         "name": "michelson_morley_experiment",
         "label": "Michelson Morley Experiment",
         "file": "output/college.en/sonnet/html/concept_michelson_morley_experiment.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "michelson_morley_experiment_zh",
@@ -8305,6 +9036,13 @@
         "language": "zh"
       },
       {
+        "name": "proper_time",
+        "label": "Proper Time",
+        "file": "output/college.en/sonnet/html/concept_proper_time.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "proper_time_zh",
         "label": "Proper Time Zh",
         "file": "output/college.zh/sonnet/html/concept_proper_time_zh.html",
@@ -8315,7 +9053,8 @@
         "name": "second_postulate",
         "label": "Second Postulate",
         "file": "output/college.en/sonnet/html/concept_second_postulate.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "second_postulate_zh",
@@ -8328,7 +9067,8 @@
         "name": "speed_of_light",
         "label": "Speed Of Light",
         "file": "output/college.en/sonnet/html/concept_speed_of_light.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "speed_of_light_zh",
@@ -8338,11 +9078,25 @@
         "language": "zh"
       },
       {
+        "name": "time_dilation",
+        "label": "Time Dilation",
+        "file": "output/college.en/sonnet/html/concept_time_dilation.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "time_dilation_zh",
         "label": "Time Dilation Zh",
         "file": "output/college.zh/sonnet/html/concept_time_dilation_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "twin_paradox",
+        "label": "Twin Paradox",
+        "file": "output/college.en/sonnet/html/concept_twin_paradox.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "twin_paradox_zh",
@@ -8393,9 +9147,22 @@
         "file": "output/college.zh/sonnet/html/book_electron_microscope.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "electron_microscope",
+        "file": "output/college.en/sonnet/html/book_electron_microscope.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
+      {
+        "name": "de_broglie_wavelength",
+        "label": "De Broglie Wavelength",
+        "file": "output/college.en/sonnet/html/concept_de_broglie_wavelength.html",
+        "model": "sonnet",
+        "language": "en"
+      },
       {
         "name": "de_broglie_wavelength_zh",
         "label": "De Broglie Wavelength Zh",
@@ -8407,7 +9174,8 @@
         "name": "electromagnetic_radiation",
         "label": "Electromagnetic Radiation",
         "file": "output/college.en/sonnet/html/concept_electromagnetic_radiation.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electromagnetic_radiation_zh",
@@ -8420,7 +9188,15 @@
         "name": "electron",
         "label": "Electron",
         "file": "output/college.en/sonnet/html/concept_electron.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "electron_microscope",
+        "label": "Electron Microscope",
+        "file": "output/college.en/sonnet/html/concept_electron_microscope.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electron_microscope_zh",
@@ -8440,7 +9216,8 @@
         "name": "energy",
         "label": "Energy",
         "file": "output/college.en/sonnet/html/concept_energy.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "energy_zh",
@@ -8453,7 +9230,8 @@
         "name": "frequency",
         "label": "Frequency",
         "file": "output/college.en/sonnet/html/concept_frequency.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "frequency_zh",
@@ -8463,11 +9241,25 @@
         "language": "zh"
       },
       {
+        "name": "momentum",
+        "label": "Momentum",
+        "file": "output/college.en/sonnet/html/concept_momentum.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "momentum_zh",
         "label": "Momentum Zh",
         "file": "output/college.zh/sonnet/html/concept_momentum_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "particle_wave_duality",
+        "label": "Particle Wave Duality",
+        "file": "output/college.en/sonnet/html/concept_particle_wave_duality.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "particle_wave_duality_zh",
@@ -8480,13 +9272,15 @@
         "name": "photon",
         "label": "Photon",
         "file": "output/college.en/sonnet/html/concept_photon.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "photon_energy",
         "label": "Photon Energy",
         "file": "output/college.en/sonnet/html/concept_photon_energy.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "photon_energy_zh",
@@ -8506,7 +9300,8 @@
         "name": "planck_constant",
         "label": "Planck Constant",
         "file": "output/college.en/sonnet/html/concept_planck_constant.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "planck_constant_zh",
@@ -8519,7 +9314,8 @@
         "name": "quantization",
         "label": "Quantization",
         "file": "output/college.en/sonnet/html/concept_quantization.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "quantization_zh",
@@ -8532,7 +9328,8 @@
         "name": "wavelength",
         "label": "Wavelength",
         "file": "output/college.en/sonnet/html/concept_wavelength.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "wavelength_zh",
@@ -8545,7 +9342,8 @@
         "name": "x_ray_production",
         "label": "X Ray Production",
         "file": "output/college.en/sonnet/html/concept_x_ray_production.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "x_ray_production_zh",
@@ -8614,6 +9412,12 @@
         "file": "output/college.zh/sonnet/html/book_periodic_table.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "millikan_oil_drop_experiment",
+        "file": "output/college.en/sonnet/html/book_millikan_oil_drop_experiment.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -8628,7 +9432,8 @@
         "name": "atom",
         "label": "Atom",
         "file": "output/college.en/sonnet/html/concept_atom.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "atom_zh",
@@ -8701,6 +9506,13 @@
         "language": "zh"
       },
       {
+        "name": "electric_charge",
+        "label": "Electric Charge",
+        "file": "output/college.en/sonnet/html/concept_electric_charge.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "electric_charge_zh",
         "label": "Electric Charge Zh",
         "file": "output/college.zh/sonnet/html/concept_electric_charge_zh.html",
@@ -8711,7 +9523,8 @@
         "name": "electromagnetic_radiation",
         "label": "Electromagnetic Radiation",
         "file": "output/college.en/sonnet/html/concept_electromagnetic_radiation.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electromagnetic_radiation_zh",
@@ -8719,6 +9532,20 @@
         "file": "output/college.zh/sonnet/html/concept_electromagnetic_radiation_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "electron",
+        "label": "Electron",
+        "file": "output/college.en/sonnet/html/concept_electron.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
+        "name": "electron_charge",
+        "label": "Electron Charge",
+        "file": "output/college.en/sonnet/html/concept_electron_charge.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electron_charge_zh",
@@ -8782,6 +9609,13 @@
         "file": "output/college.zh/sonnet/html/concept_metastable_state_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "millikan_oil_drop_experiment",
+        "label": "Millikan Oil Drop Experiment",
+        "file": "output/college.en/sonnet/html/concept_millikan_oil_drop_experiment.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "millikan_oil_drop_experiment_zh",
@@ -8871,7 +9705,8 @@
         "name": "x_ray_diffraction",
         "label": "X Ray Diffraction",
         "file": "output/college.en/sonnet/html/concept_x_ray_diffraction.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "x_ray_diffraction_zh",
@@ -8940,6 +9775,12 @@
         "file": "output/college.zh/sonnet/html/book_radioactive_dating.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "scintillator",
+        "file": "output/college.en/sonnet/html/book_scintillator.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -8982,7 +9823,8 @@
         "name": "geiger_tube",
         "label": "Geiger Tube",
         "file": "output/college.en/sonnet/html/concept_geiger_tube.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "geiger_tube_zh",
@@ -9002,7 +9844,8 @@
         "name": "ionization",
         "label": "Ionization",
         "file": "output/college.en/sonnet/html/concept_ionization.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "ionization_zh",
@@ -9015,7 +9858,8 @@
         "name": "ionizing_radiation",
         "label": "Ionizing Radiation",
         "file": "output/college.en/sonnet/html/concept_ionizing_radiation.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "ionizing_radiation_zh",
@@ -9035,7 +9879,8 @@
         "name": "mass_energy_equivalence",
         "label": "Mass Energy Equivalence",
         "file": "output/college.en/sonnet/html/concept_mass_energy_equivalence.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "mass_energy_equivalence_zh",
@@ -9069,7 +9914,8 @@
         "name": "nuclear_radiation",
         "label": "Nuclear Radiation",
         "file": "output/college.en/sonnet/html/concept_nuclear_radiation.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "nuclear_radiation_zh",
@@ -9089,7 +9935,8 @@
         "name": "nucleus",
         "label": "Nucleus",
         "file": "output/college.en/sonnet/html/concept_nucleus.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "nucleus_zh",
@@ -9130,7 +9977,8 @@
         "name": "radiation_detector",
         "label": "Radiation Detector",
         "file": "output/college.en/sonnet/html/concept_radiation_detector.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "radiation_detector_zh",
@@ -9150,7 +9998,8 @@
         "name": "radioactivity",
         "label": "Radioactivity",
         "file": "output/college.en/sonnet/html/concept_radioactivity.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "radioactivity_zh",
@@ -9158,6 +10007,13 @@
         "file": "output/college.zh/sonnet/html/concept_radioactivity_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "scintillator",
+        "label": "Scintillator",
+        "file": "output/college.en/sonnet/html/concept_scintillator.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "scintillator_zh",
@@ -9233,6 +10089,12 @@
         "file": "output/college.zh/sonnet/html/book_medical_imaging.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "nuclear_power_reactor",
+        "file": "output/college.en/sonnet/html/book_nuclear_power_reactor.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -9247,7 +10109,8 @@
         "name": "binding_energy_per_nucleon",
         "label": "Binding Energy Per Nucleon",
         "file": "output/college.en/sonnet/html/concept_binding_energy_per_nucleon.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "binding_energy_per_nucleon_zh",
@@ -9267,7 +10130,8 @@
         "name": "chain_reaction",
         "label": "Chain Reaction",
         "file": "output/college.en/sonnet/html/concept_chain_reaction.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "chain_reaction_zh",
@@ -9280,7 +10144,8 @@
         "name": "coulomb_repulsion",
         "label": "Coulomb Repulsion",
         "file": "output/college.en/sonnet/html/concept_coulomb_repulsion.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "coulomb_repulsion_zh",
@@ -9293,7 +10158,8 @@
         "name": "critical_mass",
         "label": "Critical Mass",
         "file": "output/college.en/sonnet/html/concept_critical_mass.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "critical_mass_zh",
@@ -9313,7 +10179,8 @@
         "name": "fission_bomb",
         "label": "Fission Bomb",
         "file": "output/college.en/sonnet/html/concept_fission_bomb.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "fission_bomb_zh",
@@ -9337,6 +10204,13 @@
         "language": "zh"
       },
       {
+        "name": "neutron_moderation",
+        "label": "Neutron Moderation",
+        "file": "output/college.en/sonnet/html/concept_neutron_moderation.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "neutron_moderation_zh",
         "label": "Neutron Moderation Zh",
         "file": "output/college.zh/sonnet/html/concept_neutron_moderation_zh.html",
@@ -9347,7 +10221,8 @@
         "name": "nuclear_fission",
         "label": "Nuclear Fission",
         "file": "output/college.en/sonnet/html/concept_nuclear_fission.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "nuclear_fission_zh",
@@ -9360,7 +10235,8 @@
         "name": "nuclear_force",
         "label": "Nuclear Force",
         "file": "output/college.en/sonnet/html/concept_nuclear_force.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "nuclear_force_zh",
@@ -9375,6 +10251,13 @@
         "file": "output/college.zh/sonnet/html/concept_nuclear_fusion_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "nuclear_power_reactor",
+        "label": "Nuclear Power Reactor",
+        "file": "output/college.en/sonnet/html/concept_nuclear_power_reactor.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "nuclear_power_reactor_zh",
@@ -9508,9 +10391,22 @@
         "file": "output/college.zh/sonnet/html/book_proton_decay_detection.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "cosmic_ray_experiments",
+        "file": "output/college.en/sonnet/html/book_cosmic_ray_experiments.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
+      {
+        "name": "antimatter",
+        "label": "Antimatter",
+        "file": "output/college.en/sonnet/html/concept_antimatter.html",
+        "model": "sonnet",
+        "language": "en"
+      },
       {
         "name": "antimatter_zh",
         "label": "Antimatter Zh",
@@ -9533,6 +10429,13 @@
         "language": "zh"
       },
       {
+        "name": "carrier_particle",
+        "label": "Carrier Particle",
+        "file": "output/college.en/sonnet/html/concept_carrier_particle.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "carrier_particle_zh",
         "label": "Carrier Particle Zh",
         "file": "output/college.zh/sonnet/html/concept_carrier_particle_zh.html",
@@ -9543,7 +10446,8 @@
         "name": "colliding_beams",
         "label": "Colliding Beams",
         "file": "output/college.en/sonnet/html/concept_colliding_beams.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "colliding_beams_zh",
@@ -9551,6 +10455,13 @@
         "file": "output/college.zh/sonnet/html/concept_colliding_beams_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "conservation_of_charge",
+        "label": "Conservation Of Charge",
+        "file": "output/college.en/sonnet/html/concept_conservation_of_charge.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "conservation_of_charge_zh",
@@ -9563,7 +10474,8 @@
         "name": "conservation_of_mass_energy",
         "label": "Conservation Of Mass Energy",
         "file": "output/college.en/sonnet/html/concept_conservation_of_mass_energy.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "conservation_of_mass_energy_zh",
@@ -9576,7 +10488,8 @@
         "name": "conservation_of_momentum",
         "label": "Conservation Of Momentum",
         "file": "output/college.en/sonnet/html/concept_conservation_of_momentum.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "conservation_of_momentum_zh",
@@ -9584,6 +10497,13 @@
         "file": "output/college.zh/sonnet/html/concept_conservation_of_momentum_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "cosmic_ray_experiments",
+        "label": "Cosmic Ray Experiments",
+        "file": "output/college.en/sonnet/html/concept_cosmic_ray_experiments.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "cosmic_ray_experiments_zh",
@@ -9596,7 +10516,8 @@
         "name": "cyclotron",
         "label": "Cyclotron",
         "file": "output/college.en/sonnet/html/concept_cyclotron.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "cyclotron_zh",
@@ -9609,7 +10530,8 @@
         "name": "electromagnetic_force",
         "label": "Electromagnetic Force",
         "file": "output/college.en/sonnet/html/concept_electromagnetic_force.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "electromagnetic_force_zh",
@@ -9668,6 +10590,13 @@
         "language": "zh"
       },
       {
+        "name": "heisenberg_uncertainty_principle",
+        "label": "Heisenberg Uncertainty Principle",
+        "file": "output/college.en/sonnet/html/concept_heisenberg_uncertainty_principle.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "heisenberg_uncertainty_principle_zh",
         "label": "Heisenberg Uncertainty Principle Zh",
         "file": "output/college.zh/sonnet/html/concept_heisenberg_uncertainty_principle_zh.html",
@@ -9685,7 +10614,8 @@
         "name": "particle_accelerator",
         "label": "Particle Accelerator",
         "file": "output/college.en/sonnet/html/concept_particle_accelerator.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "particle_accelerator_zh",
@@ -9700,6 +10630,13 @@
         "file": "output/college.zh/sonnet/html/concept_pauli_exclusion_principle_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "pion",
+        "label": "Pion",
+        "file": "output/college.en/sonnet/html/concept_pion.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "pion_zh",
@@ -9754,7 +10691,8 @@
         "name": "synchrotron",
         "label": "Synchrotron",
         "file": "output/college.en/sonnet/html/concept_synchrotron.html",
-        "model": "sonnet"
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "synchrotron_zh",
@@ -9762,6 +10700,13 @@
         "file": "output/college.zh/sonnet/html/concept_synchrotron_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "virtual_particle",
+        "label": "Virtual Particle",
+        "file": "output/college.en/sonnet/html/concept_virtual_particle.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "virtual_particle_zh",
@@ -9818,6 +10763,12 @@
         "file": "output/college.zh/sonnet/html/book_gravitational_wave_detection.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "target": "gravitational_wave_detection",
+        "file": "output/college.en/sonnet/html/book_gravitational_wave_detection.html",
+        "model": "sonnet",
+        "language": "en"
       }
     ],
     "generated_concepts": [
@@ -9892,11 +10843,25 @@
         "language": "zh"
       },
       {
+        "name": "gravitational_wave_detection",
+        "label": "Gravitational Wave Detection",
+        "file": "output/college.en/sonnet/html/concept_gravitational_wave_detection.html",
+        "model": "sonnet",
+        "language": "en"
+      },
+      {
         "name": "gravitational_wave_detection_zh",
         "label": "Gravitational Wave Detection Zh",
         "file": "output/college.zh/sonnet/html/concept_gravitational_wave_detection_zh.html",
         "model": "sonnet",
         "language": "zh"
+      },
+      {
+        "name": "gravitational_waves",
+        "label": "Gravitational Waves",
+        "file": "output/college.en/sonnet/html/concept_gravitational_waves.html",
+        "model": "sonnet",
+        "language": "en"
       },
       {
         "name": "gravitational_waves_zh",

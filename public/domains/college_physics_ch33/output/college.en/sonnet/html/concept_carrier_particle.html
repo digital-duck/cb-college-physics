@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrier Particle | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="carrier-particle">Carrier Particle</h2>
+<h3 id="definition">Definition</h3>
+<p>A <strong>carrier particle</strong> (or force mediator) is a particle that is exchanged between two other particles to transmit a fundamental force. In this picture, particles do not interact through an instantaneous "action at a distance." Instead, one particle emits a carrier and the other absorbs it, and the momentum transferred in the process is the force.</p>
+<p>Hideki Yukawa proposed this idea in 1935 for the nuclear force. The carrier is a <strong>virtual particle</strong>. It exists only briefly and is not directly observed, because it borrows energy $\Delta E$ for a time $\Delta t$ allowed by the uncertainty principle:</p>
+$$\Delta E\,\Delta t \gtrsim \frac{\hbar}{2}$$
+<h3 id="worked-example-yukawa-s-range-estimate">Worked example: Yukawa's range estimate</h3>
+<p>A carrier of mass $m$ costs at least $\Delta E = mc^2$ to create. It can survive for roughly $\Delta t \approx \hbar/(mc^2)$. Even if it travels at nearly the speed of light, it can cover a distance of only about</p>
+$$R \approx c\,\Delta t = \frac{\hbar}{mc} = \frac{\hbar c}{mc^2}.$$
+<p>The nuclear force has a range of about $R \approx 1.4\ \text{fm}$. Using $\hbar c \approx 197\ \text{MeV·fm}$:</p>
+$$mc^2 \approx \frac{197\ \text{MeV·fm}}{1.4\ \text{fm}} \approx 140\ \text{MeV}.$$
+<p>Yukawa therefore predicted a particle of roughly 140 MeV/$c^2$, about 270 electron masses. The pion, discovered in 1947, has $m_\pi c^2 \approx 139.6$ MeV. This is a striking agreement.</p>
+<p>The same argument gives the force's shape. A massive carrier produces the <strong>Yukawa potential</strong></p>
+$$V(r) = -\frac{g^2}{4\pi}\,\frac{e^{-r/R}}{r},$$
+<p>where $g$ is the coupling strength. The exponential factor cuts the force off beyond $R$. A massless carrier ($m=0$) gives $R\to\infty$ and the familiar $1/r$ Coulomb form.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem.</strong> The W boson carries the weak force and has $m_W c^2 \approx 80{,}400$ MeV. Estimate the range of the weak force.</p>
+<p><strong>Solution.</strong></p>
+$$R \approx \frac{\hbar c}{m_W c^2} = \frac{197\ \text{MeV·fm}}{80{,}400\ \text{MeV}} \approx 2.5\times10^{-3}\ \text{fm}.$$
+<p>This is about $0.002$ fm, far smaller than a proton (about 1 fm). It explains why the weak force acts only at subnuclear distances. The heavier the carrier, the shorter the range.</p>
+<h3 id="summary-of-carriers">Summary of carriers</h3>
+<p>| Force | Carrier | Mass | Range | |---|---|---|---| | Electromagnetic | photon | 0 | infinite | | Strong (residual) | pion | 140 MeV/$c^2$ | ~1.4 fm | | Weak | $W^\pm$, $Z^0$ | ~80–91 GeV/$c^2$ | ~$10^{-3}$ fm | | Strong (fundamental) | gluon | 0 | confined, ~1 fm |</p>
+<p>The pion explains the residual nuclear force between nucleons. Today's Standard Model treats the gluon as the carrier of the fundamental strong force between quarks. Gluons are massless, but they interact with each other, and this confines them to about nuclear scales. The pattern is that range is set by carrier mass, $R \sim \hbar/(mc)$.</p>
+<pre class="mermaid">sequenceDiagram
+    participant A as Particle A
+    participant C as Virtual carrier
+    participant B as Particle B
+    A->>C: emits carrier (recoils)
+    C->>B: absorbed by B (receives momentum)
+    Note over A,B: Net momentum transfer = force</pre>
+<p><em>Particle A emits a virtual carrier and particle B absorbs it. The momentum exchanged is the force between them.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

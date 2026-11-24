@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Density | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="density">Density</h2>
+<p><strong>Definition.</strong> Density is the mass per unit volume of a substance:</p>
+$$\rho = \frac{m}{V}$$
+<p>Here $m$ is mass (kg or g) and $V$ is volume (m³ or cm³ or mL). Typical units are kg/m³ and g/cm³, where $1\ \text{g/cm}^3 = 1000\ \text{kg/m}^3$. Density is an <em>intensive</em> property. A gram of iron and a tonne of iron have the same density, because the mass and the volume grow together. This makes density useful for identifying materials.</p>
+<p>Some reference values:</p>
+<p>| Substance | $\rho$ (g/cm³) | |---|---| | Air (20 °C) | 0.0012 | | Ethanol | 0.79 | | Water (4 °C) | 1.00 | | Aluminum | 2.70 | | Iron | 7.87 | | Gold | 19.3 |</p>
+<p>The same relation can be rearranged to $m = \rho V$ and $V = m/\rho$. Use whichever form isolates your unknown.</p>
+<p><strong>Worked example.</strong> A metal block measures $2.0\ \text{cm} \times 3.0\ \text{cm} \times 5.0\ \text{cm}$ and has a mass of $81\ \text{g}$. What is it made of?</p>
+<li>Compute the volume: $V = 2.0 \times 3.0 \times 5.0 = 30\ \text{cm}^3$.</li>
+<li>Apply the definition: $\rho = \dfrac{81\ \text{g}}{30\ \text{cm}^3} = 2.7\ \text{g/cm}^3$.</li>
+<p>This matches aluminum in the table. Identifying a material by density is only suggestive. Several alloys can share similar values, so treat the match as evidence, not proof.</p>
+<p><strong>Problem-solving application.</strong> Density lets you find a quantity you cannot measure directly.</p>
+<p><em>Irregular objects.</em> A small stone has mass $56\ \text{g}$. When it is lowered into a graduated cylinder, the water level rises from $40.0\ \text{mL}$ to $48.0\ \text{mL}$. Since $1\ \text{mL} = 1\ \text{cm}^3$, the displaced water gives the stone's volume, $V = 8.0\ \text{cm}^3$. Then</p>
+$$\rho = \frac{56}{8.0} = 7.0\ \text{g/cm}^3.$$
+<p><em>Mass from size.</em> How much does a $2.0\ \text{m}^3$ tank of ethanol hold? Convert first: $0.79\ \text{g/cm}^3 = 790\ \text{kg/m}^3$. Then</p>
+$$m = \rho V = (790)(2.0) = 1580\ \text{kg}.$$
+<p><em>Floating and sinking.</em> An object floats in a fluid if its average density is less than the fluid's density. Iron ($7.87\ \text{g/cm}^3$) sinks in water, yet a steel ship floats. Its hull encloses a large volume of air, so the ship's <em>average</em> density, total mass divided by total enclosed volume, is below $1.00\ \text{g/cm}^3$.</p>
+<p><strong>Common pitfalls.</strong></p>
+<li>Mixing units, such as grams with $\text{m}^3$. Convert before dividing.</li>
+<li>Treating density as fixed. It changes with temperature and pressure, especially for gases. Water is densest near 4 °C.</li>
+<li>Using the object's total volume when it is hollow or porous. Then $m/V$ gives an average density, not the density of the material itself.</li>
+<p><strong>Check your understanding.</strong> A $0.50\ \text{kg}$ sample of an unknown liquid fills $625\ \text{mL}$. Is it ethanol? (Answer: $\rho = 500/625 = 0.80\ \text{g/cm}^3$, which is consistent with ethanol.)</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

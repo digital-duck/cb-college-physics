@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speed Of Sound | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="speed-of-sound">Speed Of Sound</h2>
+<p><strong>Definition.</strong> Sound is a longitudinal pressure wave: particles of the medium are compressed and stretched, and the disturbance passes from neighbor to neighbor. The <strong>speed of sound</strong> $v$ is how fast this disturbance travels. It depends only on the medium, not on the loudness or pitch of the sound. A stiffer medium restores displaced particles faster, and a denser medium responds more sluggishly, so</p>
+$$v = \sqrt{\frac{B}{\rho}}$$
+<p>where $B$ is the bulk modulus (the medium's resistance to compression) and $\rho$ is the density.</p>
+<p>For an ideal gas, the adiabatic bulk modulus is $B=\gamma P$, and $P/\rho = RT/M$. This gives</p>
+$$v = \sqrt{\frac{\gamma R T}{M}}$$
+<p>where $\gamma$ is the heat-capacity ratio ($1.40$ for air), $R = 8.314\ \text{J/(mol·K)}$, $T$ is absolute temperature in kelvin, and $M$ is the molar mass in kg/mol. Gas speed depends on temperature, not on pressure, because pressure and density change together and cancel. A useful approximation for air is</p>
+$$v \approx 331 + 0.60\,T_C \ \text{m/s}$$
+<p>with $T_C$ in °C.</p>
+<p><strong>Worked example.</strong> Find $v$ in air at $20^\circ\text{C}$ ($T = 293$ K, $M = 0.0290$ kg/mol):</p>
+$$v = \sqrt{\frac{(1.40)(8.314)(293)}{0.0290}} \approx 343\ \text{m/s}$$
+<p>The linear approximation gives $331 + 0.60(20) = 343$ m/s, which agrees.</p>
+<p>Now compare water, with $B = 2.2\times10^9$ Pa and $\rho = 1000$ kg/m³:</p>
+$$v = \sqrt{\frac{2.2\times10^9}{1000}} \approx 1.5\times10^3\ \text{m/s}$$
+<p>Water is about 4 times faster than air. Its much greater stiffness outweighs its higher density.</p>
+<p><strong>Problem-solving application.</strong> <em>A hiker shouts toward a cliff and hears the echo 3.0 s later on a $30^\circ\text{C}$ day. How far away is the cliff?</em></p>
+<li>Find the speed: $v \approx 331 + 0.60(30) = 349$ m/s.</li>
+<li>The sound travels to the cliff and back, so the total path is $2d$:</li>
+$$d = \frac{vt}{2} = \frac{(349)(3.0)}{2} \approx 520\ \text{m}$$
+<p>Using $343$ m/s instead of $349$ m/s would give $515$ m, about $1\%$ too low. Temperature matters.</p>
+<p><em>Common pitfalls:</em> use kelvin inside the square-root formula; convert $M$ to kg/mol; and remember that the echo covers the distance twice.</p>
+<p><strong>Check your understanding.</strong> Helium has $\gamma = 1.67$ and $M = 0.00400$ kg/mol. At $293$ K, $v \approx 1000$ m/s. This is why a helium voice sounds higher. The vocal tract resonates at higher frequencies because $v$ is larger, and the vocal folds' pitch is unchanged.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

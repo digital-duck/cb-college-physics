@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🍃 Speed Of Light — College Physics Ch24</title>
+<title>Speed Of Light | College Physics Ch24</title>
 <script>
 MathJax = {
   tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
@@ -11,6 +11,8 @@ MathJax = {
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
@@ -19,87 +21,51 @@ h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
 h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
 p{margin-bottom:16px;font-size:1rem}
 li{margin-bottom:6px;margin-left:24px;font-size:1rem}
-table{border-collapse:collapse;margin:16px 0;font-size:.95rem;width:auto}
-th,td{border:1px solid #d8d8d0;padding:8px 12px;text-align:left}
-th{background:#eef1f5;font-weight:600;color:#1e3a5f}
-tr:nth-child(even){background:#f8f8f5}
 pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
     padding:16px 20px;overflow-x:auto;margin:16px 0}
 code{font-family:Menlo,Consolas,monospace;font-size:.87em}
 p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
-.back{display:inline-block;font-family:system-ui,sans-serif;font-size:.85rem;
-      color:#2563eb;text-decoration:none;margin-bottom:24px}
-.back:hover{text-decoration:underline}
-.page{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
-nav.toc{position:sticky;top:0;height:100vh;overflow-y:auto;
-        background:#1e3a5f;color:#e8f0fe;padding:24px 16px;
-        display:flex;flex-direction:column}
-nav.toc .back{color:#a8c8f0;margin-bottom:20px}
-nav.toc .back:hover{color:#fff}
-nav.toc h2{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;
-           color:#90b4e8;margin-bottom:14px;font-family:system-ui,sans-serif}
-nav.toc ol{list-style:decimal inside;padding:0;flex:1}
-nav.toc li{margin-bottom:7px;font-size:.85rem;line-height:1.4;font-family:system-ui,sans-serif}
-nav.toc a{color:#a8c8f0;text-decoration:none}
-nav.toc a:hover{color:#fff}
-nav.toc li.toc-target{font-weight:700}
-nav.toc li.toc-target a{color:#fff}
-nav.toc .spl-credit{margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,0.15);
-                    font-size:11px;color:#90b4e8;font-family:system-ui,sans-serif}
-nav.toc .spl-credit a{color:#a8c8f0;text-decoration:none}
-nav.toc .spl-credit a:hover{color:#fff;text-decoration:underline}
-main{padding:48px 64px;max-width:860px}
-h1.book-title{font-size:2rem;color:#1e3a5f;margin-bottom:32px}
-section{margin-bottom:56px;border-top:1px solid #e0e0d8;padding-top:40px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
 section:first-of-type{border-top:none;padding-top:0}
-html{scroll-behavior:smooth}
-@media(max-width:768px){.page{grid-template-columns:1fr}
-nav.toc{position:relative;height:auto}}
 </style>
 </head>
 <body>
 <div class="page">
-  <nav class="toc">
-    <a href="../../../../#/domain/college_physics_ch24" class="back">← College Physics Ch24</a>
-    <h2>Contents</h2>
-    <ol>
-<li><a href="concept_amperes_law.html">🌱 Amperes Law</a></li>
-<li><a href="concept_electric_field.html">🌱 Electric Field</a></li>
-<li><a href="concept_magnetic_field.html">🌱 Magnetic Field</a></li>
-<li><a href="concept_permeability_of_free_space.html">🌱 Permeability Of Free Space</a></li>
-<li><a href="concept_permittivity_of_free_space.html">🌱 Permittivity Of Free Space</a></li>
-<li><a href="concept_changing_electric_field_creates_magnetic_field.html">🍃 Changing Electric Field Creates Magnetic Field</a></li>
-<li><a href="concept_faradays_law.html">🌱 Faradays Law</a></li>
-<li><a href="concept_gauss_law_electricity.html">🌱 Gauss Law Electricity</a></li>
-<li><a href="concept_gauss_law_magnetism.html">🌱 Gauss Law Magnetism</a></li>
-<li class="toc-target"><a href="concept_speed_of_light.html">🍃 Speed Of Light</a></li>
-<li><a href="concept_maxwells_equations.html">🍃 Maxwells Equations</a></li>
-<li><a href="concept_wave_frequency_wavelength.html">🌱 Wave Frequency Wavelength</a></li>
-<li><a href="concept_electromagnetic_wave.html">🍃 Electromagnetic Wave</a></li>
-<li><a href="concept_wave_equation_em.html">🍃 Wave Equation Em</a></li>
-<li><a href="concept_electromagnetic_spectrum.html">🍃 Electromagnetic Spectrum</a></li>
-<li><a href="concept_radio_waves.html">🌸 Radio Waves</a></li>
-</ol>
-    <div class="spl-credit">Generated by <a href="https://github.com/digital-duck/SPL.py" target="_blank">SPL</a></div>
-  </nav>
   <main>
-    <h1 class="book-title">🍃 Speed Of Light</h1>
-    <section>
-<h2>🍃 Speed Of Light</h2>
-<p><strong>Definition.</strong> The speed of light in a vacuum, denoted $c$, is a universal physical constant defined as exactly $c = 299{,}792{,}458 \ \text{m/s}$, often approximated as $3.00 \times 10^8 \ \text{m/s}$. This value is not merely an empirical measurement but forms the foundation of the SI unit system: the meter is defined such that $c$ has precisely this value. In any medium, light travels at a reduced speed $v = c/n$, where $n \geq 1$ is the refractive index of that medium. In electromagnetic theory, Maxwell showed that light is an electromagnetic wave whose speed in vacuum is determined entirely by the permittivity $\varepsilon_0$ and permeability $\mu_0$ of free space:</p>
-$$
-c = \frac{1}{\sqrt{\varepsilon_0 \mu_0}}
-$$
-<p>Substituting $\varepsilon_0 = 8.854 \times 10^{-12} \ \text{C}^2/(\text{N}\cdot\text{m}^2)$ and $\mu_0 = 4\pi \times 10^{-7} \ \text{T}\cdot\text{m/A}$ reproduces the measured value of $c$ to high precision, a profound confirmation that light and electromagnetism are unified phenomena.</p>
-<p><strong>Worked Example.</strong> Light from the Sun must travel approximately $1.496 \times 10^{11} \ \text{m}$ (one astronomical unit) to reach Earth. Find the travel time $t$.</p>
-$$
-t = \frac{d}{c} = \frac{1.496 \times 10^{11} \ \text{m}}{3.00 \times 10^8 \ \text{m/s}} = 4.99 \times 10^2 \ \text{s} \approx 8.32 \ \text{min}
-$$
-<p>This result implies that observations of the Sun are always delayed by roughly 8.3 minutes — we see the Sun as it was, not as it is, a concrete illustration of the finite propagation speed of electromagnetic information.</p>
-<p><strong>Key Theorem.</strong> Maxwell's wave equations predict that electromagnetic disturbances propagate in vacuum with speed $c = 1/\sqrt{\varepsilon_0\mu_0}$, independent of the frequency or amplitude of the wave. This frequency-independence (non-dispersion) in vacuum means all colors of light arrive simultaneously from a distant source, distinguishing vacuum propagation from propagation through dispersive media where $n = n(\lambda)$.</p>
-<p><strong>Lab Exercise.</strong> Using a rotating-mirror apparatus (Foucault method), a laser pulse travels a known round-trip distance of $d = 600 \ \text{m}$. If the mirror must rotate by $\theta = 0.0314 \ \text{rad}$ during transit to produce a detectable deflection at angular velocity $\omega$, express $\omega$ in terms of $c$ and $d$, and calculate the required rotation rate. <em>(Hint: $t = 2d/c$.)</em></p>
-</section>
+    <h2 id="speed-of-light">Speed Of Light</h2>
+<p><strong>Definition.</strong> The speed of light in vacuum, $c$, is the speed at which electromagnetic waves propagate through empty space. Its value is exactly $c = 299\,792\,458\ \text{m/s} \approx 3\times10^{8}\ \text{m/s}$. Maxwell's equations show that $c$ is not an arbitrary number. It follows from two constants that describe how vacuum responds to electric and magnetic fields: the permittivity $\varepsilon_0$ and the permeability $\mu_0$.</p>
+$$c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}}$$
+<p><strong>Where this comes from.</strong> In vacuum, Maxwell's equations combine into a wave equation for the electric field:</p>
+$$\nabla^2 \mathbf{E} = \mu_0 \varepsilon_0 \frac{\partial^2 \mathbf{E}}{\partial t^2}.$$
+<p>A general wave equation has the form $\nabla^2 \mathbf{E} = \frac{1}{v^2}\frac{\partial^2 \mathbf{E}}{\partial t^2}$, where $v$ is the wave speed. Matching the two forms gives $v^2 = 1/(\mu_0\varepsilon_0)$. Maxwell found that this speed equals the measured speed of light, which led him to conclude that light is an electromagnetic wave.</p>
+<p><strong>Worked example.</strong> Use $\varepsilon_0 = 8.854\times10^{-12}\ \text{C}^2/(\text{N·m}^2)$ and $\mu_0 = 4\pi\times10^{-7}\ \text{N/A}^2 \approx 1.257\times10^{-6}\ \text{N/A}^2$.</p>
+$$\mu_0\varepsilon_0 = (1.257\times10^{-6})(8.854\times10^{-12}) = 1.113\times10^{-17}\ \text{s}^2/\text{m}^2$$
+$$c = \frac{1}{\sqrt{1.113\times10^{-17}}} = \frac{1}{3.336\times10^{-9}} \approx 3.00\times10^{8}\ \text{m/s}$$
+<p>The result matches the measured value. Two constants measured with electric and magnetic apparatus predict the speed of light without any optical measurement.</p>
+<p><strong>Problem-solving application.</strong> <em>How long does sunlight take to reach Earth, and how long does a radar pulse take to make a round trip to an aircraft 60 km away?</em></p>
+<p><em>Sunlight.</em> The Earth–Sun distance is $d = 1.496\times10^{11}$ m. Since $t = d/c$,</p>
+$$t = \frac{1.496\times10^{11}}{3.00\times10^{8}} \approx 499\ \text{s} \approx 8.3\ \text{min}.$$
+<p><em>Radar.</em> Radar pulses are radio waves, so they travel at $c$. The pulse covers the distance twice:</p>
+$$t = \frac{2d}{c} = \frac{2(6.0\times10^{4})}{3.00\times10^{8}} = 4.0\times10^{-4}\ \text{s} = 0.40\ \text{ms}.$$
+<p>Reversing the calculation, a measured delay $t$ gives the distance $d = ct/2$. Radar ranging, lidar, and GPS timing all use this relation.</p>
+<p><strong>Key points.</strong></p>
+<li>$c$ is a property of vacuum. In a medium with refractive index $n$, light travels at $v = c/n$, which is slower.</li>
+<li>All electromagnetic waves travel at $c$ in vacuum. This includes radio waves, visible light, and X-rays, and their frequencies and wavelengths are related by $c = f\lambda$.</li>
+<li>Since 1983 the metre has been defined from $c$, which is why $c$ is exact. The second is fixed by atomic clocks, and the metre is the distance light travels in $1/299\,792\,458$ s.</li>
+<li>Special relativity treats $c$ as the same for all inertial observers, and no signal or object can exceed it.</li>
+<p><strong>Check yourself.</strong> Green light has wavelength $550$ nm. Use $f = c/\lambda$ to show that its frequency is about $5.5\times10^{14}$ Hz.</p>
   </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch24: Electromagnetic Waves (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
 </div>
 </body>
 </html>

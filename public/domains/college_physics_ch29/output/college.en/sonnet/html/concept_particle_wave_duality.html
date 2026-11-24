@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Particle Wave Duality | College Physics Ch29</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="particle-wave-duality">Particle–Wave Duality</h2>
+<p><strong>Definition.</strong> Particle–wave duality is the principle that every quantum entity, whether an electron, a photon, or a whole molecule, shows particle-like behavior (localized, countable detections) in some experiments and wave-like behavior (interference, diffraction) in others. The experimental setup decides which face appears. There aren't two different kinds of object. The two faces are linked by the de Broglie relation:</p>
+$$\lambda = \frac{h}{p}$$
+<p>where $p$ is the momentum (a particle property), $\lambda$ is the wavelength (a wave property), and $h = 6.626\times10^{-34}\ \text{J·s}$ is Planck's constant.</p>
+<p><strong>Evidence for each face.</strong> When electrons are sent one at a time through two narrow slits, each electron lands at a single point on the detector. That is particle behavior. After thousands of arrivals, the dots build up bright and dark interference fringes, the same pattern a wave would make. That is wave behavior. Both appear in one experiment: propagation looks like a wave, and detection looks like a particle.</p>
+<p><strong>Worked example.</strong> What is the de Broglie wavelength of an electron accelerated through $V = 150\ \text{V}$?</p>
+<p>The kinetic energy is $K = eV = (1.602\times10^{-19})(150) = 2.40\times10^{-17}\ \text{J}$. Then</p>
+$$p = \sqrt{2m_eK} = \sqrt{2(9.11\times10^{-31})(2.40\times10^{-17})} = 6.61\times10^{-24}\ \text{kg·m/s}$$
+$$\lambda = \frac{h}{p} = \frac{6.626\times10^{-34}}{6.61\times10^{-24}} \approx 1.0\times10^{-10}\ \text{m} = 0.1\ \text{nm}$$
+<p>This is comparable to the spacing between atoms in a crystal, so a crystal can diffract these electrons the way a grating diffracts light.</p>
+<p><strong>Problem-solving application.</strong> Why don't we see a thrown baseball diffract? Take $m = 0.145\ \text{kg}$ and $v = 40\ \text{m/s}$:</p>
+$$\lambda = \frac{6.626\times10^{-34}}{(0.145)(40)} \approx 1.1\times10^{-34}\ \text{m}$$
+<p>This is far smaller than any slit, obstacle, or atomic nucleus, so no interference can be observed. The rule of thumb is that wave behavior appears when $\lambda$ is comparable to the size of the slit, obstacle, or lattice spacing. Otherwise, particle (classical) behavior dominates.</p>
+<p>A second use is choosing a probe. To resolve features about $0.1\ \text{nm}$ across, you need $\lambda \lesssim 0.1\ \text{nm}$. Electrons at 150 V satisfy this. Visible light ($\lambda \sim 500\ \text{nm}$) does not. This is why electron microscopes resolve far finer detail than optical ones.</p>
+<p><strong>Key idea.</strong> The wave determines the <em>probability</em> of where a quantum object is detected, and each detection is a discrete, particle-like event. The relation $\lambda = h/p$ tells you which behavior to expect: compare $\lambda$ to the length scale of the setup.</p>
+<pre class="mermaid">flowchart LR
+    A[Quantum entity] --> B{Experiment type}
+    B -->|Propagation through slits or crystals| C[Wave behavior: interference, diffraction]
+    B -->|Detection| D[Particle behavior: localized events]
+    C --> E[Compute lambda = h/p]
+    D --> E
+    E --> F[Compare lambda to the setup's length scale]</pre>
+<p><em>The experimental setup determines which face of a quantum entity appears; the de Broglie relation tells you when wave behavior is observable.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch29: Quantum Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

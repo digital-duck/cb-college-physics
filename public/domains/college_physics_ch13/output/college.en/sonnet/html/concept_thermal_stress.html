@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermal Stress | College Physics Ch13</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="thermal-stress">Thermal Stress</h2>
+<h3 id="definition">Definition</h3>
+<p>When a material is heated, it expands; when cooled, it contracts. If it is free to move, no stress develops. <strong>Thermal stress</strong> arises when that expansion or contraction is <em>constrained</em>, for example by rigid walls, clamps, or neighboring material at a different temperature. The constraint forces the material to deform mechanically by the amount it would otherwise have changed thermally, and that mechanical deformation is stress.</p>
+<p>For a temperature change $\Delta T$, the free (unconstrained) fractional length change is</p>
+$$\frac{\Delta L}{L} = \alpha\,\Delta T,$$
+<p>where $\alpha$ is the coefficient of linear thermal expansion. If the ends are fixed so the net length change is zero, the mechanical strain must cancel the thermal strain, $\varepsilon = -\alpha\,\Delta T$. With Young's modulus $E$ (Hooke's law, $\sigma = E\varepsilon$):</p>
+$$\sigma = -E\,\alpha\,\Delta T.$$
+<p>The negative sign means heating a constrained rod produces <em>compressive</em> stress; cooling produces <em>tensile</em> stress.</p>
+<p><strong>Volume version.</strong> For a material confined on all sides, the volumetric expansion is $\Delta V/V = \beta\,\Delta T$, with $\beta \approx 3\alpha$ for isotropic solids. The bulk modulus $B$ relates pressure change to fractional volume change, $\Delta p = -B\,\Delta V/V$. If the volume is held fixed, the confined material must be compressed by $-\beta\Delta T$, so</p>
+$$\Delta p = B\,\beta\,\Delta T.$$
+<h3 id="worked-example">Worked example</h3>
+<p>A steel rail ($E = 200\ \text{GPa}$, $\alpha = 12\times10^{-6}\ \text{K}^{-1}$) is laid tightly between fixed anchors at $10^\circ\text{C}$. On a summer day it reaches $40^\circ\text{C}$. Find the stress.</p>
+$$\sigma = -E\alpha\,\Delta T = -(200\times10^{9})(12\times10^{-6})(30) = -7.2\times10^{7}\ \text{Pa}$$
+<p>The rail carries about $72$ MPa of compression. Since steel's yield strength is a few hundred MPa, this is survivable, but it helps explain why long rails buckle sideways on hot days.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Sealed liquid.</strong> A rigid container is completely filled with water at $20^\circ\text{C}$ and sealed. Water has $\beta \approx 2.1\times10^{-4}\ \text{K}^{-1}$ and $B \approx 2.2\ \text{GPa}$. The temperature rises by $10\ \text{K}$. Estimate the pressure rise.</p>
+<p>Ignoring the container's own expansion,</p>
+$$\Delta p = B\beta\,\Delta T = (2.2\times10^{9})(2.1\times10^{-4})(10) \approx 4.6\times10^{6}\ \text{Pa} \approx 46\ \text{atm}.$$
+<p>A modest 10 K warming produces a pressure that can rupture pipes or tanks, which is why sealed hydraulic systems include expansion tanks or relief valves.</p>
+<p><strong>General strategy:</strong></p>
+<li>Decide whether the constraint is one-dimensional (use $E$, $\alpha$) or all-around (use $B$, $\beta$).</li>
+<li>Compute the free thermal strain, $\alpha\Delta T$ or $\beta\Delta T$.</li>
+<li>Require the total strain to match the constraint (usually zero); the mechanical strain is the negative of the thermal strain.</li>
+<li>Multiply by the appropriate modulus and compare with the material's yield or fracture limit.</li>
+<p>For partial constraint, such as a rod between slightly flexible supports or a gap of width $g$, subtract the allowed movement first: $\varepsilon = -(\alpha\Delta T - g/L)$. Engineers use expansion joints in bridges and gaps in railway track for exactly this reason: allowing the free thermal strain removes the stress.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch13: Temperature, Kinetic Theory, and the Gas Laws (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

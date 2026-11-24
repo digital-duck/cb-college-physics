@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virtual Particle | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="virtual-particle">Virtual Particle</h2>
+<p>A <strong>virtual particle</strong> is a transient excitation of a quantum field that appears in intermediate steps of a quantum process but is never detected as a free particle. It does not satisfy the usual energy–momentum relation $E^2 = p^2c^2 + m^2c^4$. Physicists call it <strong>off-shell</strong>. Its existence is inferred only through measurable effects it produces.</p>
+<p>The heuristic link to the uncertainty principle is</p>
+$$\Delta E\,\Delta t \gtrsim \frac{\hbar}{2}.$$
+<p>A fluctuation that "borrows" energy $\Delta E$ can last roughly $\Delta t \approx \hbar/(2\Delta E)$. The larger the borrowed energy, the shorter the lifetime.</p>
+<p>This picture is a useful estimate, not a rigorous derivation. In perturbation theory, virtual particles are internal lines of Feynman diagrams. They are bookkeeping for terms in a calculation, not tiny objects that pop in and out of existence.</p>
+<h3 id="worked-example-range-of-the-nuclear-force">Worked example: range of the nuclear force</h3>
+<p>Yukawa proposed that the nuclear force between nucleons is carried by a virtual particle of mass $m$. Creating it costs at least $\Delta E = mc^2$. Even if it travels at nearly $c$, it can cover a distance of about</p>
+$$R \approx c\,\Delta t \approx \frac{\hbar c}{mc^2}.$$
+<p>The nuclear force has a range of about $R \approx 1.4\ \text{fm}$. Solving for the mass gives</p>
+$$mc^2 \approx \frac{\hbar c}{R} = \frac{197\ \text{MeV·fm}}{1.4\ \text{fm}} \approx 140\ \text{MeV}.$$
+<p>This matches the pion, whose measured mass is about $139\text{–}140\ \text{MeV}/c^2$. The pion was later found experimentally, and this prediction is a classic success of the idea.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem.</strong> Estimate the range of the weak force, mediated by the virtual $W$ boson with $mc^2 \approx 80.4\ \text{GeV}$.</p>
+<p><strong>Solution.</strong> Use $R \approx \hbar c / (mc^2)$ with $\hbar c = 197\ \text{MeV·fm} = 0.197\ \text{GeV·fm}$:</p>
+$$R \approx \frac{0.197\ \text{GeV·fm}}{80.4\ \text{GeV}} \approx 2.5\times10^{-3}\ \text{fm}.$$
+<p>The weak force is therefore extremely short-ranged, about $1/500$ the size of a proton. This is why it is "weak" at everyday scales.</p>
+<p><strong>Contrast.</strong> The photon is massless, so $R \to \infty$ and electromagnetism has unlimited range. This follows directly from the same formula.</p>
+<h3 id="observable-evidence">Observable evidence</h3>
+<p>Virtual particles show up in measurable effects:</p>
+<li><strong>Lamb shift:</strong> virtual photons slightly shift hydrogen's energy levels, by about $1058\ \text{MHz}$ between the $2S_{1/2}$ and $2P_{1/2}$ states.</li>
+<li><strong>Casimir effect:</strong> two neutral conducting plates attract each other. The force per unit area is $F/A = -\dfrac{\pi^2 \hbar c}{240\,d^4}$ for plate separation $d$.</li>
+<li><strong>Anomalous magnetic moment of the electron:</strong> loop corrections from virtual particles match experiment to about ten significant figures.</li>
+<h3 id="key-takeaways">Key takeaways</h3>
+<li>Virtual particles are off-shell internal lines in quantum calculations, not directly detectable.</li>
+<li>The range of a force with a massive mediator is $R \approx \hbar c/(mc^2)$.</li>
+<li>Treat the "borrowed energy" picture as an estimate, and trust the full quantum field theory for exact results.</li>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wave Velocity | College Physics Ch16</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="wave-velocity">Wave Velocity</h2>
+<p><strong>Definition.</strong> Wave velocity (or wave speed) $v_w$ is the rate at which a wave disturbance, such as a crest, propagates through a medium. It is not the speed of the individual particles, which oscillate about fixed positions. In one period $T$, a crest advances exactly one wavelength $\lambda$, so</p>
+$$v_w = \frac{\lambda}{T} = f\lambda,$$
+<p>where $f = 1/T$ is the frequency in hertz. This relation holds for every periodic wave: sound, light, water, and waves on a string.</p>
+<p><strong>What determines $v_w$?</strong> The medium sets the speed, and the source sets the frequency. When a wave passes from one medium to another, $f$ stays the same because the source is unchanged, but $v_w$ and $\lambda$ change together. For a stretched string with tension $F_T$ and linear mass density $\mu$,</p>
+$$v_w = \sqrt{\frac{F_T}{\mu}}.$$
+<p>Greater tension raises the speed, and a heavier string lowers it. For sound in air, $v_w \approx 331 + 0.6\,T_C$ m/s, where $T_C$ is the temperature in °C.</p>
+<p><strong>Worked example.</strong> A string vibrates at $f = 220\ \text{Hz}$, and the waves on it have wavelength $\lambda = 1.50\ \text{m}$.</p>
+$$v_w = f\lambda = (220\ \text{Hz})(1.50\ \text{m}) = 330\ \text{m/s}.$$
+<p>Check by period: $T = 1/220 \approx 4.55\ \text{ms}$, and $\lambda/T = 1.50/0.00455 \approx 330$ m/s. ✓</p>
+<p><strong>Problem-solving application.</strong> A speaker emits a 440 Hz tone. Find the wavelength in air at 20 °C, then in water, where $v_w \approx 1480$ m/s.</p>
+<p><em>Step 1: Air.</em> $v_w = 331 + 0.6(20) = 343$ m/s, so</p>
+$$\lambda_{\text{air}} = \frac{v_w}{f} = \frac{343}{440} \approx 0.780\ \text{m}.$$
+<p><em>Step 2: Water.</em> The frequency is unchanged at 440 Hz, so</p>
+$$\lambda_{\text{water}} = \frac{1480}{440} \approx 3.36\ \text{m}.$$
+<p>The wavelength is about 4.3 times longer in water because the wave travels about 4.3 times faster there. This is the general pattern: with $f$ fixed, $\lambda \propto v_w$.</p>
+<p><strong>Strategy for problems.</strong></p>
+<li>Identify which quantity the source fixes ($f$) and which the medium fixes ($v_w$).</li>
+<li>Use $v_w = f\lambda$, solving for the unknown.</li>
+<li>For a boundary crossing, keep $f$ constant and recompute $\lambda$ from the new $v_w$.</li>
+<li>Check units: Hz × m = m/s.</li>
+<p><strong>Another case.</strong> Doubling the tension on a string multiplies $v_w$ by $\sqrt{2} \approx 1.41$. If the string is still driven at the same $f$, then $\lambda$ also grows by $\sqrt{2}$. This is why tightening a guitar string changes its pitch. In that case the string's allowed standing-wave wavelengths stay fixed, so the speed change shifts the frequency instead.</p>
+<pre class="mermaid">flowchart LR
+    S["Source sets frequency f"] --> W["Wave"]
+    M["Medium sets speed v_w"] --> W
+    W --> L["Wavelength: lambda = v_w / f"]</pre>
+<p><em>The source fixes the frequency and the medium fixes the speed. The wavelength follows from both.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch16: Oscillatory Motion and Waves (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

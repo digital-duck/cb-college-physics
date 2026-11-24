@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lorentz Factor | College Physics Ch28</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="lorentz-factor">Lorentz Factor</h2>
+<h3 id="definition">Definition</h3>
+<p>The <strong>Lorentz factor</strong> measures how strongly relativistic effects appear at a given speed $v$:</p>
+$$\gamma = \frac{1}{\sqrt{1 - \dfrac{v^2}{c^2}}}, \qquad c \approx 3.00\times 10^8\ \text{m/s}.$$
+<p>It is defined for $0 \le v < c$. Writing $\beta = v/c$ gives the equivalent form $\gamma = (1-\beta^2)^{-1/2}$. Three properties matter:</p>
+<li>$\gamma \ge 1$, and $\gamma = 1$ only at $v = 0$.</li>
+<li>At everyday speeds, $\gamma \approx 1$. A binomial expansion gives $\gamma \approx 1 + \tfrac{1}{2}\beta^2$ for $\beta \ll 1$.</li>
+<li>As $v \to c$, $\gamma \to \infty$.</li>
+<p>The factor appears in the main relativistic effects:</p>
+$$\Delta t = \gamma\,\Delta t_0, \qquad L = \frac{L_0}{\gamma}, \qquad E = \gamma m c^2.$$
+<p>Here $\Delta t_0$ is the proper time, $L_0$ is the proper length, and $m$ is the rest mass. A moving clock runs slow by $\gamma$. A moving rod contracts by $\gamma$. The total energy grows by $\gamma$.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>A muon created in the upper atmosphere travels at $v = 0.995c$. Its proper lifetime is $\Delta t_0 = 2.2\ \mu\text{s}$.</p>
+$$\gamma = \frac{1}{\sqrt{1 - 0.995^2}} = \frac{1}{\sqrt{0.009975}} \approx 10.0$$
+<p>In Earth's frame, the lifetime is $\Delta t = \gamma\,\Delta t_0 \approx 22\ \mu\text{s}$. The distance traveled is</p>
+$$d = v\,\Delta t \approx (0.995)(3.00\times10^8)(22\times10^{-6}) \approx 6.6\ \text{km}.$$
+<p>Without time dilation, the muon would travel only about $0.66$ km. That is not enough to reach the ground. Detectors at sea level do register large numbers of muons, which supports the relativistic prediction.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem.</strong> At what speed does $\gamma = 2$?</p>
+<p>Solve $\gamma$ for $\beta$ by squaring both sides:</p>
+$$\gamma^2 = \frac{1}{1-\beta^2} \;\Rightarrow\; \beta = \sqrt{1 - \frac{1}{\gamma^2}}.$$
+<p>With $\gamma = 2$, $\beta = \sqrt{1 - \tfrac14} = \sqrt{0.75} \approx 0.866$. So $v \approx 0.866c$.</p>
+<p><strong>Strategy for any relativity problem:</strong></p>
+<li>Compute $\beta = v/c$.</li>
+<li>Compute $\gamma$. If $\gamma \approx 1.00$, a classical calculation is accurate enough.</li>
+<li>Apply $\gamma$ to the relevant quantity: time, length, or energy.</li>
+<li>Check that the result makes sense. Dilated times should be longer, contracted lengths shorter, and no speed should reach $c$.</li>
+<p><strong>Check yourself.</strong> A proton with $\gamma = 7000$ (roughly the Large Hadron Collider's design energy) has</p>
+$$\beta = \sqrt{1 - \frac{1}{7000^2}} \approx 1 - \frac{1}{2(7000)^2} \approx 1 - 1.0\times10^{-8}.$$
+<p>So it moves only about $3\ \text{m/s}$ slower than light. The speed barely changes while $\gamma$, and with it the energy, grows without bound. That is why accelerators measure particles by energy rather than speed.</p>
+<pre class="mermaid">flowchart LR
+    A["Speed v"] --> B["β = v/c"]
+    B --> C["γ = 1/√(1−β²)"]
+    C --> D["Time: Δt = γ Δt₀"]
+    C --> E["Length: L = L₀/γ"]
+    C --> F["Energy: E = γmc²"]</pre>
+<p><em>One quantity, γ, controls time dilation, length contraction, and energy.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch28: Special Relativity (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

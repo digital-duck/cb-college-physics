@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lightning Rod | College Physics Ch18</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="lightning-rod">Lightning Rod</h2>
+<p>A <strong>lightning rod</strong> (Franklin rod) is a sharply pointed, grounded metal conductor mounted at the highest point of a structure. It does two jobs. It bleeds off induced charge so the strike risk drops. If lightning does strike, it gives the current a low-resistance path to ground so the current bypasses the building.</p>
+<p><strong>Why a point works.</strong> Two conducting spheres of radii $r_1$ and $r_2$ are joined by a wire, so they sit at the same potential $V$. Each sphere has surface charge $q = 4\pi\varepsilon_0 r V$ and surface charge density</p>
+$$\sigma = \frac{q}{4\pi r^2} = \frac{\varepsilon_0 V}{r}.$$
+<p>The field just outside a conductor's surface is $E = \sigma/\varepsilon_0$, so</p>
+$$E = \frac{V}{r}.$$
+<p>At equal potential, the smaller radius of curvature gives the stronger field. A sharp tip acts like a very small sphere, so charge crowds there and the field is strongest there.</p>
+<p>Air breaks down (ionizes) at about $E_{\text{break}} \approx 3\times10^{6}\ \text{V/m}$. Near the tip, the field can pass this value while the field elsewhere stays far below it. The ionized air carries charge away from the tip as a gentle "corona" discharge. Under a charged storm cloud, this reduces the net charge buildup near the structure.</p>
+<p><strong>Worked example.</strong> A rod tip has effective radius $r = 1\ \text{mm}$. Treating it as a sphere, at what potential does air break down at the tip?</p>
+$$V = E_{\text{break}}\, r = (3\times10^{6}\ \text{V/m})(1\times10^{-3}\ \text{m}) = 3\times10^{3}\ \text{V}.$$
+<p>Now take a rounded dome of radius $r = 0.5\ \text{m}$ at the same potential. Breakdown would need</p>
+$$V = (3\times10^{6})(0.5) = 1.5\times10^{6}\ \text{V}.$$
+<p>The point ionizes air at about $1/500$ of the potential the dome needs. This is why the point discharges first.</p>
+<p><strong>Problem-solving application.</strong> A storm cloud induces a potential of $V = 2\times10^{5}\ \text{V}$ on a rod system. Find the largest tip radius that still produces corona discharge.</p>
+<p>Corona requires $E = V/r \ge E_{\text{break}}$, so</p>
+$$r \le \frac{V}{E_{\text{break}}} = \frac{2\times10^{5}}{3\times10^{6}} \approx 0.067\ \text{m} = 6.7\ \text{cm}.$$
+<p>A tip of radius a few millimeters easily meets this condition. A blunt 10 cm radius ball does not.</p>
+<p>If a strike does occur, the rod's low resistance matters. A current of $I = 30\ \text{kA}$ through a grounding path of $R = 5\ \Omega$ dissipates its power in the conductor and the earth, not the building. The potential rise at the rod is</p>
+$$V = IR = (3\times10^{4})(5) = 1.5\times10^{5}\ \text{V}.$$
+<p>Lower resistance means a smaller potential rise, so good grounding (thick cable, deep ground rods) limits the risk of side flashes to nearby metal.</p>
+<p><strong>Key takeaway.</strong> At a fixed potential, the field at a conductor's surface scales as $1/r$. Sharp points concentrate field, ionize air first, and give lightning a preferred, safe path to ground.</p>
+<p>One caveat: modern analyses suggest a rod does not reliably prevent strikes by corona alone. Its main protective value is the safe, grounded path for the strike current.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch18: Electric Charge and Electric Field (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

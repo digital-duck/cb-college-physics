@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Focal Length | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="focal-length">Focal Length</h2>
+<p>The <strong>focal length</strong> $f$ of a lens or mirror is the distance from its optical center to its focal point, the point where rays arriving parallel to the optical axis converge (or appear to diverge from). The sign convention is:</p>
+<li>$f > 0$ for <strong>converging</strong> optics (convex lenses, concave mirrors)</li>
+<li>$f < 0$ for <strong>diverging</strong> optics (concave lenses, convex mirrors)</li>
+<p>For a thin lens in air, the focal length is tied to its geometry by the lensmaker's equation, with $R_1, R_2$ the radii of curvature of the two surfaces and $n$ the refractive index:</p>
+$$\frac{1}{f} = (n-1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right)$$
+<p>For a spherical mirror, $f = R/2$. The focal length then connects object distance $d_o$ and image distance $d_i$ through the thin-lens (or mirror) equation:</p>
+$$\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}$$
+<p>The magnification is $m = -d_i/d_o$. A negative $m$ means the image is inverted. The reciprocal $P = 1/f$ is the <strong>optical power</strong>, measured in diopters (m$^{-1}$) when $f$ is in meters.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>A converging lens has $f = +20$ cm. An object sits $d_o = 30$ cm from the lens. Find the image.</p>
+$$\frac{1}{d_i} = \frac{1}{f} - \frac{1}{d_o} = \frac{1}{20} - \frac{1}{30} = \frac{3-2}{60} = \frac{1}{60}$$
+<p>So $d_i = +60$ cm. The positive sign means a real image on the opposite side of the lens. The magnification is $m = -60/30 = -2$, so the image is inverted and twice the object's size.</p>
+<p>Now move the object inside the focal length, at $d_o = 10$ cm:</p>
+$$\frac{1}{d_i} = \frac{1}{20} - \frac{1}{10} = -\frac{1}{20} \Rightarrow d_i = -20 \text{ cm}$$
+<p>The negative $d_i$ indicates a virtual, upright image on the same side as the object, with $m = -(-20)/10 = +2$. This is how a magnifying glass works.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem.</strong> A diverging lens has $f = -15$ cm. An object is placed 45 cm away. Where is the image, and what are its properties?</p>
+<p><strong>Solution.</strong></p>
+$$\frac{1}{d_i} = \frac{1}{-15} - \frac{1}{45} = \frac{-3-1}{45} = -\frac{4}{45}$$
+<p>So $d_i = -11.25$ cm, and $m = -(-11.25)/45 = +0.25$. The image is virtual, upright, and one quarter the object's size, on the same side as the object.</p>
+<p><strong>Strategy for any problem:</strong></p>
+<li>Assign the sign of $f$ from the optic type (converging $+$, diverging $-$).</li>
+<li>Solve $1/d_i = 1/f - 1/d_o$, keeping signs.</li>
+<li>Interpret $d_i$: positive means real, negative means virtual.</li>
+<li>Compute $m$: its sign gives orientation (negative means inverted) and its magnitude gives size.</li>
+<li>Check the result. A diverging optic always gives a virtual, upright, reduced image. A converging optic gives a real, inverted image when $d_o > f$ and a virtual, upright, enlarged image when $d_o < f$.</li>
+<p><strong>Key takeaway:</strong> the sign of $f$ determines which family of images an optic can produce, and a single equation with consistent sign bookkeeping handles every case.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

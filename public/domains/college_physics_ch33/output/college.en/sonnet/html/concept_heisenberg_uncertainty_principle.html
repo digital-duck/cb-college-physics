@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heisenberg Uncertainty Principle | College Physics Ch33</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="heisenberg-uncertainty-principle">Heisenberg Uncertainty Principle</h2>
+<p><strong>Definition.</strong> Quantum systems cannot have perfectly sharp values for certain <em>pairs</em> of quantities at once. The best-known pair is position and momentum, $\Delta x\,\Delta p \ge h/4\pi$. The pair that matters here is energy and time:</p>
+$$\Delta E\,\Delta t \ge \frac{h}{4\pi}$$
+<p>Here $\Delta E$ is the uncertainty in a system's energy. $\Delta t$ is the time interval over which that energy is observed, or the lifetime of the state. Planck's constant is $h = 6.626\times10^{-34}\ \text{J·s}$. The product $h/4\pi \approx 5.27\times10^{-35}$ J·s is extremely small. That is why the effects are invisible for everyday objects.</p>
+<p>The relation does not describe a flaw in our instruments. It is a property of nature. A state that exists only briefly has no sharply defined energy. Equivalently, over a very short time the energy of a system can fluctuate by an amount $\Delta E$ without violating the physics. The "borrowed" energy must be repaid within roughly $\Delta t \approx h/(4\pi\,\Delta E)$. Averaged over longer times, conservation of energy still holds.</p>
+<p><strong>Worked example.</strong> Estimate how long a virtual electron–positron pair can exist. Creating the pair needs energy equal to the rest mass of two electrons:</p>
+$$\Delta E = 2m_ec^2 = 2(8.19\times10^{-14}\ \text{J}) = 1.64\times10^{-13}\ \text{J}$$
+<p>Solve for the maximum time:</p>
+$$\Delta t \approx \frac{h}{4\pi\,\Delta E} = \frac{5.27\times10^{-35}}{1.64\times10^{-13}} \approx 3.2\times10^{-22}\ \text{s}$$
+<p>The pair can exist for only about $10^{-22}$ s. This is far too short to observe directly.</p>
+<p><strong>Problem-solving application.</strong> The principle explains why excited atomic states have a "natural linewidth." A state with lifetime $\Delta t = 1.0\times10^{-8}$ s has an energy spread of at least</p>
+$$\Delta E \ge \frac{5.27\times10^{-35}}{1.0\times10^{-8}} = 5.3\times10^{-27}\ \text{J}\approx 3.3\times10^{-8}\ \text{eV}.$$
+<p>So the emitted photons do not all have exactly the same energy. The spectral line has a small, unavoidable width. Short-lived states give broad lines, and long-lived states give narrow ones. Particle physicists use the same reasoning in reverse. They measure the width $\Delta E$ of a resonance peak to find the lifetime of an unstable particle that is far too short-lived to track.</p>
+<p>A second use is estimating the range of a force. A force carrier of mass $m$ can be "borrowed" for $\Delta t \approx h/(4\pi\,mc^2)$. Even at the speed of light it travels only $r \approx c\,\Delta t$. This is how Yukawa estimated the range of the nuclear force from the pion mass, which gives about $10^{-15}$ m.</p>
+<p><strong>Key points.</strong></p>
+<li>A short lifetime means a large energy uncertainty, and a long lifetime means a small one.</li>
+<li>Energy "borrowing" is temporary, and the larger the amount, the shorter the loan.</li>
+<li>Use $\Delta E\,\Delta t \approx h/4\pi$ for order-of-magnitude estimates of lifetimes, linewidths, and force ranges.</li>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch33: Particle Physics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

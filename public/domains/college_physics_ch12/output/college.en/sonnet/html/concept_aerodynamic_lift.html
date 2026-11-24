@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aerodynamic Lift | College Physics Ch12</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="aerodynamic-lift">Aerodynamic Lift</h2>
+<p><strong>Definition.</strong> Aerodynamic lift is the net upward force on a wing produced when air flows around it so that the pressure on the lower surface exceeds the pressure on the upper surface. The airfoil's shape and its angle of attack make the air above move faster than the air below. By Bernoulli's principle, for steady, incompressible, nearly frictionless flow along a streamline,</p>
+$$p + \tfrac{1}{2}\rho v^2 = \text{constant},$$
+<p>so higher speed $v$ means lower static pressure $p$. Here $\rho$ is air density.</p>
+<p>A caution: the "equal transit time" explanation is wrong. Air above the wing does not need to rejoin the air below at the trailing edge, and in practice it arrives earlier. Bernoulli's equation relates pressure to speed correctly, but the wing's curvature and angle of attack, which turn the flow downward, are what set up the speed difference. By Newton's third law, the downward-turned air pushes the wing up. The two descriptions are consistent.</p>
+<p><strong>Engineering form.</strong> Engineers summarize the effect with the lift equation</p>
+$$L = \tfrac{1}{2}\,\rho\, v^2\, S\, C_L,$$
+<p>where $S$ is the wing area and $C_L$ is the dimensionless lift coefficient. $C_L$ depends on airfoil shape and angle of attack. Lift grows with the square of airspeed.</p>
+<p><strong>Worked example.</strong> A small plane has $S = 16\ \text{m}^2$ and $C_L = 1.2$. It flies at $v = 50\ \text{m/s}$ at sea level, where $\rho = 1.225\ \text{kg/m}^3$.</p>
+$$L = \tfrac{1}{2}(1.225)(50)^2(16)(1.2) = \tfrac{1}{2}(1.225)(2500)(19.2) = 29{,}400\ \text{N}$$
+<p>Using $W = mg$ with $g = 9.8\ \text{m/s}^2$, this lift supports a mass of about $29{,}400/9.8 = 3000\ \text{kg}$.</p>
+<p><strong>Bernoulli check.</strong> Suppose air flows at $v_{\text{lower}} = 48\ \text{m/s}$ under the wing and $v_{\text{upper}} = 52\ \text{m/s}$ over it. The pressure difference is</p>
+$$\Delta p = \tfrac{1}{2}\rho\,(v_{\text{upper}}^2 - v_{\text{lower}}^2)\ \text{(magnitude)} = \tfrac{1}{2}(1.225)(2704 - 2304) = 245\ \text{Pa}.$$
+<p>Multiplying by the wing area gives $245 \times 16 \approx 3{,}900\ \text{N}$. This is far less than the 29,400 N above, because I chose the speeds arbitrarily. Real wings have much larger speed differences over the upper surface. The point is the method: pressure difference times area gives force.</p>
+<p><strong>Problem-solving application.</strong> Find the minimum takeoff speed for an aircraft of mass $m = 1200\ \text{kg}$, with $S = 16\ \text{m}^2$ and maximum $C_L = 1.6$.</p>
+<p>Lift must at least equal weight: $\tfrac{1}{2}\rho v^2 S C_L = mg$. Solving for $v$ gives</p>
+$$v = \sqrt{\frac{2mg}{\rho S C_L}} = \sqrt{\frac{2(1200)(9.8)}{(1.225)(16)(1.6)}} = \sqrt{\frac{23{,}520}{31.36}} \approx 27.4\ \text{m/s}.$$
+<p>This is about 99 km/h. Two consequences follow. At higher altitude $\rho$ is smaller, so the required speed rises. A heavier load also raises the required speed, in proportion to $\sqrt{m}$.</p>
+<p><strong>Takeaway.</strong> Lift comes from a pressure difference created by the shape and tilt of the wing. Bernoulli's principle links that difference to the airflow speeds. The equation $L = \tfrac{1}{2}\rho v^2 S C_L$ lets you predict how much lift a wing generates and how fast it must fly.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch12: Fluid Dynamics and Its Biological and Medical Applications (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

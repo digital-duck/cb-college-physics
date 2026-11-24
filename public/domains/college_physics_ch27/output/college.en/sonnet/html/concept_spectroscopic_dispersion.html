@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spectroscopic Dispersion | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="spectroscopic-dispersion">Spectroscopic Dispersion</h2>
+<p><strong>Definition.</strong> Spectroscopic dispersion is the separation of light into its component wavelengths by an element whose response depends on wavelength. A diffraction grating, a surface ruled with many closely spaced slits, does this through interference. For slit spacing $d$, light of wavelength $\lambda$ makes a bright maximum at angle $\theta_m$ where</p>
+$$d\sin\theta_m = m\lambda, \qquad m = 0, \pm1, \pm2, \dots$$
+<p>Here $m$ is the diffraction order. Since $\theta_m$ depends on $\lambda$, each wavelength leaves the grating in its own direction. Longer wavelengths are deflected more, which is the opposite of a glass prism, where blue bends more than red.</p>
+<p><strong>Angular dispersion</strong> measures how far the angle changes per unit wavelength. Differentiating the grating equation gives</p>
+$$D = \frac{d\theta}{d\lambda} = \frac{m}{d\cos\theta_m}.$$
+<p>So dispersion grows with higher order and finer line spacing.</p>
+<p><strong>Resolving power</strong> measures how close two wavelengths can be and still be told apart. For a grating illuminating $N$ lines,</p>
+$$R = \frac{\lambda}{\Delta\lambda} = mN.$$
+<p><strong>Worked example.</strong> A grating has 600 lines/mm, so $d = \frac{1}{600}\ \text{mm} = 1.667\ \mu\text{m}$. Find the first-order angle for a hydrogen line at $\lambda = 656.3$ nm.</p>
+$$\sin\theta_1 = \frac{\lambda}{d} = \frac{656.3\ \text{nm}}{1667\ \text{nm}} = 0.394 \;\Rightarrow\; \theta_1 \approx 23.2^\circ.$$
+<p>For the blue line at 486.1 nm, $\sin\theta_1 = 0.292$, so $\theta_1 \approx 17.0^\circ$. The two lines are separated by about $6.2^\circ$, which is easy to measure.</p>
+<p><strong>Problem-solving application.</strong> The sodium doublet has lines at 589.00 nm and 589.59 nm. Can a grating with 600 lines/mm and a 2.0 cm illuminated width resolve them in first order?</p>
+<li>The doublet requires $R = \lambda/\Delta\lambda = 589.0/0.59 \approx 1000$.</li>
+<li>The number of illuminated lines is $N = 600\ \text{mm}^{-1} \times 20\ \text{mm} = 12{,}000$.</li>
+<li>In first order, $R = mN = 12{,}000 \gg 1000$, so the doublet is resolved with a wide margin.</li>
+<p>The same relation works in reverse. To resolve $\Delta\lambda = 0.01$ nm near 600 nm, you need $R = 6\times10^4$. That means $N = 6\times10^4$ lines in first order, or $N = 3\times10^4$ lines in second order.</p>
+<p><strong>Measuring an unknown wavelength.</strong> If $d$ is known and you measure $\theta_m$ for a spectral line, then $\lambda = d\sin\theta_m / m$. This is how spectrometers identify elements. Each element's emission lines occur at fixed wavelengths, so the measured angles act as a fingerprint.</p>
+<p><strong>Check for overlap.</strong> Orders can overlap. The second-order position of 400 nm satisfies $2(400) = 800$ nm $= 1\times(800\ \text{nm})$, so it coincides with the first-order position of 800 nm. Spectrometers therefore use filters to block unwanted orders.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

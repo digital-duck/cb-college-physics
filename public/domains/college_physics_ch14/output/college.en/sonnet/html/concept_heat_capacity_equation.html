@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heat Capacity Equation | College Physics Ch14</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="heat-capacity-equation">Heat Capacity Equation</h2>
+<h3 id="definition">Definition</h3>
+<p>When energy is transferred as heat to or from an object, the object's temperature changes by an amount that depends on how much material there is and what the material is made of. This relationship is</p>
+$$Q = mc\,\Delta T, \qquad \Delta T = T_f - T_i$$
+<p>where $Q$ is the heat transferred (J), $m$ is the mass (kg or g), $c$ is the <strong>specific heat capacity</strong> (J·kg⁻¹·K⁻¹ or J·g⁻¹·°C⁻¹), and $\Delta T$ is the change in temperature. The specific heat $c$ is the energy needed to raise 1 kg (or 1 g) of a substance by 1 K. Water has a large value, $c = 4.18\ \text{J/(g·°C)}$, while copper has a small one, $c = 0.385\ \text{J/(g·°C)}$.</p>
+<p>Sign convention: $Q > 0$ when the object gains energy ($\Delta T > 0$), and $Q < 0$ when it loses energy. The equation applies only when the substance stays in one phase. During melting or boiling, energy goes into changing phase and the temperature stays constant.</p>
+<p>A related quantity is the <strong>heat capacity</strong> $C = mc$, which describes a whole object, so that $Q = C\,\Delta T$. Because a change of 1 K equals a change of 1 °C, $\Delta T$ may be computed in either unit.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>How much heat is needed to warm 250 g of water from 20.0 °C to 60.0 °C?</p>
+$$Q = (250\ \text{g})(4.18\ \text{J/(g·°C)})(60.0 - 20.0\ ^\circ\text{C}) = 4.18\times10^{4}\ \text{J}$$
+<p>About 41.8 kJ is required. The same energy given to 250 g of copper would raise its temperature by</p>
+$$\Delta T = \frac{Q}{mc} = \frac{4.18\times10^{4}}{(250)(0.385)} \approx 434\ ^\circ\text{C}.$$
+<p>This shows why metal pans heat up quickly while water heats slowly.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem.</strong> A 100 g piece of copper at 95.0 °C is dropped into 200 g of water at 20.0 °C in an insulated cup. Find the final equilibrium temperature $T_f$.</p>
+<p><strong>Strategy.</strong> With no energy lost to the surroundings, the heat lost by the copper equals the heat gained by the water:</p>
+$$Q_{\text{Cu}} + Q_{\text{water}} = 0.$$
+<p>Substituting the heat equation for each:</p>
+$$m_{\text{Cu}}c_{\text{Cu}}(T_f - 95.0) + m_w c_w (T_f - 20.0) = 0$$
+$$(100)(0.385)(T_f - 95.0) + (200)(4.18)(T_f - 20.0) = 0$$
+$$38.5\,T_f - 3657.5 + 836\,T_f - 16720 = 0$$
+$$874.5\,T_f = 20377.5 \;\Rightarrow\; T_f \approx 23.3\ ^\circ\text{C}.$$
+<p><strong>Check.</strong> The result lies between the two starting temperatures. It is much closer to the water's starting value, as expected, because the water has a much larger heat capacity ($mc = 836$ J/°C versus $38.5$ J/°C).</p>
+<p><strong>General approach.</strong></p>
+<li>Identify which objects gain energy and which lose it.</li>
+<li>Write $Q = mc\,\Delta T$ for each, always using $T_f - T_i$.</li>
+<li>Apply energy conservation, $\sum Q = 0$, for an isolated system.</li>
+<li>Solve for the unknown and check that the answer is physically reasonable and lies between the initial temperatures.</li>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch14: Heat and Heat Transfer Methods (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

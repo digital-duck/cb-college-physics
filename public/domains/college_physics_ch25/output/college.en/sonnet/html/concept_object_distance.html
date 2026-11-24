@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Object Distance | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="object-distance">Object Distance</h2>
+<p><strong>Definition.</strong> The object distance $d_o$ is the distance from an object to the center of a lens or to the vertex of a mirror, measured along the principal axis (the line through the optical center, perpendicular to the lens or mirror surface). It is the input to the thin-lens and mirror equation:</p>
+$$\frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{f}$$
+<p>where $d_i$ is the image distance and $f$ is the focal length.</p>
+<p><strong>Sign convention.</strong> Light is assumed to travel from left to right. For a real object, which is the usual case, the object sits on the side the light comes from, so $d_o > 0$. Distances to the image and focal length use the same convention: $d_i > 0$ for a real image, and $f > 0$ for a converging lens or concave mirror. A negative $d_o$ appears only for a <em>virtual object</em>, such as when light is already converging toward a point before it reaches the lens. This is rare in introductory problems.</p>
+<p><strong>Why it matters.</strong> The ratio of $d_o$ to $f$ determines what kind of image forms:</p>
+<li>$d_o > 2f$: a real, inverted, reduced image</li>
+<li>$d_o = 2f$: a real, inverted image, the same size as the object</li>
+<li>$f < d_o < 2f$: a real, inverted, enlarged image</li>
+<li>$d_o = f$: no image forms, because the rays emerge parallel</li>
+<li>$d_o < f$: a virtual, upright, enlarged image (a magnifying glass)</li>
+<p><strong>Worked example.</strong> A converging lens has $f = 10\ \text{cm}$. A candle is placed $d_o = 30\ \text{cm}$ from it. Where is the image, and how large is it?</p>
+<p>Rearrange the lens equation:</p>
+$$\frac{1}{d_i} = \frac{1}{f} - \frac{1}{d_o} = \frac{1}{10} - \frac{1}{30} = \frac{3-1}{30} = \frac{1}{15}$$
+<p>So $d_i = 15\ \text{cm}$. The magnification is</p>
+$$m = -\frac{d_i}{d_o} = -\frac{15}{30} = -0.5$$
+<p>The image is real, inverted ($m<0$), and half the height of the candle. This agrees with the table, since $d_o = 3f > 2f$.</p>
+<p><strong>Problem-solving application.</strong> Suppose you want a real image on a screen that is <em>twice</em> the size of the object, using the same $f = 10\ \text{cm}$ lens. Where must you place the object?</p>
+<p>A real, enlarged image needs $|m| = 2$, so $d_i = 2d_o$. Substituting into the lens equation:</p>
+$$\frac{1}{d_o} + \frac{1}{2d_o} = \frac{3}{2d_o} = \frac{1}{10} \quad\Rightarrow\quad d_o = 15\ \text{cm}$$
+<p>The screen then goes at $d_i = 30\ \text{cm}$. Check: $15\ \text{cm}$ lies between $f = 10\ \text{cm}$ and $2f = 20\ \text{cm}$, as the table requires for an enlarged real image.</p>
+<p><strong>Common pitfalls.</strong></p>
+<li>Measure $d_o$ to the lens center or mirror vertex, not to the edge or to a focal point.</li>
+<li>Always check your result against the table. If you get a real, enlarged image with $d_o > 2f$, you made an error.</li>
+<li>For a convex mirror or diverging lens, $f<0$. The image is then always virtual and reduced, whatever the value of $d_o$.</li>
+<p><strong>Key idea.</strong> The object distance $d_o$ is the one quantity you control directly. Compare it with $f$ and $2f$ to predict the image before you calculate anything.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Specific Heat | College Physics Ch14</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="specific-heat">Specific Heat</h2>
+<p><strong>Specific heat</strong> (or specific heat capacity), $c$, is the amount of heat needed to raise the temperature of $1.00\ \text{kg}$ of a substance by $1.00\ ^\circ\text{C}$. It is a material property: different substances need different amounts of energy to change temperature by the same amount. The heat $Q$ that changes a mass $m$ by a temperature change $\Delta T$ is</p>
+$$Q = m\,c\,\Delta T,$$
+<p>so $c = \dfrac{Q}{m\,\Delta T}$, with SI units of $\text{J/(kg·K)}$. Because a change of $1\ ^\circ\text{C}$ equals a change of $1\ \text{K}$, the two units give the same value of $c$. Liquid water has $c \approx 4186\ \text{J/(kg·K)}$, aluminum about $900$, and copper about $387$. A large $c$ means the material absorbs a lot of heat for a small temperature change. A small $c$ means it heats and cools quickly.</p>
+<p>The formula applies only while the substance stays in one phase. During melting or boiling, heat changes the phase and the temperature stays constant. That case uses latent heat, not specific heat.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>How much heat raises $2.00\ \text{kg}$ of water from $20.0\ ^\circ\text{C}$ to $60.0\ ^\circ\text{C}$?</p>
+$$Q = (2.00)(4186)(60.0-20.0) = 3.35\times10^{5}\ \text{J}.$$
+<p>The same heat applied to $2.00\ \text{kg}$ of copper gives</p>
+$$\Delta T = \frac{Q}{mc} = \frac{3.35\times10^{5}}{(2.00)(387)} \approx 433\ ^\circ\text{C}.$$
+<p>Copper warms about $10.8$ times as much as water, which is the ratio $4186/387$.</p>
+<h3 id="problem-solving-application-finding-a-final-temperature">Problem-solving application: finding a final temperature</h3>
+<p>An isolated system exchanges no heat with its surroundings, so heat lost by the hot object equals heat gained by the cold one:</p>
+$$Q_{\text{lost}} = Q_{\text{gained}}.$$
+<p><strong>Problem.</strong> A $0.200\ \text{kg}$ aluminum block at $100\ ^\circ\text{C}$ is dropped into $0.500\ \text{kg}$ of water at $20.0\ ^\circ\text{C}$. Find the final equilibrium temperature $T_f$, ignoring losses to the container and air.</p>
+<li>Set the heat lost by the aluminum equal to the heat gained by the water:</li>
+$$m_{\text{Al}}\,c_{\text{Al}}(100 - T_f) = m_w\,c_w\,(T_f - 20.0).$$
+<li>Substitute values:</li>
+$$(0.200)(900)(100 - T_f) = (0.500)(4186)(T_f - 20.0).$$
+<li>Simplify:</li>
+$$180(100 - T_f) = 2093(T_f - 20.0)$$
+$$18000 - 180\,T_f = 2093\,T_f - 41860.$$
+<li>Solve:</li>
+$$T_f = \frac{59860}{2273} \approx 26.3\ ^\circ\text{C}.$$
+<p><strong>Check.</strong> The final temperature lies between $20.0$ and $100\ ^\circ\text{C}$ and is much closer to the water's starting temperature. That makes sense, because the water has far more mass and a much larger $c$, so it changes temperature less. Write each heat as a positive quantity, using (hot − final) and (final − cold). This avoids sign errors.</p>
+<h3 id="why-it-matters">Why it matters</h3>
+<p>Water's large specific heat explains why coastal climates are milder than inland ones and why water works well as a coolant. Metals' small values explain why a metal pan reaches cooking temperature quickly. In a calorimetry experiment, measuring $Q$, $m$ and $\Delta T$ lets you solve for $c$ and identify an unknown material.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch14: Heat and Heat Transfer Methods (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

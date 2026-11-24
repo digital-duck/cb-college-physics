@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thin Lens Equations | College Physics Ch25</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="thin-lens-equations">Thin Lens Equations</h2>
+<p><strong>Definition.</strong> For a thin lens (or a mirror) with focal length $f$, an object placed a distance $d_o$ from the lens produces an image at distance $d_i$. These quantities are related by the thin lens equation and the magnification equation:</p>
+$$\frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{f}, \qquad m = \frac{h_i}{h_o} = -\frac{d_i}{d_o}$$
+<p>Here $h_o$ and $h_i$ are the object and image heights, and $m$ is the magnification. The equations rely on a sign convention:</p>
+<li>$f > 0$ for a converging lens (or concave mirror), and $f < 0$ for a diverging lens (or convex mirror).</li>
+<li>$d_o > 0$ for a real object.</li>
+<li>$d_i > 0$ for a real image, on the side where light exits the lens. For a mirror, this is the same side as the object. $d_i < 0$ for a virtual image.</li>
+<li>$m < 0$ means the image is inverted, and $m > 0$ means it is upright. $|m| > 1$ means the image is enlarged.</li>
+<p>The equations hold in the paraxial approximation, where rays are close to the axis and the lens is thin compared with the distances involved.</p>
+<p><strong>Worked example.</strong> A converging lens has $f = 10$ cm. An object 4.0 cm tall is placed 30 cm from it. Find the image location, the magnification, and the image height.</p>
+<p>Solve for $d_i$:</p>
+$$\frac{1}{d_i} = \frac{1}{f} - \frac{1}{d_o} = \frac{1}{10} - \frac{1}{30} = \frac{2}{30}$$
+<p>so $d_i = 15$ cm. This is positive, so the image is real. The magnification is</p>
+$$m = -\frac{15}{30} = -0.50$$
+<p>so the image is inverted and half the object's size, with $h_i = m\,h_o = -2.0$ cm.</p>
+<p><strong>Problem-solving application.</strong> The sign of $d_i$ tells you what kind of image you get. Move the same object inside the focal length, to $d_o = 5.0$ cm:</p>
+$$\frac{1}{d_i} = \frac{1}{10} - \frac{1}{5} = -\frac{1}{10} \;\Rightarrow\; d_i = -10 \text{ cm}$$
+$$m = -\frac{-10}{5} = +2.0$$
+<p>The image is virtual (on the same side as the object), upright, and twice as large. This is how a magnifying glass works.</p>
+<p>A general strategy:</p>
+<li>Sketch the setup and assign signs to $f$ and $d_o$.</li>
+<li>Solve for $d_i$ using $\frac{1}{d_i} = \frac{1}{f} - \frac{1}{d_o}$, or equivalently $d_i = \frac{f\,d_o}{d_o - f}$.</li>
+<li>Compute $m$, and from it the image height.</li>
+<li>Interpret the signs: real or virtual, upright or inverted, larger or smaller.</li>
+<li>Check the result against the limiting cases. As $d_o \to \infty$, $d_i \to f$, which is why a camera focused on distant scenery places its sensor about one focal length behind the lens. When $d_o = f$, the denominator vanishes and the image forms at infinity, as in a collimated flashlight beam.</li>
+<p>For a diverging lens with $f = -15$ cm and $d_o = 30$ cm, the same method gives $d_i = \frac{(-15)(30)}{30 - (-15)} = -10$ cm and $m = +\tfrac{1}{3}$. A diverging lens always produces a virtual, upright, reduced image, whatever the object distance.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch25: Geometric Optics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

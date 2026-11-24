@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overtones And Harmonics | College Physics Ch17</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="overtones-and-harmonics">Overtones And Harmonics</h2>
+<p><strong>Definition.</strong> When a string or air column vibrates in a steady pattern, the lowest frequency at which it can do so is the <strong>fundamental</strong>, $f_1$. Any higher resonant frequency is an <strong>overtone</strong>. For an ideal string fixed at both ends, the resonant frequencies are whole-number multiples of the fundamental:</p>
+$$f_n = n f_1, \qquad n = 1, 2, 3, \dots$$
+<p>Each $f_n$ is called the $n$th <strong>harmonic</strong>. The fundamental is the 1st harmonic, and the $n$th harmonic is the $(n-1)$th overtone, so the 2nd harmonic is the 1st overtone. For a string of length $L$, tension $T$, and linear mass density $\mu$, the wavelength of harmonic $n$ is $\lambda_n = 2L/n$. The wave speed is $v=\sqrt{T/\mu}$, so</p>
+$$f_n = \frac{n}{2L}\sqrt{\frac{T}{\mu}}.$$
+<p><strong>Worked example.</strong> A guitar string has length $L = 0.65\ \text{m}$ and wave speed $v = 286\ \text{m/s}$. Find the fundamental and the first three overtones.</p>
+$$f_1 = \frac{v}{2L} = \frac{286}{2(0.65)} = 220\ \text{Hz}$$
+<p>The first three overtones are the 2nd, 3rd, and 4th harmonics: $440$, $660$, and $880\ \text{Hz}$.</p>
+<p><strong>Problem-solving application.</strong> A string has a 3rd harmonic at $390\ \text{Hz}$. Find its fundamental and its 2nd overtone.</p>
+<li>Use $f_n = n f_1$ with $n = 3$. Then $f_1 = 390/3 = 130\ \text{Hz}$.</li>
+<li>The 2nd overtone is the 3rd harmonic, since overtone number is harmonic number minus one. So the 2nd overtone is $390\ \text{Hz}$.</li>
+<li>Check by listing the series: $130, 260, 390, 520, \dots$ Hz. The 1st overtone is $260\ \text{Hz}$ and the 2nd overtone is $390\ \text{Hz}$, which matches.</li>
+<p>A common error is to treat overtone $k$ as harmonic $k$. Overtone numbering lags harmonic numbering by one, because the fundamental is a harmonic but not an overtone.</p>
+<pre class="mermaid">graph LR
+  A["Fundamental<br/>f1 = 220 Hz<br/>1st harmonic"] --> B["1st overtone<br/>2 f1 = 440 Hz<br/>2nd harmonic"]
+  B --> C["2nd overtone<br/>3 f1 = 660 Hz<br/>3rd harmonic"]
+  C --> D["3rd overtone<br/>4 f1 = 880 Hz<br/>4th harmonic"]</pre>
+<p><em>Harmonic series for a 220 Hz string, showing how overtone numbering lags harmonic numbering by one.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch17: Physics of Hearing (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

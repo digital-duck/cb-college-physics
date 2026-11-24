@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diffraction | College Physics Ch27</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="diffraction">Diffraction</h2>
+<p><strong>Definition.</strong> Diffraction is the spreading of a wave as it passes through an opening or around an obstacle. It happens to all waves (water, sound, light) and is strongest when the opening width $a$ is comparable to or smaller than the wavelength $\lambda$. If $a \gg \lambda$, the wave mostly travels straight and casts a sharp shadow. If $a \lesssim \lambda$, the wave fans out widely.</p>
+<p>This follows from Huygens' principle: every point on a wavefront acts as a source of secondary wavelets, and the new wavefront is the superposition of those wavelets. At the edge of an opening, wavelets no longer have neighbors to cancel them sideways, so the wave bends into the "shadow" region.</p>
+<p><strong>Single-slit result.</strong> For a slit of width $a$ illuminated by a plane wave of wavelength $\lambda$, the pattern on a distant screen has a bright central maximum and dark fringes (minima) at angles $\theta$ satisfying</p>
+$$a\sin\theta = m\lambda, \qquad m = \pm 1, \pm 2, \dots$$
+<p>The reasoning: at the $m=1$ minimum, split the slit into two halves. Each wavelet from the top half has a partner in the bottom half separated by $a/2$. The path difference is $\frac{a}{2}\sin\theta = \frac{\lambda}{2}$, so each pair cancels. Summed over all pairs, the light is zero. Narrowing the slit (smaller $a$) makes $\sin\theta$ larger, so the central peak widens.</p>
+<p><strong>Worked example.</strong> Red laser light ($\lambda = 650\ \text{nm}$) passes through a slit of width $a = 0.10\ \text{mm}$ and lands on a screen $L = 2.0\ \text{m}$ away. Find the width of the central maximum.</p>
+<p>First minimum:</p>
+$$\sin\theta_1 = \frac{\lambda}{a} = \frac{650\times10^{-9}}{1.0\times10^{-4}} = 6.5\times10^{-3}$$
+<p>Since $\theta_1$ is tiny, $\tan\theta_1 \approx \sin\theta_1$, so the distance from the center to the first minimum is</p>
+$$y_1 = L\tan\theta_1 \approx (2.0)(6.5\times10^{-3}) = 1.3\ \text{cm}.$$
+<p>The central maximum spans from $-y_1$ to $+y_1$, so its width is $2y_1 = 2.6\ \text{cm}$.</p>
+<p><strong>Problem-solving application.</strong> Diffraction limits how well instruments can resolve detail. A circular aperture of diameter $D$ spreads light so that the smallest resolvable angular separation is approximately</p>
+$$\theta_{\min} \approx 1.22\,\frac{\lambda}{D}.$$
+<p><em>Problem:</em> Can a telescope with a $D = 0.10\ \text{m}$ mirror separate two stars $2.0\times10^{-6}$ rad apart, observing at $\lambda = 550\ \text{nm}$?</p>
+$$\theta_{\min} = 1.22\,\frac{550\times10^{-9}}{0.10} \approx 6.7\times10^{-6}\ \text{rad}$$
+<p>Because $2.0\times10^{-6} < 6.7\times10^{-6}$, the stars blur together. To resolve them, we need $D \ge 1.22\lambda/\theta = 0.34\ \text{m}$, which is a larger mirror. The same idea explains why you hear someone around a corner (sound wavelengths of about 1 m are comparable to a doorway) but cannot see them (light wavelengths of about $5\times10^{-7}$ m are far smaller).</p>
+<p><strong>Key takeaways:</strong> compare $a$ to $\lambda$ first; use $a\sin\theta = m\lambda$ for single-slit minima; and remember that diffraction sets a fundamental limit on resolution.</p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch27: Wave Optics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>

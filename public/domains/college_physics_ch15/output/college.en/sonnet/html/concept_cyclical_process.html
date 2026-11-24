@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyclical Process | College Physics Ch15</title>
+<script>
+MathJax = {
+  tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] },
+  options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#fafaf8;color:#1a1a1a;line-height:1.7}
+h2{font-size:1.45rem;color:#1e3a5f;margin-bottom:12px}
+h3{font-size:1.1rem;color:#2e4a7f;margin:20px 0 8px}
+h4{font-size:1rem;color:#3a5a8f;margin:16px 0 6px}
+p{margin-bottom:16px;font-size:1rem}
+li{margin-bottom:6px;margin-left:24px;font-size:1rem}
+pre{background:#f4f4f0;border:1px solid #d8d8d0;border-radius:6px;
+    padding:16px 20px;overflow-x:auto;margin:16px 0}
+code{font-family:Menlo,Consolas,monospace;font-size:.87em}
+p code{background:#f0f0ea;padding:1px 4px;border-radius:3px}
+footer.spl-credit{margin-top:32px;padding-top:16px;border-top:1px solid #e0e0d8;
+      font-family:system-ui,sans-serif;font-size:.78rem;color:#999;text-align:center}
+footer.spl-credit a{color:#2563eb;text-decoration:none}
+footer.spl-credit span{display:block}
+footer.spl-credit .spl-credit__meta{margin-bottom:4px}
+.cb-figure{margin:24px 0;text-align:center}
+.cb-figure img{max-width:100%;height:auto;border:1px solid #e0e0d8;border-radius:6px}
+figcaption{font-size:.82rem;color:#666;margin-top:8px;font-style:italic;text-align:center}
+pre.mermaid{background:none;border:none;padding:0;overflow:visible;margin:16px 0}
+.page{max-width:780px;margin:0 auto;padding:40px 32px}
+section{margin-bottom:48px;border-top:1px solid #e0e0d8;padding-top:36px}
+section:first-of-type{border-top:none;padding-top:0}
+</style>
+</head>
+<body>
+<div class="page">
+  <main>
+    <h2 id="cyclical-process">Cyclical Process</h2>
+<p>A <strong>cyclical process</strong> is a thermodynamic process in which a system, after passing through a sequence of intermediate states, returns to exactly its initial state. Because internal energy $U$ is a state function, depending only on the current state and not on the path taken, a complete cycle gives</p>
+$$\Delta U_{\text{cycle}} = 0.$$
+<p>The first law, $\Delta U = Q - W$ (with $W$ the work done <em>by</em> the system), then gives the central result:</p>
+$$Q_{\text{net}} = W_{\text{net}}.$$
+<p>Over one full cycle, the net heat absorbed equals the net work done by the system. Every heat engine and refrigerator operates on this principle.</p>
+<h3 id="worked-example">Worked example</h3>
+<p>One mole of an ideal gas goes through a rectangular cycle on a $P$–$V$ diagram with $P_1 = 2.0\times10^5$ Pa, $P_2 = 1.0\times10^5$ Pa, $V_1 = 1.0\times10^{-2}\ \text{m}^3$ and $V_2 = 3.0\times10^{-2}\ \text{m}^3$.</p>
+<li>$A\to B$: expand at $P_1$ from $V_1$ to $V_2$.</li>
+<li>$B\to C$: lower the pressure at constant $V_2$ to $P_2$.</li>
+<li>$C\to D$: compress at $P_2$ from $V_2$ back to $V_1$.</li>
+<li>$D\to A$: raise the pressure at constant $V_1$ to $P_1$.</li>
+<p>Work is done only on the constant-pressure legs, since $W=\int P\,dV$ is zero at constant volume:</p>
+$$W_{AB} = P_1(V_2-V_1) = +4000\ \text{J}, \qquad W_{CD} = P_2(V_1-V_2) = -2000\ \text{J}.$$
+$$W_{\text{net}} = 4000 - 2000 = 2000\ \text{J}.$$
+<p>This equals the area enclosed by the loop, $(P_1-P_2)(V_2-V_1) = 2000$ J. The cycle runs clockwise, so the net work is positive. The gas absorbs net heat $Q_{\text{net}} = 2000$ J, and $\Delta U = 0$.</p>
+<h3 id="problem-solving-application">Problem-solving application</h3>
+<p><strong>Problem.</strong> An engine absorbs $Q_h = 800$ J from a hot reservoir each cycle and rejects $Q_c = 500$ J to a cold reservoir. Find the work per cycle and the efficiency.</p>
+<p><strong>Solution.</strong> The engine returns to its initial state each cycle, so $\Delta U = 0$ and</p>
+$$W = Q_h - Q_c = 800 - 500 = 300\ \text{J}.$$
+$$\eta = \frac{W}{Q_h} = \frac{300}{800} = 0.375 = 37.5\%.$$
+<p><strong>Strategy for cycle problems:</strong></p>
+<li>Set $\Delta U_{\text{cycle}} = 0$ immediately. You don't need to compute $\Delta U$ for each leg.</li>
+<li>Compute $Q$ or $W$ for each leg, and use the sum of either to get the other.</li>
+<li>Clockwise loops on a $P$–$V$ diagram give $W_{\text{net}}>0$ (engine). Counterclockwise loops give $W_{\text{net}}<0$ (refrigerator or heat pump).</li>
+<li>Individual legs can have $\Delta U\neq 0$. Only the sum over the full cycle vanishes.</li>
+<p>A common mistake is to conclude that $Q$ and $W$ also vanish over a cycle. They are path-dependent quantities and generally do not. The enclosed area on the $P$–$V$ diagram is exactly the net work.</p>
+<pre class="mermaid">flowchart LR
+    A["State A"] -->|"expand: W > 0"| B["State B"]
+    B -->|"cool at const. V"| C["State C"]
+    C -->|"compress: W < 0"| D["State D"]
+    D -->|"heat at const. V"| A</pre>
+<p><em>A cycle returns to its starting state A, so the net change in internal energy is zero, while the net heat and net work need not be.</em></p>
+  </main>
+  <footer class="spl-credit"><span class="spl-credit__meta">Physics Ch15: Thermodynamics (Level: College &middot; Language: EN &middot; Model: sonnet)</span><span class="spl-credit__powered">Generated and Powered by <a href="https://github.com/digital-duck/SPL.py" target="_blank" rel="noopener">SPL</a></span></footer>
+</div>
+</body>
+</html>
